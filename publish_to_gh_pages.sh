@@ -2,6 +2,7 @@
 
 # git submodule add  https://github.com/gcushen/hugo-academic.git themes/hugo-academic
 # add a gh-pages branch -- https://jiafulow.github.io/blog/2020/07/09/create-gh-pages-branch-in-existing-repo/
+# git checkout f075bc2
 
 echo "Deleting old public"
 rm -rf public
@@ -19,6 +20,7 @@ rm -rf public/*
 # find . -name "*.html" -type f -delete
 # rm -rf themes/hugo-academic
 # git submodule update --recursive --remote
+# git submodule update
 
 echo "Generating site"
 Rscript -e "blogdown::build_site()"
