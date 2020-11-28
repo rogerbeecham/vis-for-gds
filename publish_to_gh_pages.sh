@@ -1,9 +1,6 @@
 # deploy commands
 
-# git submodule add \
-#   https://github.com/gcushen/hugo-academic.git \
-#   themes/hugo-academic
-
+# git submodule add  https://github.com/gcushen/hugo-academic.git themes/hugo-academic
 # add a gh-pages branch -- https://jiafulow.github.io/blog/2020/07/09/create-gh-pages-branch-in-existing-repo/
 
 echo "Deleting old public"
