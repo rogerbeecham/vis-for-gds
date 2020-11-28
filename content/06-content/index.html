@@ -1,0 +1,972 @@
+<!DOCTYPE html>
+<html lang="en-us" 
+      xmlns:og="http://ogp.me/ns#" 
+      xmlns:fb="https://www.facebook.com/2008/fbml">
+
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="generator" content="Source Themes Academic 4.8.0">
+
+  
+
+  
+  
+  
+  
+  
+    
+    
+    
+  
+  
+
+  <meta name="author" content="Andrew Heiss">
+
+  
+  
+  
+    
+  
+  <meta name="description" content="Readings Slides Videos   Readings   Randall Munroe, “Significant”  Alexander Coppock, “10 Things to Know About Statistical Power”  Play around with FiveThirtyEight, “Hack Your Way To Scientific Glory”  Chapter 9 in Impact Evaluation in Practice Paul J. Gertler et al., Impact Evaluation in Practice, 2nd ed. (Inter-American Development Bank; World Bank, 2016), https://openknowledge.worldbank.org/handle/10986/25030.   Slides The slides for today’s lesson are available online as an HTML file.">
+
+  
+  <link rel="alternate" hreflang="en-us" href="https://evalf20.classes.andrewheiss.com/content/06-content/">
+
+  
+
+
+  
+  
+  
+  <meta name="theme-color" content="#CF4446">
+  
+
+  
+  
+  
+  <script src="/js/mathjax-config.js"></script>
+  
+
+  
+  
+  
+  
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/academicons/1.8.6/css/academicons.min.css" integrity="sha256-uFVgMKfistnJAfoCUQigIl+JfUaP47GrRKjf6CTPVmw=" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0-1/css/all.min.css" integrity="sha256-4w9DunooKSr3MFXHXWyFER38WmPdm361bQS/2KUWZbU=" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css" integrity="sha256-Vzbj7sDDS/woiFS3uNKo8eIuni59rjyNGtXfstRzStA=" crossorigin="anonymous">
+
+    
+    
+    
+      
+    
+    
+      
+      
+        
+          <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.1/styles/github.min.css" crossorigin="anonymous" title="hl-light">
+          <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.1/styles/dracula.min.css" crossorigin="anonymous" title="hl-dark" disabled>
+        
+      
+    
+
+    
+
+    
+
+    
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/lazysizes/5.1.2/lazysizes.min.js" integrity="sha256-Md1qLToewPeKjfAHU1zyPwOutccPAm5tahnaw7Osw0A=" crossorigin="anonymous" async></script>
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" integrity="" crossorigin="anonymous" async></script>
+      
+    
+      
+
+      
+      
+
+      
+    
+
+  
+
+  
+  
+  
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Fira+Sans+Condensed:400,400i,700,700i%7CNunito+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap">
+  
+
+  
+  
+  
+  
+  <link rel="stylesheet" href="/css/academic.css">
+
+  
+
+
+
+
+  
+
+
+  
+  
+
+  
+
+  <link rel="manifest" href="/index.webmanifest">
+  <link rel="icon" type="image/png" href="/images/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_32x32_fill_lanczos_center_2.png">
+  <link rel="apple-touch-icon" type="image/png" href="/images/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_192x192_fill_lanczos_center_2.png">
+
+  <link rel="canonical" href="https://evalf20.classes.andrewheiss.com/content/06-content/">
+
+  
+  
+  
+  
+  
+  
+  
+    
+  
+  
+  <meta property="twitter:card" content="summary_large_image">
+  
+  <meta property="twitter:site" content="@andrewheiss">
+  <meta property="twitter:creator" content="@andrewheiss">
+  
+  <meta property="og:site_name" content="Program Evaluation">
+  <meta property="og:url" content="https://evalf20.classes.andrewheiss.com/content/06-content/">
+  <meta property="og:title" content="Threats to validity | Program Evaluation">
+  <meta property="og:description" content="Readings Slides Videos   Readings   Randall Munroe, “Significant”  Alexander Coppock, “10 Things to Know About Statistical Power”  Play around with FiveThirtyEight, “Hack Your Way To Scientific Glory”  Chapter 9 in Impact Evaluation in Practice Paul J. Gertler et al., Impact Evaluation in Practice, 2nd ed. (Inter-American Development Bank; World Bank, 2016), https://openknowledge.worldbank.org/handle/10986/25030.   Slides The slides for today’s lesson are available online as an HTML file."><meta property="og:image" content="https://evalf20.classes.andrewheiss.com/img/social-image-f20.png">
+  <meta property="twitter:image" content="https://evalf20.classes.andrewheiss.com/img/social-image-f20.png"><meta property="og:locale" content="en-us">
+  
+    
+      <meta property="article:published_time" content="2020-09-28T00:00:00&#43;00:00">
+    
+    <meta property="article:modified_time" content="2020-11-28T22:05:44&#43;00:00">
+  
+
+  
+
+
+
+  
+
+
+  
+
+
+    <link rel="stylesheet" type="text/css" href="/custom-css/print.css" media="print" />
+
+    <link rel="shortcut icon" href="https://evalf20.classes.andrewheiss.com/favicon.ico" />
+    <link rel="apple-touch-icon-precomposed" sizes="57x57" href="https://evalf20.classes.andrewheiss.com/img/apple-touch-icon-57x57.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="https://evalf20.classes.andrewheiss.com/img/apple-touch-icon-114x114.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="https://evalf20.classes.andrewheiss.com/img/apple-touch-icon-72x72.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="https://evalf20.classes.andrewheiss.com/img/apple-touch-icon-144x144.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="120x120" href="https://evalf20.classes.andrewheiss.com/img/apple-touch-icon-120x120.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="https://evalf20.classes.andrewheiss.com/img/apple-touch-icon-152x152.png" />
+    <link rel="icon" type="image/png" href="https://evalf20.classes.andrewheiss.com/img/favicon-32x32.png" sizes="32x32" />
+    <link rel="icon" type="image/png" href="https://evalf20.classes.andrewheiss.com/img/favicon-16x16.png" sizes="16x16" />
+    <meta name="application-name" content="PMAP 8521: Program Evaluation" />
+    <meta name="msapplication-TileColor" content="#FFFFFF" />
+    <meta name="msapplication-TileImage" content="https://evalf20.classes.andrewheiss.com/img/mstile-144x144.png" />
+
+
+  <title>Threats to validity | Program Evaluation</title>
+
+</head>
+
+
+<body id="top" data-spy="scroll" data-offset="70"
+    data-target="#TableOfContents"
+    >
+
+    <aside class="search-results" id="search">
+  <div class="container">
+    <section class="search-header">
+
+      <div class="row no-gutters justify-content-between mb-3">
+        <div class="col-6">
+          <h1>Search</h1>
+        </div>
+        <div class="col-6 col-search-close">
+          <a class="js-search" href="#"><i class="fas fa-times-circle text-muted" aria-hidden="true"></i></a>
+        </div>
+      </div>
+
+      <div id="search-box">
+        
+        
+        
+      </div>
+
+    </section>
+    <section class="section-search-results">
+
+      <div id="search-hits">
+        
+      </div>
+
+    </section>
+  </div>
+</aside>
+
+
+    
+
+
+
+
+
+
+
+<nav class="navbar navbar-expand-lg navbar-light compensate-for-scrollbar" id="navbar-main">
+  <div class="container">
+
+    
+    <div class="d-none d-lg-inline-flex">
+      <a class="navbar-brand" href="/">Program Evaluation</a>
+    </div>
+    
+
+    
+    <button type="button" class="navbar-toggler" data-toggle="collapse"
+            data-target="#navbar-content" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
+    <span><i class="fas fa-bars"></i></span>
+    </button>
+    
+
+    
+    <div class="navbar-brand-mobile-wrapper d-inline-flex d-lg-none">
+      <a class="navbar-brand" href="/">Program Evaluation</a>
+    </div>
+    
+
+    
+    
+    <div class="navbar-collapse main-menu-item collapse justify-content-end" id="navbar-content">
+
+      
+      <ul class="navbar-nav d-md-inline-flex">
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+        
+        
+        
+        
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/syllabus/"><span>Syllabus</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+        
+        
+        
+        
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/schedule/"><span>Schedule</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+        
+        
+        
+        
+        
+
+        <li class="nav-item">
+          <a class="nav-link  active" href="/content/"><span>Content</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+        
+        
+        
+        
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/assignment/"><span>Assignments</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+        
+        
+        
+        
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/example/"><span>Examples</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+        
+        
+        
+        
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/resource/"><span>Resources</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+            
+          
+        
+
+        
+        
+        
+        
+        
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="https://gsuevalf2020.slack.com" target="_blank" rel="noopener"><span><i class="fab fa-slack"></i></span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+            
+          
+        
+
+        
+        
+        
+        
+        
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="https://rstudio.cloud/" target="_blank" rel="noopener"><span>RStudio.cloud</span></a>
+        </li>
+
+        
+        
+
+      
+
+        
+      </ul>
+    </div>
+
+    <ul class="nav-icons navbar-nav flex-row ml-auto d-flex pl-md-2">
+      
+
+      
+
+      
+
+    </ul>
+
+  </div>
+</nav>
+
+
+    
+
+<div class="container-fluid docs">
+    <div class="row flex-xl-nowrap">
+        <div class="col-12 col-md-3 col-xl-2 docs-sidebar">
+            
+
+
+
+
+
+  
+    
+  
+
+
+
+
+<form class="docs-search d-flex align-items-center">
+  <button class="btn docs-toggle d-md-none p-0 mr-3" type="button" data-toggle="collapse" data-target="#docs-nav" aria-controls="docs-nav" aria-expanded="false" aria-label="Toggle section navigation">
+    <span><i class="fas fa-bars"></i></span>
+  </button>
+
+  
+</form>
+
+<nav class="collapse docs-links" id="docs-nav">
+  
+
+  
+  
+  
+  
+  <div class="docs-toc-item">
+    <a class="docs-toc-link" href="/content/">Overview</a>
+    <ul class="nav docs-sidenav">
+      
+      <li >
+        <a href="/content/">Readings, lectures, and videos</a>
+      </li>
+      
+    </ul>
+    
+
+  </div>
+  
+  <div class="docs-toc-item">
+    <a class="docs-toc-link" href="/content/01-content/">Course content</a>
+    <ul class="nav docs-sidenav">
+      
+      <li >
+        <a href="/content/01-content/">1: Evaluation and the causal revolution</a>
+      </li>
+      
+      <li >
+        <a href="/content/02-content/">2: Regression and inference</a>
+      </li>
+      
+      <li >
+        <a href="/content/03-content/">3: Theories of change and logic models</a>
+      </li>
+      
+      <li >
+        <a href="/content/04-content/">4: Measurement and DAGs</a>
+      </li>
+      
+      <li >
+        <a href="/content/05-content/">5: DAGs and potential outcomes</a>
+      </li>
+      
+      <li class="active">
+        <a href="/content/06-content/">6: Threats to validity</a>
+      </li>
+      
+      <li >
+        <a href="/content/07-content/">7: Randomization and matching</a>
+      </li>
+      
+      <li >
+        <a href="/content/08-content/">8–9: Diff-in-diff I &#43; II</a>
+      </li>
+      
+      <li >
+        <a href="/content/10-content/">10: RDD I</a>
+      </li>
+      
+      <li >
+        <a href="/content/11-content/">11: IV I</a>
+      </li>
+      
+      <li >
+        <a href="/content/12-content/">12: IV I &amp; II</a>
+      </li>
+      
+      <li >
+        <a href="/content/13-content/">13: Choosing and planning ethical evaluations</a>
+      </li>
+      
+      <li >
+        <a href="/content/14-content/">14: Ethics, stories, and curiosity</a>
+      </li>
+      
+    </ul>
+    
+
+  </div>
+  
+  
+</nav>
+
+        </div>
+
+        
+
+        <main class="col-12 col-md-9 col-xl-8 py-md-3 pl-md-5 docs-content" role="main">
+
+            <article class="article">
+
+                <div class="docs-article-container">
+                    <h1>Threats to validity</h1>
+
+                    
+
+                    
+                    <div class="due-date p-2 mb-3 bg-content text-white">
+                        Content for the week of Monday, September 28, 2020–Friday, October 2, 2020
+                    </div>
+                    
+
+                    
+
+                    <div class="article-style">
+                        
+<script src="/rmarkdown-libs/header-attrs/header-attrs.js"></script>
+
+<div id="TOC">
+<ul>
+<li><a href="#readings">Readings</a></li>
+<li><a href="#slides">Slides</a></li>
+<li><a href="#videos">Videos</a></li>
+</ul>
+</div>
+
+<div id="readings" class="section level2">
+<h2>Readings</h2>
+<ul>
+<li><i class="fas fa-external-link-square-alt"></i> Randall Munroe, <a href="https://xkcd.com/882/">“Significant”</a></li>
+<li><i class="fas fa-external-link-square-alt"></i> Alexander Coppock, <a href="https://egap.org/resource/10-things-to-know-about-statistical-power/">“10 Things to Know About Statistical Power”</a></li>
+<li><i class="fas fa-trophy"></i> Play around with FiveThirtyEight, <a href="https://projects.fivethirtyeight.com/p-hacking/">“Hack Your Way To Scientific Glory”</a></li>
+<li><i class="fas fa-book"></i> Chapter 9 in <em>Impact Evaluation in Practice</em> <span class="citation">Paul J. Gertler et al., <em>Impact Evaluation in Practice</em>, 2nd ed. (Inter-American Development Bank; World Bank, 2016), <a href="https://openknowledge.worldbank.org/handle/10986/25030" role="doc-biblioref">https://openknowledge.worldbank.org/handle/10986/25030</a>.</span></li>
+</ul>
+</div>
+<div id="slides" class="section level2">
+<h2>Slides</h2>
+<p>The slides for today’s lesson are available online as an HTML file. Use the buttons below to open the slides either as an interactive website or as a static PDF (for printing or storing for later). You can also click in the slides below and navigate through them with your left and right arrow keys.</p>
+
+<p><a class="btn btn-primary btn-lg" target="_blank" href="/slides/06-slides.html"><i class="fas fa-external-link-alt"></i> View all slides in new window</a> <a class="btn btn-primary btn-lg" target="_blank" href="/slides/06-slides.pdf" role="button"><i class="far fa-file-pdf"></i> Download PDF of all slides</a></p>
+
+
+<ul class="nav nav-tabs" id="slide-tabs" role="tablist">
+<li class="nav-item">
+<a class="nav-link active" id="introduction-tab" data-toggle="tab" href="#introduction" role="tab" aria-controls="introduction" aria-selected="true">Introduction</a>
+</li>
+<li class="nav-item">
+<a class="nav-link" id="construct-validity-tab" data-toggle="tab" href="#construct-validity" role="tab" aria-controls="construct-validity" aria-selected="false">Construct validity</a>
+</li>
+<li class="nav-item">
+<a class="nav-link" id="statistical-conclusion-validity-tab" data-toggle="tab" href="#statistical-conclusion-validity" role="tab" aria-controls="statistical-conclusion-validity" aria-selected="false">Statistical conclusion validity</a>
+</li>
+<li class="nav-item">
+<a class="nav-link" id="internal-validity-tab" data-toggle="tab" href="#internal-validity" role="tab" aria-controls="internal-validity" aria-selected="false">Internal validity</a>
+</li>
+<li class="nav-item">
+<a class="nav-link" id="external-validity-tab" data-toggle="tab" href="#external-validity" role="tab" aria-controls="external-validity" aria-selected="false">External validity</a>
+</li>
+</ul>
+<div id="slide-tabs" class="tab-content">
+<div id="introduction" class="tab-pane fade show active" role="tabpanel" aria-labelledby="introduction-tab">
+<div class="embed-responsive embed-responsive-16by9">
+<iframe class="embed-responsive-item" src="/slides/06-slides.html#1">
+</iframe>
+</div>
+</div>
+<div id="construct-validity" class="tab-pane fade" role="tabpanel" aria-labelledby="construct-validity-tab">
+<div class="embed-responsive embed-responsive-16by9">
+<iframe class="embed-responsive-item" src="/slides/06-slides.html#construct-validity">
+</iframe>
+</div>
+</div>
+<div id="statistical-conclusion-validity" class="tab-pane fade" role="tabpanel" aria-labelledby="statistical-conclusion-validity-tab">
+<div class="embed-responsive embed-responsive-16by9">
+<iframe class="embed-responsive-item" src="/slides/06-slides.html#statistical-conclusion-validity">
+</iframe>
+</div>
+</div>
+<div id="internal-validity" class="tab-pane fade" role="tabpanel" aria-labelledby="internal-validity-tab">
+<div class="embed-responsive embed-responsive-16by9">
+<iframe class="embed-responsive-item" src="/slides/06-slides.html#internal-validity">
+</iframe>
+</div>
+</div>
+<div id="external-validity" class="tab-pane fade" role="tabpanel" aria-labelledby="external-validity-tab">
+<div class="embed-responsive embed-responsive-16by9">
+<iframe class="embed-responsive-item" src="/slides/06-slides.html#external-validity">
+</iframe>
+</div>
+</div>
+</div>
+<div class="fyi">
+<p><strong>Fun fact</strong>: If you type <kbd>?</kbd> (or <kbd>shift</kbd> + <kbd>/</kbd>) while going through the slides, you can see a list of special slide-specific commands.</p>
+</div>
+</div>
+<div id="videos" class="section level2">
+<h2>Videos</h2>
+<p>Videos for each section of the lecture are <a href="https://www.youtube.com/playlist?list=PLS6tnpTr39sFJtz7egfUASfhhz6zuj7GZ">available at this YouTube playlist</a>.</p>
+<ul>
+<li><a href="https://www.youtube.com/watch?v=46v8l60nQnI&amp;list=PLS6tnpTr39sFJtz7egfUASfhhz6zuj7GZ">Introduction</a></li>
+<li><a href="https://www.youtube.com/watch?v=N4XYXuw_IA0&amp;list=PLS6tnpTr39sFJtz7egfUASfhhz6zuj7GZ">Construct validity</a></li>
+<li><a href="https://www.youtube.com/watch?v=IziQBDzUJ6E&amp;list=PLS6tnpTr39sFJtz7egfUASfhhz6zuj7GZ">Statistical conclusion validity</a></li>
+<li><a href="https://www.youtube.com/watch?v=ssz2DTfrGhw&amp;list=PLS6tnpTr39sFJtz7egfUASfhhz6zuj7GZ">Internal validity</a></li>
+<li><a href="https://www.youtube.com/watch?v=uK7YN6KTRT4&amp;list=PLS6tnpTr39sFJtz7egfUASfhhz6zuj7GZ">External validity</a></li>
+</ul>
+<p>You can also watch the playlist (and skip around to different sections) here:</p>
+<div class="embed-responsive embed-responsive-16by9">
+<iframe class="embed-responsive-item" src="https://www.youtube.com/embed/videoseries?list=PLS6tnpTr39sFJtz7egfUASfhhz6zuj7GZ" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
+</iframe>
+</div>
+</div>
+
+                    </div>
+
+                    
+
+
+
+                    
+                </div>
+
+                <div class="body-footer">
+                    <p>Last updated on November 28, 2020</p>
+
+                    
+
+
+
+
+
+  
+  
+
+<p class="edit-page">
+  <a href="https://github.com/andrewheiss/evalf20.classes.andrewheiss.com/edit/master/content/content/06-content.html">
+    <i class="fas fa-pen pr-2"></i>Edit this page
+  </a>
+</p>
+
+
+
+
+                    
+
+                </div>
+
+            </article>
+
+            <footer>
+    <hr>
+
+    <div class="row course-info">
+        <div class="col-md-7">
+            <p>
+                <strong>PMAP 8521: Program Evaluation (Fall 2020)</strong><br>
+
+                <a href="https://www.gsu.edu" target="_blank" rel="noopener">Georgia State University</a> &emsp;&emsp;
+                <a href="https://aysps.gsu.edu/" target="_blank" rel="noopener">Andrew Young School of Policy Studies</a>
+            </p>
+
+            <p>
+                <a href="https://www.andrewheiss.com" target="_blank" rel="noopener"><i class="fas fa-user"></i>
+                    Dr. Andrew Heiss</a> &emsp;&emsp;
+                <a href="mailto:aheiss@gsu.edu"><i class="fas fa-envelope"></i>
+                    aheiss@gsu.edu</a>
+            </p>
+
+            <p>
+                <i class="far fa-calendar-alt"></i> Any day &emsp;&emsp;
+                <i class="far fa-clock"></i> Any time 
+                
+            </p>
+        </div>
+
+        <div class="col-md-5 credits">
+            <p>All content licensed under a <a href="https://creativecommons.org/licenses/by-nc-nd/4.0/" target="_blank" rel="noopener">Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International License</a>.</p>
+            
+            <p>Content <i class="fab fa-creative-commons"></i> 2020 <a href="https://www.andrewheiss.com" target="_blank" rel="noopener">Andrew Heiss</a></p>
+        
+            <p>This site created with the <a href="https://sourcethemes.com/academic/" target="_blank" rel="noopener">Academic theme</a> in <a href="https://bookdown.org/yihui/blogdown/" target="_blank" rel="noopener">blogdown</a> and <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a>. </p>
+            
+            <p><a href="https://github.com/andrewheiss/evalf20.classes.andrewheiss.com" target="_blank" rel="noopener"><i class="fab fa-github"></i> View the source at GitHub.</a></p>
+        </div>
+    </div>
+</footer>
+
+
+        </main>
+    </div>
+</div>
+
+        
+
+    
+    
+    
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.imagesloaded/4.1.4/imagesloaded.pkgd.min.js" integrity="sha256-lqvxZrPLtfffUl2G/e7szqSvPBILGbwmsGE1MKlOi0Q=" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.isotope/3.0.6/isotope.pkgd.min.js" integrity="sha256-CBrpuqrMhXwcLLUd5tvQ4euBHCdh7wGlDfNz8vbu/iI=" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js" integrity="sha256-yt2kYMy0w8AbtF89WXb2P1rfjcP/HTHLT7097U8Y5b8=" crossorigin="anonymous"></script>
+
+      
+
+      
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.1/highlight.min.js" integrity="sha256-eOgo0OtLL4cdq7RdwRUiGKLX9XsIJ7nGhWEKbohmVAQ=" crossorigin="anonymous"></script>
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.1/languages/r.min.js"></script>
+        
+      
+
+    
+
+    
+    
+
+    
+    
+    <script>const code_highlighting = true;</script>
+    
+
+    
+    
+    <script>const isSiteThemeDark = false;</script>
+    
+
+    
+
+    
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/anchor-js/4.1.1/anchor.min.js" integrity="sha256-pB/deHc9CGfFpJRjC43imB29Rse8tak+5eXqntO94ck=" crossorigin="anonymous"></script>
+    <script>
+      anchors.add();
+    </script>
+    
+
+    
+
+    
+    
+
+    
+    
+
+    
+    
+
+    
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <script src="/js/academic.min.6f7ce8be710290b8c431bbc97f405d15.js"></script>
+
+    
+
+
+
+    
+    
+
+    
+<div id="modal" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Cite</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <pre><code class="tex hljs"></code></pre>
+      </div>
+      <div class="modal-footer">
+        <a class="btn btn-outline-primary my-1 js-copy-cite" href="#" target="_blank">
+          <i class="fas fa-copy"></i> Copy
+        </a>
+        <a class="btn btn-outline-primary my-1 js-download-cite" href="#" target="_blank">
+          <i class="fas fa-download"></i> Download
+        </a>
+        <div id="modal-error"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+</body>
+
+</html>
