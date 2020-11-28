@@ -5,10 +5,10 @@ headless: true
 active: true
 weight: 10
 
-title: "Program Evaluation for Public Service"
+title: "Data Visualization"
 
 # Hero image (optional). Enter filename of an image in the `static/img/` folder.
-hero_media: eval_hires.png
+hero_media: dataviz_hires.png
 
 design:
   background:
@@ -20,7 +20,7 @@ design:
     text_color_light: true
 
 cta_note:
-  label: Fall 2020<br>Andrew Young School of Policy Studies<br>Georgia State University
+  label: Spring 2020<br>Sociology Department<br>Duke University
 ---
 
-**Combine research design, causal inference, and econometric tools to measure the effects of social programs**
+**SOCIOL 880**

@@ -17,7 +17,7 @@ git worktree add -B gh-pages public origin/gh-pages
 echo "Removing existing files"
 rm -rf public/*
 
-# find . -name "*.html" -type f -delete
+# DO NOT DO THIS! find . -name "*.html" -type f -delete
 # rm -rf themes/hugo-academic
 # git submodule update --recursive --remote
 # git submodule update

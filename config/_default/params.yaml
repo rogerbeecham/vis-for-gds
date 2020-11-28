@@ -18,7 +18,7 @@ day_night: false
 #   Latest font sets (may require updating): https://sourcethemes.com/academic/themes/
 #   Browse built-in font sets in `themes/academic/data/fonts/`
 #   Browse user installed font sets in `data/fonts/`
-font: "nunito"
+font: "sourcesans"
 
 # Choose a font size.
 # Sizes: XS (extra small), S (small), M (medium), L (large - DEFAULT), XL (extra large)
@@ -37,7 +37,7 @@ font_size: "L"
 site_type: "Course"
 
 # Description for social sharing and search engines. If undefined, superuser role is used in place.
-description: "Use modern statistical and data scientific tools to measure causal effects and evaluate public policy"
+description: "Data Visualization with R and ggplot"
 
 # Display a logo in navigation bar rather than title (optional).
 #   To enable, place an image in `static/img/` and reference its filename below. To disable, set the value to "".
@@ -74,11 +74,11 @@ privacy_pack: false
 # Enable visitors to edit pages?
 #   `repo` defines the repository URL. `editable` defines which page types can be edited.
 edit_page:
-  repo_url: 'https://github.com/andrewheiss/evalf20.classes.andrewheiss.com'
+  repo_url: 'https://github.com/kjhealy/socviz880.co'
   content_dir: ''
   repo_branch: master
   editable:
-    docs: true
+    docs: false
     page: false
     post: false
 
@@ -89,37 +89,35 @@ edit_page:
 ## Additionally, for organizations, these details may be used to enrich search engine results.
 ############################
 
-author: Andrew Heiss
+author: Kieran Healy
 
 instructor: 
-  name: Dr. Andrew Heiss
-  email: aheiss@gsu.edu
-  url: "https://www.andrewheiss.com"
-  twitter: andrewheiss
-  github: andrewheiss
-  office: "357 Andrew Young School"
+  name: Kieran Healy
+  email: kjhealy@soc.duke.edu
+  url: "https://kieranhealy.org"
+  twitter: kjhealy
+  github: kjhealy
+  office: "255 Sociology/Psychology"
   contact_policy: >-
-    E-mail and Slack are the best ways to get in contact with me. I will try to respond to all course-related e-mails and Slack messages within 24 hours (*really*), but also remember that life can be busy and chaotic for everyone (including me!), so if I don't respond right away, don't worry!
-  appointment_url: https://calendly.com/andrewheiss/
+    If you have questions or want to discuss things that we're doing in class, it's best to use the course Slack. I strongly encourage you not to be shy about raising queries or asking for help in the &#35;general channel. For other matters (such as absences, etc), email me.
 
 course:
-  number: "PMAP 8521"
-  semester: "Fall 2020"
-  days: "Any day"
-  time: "Any time"
-  # location: "Aderhold Learning Center 204"
-  dates: "August 24–December 15, 2020"
-  github: "andrewheiss/evalf20.classes.andrewheiss.com"
+  number: "SOCIOL 880"
+  semester: "Spring 2020"
+  days: "Thursdays"
+  time: "10:05am - 12:35pm"
+  location: "Soc-Psych 329"
+  dates: "January 10th - February 20th"
+  github: "kjhealy/socviz880.co"
   copyrightYear: "2020"
-  slack: "https://gsuevalf2020.slack.com"
 
 university: 
-  name: Georgia State University
-  url: "https://www.gsu.edu"
+  name: Duke University
+  url: "https://www.duke.edu"
 
 school:
-  name: Andrew Young School of Policy Studies
-  url: "https://aysps.gsu.edu/"
+  name: Sociology Department
+  url: "https://sociology.duke.edu/"
 
 
 ############################
@@ -127,10 +125,10 @@ school:
 ############################
 
 # Default image for social sharing and search engines. Place image in `static/img/` folder and specify image name here.
-sharing_image: "social-image-f20.png"
+sharing_image: "social-image.png"
 
 # Twitter username (without @). Used when a visitor shares your site on Twitter.
-twitter: "andrewheiss"
+twitter: "kjhealy"
 
 
 ############################

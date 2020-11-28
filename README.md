@@ -1,19 +1,5 @@
-# Program Evaluation for Public Service (PMAP 8521—Fall 2020)
+# SOCIOL 880: Data Visualization
 
-![Program evaluation image](static/img/social-image-f20.png)
+This repository contains the code for generating [socviz880.co](https://socviz880.co/).
 
-## Theme
-
-This site uses the [Academic Hugo theme](https://sourcethemes.com/academic/), with some slight template modifications found in `/assets/` and `layouts/`. The theme is included as a submodule, so when when cloning for the first time, use this command to get the theme too:
-
-    git clone --recursive https://github.com/gcushen/hugo-academic.git
-
-To get the theme later, use this command:
-
-    git submodule add \
-      https://github.com/gcushen/hugo-academic.git \
-      themes/hugo-academic
-
-To update to the latest version of the theme, use:
-
-    git submodule update --recursive --remote
+Various hugo and blogdown features borrowed more or less directly from [Andrew Heiss](https://www.andrewheiss.com) and his excellent [teaching](https://statsf18.classes.andrewheiss.com/) and [class](https://econw19.classes.andrewheiss.com/) [websites](https://datavizf18.classes.andrewheiss.com/).
