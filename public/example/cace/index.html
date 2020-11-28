@@ -1,0 +1,1050 @@
+<!DOCTYPE html>
+<html lang="en-us" 
+      xmlns:og="http://ogp.me/ns#" 
+      xmlns:fb="https://www.facebook.com/2008/fbml">
+
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="generator" content="Source Themes Academic 4.8.0">
+
+  
+
+  
+  
+  
+  
+  
+    
+    
+    
+  
+  
+
+  <meta name="author" content="Andrew Heiss">
+
+  
+  
+  
+    
+  
+  <meta name="description" content="Compliance and treatment effects Finding compliers with a mind-reading time machine Finding compliers in actual data Finding the ITT Finding the proportion of compliers Finding the CACE/LATE with IV/2SLS   Compliance and treatment effects Throughout this course, we’ve talked about the difference between the average treatment effect (ATE), or the average effect of a program for an entire population, and conditional average treatment effect (CATE), or the average effect of a program for some segment of the population.">
+
+  
+  <link rel="alternate" hreflang="en-us" href="https://evalf20.classes.andrewheiss.com/example/cace/">
+
+  
+
+
+  
+  
+  
+  <meta name="theme-color" content="#CF4446">
+  
+
+  
+  
+  
+  <script src="/js/mathjax-config.js"></script>
+  
+
+  
+  
+  
+  
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/academicons/1.8.6/css/academicons.min.css" integrity="sha256-uFVgMKfistnJAfoCUQigIl+JfUaP47GrRKjf6CTPVmw=" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0-1/css/all.min.css" integrity="sha256-4w9DunooKSr3MFXHXWyFER38WmPdm361bQS/2KUWZbU=" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css" integrity="sha256-Vzbj7sDDS/woiFS3uNKo8eIuni59rjyNGtXfstRzStA=" crossorigin="anonymous">
+
+    
+    
+    
+      
+    
+    
+      
+      
+        
+          <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.1/styles/github.min.css" crossorigin="anonymous" title="hl-light">
+          <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.1/styles/dracula.min.css" crossorigin="anonymous" title="hl-dark" disabled>
+        
+      
+    
+
+    
+
+    
+
+    
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/lazysizes/5.1.2/lazysizes.min.js" integrity="sha256-Md1qLToewPeKjfAHU1zyPwOutccPAm5tahnaw7Osw0A=" crossorigin="anonymous" async></script>
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" integrity="" crossorigin="anonymous" async></script>
+      
+    
+      
+
+      
+      
+
+      
+    
+
+  
+
+  
+  
+  
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Fira+Sans+Condensed:400,400i,700,700i%7CNunito+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap">
+  
+
+  
+  
+  
+  
+  <link rel="stylesheet" href="/css/academic.css">
+
+  
+
+
+
+
+  
+
+
+  
+  
+
+  
+
+  <link rel="manifest" href="/index.webmanifest">
+  <link rel="icon" type="image/png" href="/images/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_32x32_fill_lanczos_center_2.png">
+  <link rel="apple-touch-icon" type="image/png" href="/images/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_192x192_fill_lanczos_center_2.png">
+
+  <link rel="canonical" href="https://evalf20.classes.andrewheiss.com/example/cace/">
+
+  
+  
+  
+  
+  
+  
+  
+    
+  
+  
+  <meta property="twitter:card" content="summary_large_image">
+  
+  <meta property="twitter:site" content="@andrewheiss">
+  <meta property="twitter:creator" content="@andrewheiss">
+  
+  <meta property="og:site_name" content="Program Evaluation">
+  <meta property="og:url" content="https://evalf20.classes.andrewheiss.com/example/cace/">
+  <meta property="og:title" content="Complier average treatment effects | Program Evaluation">
+  <meta property="og:description" content="Compliance and treatment effects Finding compliers with a mind-reading time machine Finding compliers in actual data Finding the ITT Finding the proportion of compliers Finding the CACE/LATE with IV/2SLS   Compliance and treatment effects Throughout this course, we’ve talked about the difference between the average treatment effect (ATE), or the average effect of a program for an entire population, and conditional average treatment effect (CATE), or the average effect of a program for some segment of the population."><meta property="og:image" content="https://evalf20.classes.andrewheiss.com/img/social-image-f20.png">
+  <meta property="twitter:image" content="https://evalf20.classes.andrewheiss.com/img/social-image-f20.png"><meta property="og:locale" content="en-us">
+  
+    
+      <meta property="article:published_time" content="2020-10-28T00:00:00&#43;00:00">
+    
+    <meta property="article:modified_time" content="2020-11-28T22:05:44&#43;00:00">
+  
+
+  
+
+
+
+  
+
+
+  
+
+
+    <link rel="stylesheet" type="text/css" href="/custom-css/print.css" media="print" />
+
+    <link rel="shortcut icon" href="https://evalf20.classes.andrewheiss.com/favicon.ico" />
+    <link rel="apple-touch-icon-precomposed" sizes="57x57" href="https://evalf20.classes.andrewheiss.com/img/apple-touch-icon-57x57.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="https://evalf20.classes.andrewheiss.com/img/apple-touch-icon-114x114.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="https://evalf20.classes.andrewheiss.com/img/apple-touch-icon-72x72.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="https://evalf20.classes.andrewheiss.com/img/apple-touch-icon-144x144.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="120x120" href="https://evalf20.classes.andrewheiss.com/img/apple-touch-icon-120x120.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="https://evalf20.classes.andrewheiss.com/img/apple-touch-icon-152x152.png" />
+    <link rel="icon" type="image/png" href="https://evalf20.classes.andrewheiss.com/img/favicon-32x32.png" sizes="32x32" />
+    <link rel="icon" type="image/png" href="https://evalf20.classes.andrewheiss.com/img/favicon-16x16.png" sizes="16x16" />
+    <meta name="application-name" content="PMAP 8521: Program Evaluation" />
+    <meta name="msapplication-TileColor" content="#FFFFFF" />
+    <meta name="msapplication-TileImage" content="https://evalf20.classes.andrewheiss.com/img/mstile-144x144.png" />
+
+
+  <title>Complier average treatment effects | Program Evaluation</title>
+
+</head>
+
+
+<body id="top" data-spy="scroll" data-offset="70"
+    data-target="#TableOfContents"
+    >
+
+    <aside class="search-results" id="search">
+  <div class="container">
+    <section class="search-header">
+
+      <div class="row no-gutters justify-content-between mb-3">
+        <div class="col-6">
+          <h1>Search</h1>
+        </div>
+        <div class="col-6 col-search-close">
+          <a class="js-search" href="#"><i class="fas fa-times-circle text-muted" aria-hidden="true"></i></a>
+        </div>
+      </div>
+
+      <div id="search-box">
+        
+        
+        
+      </div>
+
+    </section>
+    <section class="section-search-results">
+
+      <div id="search-hits">
+        
+      </div>
+
+    </section>
+  </div>
+</aside>
+
+
+    
+
+
+
+
+
+
+
+<nav class="navbar navbar-expand-lg navbar-light compensate-for-scrollbar" id="navbar-main">
+  <div class="container">
+
+    
+    <div class="d-none d-lg-inline-flex">
+      <a class="navbar-brand" href="/">Program Evaluation</a>
+    </div>
+    
+
+    
+    <button type="button" class="navbar-toggler" data-toggle="collapse"
+            data-target="#navbar-content" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
+    <span><i class="fas fa-bars"></i></span>
+    </button>
+    
+
+    
+    <div class="navbar-brand-mobile-wrapper d-inline-flex d-lg-none">
+      <a class="navbar-brand" href="/">Program Evaluation</a>
+    </div>
+    
+
+    
+    
+    <div class="navbar-collapse main-menu-item collapse justify-content-end" id="navbar-content">
+
+      
+      <ul class="navbar-nav d-md-inline-flex">
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+        
+        
+        
+        
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/syllabus/"><span>Syllabus</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+        
+        
+        
+        
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/schedule/"><span>Schedule</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+        
+        
+        
+        
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/content/"><span>Content</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+        
+        
+        
+        
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/assignment/"><span>Assignments</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+        
+        
+        
+        
+        
+
+        <li class="nav-item">
+          <a class="nav-link  active" href="/example/"><span>Examples</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+        
+        
+        
+        
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/resource/"><span>Resources</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+            
+          
+        
+
+        
+        
+        
+        
+        
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="https://gsuevalf2020.slack.com" target="_blank" rel="noopener"><span><i class="fab fa-slack"></i></span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+            
+          
+        
+
+        
+        
+        
+        
+        
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="https://rstudio.cloud/" target="_blank" rel="noopener"><span>RStudio.cloud</span></a>
+        </li>
+
+        
+        
+
+      
+
+        
+      </ul>
+    </div>
+
+    <ul class="nav-icons navbar-nav flex-row ml-auto d-flex pl-md-2">
+      
+
+      
+
+      
+
+    </ul>
+
+  </div>
+</nav>
+
+
+    
+
+<div class="container-fluid docs">
+    <div class="row flex-xl-nowrap">
+        <div class="col-12 col-md-3 col-xl-2 docs-sidebar">
+            
+
+
+
+
+
+  
+    
+  
+
+
+
+
+<form class="docs-search d-flex align-items-center">
+  <button class="btn docs-toggle d-md-none p-0 mr-3" type="button" data-toggle="collapse" data-target="#docs-nav" aria-controls="docs-nav" aria-expanded="false" aria-label="Toggle section navigation">
+    <span><i class="fas fa-bars"></i></span>
+  </button>
+
+  
+</form>
+
+<nav class="collapse docs-links" id="docs-nav">
+  
+
+  
+  
+  
+  
+  <div class="docs-toc-item">
+    <a class="docs-toc-link" href="/example/">Overview</a>
+    <ul class="nav docs-sidenav">
+      
+      <li >
+        <a href="/example/">Code examples</a>
+      </li>
+      
+    </ul>
+    
+
+  </div>
+  
+  <div class="docs-toc-item">
+    <a class="docs-toc-link" href="/example/random-numbers/">Simulated data</a>
+    <ul class="nav docs-sidenav">
+      
+      <li >
+        <a href="/example/random-numbers/">Random numbers</a>
+      </li>
+      
+      <li >
+        <a href="/example/synthetic-data/">Synthetic data</a>
+      </li>
+      
+    </ul>
+    
+
+  </div>
+  
+  <div class="docs-toc-item">
+    <a class="docs-toc-link" href="/example/rstudio-tidyverse/">Examples</a>
+    <ul class="nav docs-sidenav">
+      
+      <li >
+        <a href="/example/rstudio-tidyverse/">R, RStudio, and the tidyverse</a>
+      </li>
+      
+      <li >
+        <a href="/example/regression/">Regression</a>
+      </li>
+      
+      <li >
+        <a href="/example/dags/">DAGs</a>
+      </li>
+      
+      <li >
+        <a href="/example/po-ate-cate/">Potential outcomes, ATEs, and CATEs</a>
+      </li>
+      
+      <li >
+        <a href="/example/rcts/">RCTs</a>
+      </li>
+      
+      <li >
+        <a href="/example/matching-ipw/">Matching and IPW</a>
+      </li>
+      
+      <li >
+        <a href="/example/diff-in-diff/">Diff-in-diff</a>
+      </li>
+      
+      <li >
+        <a href="/example/rdd/">Regression discontinuity</a>
+      </li>
+      
+      <li >
+        <a href="/example/iv/">Instrumental variables</a>
+      </li>
+      
+      <li class="active">
+        <a href="/example/cace/">ITT and CACE</a>
+      </li>
+      
+      <li >
+        <a href="/example/rdd-fuzzy/">Fuzzy regression discontinuity</a>
+      </li>
+      
+    </ul>
+    
+
+  </div>
+  
+  
+</nav>
+
+        </div>
+
+        
+
+        <main class="col-12 col-md-9 col-xl-8 py-md-3 pl-md-5 docs-content" role="main">
+
+            <article class="article">
+
+                <div class="docs-article-container">
+                    <h1>Complier average treatment effects</h1>
+
+                    
+
+                    
+
+                    
+
+                    <div class="article-style">
+                        
+<script src="/rmarkdown-libs/header-attrs/header-attrs.js"></script>
+
+<div id="TOC">
+<ul>
+<li><a href="#compliance-and-treatment-effects">Compliance and treatment effects</a></li>
+<li><a href="#finding-compliers-with-a-mind-reading-time-machine">Finding compliers with a mind-reading time machine</a></li>
+<li><a href="#finding-compliers-in-actual-data">Finding compliers in actual data</a></li>
+<li><a href="#finding-the-itt">Finding the ITT</a></li>
+<li><a href="#finding-the-proportion-of-compliers">Finding the proportion of compliers</a></li>
+<li><a href="#finding-the-cacelate-with-iv2sls">Finding the CACE/LATE with IV/2SLS</a></li>
+</ul>
+</div>
+
+<div id="compliance-and-treatment-effects" class="section level2">
+<h2>Compliance and treatment effects</h2>
+<p>Throughout this course, we’ve talked about the difference between the average treatment effect (ATE), or the average effect of a program for <em>an entire population</em>, and conditional average treatment effect (CATE), or the average effect of a program for some segment of the population. There are all sorts of CATEs: you can find the CATE for men vs. women, for people who are treated with the program (the average treatment on the treated, or ATT or TOT), for people who are not treated with the program (the average treatment on the untreated, or ATU), and so on.</p>
+<p>One important type of CATE is the effect of a program on just those who <em>comply</em> with the program. We can call this the complier average treatment effect, but the acronym would be the same as conditional average treatment effect, so we’ll call it the <strong>complier average causal effect</strong> or CACE.</p>
+<p>Thinking about compliance is important. You might randomly assign people to receive treatment or a program, but people might not do what you tell them. Additionally, people might do the program if assigned to do it, but they would have done it anyway. We can split the population into four types of people:</p>
+<ul>
+<li><strong>Compliers</strong>: People who follow whatever their assignment is (if assigned to treatment, they do the program; if assigned to control, they don’t)</li>
+<li><strong>Always takers</strong>: People who will receive or seek out the program regardless of assignment (if assigned to treatment, they do the program; if assigned to control, they still do the program)</li>
+<li><strong>Never takers</strong>: People who will not receive or seek out the program regardless of assignment (if assigned to treatment, they don’t do the program; if assigned to control, they also don’t do it)</li>
+<li><strong>Defiers</strong>: People who will do the opposite of whatever their assignment is (if assigned to treatment, they don’t do the program; if assigned to control, they do the program)</li>
+</ul>
+<p>To simplify things, evaluators and econometricians assume that defiers don’t exist based on the idea of <em>monotonicity</em>, which means that we can assume that the effect of being assigned to treatment only increases the likelihood of participating in the program (and doesn’t make it more likely).</p>
+<p>The tricky part about trying to find who the compliers are in a sample is that we can’t know what people would have done in the absence of treatment. If we see that someone in the experiment was assigned to be in the treatment group and they then participated in the program, they could be a complier (since they did what they were assigned to do), or they could be an always taker (they did what they were assigned to do, but they would have done it anyway). Due to the fundamental problem of causal inference, we cannot know what each person would have done in a parallel world.</p>
+<p>We can use data from a hypothetical program to see how these three types of compliers distort our outcomes, and more importantly, how we can disentangle compliers from their always- and never-taker counterparts.</p>
+<p>If you want to follow along with this example, you can download these two datasets:</p>
+<ul>
+<li><a href="/data/bed_nets_time_machine.csv"><i class="fas fa-table"></i> <code>bed_nets_time_machine.csv</code></a></li>
+<li><a href="/data/bed_nets_observed.csv"><i class="fas fa-table"></i> <code>bed_nets_observed.csv</code></a></li>
+</ul>
+</div>
+<div id="finding-compliers-with-a-mind-reading-time-machine" class="section level2">
+<h2>Finding compliers with a mind-reading time machine</h2>
+<p>First let’s load the data and reorder some of the categories:</p>
+<pre class="r"><code>library(tidyverse)  # ggplot(), %&gt;%, mutate(), and friends
+library(broom)  # Convert models to data frames
+library(estimatr)  # Run 2SLS models in one step with iv_robust()
+
+bed_nets &lt;- read_csv(&quot;data/bed_nets_observed.csv&quot;) %&gt;% 
+  # Make &quot;No bed net&quot; (control) come first
+  mutate(bed_net = fct_relevel(bed_net, &quot;No bed net&quot;))
+
+bed_nets_time_machine &lt;- read_csv(&quot;data/bed_nets_time_machine.csv&quot;) %&gt;% 
+  # Make &quot;No bed net&quot; come first and &quot;Complier&quot; come first
+  mutate(bed_net = fct_relevel(bed_net, &quot;No bed net&quot;),
+         status = fct_relevel(status, &quot;Complier&quot;))</code></pre>
+<p>This is what we would be able to see if we could read everyone’s minds. There are always takers who will use a bed net regardless of the program, and they’ll have higher health outcomes. However, those better outcomes are because of something endogenous—there’s something else that makes these people always pursue bed nets, and that’s likely related to health. We probably want to not consider them when looking for the program effect. There are never takers who won’t ever use a bed net, and they have worse health outcomes. Again, there’s endogeneity here—something is causing them to not use the bed nets, and it likely also causes their health level. We don’t want to look at them either.</p>
+<p>The first group—the compliers—are the people we want to focus on. Here we see that the program had an effect when compared to a control group.</p>
+<pre class="r"><code>set.seed(1234)  # Make the jittering the same every time
+
+ggplot(bed_nets_time_machine, aes(y = health, x = treatment)) + 
+  geom_point(aes(shape = bed_net, color = status), 
+             position = position_jitter(height = NULL, width = 0.25)) + 
+  facet_wrap(vars(status)) + 
+  labs(color = &quot;Type of person&quot;, shape = &quot;Compliance&quot;,
+       x = NULL, y = &quot;Health status&quot;) +
+  scale_color_viridis_d(option = &quot;plasma&quot;, end = 0.85) +
+  theme_bw()</code></pre>
+<p><img src="/example/cace_files/figure-html/mind-reading-groups-1.png" width="75%" style="display: block; margin: auto;" /></p>
+</div>
+<div id="finding-compliers-in-actual-data" class="section level2">
+<h2>Finding compliers in actual data</h2>
+<p>This is what we actually see in the data, though. You can tell who some of the always takers are (those who used bed nets after being assigned to the control group) and who some of the never takers are (those who did not use a bed net after being assigned to the treatment group), but compliers are mixed up with the always and never takers. We have to somehow disentangle them!</p>
+<pre class="r"><code>set.seed(1234)
+ggplot(bed_nets_time_machine, aes(y = health, x = bed_net)) + 
+  geom_point(aes(shape = bed_net, color = status), 
+             position = position_jitter(height = NULL, width = 0.25)) + 
+  facet_wrap(vars(treatment)) + 
+  labs(color = &quot;Type of person&quot;, shape = &quot;Compliance&quot;,
+       x = NULL, y = &quot;Health status&quot;) +
+  scale_color_viridis_d(option = &quot;plasma&quot;, end = 0.85) +
+  theme_bw()</code></pre>
+<p><img src="/example/cace_files/figure-html/compliers-actual-1.png" width="75%" style="display: block; margin: auto;" /></p>
+<p>We can do this by assuming the proportion of compliers, never takers, and always takers are equally spread across treatment and control (which we can assume through the magic of randomization). If that’s the case, we can calculate the intent to treat (ITT) effect, which is the CATE of being assigned treatment (or the effect of being assigned treatment on health status, regardless of actual compliance).</p>
+<p>The ITT is actually composed of three different causal effects: the complier average causal effect (CACE), the always taker average causal effect (ATACE), and the never taker average causal effect (NTACE). In the formula below, <span class="math inline">\(\pi\)</span> stands for the proportion of people in each group. Formally, the ITT can be defined like this:</p>
+<p><span class="math display">\[
+\begin{aligned}
+\text{ITT}\ =\ &amp; \color{#0D0887}{\pi_\text{compliers} \times (\text{T} - \text{C})_\text{compliers}} + \\
+&amp;\color{#B7318A}{\pi_\text{always takers} \times (\text{T} - \text{C})_\text{always takers}} + \\
+&amp;\color{#FEBA2C}{\pi_\text{never takers} \times (\text{T} - \text{C})_\text{never takers}}
+\end{aligned}
+\]</span></p>
+<p>We can simplify this to this acronymized version:</p>
+<p><span class="math display">\[
+\text{ITT}\ =\ \color{#0D0887}{\pi_\text{C} \text{CACE}} + \color{#B7318A}{\pi_\text{A} \text{ATACE}} + \color{#FEBA2C}{\pi_\text{N} \text{NTACE}}
+\]</span></p>
+<p>The number we care about the most here is the CACE, which is stuck in the middle of the equation. But we can rescue it with some fun logical and algebraic trickery!</p>
+<p>If we assume that assignment to treatment doesn’t make someone more likely to be an always taker or a never taker, we can set the ATACE and NTACE to zero, leaving us with just three variables to worry about: ITT, <span class="math inline">\(\pi_\text{c}\)</span>, and CACE:</p>
+<p><span class="math display">\[
+\begin{aligned}
+\text{ITT}\ =\ &amp; \color{#0D0887}{\pi_\text{C} \text{CACE}} + \color{#B7318A}{\pi_\text{A} \text{ATACE}} + \color{#FEBA2C}{\pi_\text{N} \text{NTACE}} \\[6pt]
+=\ &amp; \color{#0D0887}{\pi_\text{C} \text{CACE}} + \color{#B7318A}{\pi_\text{A} \times 0} + \color{#FEBA2C}{\pi_\text{N} \times 0}\\[6pt]
+\text{ITT}\ =\ &amp; \color{#0D0887}{\pi_\text{C} \text{CACE}}
+\end{aligned}
+\]</span></p>
+<p>We can use algebra to rearrange this formula so that we’re left with an equation that starts with CACE (since that’s the value we care about):</p>
+<p><span class="math display">\[
+\text{CACE} = \frac{\text{ITT}}{\pi_\text{C}}
+\]</span></p>
+<p>If we can find the ITT and the proportion of compliers, we can find the complier average causal effect (CACE). Fortunately, both those pieces—ITT and <span class="math inline">\(\pi_\text{C}\)</span>—are findable in the data we have!</p>
+</div>
+<div id="finding-the-itt" class="section level2">
+<h2>Finding the ITT</h2>
+<p>The ITT is easy to find with a simple OLS model:</p>
+<pre class="r"><code>itt_model &lt;- lm(health ~ treatment, data = bed_nets)
+
+tidy(itt_model)</code></pre>
+<pre><code>## # A tibble: 2 x 5
+##   term               estimate std.error statistic  p.value
+##   &lt;chr&gt;                 &lt;dbl&gt;     &lt;dbl&gt;     &lt;dbl&gt;    &lt;dbl&gt;
+## 1 (Intercept)           40.9      0.444     92.1  0.      
+## 2 treatmentTreatment     5.99     0.630      9.51 5.36e-21</code></pre>
+<pre class="r"><code>ITT &lt;- tidy(itt_model) %&gt;% 
+  filter(term == &quot;treatmentTreatment&quot;) %&gt;% 
+  pull(estimate)</code></pre>
+<p>The ITT here is ≈6—being assigned treatment increases average health status by 5.99 health points.</p>
+</div>
+<div id="finding-the-proportion-of-compliers" class="section level2">
+<h2>Finding the proportion of compliers</h2>
+<p>The proportion of compliers is a little trickier, but doable with some algebraic trickery. Recall from the graph above that the people who were in the treatment group and who complied are a combination of always takers and compliers. This means we can say:</p>
+<p><span class="math display">\[
+\begin{aligned}
+\pi_\text{A} + \pi_\text{C} =&amp; \text{% yes in treatment; or} \\
+\pi_\text{C} =&amp; \text{% yes in treatment} - \pi_\text{A}
+\end{aligned}
+\]</span></p>
+<p>We actually know <span class="math inline">\(\pi_\text{A}\)</span>—remember in the graph above that the people who were in the control group and who used bed nets are guaranteed to be always takers (none of them are compliers or never takers). If we assume that the proportion of always takers is the same in both treatment and control, we can use that percent here, giving us this final equation for <span class="math inline">\(\pi_\text{C}\)</span>:</p>
+<p><span class="math display">\[
+\begin{aligned}
+\pi_\text{C} =&amp; \text{% yes in treatment} - \pi_\text{A} \\
+=&amp; \text{% yes in treatment} - \text{% yes in control}
+\end{aligned}
+\]</span></p>
+<p>So, if we can find the percent of people assigned to treatment who used bed nets, find the percent of people assigned to control and used bed nets, and subtract the two percentages, we’ll have the proportion of compliers, or <span class="math inline">\(\pi_\text{C}\)</span>. We can do that with the data we have (61% - 19.5% = 41.5% compliers):</p>
+<pre class="r"><code>bed_nets %&gt;% 
+  group_by(treatment, bed_net) %&gt;% 
+  summarize(n = n()) %&gt;% 
+  mutate(prop = n / sum(n))</code></pre>
+<pre><code>## # A tibble: 4 x 4
+## # Groups:   treatment [2]
+##   treatment bed_net        n  prop
+##   &lt;chr&gt;     &lt;fct&gt;      &lt;int&gt; &lt;dbl&gt;
+## 1 Control   No bed net   808 0.805
+## 2 Control   Bed net      196 0.195
+## 3 Treatment No bed net   388 0.390
+## 4 Treatment Bed net      608 0.610</code></pre>
+<pre class="r"><code># pi_c = prop yes in treatment - prop yes in control
+pi_c &lt;- 0.6104418 - 0.1952191</code></pre>
+<p>Finally, now that we know both the ITT and <span class="math inline">\(\pi_\text{C}\)</span>, we can find the CACE (or the LATE):</p>
+<pre class="r"><code>CACE &lt;- ITT / pi_c
+CACE</code></pre>
+<pre><code>## [1] 14.42</code></pre>
+<p>It’s 14.4, which means that using bed nets increased health by 14 health points <em>for compliers</em> (which is a lot bigger than the 6 that we found before). We successfully filtered out the always takers and the never takers, and we have our complier-specific causal effect.</p>
+</div>
+<div id="finding-the-cacelate-with-iv2sls" class="section level2">
+<h2>Finding the CACE/LATE with IV/2SLS</h2>
+<p>Doing that is super tedious though! What if there was an easier way to find the effect of the bed net program for just the compliers? We can do this with IV/2SLS regression by using assignment to treatment as an instrument.</p>
+<p>Assignment to treatment works as an instrument because it’s (1) relevant, since being told to use bed nets is probably highly correlated with using bed nets, (2) exclusive, since the only way that being told to use bed nets can cause changes in health is through the actual use of the bed nets, and (3) exogenous, since being told to use bed nets probably isn’t related to other things that cause health.</p>
+<p>Here’s a 2SLS regression with assignment to treatment as the instrument:</p>
+<pre class="r"><code>model_2sls &lt;- iv_robust(health ~ bed_net | treatment, data = bed_nets)
+tidy(model_2sls)</code></pre>
+<pre><code>##             term estimate std.error statistic   p.value conf.low conf.high   df outcome
+## 1    (Intercept)    38.12    0.5151     74.01 0.000e+00    37.11     39.13 1998  health
+## 2 bed_netBed net    14.42    1.2538     11.50 1.087e-29    11.96     16.88 1998  health</code></pre>
+<p>The coefficient for <code>bed_net</code> is identical to the CACE that we found manually! Instrumental variables are helpful for isolated program effects to only compliers when you’re dealing with noncompliance.</p>
+</div>
+
+                    </div>
+
+                    
+
+
+
+                    
+                </div>
+
+                <div class="body-footer">
+                    <p>Last updated on November 28, 2020</p>
+
+                    
+
+
+
+
+
+  
+  
+
+<p class="edit-page">
+  <a href="https://github.com/andrewheiss/evalf20.classes.andrewheiss.com/edit/master/content/example/cace.html">
+    <i class="fas fa-pen pr-2"></i>Edit this page
+  </a>
+</p>
+
+
+
+
+                    
+
+                </div>
+
+            </article>
+
+            <footer>
+    <hr>
+
+    <div class="row course-info">
+        <div class="col-md-7">
+            <p>
+                <strong>PMAP 8521: Program Evaluation (Fall 2020)</strong><br>
+
+                <a href="https://www.gsu.edu" target="_blank" rel="noopener">Georgia State University</a> &emsp;&emsp;
+                <a href="https://aysps.gsu.edu/" target="_blank" rel="noopener">Andrew Young School of Policy Studies</a>
+            </p>
+
+            <p>
+                <a href="https://www.andrewheiss.com" target="_blank" rel="noopener"><i class="fas fa-user"></i>
+                    Dr. Andrew Heiss</a> &emsp;&emsp;
+                <a href="mailto:aheiss@gsu.edu"><i class="fas fa-envelope"></i>
+                    aheiss@gsu.edu</a>
+            </p>
+
+            <p>
+                <i class="far fa-calendar-alt"></i> Any day &emsp;&emsp;
+                <i class="far fa-clock"></i> Any time 
+                
+            </p>
+        </div>
+
+        <div class="col-md-5 credits">
+            <p>All content licensed under a <a href="https://creativecommons.org/licenses/by-nc-nd/4.0/" target="_blank" rel="noopener">Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International License</a>.</p>
+            
+            <p>Content <i class="fab fa-creative-commons"></i> 2020 <a href="https://www.andrewheiss.com" target="_blank" rel="noopener">Andrew Heiss</a></p>
+        
+            <p>This site created with the <a href="https://sourcethemes.com/academic/" target="_blank" rel="noopener">Academic theme</a> in <a href="https://bookdown.org/yihui/blogdown/" target="_blank" rel="noopener">blogdown</a> and <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a>. </p>
+            
+            <p><a href="https://github.com/andrewheiss/evalf20.classes.andrewheiss.com" target="_blank" rel="noopener"><i class="fab fa-github"></i> View the source at GitHub.</a></p>
+        </div>
+    </div>
+</footer>
+
+
+        </main>
+    </div>
+</div>
+
+        
+
+    
+    
+    
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.imagesloaded/4.1.4/imagesloaded.pkgd.min.js" integrity="sha256-lqvxZrPLtfffUl2G/e7szqSvPBILGbwmsGE1MKlOi0Q=" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.isotope/3.0.6/isotope.pkgd.min.js" integrity="sha256-CBrpuqrMhXwcLLUd5tvQ4euBHCdh7wGlDfNz8vbu/iI=" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js" integrity="sha256-yt2kYMy0w8AbtF89WXb2P1rfjcP/HTHLT7097U8Y5b8=" crossorigin="anonymous"></script>
+
+      
+
+      
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.1/highlight.min.js" integrity="sha256-eOgo0OtLL4cdq7RdwRUiGKLX9XsIJ7nGhWEKbohmVAQ=" crossorigin="anonymous"></script>
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.1/languages/r.min.js"></script>
+        
+      
+
+    
+
+    
+    
+
+    
+    
+    <script>const code_highlighting = true;</script>
+    
+
+    
+    
+    <script>const isSiteThemeDark = false;</script>
+    
+
+    
+
+    
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/anchor-js/4.1.1/anchor.min.js" integrity="sha256-pB/deHc9CGfFpJRjC43imB29Rse8tak+5eXqntO94ck=" crossorigin="anonymous"></script>
+    <script>
+      anchors.add();
+    </script>
+    
+
+    
+
+    
+    
+
+    
+    
+
+    
+    
+
+    
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <script src="/js/academic.min.6f7ce8be710290b8c431bbc97f405d15.js"></script>
+
+    
+
+
+
+    
+    
+
+    
+<div id="modal" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Cite</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <pre><code class="tex hljs"></code></pre>
+      </div>
+      <div class="modal-footer">
+        <a class="btn btn-outline-primary my-1 js-copy-cite" href="#" target="_blank">
+          <i class="fas fa-copy"></i> Copy
+        </a>
+        <a class="btn btn-outline-primary my-1 js-download-cite" href="#" target="_blank">
+          <i class="fas fa-download"></i> Download
+        </a>
+        <div id="modal-error"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+</body>
+
+</html>
