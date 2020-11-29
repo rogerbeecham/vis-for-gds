@@ -14,6 +14,9 @@
 
   
   
+
+  
+  
   
   
   
@@ -23,17 +26,17 @@
   
   
 
-  <meta name="author" content="Andrew Heiss">
+  
 
   
   
   
     
   
-  <meta name="description" content="Use modern statistical and data scientific tools to measure causal effects and evaluate public policy">
+  <meta name="description" content="Data Visualization with R and ggplot">
 
   
-  <link rel="alternate" hreflang="en-us" href="https://evalf20.classes.andrewheiss.com/">
+  <link rel="alternate" hreflang="en-us" href="https://socviz880.co/">
 
   
 
@@ -55,8 +58,8 @@
   
   
     
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/academicons/1.8.6/css/academicons.min.css" integrity="sha256-uFVgMKfistnJAfoCUQigIl+JfUaP47GrRKjf6CTPVmw=" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0-1/css/all.min.css" integrity="sha256-4w9DunooKSr3MFXHXWyFER38WmPdm361bQS/2KUWZbU=" crossorigin="anonymous">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" integrity="sha256-FMvZuGapsJLjouA6k7Eo2lusoAX9i0ShlWFG6qt7SLc=" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css" integrity="sha256-Vzbj7sDDS/woiFS3uNKo8eIuni59rjyNGtXfstRzStA=" crossorigin="anonymous">
 
     
@@ -68,8 +71,8 @@
       
       
         
-          <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.1/styles/github.min.css" crossorigin="anonymous" title="hl-light">
-          <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.1/styles/dracula.min.css" crossorigin="anonymous" title="hl-dark" disabled>
+          <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.2/styles/github.min.css" crossorigin="anonymous" title="hl-light">
+          <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.2/styles/dracula.min.css" crossorigin="anonymous" title="hl-dark" disabled>
         
       
     
@@ -79,6 +82,13 @@
     
 
     
+    
+      
+
+      
+      
+
+      
     
       
 
@@ -195,7 +205,11 @@
   
   
   
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Fira+Sans+Condensed:400,400i,700,700i%7CNunito+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap">
+    
+      
+      
+      <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,400i&display=swap">
+    
   
 
   
@@ -218,14 +232,14 @@
   
 
   
-  <link rel="alternate" href="/index.xml" type="application/rss+xml" title="Program Evaluation">
+  <link rel="alternate" href="/index.xml" type="application/rss+xml" title="Data Visualization">
   
 
   <link rel="manifest" href="/index.webmanifest">
   <link rel="icon" type="image/png" href="/images/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_32x32_fill_lanczos_center_2.png">
   <link rel="apple-touch-icon" type="image/png" href="/images/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_192x192_fill_lanczos_center_2.png">
 
-  <link rel="canonical" href="https://evalf20.classes.andrewheiss.com/">
+  <link rel="canonical" href="https://socviz880.co/">
 
   
   
@@ -239,14 +253,14 @@
   
   <meta property="twitter:card" content="summary_large_image">
   
-  <meta property="twitter:site" content="@andrewheiss">
-  <meta property="twitter:creator" content="@andrewheiss">
+  <meta property="twitter:site" content="@kjhealy">
+  <meta property="twitter:creator" content="@kjhealy">
   
-  <meta property="og:site_name" content="Program Evaluation">
-  <meta property="og:url" content="https://evalf20.classes.andrewheiss.com/">
-  <meta property="og:title" content="Program Evaluation">
-  <meta property="og:description" content="Use modern statistical and data scientific tools to measure causal effects and evaluate public policy"><meta property="og:image" content="https://evalf20.classes.andrewheiss.com/img/social-image-f20.png">
-  <meta property="twitter:image" content="https://evalf20.classes.andrewheiss.com/img/social-image-f20.png"><meta property="og:locale" content="en-us">
+  <meta property="og:site_name" content="Data Visualization">
+  <meta property="og:url" content="https://socviz880.co/">
+  <meta property="og:title" content="Data Visualization">
+  <meta property="og:description" content="Data Visualization with R and ggplot"><meta property="og:image" content="https://socviz880.co/media/social-image.png">
+  <meta property="twitter:image" content="https://socviz880.co/media/social-image.png"><meta property="og:locale" content="en-us">
   
     
   
@@ -256,7 +270,7 @@
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
-  "@type": "WebSite","url": "https://evalf20.classes.andrewheiss.com/"
+  "@type": "WebSite","url": "https://socviz880.co/"
 }
 </script>
 
@@ -266,14 +280,14 @@
 {
   "@context": "https://schema.org",
   "@type": "Course",
-  "@id": "https://evalf20.classes.andrewheiss.com/",
-  "name": "Program Evaluation",
-  "logo": "https://evalf20.classes.andrewheiss.com/images/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_192x192_fill_lanczos_center_2.png",
-  "image": "https://evalf20.classes.andrewheiss.com/img/social-image-f20.png",
+  "@id": "https://socviz880.co/",
+  "name": "Data Visualization",
+  "logo": "https://socviz880.co/images/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_192x192_fill_lanczos_center_2.png",
+  "image": "https://socviz880.co/media/social-image.png",
   
   
   
-  "url": "https://evalf20.classes.andrewheiss.com/"
+  "url": "https://socviz880.co/"
 }
 </script>
 
@@ -283,23 +297,21 @@
   
 
 
-    <link rel="stylesheet" type="text/css" href="/custom-css/print.css" media="print" />
-
-    <link rel="shortcut icon" href="https://evalf20.classes.andrewheiss.com/favicon.ico" />
-    <link rel="apple-touch-icon-precomposed" sizes="57x57" href="https://evalf20.classes.andrewheiss.com/img/apple-touch-icon-57x57.png" />
-    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="https://evalf20.classes.andrewheiss.com/img/apple-touch-icon-114x114.png" />
-    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="https://evalf20.classes.andrewheiss.com/img/apple-touch-icon-72x72.png" />
-    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="https://evalf20.classes.andrewheiss.com/img/apple-touch-icon-144x144.png" />
-    <link rel="apple-touch-icon-precomposed" sizes="120x120" href="https://evalf20.classes.andrewheiss.com/img/apple-touch-icon-120x120.png" />
-    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="https://evalf20.classes.andrewheiss.com/img/apple-touch-icon-152x152.png" />
-    <link rel="icon" type="image/png" href="https://evalf20.classes.andrewheiss.com/img/favicon-32x32.png" sizes="32x32" />
-    <link rel="icon" type="image/png" href="https://evalf20.classes.andrewheiss.com/img/favicon-16x16.png" sizes="16x16" />
-    <meta name="application-name" content="PMAP 8521: Program Evaluation" />
-    <meta name="msapplication-TileColor" content="#FFFFFF" />
-    <meta name="msapplication-TileImage" content="https://evalf20.classes.andrewheiss.com/img/mstile-144x144.png" />
+  <link rel="shortcut icon" href="https://socviz880.co/favicon.ico" />
+  <link rel="apple-touch-icon-precomposed" sizes="57x57" href="https://socviz880.co/img/apple-touch-icon-57x57.png" />
+  <link rel="apple-touch-icon-precomposed" sizes="114x114" href="https://socviz880.co/img/apple-touch-icon-114x114.png" />
+  <link rel="apple-touch-icon-precomposed" sizes="72x72" href="https://socviz880.co/img/apple-touch-icon-72x72.png" />
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="https://socviz880.co/img/apple-touch-icon-144x144.png" />
+  <link rel="apple-touch-icon-precomposed" sizes="120x120" href="https://socviz880.co/img/apple-touch-icon-120x120.png" />
+  <link rel="apple-touch-icon-precomposed" sizes="152x152" href="https://socviz880.co/img/apple-touch-icon-152x152.png" />
+  <link rel="icon" type="image/png" href="https://socviz880.co/img/favicon-32x32.png" sizes="32x32" />
+  <link rel="icon" type="image/png" href="https://socviz880.co/img/favicon-16x16.png" sizes="16x16" />
+  <meta name="application-name" content="SOCIOL 880: Data Visualization" />
+  <meta name="msapplication-TileColor" content="#FFFFFF" />
+  <meta name="msapplication-TileImage" content="https://socviz880.co/img/mstile-144x144.png" />
 
 
-  <title>Program Evaluation</title>
+  <title>Data Visualization</title>
 
 </head>
 
@@ -347,12 +359,17 @@
 
 
 
+
+
+
+
+
 <nav class="navbar navbar-expand-lg navbar-light compensate-for-scrollbar" id="navbar-main">
   <div class="container">
 
     
     <div class="d-none d-lg-inline-flex">
-      <a class="navbar-brand" href="/">Program Evaluation</a>
+      <a class="navbar-brand" href="/">Data Visualization</a>
     </div>
     
 
@@ -365,7 +382,7 @@
 
     
     <div class="navbar-brand-mobile-wrapper d-inline-flex d-lg-none">
-      <a class="navbar-brand" href="/">Program Evaluation</a>
+      <a class="navbar-brand" href="/">Data Visualization</a>
     </div>
     
 
@@ -437,7 +454,7 @@
         
 
         <li class="nav-item">
-          <a class="nav-link " href="/content/"><span>Content</span></a>
+          <a class="nav-link " href="/reading/"><span>Readings</span></a>
         </li>
 
         
@@ -459,7 +476,7 @@
         
 
         <li class="nav-item">
-          <a class="nav-link " href="/assignment/"><span>Assignments</span></a>
+          <a class="nav-link " href="/class/"><span>Class</span></a>
         </li>
 
         
@@ -481,53 +498,7 @@
         
 
         <li class="nav-item">
-          <a class="nav-link " href="/example/"><span>Examples</span></a>
-        </li>
-
-        
-        
-
-        
-
-        
-        
-        
-          
-        
-
-        
-        
-        
-        
-        
-        
-
-        <li class="nav-item">
-          <a class="nav-link " href="/resource/"><span>Resources</span></a>
-        </li>
-
-        
-        
-
-        
-
-        
-        
-        
-          
-            
-          
-        
-
-        
-        
-        
-        
-        
-        
-
-        <li class="nav-item">
-          <a class="nav-link " href="https://gsuevalf2020.slack.com" target="_blank" rel="noopener"><span><i class="fab fa-slack"></i></span></a>
+          <a class="nav-link " href="/reference/"><span>Reference</span></a>
         </li>
 
         
@@ -576,6 +547,7 @@
 </nav>
 
 
+
     
 
 
@@ -586,6 +558,7 @@
 
 
 
+  
 <span class="js-widget-page d-none"></span>
 
 
@@ -615,6 +588,9 @@
   
 
   
+  
+
+  
 
   
   
@@ -630,6 +606,8 @@
   
 
   
+  
+
   
 
   <section id="hero" class="home-section wg-hero dark  " style="background-image: linear-gradient(#A52C60, #CF4446);" >
@@ -644,11 +622,11 @@
 
 
     <h1 class="hero-title">
-      Program Evaluation for Public Service
+      Data Visualization
     </h1>
 
     
-    <div class="hero-lead"><p><strong>Combine research design, causal inference, and econometric tools to measure the effects of social programs</strong></p>
+    <div class="hero-lead"><p><strong>SOCIOL 880</strong></p>
 </div>
     
 
@@ -658,15 +636,16 @@
     
     
     <p class="hero-note text-muted mb-0">
-      Fall 2020<br>Andrew Young School of Policy Studies<br>Georgia State University
+      Spring 2020<br>Sociology Department<br>Duke University
     </p>
     
 
   
   
+    
   </div>
   <div class="col-6 mx-auto col-md-6 order-md-2 hero-media">
-    <img src="/img/eval_hires.png" alt="">
+    <img src="/media/dataviz_hires.png" alt="">
   </div>
 </div>
 
@@ -692,6 +671,9 @@
   
 
   
+  
+
+  
 
   
   
@@ -707,6 +689,8 @@
   
 
   
+  
+
   
 
   <section id="outline" class="home-section wg-blank   " style="background-color: #ffffff;padding: 20px 0 10px 0;" >
@@ -724,11 +708,10 @@
         <h3>Instructor</h3>
 
         <ul class="icon-list">
-            <li><i class="fas fa-user"></i> <a href="https://www.andrewheiss.com" target="_blank" rel="noopener"> Dr. Andrew Heiss</a></li>
-            <li><i class="fas fa-university"></i> 357 Andrew Young School</li>
-            <li><i class="fas fa-envelope"></i> <a href="mailto:aheiss@gsu.edu"> aheiss@gsu.edu</a></li>
-            <li><i class="fab fa-twitter"></i> <a href="https://twitter.com/andrewheiss" target="_blank" rel="noopener"> @andrewheiss</a></li>
-            <li><i class="fas fa-calendar-check"></i> <a href="https://calendly.com/andrewheiss/" target="_blank" rel="noopener"> Schedule an appointment</a></li>
+            <li><i class="fas fa-user"></i> <a href="https://kieranhealy.org" target="_blank" rel="noopener"> Kieran Healy</a></li>
+            <li><i class="fas fa-university"></i> 255 Sociology/Psychology</li>
+            <li><i class="fas fa-envelope"></i> <a href="mailto:kjhealy@soc.duke.edu"> kjhealy@soc.duke.edu</a></li>
+            <li><i class="fab fa-twitter"></i> <a href="https://twitter.com/kjhealy" target="_blank" rel="noopener"> @kjhealy</a></li>
         </ul>
     </div>
 
@@ -736,48 +719,20 @@
         <h3>Course details</h3>
 
         <ul class="icon-list">
-            <li><i class="far fa-calendar"></i> Any day</li>
-            <li><i class="far fa-calendar-alt"></i> August 24–December 15, 2020</li>
-            <li><i class="far fa-clock"></i> Any time</li>
+            <li><i class="far fa-calendar"></i> Thursdays</li>
+            <li><i class="far fa-calendar-alt"></i> January 10th - February 20th</li>
+            <li><i class="far fa-clock"></i> 10:05am - 12:35pm</li>
+            <li><i class="fas fa-university"></i> Soc-Psych 329</li>
             
-            <li><i class="fab fa-slack"></i> <a href="https://gsuevalf2020.slack.com" target="_blank" rel="noopener">Slack</a></li>
         </ul>
     </div>
 
     <div class="col-md-4 contact-policy">
         <h3>Contacting me</h3>
 
-        <p>E-mail and Slack are the best ways to get in contact with me. I will try to respond to all course-related e-mails and Slack messages within 24 hours (<em>really</em>), but also remember that life can be busy and chaotic for everyone (including me!), so if I don&rsquo;t respond right away, don&rsquo;t worry!</p>
+        <p>If you have questions or want to discuss things that we&rsquo;re doing in class, it&rsquo;s best to use the course Slack. I strongly encourage you not to be shy about raising queries or asking for help in the #general channel. For other matters (such as absences, etc), email me.</p>
     </div>
 </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<figure >
-
-
-  <a data-fancybox="" href="/img/eval-flowchart.png" >
-
-
-  <img src="/img/eval-flowchart.png" alt="Course map"  >
-</a>
-
-
-
-</figure>
 
 
     </div>
@@ -789,23 +744,25 @@
 
 
 
+
         
 
     
     
     
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
       <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.imagesloaded/4.1.4/imagesloaded.pkgd.min.js" integrity="sha256-lqvxZrPLtfffUl2G/e7szqSvPBILGbwmsGE1MKlOi0Q=" crossorigin="anonymous"></script>
       <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.isotope/3.0.6/isotope.pkgd.min.js" integrity="sha256-CBrpuqrMhXwcLLUd5tvQ4euBHCdh7wGlDfNz8vbu/iI=" crossorigin="anonymous"></script>
       <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js" integrity="sha256-yt2kYMy0w8AbtF89WXb2P1rfjcP/HTHLT7097U8Y5b8=" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/instant.page/5.1.0/instantpage.min.js" integrity="sha512-1+qUtKoh9XZW7j+6LhRMAyOrgSQKenQ4mluTR+cvxXjP1Z54RxZuzstR/H9kgPXQsVB8IW7DMDFUJpzLjvhGSQ==" crossorigin="anonymous"></script>
 
       
 
       
         
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.1/highlight.min.js" integrity="sha256-eOgo0OtLL4cdq7RdwRUiGKLX9XsIJ7nGhWEKbohmVAQ=" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.2/highlight.min.js" integrity="sha512-7t8APmYpzEsZP7CYoA7RfMPV9Bb+PJHa9x2WiUnDXZx3XHveuyWUtvNOexhkierl5flZ3tr92dP1mMS+SGlD+A==" crossorigin="anonymous"></script>
         
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.1/languages/r.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.2/languages/r.min.js"></script>
         
       
 
@@ -867,9 +824,12 @@
     
     
     
-    <script src="/js/academic.min.6f7ce8be710290b8c431bbc97f405d15.js"></script>
+    <script src="/js/academic.min.7c0855509a679f5c89322b27a9552a2f.js"></script>
 
     
+
+
+
 
 
 
@@ -882,34 +842,32 @@
     <div class="row course-info">
         <div class="col-md-7">
             <p>
-                <strong>PMAP 8521: Program Evaluation (Fall 2020)</strong><br>
+                <strong>SOCIOL 880: Data Visualization (Spring 2020)</strong><br>
 
-                <a href="https://www.gsu.edu" target="_blank" rel="noopener">Georgia State University</a> &emsp;&emsp;
-                <a href="https://aysps.gsu.edu/" target="_blank" rel="noopener">Andrew Young School of Policy Studies</a>
+                <a href="https://www.duke.edu" target="_blank" rel="noopener">Duke University</a> &emsp;&emsp;
+                <a href="https://sociology.duke.edu/" target="_blank" rel="noopener">Sociology Department</a>
             </p>
 
             <p>
-                <a href="https://www.andrewheiss.com" target="_blank" rel="noopener"><i class="fas fa-user"></i>
-                    Dr. Andrew Heiss</a> &emsp;&emsp;
-                <a href="mailto:aheiss@gsu.edu"><i class="fas fa-envelope"></i>
-                    aheiss@gsu.edu</a>
+                <a href="https://kieranhealy.org" target="_blank" rel="noopener"><i class="fas fa-user"></i>
+                    Kieran Healy</a> &emsp;&emsp;
+                <a href="mailto:kjhealy@soc.duke.edu"><i class="fas fa-envelope"></i>
+                    kjhealy@soc.duke.edu</a>
             </p>
 
             <p>
-                <i class="far fa-calendar-alt"></i> Any day &emsp;&emsp;
-                <i class="far fa-clock"></i> Any time 
-                
+                <i class="far fa-calendar-alt"></i> Thursdays &emsp;&emsp;
+                <i class="far fa-clock"></i> 10:05am - 12:35pm <br>
+                <i class="fas fa-university"></i> Soc-Psych 329
             </p>
         </div>
 
         <div class="col-md-5 credits">
-            <p>All content licensed under a <a href="https://creativecommons.org/licenses/by-nc-nd/4.0/" target="_blank" rel="noopener">Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International License</a>.</p>
+            <p>All content licensed under a <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank" rel="noopener">Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International License</a>.</p>
             
-            <p>Content <i class="fab fa-creative-commons"></i> 2020 <a href="https://www.andrewheiss.com" target="_blank" rel="noopener">Andrew Heiss</a></p>
-        
-            <p>This site created with the <a href="https://sourcethemes.com/academic/" target="_blank" rel="noopener">Academic theme</a> in <a href="https://bookdown.org/yihui/blogdown/" target="_blank" rel="noopener">blogdown</a> and <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a>. </p>
+            <p>Content <i class="fab fa-creative-commons"></i> 2020 <a href="https://kieranhealy.org" target="_blank" rel="noopener">Kieran Healy</a></p>                    
             
-            <p><a href="https://github.com/andrewheiss/evalf20.classes.andrewheiss.com" target="_blank" rel="noopener"><i class="fab fa-github"></i> View the source at GitHub.</a></p>
+            <p><a href="https://github.com/kjhealy/socviz880.co" target="_blank" rel="noopener"><i class="fab fa-github"></i> View the source at GitHub.</a></p>
         </div>
     </div>
 </footer>
