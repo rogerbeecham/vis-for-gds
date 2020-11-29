@@ -1,4 +1,4 @@
-baseurl: https://socviz880.co/
+baseurl: "http://www.roger-beecham.com/vis-for-gds/"
 defaultContentLanguage: en
 title: "Data Visualization"
 theme: hugo-academic
