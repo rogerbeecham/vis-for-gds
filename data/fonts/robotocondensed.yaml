@@ -1,0 +1,11 @@
+# Font style metadata
+name: Roboto Condensed
+
+# Optional Google font URL
+google_fonts: 'Roboto+Condensed:ital,wght@0,300;0,400;1,400'
+
+# Font families
+heading_font: Roboto Condensed
+body_font: Roboto Condensed
+nav_font: Roboto Condensed
+mono_font: '"Roboto Condensed", "Inconsolata", "Liberation Mono", Menlo, Courier, monospace'

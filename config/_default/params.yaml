@@ -9,7 +9,7 @@
 #   Latest themes (may require updating): https://sourcethemes.com/academic/themes/
 #   Browse built-in themes in `themes/academic/data/themes/`
 #   Browse user installed themes in `data/themes/`
-theme: "inferno"
+theme: "pastel"
 
 # Enable users to switch between day and night mode?
 day_night: false
@@ -18,7 +18,7 @@ day_night: false
 #   Latest font sets (may require updating): https://sourcethemes.com/academic/themes/
 #   Browse built-in font sets in `themes/academic/data/fonts/`
 #   Browse user installed font sets in `data/fonts/`
-font: "sourcesans"
+font: "robotocondensed"
 
 # Choose a font size.
 # Sizes: XS (extra small), S (small), M (medium), L (large - DEFAULT), XL (extra large)
@@ -37,7 +37,7 @@ font_size: "L"
 site_type: "Course"
 
 # Description for social sharing and search engines. If undefined, superuser role is used in place.
-description: "Data Visualization with R and ggplot"
+description: "Geographic Data Science and Visualization with R and ggplot"
 
 # Display a logo in navigation bar rather than title (optional).
 #   To enable, place an image in `static/img/` and reference its filename below. To disable, set the value to "".
@@ -53,7 +53,7 @@ logo: ""
 highlight: true
 
 # Add support for highlighting additional languages
-highlight_languages: 
+highlight_languages:
   - r
 
 # highlight_style: "github-gist"  # For supported styles, see https://cdnjs.com/libraries/highlight.js/
@@ -74,9 +74,9 @@ privacy_pack: false
 # Enable visitors to edit pages?
 #   `repo` defines the repository URL. `editable` defines which page types can be edited.
 edit_page:
-  repo_url: 'https://github.com/kjhealy/socviz880.co'
+  repo_url: 'https://github.com/rogerbeecham/vis-for-gds/'
   content_dir: ''
-  repo_branch: master
+  repo_branch: main
   editable:
     docs: false
     page: false
@@ -89,35 +89,35 @@ edit_page:
 ## Additionally, for organizations, these details may be used to enrich search engine results.
 ############################
 
-author: Kieran Healy
+author: Roger Beecham
 
-instructor: 
-  name: Kieran Healy
-  email: kjhealy@soc.duke.edu
-  url: "https://kieranhealy.org"
-  twitter: kjhealy
-  github: kjhealy
-  office: "255 Sociology/Psychology"
+instructor:
+  name: Roger Beecham
+  email: r.j.beecham@leeds.ac.uk
+  url: "http://www.roger-beecham.com/"
+  twitter: rjbeecham
+  github: rogerbeecham
+  office: "10.139 Manton Building"
   contact_policy: >-
-    If you have questions or want to discuss things that we're doing in class, it's best to use the course Slack. I strongly encourage you not to be shy about raising queries or asking for help in the &#35;general channel. For other matters (such as absences, etc), email me.
+   I'm really keen that there is strong engagement with the course Slack. So for almost all questions to do with the substantive aspects of the module, direct these to the &#35;general channel in the first instance. For matters such as absences, extensions, email me.
 
 course:
-  number: "SOCIOL 880"
-  semester: "Spring 2020"
-  days: "Thursdays"
-  time: "10:05am - 12:35pm"
-  location: "Soc-Psych 329"
-  dates: "January 10th - February 20th"
-  github: "kjhealy/socviz880.co"
-  copyrightYear: "2020"
+  number: "GEOG 5XXX"
+  semester: "Spring 2021"
+  days: "Wednesdays"
+  time: "10:00 - 12:00"
+  location: "ODL"
+  dates: "25th May - 13th Jul"
+  github: "rogerbeecham/vis-for-gds"
+  copyrightYear: "2021"
 
-university: 
-  name: Duke University
-  url: "https://www.duke.edu"
+university:
+  name: University of Leeds
+  url: "https://www.leeds.ac.uk/"
 
 school:
-  name: Sociology Department
-  url: "https://sociology.duke.edu/"
+  name: School of Geography
+  url: "https://environment.leeds.ac.uk/geography"
 
 
 ############################
@@ -128,7 +128,7 @@ school:
 sharing_image: "social-image.png"
 
 # Twitter username (without @). Used when a visitor shares your site on Twitter.
-twitter: "kjhealy"
+twitter: "rjbeecham"
 
 
 ############################
@@ -137,9 +137,9 @@ twitter: "kjhealy"
 
 # Date and time format (refer to https://sourcethemes.com/academic/docs/customization/#date-format )
 #   Examples: "Mon, Jan 2, 2006" or "2006-01-02"
-date_format: "January 2, 2006"
+date_format: "Mon, 02 Jan 2006"
 #   Examples: "3:04 pm" or "15:04"
-time_format: "3:04 PM"
+time_format: "15:04"
 
 
 ############################
