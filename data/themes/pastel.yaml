@@ -5,17 +5,17 @@ name: "pastel"
 light: true
 
 # Primary
-primary: "#01579b"
+primary: "#424242"
 
 # Links
-link: "#01579b"
-link_hover: "#002f6c"
+link: "#003c8f"
+link_hover: "#1565c0"
 
 # Menu
 menu_primary: "#fff"
-menu_text: "#01579b"
-menu_text_active: "#e55100"
-menu_title: "#ab1a00"
+menu_text: "#003c8f"
+menu_text_active: "#1565c0"
+menu_title: "#003c8f"
 
 # Home sections
 home_section_odd: "rgb(255, 255, 255)"

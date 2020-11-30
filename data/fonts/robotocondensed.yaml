@@ -1,11 +1,11 @@
 # Font style metadata
-name: Roboto Condensed
+name: Mine
 
 # Optional Google font URL
-google_fonts: 'Roboto+Condensed:ital,wght@0,300;0,400;1,400'
+google_fonts: 'Roboto+Condensed:ital,wght@0,300;1,300|Roboto+Slab:wght@300|Fjalla+One'
 
 # Font families
-heading_font: Roboto Condensed
-body_font: Roboto Condensed
-nav_font: Roboto Condensed
-mono_font: '"Roboto Condensed", "Inconsolata", "Liberation Mono", Menlo, Courier, monospace'
+heading_font: Fjalla One
+body_font: Roboto Slab
+nav_font: Fjalla One
+mono_font: '"Roboto Condensed", iosevka, monospace'
