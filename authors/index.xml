@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Authors | Visualization for Geographic Data Science</title>
+    <link>http://www.roger-beecham.com/authors/</link>
+      <atom:link href="http://www.roger-beecham.com/authors/index.xml" rel="self" type="application/rss+xml" />
+    <description>Authors</description>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator>
+    <image>
+      <url>http://www.roger-beecham.com/media/social-image.png</url>
+      <title>Authors</title>
+      <link>http://www.roger-beecham.com/authors/</link>
+    </image>
+    
+  </channel>
+</rss>
