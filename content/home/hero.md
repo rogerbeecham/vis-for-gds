@@ -8,7 +8,7 @@ weight: 10
 title: "Visualization for Geographic Data Science"
 
 # Hero image (optional). Enter filename of an image in the `static/img/` folder.
-hero_media: dataviz_hires.png
+hero_media: vis_for_gds.png
 
 design:
   background:

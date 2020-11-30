@@ -1,5 +1,5 @@
 baseurl: "http://www.roger-beecham.com/vis-for-gds/"
-defaultContentLanguage: en
+defaultContentLanguage: "en-uk"
 title: "Visualization for Geographic Data Science"
 theme: hugo-academic
 canonifyURLs: true
@@ -67,5 +67,7 @@ ignoreFiles:
   - .ipynb_checkpoints$
   - \.Rmd$
   - \.Rmarkdown$
+  - \.Rproj.user$
+  - \.Rhistory$
   - _files$
   - _cache$
