@@ -2,25 +2,25 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Class details | Visualization for Geographic Data Science</title>
-    <link>http://www.roger-beecham.com/vis-for-gds/class/</link>
-      <atom:link href="http://www.roger-beecham.com/vis-for-gds/class/index.xml" rel="self" type="application/rss+xml" />
+    <link>/class/</link>
+      <atom:link href="/class/index.xml" rel="self" type="application/rss+xml" />
     <description>Class details</description>
     <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator>
     <image>
-      <url>http://www.roger-beecham.com/vis-for-gds/media/social-image.png</url>
+      <url>/media/social-image.png</url>
       <title>Class details</title>
-      <link>http://www.roger-beecham.com/vis-for-gds/class/</link>
+      <link>/class/</link>
     </image>
     
     <item>
       <title>Maps</title>
-      <link>http://www.roger-beecham.com/vis-for-gds/class/05-class/</link>
+      <link>/class/05-class/</link>
       <pubDate>Thu, 06 Feb 2020 00:00:00 +0000</pubDate>
-      <guid>http://www.roger-beecham.com/vis-for-gds/class/05-class/</guid>
+      <guid>/class/05-class/</guid>
       <description>
 &lt;!-- BLOGDOWN-HEAD --&gt;
-&lt;link href=&#34;http://www.roger-beecham.com/vis-for-gds/rmarkdown-libs/anchor-sections/anchor-sections.css&#34; rel=&#34;stylesheet&#34; /&gt;
-&lt;script src=&#34;http://www.roger-beecham.com/vis-for-gds/rmarkdown-libs/anchor-sections/anchor-sections.js&#34;&gt;&lt;/script&gt;
+&lt;link href=&#34;../rmarkdown-libs/anchor-sections/anchor-sections.css&#34; rel=&#34;stylesheet&#34; /&gt;
+&lt;script src=&#34;../rmarkdown-libs/anchor-sections/anchor-sections.js&#34;&gt;&lt;/script&gt;
 &lt;!-- /BLOGDOWN-HEAD --&gt;
 
 &lt;h2&gt;Contents&lt;/h2&gt;
@@ -33,9 +33,9 @@
 &lt;div id=&#34;slides&#34; class=&#34;section level2&#34;&gt;
 &lt;h2&gt;Slides&lt;/h2&gt;
 
-&lt;p&gt;&lt;a href=&#34;http://www.roger-beecham.com/vis-for-gds/slides/05_dataviz_s20_making_maps.pdf&#34;&gt;Download the slides from today’s class&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;../slides/05_dataviz_s20_making_maps.pdf&#34;&gt;Download the slides from today’s class&lt;/a&gt;.&lt;/p&gt;
 &lt;figure&gt;
-    &lt;a href=&#34;http://www.roger-beecham.com/vis-for-gds/slides/05_dataviz_s20_making_maps.pdf&#34;&gt;&lt;img src=&#34;http://www.roger-beecham.com/vis-for-gds/slides/05_dataviz_s20_making_maps.png&#34; alt=&#34;First slide&#34; /&gt;&lt;/a&gt;
+    &lt;a href=&#34;../slides/05_dataviz_s20_making_maps.pdf&#34;&gt;&lt;img src=&#34;../slides/05_dataviz_s20_making_maps.png&#34; alt=&#34;First slide&#34; /&gt;&lt;/a&gt;
 &lt;/figure&gt;
 
 
@@ -45,13 +45,13 @@
     
     <item>
       <title>Models and Pipelines</title>
-      <link>http://www.roger-beecham.com/vis-for-gds/class/04-class/</link>
+      <link>/class/04-class/</link>
       <pubDate>Thu, 30 Jan 2020 00:00:00 +0000</pubDate>
-      <guid>http://www.roger-beecham.com/vis-for-gds/class/04-class/</guid>
+      <guid>/class/04-class/</guid>
       <description>
 &lt;!-- BLOGDOWN-HEAD --&gt;
-&lt;link href=&#34;http://www.roger-beecham.com/vis-for-gds/rmarkdown-libs/anchor-sections/anchor-sections.css&#34; rel=&#34;stylesheet&#34; /&gt;
-&lt;script src=&#34;http://www.roger-beecham.com/vis-for-gds/rmarkdown-libs/anchor-sections/anchor-sections.js&#34;&gt;&lt;/script&gt;
+&lt;link href=&#34;../rmarkdown-libs/anchor-sections/anchor-sections.css&#34; rel=&#34;stylesheet&#34; /&gt;
+&lt;script src=&#34;../rmarkdown-libs/anchor-sections/anchor-sections.js&#34;&gt;&lt;/script&gt;
 &lt;!-- /BLOGDOWN-HEAD --&gt;
 
 &lt;h2&gt;Contents&lt;/h2&gt;
@@ -64,9 +64,9 @@
 &lt;div id=&#34;slides&#34; class=&#34;section level2&#34;&gt;
 &lt;h2&gt;Slides&lt;/h2&gt;
 
-&lt;p&gt;&lt;a href=&#34;http://www.roger-beecham.com/vis-for-gds/slides/04_dataviz_s20_work_with_models.pdf&#34;&gt;Download the slides from today’s class&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;../slides/04_dataviz_s20_work_with_models.pdf&#34;&gt;Download the slides from today’s class&lt;/a&gt;.&lt;/p&gt;
 &lt;figure&gt;
-    &lt;a href=&#34;http://www.roger-beecham.com/vis-for-gds/slides/04_dataviz_s20_work_with_models.pdf&#34;&gt;&lt;img src=&#34;http://www.roger-beecham.com/vis-for-gds/slides/04_dataviz_s20_work_with_models.png&#34; alt=&#34;First slide&#34; /&gt;&lt;/a&gt;
+    &lt;a href=&#34;../slides/04_dataviz_s20_work_with_models.pdf&#34;&gt;&lt;img src=&#34;../slides/04_dataviz_s20_work_with_models.png&#34; alt=&#34;First slide&#34; /&gt;&lt;/a&gt;
 &lt;/figure&gt;
 
 
@@ -76,13 +76,13 @@
     
     <item>
       <title>Tables, Text, Labels, Notes</title>
-      <link>http://www.roger-beecham.com/vis-for-gds/class/03-class/</link>
+      <link>/class/03-class/</link>
       <pubDate>Thu, 23 Jan 2020 00:00:00 +0000</pubDate>
-      <guid>http://www.roger-beecham.com/vis-for-gds/class/03-class/</guid>
+      <guid>/class/03-class/</guid>
       <description>
 &lt;!-- BLOGDOWN-HEAD --&gt;
-&lt;link href=&#34;http://www.roger-beecham.com/vis-for-gds/rmarkdown-libs/anchor-sections/anchor-sections.css&#34; rel=&#34;stylesheet&#34; /&gt;
-&lt;script src=&#34;http://www.roger-beecham.com/vis-for-gds/rmarkdown-libs/anchor-sections/anchor-sections.js&#34;&gt;&lt;/script&gt;
+&lt;link href=&#34;../rmarkdown-libs/anchor-sections/anchor-sections.css&#34; rel=&#34;stylesheet&#34; /&gt;
+&lt;script src=&#34;../rmarkdown-libs/anchor-sections/anchor-sections.js&#34;&gt;&lt;/script&gt;
 &lt;!-- /BLOGDOWN-HEAD --&gt;
 
 &lt;h2&gt;Contents&lt;/h2&gt;
@@ -95,9 +95,9 @@
 &lt;div id=&#34;slides&#34; class=&#34;section level2&#34;&gt;
 &lt;h2&gt;Slides&lt;/h2&gt;
 
-&lt;p&gt;&lt;a href=&#34;http://www.roger-beecham.com/vis-for-gds/slides/03_dataviz_s20_work_with_geoms.pdf&#34;&gt;Download the slides from today’s class&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;../slides/03_dataviz_s20_work_with_geoms.pdf&#34;&gt;Download the slides from today’s class&lt;/a&gt;.&lt;/p&gt;
 &lt;figure&gt;
-    &lt;a href=&#34;http://www.roger-beecham.com/vis-for-gds/slides/03_dataviz_s20_work_with_geoms.pdf&#34;&gt;&lt;img src=&#34;http://www.roger-beecham.com/vis-for-gds/slides/03_dataviz_s20_work_with_geoms.png&#34; alt=&#34;First slide&#34; /&gt;&lt;/a&gt;
+    &lt;a href=&#34;../slides/03_dataviz_s20_work_with_geoms.pdf&#34;&gt;&lt;img src=&#34;../slides/03_dataviz_s20_work_with_geoms.png&#34; alt=&#34;First slide&#34; /&gt;&lt;/a&gt;
 &lt;/figure&gt;
 
 
@@ -107,13 +107,13 @@
     
     <item>
       <title>Get Started / Make Some Plots</title>
-      <link>http://www.roger-beecham.com/vis-for-gds/class/02-class/</link>
+      <link>/class/02-class/</link>
       <pubDate>Thu, 16 Jan 2020 00:00:00 +0000</pubDate>
-      <guid>http://www.roger-beecham.com/vis-for-gds/class/02-class/</guid>
+      <guid>/class/02-class/</guid>
       <description>
 &lt;!-- BLOGDOWN-HEAD --&gt;
-&lt;link href=&#34;http://www.roger-beecham.com/vis-for-gds/rmarkdown-libs/anchor-sections/anchor-sections.css&#34; rel=&#34;stylesheet&#34; /&gt;
-&lt;script src=&#34;http://www.roger-beecham.com/vis-for-gds/rmarkdown-libs/anchor-sections/anchor-sections.js&#34;&gt;&lt;/script&gt;
+&lt;link href=&#34;../rmarkdown-libs/anchor-sections/anchor-sections.css&#34; rel=&#34;stylesheet&#34; /&gt;
+&lt;script src=&#34;../rmarkdown-libs/anchor-sections/anchor-sections.js&#34;&gt;&lt;/script&gt;
 &lt;!-- /BLOGDOWN-HEAD --&gt;
 
 &lt;h2&gt;Contents&lt;/h2&gt;
@@ -126,9 +126,9 @@
 &lt;div id=&#34;slides&#34; class=&#34;section level2&#34;&gt;
 &lt;h2&gt;Slides&lt;/h2&gt;
 
-&lt;p&gt;&lt;a href=&#34;http://www.roger-beecham.com/vis-for-gds/slides/02_dataviz_s20_getting_started.pdf&#34;&gt;Download the slides from today’s class&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;../slides/02_dataviz_s20_getting_started.pdf&#34;&gt;Download the slides from today’s class&lt;/a&gt;.&lt;/p&gt;
 &lt;figure&gt;
-    &lt;a href=&#34;http://www.roger-beecham.com/vis-for-gds/slides/02_dataviz_s20_getting_started.pdf&#34;&gt;&lt;img src=&#34;http://www.roger-beecham.com/vis-for-gds/slides/02_dataviz_s20_getting_started.png&#34; alt=&#34;First slide&#34; /&gt;&lt;/a&gt;
+    &lt;a href=&#34;../slides/02_dataviz_s20_getting_started.pdf&#34;&gt;&lt;img src=&#34;../slides/02_dataviz_s20_getting_started.png&#34; alt=&#34;First slide&#34; /&gt;&lt;/a&gt;
 &lt;/figure&gt;
 
 
@@ -138,13 +138,13 @@
     
     <item>
       <title>Look at Data / Up and Running in R and ggplot</title>
-      <link>http://www.roger-beecham.com/vis-for-gds/class/01-class/</link>
+      <link>/class/01-class/</link>
       <pubDate>Fri, 10 Jan 2020 00:00:00 +0000</pubDate>
-      <guid>http://www.roger-beecham.com/vis-for-gds/class/01-class/</guid>
+      <guid>/class/01-class/</guid>
       <description>
 &lt;!-- BLOGDOWN-HEAD --&gt;
-&lt;link href=&#34;http://www.roger-beecham.com/vis-for-gds/rmarkdown-libs/anchor-sections/anchor-sections.css&#34; rel=&#34;stylesheet&#34; /&gt;
-&lt;script src=&#34;http://www.roger-beecham.com/vis-for-gds/rmarkdown-libs/anchor-sections/anchor-sections.js&#34;&gt;&lt;/script&gt;
+&lt;link href=&#34;../rmarkdown-libs/anchor-sections/anchor-sections.css&#34; rel=&#34;stylesheet&#34; /&gt;
+&lt;script src=&#34;../rmarkdown-libs/anchor-sections/anchor-sections.js&#34;&gt;&lt;/script&gt;
 &lt;!-- /BLOGDOWN-HEAD --&gt;
 
 &lt;h2&gt;Contents&lt;/h2&gt;
@@ -158,9 +158,9 @@
 &lt;div id=&#34;slides&#34; class=&#34;section level2&#34;&gt;
 &lt;h2&gt;Slides&lt;/h2&gt;
 
-&lt;p&gt;&lt;a href=&#34;http://www.roger-beecham.com/vis-for-gds/slides/01_dataviz_s20_looking_at_data.pdf&#34;&gt;Download the slides from today’s class&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;../slides/01_dataviz_s20_looking_at_data.pdf&#34;&gt;Download the slides from today’s class&lt;/a&gt;.&lt;/p&gt;
 &lt;figure&gt;
-    &lt;a href=&#34;http://www.roger-beecham.com/vis-for-gds/slides/01_dataviz_s20_looking_at_data.pdf&#34;&gt;&lt;img src=&#34;http://www.roger-beecham.com/vis-for-gds/slides/01_dataviz_s20_looking_at_data.png&#34; alt=&#34;First slide&#34; /&gt;&lt;/a&gt;
+    &lt;a href=&#34;../slides/01_dataviz_s20_looking_at_data.pdf&#34;&gt;&lt;img src=&#34;../slides/01_dataviz_s20_looking_at_data.png&#34; alt=&#34;First slide&#34; /&gt;&lt;/a&gt;
 &lt;/figure&gt;
 
 

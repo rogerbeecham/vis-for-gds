@@ -2,14 +2,14 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Authors | Visualization for Geographic Data Science</title>
-    <link>http://www.roger-beecham.com/vis-for-gds/authors/</link>
-      <atom:link href="http://www.roger-beecham.com/vis-for-gds/authors/index.xml" rel="self" type="application/rss+xml" />
+    <link>/authors/</link>
+      <atom:link href="/authors/index.xml" rel="self" type="application/rss+xml" />
     <description>Authors</description>
     <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator>
     <image>
-      <url>http://www.roger-beecham.com/vis-for-gds/media/social-image.png</url>
+      <url>/media/social-image.png</url>
       <title>Authors</title>
-      <link>http://www.roger-beecham.com/vis-for-gds/authors/</link>
+      <link>/authors/</link>
     </image>
     
   </channel>

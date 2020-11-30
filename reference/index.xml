@@ -2,14 +2,14 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>References | Visualization for Geographic Data Science</title>
-    <link>http://www.roger-beecham.com/vis-for-gds/reference/</link>
-      <atom:link href="http://www.roger-beecham.com/vis-for-gds/reference/index.xml" rel="self" type="application/rss+xml" />
+    <link>/reference/</link>
+      <atom:link href="/reference/index.xml" rel="self" type="application/rss+xml" />
     <description>References</description>
     <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator>
     <image>
-      <url>http://www.roger-beecham.com/vis-for-gds/media/social-image.png</url>
+      <url>/media/social-image.png</url>
       <title>References</title>
-      <link>http://www.roger-beecham.com/vis-for-gds/reference/</link>
+      <link>/reference/</link>
     </image>
     
   </channel>
