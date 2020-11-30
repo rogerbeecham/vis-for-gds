@@ -2,25 +2,25 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Course materials | Visualization for Geographic Data Science</title>
-    <link>http://www.roger-beecham.com/</link>
-      <atom:link href="http://www.roger-beecham.com/index.xml" rel="self" type="application/rss+xml" />
+    <link>http://www.roger-beecham.com/vis-for-gds/</link>
+      <atom:link href="http://www.roger-beecham.com/vis-for-gds/index.xml" rel="self" type="application/rss+xml" />
     <description>Course materials</description>
     <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator>
     <image>
-      <url>http://www.roger-beecham.com/media/social-image.png</url>
+      <url>http://www.roger-beecham.com/vis-for-gds/media/social-image.png</url>
       <title>Course materials</title>
-      <link>http://www.roger-beecham.com/</link>
+      <link>http://www.roger-beecham.com/vis-for-gds/</link>
     </image>
     
     <item>
       <title>Maps</title>
-      <link>http://www.roger-beecham.com/class/05-class/</link>
+      <link>http://www.roger-beecham.com/vis-for-gds/class/05-class/</link>
       <pubDate>Thu, 06 Feb 2020 00:00:00 +0000</pubDate>
-      <guid>http://www.roger-beecham.com/class/05-class/</guid>
+      <guid>http://www.roger-beecham.com/vis-for-gds/class/05-class/</guid>
       <description>
 &lt;!-- BLOGDOWN-HEAD --&gt;
-&lt;link href=&#34;http://www.roger-beecham.com/rmarkdown-libs/anchor-sections/anchor-sections.css&#34; rel=&#34;stylesheet&#34; /&gt;
-&lt;script src=&#34;http://www.roger-beecham.com/rmarkdown-libs/anchor-sections/anchor-sections.js&#34;&gt;&lt;/script&gt;
+&lt;link href=&#34;http://www.roger-beecham.com/vis-for-gds/rmarkdown-libs/anchor-sections/anchor-sections.css&#34; rel=&#34;stylesheet&#34; /&gt;
+&lt;script src=&#34;http://www.roger-beecham.com/vis-for-gds/rmarkdown-libs/anchor-sections/anchor-sections.js&#34;&gt;&lt;/script&gt;
 &lt;!-- /BLOGDOWN-HEAD --&gt;
 
 &lt;h2&gt;Contents&lt;/h2&gt;
@@ -33,9 +33,9 @@
 &lt;div id=&#34;slides&#34; class=&#34;section level2&#34;&gt;
 &lt;h2&gt;Slides&lt;/h2&gt;
 
-&lt;p&gt;&lt;a href=&#34;http://www.roger-beecham.com/slides/05_dataviz_s20_making_maps.pdf&#34;&gt;Download the slides from today’s class&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;http://www.roger-beecham.com/vis-for-gds/slides/05_dataviz_s20_making_maps.pdf&#34;&gt;Download the slides from today’s class&lt;/a&gt;.&lt;/p&gt;
 &lt;figure&gt;
-    &lt;a href=&#34;http://www.roger-beecham.com/slides/05_dataviz_s20_making_maps.pdf&#34;&gt;&lt;img src=&#34;http://www.roger-beecham.com/slides/05_dataviz_s20_making_maps.png&#34; alt=&#34;First slide&#34; /&gt;&lt;/a&gt;
+    &lt;a href=&#34;http://www.roger-beecham.com/vis-for-gds/slides/05_dataviz_s20_making_maps.pdf&#34;&gt;&lt;img src=&#34;http://www.roger-beecham.com/vis-for-gds/slides/05_dataviz_s20_making_maps.png&#34; alt=&#34;First slide&#34; /&gt;&lt;/a&gt;
 &lt;/figure&gt;
 
 
@@ -45,13 +45,13 @@
     
     <item>
       <title>Models and Pipelines</title>
-      <link>http://www.roger-beecham.com/class/04-class/</link>
+      <link>http://www.roger-beecham.com/vis-for-gds/class/04-class/</link>
       <pubDate>Thu, 30 Jan 2020 00:00:00 +0000</pubDate>
-      <guid>http://www.roger-beecham.com/class/04-class/</guid>
+      <guid>http://www.roger-beecham.com/vis-for-gds/class/04-class/</guid>
       <description>
 &lt;!-- BLOGDOWN-HEAD --&gt;
-&lt;link href=&#34;http://www.roger-beecham.com/rmarkdown-libs/anchor-sections/anchor-sections.css&#34; rel=&#34;stylesheet&#34; /&gt;
-&lt;script src=&#34;http://www.roger-beecham.com/rmarkdown-libs/anchor-sections/anchor-sections.js&#34;&gt;&lt;/script&gt;
+&lt;link href=&#34;http://www.roger-beecham.com/vis-for-gds/rmarkdown-libs/anchor-sections/anchor-sections.css&#34; rel=&#34;stylesheet&#34; /&gt;
+&lt;script src=&#34;http://www.roger-beecham.com/vis-for-gds/rmarkdown-libs/anchor-sections/anchor-sections.js&#34;&gt;&lt;/script&gt;
 &lt;!-- /BLOGDOWN-HEAD --&gt;
 
 &lt;h2&gt;Contents&lt;/h2&gt;
@@ -64,9 +64,9 @@
 &lt;div id=&#34;slides&#34; class=&#34;section level2&#34;&gt;
 &lt;h2&gt;Slides&lt;/h2&gt;
 
-&lt;p&gt;&lt;a href=&#34;http://www.roger-beecham.com/slides/04_dataviz_s20_work_with_models.pdf&#34;&gt;Download the slides from today’s class&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;http://www.roger-beecham.com/vis-for-gds/slides/04_dataviz_s20_work_with_models.pdf&#34;&gt;Download the slides from today’s class&lt;/a&gt;.&lt;/p&gt;
 &lt;figure&gt;
-    &lt;a href=&#34;http://www.roger-beecham.com/slides/04_dataviz_s20_work_with_models.pdf&#34;&gt;&lt;img src=&#34;http://www.roger-beecham.com/slides/04_dataviz_s20_work_with_models.png&#34; alt=&#34;First slide&#34; /&gt;&lt;/a&gt;
+    &lt;a href=&#34;http://www.roger-beecham.com/vis-for-gds/slides/04_dataviz_s20_work_with_models.pdf&#34;&gt;&lt;img src=&#34;http://www.roger-beecham.com/vis-for-gds/slides/04_dataviz_s20_work_with_models.png&#34; alt=&#34;First slide&#34; /&gt;&lt;/a&gt;
 &lt;/figure&gt;
 
 
@@ -76,13 +76,13 @@
     
     <item>
       <title>Tables, Text, Labels, Notes</title>
-      <link>http://www.roger-beecham.com/class/03-class/</link>
+      <link>http://www.roger-beecham.com/vis-for-gds/class/03-class/</link>
       <pubDate>Thu, 23 Jan 2020 00:00:00 +0000</pubDate>
-      <guid>http://www.roger-beecham.com/class/03-class/</guid>
+      <guid>http://www.roger-beecham.com/vis-for-gds/class/03-class/</guid>
       <description>
 &lt;!-- BLOGDOWN-HEAD --&gt;
-&lt;link href=&#34;http://www.roger-beecham.com/rmarkdown-libs/anchor-sections/anchor-sections.css&#34; rel=&#34;stylesheet&#34; /&gt;
-&lt;script src=&#34;http://www.roger-beecham.com/rmarkdown-libs/anchor-sections/anchor-sections.js&#34;&gt;&lt;/script&gt;
+&lt;link href=&#34;http://www.roger-beecham.com/vis-for-gds/rmarkdown-libs/anchor-sections/anchor-sections.css&#34; rel=&#34;stylesheet&#34; /&gt;
+&lt;script src=&#34;http://www.roger-beecham.com/vis-for-gds/rmarkdown-libs/anchor-sections/anchor-sections.js&#34;&gt;&lt;/script&gt;
 &lt;!-- /BLOGDOWN-HEAD --&gt;
 
 &lt;h2&gt;Contents&lt;/h2&gt;
@@ -95,9 +95,9 @@
 &lt;div id=&#34;slides&#34; class=&#34;section level2&#34;&gt;
 &lt;h2&gt;Slides&lt;/h2&gt;
 
-&lt;p&gt;&lt;a href=&#34;http://www.roger-beecham.com/slides/03_dataviz_s20_work_with_geoms.pdf&#34;&gt;Download the slides from today’s class&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;http://www.roger-beecham.com/vis-for-gds/slides/03_dataviz_s20_work_with_geoms.pdf&#34;&gt;Download the slides from today’s class&lt;/a&gt;.&lt;/p&gt;
 &lt;figure&gt;
-    &lt;a href=&#34;http://www.roger-beecham.com/slides/03_dataviz_s20_work_with_geoms.pdf&#34;&gt;&lt;img src=&#34;http://www.roger-beecham.com/slides/03_dataviz_s20_work_with_geoms.png&#34; alt=&#34;First slide&#34; /&gt;&lt;/a&gt;
+    &lt;a href=&#34;http://www.roger-beecham.com/vis-for-gds/slides/03_dataviz_s20_work_with_geoms.pdf&#34;&gt;&lt;img src=&#34;http://www.roger-beecham.com/vis-for-gds/slides/03_dataviz_s20_work_with_geoms.png&#34; alt=&#34;First slide&#34; /&gt;&lt;/a&gt;
 &lt;/figure&gt;
 
 
@@ -107,13 +107,13 @@
     
     <item>
       <title>Get Started / Make Some Plots</title>
-      <link>http://www.roger-beecham.com/class/02-class/</link>
+      <link>http://www.roger-beecham.com/vis-for-gds/class/02-class/</link>
       <pubDate>Thu, 16 Jan 2020 00:00:00 +0000</pubDate>
-      <guid>http://www.roger-beecham.com/class/02-class/</guid>
+      <guid>http://www.roger-beecham.com/vis-for-gds/class/02-class/</guid>
       <description>
 &lt;!-- BLOGDOWN-HEAD --&gt;
-&lt;link href=&#34;http://www.roger-beecham.com/rmarkdown-libs/anchor-sections/anchor-sections.css&#34; rel=&#34;stylesheet&#34; /&gt;
-&lt;script src=&#34;http://www.roger-beecham.com/rmarkdown-libs/anchor-sections/anchor-sections.js&#34;&gt;&lt;/script&gt;
+&lt;link href=&#34;http://www.roger-beecham.com/vis-for-gds/rmarkdown-libs/anchor-sections/anchor-sections.css&#34; rel=&#34;stylesheet&#34; /&gt;
+&lt;script src=&#34;http://www.roger-beecham.com/vis-for-gds/rmarkdown-libs/anchor-sections/anchor-sections.js&#34;&gt;&lt;/script&gt;
 &lt;!-- /BLOGDOWN-HEAD --&gt;
 
 &lt;h2&gt;Contents&lt;/h2&gt;
@@ -126,9 +126,9 @@
 &lt;div id=&#34;slides&#34; class=&#34;section level2&#34;&gt;
 &lt;h2&gt;Slides&lt;/h2&gt;
 
-&lt;p&gt;&lt;a href=&#34;http://www.roger-beecham.com/slides/02_dataviz_s20_getting_started.pdf&#34;&gt;Download the slides from today’s class&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;http://www.roger-beecham.com/vis-for-gds/slides/02_dataviz_s20_getting_started.pdf&#34;&gt;Download the slides from today’s class&lt;/a&gt;.&lt;/p&gt;
 &lt;figure&gt;
-    &lt;a href=&#34;http://www.roger-beecham.com/slides/02_dataviz_s20_getting_started.pdf&#34;&gt;&lt;img src=&#34;http://www.roger-beecham.com/slides/02_dataviz_s20_getting_started.png&#34; alt=&#34;First slide&#34; /&gt;&lt;/a&gt;
+    &lt;a href=&#34;http://www.roger-beecham.com/vis-for-gds/slides/02_dataviz_s20_getting_started.pdf&#34;&gt;&lt;img src=&#34;http://www.roger-beecham.com/vis-for-gds/slides/02_dataviz_s20_getting_started.png&#34; alt=&#34;First slide&#34; /&gt;&lt;/a&gt;
 &lt;/figure&gt;
 
 
@@ -138,13 +138,13 @@
     
     <item>
       <title>Look at Data / Up and Running in R and ggplot</title>
-      <link>http://www.roger-beecham.com/class/01-class/</link>
+      <link>http://www.roger-beecham.com/vis-for-gds/class/01-class/</link>
       <pubDate>Fri, 10 Jan 2020 00:00:00 +0000</pubDate>
-      <guid>http://www.roger-beecham.com/class/01-class/</guid>
+      <guid>http://www.roger-beecham.com/vis-for-gds/class/01-class/</guid>
       <description>
 &lt;!-- BLOGDOWN-HEAD --&gt;
-&lt;link href=&#34;http://www.roger-beecham.com/rmarkdown-libs/anchor-sections/anchor-sections.css&#34; rel=&#34;stylesheet&#34; /&gt;
-&lt;script src=&#34;http://www.roger-beecham.com/rmarkdown-libs/anchor-sections/anchor-sections.js&#34;&gt;&lt;/script&gt;
+&lt;link href=&#34;http://www.roger-beecham.com/vis-for-gds/rmarkdown-libs/anchor-sections/anchor-sections.css&#34; rel=&#34;stylesheet&#34; /&gt;
+&lt;script src=&#34;http://www.roger-beecham.com/vis-for-gds/rmarkdown-libs/anchor-sections/anchor-sections.js&#34;&gt;&lt;/script&gt;
 &lt;!-- /BLOGDOWN-HEAD --&gt;
 
 &lt;h2&gt;Contents&lt;/h2&gt;
@@ -158,9 +158,9 @@
 &lt;div id=&#34;slides&#34; class=&#34;section level2&#34;&gt;
 &lt;h2&gt;Slides&lt;/h2&gt;
 
-&lt;p&gt;&lt;a href=&#34;http://www.roger-beecham.com/slides/01_dataviz_s20_looking_at_data.pdf&#34;&gt;Download the slides from today’s class&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;http://www.roger-beecham.com/vis-for-gds/slides/01_dataviz_s20_looking_at_data.pdf&#34;&gt;Download the slides from today’s class&lt;/a&gt;.&lt;/p&gt;
 &lt;figure&gt;
-    &lt;a href=&#34;http://www.roger-beecham.com/slides/01_dataviz_s20_looking_at_data.pdf&#34;&gt;&lt;img src=&#34;http://www.roger-beecham.com/slides/01_dataviz_s20_looking_at_data.png&#34; alt=&#34;First slide&#34; /&gt;&lt;/a&gt;
+    &lt;a href=&#34;http://www.roger-beecham.com/vis-for-gds/slides/01_dataviz_s20_looking_at_data.pdf&#34;&gt;&lt;img src=&#34;http://www.roger-beecham.com/vis-for-gds/slides/01_dataviz_s20_looking_at_data.png&#34; alt=&#34;First slide&#34; /&gt;&lt;/a&gt;
 &lt;/figure&gt;
 
 
@@ -177,12 +177,12 @@
     
     <item>
       <title>Problem set 1</title>
-      <link>http://www.roger-beecham.com/assignment/01-problem-set/</link>
+      <link>http://www.roger-beecham.com/vis-for-gds/assignment/01-problem-set/</link>
       <pubDate>Tue, 18 Sep 2018 00:00:00 +0000</pubDate>
-      <guid>http://www.roger-beecham.com/assignment/01-problem-set/</guid>
+      <guid>http://www.roger-beecham.com/vis-for-gds/assignment/01-problem-set/</guid>
       <description>
-&lt;link href=&#34;http://www.roger-beecham.com/rmarkdown-libs/anchor-sections/anchor-sections.css&#34; rel=&#34;stylesheet&#34; /&gt;
-&lt;script src=&#34;http://www.roger-beecham.com/rmarkdown-libs/anchor-sections/anchor-sections.js&#34;&gt;&lt;/script&gt;
+&lt;link href=&#34;http://www.roger-beecham.com/vis-for-gds/rmarkdown-libs/anchor-sections/anchor-sections.css&#34; rel=&#34;stylesheet&#34; /&gt;
+&lt;script src=&#34;http://www.roger-beecham.com/vis-for-gds/rmarkdown-libs/anchor-sections/anchor-sections.js&#34;&gt;&lt;/script&gt;
 
 
 &lt;div id=&#34;task&#34; class=&#34;section level1&#34;&gt;
@@ -193,12 +193,12 @@
     
     <item>
       <title>Truth, Beauty, and Data</title>
-      <link>http://www.roger-beecham.com/reading/01-reading/</link>
+      <link>http://www.roger-beecham.com/vis-for-gds/reading/01-reading/</link>
       <pubDate>Tue, 04 Sep 2018 00:00:00 +0000</pubDate>
-      <guid>http://www.roger-beecham.com/reading/01-reading/</guid>
+      <guid>http://www.roger-beecham.com/vis-for-gds/reading/01-reading/</guid>
       <description>
-&lt;link href=&#34;http://www.roger-beecham.com/rmarkdown-libs/anchor-sections/anchor-sections.css&#34; rel=&#34;stylesheet&#34; /&gt;
-&lt;script src=&#34;http://www.roger-beecham.com/rmarkdown-libs/anchor-sections/anchor-sections.js&#34;&gt;&lt;/script&gt;
+&lt;link href=&#34;http://www.roger-beecham.com/vis-for-gds/rmarkdown-libs/anchor-sections/anchor-sections.css&#34; rel=&#34;stylesheet&#34; /&gt;
+&lt;script src=&#34;http://www.roger-beecham.com/vis-for-gds/rmarkdown-libs/anchor-sections/anchor-sections.js&#34;&gt;&lt;/script&gt;
 
 
 &lt;div id=&#34;required&#34; class=&#34;section level1&#34;&gt;
@@ -213,12 +213,12 @@
     
     <item>
       <title>Code from Week 1</title>
-      <link>http://www.roger-beecham.com/assignment/01-code/</link>
+      <link>http://www.roger-beecham.com/vis-for-gds/assignment/01-code/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://www.roger-beecham.com/assignment/01-code/</guid>
+      <guid>http://www.roger-beecham.com/vis-for-gds/assignment/01-code/</guid>
       <description>
-&lt;link href=&#34;http://www.roger-beecham.com/rmarkdown-libs/anchor-sections/anchor-sections.css&#34; rel=&#34;stylesheet&#34; /&gt;
-&lt;script src=&#34;http://www.roger-beecham.com/rmarkdown-libs/anchor-sections/anchor-sections.js&#34;&gt;&lt;/script&gt;
+&lt;link href=&#34;http://www.roger-beecham.com/vis-for-gds/rmarkdown-libs/anchor-sections/anchor-sections.css&#34; rel=&#34;stylesheet&#34; /&gt;
+&lt;script src=&#34;http://www.roger-beecham.com/vis-for-gds/rmarkdown-libs/anchor-sections/anchor-sections.js&#34;&gt;&lt;/script&gt;
 
 
 &lt;div id=&#34;course-packet&#34; class=&#34;section level1&#34;&gt;
@@ -264,16 +264,16 @@ gapminder&lt;/code&gt;&lt;/pre&gt;
                           y = lifeExp))
 
 p&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src=&#34;http://www.roger-beecham.com/assignment/01-code_files/figure-html/unnamed-chunk-2-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;http://www.roger-beecham.com/vis-for-gds/assignment/01-code_files/figure-html/unnamed-chunk-2-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;p + geom_point() &lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src=&#34;http://www.roger-beecham.com/assignment/01-code_files/figure-html/ch-03-fig-lexp-gdp-01-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;http://www.roger-beecham.com/vis-for-gds/assignment/01-code_files/figure-html/ch-03-fig-lexp-gdp-01-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;p &amp;lt;- ggplot(data = gapminder,
             mapping = aes(x = gdpPercap,
                           y=lifeExp))
 p + geom_smooth()&lt;/code&gt;&lt;/pre&gt;
 &lt;pre&gt;&lt;code&gt;## `geom_smooth()` using method = &amp;#39;gam&amp;#39; and formula &amp;#39;y ~ s(x, bs = &amp;quot;cs&amp;quot;)&amp;#39;&lt;/code&gt;&lt;/pre&gt;
 &lt;div class=&#34;figure&#34;&gt;&lt;span id=&#34;fig:ch-03-fig-lexp-gdp-02&#34;&gt;&lt;/span&gt;
-&lt;img src=&#34;http://www.roger-beecham.com/assignment/01-code_files/figure-html/ch-03-fig-lexp-gdp-02-1.png&#34; alt=&#34;Life Expectancy vs GDP, using a smoother.&#34; width=&#34;672&#34; /&gt;
+&lt;img src=&#34;http://www.roger-beecham.com/vis-for-gds/assignment/01-code_files/figure-html/ch-03-fig-lexp-gdp-02-1.png&#34; alt=&#34;Life Expectancy vs GDP, using a smoother.&#34; width=&#34;672&#34; /&gt;
 &lt;p class=&#34;caption&#34;&gt;
 Figure 1: Life Expectancy vs GDP, using a smoother.
 &lt;/p&gt;
@@ -284,7 +284,7 @@ Figure 1: Life Expectancy vs GDP, using a smoother.
 p + geom_point() + geom_smooth(method = &amp;quot;lm&amp;quot;) &lt;/code&gt;&lt;/pre&gt;
 &lt;pre&gt;&lt;code&gt;## `geom_smooth()` using formula &amp;#39;y ~ x&amp;#39;&lt;/code&gt;&lt;/pre&gt;
 &lt;div class=&#34;figure&#34;&gt;&lt;span id=&#34;fig:ch-03-fig-lexp-gdp-04&#34;&gt;&lt;/span&gt;
-&lt;img src=&#34;http://www.roger-beecham.com/assignment/01-code_files/figure-html/ch-03-fig-lexp-gdp-04-1.png&#34; alt=&#34;Life Expectancy vs GDP, points and an ill-advised linear fit.&#34; width=&#34;100%&#34; /&gt;
+&lt;img src=&#34;http://www.roger-beecham.com/vis-for-gds/assignment/01-code_files/figure-html/ch-03-fig-lexp-gdp-04-1.png&#34; alt=&#34;Life Expectancy vs GDP, points and an ill-advised linear fit.&#34; width=&#34;100%&#34; /&gt;
 &lt;p class=&#34;caption&#34;&gt;
 Figure 2: Life Expectancy vs GDP, points and an ill-advised linear fit.
 &lt;/p&gt;
@@ -297,7 +297,7 @@ p + geom_point() +
     scale_x_log10()&lt;/code&gt;&lt;/pre&gt;
 &lt;pre&gt;&lt;code&gt;## `geom_smooth()` using formula &amp;#39;y ~ s(x, bs = &amp;quot;cs&amp;quot;)&amp;#39;&lt;/code&gt;&lt;/pre&gt;
 &lt;div class=&#34;figure&#34;&gt;&lt;span id=&#34;fig:ch-03-fig-lexp-gdp-05&#34;&gt;&lt;/span&gt;
-&lt;img src=&#34;http://www.roger-beecham.com/assignment/01-code_files/figure-html/ch-03-fig-lexp-gdp-05-1.png&#34; alt=&#34;Life Expectancy vs GDP scatterplot, with a GAM smoother and a log scale on the x-axis.&#34; width=&#34;100%&#34; /&gt;
+&lt;img src=&#34;http://www.roger-beecham.com/vis-for-gds/assignment/01-code_files/figure-html/ch-03-fig-lexp-gdp-05-1.png&#34; alt=&#34;Life Expectancy vs GDP scatterplot, with a GAM smoother and a log scale on the x-axis.&#34; width=&#34;100%&#34; /&gt;
 &lt;p class=&#34;caption&#34;&gt;
 Figure 3: Life Expectancy vs GDP scatterplot, with a GAM smoother and a log scale on the x-axis.
 &lt;/p&gt;
@@ -313,7 +313,7 @@ p + geom_point() +
     scale_x_log10()&lt;/code&gt;&lt;/pre&gt;
 &lt;pre&gt;&lt;code&gt;## `geom_smooth()` using formula &amp;#39;y ~ x&amp;#39;&lt;/code&gt;&lt;/pre&gt;
 &lt;div class=&#34;figure&#34;&gt;&lt;span id=&#34;fig:ch-03-fig-lexp-gdp-07&#34;&gt;&lt;/span&gt;
-&lt;img src=&#34;http://www.roger-beecham.com/assignment/01-code_files/figure-html/ch-03-fig-lexp-gdp-07-1.png&#34; alt=&#34;What has gone wrong here?&#34; width=&#34;768&#34; /&gt;
+&lt;img src=&#34;http://www.roger-beecham.com/vis-for-gds/assignment/01-code_files/figure-html/ch-03-fig-lexp-gdp-07-1.png&#34; alt=&#34;What has gone wrong here?&#34; width=&#34;768&#34; /&gt;
 &lt;p class=&#34;caption&#34;&gt;
 Figure 4: What has gone wrong here?
 &lt;/p&gt;
@@ -326,7 +326,7 @@ p + geom_point(color = &amp;quot;purple&amp;quot;) +
     scale_x_log10()&lt;/code&gt;&lt;/pre&gt;
 &lt;pre&gt;&lt;code&gt;## `geom_smooth()` using formula &amp;#39;y ~ x&amp;#39;&lt;/code&gt;&lt;/pre&gt;
 &lt;div class=&#34;figure&#34;&gt;&lt;span id=&#34;fig:ch-03-fig-lexp-gdp-08&#34;&gt;&lt;/span&gt;
-&lt;img src=&#34;http://www.roger-beecham.com/assignment/01-code_files/figure-html/ch-03-fig-lexp-gdp-08-1.png&#34; alt=&#34;Setting the color attribute of the points directly.&#34; width=&#34;100%&#34; /&gt;
+&lt;img src=&#34;http://www.roger-beecham.com/vis-for-gds/assignment/01-code_files/figure-html/ch-03-fig-lexp-gdp-08-1.png&#34; alt=&#34;Setting the color attribute of the points directly.&#34; width=&#34;100%&#34; /&gt;
 &lt;p class=&#34;caption&#34;&gt;
 Figure 5: Setting the color attribute of the points directly.
 &lt;/p&gt;
@@ -340,7 +340,7 @@ p + geom_point(alpha = 0.3) + geom_smooth(method = &amp;quot;gam&amp;quot;) +
          caption = &amp;quot;Source: Gapminder.&amp;quot;)&lt;/code&gt;&lt;/pre&gt;
 &lt;pre&gt;&lt;code&gt;## `geom_smooth()` using formula &amp;#39;y ~ s(x, bs = &amp;quot;cs&amp;quot;)&amp;#39;&lt;/code&gt;&lt;/pre&gt;
 &lt;div class=&#34;figure&#34;&gt;&lt;span id=&#34;fig:ch-03-fig-lexp-gdp-10&#34;&gt;&lt;/span&gt;
-&lt;img src=&#34;http://www.roger-beecham.com/assignment/01-code_files/figure-html/ch-03-fig-lexp-gdp-10-1.png&#34; alt=&#34;A more polished plot of Life Expectancy vs GDP.&#34; width=&#34;100%&#34; /&gt;
+&lt;img src=&#34;http://www.roger-beecham.com/vis-for-gds/assignment/01-code_files/figure-html/ch-03-fig-lexp-gdp-10-1.png&#34; alt=&#34;A more polished plot of Life Expectancy vs GDP.&#34; width=&#34;100%&#34; /&gt;
 &lt;p class=&#34;caption&#34;&gt;
 Figure 6: A more polished plot of Life Expectancy vs GDP.
 &lt;/p&gt;
@@ -354,7 +354,7 @@ p + geom_point() +
     scale_x_log10()&lt;/code&gt;&lt;/pre&gt;
 &lt;pre&gt;&lt;code&gt;## `geom_smooth()` using formula &amp;#39;y ~ x&amp;#39;&lt;/code&gt;&lt;/pre&gt;
 &lt;div class=&#34;figure&#34;&gt;&lt;span id=&#34;fig:ch-03-fig-lexp-gdp-11&#34;&gt;&lt;/span&gt;
-&lt;img src=&#34;http://www.roger-beecham.com/assignment/01-code_files/figure-html/ch-03-fig-lexp-gdp-11-1.png&#34; alt=&#34;Mapping the continent variable to the color aesthetic.&#34; width=&#34;100%&#34; /&gt;
+&lt;img src=&#34;http://www.roger-beecham.com/vis-for-gds/assignment/01-code_files/figure-html/ch-03-fig-lexp-gdp-11-1.png&#34; alt=&#34;Mapping the continent variable to the color aesthetic.&#34; width=&#34;100%&#34; /&gt;
 &lt;p class=&#34;caption&#34;&gt;
 Figure 7: Mapping the continent variable to the color aesthetic.
 &lt;/p&gt;
@@ -369,7 +369,7 @@ p + geom_point() +
     scale_x_log10()&lt;/code&gt;&lt;/pre&gt;
 &lt;pre&gt;&lt;code&gt;## `geom_smooth()` using formula &amp;#39;y ~ x&amp;#39;&lt;/code&gt;&lt;/pre&gt;
 &lt;div class=&#34;figure&#34;&gt;&lt;span id=&#34;fig:ch-03-fig-lexp-gdp-12&#34;&gt;&lt;/span&gt;
-&lt;img src=&#34;http://www.roger-beecham.com/assignment/01-code_files/figure-html/ch-03-fig-lexp-gdp-12-1.png&#34; alt=&#34;Mapping the continent variable to the color aesthetic, and correcting the error bars using the fill aesthetic.&#34; width=&#34;100%&#34; /&gt;
+&lt;img src=&#34;http://www.roger-beecham.com/vis-for-gds/assignment/01-code_files/figure-html/ch-03-fig-lexp-gdp-12-1.png&#34; alt=&#34;Mapping the continent variable to the color aesthetic, and correcting the error bars using the fill aesthetic.&#34; width=&#34;100%&#34; /&gt;
 &lt;p class=&#34;caption&#34;&gt;
 Figure 8: Mapping the continent variable to the color aesthetic, and correcting the error bars using the fill aesthetic.
 &lt;/p&gt;
@@ -383,7 +383,7 @@ p + geom_point(mapping = aes(color = continent)) + geom_smooth(method = &amp;quo
     scale_x_log10()&lt;/code&gt;&lt;/pre&gt;
 &lt;pre&gt;&lt;code&gt;## `geom_smooth()` using formula &amp;#39;y ~ x&amp;#39;&lt;/code&gt;&lt;/pre&gt;
 &lt;div class=&#34;figure&#34;&gt;&lt;span id=&#34;fig:ch-03-fig-lexp-gdp-13&#34;&gt;&lt;/span&gt;
-&lt;img src=&#34;http://www.roger-beecham.com/assignment/01-code_files/figure-html/ch-03-fig-lexp-gdp-13-1.png&#34; alt=&#34;Mapping aesthetics on a per-geom basis. Here color is mapped to continent for the points but not the smoother.&#34; width=&#34;100%&#34; /&gt;
+&lt;img src=&#34;http://www.roger-beecham.com/vis-for-gds/assignment/01-code_files/figure-html/ch-03-fig-lexp-gdp-13-1.png&#34; alt=&#34;Mapping aesthetics on a per-geom basis. Here color is mapped to continent for the points but not the smoother.&#34; width=&#34;100%&#34; /&gt;
 &lt;p class=&#34;caption&#34;&gt;
 Figure 9: Mapping aesthetics on a per-geom basis. Here color is mapped to continent for the points but not the smoother.
 &lt;/p&gt;
@@ -394,12 +394,12 @@ Figure 9: Mapping aesthetics on a per-geom basis. Here color is mapped to contin
     
     <item>
       <title>Midterm Prjoect</title>
-      <link>http://www.roger-beecham.com/assignment/01-project/</link>
+      <link>http://www.roger-beecham.com/vis-for-gds/assignment/01-project/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://www.roger-beecham.com/assignment/01-project/</guid>
+      <guid>http://www.roger-beecham.com/vis-for-gds/assignment/01-project/</guid>
       <description>
-&lt;link href=&#34;http://www.roger-beecham.com/rmarkdown-libs/anchor-sections/anchor-sections.css&#34; rel=&#34;stylesheet&#34; /&gt;
-&lt;script src=&#34;http://www.roger-beecham.com/rmarkdown-libs/anchor-sections/anchor-sections.js&#34;&gt;&lt;/script&gt;
+&lt;link href=&#34;http://www.roger-beecham.com/vis-for-gds/rmarkdown-libs/anchor-sections/anchor-sections.css&#34; rel=&#34;stylesheet&#34; /&gt;
+&lt;script src=&#34;http://www.roger-beecham.com/vis-for-gds/rmarkdown-libs/anchor-sections/anchor-sections.js&#34;&gt;&lt;/script&gt;
 
 
 &lt;div id=&#34;task&#34; class=&#34;section level1&#34;&gt;
@@ -410,12 +410,12 @@ Figure 9: Mapping aesthetics on a per-geom basis. Here color is mapped to contin
     
     <item>
       <title>Schedule</title>
-      <link>http://www.roger-beecham.com/schedule/</link>
+      <link>http://www.roger-beecham.com/vis-for-gds/schedule/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://www.roger-beecham.com/schedule/</guid>
+      <guid>http://www.roger-beecham.com/vis-for-gds/schedule/</guid>
       <description>
-&lt;link href=&#34;http://www.roger-beecham.com/schedule/index_files/anchor-sections/anchor-sections.css&#34; rel=&#34;stylesheet&#34; /&gt;
-&lt;script src=&#34;http://www.roger-beecham.com/schedule/index_files/anchor-sections/anchor-sections.js&#34;&gt;&lt;/script&gt;
+&lt;link href=&#34;http://www.roger-beecham.com/vis-for-gds/vis-for-gds/schedule/index_files/anchor-sections/anchor-sections.css&#34; rel=&#34;stylesheet&#34; /&gt;
+&lt;script src=&#34;http://www.roger-beecham.com/vis-for-gds/vis-for-gds/schedule/index_files/anchor-sections/anchor-sections.js&#34;&gt;&lt;/script&gt;
 
 
 &lt;hr /&gt;
@@ -432,7 +432,7 @@ Figure 9: Mapping aesthetics on a per-geom basis. Here color is mapped to contin
                 &lt;font color=&#34;f1f1f1&#34;&gt;
                     &lt;i class=&#34;fas fa-laptop-code&#34;&gt;&lt;/i&gt;&lt;/font&gt;
             &lt;/td&gt;
-            &lt;td align=&#34;center&#34; style=&#34;width:10%;text-align:center&#34;&gt;&lt;a href=&#34;http://www.roger-beecham.com/class/01-class/&#34;&gt;
+            &lt;td align=&#34;center&#34; style=&#34;width:10%;text-align:center&#34;&gt;&lt;a href=&#34;http://www.roger-beecham.com/vis-for-gds/class/01-class/&#34;&gt;
                     &lt;i class=&#34;fas fa-chalkboard-teacher fa-lg&#34;&gt;&lt;/i&gt;&lt;/a&gt;&lt;/td&gt;
         &lt;/tr&gt;
         &lt;tr&gt;
@@ -446,7 +446,7 @@ Figure 9: Mapping aesthetics on a per-geom basis. Here color is mapped to contin
                 &lt;font color=&#34;f1f1f1&#34;&gt;
                     &lt;i class=&#34;fas fa-laptop-code&#34;&gt;&lt;/i&gt;&lt;/font&gt;
             &lt;/td&gt;
-            &lt;td align=&#34;center&#34; style=&#34;width:10%;text-align:center&#34;&gt;&lt;a href=&#34;http://www.roger-beecham.com/class/02-class/&#34;&gt;
+            &lt;td align=&#34;center&#34; style=&#34;width:10%;text-align:center&#34;&gt;&lt;a href=&#34;http://www.roger-beecham.com/vis-for-gds/class/02-class/&#34;&gt;
                     &lt;i class=&#34;fas fa-chalkboard-teacher fa-lg&#34;&gt;&lt;/i&gt;&lt;/a&gt;&lt;/td&gt;
         &lt;/tr&gt;
         &lt;tr&gt;
@@ -460,7 +460,7 @@ Figure 9: Mapping aesthetics on a per-geom basis. Here color is mapped to contin
                 &lt;font color=&#34;f1f1f1&#34;&gt;
                     &lt;i class=&#34;fas fa-laptop-code&#34;&gt;&lt;/i&gt;&lt;/font&gt;
             &lt;/td&gt;
-            &lt;td align=&#34;center&#34; style=&#34;width:10%;text-align:center&#34;&gt;&lt;a href=&#34;http://www.roger-beecham.com/class/03-class/&#34;&gt;
+            &lt;td align=&#34;center&#34; style=&#34;width:10%;text-align:center&#34;&gt;&lt;a href=&#34;http://www.roger-beecham.com/vis-for-gds/class/03-class/&#34;&gt;
                     &lt;i class=&#34;fas fa-chalkboard-teacher fa-lg&#34;&gt;&lt;/i&gt;&lt;/a&gt;&lt;/td&gt;
         &lt;/tr&gt;
         &lt;tr&gt;
@@ -474,7 +474,7 @@ Figure 9: Mapping aesthetics on a per-geom basis. Here color is mapped to contin
                 &lt;font color=&#34;f1f1f1&#34;&gt;
                     &lt;i class=&#34;fas fa-laptop-code&#34;&gt;&lt;/i&gt;&lt;/font&gt;
             &lt;/td&gt;
-            &lt;td align=&#34;center&#34; style=&#34;width:10%;text-align:center&#34;&gt;&lt;a href=&#34;http://www.roger-beecham.com/class/04-class/&#34;&gt;
+            &lt;td align=&#34;center&#34; style=&#34;width:10%;text-align:center&#34;&gt;&lt;a href=&#34;http://www.roger-beecham.com/vis-for-gds/class/04-class/&#34;&gt;
                     &lt;i class=&#34;fas fa-chalkboard-teacher fa-lg&#34;&gt;&lt;/i&gt;&lt;/a&gt;&lt;/td&gt;
         &lt;/tr&gt;
         &lt;tr&gt;
@@ -519,12 +519,12 @@ Figure 9: Mapping aesthetics on a per-geom basis. Here color is mapped to contin
     
     <item>
       <title>Syllabus</title>
-      <link>http://www.roger-beecham.com/syllabus/</link>
+      <link>http://www.roger-beecham.com/vis-for-gds/syllabus/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://www.roger-beecham.com/syllabus/</guid>
+      <guid>http://www.roger-beecham.com/vis-for-gds/syllabus/</guid>
       <description>
-&lt;link href=&#34;http://www.roger-beecham.com/syllabus/index_files/anchor-sections/anchor-sections.css&#34; rel=&#34;stylesheet&#34; /&gt;
-&lt;script src=&#34;http://www.roger-beecham.com/syllabus/index_files/anchor-sections/anchor-sections.js&#34;&gt;&lt;/script&gt;
+&lt;link href=&#34;http://www.roger-beecham.com/vis-for-gds/vis-for-gds/syllabus/index_files/anchor-sections/anchor-sections.css&#34; rel=&#34;stylesheet&#34; /&gt;
+&lt;script src=&#34;http://www.roger-beecham.com/vis-for-gds/vis-for-gds/syllabus/index_files/anchor-sections/anchor-sections.js&#34;&gt;&lt;/script&gt;
 
 &lt;div id=&#34;TOC&#34;&gt;
 &lt;ul&gt;
@@ -611,7 +611,7 @@ install.packages(my_packages, repos = &amp;quot;http://cran.rstudio.com&amp;quot
 
 &lt;/table&gt;
 
-&lt;p&gt;As the weeks go by, consult the &lt;a href=&#34;http://www.roger-beecham.com/schedule/&#34;&gt;Schedule Page&lt;/a&gt; for more information on weekly topics, problem sets, readings, and other materials. The schedule is likely to change as we go. Links to readings, assignments, and other materials from class will be posted on that page.&lt;/p&gt;
+&lt;p&gt;As the weeks go by, consult the &lt;a href=&#34;http://www.roger-beecham.com/vis-for-gds/schedule/&#34;&gt;Schedule Page&lt;/a&gt; for more information on weekly topics, problem sets, readings, and other materials. The schedule is likely to change as we go. Links to readings, assignments, and other materials from class will be posted on that page.&lt;/p&gt;
 &lt;/div&gt;
 </description>
     </item>

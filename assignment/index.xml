@@ -2,24 +2,24 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Assignments | Visualization for Geographic Data Science</title>
-    <link>http://www.roger-beecham.com/assignment/</link>
-      <atom:link href="http://www.roger-beecham.com/assignment/index.xml" rel="self" type="application/rss+xml" />
+    <link>http://www.roger-beecham.com/vis-for-gds/assignment/</link>
+      <atom:link href="http://www.roger-beecham.com/vis-for-gds/assignment/index.xml" rel="self" type="application/rss+xml" />
     <description>Assignments</description>
     <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator>
     <image>
-      <url>http://www.roger-beecham.com/media/social-image.png</url>
+      <url>http://www.roger-beecham.com/vis-for-gds/media/social-image.png</url>
       <title>Assignments</title>
-      <link>http://www.roger-beecham.com/assignment/</link>
+      <link>http://www.roger-beecham.com/vis-for-gds/assignment/</link>
     </image>
     
     <item>
       <title>Problem set 1</title>
-      <link>http://www.roger-beecham.com/assignment/01-problem-set/</link>
+      <link>http://www.roger-beecham.com/vis-for-gds/assignment/01-problem-set/</link>
       <pubDate>Tue, 18 Sep 2018 00:00:00 +0000</pubDate>
-      <guid>http://www.roger-beecham.com/assignment/01-problem-set/</guid>
+      <guid>http://www.roger-beecham.com/vis-for-gds/assignment/01-problem-set/</guid>
       <description>
-&lt;link href=&#34;http://www.roger-beecham.com/rmarkdown-libs/anchor-sections/anchor-sections.css&#34; rel=&#34;stylesheet&#34; /&gt;
-&lt;script src=&#34;http://www.roger-beecham.com/rmarkdown-libs/anchor-sections/anchor-sections.js&#34;&gt;&lt;/script&gt;
+&lt;link href=&#34;http://www.roger-beecham.com/vis-for-gds/rmarkdown-libs/anchor-sections/anchor-sections.css&#34; rel=&#34;stylesheet&#34; /&gt;
+&lt;script src=&#34;http://www.roger-beecham.com/vis-for-gds/rmarkdown-libs/anchor-sections/anchor-sections.js&#34;&gt;&lt;/script&gt;
 
 
 &lt;div id=&#34;task&#34; class=&#34;section level1&#34;&gt;
@@ -30,12 +30,12 @@
     
     <item>
       <title>Code from Week 1</title>
-      <link>http://www.roger-beecham.com/assignment/01-code/</link>
+      <link>http://www.roger-beecham.com/vis-for-gds/assignment/01-code/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://www.roger-beecham.com/assignment/01-code/</guid>
+      <guid>http://www.roger-beecham.com/vis-for-gds/assignment/01-code/</guid>
       <description>
-&lt;link href=&#34;http://www.roger-beecham.com/rmarkdown-libs/anchor-sections/anchor-sections.css&#34; rel=&#34;stylesheet&#34; /&gt;
-&lt;script src=&#34;http://www.roger-beecham.com/rmarkdown-libs/anchor-sections/anchor-sections.js&#34;&gt;&lt;/script&gt;
+&lt;link href=&#34;http://www.roger-beecham.com/vis-for-gds/rmarkdown-libs/anchor-sections/anchor-sections.css&#34; rel=&#34;stylesheet&#34; /&gt;
+&lt;script src=&#34;http://www.roger-beecham.com/vis-for-gds/rmarkdown-libs/anchor-sections/anchor-sections.js&#34;&gt;&lt;/script&gt;
 
 
 &lt;div id=&#34;course-packet&#34; class=&#34;section level1&#34;&gt;
@@ -81,16 +81,16 @@ gapminder&lt;/code&gt;&lt;/pre&gt;
                           y = lifeExp))
 
 p&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src=&#34;http://www.roger-beecham.com/assignment/01-code_files/figure-html/unnamed-chunk-2-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;http://www.roger-beecham.com/vis-for-gds/assignment/01-code_files/figure-html/unnamed-chunk-2-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;p + geom_point() &lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src=&#34;http://www.roger-beecham.com/assignment/01-code_files/figure-html/ch-03-fig-lexp-gdp-01-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;http://www.roger-beecham.com/vis-for-gds/assignment/01-code_files/figure-html/ch-03-fig-lexp-gdp-01-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;p &amp;lt;- ggplot(data = gapminder,
             mapping = aes(x = gdpPercap,
                           y=lifeExp))
 p + geom_smooth()&lt;/code&gt;&lt;/pre&gt;
 &lt;pre&gt;&lt;code&gt;## `geom_smooth()` using method = &amp;#39;gam&amp;#39; and formula &amp;#39;y ~ s(x, bs = &amp;quot;cs&amp;quot;)&amp;#39;&lt;/code&gt;&lt;/pre&gt;
 &lt;div class=&#34;figure&#34;&gt;&lt;span id=&#34;fig:ch-03-fig-lexp-gdp-02&#34;&gt;&lt;/span&gt;
-&lt;img src=&#34;http://www.roger-beecham.com/assignment/01-code_files/figure-html/ch-03-fig-lexp-gdp-02-1.png&#34; alt=&#34;Life Expectancy vs GDP, using a smoother.&#34; width=&#34;672&#34; /&gt;
+&lt;img src=&#34;http://www.roger-beecham.com/vis-for-gds/assignment/01-code_files/figure-html/ch-03-fig-lexp-gdp-02-1.png&#34; alt=&#34;Life Expectancy vs GDP, using a smoother.&#34; width=&#34;672&#34; /&gt;
 &lt;p class=&#34;caption&#34;&gt;
 Figure 1: Life Expectancy vs GDP, using a smoother.
 &lt;/p&gt;
@@ -101,7 +101,7 @@ Figure 1: Life Expectancy vs GDP, using a smoother.
 p + geom_point() + geom_smooth(method = &amp;quot;lm&amp;quot;) &lt;/code&gt;&lt;/pre&gt;
 &lt;pre&gt;&lt;code&gt;## `geom_smooth()` using formula &amp;#39;y ~ x&amp;#39;&lt;/code&gt;&lt;/pre&gt;
 &lt;div class=&#34;figure&#34;&gt;&lt;span id=&#34;fig:ch-03-fig-lexp-gdp-04&#34;&gt;&lt;/span&gt;
-&lt;img src=&#34;http://www.roger-beecham.com/assignment/01-code_files/figure-html/ch-03-fig-lexp-gdp-04-1.png&#34; alt=&#34;Life Expectancy vs GDP, points and an ill-advised linear fit.&#34; width=&#34;100%&#34; /&gt;
+&lt;img src=&#34;http://www.roger-beecham.com/vis-for-gds/assignment/01-code_files/figure-html/ch-03-fig-lexp-gdp-04-1.png&#34; alt=&#34;Life Expectancy vs GDP, points and an ill-advised linear fit.&#34; width=&#34;100%&#34; /&gt;
 &lt;p class=&#34;caption&#34;&gt;
 Figure 2: Life Expectancy vs GDP, points and an ill-advised linear fit.
 &lt;/p&gt;
@@ -114,7 +114,7 @@ p + geom_point() +
     scale_x_log10()&lt;/code&gt;&lt;/pre&gt;
 &lt;pre&gt;&lt;code&gt;## `geom_smooth()` using formula &amp;#39;y ~ s(x, bs = &amp;quot;cs&amp;quot;)&amp;#39;&lt;/code&gt;&lt;/pre&gt;
 &lt;div class=&#34;figure&#34;&gt;&lt;span id=&#34;fig:ch-03-fig-lexp-gdp-05&#34;&gt;&lt;/span&gt;
-&lt;img src=&#34;http://www.roger-beecham.com/assignment/01-code_files/figure-html/ch-03-fig-lexp-gdp-05-1.png&#34; alt=&#34;Life Expectancy vs GDP scatterplot, with a GAM smoother and a log scale on the x-axis.&#34; width=&#34;100%&#34; /&gt;
+&lt;img src=&#34;http://www.roger-beecham.com/vis-for-gds/assignment/01-code_files/figure-html/ch-03-fig-lexp-gdp-05-1.png&#34; alt=&#34;Life Expectancy vs GDP scatterplot, with a GAM smoother and a log scale on the x-axis.&#34; width=&#34;100%&#34; /&gt;
 &lt;p class=&#34;caption&#34;&gt;
 Figure 3: Life Expectancy vs GDP scatterplot, with a GAM smoother and a log scale on the x-axis.
 &lt;/p&gt;
@@ -130,7 +130,7 @@ p + geom_point() +
     scale_x_log10()&lt;/code&gt;&lt;/pre&gt;
 &lt;pre&gt;&lt;code&gt;## `geom_smooth()` using formula &amp;#39;y ~ x&amp;#39;&lt;/code&gt;&lt;/pre&gt;
 &lt;div class=&#34;figure&#34;&gt;&lt;span id=&#34;fig:ch-03-fig-lexp-gdp-07&#34;&gt;&lt;/span&gt;
-&lt;img src=&#34;http://www.roger-beecham.com/assignment/01-code_files/figure-html/ch-03-fig-lexp-gdp-07-1.png&#34; alt=&#34;What has gone wrong here?&#34; width=&#34;768&#34; /&gt;
+&lt;img src=&#34;http://www.roger-beecham.com/vis-for-gds/assignment/01-code_files/figure-html/ch-03-fig-lexp-gdp-07-1.png&#34; alt=&#34;What has gone wrong here?&#34; width=&#34;768&#34; /&gt;
 &lt;p class=&#34;caption&#34;&gt;
 Figure 4: What has gone wrong here?
 &lt;/p&gt;
@@ -143,7 +143,7 @@ p + geom_point(color = &amp;quot;purple&amp;quot;) +
     scale_x_log10()&lt;/code&gt;&lt;/pre&gt;
 &lt;pre&gt;&lt;code&gt;## `geom_smooth()` using formula &amp;#39;y ~ x&amp;#39;&lt;/code&gt;&lt;/pre&gt;
 &lt;div class=&#34;figure&#34;&gt;&lt;span id=&#34;fig:ch-03-fig-lexp-gdp-08&#34;&gt;&lt;/span&gt;
-&lt;img src=&#34;http://www.roger-beecham.com/assignment/01-code_files/figure-html/ch-03-fig-lexp-gdp-08-1.png&#34; alt=&#34;Setting the color attribute of the points directly.&#34; width=&#34;100%&#34; /&gt;
+&lt;img src=&#34;http://www.roger-beecham.com/vis-for-gds/assignment/01-code_files/figure-html/ch-03-fig-lexp-gdp-08-1.png&#34; alt=&#34;Setting the color attribute of the points directly.&#34; width=&#34;100%&#34; /&gt;
 &lt;p class=&#34;caption&#34;&gt;
 Figure 5: Setting the color attribute of the points directly.
 &lt;/p&gt;
@@ -157,7 +157,7 @@ p + geom_point(alpha = 0.3) + geom_smooth(method = &amp;quot;gam&amp;quot;) +
          caption = &amp;quot;Source: Gapminder.&amp;quot;)&lt;/code&gt;&lt;/pre&gt;
 &lt;pre&gt;&lt;code&gt;## `geom_smooth()` using formula &amp;#39;y ~ s(x, bs = &amp;quot;cs&amp;quot;)&amp;#39;&lt;/code&gt;&lt;/pre&gt;
 &lt;div class=&#34;figure&#34;&gt;&lt;span id=&#34;fig:ch-03-fig-lexp-gdp-10&#34;&gt;&lt;/span&gt;
-&lt;img src=&#34;http://www.roger-beecham.com/assignment/01-code_files/figure-html/ch-03-fig-lexp-gdp-10-1.png&#34; alt=&#34;A more polished plot of Life Expectancy vs GDP.&#34; width=&#34;100%&#34; /&gt;
+&lt;img src=&#34;http://www.roger-beecham.com/vis-for-gds/assignment/01-code_files/figure-html/ch-03-fig-lexp-gdp-10-1.png&#34; alt=&#34;A more polished plot of Life Expectancy vs GDP.&#34; width=&#34;100%&#34; /&gt;
 &lt;p class=&#34;caption&#34;&gt;
 Figure 6: A more polished plot of Life Expectancy vs GDP.
 &lt;/p&gt;
@@ -171,7 +171,7 @@ p + geom_point() +
     scale_x_log10()&lt;/code&gt;&lt;/pre&gt;
 &lt;pre&gt;&lt;code&gt;## `geom_smooth()` using formula &amp;#39;y ~ x&amp;#39;&lt;/code&gt;&lt;/pre&gt;
 &lt;div class=&#34;figure&#34;&gt;&lt;span id=&#34;fig:ch-03-fig-lexp-gdp-11&#34;&gt;&lt;/span&gt;
-&lt;img src=&#34;http://www.roger-beecham.com/assignment/01-code_files/figure-html/ch-03-fig-lexp-gdp-11-1.png&#34; alt=&#34;Mapping the continent variable to the color aesthetic.&#34; width=&#34;100%&#34; /&gt;
+&lt;img src=&#34;http://www.roger-beecham.com/vis-for-gds/assignment/01-code_files/figure-html/ch-03-fig-lexp-gdp-11-1.png&#34; alt=&#34;Mapping the continent variable to the color aesthetic.&#34; width=&#34;100%&#34; /&gt;
 &lt;p class=&#34;caption&#34;&gt;
 Figure 7: Mapping the continent variable to the color aesthetic.
 &lt;/p&gt;
@@ -186,7 +186,7 @@ p + geom_point() +
     scale_x_log10()&lt;/code&gt;&lt;/pre&gt;
 &lt;pre&gt;&lt;code&gt;## `geom_smooth()` using formula &amp;#39;y ~ x&amp;#39;&lt;/code&gt;&lt;/pre&gt;
 &lt;div class=&#34;figure&#34;&gt;&lt;span id=&#34;fig:ch-03-fig-lexp-gdp-12&#34;&gt;&lt;/span&gt;
-&lt;img src=&#34;http://www.roger-beecham.com/assignment/01-code_files/figure-html/ch-03-fig-lexp-gdp-12-1.png&#34; alt=&#34;Mapping the continent variable to the color aesthetic, and correcting the error bars using the fill aesthetic.&#34; width=&#34;100%&#34; /&gt;
+&lt;img src=&#34;http://www.roger-beecham.com/vis-for-gds/assignment/01-code_files/figure-html/ch-03-fig-lexp-gdp-12-1.png&#34; alt=&#34;Mapping the continent variable to the color aesthetic, and correcting the error bars using the fill aesthetic.&#34; width=&#34;100%&#34; /&gt;
 &lt;p class=&#34;caption&#34;&gt;
 Figure 8: Mapping the continent variable to the color aesthetic, and correcting the error bars using the fill aesthetic.
 &lt;/p&gt;
@@ -200,7 +200,7 @@ p + geom_point(mapping = aes(color = continent)) + geom_smooth(method = &amp;quo
     scale_x_log10()&lt;/code&gt;&lt;/pre&gt;
 &lt;pre&gt;&lt;code&gt;## `geom_smooth()` using formula &amp;#39;y ~ x&amp;#39;&lt;/code&gt;&lt;/pre&gt;
 &lt;div class=&#34;figure&#34;&gt;&lt;span id=&#34;fig:ch-03-fig-lexp-gdp-13&#34;&gt;&lt;/span&gt;
-&lt;img src=&#34;http://www.roger-beecham.com/assignment/01-code_files/figure-html/ch-03-fig-lexp-gdp-13-1.png&#34; alt=&#34;Mapping aesthetics on a per-geom basis. Here color is mapped to continent for the points but not the smoother.&#34; width=&#34;100%&#34; /&gt;
+&lt;img src=&#34;http://www.roger-beecham.com/vis-for-gds/assignment/01-code_files/figure-html/ch-03-fig-lexp-gdp-13-1.png&#34; alt=&#34;Mapping aesthetics on a per-geom basis. Here color is mapped to continent for the points but not the smoother.&#34; width=&#34;100%&#34; /&gt;
 &lt;p class=&#34;caption&#34;&gt;
 Figure 9: Mapping aesthetics on a per-geom basis. Here color is mapped to continent for the points but not the smoother.
 &lt;/p&gt;
@@ -211,12 +211,12 @@ Figure 9: Mapping aesthetics on a per-geom basis. Here color is mapped to contin
     
     <item>
       <title>Midterm Prjoect</title>
-      <link>http://www.roger-beecham.com/assignment/01-project/</link>
+      <link>http://www.roger-beecham.com/vis-for-gds/assignment/01-project/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://www.roger-beecham.com/assignment/01-project/</guid>
+      <guid>http://www.roger-beecham.com/vis-for-gds/assignment/01-project/</guid>
       <description>
-&lt;link href=&#34;http://www.roger-beecham.com/rmarkdown-libs/anchor-sections/anchor-sections.css&#34; rel=&#34;stylesheet&#34; /&gt;
-&lt;script src=&#34;http://www.roger-beecham.com/rmarkdown-libs/anchor-sections/anchor-sections.js&#34;&gt;&lt;/script&gt;
+&lt;link href=&#34;http://www.roger-beecham.com/vis-for-gds/rmarkdown-libs/anchor-sections/anchor-sections.css&#34; rel=&#34;stylesheet&#34; /&gt;
+&lt;script src=&#34;http://www.roger-beecham.com/vis-for-gds/rmarkdown-libs/anchor-sections/anchor-sections.js&#34;&gt;&lt;/script&gt;
 
 
 &lt;div id=&#34;task&#34; class=&#34;section level1&#34;&gt;
