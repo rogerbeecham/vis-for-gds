@@ -1,5 +1,19 @@
-# SOCIOL 880: Data Visualization
+# GEOG ???? : Visualization for Geographic Data Science
 
-This repository contains the code for generating [socviz880.co](https://socviz880.co/).
+This repository contains the code for generating [vis-for-gds.com](https://www.roger-beecham.com/vis-for-gds/).
 
-Various hugo and blogdown features borrowed more or less directly from [Andrew Heiss](https://www.andrewheiss.com) and his excellent [teaching](https://statsf18.classes.andrewheiss.com/) and [class](https://econw19.classes.andrewheiss.com/) [websites](https://datavizf18.classes.andrewheiss.com/).
+The website uses the [Academic Hugo theme](https://sourcethemes.com/academic/), which is included as a submodule. When when cloning for the first time, use this command to bring down the theme as well:
+
+    git clone --recursive https://github.com/gcushen/hugo-academic.git
+
+To get the theme later, use this command:
+
+    git submodule add \
+      https://github.com/gcushen/hugo-academic.git \
+      themes/hugo-academic
+
+To update to the latest version of the theme, use:
+
+    git submodule update --recursive --remote
+
+The templates were taken from [Andrew Heiss's](https://www.andrewheiss.com) excellent [teaching websites](https://datavizf18.classes.andrewheiss.com/), with minimal configuring.
