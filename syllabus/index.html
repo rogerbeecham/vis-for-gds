@@ -1,0 +1,865 @@
+<!DOCTYPE html>
+<html lang="en-us" 
+      xmlns:og="http://ogp.me/ns#" 
+      xmlns:fb="https://www.facebook.com/2008/fbml">
+
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="generator" content="Source Themes Academic 4.8.0">
+
+  
+
+  
+  
+
+  
+  
+  
+  
+  
+    
+    
+    
+  
+  
+
+  
+
+  
+  
+  
+    
+  
+  <meta name="description" content="Overview In modern data analysis, graphics and computational statistics are increasingly used together to explore and identify complex patterns in data and to make and communicate claims under uncertainty. This course will go beyond traditional ideas of charts, graphs, maps (and also statistics!) to equip you with the critical analysis, design and technical skills to analyse and communicate with social science datasets.
+The course emphasises real-world applications. You will work with both new, large-scale behavioural datasets, as well as more traditional, administrative datasets located within various social science domains: Political Science, Crime Science, Urban and Transport Planning.">
+
+  
+  <link rel="alternate" hreflang="en-us" href="../syllabus/">
+
+  
+
+
+  
+  
+  
+  <meta name="theme-color" content="#424242">
+  
+
+  
+  
+  
+  <script src="../js/mathjax-config.js"></script>
+  
+
+  
+  
+  
+  
+    
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" integrity="sha256-FMvZuGapsJLjouA6k7Eo2lusoAX9i0ShlWFG6qt7SLc=" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css" integrity="sha256-Vzbj7sDDS/woiFS3uNKo8eIuni59rjyNGtXfstRzStA=" crossorigin="anonymous">
+
+    
+    
+    
+      
+    
+    
+      
+      
+        
+          <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.2/styles/github.min.css" crossorigin="anonymous" title="hl-light">
+          <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.2/styles/dracula.min.css" crossorigin="anonymous" title="hl-dark" disabled>
+        
+      
+    
+
+    
+
+    
+
+    
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/lazysizes/5.1.2/lazysizes.min.js" integrity="sha256-Md1qLToewPeKjfAHU1zyPwOutccPAm5tahnaw7Osw0A=" crossorigin="anonymous" async></script>
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" integrity="" crossorigin="anonymous" async></script>
+      
+    
+      
+
+      
+      
+
+      
+    
+
+  
+
+  
+  
+  
+    
+      
+      
+      <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto+Condensed:ital,wght@0,300;1,300%7CRoboto+Slab:wght@300%7CFjalla+One&display=swap">
+    
+  
+
+  
+  
+  
+  
+  <link rel="stylesheet" href="../css/academic.css">
+
+  
+
+
+
+
+  
+
+
+  
+  
+
+  
+
+  <link rel="manifest" href="../index.webmanifest">
+  <link rel="icon" type="image/png" href="../images/icon_huc37306104a4011cad6e5f9118ea6dd2c_187381_32x32_fill_lanczos_center_2.png">
+  <link rel="apple-touch-icon" type="image/png" href="../images/icon_huc37306104a4011cad6e5f9118ea6dd2c_187381_192x192_fill_lanczos_center_2.png">
+
+  <link rel="canonical" href="../syllabus/">
+
+  
+  
+  
+  
+  
+  
+  
+    
+  
+  
+  <meta property="twitter:card" content="summary_large_image">
+  
+  <meta property="twitter:site" content="@rjbeecham">
+  <meta property="twitter:creator" content="@rjbeecham">
+  
+  <meta property="og:site_name" content="Visualization for Geographic Data Science">
+  <meta property="og:url" content="/syllabus/">
+  <meta property="og:title" content="Syllabus | Visualization for Geographic Data Science">
+  <meta property="og:description" content="Overview In modern data analysis, graphics and computational statistics are increasingly used together to explore and identify complex patterns in data and to make and communicate claims under uncertainty. This course will go beyond traditional ideas of charts, graphs, maps (and also statistics!) to equip you with the critical analysis, design and technical skills to analyse and communicate with social science datasets.
+The course emphasises real-world applications. You will work with both new, large-scale behavioural datasets, as well as more traditional, administrative datasets located within various social science domains: Political Science, Crime Science, Urban and Transport Planning."><meta property="og:image" content="/media/vis-for-gds.png">
+  <meta property="twitter:image" content="/media/vis-for-gds.png"><meta property="og:locale" content="en-us">
+  
+    
+    <meta property="article:modified_time" content="2020-11-29T10:15:25&#43;00:00">
+  
+
+  
+
+
+
+  
+
+
+  
+
+
+  <link rel="shortcut icon" href="../favicon.ico" />
+  <link rel="apple-touch-icon-precomposed" sizes="57x57" href="../img/apple-touch-icon-57x57.png" />
+  <link rel="apple-touch-icon-precomposed" sizes="114x114" href="../img/apple-touch-icon-114x114.png" />
+  <link rel="apple-touch-icon-precomposed" sizes="72x72" href="../img/apple-touch-icon-72x72.png" />
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="../img/apple-touch-icon-144x144.png" />
+  <link rel="apple-touch-icon-precomposed" sizes="120x120" href="../img/apple-touch-icon-120x120.png" />
+  <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../img/apple-touch-icon-152x152.png" />
+  <link rel="icon" type="image/png" href="../img/favicon-32x32.png" sizes="32x32" />
+  <link rel="icon" type="image/png" href="../img/favicon-16x16.png" sizes="16x16" />
+  <meta name="application-name" content="GEOG 5XXX: Visualization for Geographic Data Science" />
+  <meta name="msapplication-TileColor" content="#FFFFFF" />
+  <meta name="msapplication-TileImage" content="/img/mstile-144x144.png" />
+
+
+  <title>Syllabus | Visualization for Geographic Data Science</title>
+
+</head>
+
+
+<body id="top" data-spy="scroll" data-offset="70"
+    data-target="#TableOfContents"
+    >
+
+    <aside class="search-results" id="search">
+  <div class="container">
+    <section class="search-header">
+
+      <div class="row no-gutters justify-content-between mb-3">
+        <div class="col-6">
+          <h1></h1>
+        </div>
+        <div class="col-6 col-search-close">
+          <a class="js-search" href="#"><i class="fas fa-times-circle text-muted" aria-hidden="true"></i></a>
+        </div>
+      </div>
+
+      <div id="search-box">
+        
+        
+        
+      </div>
+
+    </section>
+    <section class="section-search-results">
+
+      <div id="search-hits">
+        
+      </div>
+
+    </section>
+  </div>
+</aside>
+
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+<nav class="navbar navbar-expand-lg navbar-light compensate-for-scrollbar" id="navbar-main">
+  <div class="container">
+
+    
+    <div class="d-none d-lg-inline-flex">
+      <a class="navbar-brand" href="../">Visualization for Geographic Data Science</a>
+    </div>
+    
+
+    
+    <button type="button" class="navbar-toggler" data-toggle="collapse"
+            data-target="#navbar-content" aria-controls="navbar" aria-expanded="false" aria-label="">
+    <span><i class="fas fa-bars"></i></span>
+    </button>
+    
+
+    
+    <div class="navbar-brand-mobile-wrapper d-inline-flex d-lg-none">
+      <a class="navbar-brand" href="../">Visualization for Geographic Data Science</a>
+    </div>
+    
+
+    
+    
+    <div class="navbar-collapse main-menu-item collapse justify-content-end" id="navbar-content">
+
+      
+      <ul class="navbar-nav d-md-inline-flex">
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+        
+        
+        
+        
+        
+
+        <li class="nav-item">
+          <a class="nav-link  active" href="../syllabus/"><span>Syllabus</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+        
+        
+        
+        
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="../schedule/"><span>Schedule</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+        
+        
+        
+        
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="../reading/"><span>Readings</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+        
+        
+        
+        
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="../class/"><span>Class</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+        
+        
+        
+        
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="../reference/"><span>Reference</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+            
+          
+        
+
+        
+        
+        
+        
+        
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="https://rstudio.cloud/" target="_blank" rel="noopener"><span>RStudio.cloud</span></a>
+        </li>
+
+        
+        
+
+      
+
+        
+      </ul>
+    </div>
+
+    <ul class="nav-icons navbar-nav flex-row ml-auto d-flex pl-md-2">
+      
+
+      
+
+      
+
+    </ul>
+
+  </div>
+</nav>
+
+
+
+    <article class="article">
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+  
+  
+<div class="article-container pt-3">
+  <h1>Syllabus</h1>
+
+  
+
+  
+    
+
+
+<div class="article-metadata">
+
+  
+  
+
+  
+
+  
+
+  
+
+  
+  
+  
+
+  
+  
+
+</div>
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+</div>
+
+
+
+  <div class="article-container">
+
+    <div class="article-style">
+      
+<link href="../syllabus/index_files/anchor-sections/anchor-sections.css" rel="stylesheet" />
+<script src="../syllabus/index_files/anchor-sections/anchor-sections.js"></script>
+
+<div id="TOC">
+
+</div>
+
+<div id="overview" class="section level2">
+<h2>Overview</h2>
+<p>In modern data analysis, graphics and computational statistics are increasingly used together to explore and identify complex patterns in data and to make and communicate claims under uncertainty. This course will go beyond traditional ideas of charts, graphs, maps (and also statistics!) to equip you with the critical analysis, design and technical skills to analyse and communicate with social science datasets.</p>
+<p>The course emphasises real-world applications. You will work with both new, large-scale behavioural datasets, as well as more traditional, administrative datasets located within various social science domains: Political Science, Crime Science, Urban and Transport Planning. As well as learning how to use graphics and statistics to explore patterns in these data, implementing recent ideas from data journalism you will learn how to communicate research findings – how to tell stories with data.</p>
+</div>
+<div id="course-objectives" class="section level2">
+<h2>Course objectives</h2>
+<ul>
+<li><p>explore, analyse and communicate structure in geospatial datasets using visualization.</p></li>
+<li><p>introduces key theory from research in cognitive science, computer science and GIS and demonstrates how this can been applied in a data analysis</p></li>
+<li><p>Emphasis is placed on modern datasets and data analysis environments: students will develop an understanding of functional programming concepts, computational statistics and reproducible methods</p></li>
+</ul>
+<p>By the end of the course you will</p>
+<ol style="list-style-type: decimal">
+<li>Describe, process and combine geographic datasets from a range of sources</li>
+<li>Design statistical graphics that expose structure in geographic data and that are underpinned by established principles in information visualization and cartography</li>
+<li>Use modern data science and visualization frameworks to produce coherent data analyses</li>
+<li>Apply modern statistical techniques for analysing, representing and communicating data and model uncertainty</li>
+</ol>
+</div>
+<div id="core-texts" class="section level2">
+<h2>Core Texts</h2>
+<p>I strongly recommend (but do not require) you buy two books:</p>
+<ul>
+<li><span class="citation">Kieran Healy, <em>Data Visualization: A Practical Introduction</em> (Princeton: Princeton University Press, <a href="#ref-Healy:2019">2019</a>), <a href="http://socviz.co/" class="uri">http://socviz.co/</a>.</span> [Draft version free online; print version at <a href="https://amzn.to/2vfAixM">Amazon</a> and all good bookshops.]</li>
+<li><span class="citation">Hadley Wickham and Garrett Grolemund, <em>R for Data Science: Import, Tidy, Transform, Visualize, and Model Data</em> (Sebastopol, California: O’Reilly Media, <a href="#ref-WickhamGrolemund:2017">2017</a>), <a href="http://r4ds.had.co.nz/" class="uri">http://r4ds.had.co.nz/</a>.</span> [Free online; print version at <a href="https://www.amazon.com/R-Data-Science-Hadley-Wickham/dp/1491910399/">Amazon</a> and all good bookshops.]</li>
+</ul>
+<p>You should also be aware of:</p>
+<ul>
+<li><span class="citation">Claus E. Wilke, <em>Fundamentals of Data Visualization</em> (Sebastopol, California: O’Reilly Media, <a href="#ref-Wilke:2019">2019</a>), <a href="https://serialmentor.com/dataviz/" class="uri">https://serialmentor.com/dataviz/</a>.</span> [Draft version free online; print version at <a href="https://www.amazon.com/Fundamentals-Data-Visualization-Informative-Compelling/dp/1492031089">Amazon</a>]</li>
+</ul>
+</div>
+<div id="other-material" class="section level2">
+<h2>Other Material</h2>
+<p>We may also read other material as we go. I will make it available to you beforehand. It will include material from the following books, amongst other sources:</p>
+<ul>
+<li><span class="citation">Whitney Battle-Baptiste and Britt Rusert, <em>W. E. B. Du Bois’s Data Portraits: Visualizing Black America</em> (New York: Princeton Architectural Press, <a href="#ref-battle-baptiste18:_w">2018</a>).</span></li>
+<li><span class="citation">Scott Berinato, <em>Good Charts: The HBR Guide to Making Smarter, More Persuasive Data Visualizations</em> (Cambridge, MA: Harvard Business Review Press, <a href="#ref-berinato16:_good_chart">2016</a>).</span></li>
+<li><span class="citation">Alberto Cairo, <em>The Truthful Art: Data, Charts, and Maps for Communication</em> (Berkeley, California: New Riders, <a href="#ref-cairo16:_truth_art">2016</a>).</span></li>
+<li><span class="citation">William S. Cleveland, <em>Visualizing Data</em> (Hobart Press, <a href="#ref-cleveland1994">1994</a>).</span></li>
+<li><span class="citation">Stephen Few, <em>Now You See It: Simple Visualization Techniques for Quantitative Analysis</em> (Oakland, CA: Analytics Press, <a href="#ref-few09:_now_you_see_it">2009</a>).</span></li>
+<li><span class="citation">Ellen Lupton, <em>Thinking with Type: A Critical Guide for Designers, Writers, Editors, &amp; Students</em>, Second. (New York: Princeton Architectural Press, <a href="#ref-lupton10:_think_type">2010</a>).</span></li>
+<li><span class="citation">Tamara Munzer, <em>Visualization Analysis and Design</em>, AK Peters Visualization Series (Boca Raton, FL: CRC Press, <a href="#ref-munzer14:_visual_analy_desig">2014</a>).</span></li>
+<li><span class="citation">Edward R. Tufte, <em>The Visual Display of Quantitative Information</em> (Cheshire, CT: Graphics Press, <a href="#ref-tufte83:_visual_displ_quant_infor">1983</a>).</span></li>
+<li><span class="citation">Colin Ware, <em>Visual Thinking for Design</em> (Waltham, MA: Morgan Kaufman, <a href="#ref-ware08:_visual_think_desig">2008</a>).</span></li>
+<li><span class="citation">Nathan Yau, <em>Visualize This: The Flowingdata Guide to Design, Visualization, and Statistics</em> (New York: Wiley, <a href="#ref-yau11:_visual_this">2011</a>).</span></li>
+</ul>
+</div>
+<div id="software" class="section level2">
+<h2>Software</h2>
+<p>We will do all of our visualization work in this class using <a href="https://cran.r-project.org/">R</a>. We will use <a href="https://www.rstudio.com/">RStudio</a> to manage our code and projects.</p>
+<p>You will need to install some software first. Here is what to do:</p>
+<ol style="list-style-type: decimal">
+<li>Get the most recent version of R. R is free and available for Windows, Mac, and Linux operating systems. <a href="http://cloud.r-project.org">Download</a> the version of R compatible with your operating system. If you are running Windows or MacOS, you should choose one of the <em>precompiled binary</em> distributions (i.e., ready-to-run applications) linked at the top of the R Project's webpage.</li>
+<li>Once R is installed, <a href="http://rstudio.com">download and install R Studio</a>. R Studio is an &quot;Integrated Development Environment&quot;, or IDE. This means it is a front-end for R that makes it much easier to work with. R Studio is also free, and available for Windows, Mac, and Linux platforms.</li>
+<li><a href="http://tidyverse.org">Install the tidyverse library</a> and several other add-on packages for R. These libraries provide useful functionality that we will take advantage of throughout the book. You can learn more about the tidyverse's family of packages at its website.</li>
+</ol>
+<p>To install the tidyverse, make sure you have an Internet connection and then launch R Studio. Type the following lines of code at R's command prompt, located in the window named &quot;Console&quot;, and hit return. In the code below, the <code>&lt;-</code> arrow is made up of two keystrokes, first <code>&lt;</code> and then the short dash or minus symbol, <code>-</code>.</p>
+<pre class="r"><code>my_packages &lt;- c(&quot;tidyverse&quot;, &quot;broom&quot;, &quot;cowplot&quot;, &quot;drat&quot;,
+                 &quot;gapminder&quot;, &quot;GGally&quot;, &quot;ggforce&quot;, &quot;ggrepel&quot;, &quot;ggridges&quot;, &quot;gridExtra&quot;,
+                 &quot;here&quot;, &quot;interplot&quot;, &quot;margins&quot;, &quot;maps&quot;, &quot;mapproj&quot;,
+                 &quot;mapdata&quot;, &quot;MASS&quot;, &quot;quantreg&quot;, &quot;rlang&quot;, &quot;scales&quot;,
+                 &quot;survey&quot;, &quot;srvyr&quot;, &quot;devtools&quot;)
+
+install.packages(my_packages, repos = &quot;http://cran.rstudio.com&quot;)</code></pre>
+<p>R Studio should then download and install these packages for you. It may take a little while to download everything.</p>
+<p>With these packages available, you can then install one last library of material that's useful specifically for this course:</p>
+<pre class="r"><code>install.packages(&quot;socviz&quot;, repos = &quot;http://cran.rstudio.com&quot;)</code></pre>
+</div>
+<div id="schedule" class="section level2">
+<h2>Schedule</h2>
+<table class="table schedule" style="max-width:100%">
+    <tbody>
+
+    </tbody>
+
+</table>
+
+<p>As the weeks go by, consult the <a href="../schedule/">Schedule Page</a> for more information on weekly topics, problem sets, readings, and other materials. The schedule is likely to change as we go. Links to readings, assignments, and other materials from class will be posted on that page.</p>
+</div>
+
+    </div>
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  </div>
+</article>
+
+        
+
+    
+    
+    
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.imagesloaded/4.1.4/imagesloaded.pkgd.min.js" integrity="sha256-lqvxZrPLtfffUl2G/e7szqSvPBILGbwmsGE1MKlOi0Q=" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.isotope/3.0.6/isotope.pkgd.min.js" integrity="sha256-CBrpuqrMhXwcLLUd5tvQ4euBHCdh7wGlDfNz8vbu/iI=" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js" integrity="sha256-yt2kYMy0w8AbtF89WXb2P1rfjcP/HTHLT7097U8Y5b8=" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/instant.page/5.1.0/instantpage.min.js" integrity="sha512-1+qUtKoh9XZW7j+6LhRMAyOrgSQKenQ4mluTR+cvxXjP1Z54RxZuzstR/H9kgPXQsVB8IW7DMDFUJpzLjvhGSQ==" crossorigin="anonymous"></script>
+
+      
+
+      
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.2/highlight.min.js" integrity="sha512-7t8APmYpzEsZP7CYoA7RfMPV9Bb+PJHa9x2WiUnDXZx3XHveuyWUtvNOexhkierl5flZ3tr92dP1mMS+SGlD+A==" crossorigin="anonymous"></script>
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.2/languages/r.min.js"></script>
+        
+      
+
+    
+
+    
+    
+
+    
+    
+    <script>const code_highlighting = true;</script>
+    
+
+    
+    
+    <script>const isSiteThemeDark = false;</script>
+    
+
+    
+
+    
+    
+
+    
+
+    
+    
+
+    
+    
+
+    
+    
+
+    
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <script src="../js/academic.min.7c0855509a679f5c89322b27a9552a2f.js"></script>
+
+    
+
+
+
+
+
+
+    
+    
+    <div class="container">
+        <footer>
+    <hr>
+
+    <div class="row course-info">
+        <div class="col-md-7">
+            <p>
+                <strong>GEOG 5XXX: Visualization for Geographic Data Science (Spring 2021)</strong><br>
+
+                <a href="https://www.leeds.ac.uk/" target="_blank" rel="noopener">University of Leeds</a> &emsp;&emsp;
+                <a href="https://environment.leeds.ac.uk/geography" target="_blank" rel="noopener">School of Geography</a>
+            </p>
+
+            <p>
+                <a href="http://www.roger-beecham.com/" target="_blank" rel="noopener"><i class="fas fa-user"></i>
+                    Roger Beecham</a> &emsp;&emsp;
+                <a href="mailto:r.j.beecham@leeds.ac.uk"><i class="fas fa-envelope"></i>
+                    r.j.beecham@leeds.ac.uk</a>
+            </p>
+
+            <p>
+                <i class="far fa-calendar-alt"></i> Wednesdays &emsp;&emsp;
+                <i class="far fa-clock"></i> 10:00 - 12:00 <br>
+                <i class="fas fa-university"></i> ODL
+            </p>
+        </div>
+
+        <div class="col-md-5 credits">
+            <p>All content licensed under a <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank" rel="noopener">Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International License</a>.</p>
+            
+            <p>Content <i class="fab fa-creative-commons"></i> 2021 <a href="http://www.roger-beecham.com/" target="_blank" rel="noopener">Roger Beecham</a></p>                    
+            
+            <p><a href="https://github.com/rogerbeecham/vis-for-gds" target="_blank" rel="noopener"><i class="fab fa-github"></i> View the source at GitHub.</a></p>
+        </div>
+    </div>
+</footer>
+
+    </div>
+    
+
+    
+<div id="modal" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title"></h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <pre><code class="tex hljs"></code></pre>
+      </div>
+      <div class="modal-footer">
+        <a class="btn btn-outline-primary my-1 js-copy-cite" href="#" target="_blank">
+          <i class="fas fa-copy"></i> 
+        </a>
+        <a class="btn btn-outline-primary my-1 js-download-cite" href="#" target="_blank">
+          <i class="fas fa-download"></i> 
+        </a>
+        <div id="modal-error"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+</body>
+
+</html>
