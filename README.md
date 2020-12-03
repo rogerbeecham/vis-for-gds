@@ -1,6 +1,6 @@
 # GEOG ???? : Visualization for Geographic Data Science
 
-This repository contains the code for generating [vis-for-gds.com](https://www.roger-beecham.com/vis-for-gds/).
+This repository contains the code for generating [vis-for-gds](https://www.roger-beecham.com/vis-for-gds/).
 
 The website uses the [Academic Hugo theme](https://sourcethemes.com/academic/), which is included as a submodule. When when cloning for the first time, use this command to bring down the theme as well:
 
