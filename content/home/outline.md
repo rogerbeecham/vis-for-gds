@@ -16,4 +16,3 @@ design:
 ---
 
 {{< courseinfo >}}
-

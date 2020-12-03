@@ -69,5 +69,7 @@ ignoreFiles:
   - \.Rmarkdown$
   - \.Rproj.user$
   - \.Rhistory$
+  - \.knit\\.md$
+  - \.utf8\\.md$
   - _files$
   - _cache$

@@ -1,34 +1,45 @@
 lessons:
-  
-  - title: "Looking at Data / Up and Running"
+
+  - title: "Introduction"
     date: "Week 1"
     class: "01-class"
-    assignment: ""
+    assignment: "01-assignment"
+    reading: "01-reading"
 
-  - title: "Mapping Data to Visual Elements"    
+  - title: "Tidy spatial data and data wrangling"
     date: "Week 2"
     class: "02-class"
     reading: ""
     assignment: ""
 
-  - title: "Tables, Text, Labels, Notes"
+  - title: "Visualization fundamentals"
     date: "Week 3"
     class: "03-class"
     reading: ""
     assignment: ""
 
-  - title: "Working with Models"
+  - title: "Exploratory visual data analysis"
     date: "Week 4"
     class: "04-class"
     reading: ""
     assignment: ""
 
-  - title: "Maps"
+  - title: "Exploratory visual data analysis of geospatial data"
     date: "Week 5"
     reading: ""
     assignment: ""
-    
-  - title: "Polishing your Plots"
+
+  - title: "Uncertainty visualization"
     date: "Week 6"
     reading: ""
-    assignment: ""    
+    assignment: ""
+
+  - title: "Storytelling in visual data analysis"
+    date: "Week 7"
+    reading: ""
+    assignment: ""
+
+  - title: "No new content: coursework surgery"
+    date: "Week 8"
+    reading: ""
+    assignment: ""

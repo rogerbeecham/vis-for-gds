@@ -8,16 +8,16 @@ weight: 10
 title: "Visualization for Geographic Data Science"
 
 # Hero image (optional). Enter filename of an image in the `static/img/` folder.
-hero_media: vis_for_gds.png
+hero_media: vis-for-gds.png
 
 design:
   background:
     # Background gradient
-    gradient_start: '#6d6d6d'
-    gradient_end: '#8e8e8e'
+    gradient_start: '#d7d0c8'
+    gradient_end: '#d7d0c8'
 
     # Text color (true=light or false=dark).
-    text_color_light: true
+    text_color_light: false
 
 cta_note:
   label: Summer 2021<br>School of Geography<br>University of Leeds

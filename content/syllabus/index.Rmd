@@ -21,23 +21,28 @@ library(pander)
 
 ## Overview
 
-This is a half-semester graduate seminar. It's self-contained, but goes well with its companion on Data Management, taught in the second half on the semester.
+In modern data analysis, graphics and computational statistics are increasingly used together to explore and identify complex patterns in data and to make and communicate claims under uncertainty. This course will go beyond traditional ideas of charts, graphs, maps (and also statistics!) to equip you with the critical analysis, design and technical skills to analyse and communicate with social science datasets.
+
+The course emphasises real-world applications. You will work with both new, large-scale behavioural datasets, as well as more traditional, administrative datasets located within various social science domains: Political Science, Crime Science, Urban and Transport Planning. As well as learning how to use graphics and statistics to explore patterns in these data, implementing recent ideas from data journalism you will learn how to communicate research findings – how to tell stories with data.
 
 ## Course objectives
 
-This class will teach you how to use modern, widely-used tools to create insightful, effective, reproducible visualizations of social science data. We will also put the theory and practice of visualization into context. By that I mean that we will think about different ways of looking at social science data, about where data comes from in the first place, and the implications of choosing to represent it in different ways.
+* explore, analyse and communicate structure in geospatial datasets using visualization.
+
+* introduces key theory from research in cognitive science, computer science and GIS and demonstrates how this can been applied in a data analysis
+
+* Emphasis is placed on modern datasets and data analysis environments: students will develop an understanding of functional programming concepts, computational statistics and reproducible methods
 
 By the end of the course you will
 
-- Understand the basic principles behind effective data visualization.
-- Have a practical sense for why some graphs and figures work well,
-  while others may fail to inform or actively mislead.
-- Know how to create a wide range of plots in R using ggplot2.
-- Know how to refine plots for effective presentation.
+1.	Describe, process and combine geographic datasets from a range of sources
+2.	Design statistical graphics that expose structure in geographic data and that are underpinned by established principles in information visualization and cartography
+3.	Use modern data science and visualization frameworks to produce coherent data analyses
+4.	Apply modern statistical techniques for analysing, representing and communicating data and model uncertainty
 
 ## Core Texts
 
-I strongly recommend (but do not require) you buy two books: 
+I strongly recommend (but do not require) you buy two books:
 
 - [@Healy:2019] [Draft version free online; print version at [Amazon](https://amzn.to/2vfAixM) and all good bookshops.]
 - [@WickhamGrolemund:2017] [Free online; print version at [Amazon](https://www.amazon.com/R-Data-Science-Hadley-Wickham/dp/1491910399/) and all good bookshops.]
@@ -47,7 +52,7 @@ You should also be aware of:
 - [@Wilke:2019] [Draft version free online; print version at  [Amazon](https://www.amazon.com/Fundamentals-Data-Visualization-Informative-Compelling/dp/1492031089)]
 
 
-## Other Material 
+## Other Material
 
 We may also read other material as we go. I will make it available to you beforehand. It will include material from the following books, amongst other sources:
 
@@ -65,11 +70,11 @@ We may also read other material as we go. I will make it available to you before
 
 ## Software
 
-We will do all of our visualization work in this class using [R](https://cran.r-project.org/). We will use [RStudio](https://www.rstudio.com/) to manage our code and projects. 
+We will do all of our visualization work in this class using [R](https://cran.r-project.org/). We will use [RStudio](https://www.rstudio.com/) to manage our code and projects.
 
 You will need to install some software first. Here is what to do:
 
-1. Get the most recent version of R. R is free and available for Windows, Mac, and Linux operating systems. [Download](http://cloud.r-project.org) the version of R compatible with your operating system. If you are running Windows or MacOS, you should choose one of the *precompiled binary* distributions (i.e., ready-to-run applications) linked at the top of the R Project's webpage. 
+1. Get the most recent version of R. R is free and available for Windows, Mac, and Linux operating systems. [Download](http://cloud.r-project.org) the version of R compatible with your operating system. If you are running Windows or MacOS, you should choose one of the *precompiled binary* distributions (i.e., ready-to-run applications) linked at the top of the R Project's webpage.
 2. Once R is installed, [download and install R Studio](http://rstudio.com). R Studio is an "Integrated Development Environment", or IDE. This means it is a front-end for R that makes it much easier to work with. R Studio is also free, and available for Windows, Mac, and Linux platforms.
 3. [Install the tidyverse library](http://tidyverse.org) and several other add-on packages for R. These libraries provide useful functionality that we will take advantage of throughout the book. You can learn more about the tidyverse's family of packages at its website.
 
@@ -97,4 +102,4 @@ install.packages("socviz", repos = "http://cran.rstudio.com")
 
 `r blogdown::shortcode("topiclist")`
 
-As the weeks go by, consult the [Schedule Page](/schedule/) for more information on weekly topics, problem sets, readings, and other materials. The schedule is likely to change as we go. Links to readings, assignments, and other materials from class will be posted on that page. 
+As the weeks go by, consult the [Schedule Page](/schedule/) for more information on weekly topics, problem sets, readings, and other materials. The schedule is likely to change as we go. Links to readings, assignments, and other materials from class will be posted on that page.

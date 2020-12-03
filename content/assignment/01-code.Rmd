@@ -1,6 +1,6 @@
 ---
 title: "Code from Week 1"
-editor_options: 
+editor_options:
   chunk_output_type: console
 ---
 
@@ -24,7 +24,7 @@ library(socviz)
 
 ```
 
-To extract the course packet to your desktop: 
+To extract the course packet to your desktop:
 
 ```{r extract, eval = FALSE, echo = TRUE}
 
@@ -54,7 +54,7 @@ p
 
 
 ```{r ch-03-fig-lexp-gdp-01}
-p + geom_point() 
+p + geom_point()
 ```
 
 
@@ -71,7 +71,7 @@ p + geom_smooth()
 p <- ggplot(data = gapminder,
             mapping = aes(x = gdpPercap,
                           y=lifeExp))
-p + geom_point() + geom_smooth(method = "lm") 
+p + geom_point() + geom_smooth(method = "lm")
 ```
 
 
