@@ -1,6 +1,6 @@
 ---
-title: "Models and Pipelines"
-linktitle: "4: Work with Models"
+title: "Exploratory visual data analysis"
+linktitle: "4: Exploratory visual data analysis"
 date: "2020-01-30"
 class_date: "2020-01-30"
 citeproc: false
@@ -16,15 +16,6 @@ menu:
     weight: 1
 type: docs
 weight: 1
-pdf: /slides/04_dataviz_s20_work_with_models.pdf
-thumb: /slides/04_dataviz_s20_work_with_models.png    
-editor_options: 
+editor_options:
   chunk_output_type: console
 ---
-
-## Slides
-
-`r blogdown::shortcode("slides")`
-
-
-

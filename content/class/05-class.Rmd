@@ -1,6 +1,6 @@
 ---
-title: "Maps"
-linktitle: "5: Make Maps"
+title: "Uncertainty visualization"
+linktitle: "5: Uncertainty visualization"
 date: "2020-02-06"
 class_date: "2020-02-06"
 citeproc: false
@@ -16,15 +16,6 @@ menu:
     weight: 1
 type: docs
 weight: 1
-pdf: /slides/05_dataviz_s20_making_maps.pdf
-thumb: /slides/05_dataviz_s20_making_maps.png  
-editor_options: 
+editor_options:
   chunk_output_type: console
 ---
-
-## Slides
-
-`r blogdown::shortcode("slides")`
-
-
-

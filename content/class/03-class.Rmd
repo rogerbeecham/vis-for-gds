@@ -1,6 +1,6 @@
 ---
-title: "Tables, Text, Labels, Notes"
-linktitle: "3: Work with Geoms"
+title: "Visualization fundamentals"
+linktitle: "3: Visualization fundamentals"
 date: "2020-01-23"
 class_date: "2020-01-23"
 citeproc: false
@@ -16,15 +16,6 @@ menu:
     weight: 1
 type: docs
 weight: 1
-pdf: /slides/03_dataviz_s20_work_with_geoms.pdf
-thumb: /slides/03_dataviz_s20_work_with_geoms.png    
-editor_options: 
+editor_options:
   chunk_output_type: console
 ---
-
-## Slides
-
-`r blogdown::shortcode("slides")`
-
-
-
