@@ -13,7 +13,7 @@
     </image>
     
     <item>
-      <title>Maps</title>
+      <title>Uncertainty visualization</title>
       <link>/class/05-class/</link>
       <pubDate>Thu, 06 Feb 2020 00:00:00 +0000</pubDate>
       <guid>/class/05-class/</guid>
@@ -23,28 +23,13 @@
 &lt;script src=&#34;./rmarkdown-libs/anchor-sections/anchor-sections.js&#34;&gt;&lt;/script&gt;
 &lt;!-- /BLOGDOWN-HEAD --&gt;
 
-&lt;h2&gt;Contents&lt;/h2&gt;
-&lt;div id=&#34;TOC&#34;&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;#slides&#34;&gt;Slides&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/div&gt;
-
-&lt;div id=&#34;slides&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;Slides&lt;/h2&gt;
-
-&lt;p&gt;&lt;a href=&#34;./slides/05_dataviz_s20_making_maps.pdf&#34;&gt;Download the slides from today’s class&lt;/a&gt;.&lt;/p&gt;
-&lt;figure&gt;
-    &lt;a href=&#34;./slides/05_dataviz_s20_making_maps.pdf&#34;&gt;&lt;img src=&#34;./slides/05_dataviz_s20_making_maps.png&#34; alt=&#34;First slide&#34; /&gt;&lt;/a&gt;
-&lt;/figure&gt;
 
 
-&lt;/div&gt;
 </description>
     </item>
     
     <item>
-      <title>Models and Pipelines</title>
+      <title>Exploratory visual data analysis</title>
       <link>/class/04-class/</link>
       <pubDate>Thu, 30 Jan 2020 00:00:00 +0000</pubDate>
       <guid>/class/04-class/</guid>
@@ -54,28 +39,13 @@
 &lt;script src=&#34;./rmarkdown-libs/anchor-sections/anchor-sections.js&#34;&gt;&lt;/script&gt;
 &lt;!-- /BLOGDOWN-HEAD --&gt;
 
-&lt;h2&gt;Contents&lt;/h2&gt;
-&lt;div id=&#34;TOC&#34;&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;#slides&#34;&gt;Slides&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/div&gt;
-
-&lt;div id=&#34;slides&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;Slides&lt;/h2&gt;
-
-&lt;p&gt;&lt;a href=&#34;./slides/04_dataviz_s20_work_with_models.pdf&#34;&gt;Download the slides from today’s class&lt;/a&gt;.&lt;/p&gt;
-&lt;figure&gt;
-    &lt;a href=&#34;./slides/04_dataviz_s20_work_with_models.pdf&#34;&gt;&lt;img src=&#34;./slides/04_dataviz_s20_work_with_models.png&#34; alt=&#34;First slide&#34; /&gt;&lt;/a&gt;
-&lt;/figure&gt;
 
 
-&lt;/div&gt;
 </description>
     </item>
     
     <item>
-      <title>Tables, Text, Labels, Notes</title>
+      <title>Visualization fundamentals</title>
       <link>/class/03-class/</link>
       <pubDate>Thu, 23 Jan 2020 00:00:00 +0000</pubDate>
       <guid>/class/03-class/</guid>
@@ -85,28 +55,13 @@
 &lt;script src=&#34;./rmarkdown-libs/anchor-sections/anchor-sections.js&#34;&gt;&lt;/script&gt;
 &lt;!-- /BLOGDOWN-HEAD --&gt;
 
-&lt;h2&gt;Contents&lt;/h2&gt;
-&lt;div id=&#34;TOC&#34;&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;#slides&#34;&gt;Slides&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/div&gt;
-
-&lt;div id=&#34;slides&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;Slides&lt;/h2&gt;
-
-&lt;p&gt;&lt;a href=&#34;./slides/03_dataviz_s20_work_with_geoms.pdf&#34;&gt;Download the slides from today’s class&lt;/a&gt;.&lt;/p&gt;
-&lt;figure&gt;
-    &lt;a href=&#34;./slides/03_dataviz_s20_work_with_geoms.pdf&#34;&gt;&lt;img src=&#34;./slides/03_dataviz_s20_work_with_geoms.png&#34; alt=&#34;First slide&#34; /&gt;&lt;/a&gt;
-&lt;/figure&gt;
 
 
-&lt;/div&gt;
 </description>
     </item>
     
     <item>
-      <title>Get Started / Make Some Plots</title>
+      <title>Tidy spatial data and data wrangling</title>
       <link>/class/02-class/</link>
       <pubDate>Thu, 16 Jan 2020 00:00:00 +0000</pubDate>
       <guid>/class/02-class/</guid>
@@ -116,28 +71,13 @@
 &lt;script src=&#34;./rmarkdown-libs/anchor-sections/anchor-sections.js&#34;&gt;&lt;/script&gt;
 &lt;!-- /BLOGDOWN-HEAD --&gt;
 
-&lt;h2&gt;Contents&lt;/h2&gt;
-&lt;div id=&#34;TOC&#34;&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;#slides&#34;&gt;Slides&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/div&gt;
-
-&lt;div id=&#34;slides&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;Slides&lt;/h2&gt;
-
-&lt;p&gt;&lt;a href=&#34;./slides/02_dataviz_s20_getting_started.pdf&#34;&gt;Download the slides from today’s class&lt;/a&gt;.&lt;/p&gt;
-&lt;figure&gt;
-    &lt;a href=&#34;./slides/02_dataviz_s20_getting_started.pdf&#34;&gt;&lt;img src=&#34;./slides/02_dataviz_s20_getting_started.png&#34; alt=&#34;First slide&#34; /&gt;&lt;/a&gt;
-&lt;/figure&gt;
 
 
-&lt;/div&gt;
 </description>
     </item>
     
     <item>
-      <title>Look at Data / Up and Running in R and ggplot</title>
+      <title>Introduction to Visualization for GDS</title>
       <link>/class/01-class/</link>
       <pubDate>Fri, 10 Jan 2020 00:00:00 +0000</pubDate>
       <guid>/class/01-class/</guid>
@@ -147,37 +87,13 @@
 &lt;script src=&#34;./rmarkdown-libs/anchor-sections/anchor-sections.js&#34;&gt;&lt;/script&gt;
 &lt;!-- /BLOGDOWN-HEAD --&gt;
 
-&lt;h2&gt;Contents&lt;/h2&gt;
-&lt;div id=&#34;TOC&#34;&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;#slides&#34;&gt;Slides&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#links&#34;&gt;Links&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/div&gt;
-
-&lt;div id=&#34;slides&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;Slides&lt;/h2&gt;
-&lt;p&gt;Does this build?&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;./slides/01_dataviz_s20_looking_at_data.pdf&#34;&gt;Download the slides from today’s class&lt;/a&gt;.&lt;/p&gt;
-&lt;figure&gt;
-    &lt;a href=&#34;./slides/01_dataviz_s20_looking_at_data.pdf&#34;&gt;&lt;img src=&#34;./slides/01_dataviz_s20_looking_at_data.png&#34; alt=&#34;First slide&#34; /&gt;&lt;/a&gt;
-&lt;/figure&gt;
 
 
-&lt;/div&gt;
-&lt;div id=&#34;links&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;Links&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;https://www.r-project.org/&#34;&gt;The R Project for Statistical Computing&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://www.rstudio.com&#34;&gt;R Studio&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/div&gt;
 </description>
     </item>
     
     <item>
-      <title>Problem set 1</title>
+      <title>Blah</title>
       <link>/assignment/01-problem-set/</link>
       <pubDate>Tue, 18 Sep 2018 00:00:00 +0000</pubDate>
       <guid>/assignment/01-problem-set/</guid>
@@ -193,7 +109,7 @@
     </item>
     
     <item>
-      <title>Truth, Beauty, and Data</title>
+      <title>Introduction</title>
       <link>/reading/01-reading/</link>
       <pubDate>Tue, 04 Sep 2018 00:00:00 +0000</pubDate>
       <guid>/reading/01-reading/</guid>
@@ -202,12 +118,22 @@
 &lt;script src=&#34;./rmarkdown-libs/anchor-sections/anchor-sections.js&#34;&gt;&lt;/script&gt;
 
 
-&lt;div id=&#34;required&#34; class=&#34;section level1&#34;&gt;
-&lt;h1&gt;Required&lt;/h1&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;http://socviz.co/lookatdata.html&#34;&gt;Chapter 1&lt;/a&gt; in Kieran Healy, &lt;em&gt;Data Visualization&lt;/em&gt; &lt;span class=&#34;citation&#34;&gt;[@Healy:2019]&lt;/span&gt;&lt;/li&gt;
-&lt;li&gt;Chapters 2 and 3 in Alberto Cairo, &lt;em&gt;The Truthful Art&lt;/em&gt; &lt;span class=&#34;citation&#34;&gt;[@Cairo:2016]&lt;/span&gt; (&lt;em&gt;skim the introduction and chapter 1&lt;/em&gt;)&lt;/li&gt;
-&lt;/ul&gt;
+
+</description>
+    </item>
+    
+    <item>
+      <title>Blah</title>
+      <link>/assignment/01-project/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>/assignment/01-project/</guid>
+      <description>
+&lt;link href=&#34;./rmarkdown-libs/anchor-sections/anchor-sections.css&#34; rel=&#34;stylesheet&#34; /&gt;
+&lt;script src=&#34;./rmarkdown-libs/anchor-sections/anchor-sections.js&#34;&gt;&lt;/script&gt;
+
+
+&lt;div id=&#34;task&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;Task&lt;/h1&gt;
 &lt;/div&gt;
 </description>
     </item>
@@ -222,190 +148,7 @@
 &lt;script src=&#34;./rmarkdown-libs/anchor-sections/anchor-sections.js&#34;&gt;&lt;/script&gt;
 
 
-&lt;div id=&#34;course-packet&#34; class=&#34;section level1&#34;&gt;
-&lt;h1&gt;Course Packet&lt;/h1&gt;
-&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;my_packages &amp;lt;- c(&amp;quot;tidyverse&amp;quot;, &amp;quot;fs&amp;quot;, &amp;quot;devtools&amp;quot;)
-install.packages(my_packages)
 
-devtools::install_github(&amp;quot;kjhealy/socviz&amp;quot;)&lt;/code&gt;&lt;/pre&gt;
-&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;library(tidyverse)&lt;/code&gt;&lt;/pre&gt;
-&lt;pre&gt;&lt;code&gt;## ── Attaching packages ─────────────────────────────────────── tidyverse 1.3.0 ──&lt;/code&gt;&lt;/pre&gt;
-&lt;pre&gt;&lt;code&gt;## ✔ ggplot2 3.3.2     ✔ purrr   0.3.4
-## ✔ tibble  3.0.3     ✔ dplyr   0.8.5
-## ✔ tidyr   1.0.3     ✔ stringr 1.4.0
-## ✔ readr   1.3.1     ✔ forcats 0.5.0&lt;/code&gt;&lt;/pre&gt;
-&lt;pre&gt;&lt;code&gt;## ── Conflicts ────────────────────────────────────────── tidyverse_conflicts() ──
-## ✖ dplyr::filter() masks stats::filter()
-## ✖ dplyr::lag()    masks stats::lag()&lt;/code&gt;&lt;/pre&gt;
-&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;library(socviz)&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;To extract the course packet to your desktop:&lt;/p&gt;
-&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;setup_course_notes()&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-&lt;div id=&#34;first-steps&#34; class=&#34;section level1&#34;&gt;
-&lt;h1&gt;First steps&lt;/h1&gt;
-&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;library(gapminder)
-
-gapminder&lt;/code&gt;&lt;/pre&gt;
-&lt;pre&gt;&lt;code&gt;## # A tibble: 1,704 x 6
-##    country     continent  year lifeExp      pop gdpPercap
-##    &amp;lt;fct&amp;gt;       &amp;lt;fct&amp;gt;     &amp;lt;int&amp;gt;   &amp;lt;dbl&amp;gt;    &amp;lt;int&amp;gt;     &amp;lt;dbl&amp;gt;
-##  1 Afghanistan Asia       1952    28.8  8425333      779.
-##  2 Afghanistan Asia       1957    30.3  9240934      821.
-##  3 Afghanistan Asia       1962    32.0 10267083      853.
-##  4 Afghanistan Asia       1967    34.0 11537966      836.
-##  5 Afghanistan Asia       1972    36.1 13079460      740.
-##  6 Afghanistan Asia       1977    38.4 14880372      786.
-##  7 Afghanistan Asia       1982    39.9 12881816      978.
-##  8 Afghanistan Asia       1987    40.8 13867957      852.
-##  9 Afghanistan Asia       1992    41.7 16317921      649.
-## 10 Afghanistan Asia       1997    41.8 22227415      635.
-## # … with 1,694 more rows&lt;/code&gt;&lt;/pre&gt;
-&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;p &amp;lt;- ggplot(data = gapminder,
-            mapping = aes(x = gdpPercap,
-                          y = lifeExp))
-
-p&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src=&#34;./assignment/01-code_files/figure-html/unnamed-chunk-2-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
-&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;p + geom_point()&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src=&#34;./assignment/01-code_files/figure-html/ch-03-fig-lexp-gdp-01-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
-&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;p &amp;lt;- ggplot(data = gapminder,
-            mapping = aes(x = gdpPercap,
-                          y=lifeExp))
-p + geom_smooth()&lt;/code&gt;&lt;/pre&gt;
-&lt;pre&gt;&lt;code&gt;## `geom_smooth()` using method = &amp;#39;gam&amp;#39; and formula &amp;#39;y ~ s(x, bs = &amp;quot;cs&amp;quot;)&amp;#39;&lt;/code&gt;&lt;/pre&gt;
-&lt;div class=&#34;figure&#34;&gt;&lt;span id=&#34;fig:ch-03-fig-lexp-gdp-02&#34;&gt;&lt;/span&gt;
-&lt;img src=&#34;./assignment/01-code_files/figure-html/ch-03-fig-lexp-gdp-02-1.png&#34; alt=&#34;Life Expectancy vs GDP, using a smoother.&#34; width=&#34;672&#34; /&gt;
-&lt;p class=&#34;caption&#34;&gt;
-Figure 1: Life Expectancy vs GDP, using a smoother.
-&lt;/p&gt;
-&lt;/div&gt;
-&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;p &amp;lt;- ggplot(data = gapminder,
-            mapping = aes(x = gdpPercap,
-                          y=lifeExp))
-p + geom_point() + geom_smooth(method = &amp;quot;lm&amp;quot;)&lt;/code&gt;&lt;/pre&gt;
-&lt;pre&gt;&lt;code&gt;## `geom_smooth()` using formula &amp;#39;y ~ x&amp;#39;&lt;/code&gt;&lt;/pre&gt;
-&lt;div class=&#34;figure&#34;&gt;&lt;span id=&#34;fig:ch-03-fig-lexp-gdp-04&#34;&gt;&lt;/span&gt;
-&lt;img src=&#34;./assignment/01-code_files/figure-html/ch-03-fig-lexp-gdp-04-1.png&#34; alt=&#34;Life Expectancy vs GDP, points and an ill-advised linear fit.&#34; width=&#34;100%&#34; /&gt;
-&lt;p class=&#34;caption&#34;&gt;
-Figure 2: Life Expectancy vs GDP, points and an ill-advised linear fit.
-&lt;/p&gt;
-&lt;/div&gt;
-&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;p &amp;lt;- ggplot(data = gapminder,
-            mapping = aes(x = gdpPercap,
-                          y=lifeExp))
-p + geom_point() +
-    geom_smooth(method = &amp;quot;gam&amp;quot;) +
-    scale_x_log10()&lt;/code&gt;&lt;/pre&gt;
-&lt;pre&gt;&lt;code&gt;## `geom_smooth()` using formula &amp;#39;y ~ s(x, bs = &amp;quot;cs&amp;quot;)&amp;#39;&lt;/code&gt;&lt;/pre&gt;
-&lt;div class=&#34;figure&#34;&gt;&lt;span id=&#34;fig:ch-03-fig-lexp-gdp-05&#34;&gt;&lt;/span&gt;
-&lt;img src=&#34;./assignment/01-code_files/figure-html/ch-03-fig-lexp-gdp-05-1.png&#34; alt=&#34;Life Expectancy vs GDP scatterplot, with a GAM smoother and a log scale on the x-axis.&#34; width=&#34;100%&#34; /&gt;
-&lt;p class=&#34;caption&#34;&gt;
-Figure 3: Life Expectancy vs GDP scatterplot, with a GAM smoother and a log scale on the x-axis.
-&lt;/p&gt;
-&lt;/div&gt;
-&lt;div id=&#34;mapping-aesthetics-vs-setting-them&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;Mapping aesthetics vs setting them&lt;/h2&gt;
-&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;p &amp;lt;- ggplot(data = gapminder,
-            mapping = aes(x = gdpPercap,
-                          y = lifeExp,
-                          color = &amp;quot;purple&amp;quot;))
-p + geom_point() +
-    geom_smooth(method = &amp;quot;loess&amp;quot;) +
-    scale_x_log10()&lt;/code&gt;&lt;/pre&gt;
-&lt;pre&gt;&lt;code&gt;## `geom_smooth()` using formula &amp;#39;y ~ x&amp;#39;&lt;/code&gt;&lt;/pre&gt;
-&lt;div class=&#34;figure&#34;&gt;&lt;span id=&#34;fig:ch-03-fig-lexp-gdp-07&#34;&gt;&lt;/span&gt;
-&lt;img src=&#34;./assignment/01-code_files/figure-html/ch-03-fig-lexp-gdp-07-1.png&#34; alt=&#34;What has gone wrong here?&#34; width=&#34;768&#34; /&gt;
-&lt;p class=&#34;caption&#34;&gt;
-Figure 4: What has gone wrong here?
-&lt;/p&gt;
-&lt;/div&gt;
-&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;p &amp;lt;- ggplot(data = gapminder,
-            mapping = aes(x = gdpPercap,
-                          y = lifeExp))
-p + geom_point(color = &amp;quot;purple&amp;quot;) +
-    geom_smooth(method = &amp;quot;loess&amp;quot;) +
-    scale_x_log10()&lt;/code&gt;&lt;/pre&gt;
-&lt;pre&gt;&lt;code&gt;## `geom_smooth()` using formula &amp;#39;y ~ x&amp;#39;&lt;/code&gt;&lt;/pre&gt;
-&lt;div class=&#34;figure&#34;&gt;&lt;span id=&#34;fig:ch-03-fig-lexp-gdp-08&#34;&gt;&lt;/span&gt;
-&lt;img src=&#34;./assignment/01-code_files/figure-html/ch-03-fig-lexp-gdp-08-1.png&#34; alt=&#34;Setting the color attribute of the points directly.&#34; width=&#34;100%&#34; /&gt;
-&lt;p class=&#34;caption&#34;&gt;
-Figure 5: Setting the color attribute of the points directly.
-&lt;/p&gt;
-&lt;/div&gt;
-&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;p &amp;lt;- ggplot(data = gapminder, mapping = aes(x = gdpPercap, y=lifeExp))
-p + geom_point(alpha = 0.3) + geom_smooth(method = &amp;quot;gam&amp;quot;) +
-    scale_x_log10(labels = scales::dollar) +
-    labs(x = &amp;quot;GDP Per Capita&amp;quot;, y = &amp;quot;Life Expectancy in Years&amp;quot;,
-         title = &amp;quot;Economic Growth and Life Expectancy&amp;quot;,
-         subtitle = &amp;quot;Data points are country-years&amp;quot;,
-         caption = &amp;quot;Source: Gapminder.&amp;quot;)&lt;/code&gt;&lt;/pre&gt;
-&lt;pre&gt;&lt;code&gt;## `geom_smooth()` using formula &amp;#39;y ~ s(x, bs = &amp;quot;cs&amp;quot;)&amp;#39;&lt;/code&gt;&lt;/pre&gt;
-&lt;div class=&#34;figure&#34;&gt;&lt;span id=&#34;fig:ch-03-fig-lexp-gdp-10&#34;&gt;&lt;/span&gt;
-&lt;img src=&#34;./assignment/01-code_files/figure-html/ch-03-fig-lexp-gdp-10-1.png&#34; alt=&#34;A more polished plot of Life Expectancy vs GDP.&#34; width=&#34;100%&#34; /&gt;
-&lt;p class=&#34;caption&#34;&gt;
-Figure 6: A more polished plot of Life Expectancy vs GDP.
-&lt;/p&gt;
-&lt;/div&gt;
-&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;p &amp;lt;- ggplot(data = gapminder,
-            mapping = aes(x = gdpPercap,
-                          y = lifeExp,
-                          color = continent))
-p + geom_point() +
-    geom_smooth(method = &amp;quot;loess&amp;quot;) +
-    scale_x_log10()&lt;/code&gt;&lt;/pre&gt;
-&lt;pre&gt;&lt;code&gt;## `geom_smooth()` using formula &amp;#39;y ~ x&amp;#39;&lt;/code&gt;&lt;/pre&gt;
-&lt;div class=&#34;figure&#34;&gt;&lt;span id=&#34;fig:ch-03-fig-lexp-gdp-11&#34;&gt;&lt;/span&gt;
-&lt;img src=&#34;./assignment/01-code_files/figure-html/ch-03-fig-lexp-gdp-11-1.png&#34; alt=&#34;Mapping the continent variable to the color aesthetic.&#34; width=&#34;100%&#34; /&gt;
-&lt;p class=&#34;caption&#34;&gt;
-Figure 7: Mapping the continent variable to the color aesthetic.
-&lt;/p&gt;
-&lt;/div&gt;
-&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;p &amp;lt;- ggplot(data = gapminder,
-            mapping = aes(x = gdpPercap,
-                          y = lifeExp,
-                          color = continent,
-                          fill = continent))
-p + geom_point() +
-    geom_smooth(method = &amp;quot;loess&amp;quot;) +
-    scale_x_log10()&lt;/code&gt;&lt;/pre&gt;
-&lt;pre&gt;&lt;code&gt;## `geom_smooth()` using formula &amp;#39;y ~ x&amp;#39;&lt;/code&gt;&lt;/pre&gt;
-&lt;div class=&#34;figure&#34;&gt;&lt;span id=&#34;fig:ch-03-fig-lexp-gdp-12&#34;&gt;&lt;/span&gt;
-&lt;img src=&#34;./assignment/01-code_files/figure-html/ch-03-fig-lexp-gdp-12-1.png&#34; alt=&#34;Mapping the continent variable to the color aesthetic, and correcting the error bars using the fill aesthetic.&#34; width=&#34;100%&#34; /&gt;
-&lt;p class=&#34;caption&#34;&gt;
-Figure 8: Mapping the continent variable to the color aesthetic, and correcting the error bars using the fill aesthetic.
-&lt;/p&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;div id=&#34;aesthetics-can-be-mapped-per-geom&#34; class=&#34;section level1&#34;&gt;
-&lt;h1&gt;Aesthetics can be mapped per geom&lt;/h1&gt;
-&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;p &amp;lt;- ggplot(data = gapminder, mapping = aes(x = gdpPercap, y = lifeExp))
-p + geom_point(mapping = aes(color = continent)) + geom_smooth(method = &amp;quot;loess&amp;quot;) +
-    scale_x_log10()&lt;/code&gt;&lt;/pre&gt;
-&lt;pre&gt;&lt;code&gt;## `geom_smooth()` using formula &amp;#39;y ~ x&amp;#39;&lt;/code&gt;&lt;/pre&gt;
-&lt;div class=&#34;figure&#34;&gt;&lt;span id=&#34;fig:ch-03-fig-lexp-gdp-13&#34;&gt;&lt;/span&gt;
-&lt;img src=&#34;./assignment/01-code_files/figure-html/ch-03-fig-lexp-gdp-13-1.png&#34; alt=&#34;Mapping aesthetics on a per-geom basis. Here color is mapped to continent for the points but not the smoother.&#34; width=&#34;100%&#34; /&gt;
-&lt;p class=&#34;caption&#34;&gt;
-Figure 9: Mapping aesthetics on a per-geom basis. Here color is mapped to continent for the points but not the smoother.
-&lt;/p&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>Midterm Prjoect</title>
-      <link>/assignment/01-project/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>/assignment/01-project/</guid>
-      <description>
-&lt;link href=&#34;./rmarkdown-libs/anchor-sections/anchor-sections.css&#34; rel=&#34;stylesheet&#34; /&gt;
-&lt;script src=&#34;./rmarkdown-libs/anchor-sections/anchor-sections.js&#34;&gt;&lt;/script&gt;
-
-
-&lt;div id=&#34;task&#34; class=&#34;section level1&#34;&gt;
-&lt;h1&gt;Task&lt;/h1&gt;
-&lt;/div&gt;
 </description>
     </item>
     
@@ -563,16 +306,11 @@ Figure 9: Mapping aesthetics on a per-geom basis. Here color is mapped to contin
 
 &lt;div id=&#34;overview&#34; class=&#34;section level2&#34;&gt;
 &lt;h2&gt;Overview&lt;/h2&gt;
-&lt;p&gt;In modern data analysis, graphics and computational statistics are increasingly used together to explore and identify complex patterns in data and to make and communicate claims under uncertainty. This course will go beyond traditional ideas of charts, graphs, maps (and also statistics!) to equip you with the critical analysis, design and technical skills to analyse and communicate with social science datasets.&lt;/p&gt;
+&lt;p&gt;In modern data analysis, graphics and computational statistics are increasingly used together to explore and identify complex patterns in data and to make and communicate claims under uncertainty. This course will go beyond traditional ideas of charts, graphs, maps (and also statistics!) to equip you with the critical analysis, design and technical skills to analyse and communicate with geographic datasets.&lt;/p&gt;
 &lt;p&gt;The course emphasises real-world applications. You will work with both new, large-scale behavioural datasets, as well as more traditional, administrative datasets located within various social science domains: Political Science, Crime Science, Urban and Transport Planning. As well as learning how to use graphics and statistics to explore patterns in these data, implementing recent ideas from data journalism you will learn how to communicate research findings – how to tell stories with data.&lt;/p&gt;
 &lt;/div&gt;
 &lt;div id=&#34;course-objectives&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;Course objectives&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;p&gt;explore, analyse and communicate structure in geospatial datasets using visualization.&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;introduces key theory from research in cognitive science, computer science and GIS and demonstrates how this can been applied in a data analysis&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;Emphasis is placed on modern datasets and data analysis environments: students will develop an understanding of functional programming concepts, computational statistics and reproducible methods&lt;/p&gt;&lt;/li&gt;
-&lt;/ul&gt;
+&lt;h2&gt;Course Objectives&lt;/h2&gt;
 &lt;p&gt;By the end of the course you will&lt;/p&gt;
 &lt;ol style=&#34;list-style-type: decimal&#34;&gt;
 &lt;li&gt;Describe, process and combine geographic datasets from a range of sources&lt;/li&gt;
@@ -581,65 +319,40 @@ Figure 9: Mapping aesthetics on a per-geom basis. Here color is mapped to contin
 &lt;li&gt;Apply modern statistical techniques for analysing, representing and communicating data and model uncertainty&lt;/li&gt;
 &lt;/ol&gt;
 &lt;/div&gt;
-&lt;div id=&#34;core-texts&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;Core Texts&lt;/h2&gt;
-&lt;p&gt;I strongly recommend (but do not require) you buy two books:&lt;/p&gt;
+&lt;div id=&#34;resources&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Resources&lt;/h2&gt;
+&lt;div id=&#34;primers&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Primers&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;span class=&#34;citation&#34;&gt;Kieran Healy, &lt;em&gt;Data Visualization: A Practical Introduction&lt;/em&gt; (Princeton: Princeton University Press, &lt;a href=&#34;#ref-Healy:2019&#34;&gt;2019&lt;/a&gt;), &lt;a href=&#34;http://socviz.co/&#34; class=&#34;uri&#34;&gt;http://socviz.co/&lt;/a&gt;.&lt;/span&gt; [Draft version free online; print version at &lt;a href=&#34;https://amzn.to/2vfAixM&#34;&gt;Amazon&lt;/a&gt; and all good bookshops.]&lt;/li&gt;
-&lt;li&gt;&lt;span class=&#34;citation&#34;&gt;Hadley Wickham and Garrett Grolemund, &lt;em&gt;R for Data Science: Import, Tidy, Transform, Visualize, and Model Data&lt;/em&gt; (Sebastopol, California: O’Reilly Media, &lt;a href=&#34;#ref-WickhamGrolemund:2017&#34;&gt;2017&lt;/a&gt;), &lt;a href=&#34;http://r4ds.had.co.nz/&#34; class=&#34;uri&#34;&gt;http://r4ds.had.co.nz/&lt;/a&gt;.&lt;/span&gt; [Free online; print version at &lt;a href=&#34;https://www.amazon.com/R-Data-Science-Hadley-Wickham/dp/1491910399/&#34;&gt;Amazon&lt;/a&gt; and all good bookshops.]&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;You should also be aware of:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;span class=&#34;citation&#34;&gt;Claus E. Wilke, &lt;em&gt;Fundamentals of Data Visualization&lt;/em&gt; (Sebastopol, California: O’Reilly Media, &lt;a href=&#34;#ref-Wilke:2019&#34;&gt;2019&lt;/a&gt;), &lt;a href=&#34;https://serialmentor.com/dataviz/&#34; class=&#34;uri&#34;&gt;https://serialmentor.com/dataviz/&lt;/a&gt;.&lt;/span&gt; [Draft version free online; print version at &lt;a href=&#34;https://www.amazon.com/Fundamentals-Data-Visualization-Informative-Compelling/dp/1492031089&#34;&gt;Amazon&lt;/a&gt;]&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/div&gt;
-&lt;div id=&#34;other-material&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;Other Material&lt;/h2&gt;
-&lt;p&gt;We may also read other material as we go. I will make it available to you beforehand. It will include material from the following books, amongst other sources:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;span class=&#34;citation&#34;&gt;Whitney Battle-Baptiste and Britt Rusert, &lt;em&gt;W. E. B. Du Bois’s Data Portraits: Visualizing Black America&lt;/em&gt; (New York: Princeton Architectural Press, &lt;a href=&#34;#ref-battle-baptiste18:_w&#34;&gt;2018&lt;/a&gt;).&lt;/span&gt;&lt;/li&gt;
-&lt;li&gt;&lt;span class=&#34;citation&#34;&gt;Scott Berinato, &lt;em&gt;Good Charts: The HBR Guide to Making Smarter, More Persuasive Data Visualizations&lt;/em&gt; (Cambridge, MA: Harvard Business Review Press, &lt;a href=&#34;#ref-berinato16:_good_chart&#34;&gt;2016&lt;/a&gt;).&lt;/span&gt;&lt;/li&gt;
-&lt;li&gt;&lt;span class=&#34;citation&#34;&gt;Alberto Cairo, &lt;em&gt;The Truthful Art: Data, Charts, and Maps for Communication&lt;/em&gt; (Berkeley, California: New Riders, &lt;a href=&#34;#ref-cairo16:_truth_art&#34;&gt;2016&lt;/a&gt;).&lt;/span&gt;&lt;/li&gt;
-&lt;li&gt;&lt;span class=&#34;citation&#34;&gt;William S. Cleveland, &lt;em&gt;Visualizing Data&lt;/em&gt; (Hobart Press, &lt;a href=&#34;#ref-cleveland1994&#34;&gt;1994&lt;/a&gt;).&lt;/span&gt;&lt;/li&gt;
-&lt;li&gt;&lt;span class=&#34;citation&#34;&gt;Stephen Few, &lt;em&gt;Now You See It: Simple Visualization Techniques for Quantitative Analysis&lt;/em&gt; (Oakland, CA: Analytics Press, &lt;a href=&#34;#ref-few09:_now_you_see_it&#34;&gt;2009&lt;/a&gt;).&lt;/span&gt;&lt;/li&gt;
-&lt;li&gt;&lt;span class=&#34;citation&#34;&gt;Ellen Lupton, &lt;em&gt;Thinking with Type: A Critical Guide for Designers, Writers, Editors, &amp;amp; Students&lt;/em&gt;, Second. (New York: Princeton Architectural Press, &lt;a href=&#34;#ref-lupton10:_think_type&#34;&gt;2010&lt;/a&gt;).&lt;/span&gt;&lt;/li&gt;
-&lt;li&gt;&lt;span class=&#34;citation&#34;&gt;Tamara Munzer, &lt;em&gt;Visualization Analysis and Design&lt;/em&gt;, AK Peters Visualization Series (Boca Raton, FL: CRC Press, &lt;a href=&#34;#ref-munzer14:_visual_analy_desig&#34;&gt;2014&lt;/a&gt;).&lt;/span&gt;&lt;/li&gt;
-&lt;li&gt;&lt;span class=&#34;citation&#34;&gt;Edward R. Tufte, &lt;em&gt;The Visual Display of Quantitative Information&lt;/em&gt; (Cheshire, CT: Graphics Press, &lt;a href=&#34;#ref-tufte83:_visual_displ_quant_infor&#34;&gt;1983&lt;/a&gt;).&lt;/span&gt;&lt;/li&gt;
-&lt;li&gt;&lt;span class=&#34;citation&#34;&gt;Colin Ware, &lt;em&gt;Visual Thinking for Design&lt;/em&gt; (Waltham, MA: Morgan Kaufman, &lt;a href=&#34;#ref-ware08:_visual_think_desig&#34;&gt;2008&lt;/a&gt;).&lt;/span&gt;&lt;/li&gt;
-&lt;li&gt;&lt;span class=&#34;citation&#34;&gt;Nathan Yau, &lt;em&gt;Visualize This: The Flowingdata Guide to Design, Visualization, and Statistics&lt;/em&gt; (New York: Wiley, &lt;a href=&#34;#ref-yau11:_visual_this&#34;&gt;2011&lt;/a&gt;).&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;span class=&#34;citation&#34;&gt;Kieran Healy, &lt;em&gt;Data Visualization: A Practical Introduction&lt;/em&gt; (Princeton: Princeton University Press, &lt;a href=&#34;#ref-healy_data_2018&#34;&gt;2018&lt;/a&gt;), &lt;a href=&#34;http://socviz.co/&#34; class=&#34;uri&#34;&gt;http://socviz.co/&lt;/a&gt;.&lt;/span&gt;&lt;br /&gt;
+-- An engaging read that manages to integrate ggplot2 code with key Information Visualization theory and using real social science datasets.&lt;br /&gt;
+&lt;a href=&#34;https://socviz.co/&#34;&gt;Free online (draft version)&lt;/a&gt;.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;span class=&#34;citation&#34;&gt;Robin Lovelace, Jakub Nowosad, and Jannes Muenchow, &lt;em&gt;Geocomputation with R&lt;/em&gt; (London, UK: CRC Press, &lt;a href=&#34;#ref-lovelace_geocomputation_2019&#34;&gt;2019&lt;/a&gt;), &lt;a href=&#34;https://geocompr.robinlovelace.net&#34; class=&#34;uri&#34;&gt;https://geocompr.robinlovelace.net&lt;/a&gt;.&lt;/span&gt;&lt;br /&gt;
+-- This book comprehensively introduces spatial data handling in R. It is a great complement to R for Data Science in that it draws on brand new libraries that support &lt;code&gt;tidyverse-style&lt;/code&gt; operations on spatial data.&lt;br /&gt;
+&lt;a href=&#34;https://geocompr.robinlovelace.net/&#34;&gt;Free online&lt;/a&gt;.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;span class=&#34;citation&#34;&gt;Hadley Wickham and Garrett Grolemund, &lt;em&gt;R for Data Science: Import, Tidy, Transform, Visualize, and Model Data&lt;/em&gt; (Sebastopol, California: O’Reilly Media, &lt;a href=&#34;#ref-wickham_r_2017&#34;&gt;2017&lt;/a&gt;), &lt;a href=&#34;http://r4ds.had.co.nz/&#34; class=&#34;uri&#34;&gt;http://r4ds.had.co.nz/&lt;/a&gt;.&lt;/span&gt;&lt;br /&gt;
+-- &lt;em&gt;The&lt;/em&gt; primer for doing data analysis with R. Wickham and Grolemund present a thesis of the data science workflow and illustrates how R and packages that form the &lt;code&gt;tidyverse&lt;/code&gt; support this. It is both accessible and coherent and is highly recommended.&lt;br /&gt;
+&lt;a href=&#34;https://r4ds.had.co.nz/&#34;&gt;Free online&lt;/a&gt;.&lt;/p&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/div&gt;
-&lt;div id=&#34;software&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;Software&lt;/h2&gt;
-&lt;p&gt;We will do all of our visualization work in this class using &lt;a href=&#34;https://cran.r-project.org/&#34;&gt;R&lt;/a&gt;. We will use &lt;a href=&#34;https://www.rstudio.com/&#34;&gt;RStudio&lt;/a&gt; to manage our code and projects.&lt;/p&gt;
-&lt;p&gt;You will need to install some software first. Here is what to do:&lt;/p&gt;
-&lt;ol style=&#34;list-style-type: decimal&#34;&gt;
-&lt;li&gt;Get the most recent version of R. R is free and available for Windows, Mac, and Linux operating systems. &lt;a href=&#34;http://cloud.r-project.org&#34;&gt;Download&lt;/a&gt; the version of R compatible with your operating system. If you are running Windows or MacOS, you should choose one of the &lt;em&gt;precompiled binary&lt;/em&gt; distributions (i.e., ready-to-run applications) linked at the top of the R Project&#39;s webpage.&lt;/li&gt;
-&lt;li&gt;Once R is installed, &lt;a href=&#34;http://rstudio.com&#34;&gt;download and install R Studio&lt;/a&gt;. R Studio is an &amp;quot;Integrated Development Environment&amp;quot;, or IDE. This means it is a front-end for R that makes it much easier to work with. R Studio is also free, and available for Windows, Mac, and Linux platforms.&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;http://tidyverse.org&#34;&gt;Install the tidyverse library&lt;/a&gt; and several other add-on packages for R. These libraries provide useful functionality that we will take advantage of throughout the book. You can learn more about the tidyverse&#39;s family of packages at its website.&lt;/li&gt;
-&lt;/ol&gt;
-&lt;p&gt;To install the tidyverse, make sure you have an Internet connection and then launch R Studio. Type the following lines of code at R&#39;s command prompt, located in the window named &amp;quot;Console&amp;quot;, and hit return. In the code below, the &lt;code&gt;&amp;lt;-&lt;/code&gt; arrow is made up of two keystrokes, first &lt;code&gt;&amp;lt;&lt;/code&gt; and then the short dash or minus symbol, &lt;code&gt;-&lt;/code&gt;.&lt;/p&gt;
-&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;my_packages &amp;lt;- c(&amp;quot;tidyverse&amp;quot;, &amp;quot;broom&amp;quot;, &amp;quot;cowplot&amp;quot;, &amp;quot;drat&amp;quot;,
-                 &amp;quot;gapminder&amp;quot;, &amp;quot;GGally&amp;quot;, &amp;quot;ggforce&amp;quot;, &amp;quot;ggrepel&amp;quot;, &amp;quot;ggridges&amp;quot;, &amp;quot;gridExtra&amp;quot;,
-                 &amp;quot;here&amp;quot;, &amp;quot;interplot&amp;quot;, &amp;quot;margins&amp;quot;, &amp;quot;maps&amp;quot;, &amp;quot;mapproj&amp;quot;,
-                 &amp;quot;mapdata&amp;quot;, &amp;quot;MASS&amp;quot;, &amp;quot;quantreg&amp;quot;, &amp;quot;rlang&amp;quot;, &amp;quot;scales&amp;quot;,
-                 &amp;quot;survey&amp;quot;, &amp;quot;srvyr&amp;quot;, &amp;quot;devtools&amp;quot;)
-
-install.packages(my_packages, repos = &amp;quot;http://cran.rstudio.com&amp;quot;)&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;R Studio should then download and install these packages for you. It may take a little while to download everything.&lt;/p&gt;
-&lt;p&gt;With these packages available, you can then install one last library of material that&#39;s useful specifically for this course:&lt;/p&gt;
-&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;install.packages(&amp;quot;socviz&amp;quot;, repos = &amp;quot;http://cran.rstudio.com&amp;quot;)&lt;/code&gt;&lt;/pre&gt;
+&lt;div id=&#34;blogs&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Blogs&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;&lt;a href=&#34;http://flowingdata.com&#34;&gt;Flowingdata&lt;/a&gt;&lt;br /&gt;
+-- Nathan Yau, a former statistics PhD from UCLA, has maintained a data vis blog and online training materials for some time. Numerous excellent examples, on the most part implemented in R and &lt;code&gt;ggplot2&lt;/code&gt;.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;a href=&#34;https://medium.com/multiple-views-visualization-research-explained&#34;&gt;Multiple Views&lt;/a&gt;&lt;br /&gt;
+-- Blog series by leading visualization researchers and practitioners.&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
 &lt;/div&gt;
-&lt;div id=&#34;schedule&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;Schedule&lt;/h2&gt;
-&lt;table class=&#34;table schedule&#34; style=&#34;max-width:100%&#34;&gt;
-    &lt;tbody&gt;
-
-    &lt;/tbody&gt;
-
-&lt;/table&gt;
-
-&lt;p&gt;As the weeks go by, consult the &lt;a href=&#34;./schedule/&#34;&gt;Schedule Page&lt;/a&gt; for more information on weekly topics, problem sets, readings, and other materials. The schedule is likely to change as we go. Links to readings, assignments, and other materials from class will be posted on that page.&lt;/p&gt;
+&lt;div id=&#34;conferences&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Conferences&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;&lt;a href=&#34;http://ieeevis.org/&#34;&gt;IEEE VIS&lt;/a&gt;&lt;br /&gt;
+-- &lt;em&gt;The&lt;/em&gt; conference at which leading Data Visualization work is published through a special issue of &lt;a href=&#34;https://ieeexplore.ieee.org/xpl/RecentIssue.jsp?punumber=2945&#34;&gt;Transactions on Visualization &amp;amp; Computer Graphics&lt;/a&gt;.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;a href=&#34;http://www.openvisconf.com&#34;&gt;OpenVis Conf&lt;/a&gt;&lt;br /&gt;
+-- New, exciting conference (though last one was in 2018!). Presenters are academics and practitioners. Videos of talks from previous conferences are published online. From the 2018 conference, I&#39;d recommend Matt Kay&#39;s on &lt;a href=&#34;https://www.youtube.com/watch?v=vqzO-9LSoG4&amp;amp;feature=youtu.be&#34;&gt;Uncertainty Visualization&lt;/a&gt;, Maarten Lambrechts&#39; &lt;a href=&#34;https://www.youtube.com/watch?v=fp-WNqaQG0s&amp;amp;feature=youtu.be&#34;&gt;Xenographics&lt;/a&gt; and Heather Krause&#39;s &lt;a href=&#34;https://www.youtube.com/watch?v=uw1Tag08dK4&amp;amp;feature=youtu.be&#34;&gt;F-Word&lt;/a&gt;.&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
 &lt;/div&gt;
 </description>
     </item>
