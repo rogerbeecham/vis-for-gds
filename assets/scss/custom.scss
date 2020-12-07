@@ -116,3 +116,65 @@ td.mid-table-header {
     text-align: center;
     vertical-align: middle !important;
 }
+
+
+
+.article-style aside p,
+div.alert > div {
+  position: relative;
+  display: block;
+  font-size: 0.9rem;
+  margin-left: 1.7rem;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+
+.article-style aside p::before,
+div.alert > div:first-child::before {
+  position: absolute;
+  top: -0.3rem;
+  left: -2rem;
+  font-size: 1.4rem;
+  color: #c62828;
+  font-weight: 900;
+  content: '\f05a';
+  width: 1rem;
+  text-align: left;
+}
+
+
+.article-style aside p::before,
+div.alert-objective > div:first-child::before {
+  position: absolute;
+  top: -0.3rem;
+  left: -1rem;
+  // font-size: 1.4rem;
+  color: #424242;
+  font-weight: 900;
+  content: '\f13a';
+  width: 1rem;
+  text-align: left;
+}
+
+
+
+/* You can edit the borders and backgrounds here */
+.article-style aside,
+.alert-note {
+  color: #1b1b1b;
+  background-color: #F7F7F7;
+  border-color: #8e0000;
+}
+
+.alert-warning {
+  color: #1b1b1b;
+  background-color: #fff5f7;
+  border-color: #8e0000;
+}
+
+.alert-objective {
+  color: #1b1b1b;
+  background-color: #F7F7F7;
+  border-color:  #424242;
+}

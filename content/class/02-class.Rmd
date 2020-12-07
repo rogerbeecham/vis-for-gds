@@ -1,8 +1,8 @@
 ---
 title: "Tidy spatial data and data wrangling"
 linktitle: "2: Tidy data"
-date: "2020-01-16"
-class_date: "2020-01-16"
+date: "2021-05-18"
+class_date: "2021-05-18"
 citeproc: false
 bibliography: ../../static/bib/references.bib
 csl: ../../static/bib/chicago-syllabus-no-bib.csl
@@ -12,7 +12,7 @@ output:
     toc: true
 menu:
   class:
-    parent: Class sessions
+    parent: Class 
     weight: 1
 type: docs
 weight: 1

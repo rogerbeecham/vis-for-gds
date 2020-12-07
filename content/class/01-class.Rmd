@@ -1,9 +1,9 @@
 ---
-title: "Introduction to Visualization for GDS"
-linktitle: "Introduction"
-date: "2020-01-10"
-class_date: "2020-01-10"
-citeproc: false
+title: "Introduction: Vis for GDS"
+linktitle: "1: Introduction"
+date: "2021-05-11"
+class_date: "2021-05-11"
+citeproc: true
 bibliography: ../../static/bib/references.bib
 csl: ../../static/bib/chicago-syllabus-no-bib.csl
 output:
@@ -12,10 +12,59 @@ output:
     toc: true
 menu:
   class:
-    parent: Class sessions
+    parent: Class
     weight: 1
 type: docs
 weight: 1
 editor_options:
   chunk_output_type: console
 ---
+
+## Session outcomes
+
+
+By the end of this session you should gain the following **_knowledge_**:
+
+{{% alert objective %}}
+- [x] **Appreciate** the motivation for this module -- why visualization, why R and why ggplot2
+- [x] Have an **awareness** of the challenges in modern data analysis
+{{% /alert %}}
+
+By the end of this session you should gain the following **_practical skills_**:
+
+{{% alert objective %}}
+- [x] Navigate the materials on this course website, having familiarised yourself with its structure
+- [x] Open R using the RStudio Integrated Developer Environment (IDE)
+- [x] Install and enable R libraries and query library documentation
+- [x]  Perform basic tasks via the R Console
+- [x] Read-in datasets from external resources as objects (specifically `tibbles`)
+{{% /alert %}}
+
+
+## Welcome to _Visualization for Geographic Data Science_
+
+* start with quotes
+* restate outcomes
+
+### Why Visualization?
+
+### Why R, RStudio and ggplot2?
+
+
+## Our expectations
+
+### Navigating the materials
+
+
+### Self-guided learning
+
+### Slack
+
+## Getting started with R and RStudio
+
+
+## Reading
+
+- [@arribas_geography_2018]
+- [@lovelace_geocomputation_2019]
+- [@healy_data_2018]

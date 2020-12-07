@@ -58,6 +58,9 @@ By the end of the course you will
 - [Flowingdata](http://flowingdata.com) \
 -- Nathan Yau, a former statistics PhD from UCLA, has maintained a data vis blog and online training materials for some time. Numerous excellent examples, on the most part implemented in R and `ggplot2`.
 
+- [giCentre](https://www.gicentre.net)  \
+-- World-leading group researching and developing geovisualization. Check out recent work on [litvis](https://www.gicentre.net/software#/litvis-1/) and [elm-vega](https://www.gicentre.net/elmvegalite/).
+
 - [Multiple Views](https://medium.com/multiple-views-visualization-research-explained) \
 -- Blog series by leading visualization researchers and practitioners.
 

@@ -11,9 +11,20 @@ main:
   - name: Class
     url: /class/
     weight: 4
-  - name: Reference
-    url: /reference/
+  - name: Homework
+    url: /homework/
     weight: 5
-  - name: RStudio.cloud
-    url: https://rstudio.cloud/
+  - name: Useful
+    url: /useful/
     weight: 6
+  - name: "<i class=\"fab fa-slack\"></i>"
+    url: https://slack.com/intl/en-gb/
+    weight: 7
+
+class:
+  - name: Overview
+    weight: 1
+
+homework:
+  - name: Overview
+    weight: 1

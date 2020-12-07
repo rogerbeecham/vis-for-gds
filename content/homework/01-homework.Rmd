@@ -1,0 +1,23 @@
+---
+title: "Inroduction"
+linktitle: "1: Introduction"
+date: "2020-02-06"
+class_date: "2020-02-06"
+citeproc: false
+bibliography: ../../static/bib/references.bib
+csl: ../../static/bib/chicago-syllabus-no-bib.csl
+output:
+  blogdown::html_page:
+    template: ../../pandoc/toc-title_html.template
+    toc: true
+menu:
+  homework:
+    parent: Homework
+    weight: 1
+type: docs
+weight: 1
+editor_options:
+  chunk_output_type: console
+---
+
+## Download and Configure

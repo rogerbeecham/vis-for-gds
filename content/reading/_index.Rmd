@@ -7,3 +7,5 @@ menu:
 type: docs
 weight: 1
 ---
+
+The reading for each session is posted here. Work your way through the links on the left to locate the reading associated with each session.

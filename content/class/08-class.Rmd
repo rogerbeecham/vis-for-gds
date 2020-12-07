@@ -1,0 +1,21 @@
+---
+title: "Sharing your work: github and the reproducibility agenda"
+linktitle: "8: Sharing your work"
+date: "2021-06-29"
+class_date: "2021-06-29"
+citeproc: false
+bibliography: ../../static/bib/references.bib
+csl: ../../static/bib/chicago-syllabus-no-bib.csl
+output:
+  blogdown::html_page:
+    template: ../../pandoc/toc-title_html.template
+    toc: true
+menu:
+  class:
+    parent: Class
+    weight: 1
+type: docs
+weight: 1
+editor_options:
+  chunk_output_type: console
+---

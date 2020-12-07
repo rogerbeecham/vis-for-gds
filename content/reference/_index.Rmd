@@ -1,7 +1,0 @@
----
-title: References
-slug: reference
-output:
-  blogdown::html_page:
-      toc: TRUE
----
