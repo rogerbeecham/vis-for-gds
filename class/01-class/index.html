@@ -33,7 +33,8 @@
   
     
   
-  <meta name="description" content="  ">
+  <meta name="description" content="Contents  Session outcomes Welcome to Visualization for Geographic Data Science Why Visualization? Why R, RStudio and ggplot2?  Our expectations Navigating the materials Self-guided learning Slack  Getting started with R and RStudio Reading   Session outcomes By the end of this session you should gain the following knowledge:
+  Appreciate the motivation for this module – why visualization, why R and why ggplot2 Have an awareness of the challenges in modern data analysis    By the end of this session you should gain the following practical skills:">
 
   
   <link rel="alternate" hreflang="en-us" href="../../class/01-class/">
@@ -254,12 +255,13 @@
   
   <meta property="og:site_name" content="Visualization for Geographic Data Science">
   <meta property="og:url" content="/class/01-class/">
-  <meta property="og:title" content="Introduction to Visualization for GDS | Visualization for Geographic Data Science">
-  <meta property="og:description" content="  "><meta property="og:image" content="/media/vis-for-gds.png">
+  <meta property="og:title" content="Introduction: Vis for GDS | Visualization for Geographic Data Science">
+  <meta property="og:description" content="Contents  Session outcomes Welcome to Visualization for Geographic Data Science Why Visualization? Why R, RStudio and ggplot2?  Our expectations Navigating the materials Self-guided learning Slack  Getting started with R and RStudio Reading   Session outcomes By the end of this session you should gain the following knowledge:
+  Appreciate the motivation for this module – why visualization, why R and why ggplot2 Have an awareness of the challenges in modern data analysis    By the end of this session you should gain the following practical skills:"><meta property="og:image" content="/media/vis-for-gds.png">
   <meta property="twitter:image" content="/media/vis-for-gds.png"><meta property="og:locale" content="en-us">
   
     
-      <meta property="article:published_time" content="2020-01-10T00:00:00&#43;00:00">
+      <meta property="article:published_time" content="2021-05-11T00:00:00&#43;00:00">
     
     <meta property="article:modified_time" content="2020-11-29T10:15:25&#43;00:00">
   
@@ -288,7 +290,7 @@
   <meta name="msapplication-TileImage" content="/img/mstile-144x144.png" />
 
 
-  <title>Introduction to Visualization for GDS | Visualization for Geographic Data Science</title>
+  <title>Introduction: Vis for GDS | Visualization for Geographic Data Science</title>
 
 </head>
 
@@ -475,7 +477,29 @@
         
 
         <li class="nav-item">
-          <a class="nav-link " href="../../reference/"><span>Reference</span></a>
+          <a class="nav-link " href="../../homework/"><span>Homework</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+        
+        
+        
+        
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="../../useful/"><span>Useful</span></a>
         </li>
 
         
@@ -499,7 +523,7 @@
         
 
         <li class="nav-item">
-          <a class="nav-link " href="https://rstudio.cloud/" target="_blank" rel="noopener"><span>RStudio.cloud</span></a>
+          <a class="nav-link " href="https://slack.com/intl/en-gb/" target="_blank" rel="noopener"><span><i class="fab fa-slack"></i></span></a>
         </li>
 
         
@@ -559,8 +583,25 @@
   
   
   <div class="docs-toc-item">
-    <a class="docs-toc-link" href="../../class/02-class/">Class sessions</a>
+    <a class="docs-toc-link" href="../../class/">Overview</a>
     <ul class="nav docs-sidenav">
+      
+      <li >
+        <a href="../../class/">Class sessions</a>
+      </li>
+      
+    </ul>
+    
+
+  </div>
+  
+  <div class="docs-toc-item">
+    <a class="docs-toc-link" href="../../class/01-class/">Class</a>
+    <ul class="nav docs-sidenav">
+      
+      <li class="active">
+        <a href="../../class/01-class/">1: Introduction</a>
+      </li>
       
       <li >
         <a href="../../class/02-class/">2: Tidy data</a>
@@ -575,11 +616,19 @@
       </li>
       
       <li >
-        <a href="../../class/05-class/">5: Uncertainty visualization</a>
+        <a href="../../class/05-class/">5: Exploratory visual data analysis of geospatial data</a>
       </li>
       
-      <li class="active">
-        <a href="../../class/01-class/">Introduction</a>
+      <li >
+        <a href="../../class/06-class/">6: Uncertainty visualization</a>
+      </li>
+      
+      <li >
+        <a href="../../class/07-class/">7: Storytelling in visual data analysis</a>
+      </li>
+      
+      <li >
+        <a href="../../class/08-class/">8: Sharing your work</a>
       </li>
       
     </ul>
@@ -599,7 +648,7 @@
             <article class="article">
 
                 <div class="docs-article-container">
-                    <h1>Introduction to Visualization for GDS</h1>
+                    <h1>Introduction: Vis for GDS</h1>
 
                     
 
@@ -607,7 +656,7 @@
 
                     
                     <div class="due-date p-2 mb-3 bg-secondary text-white">
-                        Materials from class on Friday, January 10, 2020
+                        Materials from class on Tuesday, May 11, 2021
                     </div>
                     
 
@@ -618,8 +667,88 @@
 <script src="../../rmarkdown-libs/anchor-sections/anchor-sections.js"></script>
 <!-- /BLOGDOWN-HEAD -->
 
+<h2>Contents</h2>
+<div id="TOC">
+<ul>
+<li><a href="#session-outcomes">Session outcomes</a></li>
+<li><a href="#welcome-to-visualization-for-geographic-data-science">Welcome to <em>Visualization for Geographic Data Science</em></a><ul>
+<li><a href="#why-visualization">Why Visualization?</a></li>
+<li><a href="#why-r-rstudio-and-ggplot2">Why R, RStudio and ggplot2?</a></li>
+</ul></li>
+<li><a href="#our-expectations">Our expectations</a><ul>
+<li><a href="#navigating-the-materials">Navigating the materials</a></li>
+<li><a href="#self-guided-learning">Self-guided learning</a></li>
+<li><a href="#slack">Slack</a></li>
+</ul></li>
+<li><a href="#getting-started-with-r-and-rstudio">Getting started with R and RStudio</a></li>
+<li><a href="#reading">Reading</a></li>
+</ul>
+</div>
 
+<div id="session-outcomes" class="section level2">
+<h2>Session outcomes</h2>
+<p>By the end of this session you should gain the following <strong><em>knowledge</em></strong>:</p>
+<p><div class="alert alert-objective">
+  <div>
+    <ul>
+<li><input checked="" disabled="" type="checkbox"> <strong>Appreciate</strong> the motivation for this module – why visualization, why R and why ggplot2</li>
+<li><input checked="" disabled="" type="checkbox"> Have an <strong>awareness</strong> of the challenges in modern data analysis</li>
+</ul>
 
+  </div>
+</div>
+</p>
+<p>By the end of this session you should gain the following <strong><em>practical skills</em></strong>:</p>
+<p><div class="alert alert-objective">
+  <div>
+    <ul>
+<li><input checked="" disabled="" type="checkbox"> Navigate the materials on this course website, having familiarised yourself with its structure</li>
+<li><input checked="" disabled="" type="checkbox"> Open R using the RStudio Integrated Developer Environment (IDE)</li>
+<li><input checked="" disabled="" type="checkbox"> Install and enable R libraries and query library documentation</li>
+<li><input checked="" disabled="" type="checkbox"> Perform basic tasks via the R Console</li>
+<li><input checked="" disabled="" type="checkbox"> Read-in datasets from external resources as objects (specifically <code>tibbles</code>)</li>
+</ul>
+
+  </div>
+</div>
+</p>
+</div>
+<div id="welcome-to-visualization-for-geographic-data-science" class="section level2">
+<h2>Welcome to <em>Visualization for Geographic Data Science</em></h2>
+<ul>
+<li>start with quotes</li>
+<li>restate outcomes</li>
+</ul>
+<div id="why-visualization" class="section level3">
+<h3>Why Visualization?</h3>
+</div>
+<div id="why-r-rstudio-and-ggplot2" class="section level3">
+<h3>Why R, RStudio and ggplot2?</h3>
+</div>
+</div>
+<div id="our-expectations" class="section level2">
+<h2>Our expectations</h2>
+<div id="navigating-the-materials" class="section level3">
+<h3>Navigating the materials</h3>
+</div>
+<div id="self-guided-learning" class="section level3">
+<h3>Self-guided learning</h3>
+</div>
+<div id="slack" class="section level3">
+<h3>Slack</h3>
+</div>
+</div>
+<div id="getting-started-with-r-and-rstudio" class="section level2">
+<h2>Getting started with R and RStudio</h2>
+</div>
+<div id="reading" class="section level2">
+<h2>Reading</h2>
+<ul>
+<li><span class="citation">Dani Arribas-Bel and Jon Reades, “Geography and Computers: Past, Present, and Future,” <em>Geography Compass</em> 12, no. 10 (<a href="#ref-arribas_geography_2018" role="doc-biblioref">2018</a>): e12403, doi:<a href="https://doi.org/10.1111/gec3.12403" role="doc-biblioref">10.1111/gec3.12403</a>.</span></li>
+<li><span class="citation">Robin Lovelace, Jakub Nowosad, and Jannes Muenchow, <em>Geocomputation with R</em> (London, UK: CRC Press, <a href="#ref-lovelace_geocomputation_2019" role="doc-biblioref">2019</a>), <a href="https://geocompr.robinlovelace.net" role="doc-biblioref">https://geocompr.robinlovelace.net</a>.</span></li>
+<li><span class="citation">Kieran Healy, <em>Data Visualization: A Practical Introduction</em> (Princeton: Princeton University Press, <a href="#ref-healy_data_2018" role="doc-biblioref">2018</a>), <a href="http://socviz.co/" role="doc-biblioref">http://socviz.co/</a>.</span></li>
+</ul>
+</div>
 
                     </div>
 
