@@ -27,7 +27,7 @@ By the end of this session you should gain the following **_knowledge_**:
 
 {{% alert objective %}}
 - [x] **Appreciate** the motivation for this module -- why visualization, why R and why ggplot2
-- [x] Have an **awareness** of the challenges in modern data analysis
+<!-- - [x] An **awareness** of the challenges modern data analysis -->
 {{% /alert %}}
 
 By the end of this session you should gain the following **_practical skills_**:
@@ -43,10 +43,9 @@ By the end of this session you should gain the following **_practical skills_**:
 
 ## Welcome to _Visualization for Geographic Data Science_
 
-* start with quotes
 * restate outcomes
 
-### Why Visualization?
+### Why _Visualization_ for Geographic Data Science?
 
 ### Why R, RStudio and ggplot2?
 
