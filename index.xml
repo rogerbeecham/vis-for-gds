@@ -160,8 +160,8 @@
   &lt;div&gt;
     &lt;ul&gt;
 &lt;li&gt;&lt;input checked=&#34;&#34; disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; &lt;strong&gt;Appreciate&lt;/strong&gt; the motivation for this module – why visualization, why R and why ggplot2&lt;/li&gt;
-&lt;li&gt;&lt;input checked=&#34;&#34; disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; An &lt;strong&gt;awareness&lt;/strong&gt; of the challenges modern data analysis&lt;/li&gt;
 &lt;/ul&gt;
+&lt;!-- - [x] An **awareness** of the challenges modern data analysis --&gt;
 
   &lt;/div&gt;
 &lt;/div&gt;
