@@ -140,7 +140,7 @@
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&#34;#session-outcomes&#34;&gt;Session outcomes&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;#welcome-to-visualization-for-geographic-data-science&#34;&gt;Welcome to &lt;em&gt;Visualization for Geographic Data Science&lt;/em&gt;&lt;/a&gt;&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;#why-visualization&#34;&gt;Why Visualization?&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#why-visualization-for-geographic-data-science&#34;&gt;Why &lt;em&gt;Visualization&lt;/em&gt; for Geographic Data Science?&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;#why-r-rstudio-and-ggplot2&#34;&gt;Why R, RStudio and ggplot2?&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;#our-expectations&#34;&gt;Our expectations&lt;/a&gt;&lt;ul&gt;
@@ -160,7 +160,7 @@
   &lt;div&gt;
     &lt;ul&gt;
 &lt;li&gt;&lt;input checked=&#34;&#34; disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; &lt;strong&gt;Appreciate&lt;/strong&gt; the motivation for this module – why visualization, why R and why ggplot2&lt;/li&gt;
-&lt;li&gt;&lt;input checked=&#34;&#34; disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; Have an &lt;strong&gt;awareness&lt;/strong&gt; of the challenges in modern data analysis&lt;/li&gt;
+&lt;li&gt;&lt;input checked=&#34;&#34; disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; An &lt;strong&gt;awareness&lt;/strong&gt; of the challenges modern data analysis&lt;/li&gt;
 &lt;/ul&gt;
 
   &lt;/div&gt;
@@ -184,11 +184,10 @@
 &lt;div id=&#34;welcome-to-visualization-for-geographic-data-science&#34; class=&#34;section level2&#34;&gt;
 &lt;h2&gt;Welcome to &lt;em&gt;Visualization for Geographic Data Science&lt;/em&gt;&lt;/h2&gt;
 &lt;ul&gt;
-&lt;li&gt;start with quotes&lt;/li&gt;
 &lt;li&gt;restate outcomes&lt;/li&gt;
 &lt;/ul&gt;
-&lt;div id=&#34;why-visualization&#34; class=&#34;section level3&#34;&gt;
-&lt;h3&gt;Why Visualization?&lt;/h3&gt;
+&lt;div id=&#34;why-visualization-for-geographic-data-science&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Why &lt;em&gt;Visualization&lt;/em&gt; for Geographic Data Science?&lt;/h3&gt;
 &lt;/div&gt;
 &lt;div id=&#34;why-r-rstudio-and-ggplot2&#34; class=&#34;section level3&#34;&gt;
 &lt;h3&gt;Why R, RStudio and ggplot2?&lt;/h3&gt;
