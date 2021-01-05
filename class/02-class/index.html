@@ -33,7 +33,8 @@
   
     
   
-  <meta name="description" content="  ">
+  <meta name="description" content="Contents  Session outcomes Describing tidy data Tidy data  Data transformations – dplyr Data wrangling for tidy data   Session outcomes By the end of this session you should gain the following knowledge:
+  Be able to describe data according to its main characteristics – dimensions and measurement levels. Appreciate the characteristics and importance of Tidy data for data processing and analysis.    By the end of this session you should gain the following practical skills:">
 
   
   <link rel="alternate" hreflang="en-us" href="../../class/02-class/">
@@ -254,8 +255,9 @@
   
   <meta property="og:site_name" content="Visualization for Geographic Data Science">
   <meta property="og:url" content="/class/02-class/">
-  <meta property="og:title" content="Tidy spatial data and data wrangling | Visualization for Geographic Data Science">
-  <meta property="og:description" content="  "><meta property="og:image" content="/media/vis-for-gds.png">
+  <meta property="og:title" content="Data fundamentals: Describe, wrangle, tidy | Visualization for Geographic Data Science">
+  <meta property="og:description" content="Contents  Session outcomes Describing tidy data Tidy data  Data transformations – dplyr Data wrangling for tidy data   Session outcomes By the end of this session you should gain the following knowledge:
+  Be able to describe data according to its main characteristics – dimensions and measurement levels. Appreciate the characteristics and importance of Tidy data for data processing and analysis.    By the end of this session you should gain the following practical skills:"><meta property="og:image" content="/media/vis-for-gds.png">
   <meta property="twitter:image" content="/media/vis-for-gds.png"><meta property="og:locale" content="en-us">
   
     
@@ -283,12 +285,12 @@
   <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../../img/apple-touch-icon-152x152.png" />
   <link rel="icon" type="image/png" href="../../img/favicon-32x32.png" sizes="32x32" />
   <link rel="icon" type="image/png" href="../../img/favicon-16x16.png" sizes="16x16" />
-  <meta name="application-name" content="GEOG 5XXX: Visualization for Geographic Data Science" />
+  <meta name="application-name" content="GEOG5009M: Visualization for Geographic Data Science" />
   <meta name="msapplication-TileColor" content="#FFFFFF" />
   <meta name="msapplication-TileImage" content="/img/mstile-144x144.png" />
 
 
-  <title>Tidy spatial data and data wrangling | Visualization for Geographic Data Science</title>
+  <title>Data fundamentals: Describe, wrangle, tidy | Visualization for Geographic Data Science</title>
 
 </head>
 
@@ -602,7 +604,7 @@
       </li>
       
       <li class="active">
-        <a href="../../class/02-class/">2: Tidy data</a>
+        <a href="../../class/02-class/">2: Data Fundamentals</a>
       </li>
       
       <li >
@@ -610,23 +612,23 @@
       </li>
       
       <li >
-        <a href="../../class/04-class/">4: Exploratory visual data analysis</a>
+        <a href="../../class/04-class/">4: Visualization for exploratory data analysis</a>
       </li>
       
       <li >
-        <a href="../../class/05-class/">5: Exploratory visual data analysis of geospatial data</a>
+        <a href="../../class/05-class/">5: Visualization for exploratory geospatial data analysis</a>
       </li>
       
       <li >
-        <a href="../../class/06-class/">6: Uncertainty visualization</a>
+        <a href="../../class/06-class/">6: Visualization for model building</a>
       </li>
       
       <li >
-        <a href="../../class/07-class/">7: Storytelling in visual data analysis</a>
+        <a href="../../class/07-class/">7: Visualization for uncertainty analysis</a>
       </li>
       
       <li >
-        <a href="../../class/08-class/">8: Sharing your work</a>
+        <a href="../../class/08-class/">8: Visualization for data storytelling</a>
       </li>
       
     </ul>
@@ -646,7 +648,7 @@
             <article class="article">
 
                 <div class="docs-article-container">
-                    <h1>Tidy spatial data and data wrangling</h1>
+                    <h1>Data fundamentals: Describe, wrangle, tidy</h1>
 
                     
 
@@ -665,8 +667,132 @@
 <script src="../../rmarkdown-libs/anchor-sections/anchor-sections.js"></script>
 <!-- /BLOGDOWN-HEAD -->
 
+<h2>Contents</h2>
+<div id="TOC">
+<ul>
+<li><a href="#session-outcomes">Session outcomes</a></li>
+<li><a href="#describing-tidy-data">Describing tidy data</a><ul>
+<li><a href="#tidy-data">Tidy data</a></li>
+</ul></li>
+<li><a href="#data-transformations-dplyr">Data transformations – dplyr</a></li>
+<li><a href="#data-wrangling-for-tidy-data">Data wrangling for tidy data</a></li>
+</ul>
+</div>
 
+<div id="session-outcomes" class="section level2">
+<h2>Session outcomes</h2>
+<p>By the end of this session you should gain the following <strong><em>knowledge</em></strong>:</p>
+<p><div class="alert alert-objective">
+  <div>
+    <ul>
+<li><input checked="" disabled="" type="checkbox"> Be able to <strong>describe</strong> data according to its main characteristics – dimensions and measurement levels.</li>
+<li><input checked="" disabled="" type="checkbox"> <strong>Appreciate</strong> the characteristics and importance of Tidy data for data processing and analysis.</li>
+</ul>
 
+  </div>
+</div>
+</p>
+<p>By the end of this session you should gain the following <strong><em>practical skills</em></strong>:</p>
+<p><div class="alert alert-objective">
+  <div>
+    <ul>
+<li><input checked="" disabled="" type="checkbox"> <strong>Load</strong> flat file datasets into R via RStudio.</li>
+<li><input checked="" disabled="" type="checkbox"> <strong>Calculate</strong> descriptive summaries over datasets.</li>
+<li><input checked="" disabled="" type="checkbox"> <strong>Apply</strong> high-level functions in <code>dplyr</code> for working with Tidy data.</li>
+<li><input checked="" disabled="" type="checkbox"> <strong>Create</strong> statistical graphics that expose high-level strutucture in data for cleaning purposes.</li>
+</ul>
+
+  </div>
+</div>
+</p>
+<p>bikes data (advantage is that can revisit this in week 5)
+Load in Covid-19 data – and apply to Covid-19 : <a href="https://coronavirus.data.gov.uk/details/download" class="uri">https://coronavirus.data.gov.uk/details/download</a></p>
+</div>
+<div id="describing-tidy-data" class="section level2">
+<h2>Describing tidy data</h2>
+<p>Categorical/nominal
+operations = !=
+ordinal = != &lt;&gt;
+Quantitative = != &lt;&gt; + - (x /)
+Measurement-type Description Example – <strong>See Jo Session01 table!</strong></p>
+<p>Bike stations
+Quantitative num journeys, Ordinal (first, second, third, fourth), Categorical (is central London, is not Central London)</p>
+<p>Ordinal -&gt; sequential/diverging
+Diverging -&gt; net in/out</p>
+<p>Numerical : continuous or discrete. Continuous can take an infinite number of values; discrete only non-negative whole numbers</p>
+<p>Categorical : ordinal, whether or nor a natural ordering</p>
+<p>Each row is an observation; Each column is a variable
+glimpse()
+nrow()
+ncol()
+dim()</p>
+<div id="tidy-data" class="section level3">
+<h3>Tidy data</h3>
+<p>Each variable forms a column.
+Each observation forms a row.
+Each type of observational unit forms a table.</p>
+<p>Why do we need tidy data? – demonstrate summarise</p>
+</div>
+</div>
+<div id="data-transformations-dplyr" class="section level2">
+<h2>Data transformations – dplyr</h2>
+<p>Table of key functions – <a href="https://cfss.uchicago.edu/slides/data-transformation/#14" class="uri">https://cfss.uchicago.edu/slides/data-transformation/#14</a>
+Table of key functions – <a href="https://ids-s1-20.github.io/slides/week-03/w3-d03-grammar-wrangle/w3-d03-grammar-wrangle.html#3" class="uri">https://ids-s1-20.github.io/slides/week-03/w3-d03-grammar-wrangle/w3-d03-grammar-wrangle.html#3</a></p>
+<p>Rules :
+1. data frame
+2. arguments to describe what to do on data frame.
+3. returns the datframe</p>
+<p>first look: names(<df>)
+second look: glimpse(<df>)
+select()
+dplyr functions always expect a data frame and always yield a data frame.
+select() combined with arrange(desc())
+select(-<var-name>)
+select(<var-name:var-name>)
+select(starts_with(&lt;""&gt;))
+slice()
+filter()
+<a href="https://ids-s1-20.github.io/slides/week-03/w3-d04-single-df/w3-d04-single-df.html#17" class="uri">https://ids-s1-20.github.io/slides/week-03/w3-d04-single-df/w3-d04-single-df.html#17</a>
+count()|distinct()
+mutate() – add a new variable
+summarise() and group_by() – count() is short for group_by and fid freq. Multiple summary stats.</p>
+<p>Assignment [&lt;-] – e.g. printing to Console versus saving to workspace</p>
+<p>Conditionals/logical operators
+<a href="https://cfss.uchicago.edu/slides/pipes-and-functions-in-r/#15" class="uri">https://cfss.uchicago.edu/slides/pipes-and-functions-in-r/#15</a>
+<a href="https://ids-s1-20.github.io/slides/week-03/w3-d04-single-df/w3-d04-single-df.html#18" class="uri">https://ids-s1-20.github.io/slides/week-03/w3-d04-single-df/w3-d04-single-df.html#18</a></p>
+<p>Piping
+In programming, a pipe is a technique for passing information from one process to another.
+no pipes versus with pipes – <a href="https://cfss.uchicago.edu/slides/data-transformation/#26" class="uri">https://cfss.uchicago.edu/slides/data-transformation/#26</a>
+<a href="https://cfss.uchicago.edu/slides/pipes-and-functions-in-r/#8" class="uri">https://cfss.uchicago.edu/slides/pipes-and-functions-in-r/#8</a>
+Break down what happens
+<a href="https://ids-s1-20.github.io/slides/week-03/w3-d03-grammar-wrangle/w3-d03-grammar-wrangle.html#29" class="uri">https://ids-s1-20.github.io/slides/week-03/w3-d03-grammar-wrangle/w3-d03-grammar-wrangle.html#29</a></p>
+<p>Aside: pipe operator is implemented in the package magrittr, though we don’t need to load this package explicitly since tidyverse does this for us.</p>
+<p>Naming columns should be syntactically valid – <a href="https://style.tidyverse.org/syntax.html#object-names" class="uri">https://style.tidyverse.org/syntax.html#object-names</a></p>
+<p>Joins:
+inner
+left
+right
+union
+<a href="https://ids-s1-20.github.io/slides/week-03/w3-d05-multi-df/w3-d05-multi-df.html#8" class="uri">https://ids-s1-20.github.io/slides/week-03/w3-d05-multi-df/w3-d05-multi-df.html#8</a></p>
+</div>
+<div id="data-wrangling-for-tidy-data" class="section level2">
+<h2>Data wrangling for tidy data</h2>
+<p><a href="https://ids-s1-20.github.io/slides/week-03/w3-d06-tidying/w3-d06-tidying.html#5" class="uri">https://ids-s1-20.github.io/slides/week-03/w3-d06-tidying/w3-d06-tidying.html#5</a></p>
+<p>Pivot:
+longer|wider
+<a href="https://ids-s1-20.github.io/slides/week-03/w3-d06-tidying/w3-d06-tidying.html#14" class="uri">https://ids-s1-20.github.io/slides/week-03/w3-d06-tidying/w3-d06-tidying.html#14</a>
+<a href="https://ids-s1-20.github.io/slides/week-03/w3-d06-tidying/w3-d06-tidying.html#18" class="uri">https://ids-s1-20.github.io/slides/week-03/w3-d06-tidying/w3-d06-tidying.html#18</a>
+separate – <a href="https://cfss.uchicago.edu/slides/data-wrangling-tidy-data/#21" class="uri">https://cfss.uchicago.edu/slides/data-wrangling-tidy-data/#21</a>
+unite –</p>
+<p>Factors <code>forcats</code>:
+Catgeorical variables
+Best used for sorting values non-alphabetically
+Example applied to months <a href="https://cfss.uchicago.edu/slides/data-wrangling-relational-data-and-factors/#13" class="uri">https://cfss.uchicago.edu/slides/data-wrangling-relational-data-and-factors/#13</a></p>
+<p>Functions
+named as verbs (they do things), followed by parameters affecting what they do, and what they will be applied to, in brackets.
+<a href="https://cfss.uchicago.edu/slides/pipes-and-functions-in-r/#9" class="uri">https://cfss.uchicago.edu/slides/pipes-and-functions-in-r/#9</a>
+name, argument, body</p>
+</div>
 
                     </div>
 
@@ -698,7 +824,7 @@
     <div class="row course-info">
         <div class="col-md-7">
             <p>
-                <strong>GEOG 5XXX: Visualization for Geographic Data Science (Spring 2021)</strong><br>
+                <strong>GEOG5009M: Visualization for Geographic Data Science (Spring 2021)</strong><br>
 
                 <a href="https://www.leeds.ac.uk/" target="_blank" rel="noopener">University of Leeds</a> &emsp;&emsp;
                 <a href="https://environment.leeds.ac.uk/geography" target="_blank" rel="noopener">School of Geography</a>
