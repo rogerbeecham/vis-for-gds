@@ -1,5 +1,5 @@
 ---
-title: "Visualization fundamentals"
+title: "Visualization fundamentals: Codify, map, evaluate"
 linktitle: "3: Visualization fundamentals"
 date: "2021-05-25"
 class_date: "2021-05-25"
@@ -12,10 +12,111 @@ output:
     toc: true
 menu:
   class:
-    parent: Class 
+    parent: Class
     weight: 1
 type: docs
 weight: 1
 editor_options:
   chunk_output_type: console
 ---
+
+By the end of this session you should gain the following **_knowledge_**:
+
+{{% alert objective %}}
+- [x] Recognise the key characteristics of effective data graphics.
+- [x] Understand principles underpinning visualization design -- that visualization design is concerned with a mapping between data to visual channels.
+- [x] Appreciate how these principles can be deployed when describe graphics in a consistent and systematic way -- that there is a _grammar_ of graphics, and that understanding this grammar is necessary for using modern visualization toolkits (`ggplot`, `vega-lite` and `Tableau`).
+{{% /alert %}}
+
+By the end of this session you should gain the following **_practical skills_**:
+
+{{% alert objective %}}
+- [x] Create effective data graphics using `ggplot2` specifications, by mapping data to `colour` and `position`.
+{{% /alert %}}
+
+
+
+
+Dataset :
+Trump election 2016 -- with 2012 data so can look at shift (tar we will revisit this in session 6).
+General Election 2019 | https://researchbriefings.files.parliament.uk/documents/CBP-8749/HoC-GE2019-results-by-constituency-csv.csv
+
+## Introduction
+
+* That we will consider the process and steps that take place in order to turn some data into something graphical.
+* That there is a formalised/systematic way of describing this process, the grammar of graphics. That this can be used to easily *describe* and *create* graphics -- and so modern visualization toolkits explicitly follow GoG.
+* That we can use this, and empirical knowledge of specifications/encoding combinations that are effective, to *evaluate* graphics.
+
+## Grammar of Graphics
+
+> Grammar The whole system and structure of a language or of languages in general, usually taken as consisting of syntax and morphology (including inflections) and sometimes also phonology and semantics.
+
+codify data types, encodings/channels, marks
+map data -> channels -> marks
+
+encode data with visual channels
+display encodings with marks
+
+
+
+Example of scatterplot
+scatter
+vote_share : numeric  y position
+degree_educated : numeric  x position
+margin : colour | shape
+mark : point
+.
+
+* Mapping
+aes() within  geoms
+
+* Setting (not mapping to data, so outside of aes()) https://ids-s1-20.github.io/slides/week-02/w2-d03-ggplot2/w2-d03-ggplot2.html#28
+
+## Data, marks and channels
+
+What channel is best for? quantitative, ordered, nominal?
+Some encodings induce bias -- length versus area encodings
+Absolute encoding versus flannery exponent. overlapping circles getting larger.
+Vis configruations may be equally expressive, but no as effective -- circles versus bars
+Colour - Brewer and conceptually unform colour
+
+
+From this, guidelines :
+
+Recommendations/Guidelines
+Use perception to choose most effective Channels
+Use symbolisation that makes sense given the dataset -- sloping to the right Trump, left Clinton, RdBu
+Use popout and separable encodings -- colour hue in use, orientation in use, thickness (shape
+
+
+## Evaluating designs (Washington Post map)
+
+Why GoG? Helps specify many charts and combinations, helps evaluate charts systematically,  helps design charts systematically ...
+
+*Evaluate* -- how well do these match, given the channel used? Schematics do this
+The GoG is useful because it identifies the steps we have to go through to fully and unambiguously specify what we want a visualization to do. It also helps us to ask 'why' questions at each stage to assist us in justifying our visualization designs
+)
+
+
+
+Code out loud a good idea
+https://ids-s1-20.github.io/slides/week-02/w2-d03-ggplot2/w2-d03-ggplot2.html#6
+
+Assessed task 1?
+show graphic and describe and evaluate it:
+
+What are the variables / types?
+Channels / encodings?
+Marks?
+Is this effective? Why?
+
+
+### Characteristics of effective data graphics
+
+From Jo :
+
+1. Represents a complex dataset graphically that could not as effectively be represented via other means.
+2. Often emphasises connections and comparisons between items of data.
+3. Frequently involves interaction to allow someone to influence what they see.
+4. A "narrative providing a clear answer to a question without extraneous details" (Fry, 2008 p.4).
+5. Generates an aesthetic response in order to encourage people to engage with the data or question.

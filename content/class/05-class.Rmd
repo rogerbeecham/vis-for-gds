@@ -1,6 +1,6 @@
 ---
-title: "Exploratory visual data analysis of geospatial data"
-linktitle: "5: Exploratory visual data analysis of geospatial data"
+title: "Visualization for exploratory geospatial data analysis: Containment and connection"
+linktitle: "5: Visualization for exploratory geospatial data analysis"
 date: "2021-06-08"
 class_date: "2021-06-08"
 citeproc: false
@@ -19,3 +19,12 @@ weight: 1
 editor_options:
   chunk_output_type: console
 ---
+
+OD Census Travel to work data ...
+
+https://cran.r-project.org/web/packages/stplanr/vignettes/stplanr-od.html
+
+Containment -- geographically arranged small multiples
+Connection -- lines
+Connection -- OD maps
+Connection -- bikes

@@ -1,6 +1,6 @@
 ---
-title: "Exploratory visual data analysis"
-linktitle: "4: Exploratory visual data analysis"
+title: "Visualization for exploratory data analysis: Colour and layout"
+linktitle: "4: Visualization for exploratory data analysis"
 date: "2021-06-01"
 class_date: "2021-06-01"
 citeproc: false
@@ -12,10 +12,33 @@ output:
     toc: true
 menu:
   class:
-    parent: Class 
+    parent: Class
     weight: 1
 type: docs
 weight: 1
 editor_options:
   chunk_output_type: console
 ---
+
+> The simple graph has brought more information to the data analyst's mind than any other device." --> -- John Tukey
+
+Theory -- EDA?
+
+Stats19 data -- preference -- that will return to this in week 07
+bikes data -- second preference -- though not too sure. Could link to the whole, bit sure if will be discriminating structure from start
+
+Stats19 -- large, attribute-rich. Underanalysed. Not sure how discriminating structure will be.
+
+
+* Faceting
+https://ids-s1-20.github.io/slides/week-02/w2-d03-ggplot2/w2-d03-ggplot2.html#38
+
+https://ids-s1-20.github.io/slides/week-02/w2-d02-data-viz/w2-d02-data-viz.html#18
+
+Code out loud a good idea
+https://ids-s1-20.github.io/slides/week-02/w2-d03-ggplot2/w2-d03-ggplot2.html#6
+
+
+Approach to analysing data to summarise its main characetristics
+Often visual
+Also here would calculate summary stats, perform data wrangling/manipulation/transformation

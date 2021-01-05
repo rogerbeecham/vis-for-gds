@@ -1,4 +1,5 @@
-# GEOG ???? : Visualization for Geographic Data Science
+# GEOG5009M : Visualization for Geographic Data Science
+
 
 This repository contains the code for generating [vis-for-gds](https://www.roger-beecham.com/vis-for-gds/).
 

@@ -1,8 +1,8 @@
 ---
-title: "Visualization for model building: Expose, estimate, evaluate"
-linktitle: "6: Visualization for model building"
-date: "2021-06-15"
-class_date: "2021-06-15"
+title: "Visualization for data storytelling"
+linktitle: "8: Visualization for data storytelling"
+date: "2021-06-29"
+class_date: "2021-06-29"
 citeproc: false
 bibliography: ../../static/bib/references.bib
 csl: ../../static/bib/chicago-syllabus-no-bib.csl
@@ -20,6 +20,9 @@ editor_options:
   chunk_output_type: console
 ---
 
-Trump analysis : https://walker-data.com/tidycensus/
+Road safety analysis : https://docs.ropensci.org/stats19/
+Others? Knife crime data?
 
-Story -- previously very data-driven
+OR
+
+Sharing your work -- reproducible research

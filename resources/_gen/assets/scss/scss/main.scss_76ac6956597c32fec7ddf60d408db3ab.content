@@ -9318,12 +9318,12 @@ div.alert > div {
   margin-bottom: 0; }
 
 .article-style aside p::before,
-div.alert > div:first-child::before {
+div.alert-note > div:first-child::before {
   position: absolute;
   top: -0.3rem;
   left: -2rem;
   font-size: 1.4rem;
-  color: #c62828;
+  color: #424242;
   font-weight: 900;
   content: '\f05a';
   width: 1rem;
@@ -9333,10 +9333,21 @@ div.alert > div:first-child::before {
 div.alert-objective > div:first-child::before {
   position: absolute;
   top: -0.3rem;
-  left: -1rem;
+  left: -2rem;
   color: #424242;
   font-weight: 900;
   content: '\f13a';
+  width: 1rem;
+  text-align: left; }
+
+.article-style aside p::before,
+div.alert-instruction > div:first-child::before {
+  position: absolute;
+  top: -0.3rem;
+  left: -2rem;
+  color: #c62828;
+  font-weight: 900;
+  content: '\f0ae';
   width: 1rem;
   text-align: left; }
 
@@ -9345,7 +9356,7 @@ div.alert-objective > div:first-child::before {
 .alert-note {
   color: #1b1b1b;
   background-color: #F7F7F7;
-  border-color: #8e0000; }
+  border-color: #424242; }
 
 .alert-warning {
   color: #1b1b1b;
@@ -9356,3 +9367,8 @@ div.alert-objective > div:first-child::before {
   color: #1b1b1b;
   background-color: #F7F7F7;
   border-color: #424242; }
+
+.alert-instruction {
+  color: #1b1b1b;
+  background-color: #F7F7F7;
+  border-color: #8e0000; }

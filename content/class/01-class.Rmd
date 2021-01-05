@@ -1,11 +1,11 @@
 ---
-title: "Introduction: Vis for GDS"
+title: "Introduction: Vis for Geographic Data Science"
 linktitle: "1: Introduction"
 date: "2021-05-11"
 class_date: "2021-05-11"
 citeproc: true
 bibliography: ../../static/bib/references.bib
-csl: ../../static/bib/chicago-syllabus-no-bib.csl
+csl:  ../../static/bib/chicago-author-date.csl
 output:
   blogdown::html_page:
     template: ../../pandoc/toc-title_html.template
@@ -26,7 +26,7 @@ editor_options:
 By the end of this session you should gain the following **_knowledge_**:
 
 {{% alert objective %}}
-- [x] **Appreciate** the motivation for this module -- why visualization, why R and why ggplot2
+- [x] Appreciate the motivation for this module -- why visualization, why R and why ggplot2
 <!-- - [x] An **awareness** of the challenges modern data analysis -->
 {{% /alert %}}
 
@@ -35,35 +35,215 @@ By the end of this session you should gain the following **_practical skills_**:
 {{% alert objective %}}
 - [x] Navigate the materials on this course website, having familiarised yourself with its structure
 - [x] Open R using the RStudio Integrated Developer Environment (IDE)
-- [x] Install and enable R libraries and query library documentation
-- [x]  Perform basic tasks via the R Console
+- [x] Install and enable R packages and query package documentation
+- [x] Perform basic calculations via the R Console
 - [x] Read-in datasets from external resources as objects (specifically `tibbles`)
 {{% /alert %}}
 
 
 ## Welcome to _Visualization for Geographic Data Science_
 
-* restate outcomes
+Welcome to _Visualization for Geographic Data Science_ (_vis-for-gds_). In this first session we'll cover the background to the module -- the why, what and how of _**vis**-for-gds_, a little on how the module will be run and our expectations of you.
 
-### Why _Visualization_ for Geographic Data Science?
+The main home for this module is [this website](../../). However, via [Minerva]() you can access the [Module  Handbook](). You will use submission boxes in [Minerva]() to upload coursework in the usual way.
 
-### Why R, RStudio and ggplot2?
 
+
+## Why _vis-for-gds_?
+
+<!-- https://www.forbes.com/sites/bernardmarr/2020/04/09/the-vital-role-of-big-data-in-the-fight-against-coronavirus/ -->
+
+### Geographic Data Science
+
+It is now taken-for-granted that over the last decade or so new data, new technology and new ways of doing science have transformed how we approach the world’s problems. Evidence for this can be seen in the response to the Covid-19 pandemic. Enter [Covid19 github](https://www.google.com/search?q=covid-19+github&rlz=1C5CHFA_enGB632GB632&oq=covid-19+github&aqs=chrome..69i57j69i60l3.5575j0j1&sourceid=chrome&ie=UTF-8) into a search and you’ll be confronted with hundreds of repositories demonstrating how an ever-expanding array of data related to the pandemic can be collected, processed and analysed. _Data Science_ is a term used widely to capture this shift and _Geographic Data Science_ (GDS), probably first discussed coherently by @arribas_geography_2018 and @singleton_geographic_2019, when observing that many of data science's applications are -- or at least should be -- of inherent interest to geographers.
+
+Since gaining traction in the corporate world, the definition of Data Science has been somewhat stretched, but it has its origins in the work of John Tukey's _The Future of Data Analysis_ (1962). Drawing on this, and a survey of more recent work, @donoho_fifty_2017 neatly identify six key facets that a data science discipline might encompass ^[For an excellent precis and interpretation of this for geographers, see @arribas_geography_2018.] :
+
+1.  data gathering, preparation, and exploration;
+2.  data representation and transformation;
+3.  computing with data;
+4.  data visualization and presentation;
+5.  data modelling;
+6.  and a more introspective “science about data science”
+
+### Geographic Data Science and _Visualization_
+
+
+
+
+
+
+<!-- > Visualization is fundamental to meeting the unprecedented challenges and exploiting the wonderful opportunities of the ever-expanding deluge of data confronting virtually every field." \
+> -- Prof. Jim Hollan of UC San Diego -->
+
+<!-- {{% alert note %}}
+Visual approaches to data analysis are particularly suited to Geographic Data Science applications because where datasets are being repurposed for social and natural sciences research for the first time,  contain complex structure and geo-spatial relations that cannot be easily captured by statistical summaries alone and so where the types of questions that can be asked and the techniques deployed to answer them cannot be easily specified in advance.
+
+{{% /alert %}} -->
+
+Glancing at this list, _visualization_ could be interpreted as a single facet of Data Science process ^[Although not the case when actually reading  @donoho_fifty_2017.] -- something that happens after data gathering, preparation, exploration, but before modelling. In this module you'll learn that visualization is intrinsic to, and should inform, each of these activities, especially so when working with data sets that are spatial -- for Geographic Data Science.
+
+Let's develop this idea by asking **why data visualizations are used in the first place**. In her book _Visualization Analysis and Design_, Tamara @munzer_visualization_2014 considers how humans and computers interface in the decision-making process. She makes the point that data visualization is ultimately about connecting people with data in order to make decisions -- or to install humans in a 'decision-making-loop'. There are occasionally decision-making loops that are entirely computational and where an automated solution exists and is trusted. However, most require some form of human intervention.
+
+The canonical example demonstrating how relying on computation alone can be problematic, and so for the use of visualization, is [Anscombe's quartet](https://en.wikipedia.org/wiki/Anscombe%27s_quartet). Here, @anscombe_graphs_1973 presents four datasets, each containing eleven observations and two variables for each observation. The data are synthetic, but let's say that they are the weight and height of independent samples taken from a population of Postgraduate Students studying Data Science.
+
+
+Presented with a new dataset it makes sense to compute some summaries and doing so, we observe that the data appear identical -- they contain the same means, variances and strong positive correlation coefficient. This seems appropriate since the data are measuring weight and height. Although there may be some variation, we'd expect taller students to be heavier. Given these statical summaries we can be confident that we are drawing samples from the same population of (Data Science) students.
+
+
+```{r anscombe-data, echo=FALSE, fig.cap="Data from Anscombe's quartet", out.width="90%"}
+knitr::include_graphics("/class/01-class_files/anscombe_data.png", error = FALSE)
+```
+
+Laying out the data in a meaningful way, horizontally according to _weight_ (_x_) and vertically according to the _height_ (_y_) to form a scatterplot, we quickly see that whilst these data contain the same statistical properties they are very different. Only `dataset #1` now looks plausible if it were truly a measure of weights and heights drawn from a population of students.
+
+Anscombe's is a deliberately contrived example^[Checkout @matejka_same_2017's Same Stats, Different Graphs paper for a fun take one this.], but there are real cases of important structure being missed, leading to poorly specified models and potentially faulty claims.
+
+
+```{r anscombe-plot, echo=FALSE, fig.cap="Plots of Anscombe's quartet"}
+knitr::include_graphics("/class/01-class_files/anscombe.png", error = FALSE)
+```
+
+This is not to undermine the importance of numerical analysis. Numeric summaries that simplify patterns are extremely useful and Statistics has at its disposal an array of tools for helping to guard against making false claims from datasets -- a theme that we will return to in session 6, 7 and 8 when we think critically about the use of visual approaches for data anlysis. There remain, though, certain classes of relation and context that cannot be easily captured through statistics alone.
+
+_Geographic_ context is undoubtedly challenging to capture  numerically; many of the early examples of data visualization have been of spatial phenomena and generated by Geographers [see @friendly_brief_2007]. We can also probably make a special case for the use of visual approaches in Geographic Data Science (GDS) applications due to its exploratory nature. Often in GDS datasets are being repurposed for social and natural sciences research for the first time; contain complex structure and geo-spatial relations that cannot be easily captured by statistical summaries alone; and so the types of questions that can be asked and the techniques deployed to answer them cannot be easily specified in advance. In this module we will demonstrate this as we _explore_ (Session 4 and 5), _model under uncertainty_ (Session 6 and 7) and _communicate_ (Session 7 and 8) with various social science datasets.
+
+
+{{% alert instruction %}}
+Watch [Jo Wood's](https://www.gicentre.net/jwo/index) talk demonstrating how visual techniques can be used to analyse urban travel behaviours. In the video Jo argues that bikeshare schemes can help democratise cycling, but also for their potential contributions to research -- he briefly contrasts new, passively collected data sets with more "traditional" actively collected data for analysing how people move around cities. A compelling case is then made for the use of visualization to support this activity. This work and further discussion is published in @beecham_exploring_2014.
+{{% /alert %}}
+
+
+<div class="embed-responsive embed-responsive-16by9">
+<iframe class="embed-responsive-item" src="https://www.youtube.com/embed/FaRBUnO5PZI" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
+
+
+
+
+<!-- > Effective data visualizations should expose structure in data that would be difficult to expose through non-visual means -->
+
+<!-- Problems are typically ill-specified, the relevant data/information informing the problem are not immediately obvious and analysis procedures and their interpretation are certainly subject to interpretation.
+
+ 'computer in the loop' and the 'human in the loop'. In other words, what is it that computation can offer in supporting decision making and what is it that humans can offer. -->
+
+
+
+
+<!-- @donoho_fifty_2017 neatly remarks that _data science_ probably has its origins in the work of John Tukey's _The Future of Data Analysis_ (1962), and that a _data science_ discipline might incorporate six key facets: data gathering, preparation, and exploration; data representation and transformation; computing with data; data modelling; data visualisation and presentation; and a more introspective “science about data science”. -->
+
+
+## What _vis-for-gds_?
+
+This is a very practical module. With the exception of this Introduction, the weekly sessions will blend both theory and practical coding activity.  We will cover fundamentals around visual data analysis from Information Visualization and Statistics and as you read the session materials you will be writing data processing and analysis code and so be generating analysis outputs of your own. We will also be working with real datasets -- from the Political Science, Urban and Transport Planning and Health domains. So we will hopefully be generating real findings and knowledge.
+
+To do this in a genuine way -- to generate real knowledge from datasets -- we will have to cover a reasonably broad set of data processing and analysis procedures. As well as developing expertise around designing data-rich, visually compelling graphics (of the sort demonstrated in [Jo Wood's TEDx talk](https://www.gicentre.net/jwo/index)), we will need to cover more tedious aspects of data processing and wrangling. Additionally, if we are to learn how to generate and communicate and make claims under uncertainty with our data graphics, then we will need to cover some aspects of estimation and modelling from Statistics. In short, we will cover most of @donoho_fifty_2017's six key facets of a data science discipline:
+
+1.  data gathering, preparation, and exploration (Sessions 2, 3, 5);
+2.  data representation and transformation (Sessions 2, 3);
+3.  computing with data (Session 2);
+4.  data visualization and presentation (All Sessions);
+5.  data modelling (Sessions 6, 7, 8);
+6.  and a more introspective “science about data science” (All Sessions, Plus Optional Extra)
+
+There is already a rich and impressive set of open [Resources](../useful) practically introducing how to do modern [Data Science](https://r4ds.had.co.nz/index.html), [Visualization](https://socviz.co/) and [Geographic Analysis](https://geocompr.robinlovelace.net/). We will certainly draw on these at different stages in the module. What makes this module different from these existing resources is that we will be **doing** applied data science throughout -- we will be identifying and diagnosing problems when gathering data, discovering patterns (some maybe even spurious) as we do exploratory analysis, and will attampt to make claims under uncertainty as we generate models based on observed patterns. We will work with both new, passively-collected datasets, as well as more traditional, actively collected datasets located within various social science domains: Political Science, Health Science and Urban and Transport Planning. 
+
+
+
+
+
+## How _vis-for-gds_?
+
+### R
+
+Through the module we will apply modern approaches to data analysis. All data collection, analysis and reporting activity will be completed using [`R`](https://www.r-project.org/). Released as open source software as part of a research project in 1995, for some time `R` was the preserve of academics. From 2010s onwards, the `R` community expanded rapidly and along with [`Python`](https://www.python.org/) is regarded as the key technology for doing data analysis. `R` is used increasingly outside of academia, by organisations such as Google [[example]](https://research.google.com/pubs/pub37483.html), Facebook [[example]](http://flowingdata.com/2010/12/13/facebook-worldwide-friendships-mapped/), Twitter [[example]](https://blog.twitter.com/official/en_us/a/2013/the-geography-of-tweets.html), New York Times [[example]](http://www.nytimes.com/interactive/2012/05/05/sports/baseball/mariano-rivera-and-his-peers.html?ref=baseballexample), BBC [[example]](https://bbc.github.io/rcookbook/) and many more.
+
+There are many benefits that come from being fully open-source, with a critical mass of users. Firstly, there is an array of online forums, tutorials and code examples from which to learn. Second, with such a large community, there are numerous expert `R` users who themselves contribute by developing _libraries_ or _packages_ that extend its use. As a result `R` is employed for a very wide set of use cases -- this website was even built in `R` using amongst other things the [`blogdown`](https://bookdown.org/yihui/blogdown/) package.
+
+{{% alert note %}}
+An R package is a bundle of code, data and documentation, usually hosted centrally on the CRAN (Comprehensive R Archive Network). A particularly important, though very recent, set of packages is the [tidyverse](http://www.tidyverse.org): a set of libraries authored mainly by [Hadley Wickham](http://hadley.nz), which share a common underlying philosophy, syntax and documentation.
+{{% /alert %}}
+
+
+https://ids-s1-20.github.io/slides/week-01/w1-d05-toolkit-r/w1-d05-toolkit-r.html#15
+
+#### Reproducibility
+
+____
+> Reproducible research is the idea that data analyses, and more generally, scientific claims, are published with their data and software code so that others may verify the findings and build upon them.
+> Roger Peng, Jeff Leek and Brian Caffo
+
+In recent years there has been much introspection around how science works -- around how statistical claims are made from reasoning over evidence. This came on the back of, amongst other things, a high profile paper published in [Science](http://science.sciencemag.org/content/349/6251/aac4716), which found that of 100 recent peer-reviewed psychology experiments, the findings of only 39 could be replicated. The upshot is that researchers must now make every possible effort to make their work transparent, such that `_all_ aspects of the answer generated by any given analysis [can] be tested' [@brunsdon_opening_2020]. In this setting, traditional data analysis software that support point-and-click interaction is unhelpful; it would be tedious to make notes describing all interactions with, for example, SPSS. As a declarative programming language, however, it is very easy to provide such a provenance trail for your workflows in `R` since this necessarily exists in your analysis scripts.
+
+Concerns around the _reproducibility crisis_ are not simply a function of transparency in methodology and research design. Rather, they relate to a culture and incentive structure whereby scientific claims are conferred with authority when reported within the (slightly backwards) logic of Null Hypothesis Significance Testing (NHST) and _p-values_. We will cover a little on this in session 7 and 8, but for an accessible read on the phenomenon of _p-hacking_ (with interactive graphic) see [this article](https://fivethirtyeight.com/features/science-isnt-broken/#part1) from the excellent [FiveThirtyEight](http://fivethirtyeight.com) website. Again, the upshot of all this introspection is a rethinking of the way in which Statistics is taught in schools and universities, with greater emphasis on understanding through computational approaches rather than traditional equations, formulas and probability tables. Where does `R` fit within this? Simply put: `R` is far better placed than traditional software tools and point-and-click paradigms for supporting computational approaches to statistics -- with a set of methods and libraries for performing simulations and permutation-based tests.
+
+
+In essence, a reproducible research philosophy is one which allows all aspects of the answer generated by any given analysis to be tested. This is especially the case as our lives are increasingly lived and shaped by a vast amount of data—often termed Big Data (upper case intentional).
+
+
+Near-term goals:
+Are the tables and figures reproducible from the code and data?
+Does the code actually do what you think it does?
+In addition to what was done, is it clear why it was done?
+
+Long-term goals:
+Can the code be used for other data?
+Can you extend the code to do other things?
+
+
+#### Literate programming
+
+.Rmd for code, narrative and output in one place.
+
+rmarkdown and the various packages that support it enable R users to write their code and prose in reproducible computational documents
+
+Fully reproducible reports -- each time you knit the analysis is ran from the beginning
+Simple markdown syntax for text
+Code goes in chunks, defined by three backticks, narrative goes outside of chunks
+
+Advertise .Rmd cheat sheet
+
+How we will use .Rmd :
+
+Every assignment / report / project / etc. is an R Markdown document
+You'll always have a template R Markdown document to start with
+The amount of scaffolding in the template will decrease over the semester
+
+#### Version control
+
+git!!
+
+### tidyverse
+
+The tidyverse is an opinionated collection of R packages designed for data science
+All packages share an underlying philosophy and a common grammar
+
+### ggplot2?
+
+ggplot2 is tidyverse's data visualization package
+gg in "ggplot2" stands for Grammar of Graphics
+Inspired by the book Grammar of Graphics by Leland Wilkinson
 
 ## Our expectations
 
 ### Navigating the materials
 
-
 ### Self-guided learning
+
+* stay engaged
+* participate
+* ask questions
 
 ### Slack
 
 ## Getting started with R and RStudio
 
 
-## Reading
+Packages are installed with the install.packages function and loaded with the library function, once per session
 
-- [@arribas_geography_2018]
-- [@lovelace_geocomputation_2019]
-- [@healy_data_2018]
+Object documentation can be accessed with ?
+
+<!-- https://www.sciencedirect.com/science/article/pii/S1353829220311758?via%3Dihub -->
+
+
+## References

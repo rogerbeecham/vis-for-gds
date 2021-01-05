@@ -1,6 +1,6 @@
 ---
-title: "Tidy spatial data and data wrangling"
-linktitle: "2: Tidy data"
+title: "Data fundamentals: Describe, wrangle, tidy"
+linktitle: "2: Data Fundamentals"
 date: "2021-05-18"
 class_date: "2021-05-18"
 citeproc: false
@@ -12,10 +12,142 @@ output:
     toc: true
 menu:
   class:
-    parent: Class 
+    parent: Class
     weight: 1
 type: docs
 weight: 1
 editor_options:
   chunk_output_type: console
 ---
+
+
+## Session outcomes
+
+
+By the end of this session you should gain the following **_knowledge_**:
+
+{{% alert objective %}}
+- [x] Be able to **describe** data according to its main characteristics -- dimensions and measurement levels.
+- [x] **Appreciate** the characteristics and importance of Tidy data for data processing and analysis.
+{{% /alert %}}
+
+By the end of this session you should gain the following **_practical skills_**:
+
+{{% alert objective %}}
+- [x] **Load** flat file datasets into R via RStudio.
+- [x] **Calculate** descriptive summaries over datasets.
+- [x] **Apply** high-level functions in `dplyr` for working with Tidy data.
+- [x] **Create** statistical graphics that expose high-level strutucture in data for cleaning purposes.
+{{% /alert %}}
+
+
+bikes data (advantage is that can revisit this in week 5)
+Load in Covid-19 data -- and apply to Covid-19 : https://coronavirus.data.gov.uk/details/download
+
+
+##  Describing tidy data
+
+Categorical/nominal
+operations = !=
+ordinal = != <>
+Quantitative = != <> + - (x /)
+Measurement-type  Description Example -- **See Jo Session01 table!**
+
+Bike stations
+Quantitative num journeys,  Ordinal (first, second, third, fourth), Categorical (is central London, is not Central London)
+
+Ordinal -> sequential/diverging
+Diverging -> net in/out
+
+Numerical : continuous or discrete. Continuous can take an infinite number of values; discrete only non-negative whole numbers
+
+Categorical : ordinal, whether or nor a natural ordering
+
+Each row is an observation; Each column is a variable
+glimpse()
+nrow()
+ncol()
+dim()
+
+### Tidy data
+
+Each variable forms a column.
+Each observation forms a row.
+Each type of observational unit forms a table.
+
+Why do we need tidy data? -- demonstrate summarise
+
+
+
+## Data transformations -- dplyr
+
+Table of key functions -- https://cfss.uchicago.edu/slides/data-transformation/#14
+Table of key functions -- https://ids-s1-20.github.io/slides/week-03/w3-d03-grammar-wrangle/w3-d03-grammar-wrangle.html#3
+
+Rules :
+1. data frame
+2. arguments to describe what to do on data frame.
+3. returns the datframe
+
+first look: names(<df>)
+second look: glimpse(<df>)
+select()
+dplyr functions always expect a data frame and always yield a data frame.
+select() combined with arrange(desc())
+select(-<var-name>)
+select(<var-name:var-name>)
+select(starts_with(<"">))
+slice()
+filter()
+https://ids-s1-20.github.io/slides/week-03/w3-d04-single-df/w3-d04-single-df.html#17
+count()|distinct()
+mutate() -- add a new variable
+summarise() and group_by()  -- count() is short for group_by and fid freq. Multiple summary stats.
+
+Assignment [<-] -- e.g. printing to Console versus saving to workspace
+
+Conditionals/logical operators
+https://cfss.uchicago.edu/slides/pipes-and-functions-in-r/#15
+https://ids-s1-20.github.io/slides/week-03/w3-d04-single-df/w3-d04-single-df.html#18
+
+Piping
+In programming, a pipe is a technique for passing information from one process to another.
+no pipes versus with pipes -- https://cfss.uchicago.edu/slides/data-transformation/#26
+https://cfss.uchicago.edu/slides/pipes-and-functions-in-r/#8
+Break down what happens
+https://ids-s1-20.github.io/slides/week-03/w3-d03-grammar-wrangle/w3-d03-grammar-wrangle.html#29
+
+Aside: pipe operator is implemented in the package magrittr, though we don't need to load this package explicitly since tidyverse does this for us.
+
+
+Naming columns should be syntactically valid -- https://style.tidyverse.org/syntax.html#object-names
+
+Joins:
+inner
+left
+right
+union
+https://ids-s1-20.github.io/slides/week-03/w3-d05-multi-df/w3-d05-multi-df.html#8
+
+
+## Data wrangling for tidy data
+
+https://ids-s1-20.github.io/slides/week-03/w3-d06-tidying/w3-d06-tidying.html#5
+
+Pivot:
+longer|wider
+https://ids-s1-20.github.io/slides/week-03/w3-d06-tidying/w3-d06-tidying.html#14
+https://ids-s1-20.github.io/slides/week-03/w3-d06-tidying/w3-d06-tidying.html#18
+separate -- https://cfss.uchicago.edu/slides/data-wrangling-tidy-data/#21
+unite --
+
+
+Factors `forcats`:
+Catgeorical variables
+Best used for sorting values non-alphabetically
+Example applied to months https://cfss.uchicago.edu/slides/data-wrangling-relational-data-and-factors/#13
+
+Functions
+named as verbs (they do things), followed by parameters affecting what they do, and what they will be applied to, in brackets.
+https://cfss.uchicago.edu/slides/pipes-and-functions-in-r/#9
+name, argument, body
