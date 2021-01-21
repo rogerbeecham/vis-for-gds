@@ -1,6 +1,8 @@
 ---
 title: Useful
 slug: useful
+bibliography: ../../static/bib/references.bib
+csl: ../../static/bib/chicago-syllabus-no-bib.csl
 output:
   blogdown::html_page:
       toc: TRUE

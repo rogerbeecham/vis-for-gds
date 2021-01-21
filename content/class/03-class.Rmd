@@ -36,8 +36,21 @@ By the end of this session you should gain the following **_practical skills_**:
 
 
 
+{{% alert instruction %}}
+TEDxWaterloo - Miriah Meyer - Information Visualization for Scientific Discovery
+{{% /alert %}}
+
+<div class="embed-responsive embed-responsive-16by9">
+<iframe class="embed-responsive-item" src="https://www.youtube.com/embed/Sua0xDCf8MA" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
+
+
+https://channel9.msdn.com/Events/useR-international-R-User-conference/useR2016/Towards-a-grammar-of-interactive-graphics
+
+https://rstudio.com/resources/rstudioconf-2020/effective-visualizations/
 
 Dataset :
+*2019 General Election!* As we have Census data via R package https://github.com/ropensci/nomisr
 Trump election 2016 -- with 2012 data so can look at shift (tar we will revisit this in session 6).
 General Election 2019 | https://researchbriefings.files.parliament.uk/documents/CBP-8749/HoC-GE2019-results-by-constituency-csv.csv
 
@@ -56,7 +69,6 @@ map data -> channels -> marks
 
 encode data with visual channels
 display encodings with marks
-
 
 
 Example of scatterplot
@@ -120,3 +132,6 @@ From Jo :
 3. Frequently involves interaction to allow someone to influence what they see.
 4. A "narrative providing a clear answer to a question without extraneous details" (Fry, 2008 p.4).
 5. Generates an aesthetic response in order to encourage people to engage with the data or question.
+
+
+Through the class and homework sessions you will be loading datasets from flat `.csv` <i class="fas fa-file-csv"></i> files, bundled `.zip` <i class="fas fa-file-archive"></i> folders or occasionally <i class="fas fa-database"></i> database objects.

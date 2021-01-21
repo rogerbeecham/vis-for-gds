@@ -24,6 +24,8 @@ OD Census Travel to work data ...
 
 https://cran.r-project.org/web/packages/stplanr/vignettes/stplanr-od.html
 
+Theory/content element -- OD data and how to analyse it (blog post and OD vis paper)
+
 Containment -- geographically arranged small multiples
 Connection -- lines
 Connection -- OD maps

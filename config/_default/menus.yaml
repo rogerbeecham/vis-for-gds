@@ -5,7 +5,7 @@ main:
   - name: Schedule
     url: /schedule/
     weight: 2
-  - name: Readings
+  - name: Reading
     url: /reading/
     weight: 3
   - name: Class
@@ -20,6 +20,10 @@ main:
   - name: "<i class=\"fab fa-slack\"></i>"
     url: https://slack.com/intl/en-gb/
     weight: 7
+
+reading:
+  - name: Overview
+    weight: 1
 
 class:
   - name: Overview

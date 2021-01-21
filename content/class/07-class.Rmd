@@ -1,6 +1,6 @@
 ---
-title: "Visualization for uncertainty analysis"
-linktitle: "7: Visualization for uncertainty analysis"
+title: "Visualization for model building 2: Expose, estimate, evaluate"
+linktitle: "7: Visualization for model building 2"
 date: "2021-06-22"
 class_date: "2021-06-22"
 citeproc: false
@@ -21,3 +21,13 @@ editor_options:
 ---
 
 Road safety analysis : https://docs.ropensci.org/stats19/
+
+{{% alert instruction %}}
+Uncertainty
+{{% /alert %}}
+
+<div class="embed-responsive embed-responsive-16by9">
+<iframe class="embed-responsive-item" src="https://www.youtube.com/embed/vqzO-9LSoG4" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
+
+Uncertainty vis book : https://mjskay.github.io/uncertainty-vis-book/

@@ -1,6 +1,6 @@
 ---
-title: "Visualization for model building: Expose, estimate, evaluate"
-linktitle: "6: Visualization for model building"
+title: "Visualization for model building 1: Expose, estimate, evaluate"
+linktitle: "6: Visualization for model building 1"
 date: "2021-06-15"
 class_date: "2021-06-15"
 citeproc: false
@@ -20,6 +20,7 @@ editor_options:
   chunk_output_type: console
 ---
 
+Brexit analysis : https://github.com/ropensci/nomisr
 Trump analysis : https://walker-data.com/tidycensus/
 
 Story -- previously very data-driven

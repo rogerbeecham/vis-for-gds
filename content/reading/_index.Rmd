@@ -1,8 +1,8 @@
 ---
-title: Reading
+title: "Reading for sessions"
 menu:
   reading:
-    parent: Readings
+    parent: Overview
     weight: 1
 type: docs
 weight: 1
