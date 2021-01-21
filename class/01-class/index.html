@@ -33,8 +33,7 @@
   
     
   
-  <meta name="description" content="Contents  Session outcomes Welcome to Visualization for Geographic Data Science Why vis-for-gds? Geographic Data Science Geographic Data Science and Visualization  What vis-for-gds? How vis-for-gds? R tidyverse ggplot2?  Our expectations Navigating the materials Self-guided learning Slack  Getting started with R and RStudio References   Session outcomes By the end of this session you should gain the following knowledge:
-  Appreciate the motivation for this module – why visualization, why R and why ggplot2    By the end of this session you should gain the following practical skills:">
+  <meta name="description" content="Contents  Session outcomes Welcome to Visualization for Geographic Data Science Why vis-for-gds? Geographic Data Science Geographic Data Science and Visualization  What vis-for-gds? How vis-for-gds? R for modern data analysis Rmarkdown for reproducible research  Getting started with R and RStudio Install R and RStudio Open the RStudio IDE Compute in the console Install some packages Experiment with R Markdown R Scripts Create an RStudio Project  Conclusions References   Session outcomes By the end of this session you should gain the following knowledge:">
 
   
   <link rel="alternate" hreflang="en-us" href="../../class/01-class/">
@@ -256,12 +255,11 @@
   <meta property="og:site_name" content="Visualization for Geographic Data Science">
   <meta property="og:url" content="/class/01-class/">
   <meta property="og:title" content="Introduction: Vis for Geographic Data Science | Visualization for Geographic Data Science">
-  <meta property="og:description" content="Contents  Session outcomes Welcome to Visualization for Geographic Data Science Why vis-for-gds? Geographic Data Science Geographic Data Science and Visualization  What vis-for-gds? How vis-for-gds? R tidyverse ggplot2?  Our expectations Navigating the materials Self-guided learning Slack  Getting started with R and RStudio References   Session outcomes By the end of this session you should gain the following knowledge:
-  Appreciate the motivation for this module – why visualization, why R and why ggplot2    By the end of this session you should gain the following practical skills:"><meta property="og:image" content="/media/vis-for-gds.png">
+  <meta property="og:description" content="Contents  Session outcomes Welcome to Visualization for Geographic Data Science Why vis-for-gds? Geographic Data Science Geographic Data Science and Visualization  What vis-for-gds? How vis-for-gds? R for modern data analysis Rmarkdown for reproducible research  Getting started with R and RStudio Install R and RStudio Open the RStudio IDE Compute in the console Install some packages Experiment with R Markdown R Scripts Create an RStudio Project  Conclusions References   Session outcomes By the end of this session you should gain the following knowledge:"><meta property="og:image" content="/media/vis-for-gds.png">
   <meta property="twitter:image" content="/media/vis-for-gds.png"><meta property="og:locale" content="en-us">
   
     
-      <meta property="article:published_time" content="2021-05-11T00:00:00&#43;00:00">
+      <meta property="article:published_time" content="2021-06-01T00:00:00&#43;00:00">
     
     <meta property="article:modified_time" content="2020-11-29T10:15:25&#43;00:00">
   
@@ -433,7 +431,7 @@
         
 
         <li class="nav-item">
-          <a class="nav-link " href="../../reading/"><span>Readings</span></a>
+          <a class="nav-link " href="../../reading/"><span>Reading</span></a>
         </li>
 
         
@@ -620,15 +618,19 @@
       </li>
       
       <li >
-        <a href="../../class/06-class/">6: Visualization for model building</a>
+        <a href="../../class/06-class/">6: Visualization for model building 1</a>
       </li>
       
       <li >
-        <a href="../../class/07-class/">7: Visualization for uncertainty analysis</a>
+        <a href="../../class/07-class/">7: Visualization for model building 2</a>
       </li>
       
       <li >
-        <a href="../../class/08-class/">8: Visualization for data storytelling</a>
+        <a href="../../class/08-class/">8: Visualization for uncertainty analysis</a>
+      </li>
+      
+      <li >
+        <a href="../../class/09-class/">9: Visualization for data storytelling</a>
       </li>
       
     </ul>
@@ -656,7 +658,7 @@
 
                     
                     <div class="due-date p-2 mb-3 bg-secondary text-white">
-                        Materials from class on Tuesday, May 11, 2021
+                        Materials from class on Tuesday, June 1, 2021
                     </div>
                     
 
@@ -678,16 +680,19 @@
 </ul></li>
 <li><a href="#what-vis-for-gds">What <em>vis-for-gds</em>?</a></li>
 <li><a href="#how-vis-for-gds">How <em>vis-for-gds</em>?</a><ul>
-<li><a href="#r">R</a></li>
-<li><a href="#tidyverse">tidyverse</a></li>
-<li><a href="#ggplot2">ggplot2?</a></li>
+<li><a href="#r-for-modern-data-analysis">R for modern data analysis</a></li>
+<li><a href="#rmarkdown-for-reproducible-research">Rmarkdown for reproducible research</a></li>
 </ul></li>
-<li><a href="#our-expectations">Our expectations</a><ul>
-<li><a href="#navigating-the-materials">Navigating the materials</a></li>
-<li><a href="#self-guided-learning">Self-guided learning</a></li>
-<li><a href="#slack">Slack</a></li>
+<li><a href="#getting-started-with-r-and-rstudio">Getting started with R and RStudio</a><ul>
+<li><a href="#install-r-and-rstudio">Install R and RStudio</a></li>
+<li><a href="#open-the-rstudio-ide">Open the RStudio IDE</a></li>
+<li><a href="#compute-in-the-console">Compute in the console</a></li>
+<li><a href="#install-some-packages">Install some packages</a></li>
+<li><a href="#experiment-with-r-markdown">Experiment with R Markdown</a></li>
+<li><a href="#r-scripts">R Scripts</a></li>
+<li><a href="#create-an-rstudio-project">Create an RStudio Project</a></li>
 </ul></li>
-<li><a href="#getting-started-with-r-and-rstudio">Getting started with R and RStudio</a></li>
+<li><a href="#conclusions">Conclusions</a></li>
 <li><a href="#references">References</a></li>
 </ul>
 </div>
@@ -713,6 +718,8 @@
 <li><input checked="" disabled="" type="checkbox"> Open R using the RStudio Integrated Developer Environment (IDE)</li>
 <li><input checked="" disabled="" type="checkbox"> Install and enable R packages and query package documentation</li>
 <li><input checked="" disabled="" type="checkbox"> Perform basic calculations via the R Console</li>
+<li><input checked="" disabled="" type="checkbox"> Render R Markdown files</li>
+<li><input checked="" disabled="" type="checkbox"> Create R Projects</li>
 <li><input checked="" disabled="" type="checkbox"> Read-in datasets from external resources as objects (specifically <code>tibbles</code>)</li>
 </ul>
 
@@ -722,7 +729,7 @@
 </div>
 <div id="welcome-to-visualization-for-geographic-data-science" class="section level2">
 <h2>Welcome to <em>Visualization for Geographic Data Science</em></h2>
-<p>Welcome to <em>Visualization for Geographic Data Science</em> (<em>vis-for-gds</em>). In this first session we’ll cover the background to the module – the why, what and how of <em><strong>vis</strong>-for-gds</em>, a little on how the module will be run and our expectations of you.</p>
+<p>Welcome to <em>Visualization for Geographic Data Science</em> (<em>vis-for-gds</em>). In this first session we’ll cover the background to the module – the why, what and how of <em><strong>vis</strong>-for-gds</em>. If you’ve not already you should check out the course outline on the <a href="../../syllabus/">Syllabus</a> page for an overall preview of the module.</p>
 <p>The main home for this module is <a href="../../">this website</a>. However, via <a href="">Minerva</a> you can access the <a href="">Module Handbook</a>. You will use submission boxes in <a href="">Minerva</a> to upload coursework in the usual way.</p>
 </div>
 <div id="why-vis-for-gds" class="section level2">
@@ -790,8 +797,8 @@ Figure 2: Plots of Anscombe’s quartet
 </div>
 <div id="what-vis-for-gds" class="section level2">
 <h2>What <em>vis-for-gds</em>?</h2>
-<p>This is a very practical module. With the exception of this Introduction, the weekly sessions will blend both theory and practical coding activity. We will cover fundamentals around visual data analysis from Information Visualization and Statistics and as you read the session materials you will be writing data processing and analysis code and so be generating analysis outputs of your own. We will also be working with real datasets – from the Political Science, Urban and Transport Planning and Health domains. So we will hopefully be generating real findings and knowledge.</p>
-<p>To do this in a genuine way – to generate real knowledge from datasets – we will have to cover a reasonably broad set of data processing and analysis procedures. As well as developing expertise around designing data-rich, visually compelling graphics (of the sort demonstrated in <a href="https://www.gicentre.net/jwo/index">Jo Wood’s TEDx talk</a>), we will need to cover more tedious aspects of data processing and wrangling. Additionally, if we are to learn how to generate and communicate and make claims under uncertainty with our data graphics, then we will need to cover some aspects of estimation and modelling from Statistics. In short, we will cover most of <span class="citation">Donoho (<a href="#ref-donoho_fifty_2017" role="doc-biblioref">2017</a>)</span>’s six key facets of a data science discipline:</p>
+<p>This is a very practical module. With the exception of this Introduction, the weekly sessions will blend both theory and practical coding activity. We will cover fundamentals around visual data analysis from Information Visualization and Statistics. As you read the session materials you will be writing data processing and analysis code and so be generating analysis outputs of your own. We will also be working with real datasets – from the Political Science, Urban and Transport Planning and Health domains. So we will hopefully be generating real findings and knowledge.</p>
+<p>To do this in a genuine way – to generate real knowledge from datasets – we will have to cover a reasonably broad set of data processing and analysis procedures. As well as developing expertise around designing data-rich, visually compelling graphics (of the sort demonstrated in <a href="https://www.gicentre.net/jwo/index">Jo Wood’s TEDx talk</a>), we will need to cover more tedious aspects of <strong>data processing</strong> and <strong>wrangling</strong>. Additionally, if we are to learn how to generate and communicate and make claims under uncertainty with our data graphics, then we will need to cover some aspects of estimation and modelling from Statistics. In short, we will cover most of <span class="citation">Donoho (<a href="#ref-donoho_fifty_2017" role="doc-biblioref">2017</a>)</span>’s six key facets of a data science discipline:</p>
 <ol style="list-style-type: decimal">
 <li>data gathering, preparation, and exploration (Sessions 2, 3, 5);</li>
 <li>data representation and transformation (Sessions 2, 3);</li>
@@ -800,90 +807,264 @@ Figure 2: Plots of Anscombe’s quartet
 <li>data modelling (Sessions 6, 7, 8);</li>
 <li>and a more introspective “science about data science” (All Sessions, Plus Optional Extra)</li>
 </ol>
-<p>There is already a rich and impressive set of open <a href="../useful">Resources</a> practically introducing how to do modern <a href="https://r4ds.had.co.nz/index.html">Data Science</a>, <a href="https://socviz.co/">Visualization</a> and <a href="https://geocompr.robinlovelace.net/">Geographic Analysis</a>. We will certainly draw on these at different stages in the module. What makes this module different from these existing resources is that we will be <strong>doing</strong> applied data science throughout – we will be identifying and diagnosing problems when gathering data, discovering patterns (some maybe even spurious) as we do exploratory analysis, and will attampt to make claims under uncertainty as we generate models based on observed patterns. We will work with both new, passively-collected datasets, as well as more traditional, actively collected datasets located within various social science domains: Political Science, Health Science and Urban and Transport Planning.</p>
+<p>There is already a rich and impressive set of open <a href="../useful">Resources</a> practically introducing how to do modern <a href="https://r4ds.had.co.nz/index.html">Data Science</a>, <a href="https://socviz.co/">Visualization</a> and <a href="https://geocompr.robinlovelace.net/">Geographic Analysis</a>. We will certainly draw on these at different stages in the module. What makes this module different from these existing resources is that we will be <strong>doing</strong> applied data science throughout – we will be identifying and diagnosing problems when gathering data, discovering patterns (some maybe even spurious) as we do exploratory analysis, and attempt to make claims under uncertainty as we generate models based on observed patterns. We will work with both new, passively-collected datasets, as well as more traditional, actively collected datasets located within various social science domains: Political Science, Health Science and Urban and Transport Planning.</p>
 </div>
 <div id="how-vis-for-gds" class="section level2">
 <h2>How <em>vis-for-gds</em>?</h2>
-<div id="r" class="section level3">
-<h3>R</h3>
-<p>Through the module we will apply modern approaches to data analysis. All data collection, analysis and reporting activity will be completed using <a href="https://www.r-project.org/"><code>R</code></a>. Released as open source software as part of a research project in 1995, for some time <code>R</code> was the preserve of academics. From 2010s onwards, the <code>R</code> community expanded rapidly and along with <a href="https://www.python.org/"><code>Python</code></a> is regarded as the key technology for doing data analysis. <code>R</code> is used increasingly outside of academia, by organisations such as Google <a href="https://research.google.com/pubs/pub37483.html">[example]</a>, Facebook <a href="http://flowingdata.com/2010/12/13/facebook-worldwide-friendships-mapped/">[example]</a>, Twitter <a href="https://blog.twitter.com/official/en_us/a/2013/the-geography-of-tweets.html">[example]</a>, New York Times <a href="http://www.nytimes.com/interactive/2012/05/05/sports/baseball/mariano-rivera-and-his-peers.html?ref=baseballexample">[example]</a>, BBC <a href="https://bbc.github.io/rcookbook/">[example]</a> and many more.</p>
-<p>There are many benefits that come from being fully open-source, with a critical mass of users. Firstly, there is an array of online forums, tutorials and code examples from which to learn. Second, with such a large community, there are numerous expert <code>R</code> users who themselves contribute by developing <em>libraries</em> or <em>packages</em> that extend its use. As a result <code>R</code> is employed for a very wide set of use cases – this website was even built in <code>R</code> using amongst other things the <a href="https://bookdown.org/yihui/blogdown/"><code>blogdown</code></a> package.</p>
+<div id="r-for-modern-data-analysis" class="section level3">
+<h3>R for modern data analysis</h3>
+<p>Through the module we will apply modern approaches to data analysis. All data collection, analysis and reporting activity will be completed using <a href="https://www.r-project.org/"><code>R</code></a> and the <a href="https://rstudio.com/"><code>RStudio</code></a> <a href="https://en.wikipedia.org/wiki/Integrated_development_environment">Integrated Development Environment</a> (IDE). Released as open source software as part of a research project in 1995, for some time <code>R</code> was the preserve of academics. From 2010s onwards, the <code>R</code> community expanded rapidly and along with <a href="https://www.python.org/"><code>Python</code></a> is regarded as the key technology for doing data analysis. <code>R</code> is used increasingly outside of academia, by organisations such as Google <a href="https://research.google.com/pubs/pub37483.html">[example]</a>, Facebook <a href="http://flowingdata.com/2010/12/13/facebook-worldwide-friendships-mapped/">[example]</a>, Twitter <a href="https://blog.twitter.com/official/en_us/a/2013/the-geography-of-tweets.html">[example]</a>, New York Times <a href="http://www.nytimes.com/interactive/2012/05/05/sports/baseball/mariano-rivera-and-his-peers.html?ref=baseballexample">[example]</a>, BBC <a href="https://bbc.github.io/rcookbook/">[example]</a> and many more.</p>
+<p>There are many benefits that come from being fully open-source, with a critical mass of users. Firstly, there is an array of online forums, tutorials and code examples from which to learn. Second, with such a large community, there are numerous expert <code>R</code> users who themselves contribute by developing <strong>libraries</strong> or <strong>packages</strong> that extend its use. As a result <code>R</code> is employed for a very wide set of use cases – this website was even built in <code>R</code> using amongst other things the <a href="https://bookdown.org/yihui/blogdown/"><code>blogdown</code></a> package.</p>
 <p><div class="alert alert-note">
   <div>
-    An R package is a bundle of code, data and documentation, usually hosted centrally on the CRAN (Comprehensive R Archive Network). A particularly important, though very recent, set of packages is the <a href="http://www.tidyverse.org">tidyverse</a>: a set of libraries authored mainly by <a href="http://hadley.nz">Hadley Wickham</a>, which share a common underlying philosophy, syntax and documentation.
+    The key reason for our use of <code>R</code> is the ecosystem of users and <strong>packages</strong> that have emerged in recent years. An R package is a bundle of code, data and documentation, usually hosted on the <a href="https://cran.r-project.org/">CRAN</a> (Comprehensive R Archive Network).
   </div>
 </div>
 </p>
-<p><a href="https://ids-s1-20.github.io/slides/week-01/w1-d05-toolkit-r/w1-d05-toolkit-r.html#15" class="uri">https://ids-s1-20.github.io/slides/week-01/w1-d05-toolkit-r/w1-d05-toolkit-r.html#15</a></p>
-<div id="reproducibility" class="section level4">
-<h4>Reproducibility</h4>
-<hr />
+<p>Of particular importance is the <a href="http://www.tidyverse.org"><code>tidyverse</code></a> package. This is a set of packages for doing Data Science authored by a software development team at <a href="https://rstudio.com/">RStudio</a> led by <a href="http://hadley.nz">Hadley Wickham</a>. <code>tidyverse</code> packages share a principled underlying philosophy, syntax and documentation. Contained within the <code>tidyverse</code> is its data visualization package, <a href="https://ggplot2.tidyverse.org/"><code>ggplot2</code></a>. This package pre-dates the <code>tidyverse</code> – it started as <a href="http://had.co.nz/thesis/practical-tools-hadley-wickham.pdf">Hadley Wickham’s PhD thesis</a> and is one of the most widely-used toolkits for generating data graphics. As with other heavily used visualization toolkits (<a href="https://www.tableau.com/en-gb"><code>Tableau</code></a>, <a href="https://vega.github.io/vega-lite/"><code>vega-lite</code></a>) it is inspired by Leland Wilkinson’s <a href="https://www.springer.com/gp/book/9780387245447">The Grammar of Graphics</a>, the <code>gg</code> in <code>ggplot</code> stands for Grammar of Graphics. Understanding the design principles behind the <em>Grammar of Graphics</em> (and <code>tidyverse</code>) is necessary for modern data analysis and so we will cover this in Sessions 2 and 3, as well as re-visiting later in the module.</p>
+</div>
+<div id="rmarkdown-for-reproducible-research" class="section level3">
+<h3>Rmarkdown for reproducible research</h3>
 <blockquote>
-<p>Reproducible research is the idea that data analyses, and more generally, scientific claims, are published with their data and software code so that others may verify the findings and build upon them.
-Roger Peng, Jeff Leek and Brian Caffo</p>
+<p>Reproducible research is the idea that data analyses, and more generally, scientific claims, are published with their data and software code so that others may verify the findings and build upon them.</p>
+<p>Roger Peng, Jeff Leek and Brian Caffo</p>
 </blockquote>
-<p>In recent years there has been much introspection around how science works – around how statistical claims are made from reasoning over evidence. This came on the back of, amongst other things, a high profile paper published in <a href="http://science.sciencemag.org/content/349/6251/aac4716">Science</a>, which found that of 100 recent peer-reviewed psychology experiments, the findings of only 39 could be replicated. The upshot is that researchers must now make every possible effort to make their work transparent, such that <code>_all_ aspects of the answer generated by any given analysis [can] be tested' [@brunsdon_opening_2020]. In this setting, traditional data analysis software that support point-and-click interaction is unhelpful; it would be tedious to make notes describing all interactions with, for example, SPSS. As a declarative programming language, however, it is very easy to provide such a provenance trail for your workflows in</code>R` since this necessarily exists in your analysis scripts.</p>
-<p>Concerns around the <em>reproducibility crisis</em> are not simply a function of transparency in methodology and research design. Rather, they relate to a culture and incentive structure whereby scientific claims are conferred with authority when reported within the (slightly backwards) logic of Null Hypothesis Significance Testing (NHST) and <em>p-values</em>. We will cover a little on this in session 7 and 8, but for an accessible read on the phenomenon of <em>p-hacking</em> (with interactive graphic) see <a href="https://fivethirtyeight.com/features/science-isnt-broken/#part1">this article</a> from the excellent <a href="http://fivethirtyeight.com">FiveThirtyEight</a> website. Again, the upshot of all this introspection is a rethinking of the way in which Statistics is taught in schools and universities, with greater emphasis on understanding through computational approaches rather than traditional equations, formulas and probability tables. Where does <code>R</code> fit within this? Simply put: <code>R</code> is far better placed than traditional software tools and point-and-click paradigms for supporting computational approaches to statistics – with a set of methods and libraries for performing simulations and permutation-based tests.</p>
-<p>In essence, a reproducible research philosophy is one which allows all aspects of the answer generated by any given analysis to be tested. This is especially the case as our lives are increasingly lived and shaped by a vast amount of data—often termed Big Data (upper case intentional).</p>
-<p>Near-term goals:
-Are the tables and figures reproducible from the code and data?
-Does the code actually do what you think it does?
-In addition to what was done, is it clear why it was done?</p>
-<p>Long-term goals:
-Can the code be used for other data?
-Can you extend the code to do other things?</p>
-</div>
-<div id="literate-programming" class="section level4">
-<h4>Literate programming</h4>
-<p>.Rmd for code, narrative and output in one place.</p>
-<p>rmarkdown and the various packages that support it enable R users to write their code and prose in reproducible computational documents</p>
-<p>Fully reproducible reports – each time you knit the analysis is ran from the beginning
-Simple markdown syntax for text
-Code goes in chunks, defined by three backticks, narrative goes outside of chunks</p>
-<p>Advertise .Rmd cheat sheet</p>
-<p>How we will use .Rmd :</p>
-<p>Every assignment / report / project / etc. is an R Markdown document
-You’ll always have a template R Markdown document to start with
-The amount of scaffolding in the template will decrease over the semester</p>
-</div>
-<div id="version-control" class="section level4">
-<h4>Version control</h4>
-<p>git!!</p>
-</div>
-</div>
-<div id="tidyverse" class="section level3">
-<h3>tidyverse</h3>
-<p>The tidyverse is an opinionated collection of R packages designed for data science
-All packages share an underlying philosophy and a common grammar</p>
-</div>
-<div id="ggplot2" class="section level3">
-<h3>ggplot2?</h3>
-<p>ggplot2 is tidyverse’s data visualization package
-gg in “ggplot2” stands for Grammar of Graphics
-Inspired by the book Grammar of Graphics by Leland Wilkinson</p>
-</div>
-</div>
-<div id="our-expectations" class="section level2">
-<h2>Our expectations</h2>
-<div id="navigating-the-materials" class="section level3">
-<h3>Navigating the materials</h3>
-</div>
-<div id="self-guided-learning" class="section level3">
-<h3>Self-guided learning</h3>
+<p>In recent years there has been much introspection around how science works – around how statistical claims are made from reasoning over evidence. This came on the back of, amongst other things, a high profile paper published in <a href="http://science.sciencemag.org/content/349/6251/aac4716">Science</a>, which found that of 100 recent peer-reviewed psychology experiments, the findings of only 39 could be replicated. The upshot is that researchers must now make every possible effort to make their work transparent, such that “<em>all</em> aspects of the answer generated by any given analysis [can] be tested” <span class="citation">(Brunsdon and Comber <a href="#ref-brunsdon_opening_2020" role="doc-biblioref">2020</a>)</span>.</p>
+<p>A reproducible research project should be accompanied with:</p>
 <ul>
-<li>stay engaged</li>
-<li>participate</li>
-<li>ask questions</li>
+<li><em>code</em> and <em>data</em> that allows tables and figures presented in research outputs to be regenerated</li>
+<li><em>code</em> and <em>data</em> that <em>does</em> what it <em>claims</em> (the code works)</li>
+<li><em>code</em> and <em>data</em> that can be justified and explained through proper documentation</li>
 </ul>
-</div>
-<div id="slack" class="section level3">
-<h3>Slack</h3>
+<p>If these goals are met, then it may be possible for others to use the code on new and different data to study whether the findings reported in one project might be <strong>replicated</strong> or to use the same data, but update the code to, for example, extend the original analysis (to perform a re-analysis). This model – generate findings, test for replicability in new contexts and re-analysis – is essentially how knowledge development has always worked. However, to achieve this the data and procedures on which findings were generated must be made open and transparent.</p>
+<p>In this setting, traditional proprietary data analysis software such as SPSS and Esri’s ArcGIS that support point-and-click interaction is problematic. First, whilst these software may rely on the sorts of packages and libraries with bundled code that <code>R</code> and <code>Python</code> uses for implementing statistical procedures, those libraries are closed. It is not possible, and therefore less common, for the researcher to fully interrogate into the underlying processes that are being implemented and the results need to be taken more or less on faith. Second, but probably most significantly (for us), it would be tedious to make notes describing all interactions performed when working with a dataset in SPSS or ArcGIS.</p>
+<p>As a declarative programming language, it is very easy to provide such a provenance trail for your workflows in <code>R</code> since this necessarily exists in the analysis scripts. But more importantly, the <a href="https://en.wikipedia.org/wiki/Integrated_development_environment">Integrated Development Environments</a> (IDEs) through which <code>R</code> (and <code>Python</code>) are most often accessed provide notebook environments that allow users to curate reproducible computational documents that blend <strong>input code</strong>, <strong>explanatory prose</strong> and <strong>outputs</strong>. In this module we will prepare these sorts of notebooks using <a href="https://rmarkdown.rstudio.com/">R Markdown</a>.</p>
+<!-- Within Spatial Statistics, results from a Geographically Weighted Regression analysis implemented in ArcGIS were found to be inconsistent with those generated in `R` and `Python` [] -- inconsistencies that could not be examined as the code behind ArcGIS is closed. -->
 </div>
 </div>
 <div id="getting-started-with-r-and-rstudio" class="section level2">
 <h2>Getting started with R and RStudio</h2>
-<p>Packages are installed with the install.packages function and loaded with the library function, once per session</p>
-<p>Object documentation can be accessed with ?</p>
+<p>I mentioned that the weekly sessions will blend both theory and practical coding activity. This Introduction has been dedicated more towards conceptual and procedural matters. For the practical element this time, we want to get you configured and familiar with <code>R</code> and RStudio.</p>
+<div id="install-r-and-rstudio" class="section level3">
+<h3>Install R and RStudio</h3>
+<ul>
+<li>Install the latest version of <a href="https://cloud.r-project.org/">R</a>. Note that there are installations for <a href="https://cloud.r-project.org/bin/windows/">Windows</a>, <a href="https://cloud.r-project.org/">macOS</a> and <a href="https://cloud.r-project.org/">Linux</a>. Run the installation from the file you downloaded (an <code>.exe</code> or <code>.pkg</code> extension).</li>
+<li>Install the latest version of <a href="https://rstudio.com/products/rstudio/download/#download">RStudio Desktop</a>. Note again that there are separate installations depedning on operating system – for Windows an <code>.exe</code> extension, macOS a <code>.dmg</code> extension.</li>
+</ul>
+</div>
+<div id="open-the-rstudio-ide" class="section level3">
+<h3>Open the RStudio IDE</h3>
+<div class="figure"><span id="fig:rstudio-annotate"></span>
+<img src="../../class/01-class_files/rstudio_annotate.png" alt="The RStudio IDE" width="100%" />
+<p class="caption">
+Figure 3: The RStudio IDE
+</p>
+</div>
+<ul>
+<li>Once installed, open the RStudio IDE.</li>
+<li>Open an R Script by clicking <code>File</code> &gt; <code>New File</code> &gt; <code>R Script</code> .</li>
+</ul>
+<p>You should see a set of windows roughly similar to those in the Figure (although I’ve already started on some of the computing exercises in the next section). The top left pane is used either as a <em>Code Editor</em> (the tab named <code>Untitled1</code>) or data viewer. This is where you’ll write, organise and comment R code for execution or inspect datasets as a spreadsheet representation. Below this in the bottom left pane is the R Console, in which you write and execute commands directly. To the top right is a pane with the tabs Environment and History. This displays all objects – data and plot items, calculated functions – stored in-memory during an R session. In the bottom right is a pane for navigating through project directories, displaying plots, details of installed and loaded packages and documentation on their functions.</p>
+</div>
+<div id="compute-in-the-console" class="section level3">
+<h3>Compute in the console</h3>
+<p>You will write and execute almost all code from the code editor pane. To start though let’s use <code>R</code> as a calculator by typing some commands into the Console. You’ll create an object (<code>x</code>) and assign it a value using the assignment operator (<code>&lt;-</code>), then perform some simple statistical calculations using functions that are held within the <code>base</code> package.</p>
+<p><div class="alert alert-note">
+  <div>
+    The <code>base</code> package is core and native to <code>R</code>. Unlike all other packages, it does not need to be installed and called explicitly. One means of checking the package to which a function you are using belongs is to call the help command (<code>?</code>) on that function: e.g. <code>?mean()</code>.
+  </div>
+</div>
+</p>
+<ul>
+<li>Type the commands contained in the code block below into your R Console. Notice that since you are assigning values to each of these objects they are stored in memory and appear under the Global Environment pane.</li>
+</ul>
+<pre class="r"><code># Create variable and assign a value.
+x &lt;- 4
+# Perform some calculations using R as a calculator.
+x_2 &lt;- x^2
+# Perform some calculations using functions that form baseR.
+x_root &lt;- sqrt(x_2)</code></pre>
+</div>
+<div id="install-some-packages" class="section level3">
+<h3>Install some packages</h3>
+<p>There are two steps to getting packages down and available in your working environment:</p>
+<ol style="list-style-type: decimal">
+<li><code>install.packages(&lt;package-name&gt;)</code> downloads the named package from a repository.</li>
+<li><code>library(&lt;package-name&gt;)</code> makes the package available in your current session.</li>
+</ol>
+<ul>
+<li>Install the <code>tidyverse</code>, the core collection of packages for doing Data Science in <code>R</code>, by running the code below:</li>
+</ul>
+<pre class="r"><code>install.packages(&quot;tidyverse&quot;)</code></pre>
+<p>If you have little or no experience in <code>R</code>, it is easy to get confused around downloading and then using packages in a session. For example, let’s say we want to make use of the simple features package (<a href="https://r-spatial.github.io/sf/index.html"><code>sf</code></a>), which we will drawn on heavily in the module for performing spatial operations.</p>
+<ul>
+<li>Run the code below:</li>
+</ul>
+<pre class="r"><code>library(sf)</code></pre>
+<p>Unless you’ve previously installed <code>sf</code>, you’ll probably get an error message that looks like this:</p>
+<pre class="r"><code>&gt; Error in library(sf): there is no package called ‘sf’</code></pre>
+<p>So let’s install it.</p>
+<ul>
+<li>Run the code below:</li>
+</ul>
+<pre class="r"><code>install.packages(&quot;sf&quot;)</code></pre>
+<p>And now it’s installed, why not bring up some documentation on one of its functions (<a href="https://r-spatial.github.io/sf/reference/geos_binary_pred.html"><code>st_contains()</code></a>).</p>
+<ul>
+<li>Run the code below:</li>
+</ul>
+<pre class="r"><code>?st_contains()</code></pre>
+<p>Since you’ve downloaded the package but not made it available to your session, you should get the message:</p>
+<pre class="r"><code>&gt; No documentation for ‘st_contains’ in specified packages and libraries</code></pre>
+<p>So let’s try again, by first calling <code>library(sf)</code>.</p>
+<ul>
+<li>Run the code below:</li>
+</ul>
+<pre class="r"><code>library(sf)
+## Linking to GEOS 3.7.2, GDAL 2.4.1, PROJ 6.1.0
+?st_contains()</code></pre>
+<p>Now let’s install some of the remaining core packages on which the module depends.</p>
+<ul>
+<li>Run the block below, which passes a <a href="https://r4ds.had.co.nz/vectors.html">vector</a> of package names to the <code>install.packages()</code> function:</li>
+</ul>
+<pre class="r"><code>install.packages(c(&quot;devtools&quot;,&quot;usethis&quot;, &quot;rmarkdown&quot;, &quot;knitr&quot;,&quot;fst&quot;,
+&quot;lubridate&quot;, &quot;tidymodels&quot;, &quot;rmapshaper&quot;))</code></pre>
+<p><div class="alert alert-note">
+  <div>
+    If you wanted to make use of a package only very occasionally in a single session, you could access it without explicitly loading it via <code>library(&lt;package-name&gt;)</code>, using this syntax: <code>&lt;package-name&gt;::&lt;function_name&gt;</code>, e.g. <code>?sf::st_contains()</code>.
+  </div>
+</div>
+</p>
+</div>
+<div id="experiment-with-r-markdown" class="section level3">
+<h3>Experiment with R Markdown</h3>
+<p>R Markdown documents are suffixed with the extension <code>.Rmd</code> and based partly on <a href="https://en.wikipedia.org/wiki/Markdown">Markdown</a>, a lightweight markup language originally used as a means of minimising tedious mark-up tags (<code>&lt;header&gt;&lt;/header&gt;</code>) when preparing HTML documents. The idea is that you trade some flexibility in the formatting of your HTML for ease-of-writing. Working with R Markdown is very similar to Markdown. Sections are denoted hierarchically with hashes (<code>#</code>, <code>##</code>, <code>###</code>) and emphasis using <code>*</code> symbols (<code>*emphasis* **added**</code> reads <em>emphasis</em> <strong>added</strong> ). Different from standard Markdown, however, R Markdown documents can also contain code chunks that can be run when the document is typeset – they are a mechanism for producing elegant reproducible notebooks.</p>
+<p>Each session of the module has an accompanying R Markdown file. in later sessions you will use these to author computational notebooks that blend code, analysis prose and outputs.</p>
+<ul>
+<li>Download the <a href="../../homework/01-homework_files/01-template.Rmd"><i class="fab fa-r-project"></i> 01-template.Rmd</a> file for this session and open it in RStudio by clicking <code>File</code> &gt; <code>Open File ...</code> &gt; <code>&lt;your-downloads&gt;/01-template.Rmd</code>.</li>
+</ul>
+<p>A quick anatomy of an R Markdown files :</p>
+<ul>
+<li><a href="https://en.wikipedia.org/wiki/YAML">YAML</a> - positioned at the head of the document and contains metadata determining amongst other things the author details and the output format when typesetting.</li>
+<li>TEXT - incorporated throughout to document and comment on your analysis.</li>
+<li>CODE chunks - containing discrete that are to be run when the .Rmd file is typeset or <em>knit</em>.</li>
+</ul>
+<div class="figure"><span id="fig:rmarkdown-annotate"></span>
+<img src="../../class/01-class_files/rmarkdown_annotate.png" alt="The anatomy of R Markdown" width="100%" />
+<p class="caption">
+Figure 4: The anatomy of R Markdown
+</p>
+</div>
+<p>The <a href="https://en.wikipedia.org/wiki/YAML">YAML</a> section of an <code>.Rmd</code> file controls how your file is typeset and consists of <code>key: value</code> pairs enclosed by <code>---</code>. Notice that you can change the output format – so should you wish you can generate for example <code>.pdf</code>, <code>.docx</code> files for your reports.</p>
+<pre><code>---
+author: &quot;Roger Beecham&quot;
+date: &#39;2021-05-01&#39;
+title: &quot;Session 01&quot;
+output:html_document
+---</code></pre>
+<p>R Markdown files are rendered or typeset with the <strong>Knit</strong> button, annotated in the Figure above. This starts the <code>knitr</code> package and executes all the code chunks and outputs a <strong>markdown</strong> (<code>.md</code>) file. The markdown file can then be converted to many different output formats via <a href="https://pandoc.org/">pandoc</a>.</p>
+<ul>
+<li><strong>Knit</strong> the <a href="../../homework/01-homework_files/01-template.Rmd"><i class="fab fa-r-project"></i> 01-template.Rmd</a> file for this session, either by clicking the <em>Knit</em> button or by typing <kbd>ctrl</kbd> + <kbd>⇧</kbd> + <kbd>K</kbd> on Windows, <kbd>⌘</kbd> + <kbd>⇧</kbd> + <kbd>K</kbd> on macOS.</li>
+</ul>
+<p>You will notice that R Markdown <strong>code chunks</strong> can be customised in different ways. This is achieved by populating fields in the curly brackets at the start of the code chunk:</p>
+<pre><code>```{r &lt;chunk-name&gt;, echo=TRUE, eval=FALSE, cache=FALSE}
+  # Some code that is either run or rendered.
+```</code></pre>
+<p>A quick overview of the parameters.</p>
+<ul>
+<li><code>&lt;chunk-name&gt;</code> - Chunks can be given distinct names. This is useful for navigating R markdown file. It also supports chaching – chunks with distinct names are only run once, important if certain chunks take some time to execute.</li>
+<li><code>echo=&lt;TRUE|FALSE&gt;</code> - Determines whether the code is visible or hidden from the typeset file. If you output file is a data analysis report you may not wish to expose lengthy code chunks as these may disrupt the discursive text that appears outside of the code chunks.</li>
+<li><code>eval=&lt;TRUE|FALSE&gt;</code> - Determines whether the code is evaluated (executed). This is useful if you wish to present some code in your document for display purposes.</li>
+<li><code>cache=&lt;TRUE|FALSE&gt;</code> - Determines where the results from the code chunk are cached.</li>
+</ul>
+<p>As part of the <a href="../../homework/">homework</a> from this session you will do some more research on R Markdown. It is worth in advance downloading RStudio’s cheatsheets, which provide comprehensive details on how to configure R Markdown documents:</p>
+<ul>
+<li>Open RStudio and select <code>Help</code> &gt; <code>Cheatsheets</code> &gt; <code>R Markdown Cheat Sheet</code> | <code>R Markdown Reference Guide</code></li>
+</ul>
+</div>
+<div id="r-scripts" class="section level3">
+<h3>R Scripts</h3>
+<p>Whilst there are obvious benefits to working in R Markdown documents when doing data analysis, there may be occasions where working in an script is preferable. Scripts are plain text files with the extension <code>.R</code>. Comments – text that are not executed as code – are denoted with the <code>#</code> symbol.</p>
+<p>I tend to use R Scripts for writing discrete but substantial code blocks that are to be executed. For example, I might generate a set of <a href="https://r4ds.had.co.nz/functions.html">functions</a> that relate to a particular use case and bundle these together in an R script. These then might be referred to in a data analysis from an <code>.Rmd</code>, which makes various use of these functions in a similar way as one might import a package. Below is an example script that we will encounter later in the module when creating flow visualizations in R very similar to those that appear in Jo Wood’s TEDx talk. This script is saved with the fie name <code>bezier_path.R</code>. If it were stored in a sensible location, like a project’s <code>code</code> folder, it could be called from an R Markdown file with <code>source(./code/bezier_path)</code>. R Scripts can be edited in the same way as R Markdown files in RStudio, via the <em>Code Editor</em> pane.</p>
+<pre class="r"><code># bezier_path.R
+#
+# Author: Roger Beecham
+##############################################################################
+
+#&#39; Functions for generating input data for asymmetric bezier curve for OD data,
+#&#39; such that the origin is straight and destination curve. The retuned tibble
+#&#39; is passed to geom_bezier().Parametrtisation follows that published in
+#&#39; Wood et al. 2011. doi: 10.3138/carto.46.4.239.
+#&#39; @param data A df with origin and destination pairs representing 2D locations
+#&#39; (o_east, o_north, d_east, d_north) in cartesian (OSGB) space.
+#&#39; @param degrees For converting to radians.
+#&#39; @return A tibble of coordinate pairs representing asymmetric curve
+
+get_trajectory &lt;- function(data) {
+  o_east=data$o_east
+  o_north=data$o_north
+  d_east=data$d_east
+  d_north=data$d_north
+  od_pair=data$od_pair
+
+  curve_angle=get_radians(-90)
+  east=(o_east-d_east)/6
+  north=(o_north-d_north)/6
+  c_east=d_east + east*cos(curve_angle) - north*sin(curve_angle)
+  c_north=d_north + north*cos(curve_angle) + east*sin(curve_angle)
+  d &lt;- tibble(
+    x=c(o_east,c_east,d_east),
+    y=c(o_north,c_north,d_north),
+    od_pair=od_pair
+  )
+}
+
+# Convert degrees to radians.
+get_radians &lt;- function(degrees) {
+  (degrees * pi) / (180)
+}</code></pre>
+<p>To an extent R Scripts are more straightforward than R Markdown files in that you don’t have to worry about configuring code chunks. They are really useful for quickly developing bits of code. This can be achieved by highlighting over the code that you wish to execute and clicking the <code>Run</code> icon at the top of the <em>Code Editor</em> pane or by typing <kbd>ctrl</kbd> + <kbd>rtn</kbd> on Windows, <kbd>⌘</kbd> + <kbd>rtn</kbd> on macOS</p>
+</div>
+<div id="create-an-rstudio-project" class="section level3">
+<h3>Create an RStudio Project</h3>
+<div class="figure"><span id="fig:rstudio-project"></span>
+<img src="../../class/01-class_files/rstudio_project.png" alt="Creating an RStudio Project" width="100%" />
+<p class="caption">
+Figure 5: Creating an RStudio Project
+</p>
+</div>
+<p>Throughout this module we will use project-oriented workflows. This is where all files pertaining to a data analysis – data, code and outputs – are organised from a single root folder and where <em>file path discipline</em> is used such that all paths are relative to the project’s root folder (see <a href="https://rstats.wtf/project-oriented-workflow.html">Bryan &amp; Hester 2020</a>). You can imagine that this sort of self-contained project set-up is necessary for achieving reproducibility of your research. They allow anyone to take a project and run it on their own machines without having to make any adjustments.</p>
+<p>You might have noticed that when you open RStudio it automatically <em>points to</em> a working directory, likely the home folder for your local machine, denoted with <code>~/</code> in the Console. RStudio will by default save any outputs to this folder and will also expect any data you use to be saved there. Clearly if you want to incorporate neat, self-contained project workflows then you will want to organise your work from a dedicated project folder rather than the default home folder for your machine. This can be achieved with the <code>setwd(&lt;path-to-your-project&gt;)</code> function. The problem with doing this is that you insert a path which cannot be understood outside of your local machine at the time it was created. This is a real pain. It makes simple things like moving projects around on your machine an arduous task and most importantly it hinders reproducibility if others are to reuse your work.</p>
+<p>RStudio Projects are a really excellent feature of the RStudio IDE that resolve these problems. Whenever you load up an RStudio Project, R starts up and the working directory is automatically set to the project’s root folder. If you were to move the project elsewhere on your machine, or to another machine, a new root is automatically generated – so RStudio projects ensure that relative paths work.</p>
+<p>Let’s create a new Project for this module:</p>
+<ul>
+<li>Select <code>File</code> &gt; <code>New Project</code> &gt; <code>New Directory</code>.</li>
+<li>Browse to a sensible location and give the project a suitable name. Then click <code>Create Project</code>.</li>
+</ul>
+<p>You will notice that the top of the Console window now indicates the root for this new project, in my case <code>~projects/vis-for-gds</code>.</p>
+<ul>
+<li>In the root of your project, create folders called <code>reports</code>, <code>code</code>, <code>data</code>, <code>figures</code>.</li>
+<li>Save this session’s <a href="../../homework/01-homework_files/01-template.Rmd"><i class="fab fa-r-project"></i> 01-template.Rmd</a> file to the <code>reports</code> folder.</li>
+</ul>
+<p>Your project’s folder structure should now look like this:</p>
+<pre class="text"><code>vis-for-gds\
+  vis-for-gds.Rproj
+  code\
+  data\
+  figures\
+  reports\
+    01-template.Rmd</code></pre>
+</div>
+</div>
+<div id="conclusions" class="section level2">
+<h2>Conclusions</h2>
+<p>Visual data analysis approaches are necessary for exploring complex patterns in data and to make and communicate claims under uncertainty. This is especially true of Geographic Data Science applications, where:</p>
+<ul>
+<li>datasets are being repurposed for social and natural sciences research for the first time;</li>
+<li>contain complex structure and geo-spatial relations that cannot be easily captured by statistical summaries alone;</li>
+<li>and, consequently, where the types of questions that can be asked and the techniques deployed to answer them cannot be easily specified in advance.</li>
+</ul>
+<p>In this module we will demonstrate this as we explore (Session 4 and 5), model under uncertainty (Session 6 and 7) and communicate (Session 7 and 8) with various social science datasets. We will work with both new, large-scale behavioural datasets, as well as more traditional, administrative datasets located within various social science domains: Political Science, Crime Science, Urban and Transport Planning.</p>
+<p>We will do so using the statistical programming environment <code>R</code>, which along with <a href="https://www.python.org/"><code>Python</code></a>, is <em>the</em> programming environment for modern data analysis. We will make use of various tools, software libraries that form part of the <code>R</code> ecosystem – the <a href="https://www.tidyverse.org/"><code>tidyverse</code></a> for doing modern data science and <a href="https://rmarkdown.rstudio.com/">R Markdown</a> for authoring reproducible research projects.</p>
 <!-- https://www.sciencedirect.com/science/article/pii/S1353829220311758?via%3Dihub -->
 </div>
 <div id="references" class="section level2 unnumbered">
@@ -897,6 +1078,9 @@ Inspired by the book Grammar of Graphics by Leland Wilkinson</p>
 </div>
 <div id="ref-beecham_exploring_2014">
 <p>Beecham, Roger, and Jo Wood. 2014. “Exploring Gendered Cycling Behaviours Within a Large-Scale Behavioural Data-Set.” <em>Transportation Planning and Technology</em> 37 (1). Taylor &amp; Francis: 83–97.</p>
+</div>
+<div id="ref-brunsdon_opening_2020">
+<p>Brunsdon, Chris, and Alexis Comber. 2020. “Opening Practice: Supporting Reproducibility and Critical Spatial Data Science.” <em>Journal of Geographical Systems</em>. doi:<a href="https://doi.org/10.1007/s10109-020-00334-2">10.1007/s10109-020-00334-2</a>.</p>
 </div>
 <div id="ref-donoho_fifty_2017">
 <p>Donoho, David. 2017. “50 Years of Data Science.” <em>Journal of Computational and Graphical Statistics</em> 26 (6): 745–66. doi:<a href="https://doi.org/10.1080/10618600.2017.1384734">10.1080/10618600.2017.1384734</a>.</p>

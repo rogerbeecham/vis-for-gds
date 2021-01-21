@@ -5,7 +5,7 @@
     <link>/homework/</link>
       <atom:link href="/homework/index.xml" rel="self" type="application/rss+xml" />
     <description>Homework for sessions</description>
-    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><lastBuildDate>Thu, 06 Feb 2020 00:00:00 +0000</lastBuildDate>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><lastBuildDate>Tue, 01 Jun 2021 00:00:00 +0000</lastBuildDate>
     <image>
       <url>/media/vis-for-gds.png</url>
       <title>Homework for sessions</title>
@@ -13,9 +13,9 @@
     </image>
     
     <item>
-      <title>Inroduction</title>
+      <title>Introduction</title>
       <link>/homework/01-homework/</link>
-      <pubDate>Thu, 06 Feb 2020 00:00:00 +0000</pubDate>
+      <pubDate>Tue, 01 Jun 2021 00:00:00 +0000</pubDate>
       <guid>/homework/01-homework/</guid>
       <description>
 &lt;!-- BLOGDOWN-HEAD --&gt;
@@ -26,12 +26,271 @@
 &lt;h2&gt;Contents&lt;/h2&gt;
 &lt;div id=&#34;TOC&#34;&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;#download-and-configure&#34;&gt;Download and Configure&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#session-outcomes&#34;&gt;Session Outcomes&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#introduction&#34;&gt;Introduction&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#task-1-read-and-complete-basicbasics&#34;&gt;Task 1: &lt;strong&gt;Read&lt;/strong&gt; and complete BasicBasics&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#task-2-watch-thomas-mocks-introduction-to-tidy-statistics&#34;&gt;Task 2: &lt;strong&gt;Watch&lt;/strong&gt; Thomas Mock’s Introduction to Tidy Statistics&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/div&gt;
 
-&lt;div id=&#34;download-and-configure&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;Download and Configure&lt;/h2&gt;
+&lt;div id=&#34;session-outcomes&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Session Outcomes&lt;/h2&gt;
+&lt;p&gt;By the end of this homework session you should:&lt;/p&gt;
+&lt;p&gt;&lt;div class=&#34;alert alert-objective&#34;&gt;
+  &lt;div&gt;
+    &lt;ul&gt;
+&lt;li&gt;&lt;input checked=&#34;&#34; disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; Be familiar with RStudio, R Markdown and R Projects.&lt;/li&gt;
+&lt;li&gt;&lt;input checked=&#34;&#34; disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; Know how to install and enable R packages and query package documentation.&lt;/li&gt;
+&lt;li&gt;&lt;input checked=&#34;&#34; disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; Understand the purpose R Markdown files and their anatomy.&lt;/li&gt;
+&lt;li&gt;&lt;input checked=&#34;&#34; disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; Know how to create R Projects and understand their benefits&lt;/li&gt;
+&lt;/ul&gt;
+
+  &lt;/div&gt;
+&lt;/div&gt;
+&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;introduction&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Introduction&lt;/h2&gt;
+&lt;p&gt;For each session I will post some additional exercises that relate to the practical learning you will be doing in-class. You will be populating R Markdown files as you complete the exercises. The exercises will vary in detail and challenge but you should try your best effort to complete them as they will form a portfolio of work that will contribute 25% of the module mark. Doing these exercises will also help you build the skills necessary to complete the project coursework that forms the main contribution to your module mark (75%).&lt;/p&gt;
+&lt;p&gt;There has been a lot to take in this session. There are no formal exercises to complete as part of this session’s homework. Instead we want you to really try to solidify your understanding of the core technology for the module.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;task-1-read-and-complete-basicbasics&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Task 1: &lt;strong&gt;Read&lt;/strong&gt; and complete BasicBasics&lt;/h2&gt;
+&lt;p&gt;&lt;a href=&#34;https://en.wikipedia.org/wiki/R-Ladies&#34;&gt;R-Ladies&lt;/a&gt; is an excellent initiative and the &lt;a href=&#34;https://rladiessydney.org/courses/ryouwithme/01-basicbasics-0/&#34;&gt;R-Ladies Sydney BasicBasics&lt;/a&gt; pages are really great for introducing the R and RStudio ecosystem, and a little of the &lt;code&gt;tidyverse&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;Read and work your way through:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://rladiessydney.org/courses/ryouwithme/01-basicbasics-1/&#34;&gt;BasicBasics 1&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://rladiessydney.org/courses/ryouwithme/01-basicbasics-2/&#34;&gt;BasicBasics 2&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://rladiessydney.org/courses/ryouwithme/01-basicbasics-3/&#34;&gt;BasicBasics 3&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;This repeats some of the work that you have done in class this session. If you’re entirely new to R programming, this repetition is probably useful (and necessary) at this stage.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;task-2-watch-thomas-mocks-introduction-to-tidy-statistics&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Task 2: &lt;strong&gt;Watch&lt;/strong&gt; Thomas Mock’s Introduction to Tidy Statistics&lt;/h2&gt;
+&lt;p&gt;Thomas Mock’s &lt;a href=&#34;https://rstudio.com/resources/webinars/a-gentle-introduction-to-tidy-statistics-in-r/&#34;&gt;Gentle Introduction to Tidy Statistics&lt;/a&gt; is pitched those coming to R after previously working with point-and-click interfaces (SPSS, STATA, ArcGIS). I strongly recommend that you watch this now as you start to embark on the “pain” of doing data analysis programmatically.&lt;/p&gt;
+&lt;div class=&#34;embed-responsive embed-responsive-16by9&#34;&gt;
+&lt;iframe class=&#34;embed-responsive-item&#34; src=&#34;https://rstudio.com/resources/webinars/a-gentle-introduction-to-tidy-statistics-in-r/&#34; frameborder=&#34;0&#34; allow=&#34;accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture&#34; allowfullscreen&gt;
+&lt;/iframe&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Data Fundamentals</title>
+      <link>/homework/02-homework/</link>
+      <pubDate>Tue, 01 Jun 2021 00:00:00 +0000</pubDate>
+      <guid>/homework/02-homework/</guid>
+      <description>
+&lt;!-- BLOGDOWN-HEAD --&gt;
+&lt;link href=&#34;../rmarkdown-libs/anchor-sections/anchor-sections.css&#34; rel=&#34;stylesheet&#34; /&gt;
+&lt;script src=&#34;../rmarkdown-libs/anchor-sections/anchor-sections.js&#34;&gt;&lt;/script&gt;
+&lt;!-- /BLOGDOWN-HEAD --&gt;
+
+&lt;h2&gt;Contents&lt;/h2&gt;
+&lt;div id=&#34;TOC&#34;&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#session-outcomes&#34;&gt;Session Outcomes&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#introduction&#34;&gt;Introduction&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#task-1-describe-data&#34;&gt;Task 1: Describe data&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#task-2-diagnose-data&#34;&gt;Task 2: Diagnose data&lt;/a&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#uk-general-election-results-2019&#34;&gt;UK General Election Results 2019&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#uk-general-election-results-2017-and-2019&#34;&gt;UK General Election Results 2017 and 2019&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#task-3-fix-data&#34;&gt;Task 3: Fix data&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#task-4-compute-from-data&#34;&gt;Task 4: Compute from data&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+
+&lt;div id=&#34;session-outcomes&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Session Outcomes&lt;/h2&gt;
+&lt;p&gt;By the end of this homework session you should be able to:&lt;/p&gt;
+&lt;p&gt;&lt;div class=&#34;alert alert-objective&#34;&gt;
+  &lt;div&gt;
+    &lt;ul&gt;
+&lt;li&gt;&lt;input checked=&#34;&#34; disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; Describe data according to its structure and contents.&lt;/li&gt;
+&lt;li&gt;&lt;input checked=&#34;&#34; disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; Calculate descriptive summaries over datasets.&lt;/li&gt;
+&lt;li&gt;&lt;input checked=&#34;&#34; disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; Apply high-level functions in &lt;code&gt;dplyr&lt;/code&gt; and &lt;code&gt;tidyr&lt;/code&gt; for working with data.&lt;/li&gt;
+&lt;/ul&gt;
+
+  &lt;/div&gt;
+&lt;/div&gt;
+&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;introduction&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Introduction&lt;/h2&gt;
+&lt;p&gt;This homework requires you to apply the concepts and skills developed in the class session on &lt;a href=&#34;../02-class/&#34;&gt;data fundamentals&lt;/a&gt;. Do complete each of the tasks and be sure to save your work as this homework will be submitted as part of your portfolio for Assignment 1.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;task-1-describe-data&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Task 1: Describe data&lt;/h2&gt;
+&lt;p&gt;Complete the data description table below identifying the &lt;strong&gt;measurement level&lt;/strong&gt; of each variable in the (fictional) New York bikeshare stations dataset below.&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr class=&#34;header&#34;&gt;
+&lt;th&gt;Variable name&lt;/th&gt;
+&lt;th&gt;Variable value&lt;/th&gt;
+&lt;th&gt;Measurement level&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr class=&#34;odd&#34;&gt;
+&lt;td&gt;&lt;code&gt;name&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;“Central Park”&lt;/td&gt;
+&lt;td&gt;&lt;enter here&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr class=&#34;even&#34;&gt;
+&lt;td&gt;&lt;code&gt;capacity&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;80&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr class=&#34;odd&#34;&gt;
+&lt;td&gt;&lt;code&gt;rank_capacity&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;45&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr class=&#34;even&#34;&gt;
+&lt;td&gt;&lt;code&gt;date_opened&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;“2014-05-23”&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr class=&#34;odd&#34;&gt;
+&lt;td&gt;&lt;code&gt;longitude&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;-74.00149746&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr class=&#34;even&#34;&gt;
+&lt;td&gt;&lt;code&gt;latitude&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;40.74177603&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;/div&gt;
+&lt;div id=&#34;task-2-diagnose-data&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Task 2: Diagnose data&lt;/h2&gt;
+&lt;p&gt;Below are two different tables with results from UK General Elections. We will be working with these data in the next session. Identify whether or not each is in &lt;strong&gt;tidy&lt;/strong&gt; format [&lt;span class=&#34;citation&#34;&gt;H. Wickham “Tidy Data,” &lt;em&gt;Journal of Statistical Software&lt;/em&gt; 59, no. 10 (&lt;a href=&#34;#ref-wickham_tidy_2014&#34; role=&#34;doc-biblioref&#34;&gt;2014&lt;/a&gt;): 1–23.&lt;/span&gt; If they are not, provide a layout for a tidy version. No need to use code here, just edit the markdown table. If you’re struggling to work out how to organise markdown tables, you may wish to use this &lt;a href=&#34;https://www.tablesgenerator.com/markdown_tables&#34;&gt;tables generator&lt;/a&gt;.&lt;/p&gt;
+&lt;div id=&#34;uk-general-election-results-2019&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;UK General Election Results 2019&lt;/h3&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr class=&#34;header&#34;&gt;
+&lt;th&gt;party&lt;/th&gt;
+&lt;th&gt;percent_vote&lt;/th&gt;
+&lt;th&gt;num_mps&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr class=&#34;odd&#34;&gt;
+&lt;td&gt;Conservative&lt;/td&gt;
+&lt;td&gt;43.6&lt;/td&gt;
+&lt;td&gt;365&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr class=&#34;even&#34;&gt;
+&lt;td&gt;Labour&lt;/td&gt;
+&lt;td&gt;32.2&lt;/td&gt;
+&lt;td&gt;202&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr class=&#34;odd&#34;&gt;
+&lt;td&gt;Scottish National Party&lt;/td&gt;
+&lt;td&gt;3.9&lt;/td&gt;
+&lt;td&gt;48&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr class=&#34;even&#34;&gt;
+&lt;td&gt;Liberal Democrats&lt;/td&gt;
+&lt;td&gt;11.6&lt;/td&gt;
+&lt;td&gt;11&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr class=&#34;odd&#34;&gt;
+&lt;td&gt;Democratic Union Party&lt;/td&gt;
+&lt;td&gt;0.8&lt;/td&gt;
+&lt;td&gt;9&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;/div&gt;
+&lt;div id=&#34;uk-general-election-results-2017-and-2019&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;UK General Election Results 2017 and 2019&lt;/h3&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr class=&#34;header&#34;&gt;
+&lt;th&gt;party&lt;/th&gt;
+&lt;th&gt;percent_vote_2017&lt;/th&gt;
+&lt;th&gt;num_mps_2017&lt;/th&gt;
+&lt;th&gt;percent_vote_2019&lt;/th&gt;
+&lt;th&gt;num_mps_2019&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr class=&#34;odd&#34;&gt;
+&lt;td&gt;Conservative&lt;/td&gt;
+&lt;td&gt;42.4&lt;/td&gt;
+&lt;td&gt;317&lt;/td&gt;
+&lt;td&gt;43.6&lt;/td&gt;
+&lt;td&gt;365&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr class=&#34;even&#34;&gt;
+&lt;td&gt;Labour&lt;/td&gt;
+&lt;td&gt;40.0&lt;/td&gt;
+&lt;td&gt;262&lt;/td&gt;
+&lt;td&gt;32.2&lt;/td&gt;
+&lt;td&gt;202&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr class=&#34;odd&#34;&gt;
+&lt;td&gt;Scottish National Party&lt;/td&gt;
+&lt;td&gt;3.0&lt;/td&gt;
+&lt;td&gt;35&lt;/td&gt;
+&lt;td&gt;3.9&lt;/td&gt;
+&lt;td&gt;48&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr class=&#34;even&#34;&gt;
+&lt;td&gt;Liberal Democrats&lt;/td&gt;
+&lt;td&gt;7.4&lt;/td&gt;
+&lt;td&gt;12&lt;/td&gt;
+&lt;td&gt;11.6&lt;/td&gt;
+&lt;td&gt;11&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr class=&#34;odd&#34;&gt;
+&lt;td&gt;Democratic Union Party&lt;/td&gt;
+&lt;td&gt;0.9&lt;/td&gt;
+&lt;td&gt;10&lt;/td&gt;
+&lt;td&gt;0.8&lt;/td&gt;
+&lt;td&gt;8&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;/div&gt;
+&lt;div id=&#34;task-3-fix-data&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Task 3: Fix data&lt;/h3&gt;
+&lt;p&gt;In the &lt;a href=&#34;../homework/02-homework_files/02-template.Rmd&#34;&gt;&lt;i class=&#34;fab fa-r-project&#34;&gt;&lt;/i&gt; 02-template.Rmd&lt;/a&gt; file for this session I have provided links to two derived tables (&lt;code&gt;ny_spread_columns&lt;/code&gt; and &lt;code&gt;ny_spread_rows&lt;/code&gt;) from the New York bikeshare trip data that are not in a tidy format.&lt;/p&gt;
+&lt;p&gt;Using functions from &lt;code&gt;dplyr&lt;/code&gt; and &lt;code&gt;tidyr&lt;/code&gt; reorganise these data so that they are conform to the rules of &lt;strong&gt;tidy&lt;/strong&gt; data &lt;span class=&#34;citation&#34;&gt;Wickham, “Tidy Data.”&lt;/span&gt;.&lt;/p&gt;
+&lt;p&gt;A candidate tidy organisation of the data is below. Each row is an origin-destination pair for a weekday or weekend, and each variable describes:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;o_station&lt;/code&gt;: station id of the origin station&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;d_station&lt;/code&gt;: station ide of the destination station&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;wkday&lt;/code&gt;: identifies whether the OD pair describes weekday or weekend ny_trips&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;count&lt;/code&gt;: count of trips recorded for that observation (OD pair and weekday/weekend)&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;dist&lt;/code&gt;: total distance (cumulative) in kms of all trips recorded for that observation (OD pair and weekday/weekend)&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;duration&lt;/code&gt;: total duration in minutes (cumulative) of all trips recorded for that observation (OD pair and weekday/weekend)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre&gt;&lt;code&gt;## # A tibble: 386,762 x 6
+##    o_station d_station wkday   count  dist duration
+##        &amp;lt;int&amp;gt;     &amp;lt;int&amp;gt; &amp;lt;chr&amp;gt;   &amp;lt;int&amp;gt; &amp;lt;dbl&amp;gt;    &amp;lt;dbl&amp;gt;
+##  1        72       116 weekend     1  1.15     18.2
+##  2        72       127 weekend    10 18.0     339.
+##  3        72       128 weekend     2  3.18     69.6
+##  4        72       146 weekend    12 27.6     402.
+##  5        72       151 weekend     2  2.87     54.9
+##  6        72       161 weekend     2  2.52     64.8
+##  7        72       164 weekend     5 13.3      73.3
+##  8        72       167 weekend     1  2.07     17.2
+##  9        72       168 weekend     2  1.70     42.7
+## 10        72       173 weekend     9  9.59    194.
+## # … with 386,752 more rows&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;div id=&#34;task-4-compute-from-data&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Task 4: Compute from data&lt;/h3&gt;
+&lt;p&gt;Using &lt;code&gt;dplyr&lt;/code&gt; functions, calculate the average distance, duration and speed of trips occuring for each observation. Print out to the Console the top 10 most heavily cycled OD pairs (and their associated summary statistics) separately for weekdays and weekends. You may wish to join on your &lt;code&gt;ny_stations&lt;/code&gt; table in order to fetch the station names corresponding to the origin and destination stations.&lt;/p&gt;
+&lt;/div&gt;
 &lt;/div&gt;
 </description>
     </item>

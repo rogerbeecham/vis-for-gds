@@ -33,7 +33,7 @@
   
     
   
-  <meta name="description" content="Overview Course Objectives Resources Primers Blogs Conferences    Overview In modern data analysis, graphics and computational statistics are increasingly used together to explore and identify complex patterns in data and to make and communicate claims under uncertainty. This course will go beyond traditional ideas of charts, graphs, maps (and also statistics!) to equip you with the critical analysis, design and technical skills to analyse and communicate with geographic datasets.">
+  <meta name="description" content="Overview Module objectives Assessment Software Module breakdown Navigating the course materials Self-guided learning Slack Asking questions   Instructor  Roger Beecham  10.139 Manton Building  r.j.beecham@leeds.ac.uk  @rjbeecham   Course details  Wednesdays  25th May - 13th Jul  10:00 - 12:00  ODL   Contacting me I&rsquo;m really keen that there is strong engagement with the course Slack. So for almost all questions to do with the substantive aspects of the module, direct these to the #general channel in the first instance.">
 
   
   <link rel="alternate" hreflang="en-us" href="../syllabus/">
@@ -255,7 +255,7 @@
   <meta property="og:site_name" content="Visualization for Geographic Data Science">
   <meta property="og:url" content="/syllabus/">
   <meta property="og:title" content="Syllabus | Visualization for Geographic Data Science">
-  <meta property="og:description" content="Overview Course Objectives Resources Primers Blogs Conferences    Overview In modern data analysis, graphics and computational statistics are increasingly used together to explore and identify complex patterns in data and to make and communicate claims under uncertainty. This course will go beyond traditional ideas of charts, graphs, maps (and also statistics!) to equip you with the critical analysis, design and technical skills to analyse and communicate with geographic datasets."><meta property="og:image" content="/media/vis-for-gds.png">
+  <meta property="og:description" content="Overview Module objectives Assessment Software Module breakdown Navigating the course materials Self-guided learning Slack Asking questions   Instructor  Roger Beecham  10.139 Manton Building  r.j.beecham@leeds.ac.uk  @rjbeecham   Course details  Wednesdays  25th May - 13th Jul  10:00 - 12:00  ODL   Contacting me I&rsquo;m really keen that there is strong engagement with the course Slack. So for almost all questions to do with the substantive aspects of the module, direct these to the #general channel in the first instance."><meta property="og:image" content="/media/vis-for-gds.png">
   <meta property="twitter:image" content="/media/vis-for-gds.png"><meta property="og:locale" content="en-us">
   
     
@@ -429,7 +429,7 @@
         
 
         <li class="nav-item">
-          <a class="nav-link " href="../reading/"><span>Readings</span></a>
+          <a class="nav-link " href="../reading/"><span>Reading</span></a>
         </li>
 
         
@@ -624,66 +624,281 @@
 <div id="TOC">
 <ul>
 <li><a href="#overview">Overview</a></li>
-<li><a href="#course-objectives">Course Objectives</a></li>
-<li><a href="#resources">Resources</a><ul>
-<li><a href="#primers">Primers</a></li>
-<li><a href="#blogs">Blogs</a></li>
-<li><a href="#conferences">Conferences</a></li>
-</ul></li>
+<li><a href="#module-objectives">Module objectives</a></li>
+<li><a href="#assessment">Assessment</a></li>
+<li><a href="#software">Software</a></li>
+<li><a href="#module-breakdown">Module breakdown</a></li>
+<li><a href="#navigating-the-course-materials">Navigating the course materials</a></li>
+<li><a href="#self-guided-learning">Self-guided learning</a></li>
+<li><a href="#slack">Slack</a></li>
+<li><a href="#asking-questions">Asking questions</a></li>
 </ul>
 </div>
 
+<!-- [^courseinfo]: {-}
+  <div class="row">
+    <div class="col-md-4">
+        <h3>Instructor</h3>
+
+        <ul class="icon-list">
+            <li><i class="fas fa-user"></i> <a href="http://www.roger-beecham.com/" target="_blank" rel="noopener"> Roger Beecham</a></li>
+            <li><i class="fas fa-university"></i> 10.139 Manton Building</li>
+            <li><i class="fas fa-envelope"></i> <a href="mailto:r.j.beecham@leeds.ac.uk"> r.j.beecham@leeds.ac.uk</a></li>
+            <li><i class="fab fa-twitter"></i> <a href="https://twitter.com/rjbeecham" target="_blank" rel="noopener"> @rjbeecham</a></li>
+        </ul>
+    </div>
+
+    <div class="col-md-4">
+        <h3>Course details</h3>
+
+        <ul class="icon-list">
+            <li><i class="far fa-calendar"></i> Wednesdays</li>
+            <li><i class="far fa-calendar-alt"></i> 25th May - 13th Jul</li>
+            <li><i class="far fa-clock"></i> 10:00 - 12:00</li>
+            <li><i class="fas fa-university"></i> ODL</li>
+            
+        </ul>
+    </div>
+
+    <div class="col-md-4 contact-policy">
+        <h3>Contacting me</h3>
+
+        <p>I&rsquo;m really keen that there is strong engagement with the course Slack. So for almost all questions to do with the substantive aspects of the module, direct these to the #general channel in the first instance. For matters such as absences, extensions, email me.</p>
+    </div>
+</div>
+ -->
 <div id="overview" class="section level2">
 <h2>Overview</h2>
 <p>In modern data analysis, graphics and computational statistics are increasingly used together to explore and identify complex patterns in data and to make and communicate claims under uncertainty. This course will go beyond traditional ideas of charts, graphs, maps (and also statistics!) to equip you with the critical analysis, design and technical skills to analyse and communicate with geographic datasets.</p>
 <p>The course emphasises real-world applications. You will work with both new, large-scale behavioural datasets, as well as more traditional, administrative datasets located within various social science domains: Political Science, Crime Science, Urban and Transport Planning. As well as learning how to use graphics and statistics to explore patterns in these data, implementing recent ideas from data journalism you will learn how to communicate research findings – how to tell stories with data.</p>
 </div>
-<div id="course-objectives" class="section level2">
-<h2>Course Objectives</h2>
+<div id="module-objectives" class="section level2">
+<h2>Module objectives</h2>
 <p>By the end of the course you will</p>
 <ol style="list-style-type: decimal">
 <li>Describe, process and combine geographic datasets from a range of sources</li>
 <li>Design statistical graphics that expose structure in geographic data and that are underpinned by established principles in information visualization and cartography</li>
-<li>Use modern data science and visualization frameworks to produce coherent data analyses</li>
+<li>Use modern data science and visualization frameworks to produce coherent, reproducible data analyses</li>
 <li>Apply modern statistical techniques for analysing, representing and communicating data and model uncertainty</li>
 </ol>
 </div>
-<div id="resources" class="section level2">
-<h2>Resources</h2>
-<div id="primers" class="section level3">
-<h3>Primers</h3>
+<div id="assessment" class="section level2">
+<h2>Assessment</h2>
+<p>A detailed and formal description of the Assessment for this module can be found on the <a href="">Minerva</a> pages. The summative assessment consists of:</p>
 <ul>
-<li><p><span class="citation">Kieran Healy, <em>Data Visualization: A Practical Introduction</em> (Princeton: Princeton University Press, <a href="#ref-healy_data_2018" role="doc-biblioref">2018</a>), <a href="http://socviz.co/" role="doc-biblioref">http://socviz.co/</a>.</span><br />
-– An engaging read that manages to integrate ggplot2 code with key Information Visualization theory and using real social science datasets.<br />
-<a href="https://socviz.co/">Free online (draft version)</a>.</p></li>
-<li><p><span class="citation">Robin Lovelace, Jakub Nowosad, and Jannes Muenchow, <em>Geocomputation with R</em> (London, UK: CRC Press, <a href="#ref-lovelace_geocomputation_2019" role="doc-biblioref">2019</a>), <a href="https://geocompr.robinlovelace.net" role="doc-biblioref">https://geocompr.robinlovelace.net</a>.</span><br />
-– This book comprehensively introduces spatial data handling in R. It is a great complement to R for Data Science in that it draws on brand new libraries that support <code>tidyverse-style</code> operations on spatial data.<br />
-<a href="https://geocompr.robinlovelace.net/">Free online</a>.</p></li>
-<li><p><span class="citation">Hadley Wickham and Garrett Grolemund, <em>R for Data Science: Import, Tidy, Transform, Visualize, and Model Data</em> (Sebastopol, California: O’Reilly Media, <a href="#ref-wickham_r_2017" role="doc-biblioref">2017</a>), <a href="http://r4ds.had.co.nz/" role="doc-biblioref">http://r4ds.had.co.nz/</a>.</span><br />
-– <em>The</em> primer for doing data analysis with R. Wickham and Grolemund present a thesis of the data science workflow and illustrates how R and packages that form the <code>tidyverse</code> support this. It is both accessible and coherent and is highly recommended.<br />
-<a href="https://r4ds.had.co.nz/">Free online</a>.</p></li>
+<li>30% (Decrease to 20%) - Portfolio of work from completing session <a href="../homework/">homework</a></li>
+<li>70% (Increase to 80%) - Fully reproducible project report</li>
 </ul>
 </div>
-<div id="blogs" class="section level3">
-<h3>Blogs</h3>
+<div id="software" class="section level2">
+<h2>Software</h2>
+<p>All work in the module – data collection, analysis and reporting – will be completed using <a href="https://www.r-project.org/"><code>R</code></a> and the <a href="https://rstudio.com/"><code>RStudio</code></a> <a href="https://en.wikipedia.org/wiki/Integrated_development_environment">Integrated Development Environment</a> (IDE). Along with <a href="https://www.python.org/"><code>Python</code></a> <code>R</code> is <em>the</em> programming environment for modern data analysis.</p>
+</div>
+<div id="module-breakdown" class="section level2">
+<h2>Module breakdown</h2>
+<table class="table schedule" style="max-width:100%">
+    <tbody>
+        <tr>
+            <td align="right" style="width:20%;text-align:right">Week 1</td>
+            <td style="width:50%;text-align:left">Introduction</td>
+            <td align="center" style="width:10%;text-align:center"><a
+                    href="../reading/01-reading/">
+                    <i class="fas fa-book-reader fa-lg"></i></a></td>
+            <td align="center" style="width:10%;text-align:center"><a href="../class/01-class/">
+                    <i class="fas fa-chalkboard-teacher fa-lg"></i></a></td>
+            <td align="center" style="width:10%;text-align:center"><a
+                    href="../homework/01-homework/">
+                    <i class="fas fa-laptop-code"></i></a></td>
+        </tr>
+        <tr>
+            <td align="right" style="width:20%;text-align:right">Week 2</td>
+            <td style="width:50%;text-align:left">Data fundamentals</td>
+            <td align="center" style="width:10%;text-align:center"><a
+                    href="../reading/02-reading/">
+                    <i class="fas fa-book-reader fa-lg"></i></a></td>
+            <td align="center" style="width:10%;text-align:center"><a href="../class/02-class/">
+                    <i class="fas fa-chalkboard-teacher fa-lg"></i></a></td>
+            <td align="center" style="width:10%;text-align:center"><a
+                    href="../homework/02-homework/">
+                    <i class="fas fa-laptop-code"></i></a></td>
+        </tr>
+        <tr>
+            <td align="right" style="width:20%;text-align:right">Week 3</td>
+            <td style="width:50%;text-align:left">Visualization fundamentals</td>
+            <td align="center" style="width:10%;text-align:center">
+                <font color="f1f1f1">
+                    <i class="fas fa-book-reader fa-lg"></i></font>
+            </td>
+            <td align="center" style="width:10%;text-align:center">
+                <font color="f1f1f1">
+                    <i class="fas fa-chalkboard-teacher fa-lg"></i></font>
+            </td>
+            <td align="center" style="width:10%;text-align:center">
+                <font color="f1f1f1">
+                    <i class="fas fa-laptop-code"></i></font>
+            </td>
+        </tr>
+        <tr>
+            <td align="right" style="width:20%;text-align:right">Week 4</td>
+            <td style="width:50%;text-align:left">Visualization for exploratory data analysis</td>
+            <td align="center" style="width:10%;text-align:center">
+                <font color="f1f1f1">
+                    <i class="fas fa-book-reader fa-lg"></i></font>
+            </td>
+            <td align="center" style="width:10%;text-align:center">
+                <font color="f1f1f1">
+                    <i class="fas fa-chalkboard-teacher fa-lg"></i></font>
+            </td>
+            <td align="center" style="width:10%;text-align:center">
+                <font color="f1f1f1">
+                    <i class="fas fa-laptop-code"></i></font>
+            </td>
+        </tr>
+        <tr>
+            <td align="right" style="width:20%;text-align:right">Week 5</td>
+            <td style="width:50%;text-align:left">Visualization for exploratory geospatial data analysis</td>
+            <td align="center" style="width:10%;text-align:center">
+                <font color="f1f1f1">
+                    <i class="fas fa-book-reader fa-lg"></i></font>
+            </td>
+            <td align="center" style="width:10%;text-align:center">
+                <font color="f1f1f1">
+                    <i class="fas fa-chalkboard-teacher fa-lg"></i></font>
+            </td>
+            <td align="center" style="width:10%;text-align:center">
+                <font color="f1f1f1">
+                    <i class="fas fa-laptop-code"></i></font>
+            </td>
+        </tr>
+        <tr>
+            <td align="right" style="width:20%;text-align:right">Week 6</td>
+            <td style="width:50%;text-align:left">Visualization for model building 1</td>
+            <td align="center" style="width:10%;text-align:center">
+                <font color="f1f1f1">
+                    <i class="fas fa-book-reader fa-lg"></i></font>
+            </td>
+            <td align="center" style="width:10%;text-align:center">
+                <font color="f1f1f1">
+                    <i class="fas fa-chalkboard-teacher fa-lg"></i></font>
+            </td>
+            <td align="center" style="width:10%;text-align:center">
+                <font color="f1f1f1">
+                    <i class="fas fa-laptop-code"></i></font>
+            </td>
+        </tr>
+        <tr>
+            <td align="right" style="width:20%;text-align:right">Week 7</td>
+            <td style="width:50%;text-align:left">Visualization for model building 2</td>
+            <td align="center" style="width:10%;text-align:center">
+                <font color="f1f1f1">
+                    <i class="fas fa-book-reader fa-lg"></i></font>
+            </td>
+            <td align="center" style="width:10%;text-align:center">
+                <font color="f1f1f1">
+                    <i class="fas fa-chalkboard-teacher fa-lg"></i></font>
+            </td>
+            <td align="center" style="width:10%;text-align:center">
+                <font color="f1f1f1">
+                    <i class="fas fa-laptop-code"></i></font>
+            </td>
+        </tr>
+        <tr>
+            <td align="right" style="width:20%;text-align:right">Week 8</td>
+            <td style="width:50%;text-align:left">Visualization for uncertainty analysis</td>
+            <td align="center" style="width:10%;text-align:center">
+                <font color="f1f1f1">
+                    <i class="fas fa-book-reader fa-lg"></i></font>
+            </td>
+            <td align="center" style="width:10%;text-align:center">
+                <font color="f1f1f1">
+                    <i class="fas fa-chalkboard-teacher fa-lg"></i></font>
+            </td>
+            <td align="center" style="width:10%;text-align:center">
+                <font color="f1f1f1">
+                    <i class="fas fa-laptop-code"></i></font>
+            </td>
+        </tr>
+
+    </tbody>
+
+</table>
+
+</div>
+<div id="navigating-the-course-materials" class="section level2">
+<h2>Navigating the course materials</h2>
+<p>The home for this module is <a href="../../">this website</a>. From here, you will find the course <a href="../schedule/">Schedule</a> (also above), where for each session there is <i class="fas fa-book-reader"></i> <a href="../reading/"><strong>Reading</strong></a>, <i class="fas fa-chalkboard-teacher"></i> <a href="../class/"><strong>Class</strong></a> content and <i class="fas fa-laptop-code"></i> <a href="../homework/"><strong>Homework</strong></a>. Also accompanying each session is an <a href="https://rmarkdown.rstudio.com/">R Markdown</a> file with a template to complete coding activities introduced through the <a href="../class/">class</a> and <a href="../homework/">homework</a> pages. These session templates contain pre-prepared code chunks for you to execute. As the module progresses and you become more familiar and competent in <code>R</code>, you will be required to contribute more code of your own to these.</p>
+<p>As you work through the course materials you will notice special icons are used to distinguish <strong>learning outcomes</strong> <i class="fas fa-chevron-circle-down"></i> and <strong>instructions</strong> <i class="fas fa-tasks"></i> that need to be completed, along with important informational asides <i class="fas fa-info-circle"></i>. Do pay special attention to these, and in particular revisit the <strong>learning outcomes</strong> <i class="fas fa-chevron-circle-down"></i> as you progress through the sessions.</p>
+<p>Use <a href="">Minerva</a> to access the <a href="">Module Handbook</a> and to upload assignments in the usual way.</p>
+</div>
+<div id="self-guided-learning" class="section level2">
+<h2>Self-guided learning</h2>
+<blockquote>
+<p>The bad news is whenever you’re learning a new tool, for a long time you’re going to suck. It’s going to be very frustrating. But, the good news is that that is typical, it’s something that happens to everyone, and it’s only temporary … [T]here is no way to go from knowing nothing about a subject to knowing something about a subject and being an expert in it without going through a period of great frustration."</p>
+<p>Hadley Wickham</p>
+</blockquote>
+<p>From the module overview and outline you will have got the sense that this is a reasonably technical module. You will be introduced to the key components of modern data analysis (Data Science) through doing – the course inevitably requires you to do a fair amount of “coding”, in this case in <code>R</code>.</p>
+<p>It is understandable if this feels like a daunting prospect. The barrier to entry is greater than with point-and-click interfaces such as ArcGIS and SPSS. So do expect that this module may require a degree of patience and persistence – but isn’t that true of all things that are worth learning?</p>
+<p>In order reduce the pain, I’ve tried to include within the module a balance of content between programming fundamentals, theoretical/conceptual learning and more procedural ‘grunt-work’ with datasets. I have also carefully considered and incorporated ideas from some of the really high quality <a href="../useful">Resources</a> out there aimed at lowering the barrier to doing Data Science in <code>R</code>.</p>
+<p>In return, I expect you to:</p>
 <ul>
-<li><p><a href="http://flowingdata.com">Flowingdata</a><br />
-– Nathan Yau, a former statistics PhD from UCLA, has maintained a data vis blog and online training materials for some time. Numerous excellent examples, on the most part implemented in R and <code>ggplot2</code>.</p></li>
-<li><p><a href="https://www.gicentre.net">giCentre</a><br />
-– World-leading group researching and developing geovisualization. Check out recent work on <a href="https://www.gicentre.net/software#/litvis-1/">litvis</a> and <a href="https://www.gicentre.net/elmvegalite/">elm-vega</a>.</p></li>
-<li><p><a href="https://medium.com/multiple-views-visualization-research-explained">Multiple Views</a><br />
-– Blog series by leading visualization researchers and practitioners.</p></li>
+<li><strong>Read</strong> all course materials</li>
+<li><strong>Complete</strong> the class session tasks, homework and coursework assignment</li>
+<li><strong>Participate</strong> in the discussion forum</li>
 </ul>
 </div>
-<div id="conferences" class="section level3">
-<h3>Conferences</h3>
-<ul>
-<li><p><a href="http://ieeevis.org/">IEEE VIS</a><br />
-– <em>The</em> conference at which leading Data Visualization work is published through a special issue of <a href="https://ieeexplore.ieee.org/xpl/RecentIssue.jsp?punumber=2945">Transactions on Visualization &amp; Computer Graphics</a>.</p></li>
-<li><p><a href="http://www.openvisconf.com">OpenVis Conf</a><br />
-– New, exciting conference (though last one was in 2018!). Presenters are academics and practitioners. Videos of talks from previous conferences are published online. From the 2018 conference, I’d recommend Matt Kay’s on <a href="https://www.youtube.com/watch?v=vqzO-9LSoG4&amp;feature=youtu.be">Uncertainty Visualization</a>, Maarten Lambrechts’ <a href="https://www.youtube.com/watch?v=fp-WNqaQG0s&amp;feature=youtu.be">Xenographics</a> and Heather Krause’s <a href="https://www.youtube.com/watch?v=uw1Tag08dK4&amp;feature=youtu.be">F-Word</a>.</p></li>
-</ul>
+<div id="slack" class="section level2">
+<h2>Slack</h2>
+<p>A key mechanism through which you can <strong>participate</strong> is by contributing to the discussion forum. Engaging fully with this will help to foster a sort of collegiate atmosphere on the module that will maximise your learning. I have set up a course <a href="">Slack</a>, which should provide a useful mechanism for sharing information, resources and importantly posting and discussing <code>code</code>.</p>
+<p>If you’ve not used Slack before, then follow these pages on <a href="https://slack.com/intl/en-gb/help/articles/218080037-Getting-started-for-new-members">getting started with Slack</a>. You should post all substantive questions associated with the module to Slack. These will get answered. If you wish to discuss more personal matters around your completing the course, then send those directly to me via e-mail.</p>
+<p><div class="alert alert-instruction">
+  <div>
+    Create an account on the <a href="">vis-for-gds Slack</a>. Be sue to register with you <code>.leeds.ac.uk</code> e-mail. If you run into any problems, try <a href="https://slack.com/intl/en-gb/help/articles/218080037-Getting-started-for-new-members">getting started with Slack</a>.
+  </div>
 </div>
+</p>
+</div>
+<div id="asking-questions" class="section level2">
+<h2>Asking questions</h2>
+<p>As many of you will be learning to program in R for the first time, you should expect to be baffled at times and to routinely encounter scary-looking <code>ERROR</code> messages. Counterintuitively, this is actually to be welcomed. You need to be making mistakes and hitting obstacles on a regular basis if you are to progress.</p>
+<p><em>How</em> you respond to these obstacles is important. In a face-to-face lab, the temptation when hitting a problem is to raise your hand, gesture towards your screen and have a demonstrator ‘de-bug’ for you. Whilst this may initially seem like an efficient solution, you risk learning very little if this is your only course of action.</p>
+<p>When you encounter problems working through the material in this course, try to force yourself to spend 15-20 minutes troubleshooting the problem individually. <a href="https://www.google.com/">Google</a> your problem or try <a href="https://stackoverflow.com/">StackOverflow</a>. If you are not able to resolve the problem on your own, then post your question to the course <a href="">Slack</a>, which I will monitor regularly. When doing this, make an effort to be specific and unambiguous about your problem. You might wish to consult StackOverflow’s guidance on <a href="https://stackoverflow.com/help/how-to-ask">how to ask a good question</a>.</p>
+<!-- 
+## Resources
+
+### Primers
+
+- [@healy_data_2018]\
+-- An engaging read that manages to integrate ggplot2 code with key Information Visualization theory and using real social science datasets.\
+[Free online (draft version)](https://socviz.co/).
+
+
+- [@lovelace_geocomputation_2019]\
+-- This book comprehensively introduces spatial data handling in R. It is a great complement to R for Data Science in that it draws on brand new libraries that support `tidyverse-style` operations on spatial data.\
+[Free online](https://geocompr.robinlovelace.net/).
+
+- [@wickham_r_2017]\
+-- _The_ primer for doing data analysis with R. Wickham and Grolemund present a thesis of the data science workflow and illustrates how R and packages that form the `tidyverse` support this. It is both accessible and coherent and is highly recommended.\
+[Free online](https://r4ds.had.co.nz/).
+
+
+### Blogs
+
+- [Flowingdata](http://flowingdata.com) \
+-- Nathan Yau, a former statistics PhD from UCLA, has maintained a data vis blog and online training materials for some time. Numerous excellent examples, on the most part implemented in R and `ggplot2`.
+
+- [giCentre](https://www.gicentre.net)  \
+-- World-leading group researching and developing geovisualization. Check out recent work on [litvis](https://www.gicentre.net/software#/litvis-1/) and [elm-vega](https://www.gicentre.net/elmvegalite/).
+
+- [Multiple Views](https://medium.com/multiple-views-visualization-research-explained) \
+-- Blog series by leading visualization researchers and practitioners.
+
+### Conferences
+
+- [IEEE VIS](http://ieeevis.org/)\
+-- *The* conference at which leading Data Visualization work is published through a special issue of [Transactions on Visualization & Computer Graphics](https://ieeexplore.ieee.org/xpl/RecentIssue.jsp?punumber=2945).
+
+- [OpenVis Conf](http://www.openvisconf.com)\
+-- New, exciting conference (though last one was in 2018!). Presenters are academics and practitioners. Videos of talks from previous conferences are published online. From the 2018 conference, I'd recommend Matt Kay's on [Uncertainty Visualization](https://www.youtube.com/watch?v=vqzO-9LSoG4&feature=youtu.be), Maarten Lambrechts' [Xenographics](https://www.youtube.com/watch?v=fp-WNqaQG0s&feature=youtu.be) and Heather Krause's [F-Word](https://www.youtube.com/watch?v=uw1Tag08dK4&feature=youtu.be). -->
 </div>
 
     </div>

@@ -28,8 +28,38 @@
   </url>
   
   <url>
+    <loc>/class/01-class/</loc>
+    <lastmod>2020-11-29T10:15:25+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/homework/01-homework/</loc>
+    <lastmod>2021-06-01T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/reading/01-reading/</loc>
+    <lastmod>2020-11-29T10:15:25+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/homework/02-homework/</loc>
+    <lastmod>2021-06-01T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/reading/02-reading/</loc>
+    <lastmod>2021-06-01T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>/class/04-class/</loc>
     <lastmod>2020-11-29T10:15:25+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/homework/</loc>
+    <lastmod>2021-06-01T00:00:00+00:00</lastmod>
   </url>
   
   <url>
@@ -43,32 +73,12 @@
   </url>
   
   <url>
-    <loc>/class/01-class/</loc>
-    <lastmod>2020-11-29T10:15:25+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/homework/01-homework/</loc>
-    <lastmod>2020-02-06T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/homework/</loc>
-    <lastmod>2020-02-06T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
     <loc>/class/</loc>
     <lastmod>2020-11-29T10:15:25+00:00</lastmod>
   </url>
   
   <url>
     <loc>/reading/</loc>
-    <lastmod>2020-11-29T10:15:25+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/reading/01-reading/</loc>
     <lastmod>2020-11-29T10:15:25+00:00</lastmod>
   </url>
   
