@@ -5,7 +5,7 @@
     <link>/authors/rjbeecham/</link>
       <atom:link href="/authors/rjbeecham/index.xml" rel="self" type="application/rss+xml" />
     <description>Visualization for Geographic Data Science</description>
-    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator>
+    <generator>Wowchemy (https://wowchemy.com)</generator>
     <image>
       <url>/media/vis-for-gds.png</url>
       <title>Visualization for Geographic Data Science</title>

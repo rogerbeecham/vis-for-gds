@@ -5,7 +5,7 @@
     <link>/</link>
       <atom:link href="/index.xml" rel="self" type="application/rss+xml" />
     <description>Course materials</description>
-    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator>
+    <generator>Wowchemy (https://wowchemy.com)</generator>
     <image>
       <url>/media/vis-for-gds.png</url>
       <title>Course materials</title>
@@ -24,37 +24,20 @@
 &lt;!-- /BLOGDOWN-HEAD --&gt;
 
 
-&lt;p&gt;&lt;div class=&#34;alert alert-instruction&#34;&gt;
+&lt;p&gt;Road safety analysis : &lt;a href=&#34;https://docs.ropensci.org/stats19/&#34; class=&#34;uri&#34;&gt;https://docs.ropensci.org/stats19/&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;
+
+&lt;div class=&#34;alert alert-instruction&#34;&gt;
   &lt;div&gt;
-    Amanda Cox
+    Matt Kay – OpenVis talk
   &lt;/div&gt;
 &lt;/div&gt;
 &lt;/p&gt;
 &lt;div class=&#34;embed-responsive embed-responsive-16by9&#34;&gt;
-&lt;iframe class=&#34;embed-responsive-item&#34; src=&#34;https://www.youtube.com/embed/ha9LA3rYD9g&amp;quot;&#34; frameborder=&#34;0&#34; allow=&#34;accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture&#34; allowfullscreen&gt;
+&lt;iframe class=&#34;embed-responsive-item&#34; src=&#34;https://www.youtube.com/embed/vqzO-9LSoG4&#34; frameborder=&#34;0&#34; allow=&#34;accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture&#34; allowfullscreen&gt;
 &lt;/iframe&gt;
 &lt;/div&gt;
-&lt;p&gt;Robert Kosara : &lt;a href=&#34;https://www.youtube.com/watch?v=PMtWFjjVM5E&amp;amp;ab_channel=BocoupLLC&#34; class=&#34;uri&#34;&gt;https://www.youtube.com/watch?v=PMtWFjjVM5E&amp;amp;ab_channel=BocoupLLC&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;&lt;a href=&#34;https://medium.com/nightingale/from-storytelling-to-scrollytelling-a-short-introduction-and-beyond-fbda32066964&#34; class=&#34;uri&#34;&gt;https://medium.com/nightingale/from-storytelling-to-scrollytelling-a-short-introduction-and-beyond-fbda32066964&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;&lt;a href=&#34;https://datajournalism.com/read/handbook/one/delivering-data/using-visualizations-to-tell-stories&#34; class=&#34;uri&#34;&gt;https://datajournalism.com/read/handbook/one/delivering-data/using-visualizations-to-tell-stories&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;Road safety analysis : &lt;a href=&#34;https://docs.ropensci.org/stats19/&#34; class=&#34;uri&#34;&gt;https://docs.ropensci.org/stats19/&lt;/a&gt;
-Others? Knife crime data?&lt;/p&gt;
-&lt;p&gt;OR&lt;/p&gt;
-&lt;p&gt;Sharing your work – reproducible research&lt;/p&gt;
-&lt;p&gt;Introducing this :&lt;/p&gt;
-&lt;ol style=&#34;list-style-type: decimal&#34;&gt;
-&lt;li&gt;That in academic visualization there has been a movement towards studying storytelling in visualization&lt;/li&gt;
-&lt;li&gt;Why? This feels uneasy as Science, Data, Evidence – not making up stories&lt;/li&gt;
-&lt;li&gt;Avoid philosophical discussions about objectivity, but data is now embedded in most domains, and particularly in the public sphere.&lt;/li&gt;
-&lt;li&gt;Lies Damn, Lies and Statistics – data Journalism, statistical literacy.&lt;/li&gt;
-&lt;/ol&gt;
-&lt;p&gt;&lt;a href=&#34;https://clauswilke.com/dataviz/telling-a-story.html&#34; class=&#34;uri&#34;&gt;https://clauswilke.com/dataviz/telling-a-story.html&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;From &lt;em&gt;Data Driven Storytelling&lt;/em&gt;&lt;/p&gt;
-&lt;p&gt;We think this movement towards data-driven stories, which is apparent in both the data visualization research community and the professional journalism community, has the potential to form a crucial part of keeping the public informed, a movement sometimes referred to as the democratization of data – the making of data understandable to the general public. This exciting new development in the use of data visualization in media has revealed an emerging professional community in the already complex group of disciplines involved in data visualization. Data visualization has roots in many research fields including perception, computer graphics, design, and human-computer interaction, though only recently has this expanded to include journalism.&lt;/p&gt;
-&lt;p&gt;Data journalism
-here has also been a growing consciousness that some of today’s most relevant stories are buried in data. This data can be quite hard to understand in its raw formats but can become much more generally accessible when visualized. Journalists have not only begun to use standard data visualizations such as charts and maps in their stories, but are also creating new ones that are tailored to the particular data type and to the message of the story they are writing. Since journalists are now able to easily share interactive data visualizations on the Web, the democratization of data visualization is accelerating with new compelling data visualizations emerging in the media daily…&lt;/p&gt;
-&lt;p&gt;By carefully structuring the information and integrating explanation to guide the consumer, journalists help lead readers towards a valid interpretation of the underlying data.&lt;/p&gt;
-&lt;p&gt;Countering the idea that there is some optimal/mathematical formulation for presenting a dataset – that exposes the true picture/story?&lt;/p&gt;
+&lt;p&gt;Uncertainty vis book (not written but structure useful) : &lt;a href=&#34;https://mjskay.github.io/uncertainty-vis-book/&#34; class=&#34;uri&#34;&gt;https://mjskay.github.io/uncertainty-vis-book/&lt;/a&gt;&lt;/p&gt;
 </description>
     </item>
     
@@ -69,13 +52,52 @@ here has also been a growing consciousness that some of today’s most relevant 
 &lt;script src=&#34;./rmarkdown-libs/anchor-sections/anchor-sections.js&#34;&gt;&lt;/script&gt;
 &lt;!-- /BLOGDOWN-HEAD --&gt;
 
+&lt;h2&gt;Contents&lt;/h2&gt;
+&lt;div id=&#34;TOC&#34;&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#concepts&#34;&gt;Concepts&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#techniques&#34;&gt;Techniques&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
 
-&lt;p&gt;Road safety analysis : &lt;a href=&#34;https://docs.ropensci.org/stats19/&#34; class=&#34;uri&#34;&gt;https://docs.ropensci.org/stats19/&lt;/a&gt;
-Others? Knife crime data?&lt;/p&gt;
-&lt;p&gt;OR&lt;/p&gt;
-&lt;p&gt;Sharing your work – reproducible research&lt;/p&gt;
+&lt;div id=&#34;concepts&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Concepts&lt;/h2&gt;
+&lt;p&gt;Introducing this :&lt;/p&gt;
+&lt;ol style=&#34;list-style-type: decimal&#34;&gt;
+&lt;li&gt;That in academic visualization there has been a realisation of role of storytelling in visualization. Not a single, optimum solution to any visualization problem that expose the true picture/story – no such formulation exists.&lt;/li&gt;
+&lt;li&gt;At same time: statistical literacy, scientific communication and data journalism –&amp;gt; evidence-based society. data is now embedded in most domains, and particularly in the public sphere.&lt;/li&gt;
+&lt;li&gt;Storytelling not about making up stories – but constructing evidence-based arguments, with authority and uncertainty. Point at tensions – need to reduce complexity (and uncertainty) can lead to false interpretation.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;From &lt;em&gt;Data Driven Storytelling&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;*We think this movement towards data-driven stories, which is apparent in both the data visualization research community and the professional journalism community, has the potential to form a crucial part of keeping the public informed, a movement sometimes referred to as the democratization of data – the making of data understandable to the general public. This exciting new development in the use of data visualization in media has revealed an emerging professional community in the already complex group of disciplines involved in data visualization. Data visualization has roots in many research fields including perception, computer graphics, design, and human-computer interaction, though only recently has this expanded to include journalism.&lt;/p&gt;
+&lt;p&gt;Data journalism
+here has also been a growing consciousness that some of today’s most relevant stories are buried in data. This data can be quite hard to understand in its raw formats but can become much more generally accessible when visualized. Journalists have not only begun to use standard data visualizations such as charts and maps in their stories, but are also creating new ones that are tailored to the particular data type and to the message of the story they are writing. Since journalists are now able to easily share interactive data visualizations on the Web, the democratization of data visualization is accelerating with new compelling data visualizations emerging in the media daily…&lt;/p&gt;
+&lt;p&gt;By carefully structuring the information and integrating explanation to guide the consumer, journalists help lead readers towards a valid interpretation of the underlying data.
+*&lt;/p&gt;
+&lt;p&gt;
+
+&lt;div class=&#34;alert alert-instruction&#34;&gt;
+  &lt;div&gt;
+    Amanda Cox - &lt;a href=&#34;https://www.youtube.com/embed/ha9LA3rYD9g&#34; class=&#34;uri&#34;&gt;&lt;a href=&#34;https://www.youtube.com/embed/ha9LA3rYD9g&#34;&gt;https://www.youtube.com/embed/ha9LA3rYD9g&lt;/a&gt;&lt;/a&gt;
+Robert Kosara - &lt;a href=&#34;https://www.youtube.com/watch?v=PMtWFjjVM5E&amp;amp;ab_channel=BocoupLLC&#34; class=&#34;uri&#34;&gt;&lt;a href=&#34;https://www.youtube.com/watch?v=PMtWFjjVM5E&amp;amp;amp;ab_channel=BocoupLLC&#34;&gt;https://www.youtube.com/watch?v=PMtWFjjVM5E&amp;amp;amp;ab_channel=BocoupLLC&lt;/a&gt;&lt;/a&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+&lt;/p&gt;
+&lt;p&gt;Scrollytelling : &lt;a href=&#34;https://medium.com/nightingale/from-storytelling-to-scrollytelling-a-short-introduction-and-beyond-fbda32066964&#34; class=&#34;uri&#34;&gt;https://medium.com/nightingale/from-storytelling-to-scrollytelling-a-short-introduction-and-beyond-fbda32066964&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Storytelling models?&lt;/p&gt;
+&lt;p&gt;Storytelling narratives – immigration : &lt;a href=&#34;https://openaccess.city.ac.uk/id/eprint/25322/&#34; class=&#34;uri&#34;&gt;https://openaccess.city.ac.uk/id/eprint/25322/&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Not sure about this resource : &lt;a href=&#34;https://datajournalism.com/read/handbook/one/delivering-data/using-visualizations-to-tell-stories&#34; class=&#34;uri&#34;&gt;https://datajournalism.com/read/handbook/one/delivering-data/using-visualizations-to-tell-stories&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Talk: John Burn-Murdoch VIS 2020 on Covid-19 comparison work. Themes – theoretical and cognitive optimal ways of displaying data. No canonical solution exists. And the objectives/purposes are different when communicating. Log-scales (focus on comparison).&lt;/p&gt;
 &lt;p&gt;Animated rescaling : &lt;a href=&#34;https://twitter.com/jwoLondon/status/1347208824495726592&#34; class=&#34;uri&#34;&gt;https://twitter.com/jwoLondon/status/1347208824495726592&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Twitter stories (for data vis) : anything on this? examples?&lt;/p&gt;
+&lt;p&gt;Practical : avoid legends, make labels intrinsic to vis. Sacrifice data density? Build sequentially towards complexity. Design consistency.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;techniques&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Techniques&lt;/h2&gt;
+&lt;p&gt;Covid-19 data – comparing regions?
+Stats19 data – cycling in London?&lt;/p&gt;
 &lt;!-- Concerns around the _reproducibility crisis_ are not simply a function of transparency in methodology and research design. Rather, they relate to a culture and incentive structure whereby scientific claims are conferred with authority when reported within the (slightly backwards) logic of Null Hypothesis Significance Testing (NHST) and _p-values_. We will cover a little on this in session 7 and 8, but for an accessible read on the phenomenon of _p-hacking_ (with interactive graphic) see [this article](https://fivethirtyeight.com/features/science-isnt-broken/#part1) from the excellent [FiveThirtyEight](http://fivethirtyeight.com) website. Again, the upshot of all this introspection is a rethinking of the way in which Statistics is taught in schools and universities, with greater emphasis on understanding through computational approaches rather than traditional equations, formulas and probability tables. Where does `R` fit within this? Simply put: `R` is far better placed than traditional software tools and point-and-click paradigms for supporting computational approaches to statistics -- with a set of methods and libraries for performing simulations and permutation-based tests. --&gt;
+&lt;/div&gt;
 </description>
     </item>
     
@@ -91,18 +113,10 @@ Others? Knife crime data?&lt;/p&gt;
 &lt;!-- /BLOGDOWN-HEAD --&gt;
 
 
-&lt;p&gt;Road safety analysis : &lt;a href=&#34;https://docs.ropensci.org/stats19/&#34; class=&#34;uri&#34;&gt;https://docs.ropensci.org/stats19/&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;&lt;div class=&#34;alert alert-instruction&#34;&gt;
-  &lt;div&gt;
-    Uncertainty
-  &lt;/div&gt;
-&lt;/div&gt;
-&lt;/p&gt;
-&lt;div class=&#34;embed-responsive embed-responsive-16by9&#34;&gt;
-&lt;iframe class=&#34;embed-responsive-item&#34; src=&#34;https://www.youtube.com/embed/vqzO-9LSoG4&#34; frameborder=&#34;0&#34; allow=&#34;accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture&#34; allowfullscreen&gt;
-&lt;/iframe&gt;
-&lt;/div&gt;
-&lt;p&gt;Uncertainty vis book : &lt;a href=&#34;https://mjskay.github.io/uncertainty-vis-book/&#34; class=&#34;uri&#34;&gt;https://mjskay.github.io/uncertainty-vis-book/&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Multi-level modelling : &lt;a href=&#34;https://bookdown.org/roback/bookdown-BeyondMLR/&#34; class=&#34;uri&#34;&gt;https://bookdown.org/roback/bookdown-BeyondMLR/&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Also : &lt;a href=&#34;http://ljwolf.org/teaching/gds/02-workbook.html&#34; class=&#34;uri&#34;&gt;http://ljwolf.org/teaching/gds/02-workbook.html&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Introduce Ocam’s Razor on variable selection?&lt;/p&gt;
+&lt;p&gt;Partial pooling : &lt;a href=&#34;https://solomonkurz.netlify.app/post/stein-s-paradox-and-what-partial-pooling-can-do-for-you/&#34; class=&#34;uri&#34;&gt;https://solomonkurz.netlify.app/post/stein-s-paradox-and-what-partial-pooling-can-do-for-you/&lt;/a&gt;&lt;/p&gt;
 </description>
     </item>
     
@@ -120,7 +134,15 @@ Others? Knife crime data?&lt;/p&gt;
 
 &lt;p&gt;Brexit analysis : &lt;a href=&#34;https://github.com/ropensci/nomisr&#34; class=&#34;uri&#34;&gt;https://github.com/ropensci/nomisr&lt;/a&gt;
 Trump analysis : &lt;a href=&#34;https://walker-data.com/tidycensus/&#34; class=&#34;uri&#34;&gt;https://walker-data.com/tidycensus/&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;Story – previously very data-driven&lt;/p&gt;
+&lt;p&gt;Quote from Spiegelhalter? About explanation of variation in context of what remains unexplained&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Models as functions&lt;/li&gt;
+&lt;li&gt;Vocabulary: outcome variable (whose variation you are trying to understand), explanatory (other variables that you want to use to explain variation), predicted value (output o the model function – expected outcome conditioing on explanatory variables), residuals (a measure of how far each case is from the predicted value)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Why models and not graphics
+* Can reveal patterns that not evident in graphics – in regression framework we can &lt;em&gt;condition&lt;/em&gt; on explanatory variables and talk about the effect of single variables net of others.
+* Deal with uncertainty and false discovery – we infer/overinterpet from scatterplots&lt;/p&gt;
+&lt;p&gt;Use tidymodels : &lt;a href=&#34;https://cfss.uchicago.edu/notes/start-with-models/&#34; class=&#34;uri&#34;&gt;https://cfss.uchicago.edu/notes/start-with-models/&lt;/a&gt;&lt;/p&gt;
 </description>
     </item>
     
@@ -188,7 +210,9 @@ Connection – bikes&lt;/p&gt;
 &lt;div id=&#34;session-outcomes&#34; class=&#34;section level2&#34;&gt;
 &lt;h2&gt;Session outcomes&lt;/h2&gt;
 &lt;p&gt;By the end of this session you should gain the following &lt;strong&gt;&lt;em&gt;knowledge&lt;/em&gt;&lt;/strong&gt;:&lt;/p&gt;
-&lt;p&gt;&lt;div class=&#34;alert alert-objective&#34;&gt;
+&lt;p&gt;
+
+&lt;div class=&#34;alert alert-objective&#34;&gt;
   &lt;div&gt;
     &lt;ul&gt;
 &lt;li&gt;&lt;input checked=&#34;&#34; disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; Appreciate the motivation for this module – why visualization, why R and why ggplot2&lt;/li&gt;
@@ -199,7 +223,9 @@ Connection – bikes&lt;/p&gt;
 &lt;/div&gt;
 &lt;/p&gt;
 &lt;p&gt;By the end of this session you should gain the following &lt;strong&gt;&lt;em&gt;practical skills&lt;/em&gt;&lt;/strong&gt;:&lt;/p&gt;
-&lt;p&gt;&lt;div class=&#34;alert alert-objective&#34;&gt;
+&lt;p&gt;
+
+&lt;div class=&#34;alert alert-objective&#34;&gt;
   &lt;div&gt;
     &lt;ul&gt;
 &lt;li&gt;&lt;input checked=&#34;&#34; disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; Navigate the materials on this course website, having familiarised yourself with its structure&lt;/li&gt;
@@ -240,14 +266,16 @@ Connection – bikes&lt;/p&gt;
 &lt;h3&gt;Geographic Data Science and &lt;em&gt;Visualization&lt;/em&gt;&lt;/h3&gt;
 &lt;!-- &gt; Visualization is fundamental to meeting the unprecedented challenges and exploiting the wonderful opportunities of the ever-expanding deluge of data confronting virtually every field.&#34; \
 &gt; -- Prof. Jim Hollan of UC San Diego --&gt;
-&lt;!-- &lt;div class=&#34;alert alert-note&#34;&gt;
+&lt;!-- 
+
+&lt;div class=&#34;alert alert-note&#34;&gt;
   &lt;div&gt;
     Visual approaches to data analysis are particularly suited to Geographic Data Science applications because where datasets are being repurposed for social and natural sciences research for the first time,  contain complex structure and geo-spatial relations that cannot be easily captured by statistical summaries alone and so where the types of questions that can be asked and the techniques deployed to answer them cannot be easily specified in advance.
   &lt;/div&gt;
 &lt;/div&gt;
  --&gt;
 &lt;p&gt;Glancing at this list, &lt;em&gt;visualization&lt;/em&gt; could be interpreted as a single facet of Data Science process&lt;a href=&#34;#fn2&#34; class=&#34;footnote-ref&#34; id=&#34;fnref2&#34;&gt;&lt;sup&gt;2&lt;/sup&gt;&lt;/a&gt; – something that happens after data gathering, preparation, exploration, but before modelling. In this module you’ll learn that visualization is intrinsic to, and should inform, each of these activities, especially so when working with data sets that are spatial – for Geographic Data Science.&lt;/p&gt;
-&lt;p&gt;Let’s develop this idea by asking &lt;strong&gt;why data visualizations are used in the first place&lt;/strong&gt;. In her book &lt;em&gt;Visualization Analysis and Design&lt;/em&gt;, Tamara &lt;span class=&#34;citation&#34;&gt;Munzer (&lt;a href=&#34;#ref-munzer_visualization_2014&#34; role=&#34;doc-biblioref&#34;&gt;2014&lt;/a&gt;)&lt;/span&gt; considers how humans and computers interface in the decision-making process. She makes the point that data visualization is ultimately about connecting people with data in order to make decisions – or to install humans in a ‘decision-making-loop’. There are occasionally decision-making loops that are entirely computational and where an automated solution exists and is trusted. However, most require some form of human intervention.&lt;/p&gt;
+&lt;p&gt;Let’s develop this idea by asking &lt;strong&gt;why data visualizations are used in the first place&lt;/strong&gt;. In her book &lt;em&gt;Visualization Analysis and Design&lt;/em&gt;, Tamara &lt;span class=&#34;citation&#34;&gt;(&lt;span class=&#34;citeproc-not-found&#34; data-reference-id=&#34;munzer_visualization_2014&#34;&gt;&lt;strong&gt;???&lt;/strong&gt;&lt;/span&gt;)&lt;/span&gt; considers how humans and computers interface in the decision-making process. She makes the point that data visualization is ultimately about connecting people with data in order to make decisions – or to install humans in a ‘decision-making-loop’. There are occasionally decision-making loops that are entirely computational and where an automated solution exists and is trusted. However, most require some form of human intervention.&lt;/p&gt;
 &lt;p&gt;The canonical example demonstrating how relying on computation alone can be problematic, and so for the use of visualization, is &lt;a href=&#34;https://en.wikipedia.org/wiki/Anscombe%27s_quartet&#34;&gt;Anscombe’s quartet&lt;/a&gt;. Here, &lt;span class=&#34;citation&#34;&gt;Anscombe (&lt;a href=&#34;#ref-anscombe_graphs_1973&#34; role=&#34;doc-biblioref&#34;&gt;1973&lt;/a&gt;)&lt;/span&gt; presents four datasets, each containing eleven observations and two variables for each observation. The data are synthetic, but let’s say that they are the weight and height of independent samples taken from a population of Postgraduate Students studying Data Science.&lt;/p&gt;
 &lt;p&gt;Presented with a new dataset it makes sense to compute some summaries and doing so, we observe that the data appear identical – they contain the same means, variances and strong positive correlation coefficient. This seems appropriate since the data are measuring weight and height. Although there may be some variation, we’d expect taller students to be heavier. Given these statical summaries we can be confident that we are drawing samples from the same population of (Data Science) students.&lt;/p&gt;
 &lt;div class=&#34;figure&#34;&gt;&lt;span id=&#34;fig:anscombe-data&#34;&gt;&lt;/span&gt;
@@ -266,7 +294,9 @@ Figure 2: Plots of Anscombe’s quartet
 &lt;/div&gt;
 &lt;p&gt;This is not to undermine the importance of numerical analysis. Numeric summaries that simplify patterns are extremely useful and Statistics has at its disposal an array of tools for helping to guard against making false claims from datasets – a theme that we will return to in session 6, 7 and 8 when we think critically about the use of visual approaches for data anlysis. There remain, though, certain classes of relation and context that cannot be easily captured through statistics alone.&lt;/p&gt;
 &lt;p&gt;&lt;em&gt;Geographic&lt;/em&gt; context is undoubtedly challenging to capture numerically; many of the early examples of data visualization have been of spatial phenomena and generated by Geographers &lt;span class=&#34;citation&#34;&gt;(see Friendly &lt;a href=&#34;#ref-friendly_brief_2007&#34; role=&#34;doc-biblioref&#34;&gt;2007&lt;/a&gt;)&lt;/span&gt;. We can also probably make a special case for the use of visual approaches in Geographic Data Science (GDS) applications due to its exploratory nature. Often in GDS datasets are being repurposed for social and natural sciences research for the first time; contain complex structure and geo-spatial relations that cannot be easily captured by statistical summaries alone; and so the types of questions that can be asked and the techniques deployed to answer them cannot be easily specified in advance. In this module we will demonstrate this as we &lt;em&gt;explore&lt;/em&gt; (Session 4 and 5), &lt;em&gt;model under uncertainty&lt;/em&gt; (Session 6 and 7) and &lt;em&gt;communicate&lt;/em&gt; (Session 7 and 8) with various social science datasets.&lt;/p&gt;
-&lt;p&gt;&lt;div class=&#34;alert alert-instruction&#34;&gt;
+&lt;p&gt;
+
+&lt;div class=&#34;alert alert-instruction&#34;&gt;
   &lt;div&gt;
     Watch &lt;a href=&#34;https://www.gicentre.net/jwo/index&#34;&gt;Jo Wood’s&lt;/a&gt; talk demonstrating how visual techniques can be used to analyse urban travel behaviours. In the video Jo argues that bikeshare schemes can help democratise cycling, but also for their potential contributions to research – he briefly contrasts new, passively collected data sets with more “traditional” actively collected data for analysing how people move around cities. A compelling case is then made for the use of visualization to support this activity. This work and further discussion is published in &lt;span class=&#34;citation&#34;&gt;Beecham and Wood (&lt;a href=&#34;#ref-beecham_exploring_2014&#34; role=&#34;doc-biblioref&#34;&gt;2014&lt;/a&gt;)&lt;/span&gt;.
   &lt;/div&gt;
@@ -303,7 +333,9 @@ Figure 2: Plots of Anscombe’s quartet
 &lt;h3&gt;R for modern data analysis&lt;/h3&gt;
 &lt;p&gt;Through the module we will apply modern approaches to data analysis. All data collection, analysis and reporting activity will be completed using &lt;a href=&#34;https://www.r-project.org/&#34;&gt;&lt;code&gt;R&lt;/code&gt;&lt;/a&gt; and the &lt;a href=&#34;https://rstudio.com/&#34;&gt;&lt;code&gt;RStudio&lt;/code&gt;&lt;/a&gt; &lt;a href=&#34;https://en.wikipedia.org/wiki/Integrated_development_environment&#34;&gt;Integrated Development Environment&lt;/a&gt; (IDE). Released as open source software as part of a research project in 1995, for some time &lt;code&gt;R&lt;/code&gt; was the preserve of academics. From 2010s onwards, the &lt;code&gt;R&lt;/code&gt; community expanded rapidly and along with &lt;a href=&#34;https://www.python.org/&#34;&gt;&lt;code&gt;Python&lt;/code&gt;&lt;/a&gt; is regarded as the key technology for doing data analysis. &lt;code&gt;R&lt;/code&gt; is used increasingly outside of academia, by organisations such as Google &lt;a href=&#34;https://research.google.com/pubs/pub37483.html&#34;&gt;[example]&lt;/a&gt;, Facebook &lt;a href=&#34;http://flowingdata.com/2010/12/13/facebook-worldwide-friendships-mapped/&#34;&gt;[example]&lt;/a&gt;, Twitter &lt;a href=&#34;https://blog.twitter.com/official/en_us/a/2013/the-geography-of-tweets.html&#34;&gt;[example]&lt;/a&gt;, New York Times &lt;a href=&#34;http://www.nytimes.com/interactive/2012/05/05/sports/baseball/mariano-rivera-and-his-peers.html?ref=baseballexample&#34;&gt;[example]&lt;/a&gt;, BBC &lt;a href=&#34;https://bbc.github.io/rcookbook/&#34;&gt;[example]&lt;/a&gt; and many more.&lt;/p&gt;
 &lt;p&gt;There are many benefits that come from being fully open-source, with a critical mass of users. Firstly, there is an array of online forums, tutorials and code examples from which to learn. Second, with such a large community, there are numerous expert &lt;code&gt;R&lt;/code&gt; users who themselves contribute by developing &lt;strong&gt;libraries&lt;/strong&gt; or &lt;strong&gt;packages&lt;/strong&gt; that extend its use. As a result &lt;code&gt;R&lt;/code&gt; is employed for a very wide set of use cases – this website was even built in &lt;code&gt;R&lt;/code&gt; using amongst other things the &lt;a href=&#34;https://bookdown.org/yihui/blogdown/&#34;&gt;&lt;code&gt;blogdown&lt;/code&gt;&lt;/a&gt; package.&lt;/p&gt;
-&lt;p&gt;&lt;div class=&#34;alert alert-note&#34;&gt;
+&lt;p&gt;
+
+&lt;div class=&#34;alert alert-note&#34;&gt;
   &lt;div&gt;
     The key reason for our use of &lt;code&gt;R&lt;/code&gt; is the ecosystem of users and &lt;strong&gt;packages&lt;/strong&gt; that have emerged in recent years. An R package is a bundle of code, data and documentation, usually hosted on the &lt;a href=&#34;https://cran.r-project.org/&#34;&gt;CRAN&lt;/a&gt; (Comprehensive R Archive Network).
   &lt;/div&gt;
@@ -357,7 +389,9 @@ Figure 3: The RStudio IDE
 &lt;div id=&#34;compute-in-the-console&#34; class=&#34;section level3&#34;&gt;
 &lt;h3&gt;Compute in the console&lt;/h3&gt;
 &lt;p&gt;You will write and execute almost all code from the code editor pane. To start though let’s use &lt;code&gt;R&lt;/code&gt; as a calculator by typing some commands into the Console. You’ll create an object (&lt;code&gt;x&lt;/code&gt;) and assign it a value using the assignment operator (&lt;code&gt;&amp;lt;-&lt;/code&gt;), then perform some simple statistical calculations using functions that are held within the &lt;code&gt;base&lt;/code&gt; package.&lt;/p&gt;
-&lt;p&gt;&lt;div class=&#34;alert alert-note&#34;&gt;
+&lt;p&gt;
+
+&lt;div class=&#34;alert alert-note&#34;&gt;
   &lt;div&gt;
     The &lt;code&gt;base&lt;/code&gt; package is core and native to &lt;code&gt;R&lt;/code&gt;. Unlike all other packages, it does not need to be installed and called explicitly. One means of checking the package to which a function you are using belongs is to call the help command (&lt;code&gt;?&lt;/code&gt;) on that function: e.g. &lt;code&gt;?mean()&lt;/code&gt;.
   &lt;/div&gt;
@@ -416,7 +450,9 @@ x_root &amp;lt;- sqrt(x_2)&lt;/code&gt;&lt;/pre&gt;
 &lt;/ul&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;install.packages(c(&amp;quot;devtools&amp;quot;,&amp;quot;usethis&amp;quot;, &amp;quot;rmarkdown&amp;quot;, &amp;quot;knitr&amp;quot;,&amp;quot;fst&amp;quot;,
 &amp;quot;lubridate&amp;quot;, &amp;quot;tidymodels&amp;quot;, &amp;quot;rmapshaper&amp;quot;))&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;div class=&#34;alert alert-note&#34;&gt;
+&lt;p&gt;
+
+&lt;div class=&#34;alert alert-note&#34;&gt;
   &lt;div&gt;
     If you wanted to make use of a package only very occasionally in a single session, you could access it without explicitly loading it via &lt;code&gt;library(&amp;lt;package-name&amp;gt;)&lt;/code&gt;, using this syntax: &lt;code&gt;&amp;lt;package-name&amp;gt;::&amp;lt;function_name&amp;gt;&lt;/code&gt;, e.g. &lt;code&gt;?sf::st_contains()&lt;/code&gt;.
   &lt;/div&gt;
@@ -579,9 +615,6 @@ Figure 5: Creating an RStudio Project
 &lt;div id=&#34;ref-matejka_same_2017&#34;&gt;
 &lt;p&gt;Matejka, Justin, and George Fitzmaurice. 2017. “Same Stats, Different Graphs: Generating Datasets with Varied Appearance and Identical Statistics Through Simulated Annealing.” In, 1290–4. CHI ’17. New York, NY, USA: Association for Computing Machinery. doi:&lt;a href=&#34;https://doi.org/10.1145/3025453.3025912&#34;&gt;10.1145/3025453.3025912&lt;/a&gt;.&lt;/p&gt;
 &lt;/div&gt;
-&lt;div id=&#34;ref-munzer_visualization_2014&#34;&gt;
-&lt;p&gt;Munzer, Tamara. 2014. &lt;em&gt;Visualization Analysis and Design&lt;/em&gt;. AK Peters Visualization Series. Boca Raton, FL: CRC Press.&lt;/p&gt;
-&lt;/div&gt;
 &lt;div id=&#34;ref-singleton_geographic_2019&#34;&gt;
 &lt;p&gt;Singleton, Alex, and Dani Arribas-Bel. 2019. “Geographic Data Science.” &lt;em&gt;Geographical Analysis&lt;/em&gt;. doi:&lt;a href=&#34;https://doi.org/10.1111/gean.12194&#34;&gt;10.1111/gean.12194&lt;/a&gt;.&lt;/p&gt;
 &lt;/div&gt;
@@ -622,7 +655,9 @@ Figure 5: Creating an RStudio Project
 &lt;div id=&#34;session-outcomes&#34; class=&#34;section level2&#34;&gt;
 &lt;h2&gt;Session Outcomes&lt;/h2&gt;
 &lt;p&gt;By the end of this homework session you should:&lt;/p&gt;
-&lt;p&gt;&lt;div class=&#34;alert alert-objective&#34;&gt;
+&lt;p&gt;
+
+&lt;div class=&#34;alert alert-objective&#34;&gt;
   &lt;div&gt;
     &lt;ul&gt;
 &lt;li&gt;&lt;input checked=&#34;&#34; disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; Be familiar with RStudio, R Markdown and R Projects.&lt;/li&gt;
@@ -674,14 +709,27 @@ Figure 5: Creating an RStudio Project
 &lt;!-- /BLOGDOWN-HEAD --&gt;
 
 
+&lt;div id=&#34;defining-geographic-data-science&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Defining (Geographic) Data science&lt;/h3&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;p&gt;&lt;span class=&#34;citation&#34;&gt;Dani Arribas-Bel and Jon Reades, “Geography and Computers: Past, Present, and Future,” &lt;em&gt;Geography Compass&lt;/em&gt; 12, no. 10 (&lt;a href=&#34;#ref-arribas_geography_2018&#34; role=&#34;doc-biblioref&#34;&gt;2018&lt;/a&gt;): e12403, doi:&lt;a href=&#34;https://doi.org/10.1111/gec3.12403&#34; role=&#34;doc-biblioref&#34;&gt;10.1111/gec3.12403&lt;/a&gt;.&lt;/span&gt;&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;&lt;span class=&#34;citation&#34;&gt;Chris Brunsdon and Alexis Comber, “Opening Practice: Supporting Reproducibility and Critical Spatial Data Science,” &lt;em&gt;Journal of Geographical Systems&lt;/em&gt; (&lt;a href=&#34;#ref-brunsdon_opening_2020&#34; role=&#34;doc-biblioref&#34;&gt;2020&lt;/a&gt;), doi:&lt;a href=&#34;https://doi.org/10.1007/s10109-020-00334-2&#34; role=&#34;doc-biblioref&#34;&gt;10.1007/s10109-020-00334-2&lt;/a&gt;.&lt;/span&gt;&lt;/p&gt;&lt;/li&gt;
 &lt;li&gt;&lt;p&gt;&lt;span class=&#34;citation&#34;&gt;Alex Singleton and Dani Arribas-Bel, “Geographic Data Science,” &lt;em&gt;Geographical Analysis&lt;/em&gt; (&lt;a href=&#34;#ref-singleton_geographic_2019&#34; role=&#34;doc-biblioref&#34;&gt;2019&lt;/a&gt;), doi:&lt;a href=&#34;https://doi.org/10.1111/gean.12194&#34; role=&#34;doc-biblioref&#34;&gt;10.1111/gean.12194&lt;/a&gt;.&lt;/span&gt;&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;&lt;span class=&#34;citation&#34;&gt;Hadley Wickham and Garrett Grolemund, &lt;em&gt;R for Data Science: Import, Tidy, Transform, Visualize, and Model Data&lt;/em&gt; (Sebastopol, California: O’Reilly Media, &lt;a href=&#34;#ref-wickham_r_2017&#34; role=&#34;doc-biblioref&#34;&gt;2017&lt;/a&gt;), &lt;a href=&#34;http://r4ds.had.co.nz/&#34; role=&#34;doc-biblioref&#34;&gt;http://r4ds.had.co.nz/&lt;/a&gt;.&lt;/span&gt;&lt;br /&gt;
-– Chapters 1,2,6,8.&lt;br /&gt;
-&lt;a href=&#34;https://r4ds.had.co.nz/&#34;&gt;Free online&lt;/a&gt;.&lt;/p&gt;&lt;/li&gt;
 &lt;/ul&gt;
+&lt;/div&gt;
+&lt;div id=&#34;reproducibility-agenda&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Reproducibility agenda&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;span class=&#34;citation&#34;&gt;Chris Brunsdon and Alexis Comber, “Opening Practice: Supporting Reproducibility and Critical Spatial Data Science,” &lt;em&gt;Journal of Geographical Systems&lt;/em&gt; (&lt;a href=&#34;#ref-brunsdon_opening_2020&#34; role=&#34;doc-biblioref&#34;&gt;2020&lt;/a&gt;), doi:&lt;a href=&#34;https://doi.org/10.1007/s10109-020-00334-2&#34; role=&#34;doc-biblioref&#34;&gt;10.1007/s10109-020-00334-2&lt;/a&gt;.&lt;/span&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div id=&#34;introducing-r-for-data-science&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Introducing R for Data Science&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;span class=&#34;citation&#34;&gt;Hadley Wickham and Garrett Grolemund, &lt;em&gt;R for Data Science: Import, Tidy, Transform, Visualize, and Model Data&lt;/em&gt; (Sebastopol, California: O’Reilly Media, &lt;a href=&#34;#ref-wickham_r_2017&#34; role=&#34;doc-biblioref&#34;&gt;2017&lt;/a&gt;), &lt;a href=&#34;http://r4ds.had.co.nz/&#34; role=&#34;doc-biblioref&#34;&gt;http://r4ds.had.co.nz/&lt;/a&gt;.&lt;/span&gt;&lt;br /&gt;
+– Chapters 1,2,6,8.&lt;br /&gt;
+&lt;a href=&#34;https://r4ds.had.co.nz/&#34;&gt;Free online&lt;/a&gt;.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
 </description>
     </item>
     
@@ -705,16 +753,18 @@ Figure 5: Creating an RStudio Project
 &lt;li&gt;&lt;a href=&#34;#task-2-diagnose-data&#34;&gt;Task 2: Diagnose data&lt;/a&gt;&lt;ul&gt;
 &lt;li&gt;&lt;a href=&#34;#uk-general-election-results-2019&#34;&gt;UK General Election Results 2019&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;#uk-general-election-results-2017-and-2019&#34;&gt;UK General Election Results 2017 and 2019&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;#task-3-fix-data&#34;&gt;Task 3: Fix data&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;#task-4-compute-from-data&#34;&gt;Task 4: Compute from data&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/div&gt;
 
 &lt;div id=&#34;session-outcomes&#34; class=&#34;section level2&#34;&gt;
 &lt;h2&gt;Session Outcomes&lt;/h2&gt;
 &lt;p&gt;By the end of this homework session you should be able to:&lt;/p&gt;
-&lt;p&gt;&lt;div class=&#34;alert alert-objective&#34;&gt;
+&lt;p&gt;
+
+&lt;div class=&#34;alert alert-objective&#34;&gt;
   &lt;div&gt;
     &lt;ul&gt;
 &lt;li&gt;&lt;input checked=&#34;&#34; disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; Describe data according to its structure and contents.&lt;/li&gt;
@@ -868,8 +918,9 @@ Figure 5: Creating an RStudio Project
 &lt;/tbody&gt;
 &lt;/table&gt;
 &lt;/div&gt;
-&lt;div id=&#34;task-3-fix-data&#34; class=&#34;section level3&#34;&gt;
-&lt;h3&gt;Task 3: Fix data&lt;/h3&gt;
+&lt;/div&gt;
+&lt;div id=&#34;task-3-fix-data&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Task 3: Fix data&lt;/h2&gt;
 &lt;p&gt;In the &lt;a href=&#34;./homework/02-homework_files/02-template.Rmd&#34;&gt;&lt;i class=&#34;fab fa-r-project&#34;&gt;&lt;/i&gt; 02-template.Rmd&lt;/a&gt; file for this session I have provided links to two derived tables (&lt;code&gt;ny_spread_columns&lt;/code&gt; and &lt;code&gt;ny_spread_rows&lt;/code&gt;) from the New York bikeshare trip data that are not in a tidy format.&lt;/p&gt;
 &lt;p&gt;Using functions from &lt;code&gt;dplyr&lt;/code&gt; and &lt;code&gt;tidyr&lt;/code&gt; reorganise these data so that they are conform to the rules of &lt;strong&gt;tidy&lt;/strong&gt; data &lt;span class=&#34;citation&#34;&gt;Wickham, “Tidy Data.”&lt;/span&gt;.&lt;/p&gt;
 &lt;p&gt;A candidate tidy organisation of the data is below. Each row is an origin-destination pair for a weekday or weekend, and each variable describes:&lt;/p&gt;
@@ -896,10 +947,9 @@ Figure 5: Creating an RStudio Project
 ## 10        72       173 weekend     9  9.59    194.
 ## # … with 386,752 more rows&lt;/code&gt;&lt;/pre&gt;
 &lt;/div&gt;
-&lt;div id=&#34;task-4-compute-from-data&#34; class=&#34;section level3&#34;&gt;
-&lt;h3&gt;Task 4: Compute from data&lt;/h3&gt;
+&lt;div id=&#34;task-4-compute-from-data&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Task 4: Compute from data&lt;/h2&gt;
 &lt;p&gt;Using &lt;code&gt;dplyr&lt;/code&gt; functions, calculate the average distance, duration and speed of trips occuring for each observation. Print out to the Console the top 10 most heavily cycled OD pairs (and their associated summary statistics) separately for weekdays and weekends. You may wish to join on your &lt;code&gt;ny_stations&lt;/code&gt; table in order to fetch the station names corresponding to the origin and destination stations.&lt;/p&gt;
-&lt;/div&gt;
 &lt;/div&gt;
 </description>
     </item>
@@ -916,14 +966,217 @@ Figure 5: Creating an RStudio Project
 &lt;!-- /BLOGDOWN-HEAD --&gt;
 
 
+&lt;div id=&#34;tidy-data&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Tidy Data&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;p&gt;&lt;span class=&#34;citation&#34;&gt;Dani Arribas-Bel and Jon Reades, “Geography and Computers: Past, Present, and Future,” &lt;em&gt;Geography Compass&lt;/em&gt; 12, no. 10 (&lt;a href=&#34;#ref-arribas_geography_2018&#34; role=&#34;doc-biblioref&#34;&gt;2018&lt;/a&gt;): e12403, doi:&lt;a href=&#34;https://doi.org/10.1111/gec3.12403&#34; role=&#34;doc-biblioref&#34;&gt;10.1111/gec3.12403&lt;/a&gt;.&lt;/span&gt;&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;&lt;span class=&#34;citation&#34;&gt;Chris Brunsdon and Alexis Comber, “Opening Practice: Supporting Reproducibility and Critical Spatial Data Science,” &lt;em&gt;Journal of Geographical Systems&lt;/em&gt; (&lt;a href=&#34;#ref-brunsdon_opening_2020&#34; role=&#34;doc-biblioref&#34;&gt;2020&lt;/a&gt;), doi:&lt;a href=&#34;https://doi.org/10.1007/s10109-020-00334-2&#34; role=&#34;doc-biblioref&#34;&gt;10.1007/s10109-020-00334-2&lt;/a&gt;.&lt;/span&gt;&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;&lt;span class=&#34;citation&#34;&gt;Alex Singleton and Dani Arribas-Bel, “Geographic Data Science,” &lt;em&gt;Geographical Analysis&lt;/em&gt; (&lt;a href=&#34;#ref-singleton_geographic_2019&#34; role=&#34;doc-biblioref&#34;&gt;2019&lt;/a&gt;), doi:&lt;a href=&#34;https://doi.org/10.1111/gean.12194&#34; role=&#34;doc-biblioref&#34;&gt;10.1111/gean.12194&lt;/a&gt;.&lt;/span&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;span class=&#34;citation&#34;&gt;&lt;span class=&#34;citeproc-not-found&#34; data-reference-id=&#34;wickham_tidy_2010&#34;&gt;&lt;strong&gt;???&lt;/strong&gt;&lt;/span&gt;&lt;/span&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div id=&#34;r-for-data-science&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;R for Data Science&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;span class=&#34;citation&#34;&gt;Hadley Wickham and Garrett Grolemund, &lt;em&gt;R for Data Science: Import, Tidy, Transform, Visualize, and Model Data&lt;/em&gt; (Sebastopol, California: O’Reilly Media, &lt;a href=&#34;#ref-wickham_r_2017&#34; role=&#34;doc-biblioref&#34;&gt;2017&lt;/a&gt;), &lt;a href=&#34;http://r4ds.had.co.nz/&#34; role=&#34;doc-biblioref&#34;&gt;http://r4ds.had.co.nz/&lt;/a&gt;.&lt;/span&gt;&lt;br /&gt;
+– Chapters 2-12.&lt;br /&gt;
+&lt;a href=&#34;https://r4ds.had.co.nz/&#34;&gt;Free online&lt;/a&gt;.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div id=&#34;bikedata&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;bikedata&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;span class=&#34;citation&#34;&gt;Mark Padgham and Richard Ellison, “Bikedata,” &lt;em&gt;The Journal of Open Source Software&lt;/em&gt; 2, no. 20 &lt;a href=&#34;#ref-padgham_bikedata_2017&#34; role=&#34;doc-biblioref&#34;&gt;(December &lt;a href=&#34;#ref-padgham_bikedata_2017&#34; role=&#34;doc-biblioref&#34;&gt;2017&lt;/a&gt;)&lt;/a&gt;, doi:&lt;a href=&#34;https://doi.org/10.21105/joss.00471&#34; role=&#34;doc-biblioref&#34;&gt;10.21105/joss.00471&lt;/a&gt;.&lt;/span&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Visualization Fundamentals</title>
+      <link>/homework/03-homework/</link>
+      <pubDate>Tue, 01 Jun 2021 00:00:00 +0000</pubDate>
+      <guid>/homework/03-homework/</guid>
+      <description>
+&lt;!-- BLOGDOWN-HEAD --&gt;
+&lt;link href=&#34;./rmarkdown-libs/anchor-sections/anchor-sections.css&#34; rel=&#34;stylesheet&#34; /&gt;
+&lt;script src=&#34;./rmarkdown-libs/anchor-sections/anchor-sections.js&#34;&gt;&lt;/script&gt;
+&lt;!-- /BLOGDOWN-HEAD --&gt;
+
+&lt;h2&gt;Contents&lt;/h2&gt;
+&lt;div id=&#34;TOC&#34;&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#session-outcomes&#34;&gt;Session Outcomes&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#introduction&#34;&gt;Introduction&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#task-1-describe-and-evaluate&#34;&gt;Task 1: Describe and evaluate&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#task-2-reproduce&#34;&gt;Task 2: Reproduce&lt;/a&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#histograms-faceted-by-region&#34;&gt;Histograms faceted by region&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#scatterplots-with-multiple-encodings&#34;&gt;Scatterplots with multiple encodings&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#task-3-create-a-map&#34;&gt;Task 3: Create a map&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+
+&lt;div id=&#34;session-outcomes&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Session Outcomes&lt;/h2&gt;
+&lt;p&gt;By the end of this homework session you should be able to:&lt;/p&gt;
+&lt;p&gt;
+
+&lt;div class=&#34;alert alert-objective&#34;&gt;
+  &lt;div&gt;
+    &lt;ul&gt;
+&lt;li&gt;&lt;input checked=&#34;&#34; disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; Formally describe data graphics according to their visual encoding.&lt;/li&gt;
+&lt;li&gt;&lt;input checked=&#34;&#34; disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; Reproduce graphics by writing &lt;code&gt;ggplot2&lt;/code&gt; specifications.&lt;/li&gt;
+&lt;li&gt;&lt;input checked=&#34;&#34; disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; Combine &lt;code&gt;dplyr&lt;/code&gt; and conditional statements to prep data for plotting.&lt;/li&gt;
+&lt;/ul&gt;
+
+  &lt;/div&gt;
+&lt;/div&gt;
+&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;introduction&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Introduction&lt;/h2&gt;
+&lt;p&gt;This homework requires you to apply the concepts and skills developed in the class session on &lt;a href=&#34;./02-class/&#34;&gt;data fundamentals&lt;/a&gt;. Do complete each of the tasks and be sure to save your work as this homework will be submitted as part of your portfolio for Assignment 1.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;task-1-describe-and-evaluate&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Task 1: Describe and evaluate&lt;/h2&gt;
+&lt;div class=&#34;figure&#34;&gt;&lt;span id=&#34;fig:spoke-map&#34;&gt;&lt;/span&gt;
+&lt;img src=&#34;./class/03-class_files/spoke-map.png&#34; alt=&#34;Map of Butler Con-Lab Swing in 2019 General Election.&#34; width=&#34;100%&#34; /&gt;
+&lt;p class=&#34;caption&#34;&gt;
+Figure 1: Map of Butler Con-Lab Swing in 2019 General Election.
+&lt;/p&gt;
+&lt;/div&gt;
+&lt;p&gt;Complete the description table below identifying each &lt;strong&gt;data item&lt;/strong&gt; that is encoded along with its &lt;strong&gt;measurement level&lt;/strong&gt;, &lt;strong&gt;visual mark&lt;/strong&gt; and &lt;strong&gt;visual&lt;/strong&gt; channel** and the effectiveness rank, according to &lt;span class=&#34;citation&#34;&gt;Tamara Munzner &lt;em&gt;Visualization Analysis and Design&lt;/em&gt;, AK Peters Visualization Series (Boca Raton, FL: CRC Press, &lt;a href=&#34;#ref-munzner_visualization_2014&#34; role=&#34;doc-biblioref&#34;&gt;2014&lt;/a&gt;).&lt;/span&gt;, of this encoding.&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr class=&#34;header&#34;&gt;
+&lt;th&gt;Data item&lt;/th&gt;
+&lt;th&gt;Measurement level&lt;/th&gt;
+&lt;th&gt;Visual mark&lt;/th&gt;
+&lt;th&gt;Visual channel&lt;/th&gt;
+&lt;th&gt;Rank&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr class=&#34;odd&#34;&gt;
+&lt;td&gt;&lt;code&gt;location&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;&lt;enter here&gt;&lt;/td&gt;
+&lt;td&gt;&lt;enter here&gt;&lt;/td&gt;
+&lt;td&gt;&lt;enter here&gt;&lt;/td&gt;
+&lt;td&gt;&lt;enter here&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr class=&#34;even&#34;&gt;
+&lt;td&gt;&lt;code&gt;...&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;...&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;...&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;...&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;...&lt;/code&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr class=&#34;odd&#34;&gt;
+&lt;td&gt;&lt;code&gt;...&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;...&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;...&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;...&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;...&lt;/code&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr class=&#34;even&#34;&gt;
+&lt;td&gt;&lt;code&gt;...&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;...&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;...&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;...&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;...&lt;/code&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr class=&#34;odd&#34;&gt;
+&lt;td&gt;&lt;code&gt;...&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;...&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;...&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;...&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;...&lt;/code&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr class=&#34;even&#34;&gt;
+&lt;td&gt;&lt;code&gt;...&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;...&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;...&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;...&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;...&lt;/code&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;/div&gt;
+&lt;div id=&#34;task-2-reproduce&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Task 2: Reproduce&lt;/h2&gt;
+&lt;div id=&#34;histograms-faceted-by-region&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Histograms faceted by region&lt;/h3&gt;
+&lt;p&gt;Write some code for reproducing something similar to the graphic below – a set of histograms of the Swing variable, faceted by region. Place your code into the &lt;a href=&#34;./homework/03-homework_files/03-template.Rmd&#34;&gt;&lt;i class=&#34;fab fa-r-project&#34;&gt;&lt;/i&gt; 03-template.Rmd&lt;/a&gt; file for this session.&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;#######################
+# Enter your code in the chunk provided.
+######################&lt;/code&gt;&lt;/pre&gt;
+&lt;div class=&#34;figure&#34;&gt;&lt;span id=&#34;fig:hist-region&#34;&gt;&lt;/span&gt;
+&lt;img src=&#34;./class/03-class_files/hist-region.png&#34; alt=&#34;Histograms of Swing variable, grouped by region.&#34; width=&#34;100%&#34; /&gt;
+&lt;p class=&#34;caption&#34;&gt;
+Figure 2: Histograms of Swing variable, grouped by region.
+&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div id=&#34;scatterplots-with-multiple-encodings&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Scatterplots with multiple encodings&lt;/h3&gt;
+&lt;p&gt;Write some code for reproducing something similar to the graphic below – a scatterplot comparing 2017 and 2019 vote shares for Labour. Be sure to include &lt;strong&gt;every&lt;/strong&gt; encoding (&lt;code&gt;shape&lt;/code&gt; and &lt;code&gt;alpha&lt;/code&gt;) as it appears in the graphic. Hint: you may need to use a &lt;strong&gt;conditional statement&lt;/strong&gt; to generate a variable for emphasising constituencies that flipped parties between 2017 and 2019. Place your code into the &lt;a href=&#34;./homework/03-homework_files/03-template.Rmd&#34;&gt;&lt;i class=&#34;fab fa-r-project&#34;&gt;&lt;/i&gt; 03-template.Rmd&lt;/a&gt; file for this session.&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;#######################
+# Enter your code in the chunk provided.
+######################&lt;/code&gt;&lt;/pre&gt;
+&lt;div class=&#34;figure&#34;&gt;&lt;span id=&#34;fig:scatters-lab&#34;&gt;&lt;/span&gt;
+&lt;img src=&#34;./class/03-class_files/scatters-lab.png&#34; alt=&#34;Plots of 2019 versus 2017 vote shares.&#34; width=&#34;100%&#34; /&gt;
+&lt;p class=&#34;caption&#34;&gt;
+Figure 3: Plots of 2019 versus 2017 vote shares.
+&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div id=&#34;task-3-create-a-map&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Task 3: Create a map&lt;/h2&gt;
+&lt;p&gt;Write some code for reproducing something similar to the graphic below – a map of the estimated Leave:Remain vote margin by Parliamentary Constituency. Note that I am using a &lt;a href=&#34;https://colorbrewer2.org/#type=diverging&amp;amp;scheme=BrBG&amp;amp;n=3&#34;&gt;diverging&lt;/a&gt; colour scheme here to distinguish whether the Constituency was majority Leave and Remain – brown or green – and also the &lt;em&gt;size&lt;/em&gt; of that majority – the darker the colour, the larger the majority.&lt;/p&gt;
+&lt;p&gt;Place your code into the &lt;a href=&#34;./homework/03-homework_files/03-template.Rmd&#34;&gt;&lt;i class=&#34;fab fa-r-project&#34;&gt;&lt;/i&gt; 03-template.Rmd&lt;/a&gt; file for this session.&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;#######################
+# Enter your code in the chunk provided.
+######################&lt;/code&gt;&lt;/pre&gt;
+&lt;div class=&#34;figure&#34;&gt;&lt;span id=&#34;fig:referendum-map&#34;&gt;&lt;/span&gt;
+&lt;img src=&#34;./class/03-class_files/referendum-map.png&#34; alt=&#34;Map of 2016 EU Referendum vote, estimated by Parliamentary Constituency in GB.&#34; width=&#34;100%&#34; /&gt;
+&lt;p class=&#34;caption&#34;&gt;
+Figure 4: Map of 2016 EU Referendum vote, estimated by Parliamentary Constituency in GB.
+&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Visualization Fundamentals</title>
+      <link>/reading/03-reading/</link>
+      <pubDate>Tue, 01 Jun 2021 00:00:00 +0000</pubDate>
+      <guid>/reading/03-reading/</guid>
+      <description>
+&lt;!-- BLOGDOWN-HEAD --&gt;
+&lt;link href=&#34;./rmarkdown-libs/anchor-sections/anchor-sections.css&#34; rel=&#34;stylesheet&#34; /&gt;
+&lt;script src=&#34;./rmarkdown-libs/anchor-sections/anchor-sections.js&#34;&gt;&lt;/script&gt;
+&lt;!-- /BLOGDOWN-HEAD --&gt;
+
+
+&lt;div id=&#34;visualization-concepts&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Visualization concepts&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;span class=&#34;citation&#34;&gt;Tamara Munzner, &lt;em&gt;Visualization Analysis and Design&lt;/em&gt;, AK Peters Visualization Series (Boca Raton, FL: CRC Press, &lt;a href=&#34;#ref-munzner_visualization_2014&#34; role=&#34;doc-biblioref&#34;&gt;2014&lt;/a&gt;).&lt;/span&gt;&lt;br /&gt;
+– Chapters 1,2,5.&lt;br /&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div id=&#34;data-visualization-in-ggplot2&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Data Visualization in ggplot2&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;&lt;span class=&#34;citation&#34;&gt;Kieran Healy, &lt;em&gt;Data Visualization: A Practical Introduction&lt;/em&gt; (Princeton: Princeton University Press, &lt;a href=&#34;#ref-healy_data_2018&#34; role=&#34;doc-biblioref&#34;&gt;2018&lt;/a&gt;), &lt;a href=&#34;http://socviz.co/&#34; role=&#34;doc-biblioref&#34;&gt;http://socviz.co/&lt;/a&gt;.&lt;/span&gt;&lt;br /&gt;
+– Chapters 1,3,4,7.&lt;br /&gt;
+&lt;a href=&#34;https://socviz.co/&#34;&gt;Free online&lt;/a&gt;.&lt;/p&gt;&lt;/li&gt;
 &lt;li&gt;&lt;p&gt;&lt;span class=&#34;citation&#34;&gt;Hadley Wickham and Garrett Grolemund, &lt;em&gt;R for Data Science: Import, Tidy, Transform, Visualize, and Model Data&lt;/em&gt; (Sebastopol, California: O’Reilly Media, &lt;a href=&#34;#ref-wickham_r_2017&#34; role=&#34;doc-biblioref&#34;&gt;2017&lt;/a&gt;), &lt;a href=&#34;http://r4ds.had.co.nz/&#34; role=&#34;doc-biblioref&#34;&gt;http://r4ds.had.co.nz/&lt;/a&gt;.&lt;/span&gt;&lt;br /&gt;
-– Chapters 1,2,6,8.&lt;br /&gt;
+– Chapters 3.&lt;br /&gt;
 &lt;a href=&#34;https://r4ds.had.co.nz/&#34;&gt;Free online&lt;/a&gt;.&lt;/p&gt;&lt;/li&gt;
 &lt;/ul&gt;
+&lt;/div&gt;
 </description>
     </item>
     
@@ -968,45 +1221,73 @@ Also here would calculate summary stats, perform data wrangling/manipulation/tra
 &lt;!-- BLOGDOWN-HEAD --&gt;
 &lt;link href=&#34;./rmarkdown-libs/anchor-sections/anchor-sections.css&#34; rel=&#34;stylesheet&#34; /&gt;
 &lt;script src=&#34;./rmarkdown-libs/anchor-sections/anchor-sections.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;./rmarkdown-libs/kePrint/kePrint.js&#34;&gt;&lt;/script&gt;
+&lt;link href=&#34;./rmarkdown-libs/lightable/lightable.css&#34; rel=&#34;stylesheet&#34; /&gt;
 &lt;!-- /BLOGDOWN-HEAD --&gt;
 
 &lt;h2&gt;Contents&lt;/h2&gt;
 &lt;div id=&#34;TOC&#34;&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&#34;#introduction&#34;&gt;Introduction&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#grammar-of-graphics&#34;&gt;Grammar of Graphics&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#data-marks-and-channels&#34;&gt;Data, marks and channels&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#evaluating-designs-washington-post-map&#34;&gt;Evaluating designs (Washington Post map)&lt;/a&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#concepts&#34;&gt;Concepts&lt;/a&gt;&lt;ul&gt;
 &lt;li&gt;&lt;a href=&#34;#characteristics-of-effective-data-graphics&#34;&gt;Characteristics of effective data graphics&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#grammar-of-graphics&#34;&gt;Grammar of Graphics&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#marks-and-visual-channels&#34;&gt;Marks and visual channels&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#evaluating-designs&#34;&gt;Evaluating designs&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#symbolisation&#34;&gt;Symbolisation&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#checking-perceptual-rankings&#34;&gt;Checking perceptual rankings&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#colour&#34;&gt;Colour&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#techniques&#34;&gt;Techniques&lt;/a&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#import&#34;&gt;Import&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#summarise&#34;&gt;Summarise&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#plot-distributions&#34;&gt;Plot distributions&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#plot-ranksmagnitudes&#34;&gt;Plot ranks/magnitudes&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#plot-relationships&#34;&gt;Plot relationships&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#plot-geography&#34;&gt;Plot geography&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#conclusions&#34;&gt;Conclusions&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#references&#34;&gt;References&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/div&gt;
 
 &lt;p&gt;By the end of this session you should gain the following &lt;strong&gt;&lt;em&gt;knowledge&lt;/em&gt;&lt;/strong&gt;:&lt;/p&gt;
-&lt;p&gt;&lt;div class=&#34;alert alert-objective&#34;&gt;
+&lt;p&gt;
+
+&lt;div class=&#34;alert alert-objective&#34;&gt;
   &lt;div&gt;
     &lt;ul&gt;
-&lt;li&gt;&lt;input checked=&#34;&#34; disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; Recognise the key characteristics of effective data graphics.&lt;/li&gt;
-&lt;li&gt;&lt;input checked=&#34;&#34; disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; Understand principles underpinning visualization design – that visualization design is concerned with a mapping between data to visual channels.&lt;/li&gt;
-&lt;li&gt;&lt;input checked=&#34;&#34; disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; Appreciate how these principles can be deployed when describe graphics in a consistent and systematic way – that there is a &lt;em&gt;grammar&lt;/em&gt; of graphics, and that understanding this grammar is necessary for using modern visualization toolkits (&lt;code&gt;ggplot&lt;/code&gt;, &lt;code&gt;vega-lite&lt;/code&gt; and &lt;code&gt;Tableau&lt;/code&gt;).&lt;/li&gt;
+&lt;li&gt;&lt;input checked=&#34;&#34; disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; Recognise the characteristics of effective data graphics.&lt;/li&gt;
+&lt;li&gt;&lt;input checked=&#34;&#34; disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; Understand that there is a &lt;strong&gt;grammar&lt;/strong&gt; of graphics, and that this grammar underpins modern visualization toolkits (&lt;code&gt;ggplot&lt;/code&gt;, vega-lite and Tableau).&lt;/li&gt;
+&lt;li&gt;&lt;input checked=&#34;&#34; disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; Be aware of the vocabulary used by these toolkits – that of encoding data through visual channels.&lt;/li&gt;
+&lt;li&gt;&lt;input checked=&#34;&#34; disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; Be able to select appropriate &lt;strong&gt;visual channels&lt;/strong&gt; given a data item’s measurement type.&lt;/li&gt;
+&lt;li&gt;&lt;input checked=&#34;&#34; disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; Appreciate how &lt;strong&gt;visual channels&lt;/strong&gt; and evidence of their &lt;strong&gt;encoding effectiveness&lt;/strong&gt; can be used to evaluate data graphics.&lt;/li&gt;
 &lt;/ul&gt;
 
   &lt;/div&gt;
 &lt;/div&gt;
 &lt;/p&gt;
 &lt;p&gt;By the end of this session you should gain the following &lt;strong&gt;&lt;em&gt;practical skills&lt;/em&gt;&lt;/strong&gt;:&lt;/p&gt;
-&lt;p&gt;&lt;div class=&#34;alert alert-objective&#34;&gt;
+&lt;p&gt;
+
+&lt;div class=&#34;alert alert-objective&#34;&gt;
   &lt;div&gt;
     &lt;ul&gt;
-&lt;li&gt;&lt;input checked=&#34;&#34; disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; Create effective data graphics using &lt;code&gt;ggplot2&lt;/code&gt; specifications, by mapping data to &lt;code&gt;colour&lt;/code&gt; and &lt;code&gt;position&lt;/code&gt;.&lt;/li&gt;
+&lt;li&gt;&lt;input checked=&#34;&#34; disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; Write &lt;code&gt;ggplot2&lt;/code&gt; specifications that map data to &lt;strong&gt;colour&lt;/strong&gt; and &lt;strong&gt;position&lt;/strong&gt;.&lt;/li&gt;
+&lt;li&gt;&lt;input checked=&#34;&#34; disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; ??&lt;/li&gt;
 &lt;/ul&gt;
 
   &lt;/div&gt;
 &lt;/div&gt;
 &lt;/p&gt;
-&lt;p&gt;&lt;div class=&#34;alert alert-instruction&#34;&gt;
+&lt;div id=&#34;introduction&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Introduction&lt;/h2&gt;
+&lt;p&gt;This session outlines the fundamentals of visualization design. It offers a position on what effective data graphics should do, before discussing in detail the processes that take place when creating data graphics. You will learn that there is a framework – a vocabulary and grammar – for supporting this process which, combined with established knowledge around visual perception, can be used to &lt;em&gt;describe&lt;/em&gt;, &lt;em&gt;evaluate&lt;/em&gt; and &lt;em&gt;create&lt;/em&gt; effective data graphics. Talking about a vocabulary and grammar of data and graphics may sound alien and abstract, the preserve of Computer Scientists. However, through an analysis of 2019 General Election results data we will demonstrate that these concepts underpin most visual data analysis.&lt;/p&gt;
+&lt;p&gt;
+
+&lt;div class=&#34;alert alert-instruction&#34;&gt;
   &lt;div&gt;
-    TEDxWaterloo - Miriah Meyer - Information Visualization for Scientific Discovery
+    Watch &lt;a href=&#34;https://www.cs.utah.edu/~miriah/&#34;&gt;Miriah Meyer’s&lt;/a&gt; TEDx talk, &lt;em&gt;Information Visualization for Scientific Discovery&lt;/em&gt;, which provides a nice introduction to many of the concepts covered in the session.
   &lt;/div&gt;
 &lt;/div&gt;
 &lt;/p&gt;
@@ -1014,80 +1295,1002 @@ Also here would calculate summary stats, perform data wrangling/manipulation/tra
 &lt;iframe class=&#34;embed-responsive-item&#34; src=&#34;https://www.youtube.com/embed/Sua0xDCf8MA&#34; frameborder=&#34;0&#34; allow=&#34;accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture&#34; allowfullscreen&gt;
 &lt;/iframe&gt;
 &lt;/div&gt;
-&lt;p&gt;&lt;a href=&#34;https://channel9.msdn.com/Events/useR-international-R-User-conference/useR2016/Towards-a-grammar-of-interactive-graphics&#34; class=&#34;uri&#34;&gt;https://channel9.msdn.com/Events/useR-international-R-User-conference/useR2016/Towards-a-grammar-of-interactive-graphics&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;&lt;a href=&#34;https://rstudio.com/resources/rstudioconf-2020/effective-visualizations/&#34; class=&#34;uri&#34;&gt;https://rstudio.com/resources/rstudioconf-2020/effective-visualizations/&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;Dataset :
-&lt;em&gt;2019 General Election!&lt;/em&gt; As we have Census data via R package &lt;a href=&#34;https://github.com/ropensci/nomisr&#34; class=&#34;uri&#34;&gt;https://github.com/ropensci/nomisr&lt;/a&gt;
-Trump election 2016 – with 2012 data so can look at shift (tar we will revisit this in session 6).
-General Election 2019 | &lt;a href=&#34;https://researchbriefings.files.parliament.uk/documents/CBP-8749/HoC-GE2019-results-by-constituency-csv.csv&#34; class=&#34;uri&#34;&gt;https://researchbriefings.files.parliament.uk/documents/CBP-8749/HoC-GE2019-results-by-constituency-csv.csv&lt;/a&gt;&lt;/p&gt;
-&lt;div id=&#34;introduction&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;Introduction&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;That we will consider the process and steps that take place in order to turn some data into something graphical.&lt;/li&gt;
-&lt;li&gt;That there is a formalised/systematic way of describing this process, the grammar of graphics. That this can be used to easily &lt;em&gt;describe&lt;/em&gt; and &lt;em&gt;create&lt;/em&gt; graphics – and so modern visualization toolkits explicitly follow GoG.&lt;/li&gt;
-&lt;li&gt;That we can use this, and empirical knowledge of specifications/encoding combinations that are effective, to &lt;em&gt;evaluate&lt;/em&gt; graphics.&lt;/li&gt;
-&lt;/ul&gt;
 &lt;/div&gt;
-&lt;div id=&#34;grammar-of-graphics&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;Grammar of Graphics&lt;/h2&gt;
-&lt;blockquote&gt;
-&lt;p&gt;Grammar The whole system and structure of a language or of languages in general, usually taken as consisting of syntax and morphology (including inflections) and sometimes also phonology and semantics.&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;codify data types, encodings/channels, marks
-map data -&amp;gt; channels -&amp;gt; marks&lt;/p&gt;
-&lt;p&gt;encode data with visual channels
-display encodings with marks&lt;/p&gt;
-&lt;p&gt;Example of scatterplot
-scatter
-vote_share : numeric y position
-degree_educated : numeric x position
-margin : colour | shape
-mark : point
-.&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;p&gt;Mapping
-aes() within geoms&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;Setting (not mapping to data, so outside of aes()) &lt;a href=&#34;https://ids-s1-20.github.io/slides/week-02/w2-d03-ggplot2/w2-d03-ggplot2.html#28&#34; class=&#34;uri&#34;&gt;https://ids-s1-20.github.io/slides/week-02/w2-d03-ggplot2/w2-d03-ggplot2.html#28&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/div&gt;
-&lt;div id=&#34;data-marks-and-channels&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;Data, marks and channels&lt;/h2&gt;
-&lt;p&gt;What channel is best for? quantitative, ordered, nominal?
-Some encodings induce bias – length versus area encodings
-Absolute encoding versus flannery exponent. overlapping circles getting larger.
-Vis configruations may be equally expressive, but no as effective – circles versus bars
-Colour - Brewer and conceptually unform colour&lt;/p&gt;
-&lt;p&gt;From this, guidelines :&lt;/p&gt;
-&lt;p&gt;Recommendations/Guidelines
-Use perception to choose most effective Channels
-Use symbolisation that makes sense given the dataset – sloping to the right Trump, left Clinton, RdBu
-Use popout and separable encodings – colour hue in use, orientation in use, thickness (shape&lt;/p&gt;
-&lt;/div&gt;
-&lt;div id=&#34;evaluating-designs-washington-post-map&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;Evaluating designs (Washington Post map)&lt;/h2&gt;
-&lt;p&gt;Why GoG? Helps specify many charts and combinations, helps evaluate charts systematically, helps design charts systematically …&lt;/p&gt;
-&lt;p&gt;&lt;em&gt;Evaluate&lt;/em&gt; – how well do these match, given the channel used? Schematics do this
-The GoG is useful because it identifies the steps we have to go through to fully and unambiguously specify what we want a visualization to do. It also helps us to ask ‘why’ questions at each stage to assist us in justifying our visualization designs
-)&lt;/p&gt;
-&lt;p&gt;Code out loud a good idea
-&lt;a href=&#34;https://ids-s1-20.github.io/slides/week-02/w2-d03-ggplot2/w2-d03-ggplot2.html#6&#34; class=&#34;uri&#34;&gt;https://ids-s1-20.github.io/slides/week-02/w2-d03-ggplot2/w2-d03-ggplot2.html#6&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;Assessed task 1?
-show graphic and describe and evaluate it:&lt;/p&gt;
-&lt;p&gt;What are the variables / types?
-Channels / encodings?
-Marks?
-Is this effective? Why?&lt;/p&gt;
+&lt;div id=&#34;concepts&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Concepts&lt;/h2&gt;
 &lt;div id=&#34;characteristics-of-effective-data-graphics&#34; class=&#34;section level3&#34;&gt;
 &lt;h3&gt;Characteristics of effective data graphics&lt;/h3&gt;
-&lt;p&gt;From Jo :&lt;/p&gt;
+&lt;p&gt;Data graphics take numerous forms and are used in many different ways by scientists, journalists, designers and many more. Whilst the intentions of those producing data graphics varies, those that are &lt;em&gt;effective&lt;/em&gt; generally have the following characteristics:&lt;/p&gt;
 &lt;ol style=&#34;list-style-type: decimal&#34;&gt;
-&lt;li&gt;Represents a complex dataset graphically that could not as effectively be represented via other means.&lt;/li&gt;
-&lt;li&gt;Often emphasises connections and comparisons between items of data.&lt;/li&gt;
-&lt;li&gt;Frequently involves interaction to allow someone to influence what they see.&lt;/li&gt;
-&lt;li&gt;A “narrative providing a clear answer to a question without extraneous details” (Fry, 2008 p.4).&lt;/li&gt;
-&lt;li&gt;Generates an aesthetic response in order to encourage people to engage with the data or question.&lt;/li&gt;
+&lt;li&gt;Represent complex datasets graphically to expose structure, connections and comparisons that could not be achieved easily via other means.&lt;/li&gt;
+&lt;li&gt;Are data rich: present many numbers in a small space.&lt;/li&gt;
+&lt;li&gt;Reveal patterns at several levels of detail: from broad overview to fine structure.&lt;/li&gt;
+&lt;li&gt;Have elegance – emphasise dimensions of a dataset without extraneous details.&lt;/li&gt;
+&lt;li&gt;Generate an aesthetic response that encourages people to engage with the data or question.&lt;/li&gt;
 &lt;/ol&gt;
-&lt;p&gt;Through the class and homework sessions you will be loading datasets from flat &lt;code&gt;.csv&lt;/code&gt; &lt;i class=&#34;fas fa-file-csv&#34;&gt;&lt;/i&gt; files, bundled &lt;code&gt;.zip&lt;/code&gt; &lt;i class=&#34;fas fa-file-archive&#34;&gt;&lt;/i&gt; folders or occasionally &lt;i class=&#34;fas fa-database&#34;&gt;&lt;/i&gt; database objects.&lt;/p&gt;
+&lt;p&gt;
+
+&lt;div class=&#34;alert alert-instruction&#34;&gt;
+  &lt;div&gt;
+    Considering these characteristics, take a look at the data graphics below, which present an analysis of the 2016 US Presidential Election. Use the links to read the full stories and accompanying data analyses.
+  &lt;/div&gt;
+&lt;/div&gt;
+&lt;/p&gt;
+&lt;div class=&#34;figure&#34;&gt;&lt;span id=&#34;fig:wp-map&#34;&gt;&lt;/span&gt;
+&lt;img src=&#34;./class/03-class_files/trump_maps.png&#34; alt=&#34;Maps of 2016 US presidential election results. Left - two-colour choropleth in [Medium](https://pensivepost.com/understanding-rural-america-d9695a6b3516). Right - information-rich data graphic in [The Washington Post](https://www.washingtonpost.com/graphics/politics/2016-election/election-results-from-coast-to-coast/).&#34; width=&#34;100%&#34; /&gt;
+&lt;p class=&#34;caption&#34;&gt;
+Figure 1: Maps of 2016 US presidential election results. Left - two-colour choropleth in &lt;a href=&#34;https://pensivepost.com/understanding-rural-america-d9695a6b3516&#34;&gt;Medium&lt;/a&gt;. Right - information-rich data graphic in &lt;a href=&#34;https://www.washingtonpost.com/graphics/politics/2016-election/election-results-from-coast-to-coast/&#34;&gt;The Washington Post&lt;/a&gt;.
+&lt;/p&gt;
+&lt;/div&gt;
+&lt;p&gt;Both maps use 2016 county-level results data, but the &lt;a href=&#34;https://www.washingtonpost.com/graphics/politics/2016-election/election-results-from-coast-to-coast/&#34;&gt;The Washington Post&lt;/a&gt; graphic encodes many more data items than the Medium post (see Table &lt;a href=&#34;#tab:wp-data&#34;&gt;1&lt;/a&gt; below).&lt;/p&gt;
+&lt;p&gt;It is not simply the data density that makes the Washington Post graphic successful. The authors usefully incorporate annotations and transformations in order to support comparison and emphasise structure. By varying the height of triangles according to the number of votes cast, the thickness according to whether or not the result for Trump/Clinton was a landslide and rotating the scrollable map 90 degrees, the very obvious differences between metropolitan, densely populated coastal counties that voted emphatically for Clinton and the vast number of suburban, provincial town and rural counties (everywhere else) that voted Trump, are exposed.&lt;/p&gt;
+&lt;table&gt;
+&lt;caption&gt;
+&lt;span id=&#34;tab:wp-data&#34;&gt;Table 1: &lt;/span&gt;Data items encoded in the Washington Post and Medium articles.
+&lt;/caption&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th style=&#34;text-align:left;&#34;&gt;
+Data item
+&lt;/th&gt;
+&lt;th style=&#34;text-align:left;&#34;&gt;
+Data measurement level
+&lt;/th&gt;
+&lt;th style=&#34;text-align:left;&#34;&gt;
+Washington Post
+&lt;/th&gt;
+&lt;th style=&#34;text-align:left;&#34;&gt;
+Medium
+&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+county location
+&lt;/td&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+&lt;code&gt;Ratio&lt;/code&gt; (&lt;code&gt;cyclic&lt;/code&gt;)
+&lt;/td&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+&lt;a href=&#34;www.google.com&#34;&gt;&lt;svg style=&#34;height:0.8em;top:.04em;position:relative;&#34; viewBox=&#34;0 0 512 512&#34;&gt;&lt;path d=&#34;M173.898 439.404l-166.4-166.4c-9.997-9.997-9.997-26.206 0-36.204l36.203-36.204c9.997-9.998 26.207-9.998 36.204 0L192 312.69 432.095 72.596c9.997-9.997 26.207-9.997 36.204 0l36.203 36.204c9.997 9.997 9.997 26.206 0 36.204l-294.4 294.401c-9.998 9.997-26.207 9.997-36.204-.001z&#34;/&gt;&lt;/svg&gt;&lt;/a&gt;
+&lt;/td&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+&lt;a href=&#34;www.google.com&#34;&gt;&lt;svg style=&#34;height:0.8em;top:.04em;position:relative;&#34; viewBox=&#34;0 0 512 512&#34;&gt;&lt;path d=&#34;M173.898 439.404l-166.4-166.4c-9.997-9.997-9.997-26.206 0-36.204l36.203-36.204c9.997-9.998 26.207-9.998 36.204 0L192 312.69 432.095 72.596c9.997-9.997 26.207-9.997 36.204 0l36.203 36.204c9.997 9.997 9.997 26.206 0 36.204l-294.4 294.401c-9.998 9.997-26.207 9.997-36.204-.001z&#34;/&gt;&lt;/svg&gt;&lt;/a&gt;
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+county result
+&lt;/td&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+&lt;code&gt;Nominal&lt;/code&gt;
+&lt;/td&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+&lt;a href=&#34;www.google.com&#34;&gt;&lt;svg style=&#34;height:0.8em;top:.04em;position:relative;&#34; viewBox=&#34;0 0 512 512&#34;&gt;&lt;path d=&#34;M173.898 439.404l-166.4-166.4c-9.997-9.997-9.997-26.206 0-36.204l36.203-36.204c9.997-9.998 26.207-9.998 36.204 0L192 312.69 432.095 72.596c9.997-9.997 26.207-9.997 36.204 0l36.203 36.204c9.997 9.997 9.997 26.206 0 36.204l-294.4 294.401c-9.998 9.997-26.207 9.997-36.204-.001z&#34;/&gt;&lt;/svg&gt;&lt;/a&gt;
+&lt;/td&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+&lt;a href=&#34;www.google.com&#34;&gt;&lt;svg style=&#34;height:0.8em;top:.04em;position:relative;&#34; viewBox=&#34;0 0 512 512&#34;&gt;&lt;path d=&#34;M173.898 439.404l-166.4-166.4c-9.997-9.997-9.997-26.206 0-36.204l36.203-36.204c9.997-9.998 26.207-9.998 36.204 0L192 312.69 432.095 72.596c9.997-9.997 26.207-9.997 36.204 0l36.203 36.204c9.997 9.997 9.997 26.206 0 36.204l-294.4 294.401c-9.998 9.997-26.207 9.997-36.204-.001z&#34;/&gt;&lt;/svg&gt;&lt;/a&gt;
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+state result
+&lt;/td&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+&lt;code&gt;Nominal&lt;/code&gt;
+&lt;/td&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+&lt;a href=&#34;www.google.com&#34;&gt;&lt;svg style=&#34;height:0.8em;top:.04em;position:relative;&#34; viewBox=&#34;0 0 512 512&#34;&gt;&lt;path d=&#34;M173.898 439.404l-166.4-166.4c-9.997-9.997-9.997-26.206 0-36.204l36.203-36.204c9.997-9.998 26.207-9.998 36.204 0L192 312.69 432.095 72.596c9.997-9.997 26.207-9.997 36.204 0l36.203 36.204c9.997 9.997 9.997 26.206 0 36.204l-294.4 294.401c-9.998 9.997-26.207 9.997-36.204-.001z&#34;/&gt;&lt;/svg&gt;&lt;/a&gt;
+&lt;/td&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+county votes cast (~pop size)
+&lt;/td&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+&lt;code&gt;Ratio&lt;/code&gt;
+&lt;/td&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+&lt;a href=&#34;www.google.com&#34;&gt;&lt;svg style=&#34;height:0.8em;top:.04em;position:relative;&#34; viewBox=&#34;0 0 512 512&#34;&gt;&lt;path d=&#34;M173.898 439.404l-166.4-166.4c-9.997-9.997-9.997-26.206 0-36.204l36.203-36.204c9.997-9.998 26.207-9.998 36.204 0L192 312.69 432.095 72.596c9.997-9.997 26.207-9.997 36.204 0l36.203 36.204c9.997 9.997 9.997 26.206 0 36.204l-294.4 294.401c-9.998 9.997-26.207 9.997-36.204-.001z&#34;/&gt;&lt;/svg&gt;&lt;/a&gt;
+&lt;/td&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+county result margin
+&lt;/td&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+&lt;code&gt;Ratio&lt;/code&gt;
+&lt;/td&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+&lt;a href=&#34;www.google.com&#34;&gt;&lt;svg style=&#34;height:0.8em;top:.04em;position:relative;&#34; viewBox=&#34;0 0 512 512&#34;&gt;&lt;path d=&#34;M173.898 439.404l-166.4-166.4c-9.997-9.997-9.997-26.206 0-36.204l36.203-36.204c9.997-9.998 26.207-9.998 36.204 0L192 312.69 432.095 72.596c9.997-9.997 26.207-9.997 36.204 0l36.203 36.204c9.997 9.997 9.997 26.206 0 36.204l-294.4 294.401c-9.998 9.997-26.207 9.997-36.204-.001z&#34;/&gt;&lt;/svg&gt;&lt;/a&gt;
+&lt;/td&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+county result landslide
+&lt;/td&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+&lt;code&gt;Nominal&lt;/code&gt;
+&lt;/td&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+&lt;a href=&#34;www.google.com&#34;&gt;&lt;svg style=&#34;height:0.8em;top:.04em;position:relative;&#34; viewBox=&#34;0 0 512 512&#34;&gt;&lt;path d=&#34;M173.898 439.404l-166.4-166.4c-9.997-9.997-9.997-26.206 0-36.204l36.203-36.204c9.997-9.998 26.207-9.998 36.204 0L192 312.69 432.095 72.596c9.997-9.997 26.207-9.997 36.204 0l36.203 36.204c9.997 9.997 9.997 26.206 0 36.204l-294.4 294.401c-9.998 9.997-26.207 9.997-36.204-.001z&#34;/&gt;&lt;/svg&gt;&lt;/a&gt;
+&lt;/td&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;/div&gt;
+&lt;div id=&#34;grammar-of-graphics&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Grammar of Graphics&lt;/h3&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Data graphics visually display measured quantities by means of the combined use of points, lines, a coordinate system, numbers, symbols, words, shading, and color.&lt;/p&gt;
+&lt;p&gt;&lt;span class=&#34;citation&#34;&gt;Tufte (&lt;a href=&#34;#ref-tufte_visual_1983&#34; role=&#34;doc-biblioref&#34;&gt;1983&lt;/a&gt;)&lt;/span&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;In evidence in the Washington Post graphic is a judicious &lt;strong&gt;mapping&lt;/strong&gt; of data to visuals, underpinned by a secure understanding of analysis context. This act of carefully considering how best to leverage visual systems given the available data and analysis priorities is key to designing effective data graphics.&lt;/p&gt;
+&lt;p&gt;In the late 1990s Leland Wilkinson, a Computer Scientist and Statistician, introduced the &lt;a href=&#34;https://www.springer.com/gp/book/9780387245447&#34;&gt;Grammar of Graphics&lt;/a&gt; as an approach that formalises this process of turning data into visuals. &lt;span class=&#34;citation&#34;&gt;Wilkinson (&lt;a href=&#34;#ref-wilkinson_grammar_1999&#34; role=&#34;doc-biblioref&#34;&gt;1999&lt;/a&gt;)&lt;/span&gt;’s thesis is that if graphics can be described in a consistent way according to their structure and composition, then the process of &lt;strong&gt;generating&lt;/strong&gt; graphics of different types can be systematised. This has obvious benefits for building visualization toolkits: it makes it easy to specify chart types and combinations and helps formalise the process of designing data visualizations. &lt;a href=&#34;https://vega.github.io/vega-lite/&#34;&gt;vega-lite&lt;/a&gt;, &lt;a href=&#34;https://www.tableau.com/en-gb&#34;&gt;Tableau&lt;/a&gt; and &lt;a href=&#34;https://ggplot2.tidyverse.org/&#34;&gt;&lt;code&gt;ggplot2&lt;/code&gt;&lt;/a&gt; are all underpinned by &lt;a href=&#34;https://www.springer.com/gp/book/9780387245447&#34;&gt;Grammar of Graphics&lt;/a&gt; thinking.&lt;/p&gt;
+&lt;p&gt;&lt;span class=&#34;citation&#34;&gt;Wilkinson (&lt;a href=&#34;#ref-wilkinson_grammar_1999&#34; role=&#34;doc-biblioref&#34;&gt;1999&lt;/a&gt;)&lt;/span&gt;’s grammar separates the construction of a data graphic into a series of components. Below are the components of the &lt;em&gt;Layered Grammar of Graphics&lt;/em&gt; on which &lt;a href=&#34;https://ggplot2.tidyverse.org/&#34;&gt;&lt;code&gt;ggplot2&lt;/code&gt;&lt;/a&gt; is based &lt;span class=&#34;citation&#34;&gt;(Wickham &lt;a href=&#34;#ref-wickham_layered_2010&#34; role=&#34;doc-biblioref&#34;&gt;2010&lt;/a&gt;)&lt;/span&gt;, a slight edit on &lt;span class=&#34;citation&#34;&gt;Wilkinson (&lt;a href=&#34;#ref-wilkinson_grammar_1999&#34; role=&#34;doc-biblioref&#34;&gt;1999&lt;/a&gt;)&lt;/span&gt;’s original work.&lt;/p&gt;
+&lt;div class=&#34;figure&#34; style=&#34;text-align: left&#34;&gt;&lt;span id=&#34;fig:gog&#34;&gt;&lt;/span&gt;
+&lt;img src=&#34;./class/03-class_files/gog.png&#34; alt=&#34;Components of @wickham_layered_2010&#39;s Layered Grammar of Graphics.&#34; width=&#34;80%&#34; /&gt;
+&lt;p class=&#34;caption&#34;&gt;
+Figure 2: Components of &lt;span class=&#34;citation&#34;&gt;Wickham (&lt;a href=&#34;#ref-wickham_layered_2010&#34; role=&#34;doc-biblioref&#34;&gt;2010&lt;/a&gt;)&lt;/span&gt;’s Layered Grammar of Graphics.
+&lt;/p&gt;
+&lt;/div&gt;
+&lt;p&gt;The seven components in Figure &lt;a href=&#34;#fig:gog&#34;&gt;2&lt;/a&gt; are together used to create &lt;a href=&#34;https://ggplot2.tidyverse.org/&#34;&gt;&lt;code&gt;ggplot2&lt;/code&gt;&lt;/a&gt; specifications. The aspects to emphasise at this stage are those in emphasis, which are required in any &lt;code&gt;ggplot2&lt;/code&gt; specification: the &lt;span style=&#34;color:#5A91CA;font-weight:bold&#34;&gt;data&lt;/span&gt; containing the variables of interest, the &lt;code&gt;geom&lt;/code&gt; or &lt;span style=&#34;color:#E17637;font-weight:bold&#34;&gt;marks&lt;/span&gt; to be used to represent data and the &lt;strong&gt;aesthetic&lt;/strong&gt; (&lt;code&gt;mapping=aes(...)&lt;/code&gt;) attributes, or visual &lt;span style=&#34;color:#62B743;font-weight:bold&#34;&gt;channels&lt;/span&gt; through which variables are to be encoded.&lt;/p&gt;
+&lt;p&gt;To demonstrate this, let’s generate some scatterplots based on the 2019 General Election data we will be analysing later in the session. Two variables worth exploring for association here are: &lt;code&gt;con_1719&lt;/code&gt;, the change in Conservative vote share by constituency between 2017-2019, and &lt;code&gt;leave_hanretty&lt;/code&gt;, the size of the Leave vote in the 2016 EU referendum, estimated at Parliamentary Constituency level &lt;span class=&#34;citation&#34;&gt;(see Hanretty &lt;a href=&#34;#ref-hanretty_areal_2017&#34; role=&#34;doc-biblioref&#34;&gt;2017&lt;/a&gt;)&lt;/span&gt;.&lt;/p&gt;
+&lt;div class=&#34;figure&#34;&gt;&lt;span id=&#34;fig:gog-demo&#34;&gt;&lt;/span&gt;
+&lt;img src=&#34;./class/03-class_files/gog-demo.png&#34; alt=&#34;Plots, grammars and associated `ggplot2` specifications for the scatterplot.&#34; width=&#34;100%&#34; /&gt;
+&lt;p class=&#34;caption&#34;&gt;
+Figure 3: Plots, grammars and associated &lt;code&gt;ggplot2&lt;/code&gt; specifications for the scatterplot.
+&lt;/p&gt;
+&lt;/div&gt;
+&lt;p&gt;In Figure &lt;a href=&#34;#fig:gog-demo&#34;&gt;3&lt;/a&gt; are three plots and associated &lt;code&gt;ggplot2&lt;/code&gt; specifications. Reading-off the graphics and the associated code, you should get a feel for how &lt;code&gt;ggplot2&lt;/code&gt; specifications are constructed:&lt;/p&gt;
+&lt;ol style=&#34;list-style-type: decimal&#34;&gt;
+&lt;li&gt;We start with a data frame, in this case each observation is an electoral result for a Parliamentary Constituency. In the &lt;code&gt;ggplot2&lt;/code&gt; spec this is passed using the pipe operator (&lt;code&gt;data_ge %&amp;gt;%&lt;/code&gt;). We also identify the variables we wish to encode and their measurement &lt;span style=&#34;color:#5A91CA;font-weight:bold&#34;&gt;type&lt;/span&gt;. Remembering last session’s materials, both &lt;code&gt;con_1719&lt;/code&gt; and &lt;code&gt;leave_hanretty&lt;/code&gt; are &lt;code&gt;ratio&lt;/code&gt; scale variables.&lt;/li&gt;
+&lt;li&gt;Next is the encoding (&lt;code&gt;mapping=aes()&lt;/code&gt;), which determines how the data are to be mapped to visual &lt;span style=&#34;color:#62B743;font-weight:bold&#34;&gt;channels&lt;/span&gt;. A scatterplot is a 2d representation in which horizontal and vertical position varies in a meaningful way, in response to the values of a data set. Here the values of &lt;code&gt;leave_hanretty&lt;/code&gt; are mapped along the x-axis and the values of &lt;code&gt;con_1719&lt;/code&gt; are mapped along the y-axis.&lt;/li&gt;
+&lt;li&gt;Finally, we represent individual data items with &lt;span style=&#34;color:#E17637;font-weight:bold&#34;&gt;marks&lt;/span&gt; using the &lt;code&gt;geom_point&lt;/code&gt; geometry.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;In the middle plot, the grammar is updated such that the points are coloured according to &lt;code&gt;winning_party&lt;/code&gt;, a variable of type categorical &lt;code&gt;nominal&lt;/code&gt;. In the bottom plot constituencies that flipped from Labour-to-Conservative between 2017-19 are emphasised by varying the transparency (&lt;code&gt;alpha&lt;/code&gt;) of points. I have described &lt;code&gt;flipped&lt;/code&gt; as an &lt;code&gt;ordinal&lt;/code&gt; variable, but strictly it is a &lt;code&gt;nominal&lt;/code&gt; (binary) variable. Due to the way it is encoded in the plot – constituencies that flipped (&lt;code&gt;flipped=TRUE&lt;/code&gt;) are given greater visual emphasis – I think it is more appropriate to call it an ordinal variable.&lt;/p&gt;
+&lt;p&gt;
+
+&lt;div class=&#34;alert alert-note&#34;&gt;
+  &lt;div&gt;
+    It is understandable if at this stage the specifications in Figure &lt;a href=&#34;#fig:gog-demo&#34;&gt;3&lt;/a&gt; still seem alien to you. We will be updating, expanding and refining &lt;code&gt;ggplot2&lt;/code&gt; specifications throughout this module to support all aspects of modern data analysis – from data cleaning and exploratory analysis through to model evaluation and communication.
+  &lt;/div&gt;
+&lt;/div&gt;
+&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;marks-and-visual-channels&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Marks and visual channels&lt;/h3&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Effective data visualization design is concerned with representing data through marks and visual channels in a way that best conveys the properties of the data that are to be depicted.&lt;/p&gt;
+&lt;p&gt;via &lt;a href=&#34;https://www.gicentre.net/jwo/index&#34;&gt;Jo Wood&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;You might have noticed that in my descriptions of &lt;code&gt;ggplot2&lt;/code&gt; specifications I introduced &lt;span style=&#34;color:#E17637;font-weight:bold&#34;&gt;marks&lt;/span&gt; as another term for &lt;strong&gt;geometry&lt;/strong&gt; and visual encoding &lt;span style=&#34;color:#62B743;font-weight:bold&#34;&gt;channels&lt;/span&gt; as another term for &lt;strong&gt;aesthetics&lt;/strong&gt;. I also paid special attention to the &lt;span style=&#34;color:#5A91CA;font-weight:bold&#34;&gt;data types&lt;/span&gt; that are being encoded.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Marks&lt;/strong&gt; are graphical elements such as &lt;em&gt;bars&lt;/em&gt;, &lt;em&gt;lines&lt;/em&gt;, &lt;em&gt;points&lt;/em&gt;, &lt;em&gt;ellipses&lt;/em&gt; that can be used to represent data items – in &lt;code&gt;ggplot2&lt;/code&gt;, these are accessed through the functions prefaced with &lt;a href=&#34;https://ggplot2.tidyverse.org/reference/#section-geoms&#34;&gt;&lt;code&gt;geom_*&lt;/code&gt;&lt;/a&gt;. Visual &lt;strong&gt;channels&lt;/strong&gt; are attributes such as &lt;em&gt;colour&lt;/em&gt;, &lt;em&gt;size&lt;/em&gt;, &lt;em&gt;position&lt;/em&gt; that, when mapped to data, control the appearance of marks in response to the values of a dataset. Not all &lt;strong&gt;channels&lt;/strong&gt; are equally effective. In fact we can say confidently that for particular &lt;strong&gt;data types&lt;/strong&gt; and tasks, some &lt;strong&gt;channels&lt;/strong&gt; perform better than others.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Marks&lt;/strong&gt; and &lt;strong&gt;channels&lt;/strong&gt; are terms used in the interface of &lt;a href=&#34;https://www.tableau.com/en-gb&#34;&gt;Tableau&lt;/a&gt; and in &lt;a href=&#34;https://vega.github.io/vega-lite/&#34;&gt;vega-lite&lt;/a&gt; specifications. They are also used widely in Information Visualization, an academic discipline devoted to the study of data graphics, and most notably by Tamara &lt;span class=&#34;citation&#34;&gt;Munzner (&lt;a href=&#34;#ref-munzner_visualization_2014&#34; role=&#34;doc-biblioref&#34;&gt;2014&lt;/a&gt;)&lt;/span&gt; in her textbook &lt;a href=&#34;https://www.routledge.com/Visualization-Analysis-and-Design/Munzner/p/book/9781466508910&#34;&gt;&lt;em&gt;Visualization Analysis and Design&lt;/em&gt;&lt;/a&gt;. &lt;span class=&#34;citation&#34;&gt;Munzner (&lt;a href=&#34;#ref-munzner_visualization_2014&#34; role=&#34;doc-biblioref&#34;&gt;2014&lt;/a&gt;)&lt;/span&gt;’s work is important and widely adopted as it synthesises over foundational research in Information Visualization and Cognitive Science testing how effective different visual channels are at supporting different tasks.&lt;/p&gt;
+&lt;div class=&#34;figure&#34;&gt;&lt;span id=&#34;fig:munzner&#34;&gt;&lt;/span&gt;
+&lt;img src=&#34;./class/03-class_files/munzner.png&#34; alt=&#34;Visual channels to which data items can be encoded, as they appear in @munzner_visualization_2014.&#34; width=&#34;90%&#34; /&gt;
+&lt;p class=&#34;caption&#34;&gt;
+Figure 4: Visual channels to which data items can be encoded, as they appear in &lt;span class=&#34;citation&#34;&gt;Munzner (&lt;a href=&#34;#ref-munzner_visualization_2014&#34; role=&#34;doc-biblioref&#34;&gt;2014&lt;/a&gt;)&lt;/span&gt;.
+&lt;/p&gt;
+&lt;/div&gt;
+&lt;p&gt;Figure
+&lt;a href=&#34;#fig:munzner&#34;&gt;4&lt;/a&gt; is taken from Chapter 5 of &lt;span class=&#34;citation&#34;&gt;Munzner (&lt;a href=&#34;#ref-munzner_visualization_2014&#34; role=&#34;doc-biblioref&#34;&gt;2014&lt;/a&gt;)&lt;/span&gt; and lists the main visual channels with which data might be encoded. The grouping and order of the Figure is meaningful. Channels are grouped according to the tasks to which they are best suited and then ordered according to their effectiveness at supporting those tasks. To the left are &lt;strong&gt;magnitude:order&lt;/strong&gt; channels – those that are best suited to tasks aimed at quantifying data items. Tothe Right are &lt;strong&gt;identify:category&lt;/strong&gt; channels – those that are most suited to supporting tasks that involve isolating, grouping and associating data items.&lt;/p&gt;
+&lt;p&gt;We can use this organisation of visual channels to make decisions about appropriate encodings given a variable’s measurement level. If we wished to convey the magnitude of something, for example a quantitative (&lt;code&gt;ratio&lt;/code&gt;) variable like the size of the Conservative vote share in a constituency, we might select a channel that has good quantitative effectiveness – &lt;em&gt;position on a common scale&lt;/em&gt; or &lt;em&gt;length&lt;/em&gt;. If we wished to also effectively identify and associate constituencies according to the political party that was elected, a categorical &lt;code&gt;nominal&lt;/code&gt; variable, we might select a channel that has good associative properties such as &lt;em&gt;colour hue&lt;/em&gt;.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;evaluating-designs&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Evaluating designs&lt;/h3&gt;
+&lt;p&gt;The effectiveness rankings of visual channels in Figure &lt;a href=&#34;#fig:munzner&#34;&gt;4&lt;/a&gt; are not simply based on Munzner’s preference. They are informed by detailed experimental work – &lt;span class=&#34;citation&#34;&gt;Cleveland and McGill (&lt;a href=&#34;#ref-cleveland_graphical_1984&#34; role=&#34;doc-biblioref&#34;&gt;1984&lt;/a&gt;)&lt;/span&gt;, later replicated by &lt;span class=&#34;citation&#34;&gt;Heer and Bostock (&lt;a href=&#34;#ref-heer_crowdsourcing_2010&#34; role=&#34;doc-biblioref&#34;&gt;2010&lt;/a&gt;)&lt;/span&gt; – which involved conducting controlled experiments testing people’s ability to make judgements from graphical elements. We can use Figure &lt;a href=&#34;#fig:munzner&#34;&gt;4&lt;/a&gt; to help make decisions around which data item to encode with which
+visual channel. This is particularly useful when designing data-rich graphics, where several data items are to be encoded
+simultaneously. The Figure also offers a low cost way of &lt;strong&gt;evaluating&lt;/strong&gt; different designs against their encoding effectiveness. To illustrate this, we can use Munzner’s ranking of channels to evaluate the Washington Post graphic discussed in Figure &lt;a href=&#34;#fig:wp-map&#34;&gt;1&lt;/a&gt;.&lt;/p&gt;
+&lt;table&gt;
+&lt;caption&gt;
+&lt;span id=&#34;tab:wp-eval-size&#34;&gt;Table 2: &lt;/span&gt;Encoding effectiveness for Washington Post graphic that emphasises &lt;em&gt;vote margin and size&lt;/em&gt; of counties using triangle marks.
+&lt;/caption&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th style=&#34;text-align:left;&#34;&gt;
+Mark
+&lt;/th&gt;
+&lt;th style=&#34;text-align:left;&#34;&gt;
+Data item
+&lt;/th&gt;
+&lt;th style=&#34;text-align:left;&#34;&gt;
+Type
+&lt;/th&gt;
+&lt;th style=&#34;text-align:left;&#34;&gt;
+Channel
+&lt;/th&gt;
+&lt;th style=&#34;text-align:left;&#34;&gt;
+Rank
+&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr grouplength=&#34;4&#34;&gt;
+&lt;td colspan=&#34;5&#34; style=&#34;border-bottom: 0px solid;&#34;&gt;
+&lt;strong&gt;Magnitude:Order&lt;/strong&gt;
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left; padding-left:  2em;width: 7em; &#34; indentlevel=&#34;1&#34;&gt;
+&lt;html&gt;
+&lt;body&gt;
+&lt;img src=&#34;./class/03-class_files/location.png&#34;&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+&lt;/td&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+Location
+&lt;/td&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+&lt;code&gt;ratio&lt;/code&gt; (&lt;code&gt;cyclic&lt;/code&gt;)
+&lt;/td&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+position in x,y
+&lt;/td&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+&lt;ol style=&#34;list-style-type: decimal&#34;&gt;
+&lt;li&gt;quant
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left; padding-left:  2em;width: 7em; &#34; indentlevel=&#34;1&#34;&gt;
+&lt;html&gt;
+&lt;body&gt;
+&lt;img src=&#34;./class/03-class_files/height.png&#34;&gt;
+&lt;/body&gt;
+&lt;/html&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/td&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+Votes cast (~pop size)
+&lt;/td&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+&lt;code&gt;ratio&lt;/code&gt;
+&lt;/td&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+length
+&lt;/td&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+&lt;ol start=&#34;3&#34; style=&#34;list-style-type: decimal&#34;&gt;
+&lt;li&gt;quant
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left; padding-left:  2em;width: 7em; &#34; indentlevel=&#34;1&#34;&gt;
+&lt;html&gt;
+&lt;body&gt;
+&lt;img src=&#34;./class/03-class_files/width.png&#34;&gt;
+&lt;/body&gt;
+&lt;/html&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/td&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+Margin
+&lt;/td&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+&lt;code&gt;ratio&lt;/code&gt;
+&lt;/td&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+length
+&lt;/td&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+&lt;ol start=&#34;3&#34; style=&#34;list-style-type: decimal&#34;&gt;
+&lt;li&gt;quant
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left; padding-left:  2em;width: 7em; &#34; indentlevel=&#34;1&#34;&gt;
+&lt;html&gt;
+&lt;body&gt;
+&lt;img src=&#34;./class/03-class_files/landslide.png&#34;&gt;
+&lt;/body&gt;
+&lt;/html&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/td&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+Landslide
+&lt;/td&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+&lt;code&gt;ordinal&lt;/code&gt;
+&lt;/td&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+area
+&lt;/td&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+&lt;ol start=&#34;5&#34; style=&#34;list-style-type: decimal&#34;&gt;
+&lt;li&gt;quant
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr grouplength=&#34;1&#34;&gt;
+&lt;td colspan=&#34;5&#34; style=&#34;border-bottom: 0px solid;&#34;&gt;
+&lt;strong&gt;Identify:Category&lt;/strong&gt;
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left; padding-left:  2em;width: 7em; &#34; indentlevel=&#34;1&#34;&gt;
+&lt;html&gt;
+&lt;body&gt;
+&lt;img src=&#34;./class/03-class_files/winner.png&#34;&gt;
+&lt;/body&gt;
+&lt;/html&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/td&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+Winner
+&lt;/td&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+&lt;code&gt;nominal&lt;/code&gt;
+&lt;/td&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+colour hue
+&lt;/td&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+&lt;ol start=&#34;2&#34; style=&#34;list-style-type: decimal&#34;&gt;
+&lt;li&gt;cat
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;Table &lt;a href=&#34;#tab:wp-eval-size&#34;&gt;2&lt;/a&gt; provides a summary of the encodings used in the version of the graphic emphasising &lt;em&gt;vote margin and size&lt;/em&gt;. US counties are represented using a peak-shaped &lt;strong&gt;mark&lt;/strong&gt; (&lt;i class=&#34;fas fa-angle-up&#34;&gt;&lt;/i&gt;). The key purpose of the graphic is to depict the geography of voting outcomes, and so the most effective quantitative channel – position on an aligned scale – is used to order the county marks (&lt;i class=&#34;fas fa-angle-up&#34;&gt;&lt;/i&gt;) with a 2D geographic arrangement. With the positional channels taken, the two quantitive measures, &lt;em&gt;votes cast&lt;/em&gt; and &lt;em&gt;result margin&lt;/em&gt;, are encoded with the next highest ranked channel, 1D length: height varies according to number of &lt;em&gt;votes cast&lt;/em&gt; and width according to &lt;em&gt;result margin&lt;/em&gt;. The marks are additionally encoded with two categorical variables: whether the county-level result was a &lt;em&gt;landslide&lt;/em&gt; and also the ultimate &lt;em&gt;winner&lt;/em&gt;. Since the intention is to give greater visual saliency to counties that resulted in a &lt;em&gt;landslide&lt;/em&gt;, this as an &lt;code&gt;ordinal&lt;/code&gt; variable, encoded with a quantitative channel: 2D area. The &lt;em&gt;winning party&lt;/em&gt;, a categorical &lt;code&gt;nominal&lt;/code&gt; variable, is encoded using colour hue.&lt;/p&gt;
+&lt;p&gt;Each of the encoding choices used in the graphic follow conventional wisdom in that data items are encoded using visual channels that are appropriate to their measurement level. Glancing down the “rank” column we can also argue that the graphic has high effectiveness. Whilst technically &lt;em&gt;spatial region&lt;/em&gt; is the most effective channel for encoding &lt;code&gt;nominal&lt;/code&gt; data, it is already in use in our graphic as the &lt;i class=&#34;fas fa-angle-up&#34;&gt;&lt;/i&gt; marks are arranged by geographic position. Additionally, it makes sense to distinguish &lt;span style=&#34;color:#DB534D;font-weight:bold&#34;&gt;Republican&lt;/span&gt; and &lt;span style=&#34;color:#3879A1;font-weight:bold&#34;&gt;Democrat&lt;/span&gt; wins using the colours with which they are always represented. Given the fact that the positional channels are in use to represent geographic &lt;em&gt;location&lt;/em&gt;, length to represent &lt;em&gt;votes cast&lt;/em&gt; and &lt;em&gt;vote margin&lt;/em&gt;, the only superior visual channel to 2D area that could be used to encode the &lt;em&gt;landslide&lt;/em&gt; variable is &lt;em&gt;orientation&lt;/em&gt;. There are very good reasons for not varying the orientation of the &lt;i class=&#34;fas fa-angle-up&#34;&gt;&lt;/i&gt; marks. Most obvious is that this would clearly undermine perception of length encodings used to represent the vote margin (width) and absolute vote size (height).&lt;/p&gt;
+&lt;p&gt;
+
+&lt;div class=&#34;alert alert-note&#34;&gt;
+  &lt;div&gt;
+    Data visualization design almost always involves trade-offs. When deciding on a design configuration, it is necessary to prioritise analysis tasks and data and match representations and encodings that are most effective to the tasks that are most important. This then constrains the encoding options for less important data items and tasks. Good visualization design is sensitive to this interplay between tasks, data and encoding.
+  &lt;/div&gt;
+&lt;/div&gt;
+&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;symbolisation&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Symbolisation&lt;/h3&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Symbolization is the process of encoding something with meaning in order to represent something else. Effective symbol design requires that the relationship between a symbol and the information that symbol represents (the referent) be clear and easily interpreted.&lt;/p&gt;
+&lt;p&gt;&lt;span class=&#34;citation&#34;&gt;White (&lt;a href=&#34;#ref-white_symbolization_2017&#34; role=&#34;doc-biblioref&#34;&gt;2017&lt;/a&gt;)&lt;/span&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;Implicit in the discussion above, and when making design decisions, is the importance of &lt;a href=&#34;https://gistbok.ucgis.org/bok-topics/symbolization-and-visual-variables&#34;&gt;&lt;strong&gt;symbolisation&lt;/strong&gt;&lt;/a&gt;. Scrolling through the original Washington Post article, the overall pattern that can be discerned is of population-dense coastal and metropolitan counties voting Democrat – densely-packed, tall, wide and blue &lt;i style=&#34;color:#3879A1;font-weight:bold&#34; class=&#34;fas fa-lg fa-angle-up&#34;&gt;&lt;/i&gt; marks – contrasted against population-sparse rural and small town areas voting Republican – short, wide and red &lt;i style=&#34;color:#DB534D;font-weight:bold&#34; class=&#34;fas fa-angle-up&#34;&gt;&lt;/i&gt; marks. The graphic evokes a distinctive landscape of voting behaviour, emphasised by its caption: “&lt;em&gt;The peaks and valleys of Trump and Clinton’s support&lt;/em&gt;”.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Symbolisation&lt;/strong&gt; is used equally well in the variant of the graphic emphasising two-party &lt;em&gt;Swing&lt;/em&gt; between the 2012 and 2016 elections. Each county is represented as a &lt;span style=&#34;font-weight:bolder&#34;&gt;|&lt;/span&gt; mark. The &lt;em&gt;Swing&lt;/em&gt; variable is then encoded by continuously varying mark angles: counties swinging Republican are angled to the right &lt;span style=&#34;color:#DB534D;font-weight:bold&#34;&gt;/&lt;/span&gt;; counties swinging Democrat are angled to the left &lt;span style=&#34;color:#3879A1;font-weight:bolder&#34;&gt;\&lt;/span&gt;. Although &lt;em&gt;angle&lt;/em&gt; is a less effective channel at encoding quantities than is &lt;em&gt;length&lt;/em&gt;, there are obvious links to the political phenomena in the symbolisation – angled right for counties that moved to the right politically. Additionally, the variable itself might be regarded as cyclic – or at least it has a ceiling with an important mid-point that requires emphasis. It is worth taking a second look at the full graphic here. Since there is spatial autocorrelation in case trajectories, we quickly assemble from the graphic dominant patterns of Swing to the Republicans (Great Lakes, rural East Coast), predictable Republican stasis (the mid west) and to detect more isolated, locally exceptional Swings to the Democrats (rapidly urbanising counties in the deep south).&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;checking-perceptual-rankings&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Checking perceptual rankings&lt;/h3&gt;
+&lt;p&gt;I mentioned that Munzner’s effectiveness ordering of visual channels is informed by empirical evidence – controlled experiments that examine perceptual abilities at making judgements from graphical primitives. It is worth elaborating a little on this experimental work, and on how established knowledge in Cognitive Science can be used to inform design choices.&lt;/p&gt;
+&lt;p&gt;&lt;span class=&#34;citation&#34;&gt;Cleveland (&lt;a href=&#34;#ref-cleveland_elements_1993&#34; role=&#34;doc-biblioref&#34;&gt;1993&lt;/a&gt;)&lt;/span&gt; emphasises three perceptual activities that take place when we make sense of data graphics:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Detection&lt;/strong&gt; : the element of the graphic must be easily discernible.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Assembly&lt;/strong&gt; : the process of identifying patterns and structure within the graphical elements of the
+visualization.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Estimation&lt;/strong&gt; : the process of making comparisons of the magnitudes of data items from the visual elements used.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;These activities can be related to the categories of task outlined earlier. &lt;strong&gt;Detection&lt;/strong&gt; is especially important for &lt;strong&gt;selective&lt;/strong&gt; and &lt;strong&gt;associative&lt;/strong&gt; tasks that involve isolating and grouping data items, whilst &lt;strong&gt;estimation&lt;/strong&gt; is necessary for tasks that are &lt;strong&gt;orderable&lt;/strong&gt; and &lt;strong&gt;quantitative&lt;/strong&gt;, involving the ranking and reading-off of quantities.&lt;/p&gt;
+&lt;div id=&#34;detection-and-preattentive-processing&#34; class=&#34;section level4&#34;&gt;
+&lt;h4&gt;Detection and preattentive processing&lt;/h4&gt;
+&lt;p&gt;A useful distinction when considering graphical cognition is between processes that are attentive and pre-attentive &lt;span class=&#34;citation&#34;&gt;(Ware &lt;a href=&#34;#ref-ware_visual_2008&#34; role=&#34;doc-biblioref&#34;&gt;2008&lt;/a&gt;)&lt;/span&gt;. Attentive processing describes the conscious processing that happens when we attempt to make sense of a visual field. Preattentive processing happens unconsciously and is the type of cognitive processing that allows something to be understood ‘at a glance’. Visual items that immediately pop-out to us induce preattentive processing.&lt;/p&gt;
+&lt;p&gt;The ability to provoke pop-out – making some things on a data graphic more easily detectible than others – relates to &lt;strong&gt;detection&lt;/strong&gt;. It can be useful for supporting &lt;strong&gt;selective&lt;/strong&gt; and &lt;strong&gt;associative&lt;/strong&gt; tasks, and so is often used in a data graphic to encode categorical variables. For example, in the Washington Post graphic the use of colour hue to differentiate and group together counties that voted Republican or Democrat. Preattentive processes can also apply to &lt;strong&gt;assembly&lt;/strong&gt;. We naturally construct and assemble patterns that are smooth and continuous when perceiving a graphic and so deviations from this continuity are often attended to unconsciously. An example here would be those urbanising counties in the deep South, which were locally exceptional in swinging to Democrat (to the left).&lt;/p&gt;
+&lt;p&gt;We can test this preattentive processing by using visual encoding channels to assist a task that requires us to &lt;strong&gt;select&lt;/strong&gt; and &lt;strong&gt;associate&lt;/strong&gt; visual items. Below are a set of data graphics containing 200 numbers. The graphics are currently hidden, but can be revealed by clicking the &lt;i class=&#34;fa fa-xs fa-play&#34; aria-hidden=&#34;true&#34;&gt;&lt;/i&gt; icon. For each graphic I want you to scan across the number, isolate or select the number &lt;code&gt;3&lt;/code&gt;, then group or associate the &lt;code&gt;3&lt;/code&gt;s together and count the number of instances that they occur. Speed is important here – so work as quickly as you can.&lt;/p&gt;
+&lt;p&gt;First, a set of numbers without applying any special encoding to the number &lt;code&gt;3&lt;/code&gt;.&lt;/p&gt;
+
+
+&lt;div class=&#34;alert alert-instruction&#34;&gt;
+  &lt;div&gt;
+    &lt;p&gt;Encoding: &lt;strong&gt;none&lt;/strong&gt;&lt;/p&gt;
+&lt;details class=&#34;spoiler &#34;  id=&#34;spoiler-0&#34;&gt;
+  &lt;summary&gt;&lt;/summary&gt;
+  &lt;p&gt;&lt;div class=&#34;figure&#34;&gt;&lt;span id=&#34;fig:no-encoding&#34;&gt;&lt;/span&gt;
+&lt;img src=&#34;./class/03-class_files/no-encoding.png&#34; alt=&#34;Encoding: *none*.&#34; width=&#34;100%&#34; /&gt;
+&lt;p class=&#34;caption&#34;&gt;
+Figure 5: Encoding: &lt;em&gt;none&lt;/em&gt;.
+&lt;/p&gt;
+&lt;/div&gt;
+&lt;p&gt;&lt;/p&gt;
+&lt;/details&gt;
+Isolate/select &lt;code&gt;3&lt;/code&gt; from the list of numbers and count its number of occurrences.
+
+  &lt;/div&gt;
+&lt;/div&gt;
+&lt;/p&gt;
+&lt;p&gt;If you were racing to complete the task, I imagine you found it moderately stressful. Let’s explore using visual encoding to off-load some of this cognitive effort. We’ll start with a visual channel that does not have particularly strong preattentive properties: &lt;em&gt;area&lt;/em&gt;.&lt;/p&gt;
+
+
+&lt;div class=&#34;alert alert-instruction&#34;&gt;
+  &lt;div&gt;
+    &lt;p&gt;Encoding: &lt;strong&gt;area&lt;/strong&gt;&lt;/p&gt;
+&lt;details class=&#34;spoiler &#34;  id=&#34;spoiler-0&#34;&gt;
+  &lt;summary&gt;&lt;/summary&gt;
+  &lt;p&gt;&lt;div class=&#34;figure&#34;&gt;&lt;span id=&#34;fig:area-encoding&#34;&gt;&lt;/span&gt;
+&lt;img src=&#34;./class/03-class_files/area-encoding.png&#34; alt=&#34;Encoding: *area*.&#34; width=&#34;100%&#34; /&gt;
+&lt;p class=&#34;caption&#34;&gt;
+Figure 6: Encoding: &lt;em&gt;area&lt;/em&gt;.
+&lt;/p&gt;
+&lt;/div&gt;
+&lt;p&gt;&lt;/p&gt;
+&lt;/details&gt;
+Isolate/select &lt;code&gt;3&lt;/code&gt; from the list of numbers and count its number of occurrences.
+
+  &lt;/div&gt;
+&lt;/div&gt;
+&lt;/p&gt;
+&lt;p&gt;Using visualization to support the task makes it an order of magnitude easier. But let’s explore some visual channels that have even more powerful properties. I mentioned that tilt/angle has preattentive properties where the data items to be emphasised deviate from some regular pattern. In the graphic below, the number &lt;code&gt;3&lt;/code&gt; is encoded with &lt;em&gt;tilt&lt;/em&gt; or &lt;em&gt;angle&lt;/em&gt;.&lt;/p&gt;
+
+
+&lt;div class=&#34;alert alert-instruction&#34;&gt;
+  &lt;div&gt;
+    &lt;p&gt;Encoding: &lt;strong&gt;angle&lt;/strong&gt;&lt;/p&gt;
+&lt;details class=&#34;spoiler &#34;  id=&#34;spoiler-0&#34;&gt;
+  &lt;summary&gt;&lt;/summary&gt;
+  &lt;p&gt;&lt;div class=&#34;figure&#34;&gt;&lt;span id=&#34;fig:angle-encoding&#34;&gt;&lt;/span&gt;
+&lt;img src=&#34;./class/03-class_files/angle-encoding.png&#34; alt=&#34;Encoding: *tilt/angle*.&#34; width=&#34;100%&#34; /&gt;
+&lt;p class=&#34;caption&#34;&gt;
+Figure 7: Encoding: &lt;em&gt;tilt/angle&lt;/em&gt;.
+&lt;/p&gt;
+&lt;/div&gt;
+&lt;p&gt;&lt;/p&gt;
+&lt;/details&gt;
+Isolate/select &lt;code&gt;3&lt;/code&gt; from the list of numbers and count its number of occurrences.
+
+  &lt;/div&gt;
+&lt;/div&gt;
+&lt;/p&gt;
+&lt;p&gt;This is in fact more challenging than the size encoding. I think this is most likely because the geometric patterns of the marks used (numbers) is being varied and so this limits the extent to which we unconsciously perceive smoothness and continuity (e.g. limits &lt;strong&gt;assembly&lt;/strong&gt;).&lt;/p&gt;
+&lt;p&gt;Next we’ll use a visual channel with known effectiveness at assisting select and associate tasks. &lt;em&gt;Colour hue&lt;/em&gt; appears as the second-ranked most effective in &lt;span class=&#34;citation&#34;&gt;Munzner (&lt;a href=&#34;#ref-munzner_visualization_2014&#34; role=&#34;doc-biblioref&#34;&gt;2014&lt;/a&gt;)&lt;/span&gt;’s ordering.&lt;/p&gt;
+
+
+&lt;div class=&#34;alert alert-instruction&#34;&gt;
+  &lt;div&gt;
+    &lt;p&gt;Encoding: &lt;strong&gt;colour hue&lt;/strong&gt;&lt;/p&gt;
+&lt;details class=&#34;spoiler &#34;  id=&#34;spoiler-0&#34;&gt;
+  &lt;summary&gt;&lt;/summary&gt;
+  &lt;p&gt;&lt;div class=&#34;figure&#34;&gt;&lt;span id=&#34;fig:hue-encoding&#34;&gt;&lt;/span&gt;
+&lt;img src=&#34;./class/03-class_files/hue-encoding.png&#34; alt=&#34;Encoding: *colour hue*.&#34; width=&#34;100%&#34; /&gt;
+&lt;p class=&#34;caption&#34;&gt;
+Figure 8: Encoding: &lt;em&gt;colour hue&lt;/em&gt;.
+&lt;/p&gt;
+&lt;/div&gt;
+&lt;p&gt;&lt;/p&gt;
+&lt;/details&gt;
+Isolate/select &lt;code&gt;3&lt;/code&gt; from the list of numbers and count its number of occurrences.
+
+  &lt;/div&gt;
+&lt;/div&gt;
+&lt;/p&gt;
+&lt;p&gt;Finally, though a slightly contrived example, we can use the top-ranked channel according to &lt;span class=&#34;citation&#34;&gt;Munzner (&lt;a href=&#34;#ref-munzner_visualization_2014&#34; role=&#34;doc-biblioref&#34;&gt;2014&lt;/a&gt;)&lt;/span&gt;: &lt;em&gt;spatial region&lt;/em&gt;.&lt;/p&gt;
+
+
+&lt;div class=&#34;alert alert-instruction&#34;&gt;
+  &lt;div&gt;
+    &lt;p&gt;Encoding: &lt;strong&gt;spatial region&lt;/strong&gt;&lt;/p&gt;
+&lt;details class=&#34;spoiler &#34;  id=&#34;spoiler-0&#34;&gt;
+  &lt;summary&gt;&lt;/summary&gt;
+  &lt;p&gt;&lt;div class=&#34;figure&#34;&gt;&lt;span id=&#34;fig:spatial-encoding&#34;&gt;&lt;/span&gt;
+&lt;img src=&#34;./class/03-class_files/spatial-encoding.png&#34; alt=&#34;Encoding: *spatial region*.&#34; width=&#34;100%&#34; /&gt;
+&lt;p class=&#34;caption&#34;&gt;
+Figure 9: Encoding: &lt;em&gt;spatial region&lt;/em&gt;.
+&lt;/p&gt;
+&lt;/div&gt;
+&lt;p&gt;&lt;/p&gt;
+&lt;/details&gt;
+Isolate/select &lt;code&gt;3&lt;/code&gt; from the list of numbers and count its number of occurrences.
+
+  &lt;/div&gt;
+&lt;/div&gt;
+&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;estimation&#34; class=&#34;section level4&#34;&gt;
+&lt;h4&gt;Estimation&lt;/h4&gt;
+&lt;p&gt;The informal tests above hopefully persuade you of &lt;span class=&#34;citation&#34;&gt;Munzner (&lt;a href=&#34;#ref-munzner_visualization_2014&#34; role=&#34;doc-biblioref&#34;&gt;2014&lt;/a&gt;)&lt;/span&gt;’s ordering of &lt;em&gt;identity:category&lt;/em&gt; channels in the right side of Figure &lt;a href=&#34;#fig:munzner&#34;&gt;4&lt;/a&gt;. The ranking of &lt;em&gt;magnitude:order&lt;/em&gt; channels is also informed by established theory and evidence.&lt;/p&gt;
+&lt;p&gt;When using data graphics to communicate quantities, certain visual channels are known to induce biases. &lt;a href=&#34;https://en.wikipedia.org/wiki/Psychophysics&#34;&gt;Psychophysics&lt;/a&gt; is a branch of psychology that develops methods aimed at capturing the often non-linear relationship between the properties of a &lt;em&gt;stimuli&lt;/em&gt; such as symbol length, area or colour value, and their &lt;em&gt;perceived response&lt;/em&gt;. Stevens’ power law is an empirically-derived relationship that models this effect. The power function takes the form:&lt;/p&gt;
+&lt;p&gt;&lt;span class=&#34;math inline&#34;&gt;\(R=kS_n\)&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;Where &lt;span class=&#34;math inline&#34;&gt;\(S\)&lt;/span&gt; is the magnitude of the stimulus, for example, the absolute length of a line or area of a circle, &lt;span class=&#34;math inline&#34;&gt;\(R\)&lt;/span&gt; is the response, the perceived length and area, and &lt;span class=&#34;math inline&#34;&gt;\(_n\)&lt;/span&gt; is the power law exponent that varies with the type of stimulus. If there is a perfect linear mapping between the stimulus and response, &lt;span class=&#34;math inline&#34;&gt;\(_n\)&lt;/span&gt; is 1.&lt;/p&gt;
+&lt;p&gt;&lt;span class=&#34;citation&#34;&gt;Stevens and Guirao (&lt;a href=&#34;#ref-stevens_subjective_1963&#34; role=&#34;doc-biblioref&#34;&gt;1963&lt;/a&gt;)&lt;/span&gt;’ experimental work involved varying the length of lines and areas of squares and deriving power functions for their perception. For length, an exponent of ~1.0 was estimated; for area an exponent of 0.7. So whilst variation in length is accurately perceived, we &lt;em&gt;underestimate&lt;/em&gt; the size of areas as they increase. &lt;span class=&#34;citation&#34;&gt;Flannery (&lt;a href=&#34;#ref-flannery_subjective_1963&#34; role=&#34;doc-biblioref&#34;&gt;1971&lt;/a&gt;)&lt;/span&gt;’s work, which was concerned with the perception of quantities in graduated point maps, estimated an exponent of 0.87 for the perception of circle size.&lt;/p&gt;
+&lt;p&gt;Experimental findings vary and so these models of human perception are also subject to variation. Nevertheless, corrections can be applied. In cartography a &lt;a href=&#34;https://makingmaps.net/2007/08/28/perceptual-scaling-of-map-symbols/&#34;&gt;Flannery compensation&lt;/a&gt; is used when representing quantities with area.&lt;/p&gt;
+&lt;div class=&#34;figure&#34;&gt;&lt;span id=&#34;fig:perception&#34;&gt;&lt;/span&gt;
+&lt;img src=&#34;./class/03-class_files/perception.png&#34; alt=&#34;Differences in power law exponents for the perception of variation in length and area.&#34; width=&#34;100%&#34; /&gt;
+&lt;p class=&#34;caption&#34;&gt;
+Figure 10: Differences in power law exponents for the perception of variation in length and area.
+&lt;/p&gt;
+&lt;/div&gt;
+&lt;p&gt;
+
+&lt;div class=&#34;alert alert-note&#34;&gt;
+  &lt;div&gt;
+    This early experimental work that tries to understand how encoded quantities are perceived is clearly important. But we use data graphics to do much more than estimate single quantities. If data graphics are to serve as tools for analysis, we also need some confidence that the &lt;strong&gt;inferences&lt;/strong&gt; made when studying data using graphics are accurate and reliable. In the Information Visualization domain, experimental work has recently been published exploring the perception of statistical quantities – dispersion &lt;span class=&#34;citation&#34;&gt;(Correll and Gleicher &lt;a href=&#34;#ref-correll_error_2014&#34; role=&#34;doc-biblioref&#34;&gt;2014&lt;/a&gt;)&lt;/span&gt;, correlation &lt;span class=&#34;citation&#34;&gt;(Rensink and Baldridge &lt;a href=&#34;#ref-rensink_perception_2010&#34; role=&#34;doc-biblioref&#34;&gt;2010&lt;/a&gt;; Chang &lt;a href=&#34;#ref-harrison_ranking_2014&#34; role=&#34;doc-biblioref&#34;&gt;2014&lt;/a&gt;; Kay and Heer &lt;a href=&#34;#ref-kay_beyond_2016&#34; role=&#34;doc-biblioref&#34;&gt;2016&lt;/a&gt;)&lt;/span&gt; and spatial autocorrelation &lt;span class=&#34;citation&#34;&gt;(Klippel, Hardisty, and Li &lt;a href=&#34;#ref-klippel_interpreting_2011&#34; role=&#34;doc-biblioref&#34;&gt;2011&lt;/a&gt;; Beecham et al. &lt;a href=&#34;#ref-beecham_maplineups_2017&#34; role=&#34;doc-biblioref&#34;&gt;2017&lt;/a&gt;)&lt;/span&gt; – in commonly used chart types. More on this later in the module.
+  &lt;/div&gt;
+&lt;/div&gt;
+&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div id=&#34;colour&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Colour&lt;/h3&gt;
+&lt;p&gt;As demonstrated in the section on &lt;a href=&#34;#detection-and-preattentive-processing-1&#34;&gt;preattentive processing&lt;/a&gt;, colour is very powerful visual channel. When considering how to encode data with colour, it is helpful to consider three properties:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Hue&lt;/strong&gt; : what we generally refer to as “colour” in everyday life – red, blue green, etc.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Saturation&lt;/strong&gt; : how much of a colour there is.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Luminance/Brightness&lt;/strong&gt; : how dark or light a colour is.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;The underlying rule when using colour in data graphics is to use properties of colour that match the properties of the data. Categorical &lt;code&gt;nominal&lt;/code&gt; data – data that cannot be easily ordered – should be encoded using discrete colours with no obvious order: colour hue. Categorical &lt;code&gt;ordinal&lt;/code&gt; data – data whose categories can be ordered – should be encoded with colours that contain an intrinsic order: saturation or brightness, usually allocated into gradients. &lt;code&gt;Quantitative&lt;/code&gt; data – data that can be ordered and contain values on a continuous scale – should also be encoded with colours that contain an intrinsic order: saturation or brightness, expressed on a continuous scale.&lt;/p&gt;
+&lt;p&gt;As we will discover shortly, these principles are applied by default in &lt;code&gt;ggplot2&lt;/code&gt;, along with access to perceptually uniform schemes. Its &lt;a href=&#34;https://ggplot2.tidyverse.org/reference/scale_brewer.html&#34;&gt;&lt;code&gt;brewer&lt;/code&gt;&lt;/a&gt; scales, for example.&lt;/p&gt;
+&lt;p&gt;
+
+&lt;div class=&#34;alert alert-instruction&#34;&gt;
+  &lt;div&gt;
+    There are many considerations when using colour to support visual data analysis and communication – and we will return to these at various points in the module. Read Lisa Charotte-Rost’s &lt;a href=&#34;https://blog.datawrapper.de/colorguide/&#34;&gt;Guide to Colours in Data Visualization&lt;/a&gt; before processing to the &lt;a href=&#34;#techniques-1&#34;&gt;Techniques&lt;/a&gt; section.
+  &lt;/div&gt;
+&lt;/div&gt;
+&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div id=&#34;techniques&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Techniques&lt;/h2&gt;
+&lt;p&gt;The technical element to this session involves analysing data from the 2019 UK General Election, reported by Parliamentary Constituency. After importing and describing the dataset, you will generate data graphics that expose patterns in voting behaviour. You will do so by writing &lt;code&gt;ggplot2&lt;/code&gt; specifications.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Download the &lt;a href=&#34;./homework/03-homework_files/03-template.Rmd&#34;&gt;&lt;i class=&#34;fab fa-r-project&#34;&gt;&lt;/i&gt; 03-template.Rmd&lt;/a&gt; file for this session and save it to the &lt;code&gt;reports&lt;/code&gt; folder of your &lt;code&gt;vis-for-gds&lt;/code&gt; project.&lt;/li&gt;
+&lt;li&gt;Open your &lt;code&gt;vis-for-gds&lt;/code&gt; project in RStudio and load the template file by clicking &lt;code&gt;File&lt;/code&gt; &amp;gt; &lt;code&gt;Open File ...&lt;/code&gt; &amp;gt; &lt;code&gt;reports/03-template.Rmd&lt;/code&gt;.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div id=&#34;import&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Import&lt;/h3&gt;
+&lt;p&gt;The template file lists the required packages – &lt;code&gt;tidyverse&lt;/code&gt;, &lt;code&gt;sf&lt;/code&gt; and also the &lt;a href=&#34;https://cran.r-project.org/web/packages/parlitools/index.html&#34;&gt;&lt;code&gt;parlitools&lt;/code&gt;&lt;/a&gt;. Installing &lt;code&gt;parlitools&lt;/code&gt; brings down the 2019 UK General Election dataset, along with other constituency-level datasets. Loading it with &lt;code&gt;library(parlitools)&lt;/code&gt; makes these data available to your R session.&lt;/p&gt;
+&lt;p&gt;The dataset containing 2019 UK General Election data is called &lt;code&gt;bes_2019&lt;/code&gt;. This contains results data released by &lt;a href=&#34;https://commonslibrary.parliament.uk/research-briefings/cbp-8749/&#34;&gt;House of Commons Library&lt;/a&gt;. We can get a quick overview in the usual way – with a call to &lt;code&gt;glimpse(&amp;lt;dataset-name&amp;gt;)&lt;/code&gt;. The dataset’s variables are also described on the &lt;code&gt;parlitools&lt;/code&gt; &lt;a href=&#34;https://docs.evanodell.com/parlitools/articles/bes-2019.html&#34;&gt;web pages&lt;/a&gt;. You will notice that &lt;code&gt;bes_2019&lt;/code&gt; contains 650 rows, one for each Parliamentary Constituency, and 118 columns. Contained in the columns are variables reporting vote numbers and shares for the main political parties for 2019 and 2017 General Elections, as well as names and codes (&lt;code&gt;ID&lt;/code&gt;s) for each Parliamentary Constituency and the county, region and country in which they are contained. You might want to count the number of counties and regions in the UK, and the number of constituencies contained by counties and regions, using some of the &lt;code&gt;dplyr&lt;/code&gt; functions introduced in the last session – for example with calls to &lt;code&gt;group_by()&lt;/code&gt; and &lt;code&gt;count()&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;The aim of this analysis session is to get you familiar with &lt;code&gt;ggplot2&lt;/code&gt; specifications. We will be replicating some of the visual data analysis of the 2019 UK General Election in &lt;span class=&#34;citation&#34;&gt;Beecham (&lt;a href=&#34;#ref-beecham_using_2020&#34; role=&#34;doc-biblioref&#34;&gt;2020&lt;/a&gt;)&lt;/span&gt;, inspired by the &lt;a href=&#34;https://www.washingtonpost.com/graphics/politics/2016-election/election-results-from-coast-to-coast/&#34;&gt;Washington Post&lt;/a&gt; graphic. For this we need to calculate an additional variable – Butler Swing &lt;span class=&#34;citation&#34;&gt;(Butler and Van Beek &lt;a href=&#34;#ref-butler_why_1990&#34; role=&#34;doc-biblioref&#34;&gt;1990&lt;/a&gt;)&lt;/span&gt; – which represents the average change in share of the vote won by two parties contesting successive elections. Code for calculating this variable (named &lt;code&gt;swing_con_lab&lt;/code&gt;) is in the &lt;a href=&#34;./homework/03-homework_files/03-template.Rmd&#34;&gt;&lt;i class=&#34;fab fa-r-project&#34;&gt;&lt;/i&gt; 03-template.Rmd&lt;/a&gt;. Although initially intuitive, the measure takes a little interpretation. A Swing to the Conservatives, which we observe most often in this dataset, could happen in three ways:&lt;/p&gt;
+&lt;ol style=&#34;list-style-type: decimal&#34;&gt;
+&lt;li&gt;An increase in Conservative vote share and a decrease in Labour vote share.&lt;/li&gt;
+&lt;li&gt;An increase in both Conservative and Labour vote share, but with the Conservative increase outstripping that of Labour’s.&lt;/li&gt;
+&lt;li&gt;A decrease in both Conservative and Labour vote share, but with the Conservative decline being less severe than that of Labour’s.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;Different from the US where “third parties” play a negligible role, scenarios 2 and 3 do occur in the UK. You will notice that &lt;code&gt;swing_con_lab&lt;/code&gt; is a signed value: positive indicates a Swing to Conservative, negative a Swing to Labour.&lt;/p&gt;
+&lt;p&gt;The only other dataset to load is a &lt;code&gt;.geojson&lt;/code&gt; file containing the geometries of constituencies, collected originally from &lt;a href=&#34;https://geoportal.statistics.gov.uk/&#34;&gt;ONS Open Geography Portal&lt;/a&gt; and simplified using &lt;a href=&#34;https://github.com/mbloch/mapshaper&#34;&gt;mapshaper&lt;/a&gt;. This is a special class of data frame containing a &lt;a href=&#34;https://r-spatial.github.io/sf/articles/sf1.html&#34;&gt;Simple Features&lt;/a&gt; &lt;code&gt;geometry&lt;/code&gt; column – more on this later in the module.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;summarise&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Summarise&lt;/h3&gt;
+&lt;p&gt;You will no doubt be familiar with the ultimate result of the 2019 General Election – a landslide Conservative victory that confounded expectations. To start, we can quickly compute some summary statistics around the vote. In the code block below, we count the number of seats won by party and overall vote share by party. For the latter, my code is a little more elaborate than I intended it to be. I needed to reshape the data frame using &lt;code&gt;pivot_wider()&lt;/code&gt; such that each row represents a vote for a party in a constituency. From here I computed in a single function the vote share for each party.&lt;/p&gt;
+&lt;p&gt;Whilst the Conservative party hold 56% of constituencies, they won only 44% of the vote share. The equivalent stats for Labour are 31% and 32% respectively. Incidentally, whilst the Conservatives increased their share of constituencies from 2017 (where they had just 317, 49% of constituencies) their vote share increase was reasonably small – in 2017 they gained 42.5% of the vote.&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;# Number of constituencies won by party.
+bes_2019 %&amp;gt;%
+  group_by(winner_19) %&amp;gt;%
+  summarise(count=n()) %&amp;gt;%
+  arrange(desc(count))
+## # A tibble: 11 x 2
+##    winner_19                        count
+##    &amp;lt;chr&amp;gt;                            &amp;lt;int&amp;gt;
+##  1 Conservative                       365
+##  2 Labour                             202
+##  3 Scottish National Party             48
+##  4 Liberal Democrat                    11
+##  5 Democratic Unionist Party            8
+##  6 Sinn Fein                            7
+##  7 Plaid Cymru                          4
+##  8 Social Democratic &amp;amp; Labour Party     2
+##  9 Alliance                             1
+## 10 Green                                1
+## 11 Speaker                              1
+
+# Share of vote by party.
+bes_2019 %&amp;gt;%
+  select(constituency_name, total_vote_19, con_vote_19:alliance_vote_19) %&amp;gt;% # Select cols containing vote counts by party.
+  pivot_longer(cols=con_vote_19:alliance_vote_19, names_to=&amp;quot;party&amp;quot;, values_to=&amp;quot;votes&amp;quot;) %&amp;gt;% # Pivot to make each row a vote for a party in a constituency.
+  mutate(party=str_extract(party, &amp;quot;[^_]+&amp;quot;)) %&amp;gt;% # Use some regex to pull out party name.
+  group_by(party) %&amp;gt;%
+  summarise(vote_share=sum(votes, na.rm=TRUE)/sum(total_vote_19)) %&amp;gt;%
+  arrange(desc(vote_share))
+
+## # A tibble: 12 x 2
+##    party    vote_share
+##    &amp;lt;chr&amp;gt;         &amp;lt;dbl&amp;gt;
+##  1 con         0.436
+##  2 lab         0.321
+##  3 ld          0.115
+##  4 snp         0.0388
+##  5 green       0.0270
+##  6 brexit      0.0201
+##  7 dup         0.00763
+##  8 sf          0.00568
+##  9 pc          0.00479
+## 10 alliance    0.00419
+## 11 sdlp        0.00371
+## 12 uup         0.00291&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Below are some summary statistics computed over the newly created &lt;code&gt;swing_con_lab&lt;/code&gt; variable. As the Conservative and Labour votes are negligible in Northern Ireland, it makes sense to focus on Great Britain for our analysis of Con-Lab Swing and so the first step in the code is to create a new data frame filtering out Northern Ireland. We will work with this for the rest of the session.&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;data_gb &amp;lt;- bes_2019 %&amp;gt;%
+  filter(region!=&amp;quot;Northern Ireland&amp;quot;)
+
+data_gb %&amp;gt;%
+  summarise(
+    min_swing=min(swing_con_lab),
+    max_swing=max(swing_con_lab),
+    median_swing=median(swing_con_lab),
+    num_swing=sum(swing_con_lab&amp;gt;0),
+    num_landslide_con=sum(con_19&amp;gt;50, na.rm=TRUE),
+    num_landslide_lab=sum(lab_19&amp;gt;50, na.rm=TRUE)
+    )
+
+## # A tibble: 1 x 6
+##   min_swing max_swing median_swing num_swing num_landslide_con num_landslide_lab
+##       &amp;lt;dbl&amp;gt;     &amp;lt;dbl&amp;gt;        &amp;lt;dbl&amp;gt;     &amp;lt;int&amp;gt;             &amp;lt;int&amp;gt;             &amp;lt;int&amp;gt;
+## 1     -6.47      18.4         4.44       599               280               120&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;div id=&#34;plot-distributions&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Plot distributions&lt;/h3&gt;
+&lt;div class=&#34;figure&#34;&gt;&lt;span id=&#34;fig:histogram&#34;&gt;&lt;/span&gt;
+&lt;img src=&#34;./class/03-class_files/hist.png&#34; alt=&#34;Histograms of Swing variable.&#34; width=&#34;100%&#34; /&gt;
+&lt;p class=&#34;caption&#34;&gt;
+Figure 11: Histograms of Swing variable.
+&lt;/p&gt;
+&lt;/div&gt;
+&lt;p&gt;Let’s get going with some &lt;code&gt;ggplot2&lt;/code&gt; specifications by plotting some of these variables. Below is the code for plotting a histogram of the Swing variable.&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;data_gb %&amp;gt;%
+  ggplot(mapping=aes(swing_con_lab)) +
+  geom_histogram()&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;A reminder of the general form of the &lt;code&gt;ggplot2&lt;/code&gt; specification (first covered in&lt;a href=&#34;#grammar-of-graphics-1&#34;&gt;Grammar of Graphics&lt;/a&gt; section):&lt;/p&gt;
+&lt;ol style=&#34;list-style-type: decimal&#34;&gt;
+&lt;li&gt;Start with some &lt;strong&gt;data&lt;/strong&gt;: &lt;code&gt;data_gb&lt;/code&gt;.&lt;/li&gt;
+&lt;li&gt;Define the &lt;strong&gt;encoding&lt;/strong&gt;: &lt;code&gt;mapping=aes()&lt;/code&gt;. In this case, we want to summarise over the &lt;code&gt;swing_con_lab&lt;/code&gt; variable.&lt;/li&gt;
+&lt;li&gt;Specify the &lt;strong&gt;marks&lt;/strong&gt; to be used: &lt;code&gt;geom_histogram()&lt;/code&gt; in this case.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;Different from the scatterplot example, there is more happening in the internals of &lt;code&gt;ggplot2&lt;/code&gt; when creating a histogram. Technically &lt;code&gt;geom_histogram&lt;/code&gt; is what &lt;span class=&#34;citation&#34;&gt;Munzner (&lt;a href=&#34;#ref-munzner_visualization_2014&#34; role=&#34;doc-biblioref&#34;&gt;2014&lt;/a&gt;)&lt;/span&gt; would describe as a &lt;em&gt;chart idiom&lt;/em&gt; rather than a &lt;em&gt;mark&lt;/em&gt; (geometric primitive). The Swing variable is partitioned into bins and observations in each bin are counted. The x-axis (bins) and y-axis (counts by bin) is therefore derived from the supplied variable (&lt;code&gt;swing_con_lab&lt;/code&gt;). Should you wish, you could enter &lt;code&gt;?geom_histogram&lt;/code&gt; for fuller detail and documentation around controlling bin sizes amongst other things.&lt;/p&gt;
+&lt;p&gt;You will notice that by default the histogram’s bars are given a grey colour. To &lt;em&gt;set&lt;/em&gt; them to a different colour, add a &lt;code&gt;fill=&lt;/code&gt; argument to &lt;code&gt;geom_histogram()&lt;/code&gt;. In the code block below, colour is set using &lt;a href=&#34;https://en.wikipedia.org/wiki/Web_colors&#34;&gt;hex codes&lt;/a&gt; – &lt;code&gt;&#34;#003c8f&#34;&lt;/code&gt;, based on the theme for this course website. I use the term &lt;em&gt;set&lt;/em&gt; here and not &lt;em&gt;map&lt;/em&gt; or &lt;em&gt;encode&lt;/em&gt; and there is a principled explanation for this. Any part of a &lt;code&gt;ggplot2&lt;/code&gt; specification that involves encoding data – mapping data to a visual channel – should be specified through the &lt;code&gt;mapping=aes()&lt;/code&gt; argument. Anything else, for example changing the default colour of marks, their thickness and transparency, needs to be &lt;em&gt;set&lt;/em&gt; outside of this argument.&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;data_gb %&amp;gt;%
+  ggplot(mapping=aes(swing_con_lab)) +
+  geom_histogram(fill=&amp;quot;#003c8f&amp;quot;) +
+  labs(
+    title=&amp;quot;Butler two-party Labour-Conservative Swing for Constituencies in GB&amp;quot;,
+    subtitle=&amp;quot;-- 2019 versus 2017 election&amp;quot;,
+    caption=&amp;quot;Data published by House of Commons Library, accessed via `parlitools`&amp;quot;,
+    x=&amp;quot;Swing&amp;quot;, y=&amp;quot;count&amp;quot;
+  )&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;You might have noticed that different elements of a &lt;code&gt;ggplot2&lt;/code&gt; specification are added (&lt;code&gt;+&lt;/code&gt;) as layers. In the example above, the additional layer of labels (&lt;code&gt;labs()&lt;/code&gt;) is not intrinsic to the graphic. However, often you will add layers that do affect the graphic itself: for example the scaling of encoded values (e.g. &lt;code&gt;scale_*_continuous()&lt;/code&gt;) or whether the graphic is to be conditioned on another variable to generate &lt;a href=&#34;https://flowingdata.com/tag/small-multiples/&#34;&gt;small multiples&lt;/a&gt; for comparison (e.g. &lt;code&gt;facet_*()&lt;/code&gt;).&lt;/p&gt;
+&lt;p&gt;
+
+&lt;div class=&#34;alert alert-note&#34;&gt;
+  &lt;div&gt;
+    Read this design story by &lt;a href=&#34;http://tinlizzie.org/histograms/&#34;&gt;Lunzner and McNamara, 2020&lt;/a&gt; for an excellent discussion of the analysis and design considerations when working with histograms. There are of course other &lt;em&gt;geoms&lt;/em&gt; for summarising over 1D distributions: &lt;code&gt;geom_boxplot()&lt;/code&gt;, &lt;code&gt;geom_dotplot()&lt;/code&gt;, &lt;code&gt;geom_violin()&lt;/code&gt;.
+  &lt;/div&gt;
+&lt;/div&gt;
+&lt;/p&gt;
+&lt;div id=&#34;faceting-by-region&#34; class=&#34;section level4&#34;&gt;
+&lt;h4&gt;Faceting by region&lt;/h4&gt;
+&lt;div class=&#34;figure&#34;&gt;&lt;span id=&#34;fig:hist-region&#34;&gt;&lt;/span&gt;
+&lt;img src=&#34;./class/03-class_files/hist-region.png&#34; alt=&#34;Histograms of Swing variable, grouped by region.&#34; width=&#34;100%&#34; /&gt;
+&lt;p class=&#34;caption&#34;&gt;
+Figure 12: Histograms of Swing variable, grouped by region.
+&lt;/p&gt;
+&lt;/div&gt;
+&lt;p&gt;Adding a call to &lt;code&gt;facet_*()&lt;/code&gt;, we can quickly compare how Swing varies by region (as in Figure &lt;a href=&#34;#fig:hist-region&#34;&gt;12&lt;/a&gt;). The plot is annotated with the &lt;em&gt;median&lt;/em&gt; value for Swing (4.4) by adding a vertical line layer (&lt;code&gt;geom_vline()&lt;/code&gt;) and setting its x-intercept at this value. From this, there is some evidence of a regional geography to the 2019 vote: London and Scotland are particularly distinctive in containing relatively few constituencies swinging greater than the expected midpoint; North East, Yorkshire &amp;amp; The Humber, and to a lesser extent West and East Midlands, appear to show the largest relative number of constituencies swinging greater than the midpoint. It was this graphic, especially the fact that London and Scotland look different from the rest of the country, that prompted the scatterplots in Figure &lt;a href=&#34;#fig:gog-demo&#34;&gt;3&lt;/a&gt; comparing gain in Conservative vote shares against the Brexit vote.&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div id=&#34;plot-ranksmagnitudes&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Plot ranks/magnitudes&lt;/h3&gt;
+&lt;div class=&#34;figure&#34;&gt;&lt;span id=&#34;fig:bars&#34;&gt;&lt;/span&gt;
+&lt;img src=&#34;./class/03-class_files/bars.png&#34; alt=&#34;Plots of vote shares by party.&#34; width=&#34;100%&#34; /&gt;
+&lt;p class=&#34;caption&#34;&gt;
+Figure 13: Plots of vote shares by party.
+&lt;/p&gt;
+&lt;/div&gt;
+&lt;p&gt;Previously we calculated overall vote share by Political Party. We could continue the exploration of votes by region by re-using this code to generate plots displaying quantities but also comparing region, using marks and encoding channels that are suitable for magnitudes.&lt;/p&gt;
+&lt;p&gt;To generate a bar chart similar to the left of Figure &lt;a href=&#34;#fig:bars&#34;&gt;13&lt;/a&gt; the &lt;code&gt;ggplot2&lt;/code&gt; specification would be:&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;data_gb %&amp;gt;%
+  &amp;lt;some dplyr code&amp;gt; %&amp;gt;% # The code block summarising vote by party.
+  ...  %&amp;gt;% #
+  &amp;lt;summarised data frame&amp;gt;  %&amp;gt;% # The summarised data frame of vote share by party, piped to ggplot2.
+  ggplot(aes(x=reorder(party, -vote_share), y=vote_share)) + # Categorical-ordinal x-axis (party, reordered), Ratio y-axis (vote_share).
+  geom_col(fill=&amp;quot;#003c8f&amp;quot;) + # Set colour by website theme.
+  labs(
+    title=&amp;quot;Vote share by party in GB&amp;quot;,
+    subtitle=&amp;quot;-- 2019 UK General Election&amp;quot;,
+    caption=&amp;quot;Data published by House of Commons Library, accessed via `parlitools`&amp;quot;,
+    x=&amp;quot;party&amp;quot;, y=&amp;quot;vote share&amp;quot;
+  )+
+  theme_v_gds() # A theme I&amp;#39;ve created for.&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;A quick breakdown of the specification:&lt;/p&gt;
+&lt;ol style=&#34;list-style-type: decimal&#34;&gt;
+&lt;li&gt;&lt;strong&gt;Data&lt;/strong&gt;: This is the summarised data frame in which each row is a political party and the column describes the vote share recorded for that party.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Encoding&lt;/strong&gt;: I have dropped the &lt;code&gt;mapping=&lt;/code&gt;. &lt;code&gt;ggplot2&lt;/code&gt; always looks for &lt;code&gt;aes()&lt;/code&gt; and so can save some code clutter. In this case we are mapping &lt;code&gt;party&lt;/code&gt; to the x-axis, a categorical variable made ordinal by the fact that we reorder the axis left-to-right descending according to &lt;code&gt;vote_share&lt;/code&gt;. &lt;code&gt;vote_share&lt;/code&gt; is mapped to the y-axis – so encoded using bar length, on an aligned scale, an effective channel for conveying magnitudes.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Marks&lt;/strong&gt;: &lt;code&gt;geom_col()&lt;/code&gt; for generating the bars.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Setting&lt;/strong&gt;: Again, I’ve set bar colour according to the website theme and included titles and captions. I also set the theme to a custom theme I have created for this module &lt;code&gt;theme_v_gds()&lt;/code&gt;. Optionally we add a &lt;code&gt;coord_flip()&lt;/code&gt; layer in order to display the bars horizontally. This makes the category axis labels easier to read and also seems more appropriate for the visual “ranking” of bars.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;
+
+&lt;div class=&#34;alert alert-note&#34;&gt;
+  &lt;div&gt;
+    &lt;code&gt;ggplot2&lt;/code&gt; themes control the appearance of all non-data items – font sizes and types, gridlines, axes labels. Checkout the complete list of &lt;code&gt;ggplot2&lt;/code&gt;’s &lt;a href=&#34;https://ggplot2.tidyverse.org/reference/ggtheme.html&#34;&gt;default themes&lt;/a&gt;. If you like the look of the BBC’s in-house data graphics – I do (or at least I like many of them) – explore their &lt;a href=&#34;https://bbc.github.io/rcookbook/&#34;&gt;Data Journalism cookbook&lt;/a&gt;. In fact I’d recommend working through the cookbook as it is a great resource for distilling many of the non-data-related decisions that are made when communicating graphically.
+  &lt;/div&gt;
+&lt;/div&gt;
+&lt;/p&gt;
+&lt;div id=&#34;faceting-by-region-1&#34; class=&#34;section level4&#34;&gt;
+&lt;h4&gt;Faceting by region&lt;/h4&gt;
+&lt;div class=&#34;figure&#34;&gt;&lt;span id=&#34;fig:bars-region&#34;&gt;&lt;/span&gt;
+&lt;img src=&#34;./class/03-class_files/bars-region.png&#34; alt=&#34;Plots of vote shares by party and region.&#34; width=&#34;100%&#34; /&gt;
+&lt;p class=&#34;caption&#34;&gt;
+Figure 14: Plots of vote shares by party and region.
+&lt;/p&gt;
+&lt;/div&gt;
+&lt;p&gt;In Figure &lt;a href=&#34;#fig:bars-region&#34;&gt;14&lt;/a&gt; the graphic is faceted by region. This requires an updated derived dataset grouping by &lt;code&gt;vote_share&lt;/code&gt; &lt;em&gt;and&lt;/em&gt; &lt;code&gt;region&lt;/code&gt; and of course adding a faceting layer (&lt;code&gt;geom_facet(~region)&lt;/code&gt;) to the &lt;code&gt;ggplot2&lt;/code&gt; specification. The graphic is more data-rich, but additional cognitive effort is required in relating the bars representing political parties between different graphical subsets. We can assist this &lt;em&gt;identify&lt;/em&gt; and &lt;em&gt;associate&lt;/em&gt; task by encoding the bars with an appropriate visual channel: &lt;em&gt;colour hue&lt;/em&gt;. The &lt;code&gt;ggplot2&lt;/code&gt; specification for this is as you would expect – we add a mapping to &lt;code&gt;geom_col()&lt;/code&gt; and pass the variable name &lt;code&gt;party&lt;/code&gt; to the fill argument (&lt;code&gt;aes(fill=party)&lt;/code&gt;.&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;&amp;lt;derived_data&amp;gt; %&amp;gt;%
+  ggplot(aes(x=reorder(party, vote_share), y=vote_share)) +
+  geom_col(aes(fill=party)) +
+  coord_flip() +
+  facet_wrap(~region) +
+  labs(
+    title=&amp;quot;Vote share by party in GB&amp;quot;,
+    subtitle=&amp;quot;-- 2019 UK General Election&amp;quot;,
+    caption=&amp;quot;Data published by House of Commons Library, accessed via `parlitools`&amp;quot;,
+    x=&amp;quot;party&amp;quot;, y=&amp;quot;vote share&amp;quot;
+  )+
+  theme_v_gds()&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Trying this for yourself, you will observe that the &lt;code&gt;ggplot2&lt;/code&gt; internals are clever here. Since &lt;code&gt;party&lt;/code&gt; is a categorical variable, a categorical (hue-based) colour scheme is automatically applied. Try passing a quantitative variable (&lt;code&gt;fill=vote_share&lt;/code&gt;) and see what happens.&lt;/p&gt;
+&lt;p&gt;Clever as this is, when encoding political parties with colour &lt;strong&gt;symbolisation&lt;/strong&gt; is important. More control over the encoding is necessary in order to specify the colours with which parties are most commonly represented. We can override &lt;code&gt;ggplot2&lt;/code&gt;’s default colour by adding a &lt;code&gt;scale_fill_manual()&lt;/code&gt; layer into which a vector of hex codes describing the colour of each political party is passed (&lt;code&gt;party_colours&lt;/code&gt;). We also need to tell &lt;code&gt;ggplot2&lt;/code&gt; which element of &lt;code&gt;party_colours&lt;/code&gt; to apply to which value of &lt;code&gt;party&lt;/code&gt;. In the code below, a derived table is generated summarising &lt;code&gt;vote_share&lt;/code&gt; by political party and region. In the final line the &lt;code&gt;party&lt;/code&gt; variable is recoded as a &lt;a href=&#34;https://r4ds.had.co.nz/factors.html&#34;&gt;&lt;code&gt;factor&lt;/code&gt;&lt;/a&gt;. You might recall from last session that factors are categorical variables of fixed and potentially orderable values, called &lt;code&gt;levels&lt;/code&gt;. The call to &lt;code&gt;mutate()&lt;/code&gt; recodes &lt;code&gt;party&lt;/code&gt; as a factor variable and orders the levels according to overall vote share.&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;# Generate derived data.
+temp_party_shares_region &amp;lt;- data_gb %&amp;gt;%
+  select(constituency_name, region, total_vote_19, con_vote_19:alliance_vote_19) %&amp;gt;%
+  pivot_longer(cols=con_vote_19:alliance_vote_19, names_to=&amp;quot;party&amp;quot;, values_to=&amp;quot;votes&amp;quot;) %&amp;gt;%
+  mutate(party=str_extract(party, &amp;quot;[^_]+&amp;quot;)) %&amp;gt;%
+  group_by(party, region) %&amp;gt;%
+  summarise(vote_share=sum(votes, na.rm=TRUE)/sum(total_vote_19)) %&amp;gt;%
+  filter(party %in% c(&amp;quot;con&amp;quot;, &amp;quot;lab&amp;quot;, &amp;quot;ld&amp;quot;, &amp;quot;snp&amp;quot;, &amp;quot;green&amp;quot;, &amp;quot;brexit&amp;quot;, &amp;quot;pc&amp;quot;)) %&amp;gt;%
+  mutate(party=factor(party, levels=c(&amp;quot;con&amp;quot;, &amp;quot;lab&amp;quot;, &amp;quot;ld&amp;quot;, &amp;quot;snp&amp;quot;, &amp;quot;green&amp;quot;, &amp;quot;brexit&amp;quot;, &amp;quot;pc&amp;quot;)))&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Next, a vector of objects is created containing the hex codes for the colours of political parties (&lt;code&gt;party_colours&lt;/code&gt;). This is a named vector, with names assigned from the &lt;code&gt;levels&lt;/code&gt; of the &lt;code&gt;party&lt;/code&gt; variable that was just created.&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;# Define colours.
+con &amp;lt;- &amp;quot;#0575c9&amp;quot;
+lab &amp;lt;- &amp;quot;#ed1e0e&amp;quot;
+ld &amp;lt;- &amp;quot;#fe8300&amp;quot;
+snp &amp;lt;- &amp;quot;#ebc31c&amp;quot;
+green &amp;lt;- &amp;quot;#78c31e&amp;quot;
+pc &amp;lt;- &amp;quot;#4e9f2f&amp;quot;
+brexit &amp;lt;- &amp;quot;#25b6ce&amp;quot;
+other &amp;lt;- &amp;quot;#bdbdbd&amp;quot;
+
+party_colours &amp;lt;- c(con, lab, ld, snp, green, brexit, pc)
+names(party_colours) &amp;lt;- levels(temp_party_shares %&amp;gt;% pull(party))&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;The &lt;code&gt;ggplot2&lt;/code&gt; specification is then updated with the &lt;code&gt;scale_fill_manual()&lt;/code&gt; layer:&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;# ggplot2 spec.
+temp_party_shares_region %&amp;gt;%
+  ggplot(aes(x=reorder(party, vote_share), y=vote_share)) +
+  geom_col(aes(fill=party)) +
+  scale_fill_manual(values=party_colours) +
+  coord_flip() +
+  facet_wrap(~region) +
+  labs(
+    title=&amp;quot;Vote share by party in GB&amp;quot;,
+    subtitle=&amp;quot;-- 2019 UK General Election&amp;quot;,
+    caption=&amp;quot;Data published by House of Commons Library, accessed via `parlitools`&amp;quot;,
+    x=&amp;quot;party&amp;quot;, y=&amp;quot;vote share&amp;quot;
+  )+
+  theme_v_gds()&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;
+
+&lt;div class=&#34;alert alert-note&#34;&gt;
+  &lt;div&gt;
+    &lt;p&gt;The idea behind visualization toolkits such as &lt;a href=&#34;https://vega.github.io/vega-lite/&#34;&gt;vega-lite&lt;/a&gt;, &lt;a href=&#34;https://www.tableau.com/en-gb&#34;&gt;Tableau&lt;/a&gt; and &lt;a href=&#34;https://ggplot2.tidyverse.org/&#34;&gt;&lt;code&gt;ggplot2&lt;/code&gt;&lt;/a&gt; is to insert visual data analysis approaches into the Data Scientist’s workflow. Rather than being overly concerned with low-level aspects of drawing, mapping to screen coordinates and scaling factors, the analyst instead focuses on aspects crucial to analysis – exposing patterns in the data by carefully specifying an encoding of data to visuals. Hadley Wickham talks about the type of workflow you will see used throughout this module – bits of &lt;code&gt;dplyr&lt;/code&gt; to prepare data for charting before being piped (&lt;code&gt;%&amp;gt;%&lt;/code&gt;) to a &lt;code&gt;ggplot2&lt;/code&gt; specification – as equivalent to a &lt;a href=&#34;https://channel9.msdn.com/Events/useR-international-R-User-conference/useR2016/Towards-a-grammar-of-interactive-graphics&#34;&gt;grammar of interactive graphics&lt;/a&gt;.&lt;/p&gt;&lt;/p&gt;
+&lt;p&gt;The process of searching for, defining and inserting manual colour schemes for creating Figure &lt;a href=&#34;#fig:bars-region&#34;&gt;14&lt;/a&gt; might seem inimical to this. Indeed I was reluctant to include this code so early in the module – there is some reasonably advanced &lt;code&gt;dplyr&lt;/code&gt; and a little &lt;a href=&#34;https://stat.ethz.ch/R-manual/R-devel/library/base/html/regex.html&#34;&gt;regular expression&lt;/a&gt; in the data preparation code that I don’t want you to be overly concerned with. However, having control of these slightly more low-level properties is sometimes necessary even for supporting exploratory analysis, in this case for enabling a &lt;strong&gt;symbolisation&lt;/strong&gt; that is clear and easily interpretable. Try relating the bars without our manual setting of colours by political party – it certainly requires some mental gymnastics.
+
+  &lt;/div&gt;
+&lt;/div&gt;
+&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;faceting-by-region-2&#34; class=&#34;section level4&#34;&gt;
+&lt;h4&gt;Faceting by region&lt;/h4&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div id=&#34;plot-relationships&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Plot relationships&lt;/h3&gt;
+&lt;div class=&#34;figure&#34;&gt;&lt;span id=&#34;fig:scatters-con&#34;&gt;&lt;/span&gt;
+&lt;img src=&#34;./class/03-class_files/scatters-con.png&#34; alt=&#34;Plots of 2019 versus 2017 vote shares.&#34; width=&#34;100%&#34; /&gt;
+&lt;p class=&#34;caption&#34;&gt;
+Figure 15: Plots of 2019 versus 2017 vote shares.
+&lt;/p&gt;
+&lt;/div&gt;
+&lt;p&gt;In the &lt;a href=&#34;./#grammar-of-graphics-1/&#34;&gt;Grammar of Graphics&lt;/a&gt; section we demonstrated how scatterplots are specified in &lt;code&gt;ggplot2&lt;/code&gt;. Scatterplots are useful examples for introducing &lt;code&gt;ggplot2&lt;/code&gt; specifications as they involve working with genuine mark primitives (&lt;code&gt;geom_point()&lt;/code&gt;) and can be built up using a wide range of encoding channels.&lt;/p&gt;
+&lt;p&gt;To continue the investigation of change in vote shares for the major parties between 2017 and 2019, Figure &lt;a href=&#34;#fig:scatters-con&#34;&gt;15&lt;/a&gt; contains scatterplots of vote share in 2019 (y-axis) against vote share in 2017 (x-axis) for Conservative and Labour. The graphics are annotated with a diagonal line. If constituencies voted in 2019 in exactly the same way as 2017, the points would all converge on the diagonal, points above the diagonal indicate a larger vote share than 2017, those below the diagonal represent a smaller vote share than 2017. Points are coloured according to the winning party in 2019 and constituencies that flipped from Labour to Conservative are emphasised using transparency and shape.&lt;/p&gt;
+&lt;p&gt;The code for generating most of the scatterplot comparing Conservative vote shares is below.&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;data_gb %&amp;gt;%
+  mutate(winner_19=case_when(
+           winner_19 == &amp;quot;Conservative&amp;quot; ~ &amp;quot;Conservative&amp;quot;,
+           winner_19 == &amp;quot;Labour&amp;quot; ~ &amp;quot;Labour&amp;quot;,
+           TRUE ~ &amp;quot;Other&amp;quot;
+         )) %&amp;gt;%
+  ggplot(aes(x=con_17, y=con_19)) +
+  geom_point(aes(colour=winner_19), alpha=.8) +
+  geom_abline(intercept = 0, slope = 1) +
+  scale_colour_manual(values=c(con,lab,other)) +
+  ...&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Hopefully there is little surprising here:&lt;/p&gt;
+&lt;ol style=&#34;list-style-type: decimal&#34;&gt;
+&lt;li&gt;&lt;strong&gt;Data&lt;/strong&gt;: The &lt;code&gt;data_gb&lt;/code&gt; data frame. Values of &lt;code&gt;winner_19&lt;/code&gt; that are not &lt;em&gt;Conservative&lt;/em&gt; or &lt;em&gt;Labour&lt;/em&gt; are recoded to &lt;em&gt;Other&lt;/em&gt; using a &lt;strong&gt;conditional statement&lt;/strong&gt;. This is because points are eventually coloured according to winning party, but the occlusion of points adds visual complexity and so I’ve chosen to prioritise the two main parties and recode remaining parties to other.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Encoding&lt;/strong&gt;: Conservative vote share in 2017 and 2019 are mapped to the x- and y- axes respectively and &lt;code&gt;winner_19&lt;/code&gt; to colour. &lt;code&gt;scale_colour_manual()&lt;/code&gt; is used for customising the colours.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Marks&lt;/strong&gt;: &lt;code&gt;geom_point()&lt;/code&gt; for generating the points of the scatterplot; geom_abline() for drawing the reference diagonal.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;
+
+&lt;div class=&#34;alert alert-note&#34;&gt;
+  &lt;div&gt;
+    &lt;p&gt;You will have encountered conditionals in the reading from last session. &lt;code&gt;case_when&lt;/code&gt; allows you to avoid writing multiple &lt;code&gt;if_else()&lt;/code&gt; statements. It wasn’t really necessary here – I could have used a single if_else with something like:&lt;/p&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;data_gb %&amp;gt;%
+  mutate(
+    winner_19=if_else(!winner_19 %in% c(&amp;quot;Conservative&amp;quot;, &amp;quot;Labour&amp;quot;), &amp;quot;Other&amp;quot;, winner_19)
+  )&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;A general point from the code blocks in this session is of the importance of proficiency in &lt;code&gt;dplyr&lt;/code&gt;. Throughout the module you will find yourself needing to calculate new variables, recode variables, and reorganise data frames before passing through to &lt;code&gt;ggplot2&lt;/code&gt;.
+
+  &lt;/div&gt;
+&lt;/div&gt;
+&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;plot-geography&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Plot geography&lt;/h3&gt;
+&lt;div class=&#34;figure&#34;&gt;&lt;span id=&#34;fig:map-winners&#34;&gt;&lt;/span&gt;
+&lt;img src=&#34;./class/03-class_files/map-winners.png&#34; alt=&#34;Choropleth of elected parties in 2019 General Election.&#34; width=&#34;100%&#34; /&gt;
+&lt;p class=&#34;caption&#34;&gt;
+Figure 16: Choropleth of elected parties in 2019 General Election.
+&lt;/p&gt;
+&lt;/div&gt;
+&lt;p&gt;In the graphics that facet by region, our analysis suggests at a geography to voting and certainly to observed changes in voting comparing the 2017 and 2019 elections (e.g. Figure &lt;a href=&#34;#fig:hist-region&#34;&gt;12&lt;/a&gt;). We end the session by encoding the results data with a spatial arrangement – we’ll generate some maps.&lt;/p&gt;
+&lt;p&gt;To do this we need to define a join on the boundary data (&lt;code&gt;cons_outline&lt;/code&gt;):&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;# Join constituency boundaries.
+data_gb &amp;lt;- cons_outline %&amp;gt;%
+  inner_join(data_gb, by=c(&amp;quot;pcon19cd&amp;quot;=&amp;quot;ons_const_id&amp;quot;))
+# Check class.
+## [1] &amp;quot;sf&amp;quot;         &amp;quot;data.frame&amp;quot;&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;The code for generating the &lt;a href=&#34;https://en.wikipedia.org/wiki/Choropleth_map&#34;&gt;Choropleth maps&lt;/a&gt; of winning party by constituency in Figure &lt;a href=&#34;#fig:map-winners&#34;&gt;16&lt;/a&gt;:&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;# Recode winner_19 as a factor variable for assigning colours.
+data_gb &amp;lt;- data_gb %&amp;gt;%
+  mutate(
+    winner_19=if_else(winner_19==&amp;quot;Speaker&amp;quot;, &amp;quot;Other&amp;quot;, winner_19),
+    winner_19=as_factor(winner_19))
+
+# Create a named vector of colours
+party_colours &amp;lt;- c(con, lab, ld, green, other, snp, pc)
+names(party_colours) &amp;lt;- levels(data_gb %&amp;gt;% pull(winner_19))
+
+# Plot map.
+data_gb %&amp;gt;%
+  ggplot(aes(fill=winner_19)) +
+  geom_sf(colour=&amp;quot;#eeeeee&amp;quot;, size=0.01)+
+  # Optionally add a layer for regional boundaries.
+  # geom_sf(data=. %&amp;gt;% group_by(region) %&amp;gt;% summarise(), colour=&amp;quot;#eeeeee&amp;quot;, fill=&amp;quot;transparent&amp;quot;, size=0.08)+
+  coord_sf(crs=27700, datum=NA) +
+  scale_fill_manual(values=party_colours) +&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;A breakdown of the &lt;code&gt;ggplot2&lt;/code&gt; spec:&lt;/p&gt;
+&lt;ol style=&#34;list-style-type: decimal&#34;&gt;
+&lt;li&gt;&lt;strong&gt;Data&lt;/strong&gt;: The &lt;code&gt;dplyr&lt;/code&gt; code updates &lt;code&gt;data_gb&lt;/code&gt; by recoding &lt;code&gt;winner_19&lt;/code&gt; as a factor and defining a named vector of colours to supply to &lt;code&gt;scale_fill_manual()&lt;/code&gt;.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Encoding&lt;/strong&gt;: No surprises here – &lt;code&gt;fill&lt;/code&gt; according to &lt;code&gt;winner_19&lt;/code&gt;.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Marks&lt;/strong&gt;: &lt;code&gt;geom_sf()&lt;/code&gt; is a special class of geometry. It draws objects depending on the contents of the &lt;code&gt;geometry&lt;/code&gt; column. In this case &lt;code&gt;MULTIPOLYGON&lt;/code&gt;, so read this as a &lt;em&gt;polygon&lt;/em&gt; geometric primitive.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Coordinates&lt;/strong&gt;: &lt;code&gt;coord_sf&lt;/code&gt; – we set the coordinate system (CRS) explicitly. In this case &lt;a href=&#34;https://spatialreference.org/ref/epsg/osgb-1936-british-national-grid/&#34;&gt;OS British National Grid&lt;/a&gt;. More on this later in the module.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Setting&lt;/strong&gt;: Again, the &lt;code&gt;theme_v_gds()&lt;/code&gt; theme. I’ve also subtly introduced light grey (&lt;code&gt;colour=&#34;#eeeeee&#34;&lt;/code&gt;) and thin (&lt;code&gt;size=0.01&lt;/code&gt;) constituency boundaries to the &lt;code&gt;geom_sf&lt;/code&gt; mark. On the map to the right outlines for regions are added as another &lt;code&gt;geom_sf&lt;/code&gt; layer.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;div class=&#34;figure&#34;&gt;&lt;span id=&#34;fig:spoke-map&#34;&gt;&lt;/span&gt;
+&lt;img src=&#34;./class/03-class_files/spoke-map.png&#34; alt=&#34;Map of Butler Con-Lab Swing in 2019 General Election.&#34; width=&#34;100%&#34; /&gt;
+&lt;p class=&#34;caption&#34;&gt;
+Figure 17: Map of Butler Con-Lab Swing in 2019 General Election.
+&lt;/p&gt;
+&lt;/div&gt;
+&lt;p&gt;This has been a packed session. I’m providing a very abbreviated introduction to map design with &lt;code&gt;ggplot2&lt;/code&gt; and want to reserve the details of how &lt;code&gt;ggplot2&lt;/code&gt; can be used in more involved visualization design for later in the module. Since the graphic has been discussed at length, it would be strange not to demonstrate how the encoding in the Washington Post piece can be applied here to analyse our Butler two-party swing variable &lt;span class=&#34;citation&#34;&gt;(e.g. Beecham &lt;a href=&#34;#ref-beecham_using_2020&#34; role=&#34;doc-biblioref&#34;&gt;2020&lt;/a&gt;)&lt;/span&gt;.&lt;/p&gt;
+&lt;p&gt;First, some helper functions – converting degrees to radians and centring &lt;code&gt;geom_spoke()&lt;/code&gt; geometries. Don’t bother yourself with these details, just run the code.&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;# Convert degrees to radians.
+get_radians &amp;lt;- function(degrees) {
+  (degrees * pi) / (180)
+}
+# Rescaling function.
+map_scale &amp;lt;- function(value, min1, max1, min2, max2) {
+  return  (min2+(max2-min2)*((value-min1)/(max1-min1)))
+}
+# Position subclass for centred geom_spoke as per --
+# https://stackoverflow.com/questions/55474143/how-to-center-geom-spoke-around-their-origin
+position_center_spoke &amp;lt;- function() PositionCenterSpoke
+PositionCenterSpoke &amp;lt;- ggplot2::ggproto(&amp;#39;PositionCenterSpoke&amp;#39;, ggplot2::Position,
+                                        compute_panel = function(self, data, params, scales) {
+                                          data$x &amp;lt;- 2*data$x - data$xend
+                                          data$y &amp;lt;- 2*data$y - data$yend
+                                          data$radius &amp;lt;- 2*data$radius
+                                          data
+                                        }
+)&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Next re-define &lt;code&gt;party_colours&lt;/code&gt;, the object we use for manually setting colours, to contain just three values: hex codes for Conservative, Labour and Other.&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;party_colours &amp;lt;- c(con, lab, other)
+names(party_colours) &amp;lt;- c(&amp;quot;Conservative&amp;quot;, &amp;quot;Labour&amp;quot;, &amp;quot;Other&amp;quot;)&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;And the &lt;code&gt;ggplot2&lt;/code&gt; specification:&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;max_shift &amp;lt;- max(abs(data_gb %&amp;gt;% pull(swing_con_lab)))
+min_shift &amp;lt;- -max_shift
+
+gb &amp;lt;- data_gb %&amp;gt;%
+  mutate(
+    is_flipped=seat_change_1719 %in% c(&amp;quot;Conservative gain from Labour&amp;quot;,&amp;quot;Labour gain from Conservative&amp;quot;),
+    elected=if_else(!winner_19 %in% c(&amp;quot;Conservative&amp;quot;, &amp;quot;Labour&amp;quot;), &amp;quot;Other&amp;quot;, as.character(winner_19))
+    ) %&amp;gt;%
+  ggplot()+
+  geom_sf(aes(fill=elected), colour=&amp;quot;#636363&amp;quot;, alpha=.2, size=.01)+
+  geom_spoke(
+             aes(x=bng_e, y=bng_n, angle=get_radians(map_scale(swing_con_lab,min_shift,max_shift,135,45)), colour=elected, size=is_flipped),
+             radius=7000, position=&amp;quot;center_spoke&amp;quot;
+             )+
+  coord_sf(crs=27700, datum=NA)+
+  scale_size_ordinal(range=c(.3,.9))+
+  scale_colour_manual(values=party_colours)+
+  scale_fill_manual(values=party_colours)+
+  theme_v_gds()&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;A breakdown:&lt;/p&gt;
+&lt;ol style=&#34;list-style-type: decimal&#34;&gt;
+&lt;li&gt;&lt;strong&gt;Data&lt;/strong&gt;: &lt;code&gt;data_gb&lt;/code&gt; is updated with a boolean identifying whether or not the Constituency flipped Con-Lab/Lab-Con between successive elections (&lt;code&gt;is_flipped&lt;/code&gt;), and a variable simplifying the party elected to either Conservative, Labour or Other.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Encoding&lt;/strong&gt;: &lt;code&gt;geom_sf&lt;/code&gt; is again filled by elected party. This encoding is made more subtle by adding transparency (&lt;code&gt;alpha=.2&lt;/code&gt;). &lt;a href=&#34;https://ggplot2.tidyverse.org/reference/geom_spoke.html&#34;&gt;&lt;code&gt;geom_spoke()&lt;/code&gt;&lt;/a&gt; is a line primitive that can be encoded with a location and direction. It is mapped to the geographic centroid of each Constituency (&lt;code&gt;bng_e&lt;/code&gt; - easting, &lt;code&gt;bng_n&lt;/code&gt; - northing), coloured according to elected party, sized according to whether the Constituency flipped its vote and tilted according to the Swing variable. Here I’ve created a function (map_scale) which pegs the maximum Swing values in either direction to 45 degrees (max Swing to the right, Conservative) and 135 degrees (max Swing to the left, Labour).&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Marks&lt;/strong&gt;: &lt;code&gt;geom_sf()&lt;/code&gt; for the Constituency boundaries, &lt;code&gt;geom_spoke()&lt;/code&gt; for the angled line primitives.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Scale&lt;/strong&gt;: &lt;code&gt;geom_spoke()&lt;/code&gt; primitives are sized to emphasise whether constituencies have flipped. The size encoding is censored to two values with &lt;code&gt;scale_size_ordinal()&lt;/code&gt;. Passed to &lt;code&gt;scale_colour_manual()&lt;/code&gt; and &lt;code&gt;scale_fill_manual()&lt;/code&gt; is the vector of &lt;code&gt;party_colours&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Coordinates&lt;/strong&gt;: &lt;code&gt;coord_sf&lt;/code&gt; – the CRS is &lt;a href=&#34;https://spatialreference.org/ref/epsg/osgb-1936-british-national-grid/&#34;&gt;OS British National Grid&lt;/a&gt;.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Setting&lt;/strong&gt;: The &lt;code&gt;radius&lt;/code&gt;, the of &lt;code&gt;geom_spoke()&lt;/code&gt; primitives is a sensible default arrived at through trial and error, its &lt;code&gt;position&lt;/code&gt; set using our &lt;code&gt;center_spoke&lt;/code&gt; class.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div id=&#34;conclusions&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Conclusions&lt;/h2&gt;
+&lt;p&gt;Visualization design is ultimately a process of decision-making. Data must be filtered and prioritised before being encoded with marks, visual channels and symbolisation. The most successful data graphics are those that expose structure, connections and comparisons that could not be achieved easily via other, non-visual means. This session has introduced concepts – a vocabulary, framework and empirically-informed guidelines – that helps support this decision-making process and that underpins modern visualization toolkits (&lt;code&gt;ggplot2&lt;/code&gt; included). Through an analysis of UK 2019 General Election data, we have demonstrated how these concepts can be applied in a real data analysis.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;references&#34; class=&#34;section level2 unnumbered&#34;&gt;
+&lt;h2&gt;References&lt;/h2&gt;
+&lt;div id=&#34;refs&#34; class=&#34;references&#34;&gt;
+&lt;div id=&#34;ref-beecham_using_2020&#34;&gt;
+&lt;p&gt;Beecham, R. 2020. “Using position, angle and thickness to expose the shifting geographies of the 2019 UK General Election.” &lt;em&gt;Environment and Planning A: Economy and Space&lt;/em&gt; 52 (5): 833–36.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;ref-beecham_maplineups_2017&#34;&gt;
+&lt;p&gt;Beecham, R., J. Dykes, W. Meulemans, A. Slingsby, C. Turkay, and J. Wood. 2017. “Map Line-Ups: Effects of Spatial Structure on Graphical Inference.” &lt;em&gt;IEEE Transactions on Visualization &amp;amp; Computer Graphics&lt;/em&gt; 23 (1): 391–400.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;ref-butler_why_1990&#34;&gt;
+&lt;p&gt;Butler, D., and S. Van Beek. 1990. “Why not swing? Measuring electoral change.” &lt;em&gt;Political Science &amp;amp; politics&lt;/em&gt; 23 (2): 178–84.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;ref-harrison_ranking_2014&#34;&gt;
+&lt;p&gt;Chang, Lane Harrison AND Fumeng Yang AND Steven Franconeri AND Remco. 2014. “Ranking Visualizations of Correlation Using Weber’s Law.” &lt;em&gt;IEEE Conference on Information Visualization (InfoVis)&lt;/em&gt; 20 (12): 1943–52.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;ref-cleveland_elements_1993&#34;&gt;
+&lt;p&gt;Cleveland, William S. 1993. &lt;em&gt;The Elements of Graphing Data&lt;/em&gt;. Hobart Press.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;ref-cleveland_graphical_1984&#34;&gt;
+&lt;p&gt;Cleveland, W., and R. McGill. 1984. “Graphical Perception: Theory, Experimentation, and Application to the Development of Graphical Methods.” &lt;em&gt;Journal of the American Statistical Association&lt;/em&gt; 79 (387): 531–54.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;ref-correll_error_2014&#34;&gt;
+&lt;p&gt;Correll, M., and M. Gleicher. 2014. “Error Bars Considered Harmful: Exploring Alternate Encodings for Mean and Error.” &lt;em&gt;IEEE Transactions on Visualization &amp;amp; Computer Graphics&lt;/em&gt; 20 (12): 2141–51.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;ref-flannery_subjective_1963&#34;&gt;
+&lt;p&gt;Flannery, J. J. 1971. “The Relative Effectiveness of Some Common Graduated Point Symbols in the Presentation of Quantitative Data.” &lt;em&gt;Cartographica&lt;/em&gt; 8 (2): 96–109.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;ref-hanretty_areal_2017&#34;&gt;
+&lt;p&gt;Hanretty, Chris. 2017. “Areal Interpolation and the Uk’s Referendum on Eu Membership.” &lt;em&gt;Journal of Elections, Public Opinion and Parties&lt;/em&gt; 37 (4): 466–83.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;ref-heer_crowdsourcing_2010&#34;&gt;
+&lt;p&gt;Heer, Jeffrey, and Michael Bostock. 2010. “Crowdsourcing Graphical Perception: Using Mechanical Turk to Assess Visualization Design.” In &lt;em&gt;ACM Human Factors in Computing Systems&lt;/em&gt;, 203–12. doi:&lt;a href=&#34;https://doi.org/10.1145/1753326.1753357&#34;&gt;10.1145/1753326.1753357&lt;/a&gt;.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;ref-kay_beyond_2016&#34;&gt;
+&lt;p&gt;Kay, Matthew, and Jeffrey Heer. 2016. “Beyond Weber’s Law: A Second Look at Ranking Visualizations of Correlation.” &lt;em&gt;IEEE Trans. Visualization &amp;amp; Comp. Graphics (InfoVis)&lt;/em&gt; 22 (1): 469–78.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;ref-klippel_interpreting_2011&#34;&gt;
+&lt;p&gt;Klippel, A., F. Hardisty, and Rui. Li. 2011. “Interpreting Spatial Patterns: An Inquiry into Formal and Cognitive Aspects of Tobler’s First Law of Geography.” &lt;em&gt;Annals of the Association of American Geographers&lt;/em&gt; 101 (5): 1011–31.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;ref-munzner_visualization_2014&#34;&gt;
+&lt;p&gt;Munzner, Tamara. 2014. &lt;em&gt;Visualization Analysis and Design&lt;/em&gt;. AK Peters Visualization Series. Boca Raton, FL: CRC Press.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;ref-rensink_perception_2010&#34;&gt;
+&lt;p&gt;Rensink, R, and G Baldridge. 2010. “The Perception of Correlation in Scatterplots.” &lt;em&gt;Computer Graphics Forum&lt;/em&gt; 29 (3): 1203–10.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;ref-stevens_subjective_1963&#34;&gt;
+&lt;p&gt;Stevens, S, and M. Guirao. 1963. “Subjective Scaling of Length and Area and the Matching of Length to Loudness and Brightness.” &lt;em&gt;Journal of Experimental Psychology&lt;/em&gt; 66 (2): 177–86.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;ref-tufte_visual_1983&#34;&gt;
+&lt;p&gt;Tufte, Edward R. 1983. &lt;em&gt;The Visual Display of Quantitative Information&lt;/em&gt;. Cheshire, CT: Graphics Press.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;ref-ware_visual_2008&#34;&gt;
+&lt;p&gt;Ware, Colin. 2008. &lt;em&gt;Visual Thinking for Design&lt;/em&gt;. Waltham, MA: Morgan Kaufman.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;ref-white_symbolization_2017&#34;&gt;
+&lt;p&gt;White, T. 2017. “Symbolization and the Visual Variables.” In &lt;em&gt;He Geographic Information Science &amp;amp; Technology Body of Knowledge&lt;/em&gt;, edited by John P. Wilson.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;ref-wickham_layered_2010&#34;&gt;
+&lt;p&gt;Wickham, Hadley. 2010. “A Layered Grammar of Graphics.” &lt;em&gt;Journal of Computational and Graphical Statistics&lt;/em&gt; 19 (1): 3–28.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;ref-wilkinson_grammar_1999&#34;&gt;
+&lt;p&gt;Wilkinson, Leland. 1999. &lt;em&gt;The Grammar of Graphics&lt;/em&gt;. New York: Springer.&lt;/p&gt;
+&lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 </description>
@@ -1131,7 +2334,9 @@ Is this effective? Why?&lt;/p&gt;
 &lt;div id=&#34;session-outcomes&#34; class=&#34;section level2&#34;&gt;
 &lt;h2&gt;Session outcomes&lt;/h2&gt;
 &lt;p&gt;By the end of this session you should gain the following &lt;strong&gt;&lt;em&gt;knowledge&lt;/em&gt;&lt;/strong&gt;:&lt;/p&gt;
-&lt;p&gt;&lt;div class=&#34;alert alert-objective&#34;&gt;
+&lt;p&gt;
+
+&lt;div class=&#34;alert alert-objective&#34;&gt;
   &lt;div&gt;
     &lt;ul&gt;
 &lt;li&gt;&lt;input checked=&#34;&#34; disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; The vocabulary and concepts used to &lt;strong&gt;describe&lt;/strong&gt; data.&lt;/li&gt;
@@ -1142,7 +2347,9 @@ Is this effective? Why?&lt;/p&gt;
 &lt;/div&gt;
 &lt;/p&gt;
 &lt;p&gt;By the end of this session you should gain the following &lt;strong&gt;&lt;em&gt;practical skills&lt;/em&gt;&lt;/strong&gt;:&lt;/p&gt;
-&lt;p&gt;&lt;div class=&#34;alert alert-objective&#34;&gt;
+&lt;p&gt;
+
+&lt;div class=&#34;alert alert-objective&#34;&gt;
   &lt;div&gt;
     &lt;ul&gt;
 &lt;li&gt;&lt;input checked=&#34;&#34; disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; &lt;strong&gt;Load&lt;/strong&gt; flat file datasets RStudio via querying an API.&lt;/li&gt;
@@ -1161,7 +2368,9 @@ Is this effective? Why?&lt;/p&gt;
 &lt;p&gt;&lt;!-- Data will be &#34;messy&#34;, with missing observations, potentially inconsistent structure and levels of precision.
 Paying attention to   --&gt;&lt;/p&gt;
 &lt;p&gt;Through the session we will learn both language and concepts for describing and thinking about data, but also how to deploy some of the most important data processing and organisation techniques in &lt;code&gt;R&lt;/code&gt; to wrangle over a real dataset. We will be working throughout with data from New York’s &lt;a href=&#34;https://www.citibikenyc.com/&#34;&gt;Citibike&lt;/a&gt; scheme, accessed through the &lt;code&gt;bikedata&lt;/code&gt; package, an API to Citibike’s &lt;a href=&#34;https://www.citibikenyc.com/system-data&#34;&gt;publicly available origin-destination trip data&lt;/a&gt;.&lt;/p&gt;
-&lt;p&gt;&lt;div class=&#34;alert alert-note&#34;&gt;
+&lt;p&gt;
+
+&lt;div class=&#34;alert alert-note&#34;&gt;
   &lt;div&gt;
     The idea of applying a consistent vocabulary to describing your data applies especially to working with modern visualization toolkits (&lt;a href=&#34;https://ggplot2.tidyverse.org/&#34;&gt;ggplot2&lt;/a&gt;, &lt;a href=&#34;https://www.tableau.com/en-gb&#34;&gt;Tableau&lt;/a&gt;, &lt;a href=&#34;https://vega.github.io/vega-lite/&#34;&gt;vega-lite&lt;/a&gt;), and will be covered in some detail during the next session as we introduce Visualization Fundamentals and the &lt;a href=&#34;https://www.springer.com/gp/book/9780387245447&#34;&gt;Grammar of Graphics&lt;/a&gt;.
   &lt;/div&gt;
@@ -1960,7 +3169,9 @@ write_csv(stations, here(&amp;quot;data&amp;quot;, &amp;quot;ny_stations.csv&amp
 
 # Clean workspace.
 rm(url, tmp_file)&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;div class=&#34;alert alert-note&#34;&gt;
+&lt;p&gt;
+
+&lt;div class=&#34;alert alert-note&#34;&gt;
   &lt;div&gt;
     &lt;code&gt;fst&lt;/code&gt; implements in the background various operations such as multi-threading to reduce load on disk space. It therefore makes it possible to work with large datasets in-memory in &lt;code&gt;R&lt;/code&gt; rather than connecting to a database and serving up summaries/subsets to be loaded into R. We will be working with just 2 million records, but with &lt;code&gt;fst&lt;/code&gt; it is possible to work in-memory with much larger datasets – in &lt;span class=&#34;citation&#34;&gt;Lovelace (&lt;a href=&#34;#ref-lovelace_is_2020&#34; role=&#34;doc-biblioref&#34;&gt;2020&lt;/a&gt;)&lt;/span&gt; we ended up working with 80 million + trip records.
   &lt;/div&gt;
@@ -2317,7 +3528,9 @@ Many more
 ## 1 male   1044621 0.640
 ## 2 female  586361 0.360&lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;As I’ve commented each line you hopefully get a sense of what is happening in the code above. I mentioned that &lt;code&gt;dplyr&lt;/code&gt; functions read like &lt;strong&gt;verbs&lt;/strong&gt;. This is a very deliberate design decision. With the code laid out as above – each &lt;code&gt;dplyr&lt;/code&gt; verb occupying a single line, separated by a pipe (&lt;code&gt;%&amp;gt;%&lt;/code&gt;) – you can generally understand the code with a cursory glance. There are obvious benefits to this. Once you become familiar with &lt;code&gt;dplyr&lt;/code&gt; it becomes very easy to read, write and share code.&lt;/p&gt;
-&lt;p&gt;&lt;div class=&#34;alert alert-note&#34;&gt;
+&lt;p&gt;
+
+&lt;div class=&#34;alert alert-note&#34;&gt;
   &lt;div&gt;
     Remembering that &lt;strong&gt;pipes&lt;/strong&gt; (&lt;code&gt;%&amp;gt;%&lt;/code&gt;) take the output of a set of code and make it the input of the next set, what do you think would happen if you were to comment out the call to &lt;code&gt;arrange()&lt;/code&gt; in the code block above? Try it for yourself. You will notice that I use separate lines for each call to the &lt;strong&gt;pipe&lt;/strong&gt; operator. This is good practice for supporting readibility of your code.
   &lt;/div&gt;
@@ -2336,7 +3549,9 @@ ny_temporal &amp;lt;- ny_trips %&amp;gt;%  # Take the ny_trips data frame.
   group_by(gender, day, hour) %&amp;gt;% # Group by day, hour, gender.
   summarise(count=n()) %&amp;gt;% # Count the grouped rows.
   ungroup()&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;div class=&#34;alert alert-note&#34;&gt;
+&lt;p&gt;
+
+&lt;div class=&#34;alert alert-note&#34;&gt;
   &lt;div&gt;
     Whether or not to store derived data tables like &lt;code&gt;ny_temporal&lt;/code&gt; in a session is not an easy decision. You want to try to avoid cluttering your Environment pane with many data objects. Often when generating charts it is necessary to create these sorts of derived tables as input data (to &lt;code&gt;ggplot2&lt;/code&gt;) – and so when doing visual data analysis you may end up with an unhelpfully large number of these derived tables. The general rule I apply: if the derived table is to be used &amp;gt;3 times in a data analysis or is computationally intensive, assign it to an object.
   &lt;/div&gt;
@@ -2349,7 +3564,9 @@ ny_temporal &amp;lt;- ny_trips %&amp;gt;%  # Take the ny_trips data frame.
 Figure 2: Line charts generated with &lt;code&gt;ggplot2&lt;/code&gt;. Plot data computed using &lt;code&gt;dplyr&lt;/code&gt; and &lt;code&gt;lubridate&lt;/code&gt;.
 &lt;/p&gt;
 &lt;/div&gt;
-&lt;p&gt;&lt;div class=&#34;alert alert-note&#34;&gt;
+&lt;p&gt;
+
+&lt;div class=&#34;alert alert-note&#34;&gt;
   &lt;div&gt;
     Our analysis is based on data from June 2020, a time when New York residents were emerging from lockdown. It would be instructive to compare with data from a non-Covid year. If there is a very clear contrast in usage between this data and a control (non-Covid) year, this suggests bikeshare data may be used for monitoring &lt;em&gt;behavioural change&lt;/em&gt;. The fact that bikeshare is collected continuously makes this possible. Check out &lt;a href=&#34;https://github.com/jwoLondon/mobv&#34;&gt;Jo Wood’s current work&lt;/a&gt; analysing Covid-related change in movement behaviours across a range of cities.
   &lt;/div&gt;
@@ -2655,18 +3872,14 @@ untidy_wide %&amp;gt;%
         &lt;tr&gt;
             &lt;td align=&#34;right&#34; style=&#34;width:20%;text-align:right&#34;&gt;Week 3&lt;/td&gt;
             &lt;td style=&#34;width:50%;text-align:left&#34;&gt;Visualization fundamentals&lt;/td&gt;
-            &lt;td align=&#34;center&#34; style=&#34;width:10%;text-align:center&#34;&gt;
-                &lt;font color=&#34;f1f1f1&#34;&gt;
-                    &lt;i class=&#34;fas fa-book-reader fa-lg&#34;&gt;&lt;/i&gt;&lt;/font&gt;
-            &lt;/td&gt;
-            &lt;td align=&#34;center&#34; style=&#34;width:10%;text-align:center&#34;&gt;
-                &lt;font color=&#34;f1f1f1&#34;&gt;
-                    &lt;i class=&#34;fas fa-chalkboard-teacher fa-lg&#34;&gt;&lt;/i&gt;&lt;/font&gt;
-            &lt;/td&gt;
-            &lt;td align=&#34;center&#34; style=&#34;width:10%;text-align:center&#34;&gt;
-                &lt;font color=&#34;f1f1f1&#34;&gt;
-                    &lt;i class=&#34;fas fa-laptop-code&#34;&gt;&lt;/i&gt;&lt;/font&gt;
-            &lt;/td&gt;
+            &lt;td align=&#34;center&#34; style=&#34;width:10%;text-align:center&#34;&gt;&lt;a
+                    href=&#34;./reading/03-reading/&#34;&gt;
+                    &lt;i class=&#34;fas fa-book-reader fa-lg&#34;&gt;&lt;/i&gt;&lt;/a&gt;&lt;/td&gt;
+            &lt;td align=&#34;center&#34; style=&#34;width:10%;text-align:center&#34;&gt;&lt;a href=&#34;./class/03-class/&#34;&gt;
+                    &lt;i class=&#34;fas fa-chalkboard-teacher fa-lg&#34;&gt;&lt;/i&gt;&lt;/a&gt;&lt;/td&gt;
+            &lt;td align=&#34;center&#34; style=&#34;width:10%;text-align:center&#34;&gt;&lt;a
+                    href=&#34;./homework/03-homework/&#34;&gt;
+                    &lt;i class=&#34;fas fa-laptop-code&#34;&gt;&lt;/i&gt;&lt;/a&gt;&lt;/td&gt;
         &lt;/tr&gt;
         &lt;tr&gt;
             &lt;td align=&#34;right&#34; style=&#34;width:20%;text-align:right&#34;&gt;Week 4&lt;/td&gt;
@@ -2807,7 +4020,7 @@ untidy_wide %&amp;gt;%
     &lt;div class=&#34;col-md-4 contact-policy&#34;&gt;
         &lt;h3&gt;Contacting me&lt;/h3&gt;
 
-        &lt;p&gt;I&amp;rsquo;m really keen that there is strong engagement with the course Slack. So for almost all questions to do with the substantive aspects of the module, direct these to the #general channel in the first instance. For matters such as absences, extensions, email me.&lt;/p&gt;
+        &lt;p&gt;Questions to do with the substantive aspects of the module should be directed to the #general channel of the course Slack in the first instance. For matters such as absences, extensions, email me: &lt;a href=&#34;mailto:r.j.beecham@leeds.ac.uk&#34;&gt;r.j.beecham@leeds.ac.uk&lt;/a&gt;.&lt;/p&gt;
     &lt;/div&gt;
 &lt;/div&gt;
  --&gt;
@@ -2869,18 +4082,14 @@ untidy_wide %&amp;gt;%
         &lt;tr&gt;
             &lt;td align=&#34;right&#34; style=&#34;width:20%;text-align:right&#34;&gt;Week 3&lt;/td&gt;
             &lt;td style=&#34;width:50%;text-align:left&#34;&gt;Visualization fundamentals&lt;/td&gt;
-            &lt;td align=&#34;center&#34; style=&#34;width:10%;text-align:center&#34;&gt;
-                &lt;font color=&#34;f1f1f1&#34;&gt;
-                    &lt;i class=&#34;fas fa-book-reader fa-lg&#34;&gt;&lt;/i&gt;&lt;/font&gt;
-            &lt;/td&gt;
-            &lt;td align=&#34;center&#34; style=&#34;width:10%;text-align:center&#34;&gt;
-                &lt;font color=&#34;f1f1f1&#34;&gt;
-                    &lt;i class=&#34;fas fa-chalkboard-teacher fa-lg&#34;&gt;&lt;/i&gt;&lt;/font&gt;
-            &lt;/td&gt;
-            &lt;td align=&#34;center&#34; style=&#34;width:10%;text-align:center&#34;&gt;
-                &lt;font color=&#34;f1f1f1&#34;&gt;
-                    &lt;i class=&#34;fas fa-laptop-code&#34;&gt;&lt;/i&gt;&lt;/font&gt;
-            &lt;/td&gt;
+            &lt;td align=&#34;center&#34; style=&#34;width:10%;text-align:center&#34;&gt;&lt;a
+                    href=&#34;./reading/03-reading/&#34;&gt;
+                    &lt;i class=&#34;fas fa-book-reader fa-lg&#34;&gt;&lt;/i&gt;&lt;/a&gt;&lt;/td&gt;
+            &lt;td align=&#34;center&#34; style=&#34;width:10%;text-align:center&#34;&gt;&lt;a href=&#34;./class/03-class/&#34;&gt;
+                    &lt;i class=&#34;fas fa-chalkboard-teacher fa-lg&#34;&gt;&lt;/i&gt;&lt;/a&gt;&lt;/td&gt;
+            &lt;td align=&#34;center&#34; style=&#34;width:10%;text-align:center&#34;&gt;&lt;a
+                    href=&#34;./homework/03-homework/&#34;&gt;
+                    &lt;i class=&#34;fas fa-laptop-code&#34;&gt;&lt;/i&gt;&lt;/a&gt;&lt;/td&gt;
         &lt;/tr&gt;
         &lt;tr&gt;
             &lt;td align=&#34;right&#34; style=&#34;width:20%;text-align:right&#34;&gt;Week 4&lt;/td&gt;
@@ -2994,7 +4203,9 @@ untidy_wide %&amp;gt;%
 &lt;h2&gt;Slack&lt;/h2&gt;
 &lt;p&gt;A key mechanism through which you can &lt;strong&gt;participate&lt;/strong&gt; is by contributing to the discussion forum. Engaging fully with this will help to foster a sort of collegiate atmosphere on the module that will maximise your learning. I have set up a course &lt;a href=&#34;&#34;&gt;Slack&lt;/a&gt;, which should provide a useful mechanism for sharing information, resources and importantly posting and discussing &lt;code&gt;code&lt;/code&gt;.&lt;/p&gt;
 &lt;p&gt;If you’ve not used Slack before, then follow these pages on &lt;a href=&#34;https://slack.com/intl/en-gb/help/articles/218080037-Getting-started-for-new-members&#34;&gt;getting started with Slack&lt;/a&gt;. You should post all substantive questions associated with the module to Slack. These will get answered. If you wish to discuss more personal matters around your completing the course, then send those directly to me via e-mail.&lt;/p&gt;
-&lt;p&gt;&lt;div class=&#34;alert alert-instruction&#34;&gt;
+&lt;p&gt;
+
+&lt;div class=&#34;alert alert-instruction&#34;&gt;
   &lt;div&gt;
     Create an account on the &lt;a href=&#34;&#34;&gt;vis-for-gds Slack&lt;/a&gt;. Be sue to register with you &lt;code&gt;.leeds.ac.uk&lt;/code&gt; e-mail. If you run into any problems, try &lt;a href=&#34;https://slack.com/intl/en-gb/help/articles/218080037-Getting-started-for-new-members&#34;&gt;getting started with Slack&lt;/a&gt;.
   &lt;/div&gt;

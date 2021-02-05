@@ -8,7 +8,11 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="generator" content="Source Themes Academic 4.8.0">
+  
+  
+  
+  <meta name="generator" content="Wowchemy 5.0.0-beta.2 for Hugo">
+  
 
   
 
@@ -34,13 +38,28 @@
     
   
   <meta name="description" content="Contents  Session outcomes Introduction Concepts Data structure Types of variable Types of observation Tidy data  Techniques Import Describe Transform Tidy  Conclusions References   Session outcomes By the end of this session you should gain the following knowledge:
-  The vocabulary and concepts used to describe data. Appreciate the characteristics and importance of tidy data (Wickham 2014) for data processing and analysis.    By the end of this session you should gain the following practical skills:">
+   The vocabulary and concepts used to describe data. Appreciate the characteristics and importance of tidy data (Wickham 2014) for data processing and analysis.    By the end of this session you should gain the following practical skills:">
 
   
   <link rel="alternate" hreflang="en-us" href="../../class/02-class/">
 
   
 
+
+
+
+
+
+
+  
+
+
+
+
+  
+  
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  
 
   
   
@@ -61,7 +80,7 @@
     
     
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" integrity="sha256-FMvZuGapsJLjouA6k7Eo2lusoAX9i0ShlWFG6qt7SLc=" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css" integrity="sha256-Vzbj7sDDS/woiFS3uNKo8eIuni59rjyNGtXfstRzStA=" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css" integrity="sha256-Vzbj7sDDS/woiFS3uNKo8eIuni59rjyNGtXfstRzStA=" crossorigin="anonymous" media="print" onload="this.media='all'">
 
     
     
@@ -72,8 +91,8 @@
       
       
         
-          <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.2/styles/github.min.css" crossorigin="anonymous" title="hl-light">
-          <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.2/styles/dracula.min.css" crossorigin="anonymous" title="hl-dark" disabled>
+          <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.2.0/styles/github.min.css" crossorigin="anonymous" title="hl-light" media="print" onload="this.media='all'">
+          <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.2.0/styles/dracula.min.css" crossorigin="anonymous" title="hl-dark" media="print" onload="this.media='all'" disabled>
         
       
     
@@ -167,7 +186,7 @@
       
 
       
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/lazysizes/5.1.2/lazysizes.min.js" integrity="sha256-Md1qLToewPeKjfAHU1zyPwOutccPAm5tahnaw7Osw0A=" crossorigin="anonymous" async></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/lazysizes/5.2.2/lazysizes.min.js" integrity="sha512-TmDwFLhg3UA4ZG0Eb4MIyT1O1Mb+Oww5kFG0uHqXsdbyZz9DcvYQhKpGgNkamAI6h2lGGZq2X8ftOJvF/XjTUg==" crossorigin="anonymous" async></script>
       
     
       
@@ -200,6 +219,13 @@
 
       
     
+      
+
+      
+      
+
+      
+    
 
   
 
@@ -210,6 +236,7 @@
       
       
       <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto+Condensed:ital,wght@0,300;1,300%7CRoboto+Slab:wght@300%7CFjalla+One&display=swap">
+      
     
   
 
@@ -217,7 +244,8 @@
   
   
   
-  <link rel="stylesheet" href="../../css/academic.css">
+  
+  <link rel="stylesheet" href="../../css/wowchemy.be1b40495f903b80013072cd14bfd5dd.css">
 
   
 
@@ -226,15 +254,20 @@
 
   
 
+  
+
 
   
   
 
   
 
+  
   <link rel="manifest" href="../../index.webmanifest">
+  
+
   <link rel="icon" type="image/png" href="../../images/icon_huc37306104a4011cad6e5f9118ea6dd2c_187381_32x32_fill_lanczos_center_2.png">
-  <link rel="apple-touch-icon" type="image/png" href="../../images/icon_huc37306104a4011cad6e5f9118ea6dd2c_187381_192x192_fill_lanczos_center_2.png">
+  <link rel="apple-touch-icon" type="image/png" href="../../images/icon_huc37306104a4011cad6e5f9118ea6dd2c_187381_180x180_fill_lanczos_center_2.png">
 
   <link rel="canonical" href="../../class/02-class/">
 
@@ -257,7 +290,7 @@
   <meta property="og:url" content="/class/02-class/">
   <meta property="og:title" content="Data fundamentals: Describe, wrangle, tidy | Visualization for Geographic Data Science">
   <meta property="og:description" content="Contents  Session outcomes Introduction Concepts Data structure Types of variable Types of observation Tidy data  Techniques Import Describe Transform Tidy  Conclusions References   Session outcomes By the end of this session you should gain the following knowledge:
-  The vocabulary and concepts used to describe data. Appreciate the characteristics and importance of tidy data (Wickham 2014) for data processing and analysis.    By the end of this session you should gain the following practical skills:"><meta property="og:image" content="/media/vis-for-gds.png">
+   The vocabulary and concepts used to describe data. Appreciate the characteristics and importance of tidy data (Wickham 2014) for data processing and analysis.    By the end of this session you should gain the following practical skills:"><meta property="og:image" content="/media/vis-for-gds.png">
   <meta property="twitter:image" content="/media/vis-for-gds.png"><meta property="og:locale" content="en-us">
   
     
@@ -299,35 +332,8 @@
     data-target="#TableOfContents"
     >
 
-    <aside class="search-results" id="search">
-  <div class="container">
-    <section class="search-header">
+    
 
-      <div class="row no-gutters justify-content-between mb-3">
-        <div class="col-6">
-          <h1></h1>
-        </div>
-        <div class="col-6 col-search-close">
-          <a class="js-search" href="#"><i class="fas fa-times-circle text-muted" aria-hidden="true"></i></a>
-        </div>
-      </div>
-
-      <div id="search-box">
-        
-        
-        
-      </div>
-
-    </section>
-    <section class="section-search-results">
-
-      <div id="search-hits">
-        
-      </div>
-
-    </section>
-  </div>
-</aside>
 
 
     
@@ -344,7 +350,7 @@
 
 
 <nav class="navbar navbar-expand-lg navbar-light compensate-for-scrollbar" id="navbar-main">
-  <div class="container">
+  <div class="container-xl">
 
     
     <div class="d-none d-lg-inline-flex">
@@ -382,10 +388,18 @@
         
 
         
+
         
         
         
         
+
+        
+          
+            
+            
+          
+          
         
 
         <li class="nav-item">
@@ -404,10 +418,18 @@
         
 
         
+
         
         
         
         
+
+        
+          
+            
+            
+          
+          
         
 
         <li class="nav-item">
@@ -426,10 +448,18 @@
         
 
         
+
         
         
         
         
+
+        
+          
+            
+            
+          
+          
         
 
         <li class="nav-item">
@@ -448,10 +478,18 @@
         
 
         
+
         
         
         
         
+
+        
+          
+            
+            
+          
+          
         
 
         <li class="nav-item">
@@ -470,10 +508,18 @@
         
 
         
+
         
         
         
         
+
+        
+          
+            
+            
+          
+          
         
 
         <li class="nav-item">
@@ -492,10 +538,18 @@
         
 
         
+
         
         
         
         
+
+        
+          
+            
+            
+          
+          
         
 
         <li class="nav-item">
@@ -516,10 +570,18 @@
         
 
         
+
         
         
         
         
+
+        
+          
+            
+            
+          
+          
         
 
         <li class="nav-item">
@@ -536,8 +598,14 @@
     </div>
 
     <ul class="nav-icons navbar-nav flex-row ml-auto d-flex pl-md-2">
+
+      
       
 
+      
+      
+
+      
       
 
       
@@ -581,6 +649,9 @@
   
   
   
+    
+  
+
   
   <div class="docs-toc-item">
     <a class="docs-toc-link" href="../../class/">Overview</a>
@@ -589,6 +660,7 @@
       <li >
         <a href="../../class/">Class sessions</a>
       </li>
+
       
     </ul>
     
@@ -602,38 +674,47 @@
       <li >
         <a href="../../class/01-class/">1: Introduction</a>
       </li>
+
       
       <li class="active">
         <a href="../../class/02-class/">2: Data Fundamentals</a>
       </li>
+
       
       <li >
         <a href="../../class/03-class/">3: Visualization fundamentals</a>
       </li>
+
       
       <li >
         <a href="../../class/04-class/">4: Visualization for exploratory data analysis</a>
       </li>
+
       
       <li >
         <a href="../../class/05-class/">5: Visualization for exploratory geospatial data analysis</a>
       </li>
+
       
       <li >
         <a href="../../class/06-class/">6: Visualization for model building 1</a>
       </li>
+
       
       <li >
         <a href="../../class/07-class/">7: Visualization for model building 2</a>
       </li>
+
       
       <li >
         <a href="../../class/08-class/">8: Visualization for uncertainty analysis</a>
       </li>
+
       
       <li >
         <a href="../../class/09-class/">9: Visualization for data storytelling</a>
       </li>
+
       
     </ul>
     
@@ -698,7 +779,9 @@
 <div id="session-outcomes" class="section level2">
 <h2>Session outcomes</h2>
 <p>By the end of this session you should gain the following <strong><em>knowledge</em></strong>:</p>
-<p><div class="alert alert-objective">
+<p>
+
+<div class="alert alert-objective">
   <div>
     <ul>
 <li><input checked="" disabled="" type="checkbox"> The vocabulary and concepts used to <strong>describe</strong> data.</li>
@@ -709,7 +792,9 @@
 </div>
 </p>
 <p>By the end of this session you should gain the following <strong><em>practical skills</em></strong>:</p>
-<p><div class="alert alert-objective">
+<p>
+
+<div class="alert alert-objective">
   <div>
     <ul>
 <li><input checked="" disabled="" type="checkbox"> <strong>Load</strong> flat file datasets RStudio via querying an API.</li>
@@ -728,7 +813,9 @@
 <p><!-- Data will be "messy", with missing observations, potentially inconsistent structure and levels of precision.
 Paying attention to   --></p>
 <p>Through the session we will learn both language and concepts for describing and thinking about data, but also how to deploy some of the most important data processing and organisation techniques in <code>R</code> to wrangle over a real dataset. We will be working throughout with data from New York’s <a href="https://www.citibikenyc.com/">Citibike</a> scheme, accessed through the <code>bikedata</code> package, an API to Citibike’s <a href="https://www.citibikenyc.com/system-data">publicly available origin-destination trip data</a>.</p>
-<p><div class="alert alert-note">
+<p>
+
+<div class="alert alert-note">
   <div>
     The idea of applying a consistent vocabulary to describing your data applies especially to working with modern visualization toolkits (<a href="https://ggplot2.tidyverse.org/">ggplot2</a>, <a href="https://www.tableau.com/en-gb">Tableau</a>, <a href="https://vega.github.io/vega-lite/">vega-lite</a>), and will be covered in some detail during the next session as we introduce Visualization Fundamentals and the <a href="https://www.springer.com/gp/book/9780387245447">Grammar of Graphics</a>.
   </div>
@@ -1527,7 +1614,9 @@ write_csv(stations, here(&quot;data&quot;, &quot;ny_stations.csv&quot;))
 
 # Clean workspace.
 rm(url, tmp_file)</code></pre>
-<p><div class="alert alert-note">
+<p>
+
+<div class="alert alert-note">
   <div>
     <code>fst</code> implements in the background various operations such as multi-threading to reduce load on disk space. It therefore makes it possible to work with large datasets in-memory in <code>R</code> rather than connecting to a database and serving up summaries/subsets to be loaded into R. We will be working with just 2 million records, but with <code>fst</code> it is possible to work in-memory with much larger datasets – in <span class="citation">Lovelace (<a href="#ref-lovelace_is_2020" role="doc-biblioref">2020</a>)</span> we ended up working with 80 million + trip records.
   </div>
@@ -1884,7 +1973,9 @@ Many more
 ## 1 male   1044621 0.640
 ## 2 female  586361 0.360</code></pre>
 <p>As I’ve commented each line you hopefully get a sense of what is happening in the code above. I mentioned that <code>dplyr</code> functions read like <strong>verbs</strong>. This is a very deliberate design decision. With the code laid out as above – each <code>dplyr</code> verb occupying a single line, separated by a pipe (<code>%&gt;%</code>) – you can generally understand the code with a cursory glance. There are obvious benefits to this. Once you become familiar with <code>dplyr</code> it becomes very easy to read, write and share code.</p>
-<p><div class="alert alert-note">
+<p>
+
+<div class="alert alert-note">
   <div>
     Remembering that <strong>pipes</strong> (<code>%&gt;%</code>) take the output of a set of code and make it the input of the next set, what do you think would happen if you were to comment out the call to <code>arrange()</code> in the code block above? Try it for yourself. You will notice that I use separate lines for each call to the <strong>pipe</strong> operator. This is good practice for supporting readibility of your code.
   </div>
@@ -1903,7 +1994,9 @@ ny_temporal &lt;- ny_trips %&gt;%  # Take the ny_trips data frame.
   group_by(gender, day, hour) %&gt;% # Group by day, hour, gender.
   summarise(count=n()) %&gt;% # Count the grouped rows.
   ungroup()</code></pre>
-<p><div class="alert alert-note">
+<p>
+
+<div class="alert alert-note">
   <div>
     Whether or not to store derived data tables like <code>ny_temporal</code> in a session is not an easy decision. You want to try to avoid cluttering your Environment pane with many data objects. Often when generating charts it is necessary to create these sorts of derived tables as input data (to <code>ggplot2</code>) – and so when doing visual data analysis you may end up with an unhelpfully large number of these derived tables. The general rule I apply: if the derived table is to be used &gt;3 times in a data analysis or is computationally intensive, assign it to an object.
   </div>
@@ -1916,7 +2009,9 @@ ny_temporal &lt;- ny_trips %&gt;%  # Take the ny_trips data frame.
 Figure 2: Line charts generated with <code>ggplot2</code>. Plot data computed using <code>dplyr</code> and <code>lubridate</code>.
 </p>
 </div>
-<p><div class="alert alert-note">
+<p>
+
+<div class="alert alert-note">
   <div>
     Our analysis is based on data from June 2020, a time when New York residents were emerging from lockdown. It would be instructive to compare with data from a non-Covid year. If there is a very clear contrast in usage between this data and a control (non-Covid) year, this suggests bikeshare data may be used for monitoring <em>behavioural change</em>. The fact that bikeshare is collected continuously makes this possible. Check out <a href="https://github.com/jwoLondon/mobv">Jo Wood’s current work</a> analysing Covid-related change in movement behaviours across a range of cities.
   </div>
@@ -2194,6 +2289,8 @@ untidy_wide %&gt;%
 
                     
 
+
+
                 </div>
 
             </article>
@@ -2245,8 +2342,13 @@ untidy_wide %&gt;%
     
     
       <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.imagesloaded/4.1.4/imagesloaded.pkgd.min.js" integrity="sha256-lqvxZrPLtfffUl2G/e7szqSvPBILGbwmsGE1MKlOi0Q=" crossorigin="anonymous"></script>
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.isotope/3.0.6/isotope.pkgd.min.js" integrity="sha256-CBrpuqrMhXwcLLUd5tvQ4euBHCdh7wGlDfNz8vbu/iI=" crossorigin="anonymous"></script>
+
+      
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.imagesloaded/4.1.4/imagesloaded.pkgd.min.js" integrity="sha256-lqvxZrPLtfffUl2G/e7szqSvPBILGbwmsGE1MKlOi0Q=" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.isotope/3.0.6/isotope.pkgd.min.js" integrity="sha256-CBrpuqrMhXwcLLUd5tvQ4euBHCdh7wGlDfNz8vbu/iI=" crossorigin="anonymous"></script>
+      
+
       <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js" integrity="sha256-yt2kYMy0w8AbtF89WXb2P1rfjcP/HTHLT7097U8Y5b8=" crossorigin="anonymous"></script>
       <script src="https://cdnjs.cloudflare.com/ajax/libs/instant.page/5.1.0/instantpage.min.js" integrity="sha512-1+qUtKoh9XZW7j+6LhRMAyOrgSQKenQ4mluTR+cvxXjP1Z54RxZuzstR/H9kgPXQsVB8IW7DMDFUJpzLjvhGSQ==" crossorigin="anonymous"></script>
 
@@ -2254,9 +2356,9 @@ untidy_wide %&gt;%
 
       
         
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.2/highlight.min.js" integrity="sha512-7t8APmYpzEsZP7CYoA7RfMPV9Bb+PJHa9x2WiUnDXZx3XHveuyWUtvNOexhkierl5flZ3tr92dP1mMS+SGlD+A==" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.2.0/highlight.min.js" integrity="sha512-TDKKr+IvoqZnPzc3l35hdjpHD0m+b2EC2SrLEgKDRWpxf2rFCxemkgvJ5kfU48ip+Y+m2XVKyOCD85ybtlZDmw==" crossorigin="anonymous"></script>
         
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.2/languages/r.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.2.0/languages/r.min.js"></script>
         
       
 
@@ -2267,19 +2369,7 @@ untidy_wide %&gt;%
 
     
     
-    <script>const code_highlighting = true;</script>
-    
-
-    
-    
-    <script>const isSiteThemeDark = false;</script>
-    
-
-    
-
-    
-    
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/anchor-js/4.1.1/anchor.min.js" integrity="sha256-pB/deHc9CGfFpJRjC43imB29Rse8tak+5eXqntO94ck=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/anchor-js/4.2.2/anchor.min.js" integrity="sha512-I7w3ZdSFzw5j3jU3ZkNikBNeIrl3i+hEuEdwNmqUJvwNcaBUNcijnP2gd9DtGlgVYDplfjGoD8vTNsID+lCjqg==" crossorigin="anonymous"></script>
     <script>
       anchors.add();
     </script>
@@ -2292,6 +2382,11 @@ untidy_wide %&gt;%
 
     
     
+    
+
+    
+    
+    
 
     
     
@@ -2301,6 +2396,7 @@ untidy_wide %&gt;%
 
     
     
+
     
     
     
@@ -2311,7 +2407,8 @@ untidy_wide %&gt;%
     
     
     
-    <script src="../../js/academic.min.7c0855509a679f5c89322b27a9552a2f.js"></script>
+    
+    <script src="../../en-uk/js/wowchemy.min.c1f1542ffaeb51a1fda38e15211866ed.js"></script>
 
     
 

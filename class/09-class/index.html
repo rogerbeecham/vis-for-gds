@@ -8,7 +8,11 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="generator" content="Source Themes Academic 4.8.0">
+  
+  
+  
+  <meta name="generator" content="Wowchemy 5.0.0-beta.2 for Hugo">
+  
 
   
 
@@ -33,16 +37,29 @@
   
     
   
-  <meta name="description" content="Road safety analysis : https://docs.ropensci.org/stats19/ Others? Knife crime data?
-OR
-Sharing your work – reproducible research
-Animated rescaling : https://twitter.com/jwoLondon/status/1347208824495726592">
+  <meta name="description" content="Contents  Concepts Techniques   Concepts Introducing this :
+That in academic visualization there has been a realisation of role of storytelling in visualization. Not a single, optimum solution to any visualization problem that expose the true picture/story – no such formulation exists. At same time: statistical literacy, scientific communication and data journalism –&gt; evidence-based society. data is now embedded in most domains, and particularly in the public sphere.">
 
   
   <link rel="alternate" hreflang="en-us" href="../../class/09-class/">
 
   
 
+
+
+
+
+
+
+  
+
+
+
+
+  
+  
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  
 
   
   
@@ -63,7 +80,7 @@ Animated rescaling : https://twitter.com/jwoLondon/status/1347208824495726592">
     
     
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" integrity="sha256-FMvZuGapsJLjouA6k7Eo2lusoAX9i0ShlWFG6qt7SLc=" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css" integrity="sha256-Vzbj7sDDS/woiFS3uNKo8eIuni59rjyNGtXfstRzStA=" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css" integrity="sha256-Vzbj7sDDS/woiFS3uNKo8eIuni59rjyNGtXfstRzStA=" crossorigin="anonymous" media="print" onload="this.media='all'">
 
     
     
@@ -74,8 +91,8 @@ Animated rescaling : https://twitter.com/jwoLondon/status/1347208824495726592">
       
       
         
-          <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.2/styles/github.min.css" crossorigin="anonymous" title="hl-light">
-          <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.2/styles/dracula.min.css" crossorigin="anonymous" title="hl-dark" disabled>
+          <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.2.0/styles/github.min.css" crossorigin="anonymous" title="hl-light" media="print" onload="this.media='all'">
+          <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.2.0/styles/dracula.min.css" crossorigin="anonymous" title="hl-dark" media="print" onload="this.media='all'" disabled>
         
       
     
@@ -169,7 +186,7 @@ Animated rescaling : https://twitter.com/jwoLondon/status/1347208824495726592">
       
 
       
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/lazysizes/5.1.2/lazysizes.min.js" integrity="sha256-Md1qLToewPeKjfAHU1zyPwOutccPAm5tahnaw7Osw0A=" crossorigin="anonymous" async></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/lazysizes/5.2.2/lazysizes.min.js" integrity="sha512-TmDwFLhg3UA4ZG0Eb4MIyT1O1Mb+Oww5kFG0uHqXsdbyZz9DcvYQhKpGgNkamAI6h2lGGZq2X8ftOJvF/XjTUg==" crossorigin="anonymous" async></script>
       
     
       
@@ -202,6 +219,13 @@ Animated rescaling : https://twitter.com/jwoLondon/status/1347208824495726592">
 
       
     
+      
+
+      
+      
+
+      
+    
 
   
 
@@ -212,6 +236,7 @@ Animated rescaling : https://twitter.com/jwoLondon/status/1347208824495726592">
       
       
       <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto+Condensed:ital,wght@0,300;1,300%7CRoboto+Slab:wght@300%7CFjalla+One&display=swap">
+      
     
   
 
@@ -219,7 +244,8 @@ Animated rescaling : https://twitter.com/jwoLondon/status/1347208824495726592">
   
   
   
-  <link rel="stylesheet" href="../../css/academic.css">
+  
+  <link rel="stylesheet" href="../../css/wowchemy.be1b40495f903b80013072cd14bfd5dd.css">
 
   
 
@@ -228,15 +254,20 @@ Animated rescaling : https://twitter.com/jwoLondon/status/1347208824495726592">
 
   
 
+  
+
 
   
   
 
   
 
+  
   <link rel="manifest" href="../../index.webmanifest">
+  
+
   <link rel="icon" type="image/png" href="../../images/icon_huc37306104a4011cad6e5f9118ea6dd2c_187381_32x32_fill_lanczos_center_2.png">
-  <link rel="apple-touch-icon" type="image/png" href="../../images/icon_huc37306104a4011cad6e5f9118ea6dd2c_187381_192x192_fill_lanczos_center_2.png">
+  <link rel="apple-touch-icon" type="image/png" href="../../images/icon_huc37306104a4011cad6e5f9118ea6dd2c_187381_180x180_fill_lanczos_center_2.png">
 
   <link rel="canonical" href="../../class/09-class/">
 
@@ -258,10 +289,8 @@ Animated rescaling : https://twitter.com/jwoLondon/status/1347208824495726592">
   <meta property="og:site_name" content="Visualization for Geographic Data Science">
   <meta property="og:url" content="/class/09-class/">
   <meta property="og:title" content="Visualization for data storytelling | Visualization for Geographic Data Science">
-  <meta property="og:description" content="Road safety analysis : https://docs.ropensci.org/stats19/ Others? Knife crime data?
-OR
-Sharing your work – reproducible research
-Animated rescaling : https://twitter.com/jwoLondon/status/1347208824495726592"><meta property="og:image" content="/media/vis-for-gds.png">
+  <meta property="og:description" content="Contents  Concepts Techniques   Concepts Introducing this :
+That in academic visualization there has been a realisation of role of storytelling in visualization. Not a single, optimum solution to any visualization problem that expose the true picture/story – no such formulation exists. At same time: statistical literacy, scientific communication and data journalism –&gt; evidence-based society. data is now embedded in most domains, and particularly in the public sphere."><meta property="og:image" content="/media/vis-for-gds.png">
   <meta property="twitter:image" content="/media/vis-for-gds.png"><meta property="og:locale" content="en-us">
   
     
@@ -303,35 +332,8 @@ Animated rescaling : https://twitter.com/jwoLondon/status/1347208824495726592"><
     data-target="#TableOfContents"
     >
 
-    <aside class="search-results" id="search">
-  <div class="container">
-    <section class="search-header">
+    
 
-      <div class="row no-gutters justify-content-between mb-3">
-        <div class="col-6">
-          <h1></h1>
-        </div>
-        <div class="col-6 col-search-close">
-          <a class="js-search" href="#"><i class="fas fa-times-circle text-muted" aria-hidden="true"></i></a>
-        </div>
-      </div>
-
-      <div id="search-box">
-        
-        
-        
-      </div>
-
-    </section>
-    <section class="section-search-results">
-
-      <div id="search-hits">
-        
-      </div>
-
-    </section>
-  </div>
-</aside>
 
 
     
@@ -348,7 +350,7 @@ Animated rescaling : https://twitter.com/jwoLondon/status/1347208824495726592"><
 
 
 <nav class="navbar navbar-expand-lg navbar-light compensate-for-scrollbar" id="navbar-main">
-  <div class="container">
+  <div class="container-xl">
 
     
     <div class="d-none d-lg-inline-flex">
@@ -386,10 +388,18 @@ Animated rescaling : https://twitter.com/jwoLondon/status/1347208824495726592"><
         
 
         
+
         
         
         
         
+
+        
+          
+            
+            
+          
+          
         
 
         <li class="nav-item">
@@ -408,10 +418,18 @@ Animated rescaling : https://twitter.com/jwoLondon/status/1347208824495726592"><
         
 
         
+
         
         
         
         
+
+        
+          
+            
+            
+          
+          
         
 
         <li class="nav-item">
@@ -430,10 +448,18 @@ Animated rescaling : https://twitter.com/jwoLondon/status/1347208824495726592"><
         
 
         
+
         
         
         
         
+
+        
+          
+            
+            
+          
+          
         
 
         <li class="nav-item">
@@ -452,10 +478,18 @@ Animated rescaling : https://twitter.com/jwoLondon/status/1347208824495726592"><
         
 
         
+
         
         
         
         
+
+        
+          
+            
+            
+          
+          
         
 
         <li class="nav-item">
@@ -474,10 +508,18 @@ Animated rescaling : https://twitter.com/jwoLondon/status/1347208824495726592"><
         
 
         
+
         
         
         
         
+
+        
+          
+            
+            
+          
+          
         
 
         <li class="nav-item">
@@ -496,10 +538,18 @@ Animated rescaling : https://twitter.com/jwoLondon/status/1347208824495726592"><
         
 
         
+
         
         
         
         
+
+        
+          
+            
+            
+          
+          
         
 
         <li class="nav-item">
@@ -520,10 +570,18 @@ Animated rescaling : https://twitter.com/jwoLondon/status/1347208824495726592"><
         
 
         
+
         
         
         
         
+
+        
+          
+            
+            
+          
+          
         
 
         <li class="nav-item">
@@ -540,8 +598,14 @@ Animated rescaling : https://twitter.com/jwoLondon/status/1347208824495726592"><
     </div>
 
     <ul class="nav-icons navbar-nav flex-row ml-auto d-flex pl-md-2">
+
+      
       
 
+      
+      
+
+      
       
 
       
@@ -585,6 +649,9 @@ Animated rescaling : https://twitter.com/jwoLondon/status/1347208824495726592"><
   
   
   
+    
+  
+
   
   <div class="docs-toc-item">
     <a class="docs-toc-link" href="../../class/">Overview</a>
@@ -593,6 +660,7 @@ Animated rescaling : https://twitter.com/jwoLondon/status/1347208824495726592"><
       <li >
         <a href="../../class/">Class sessions</a>
       </li>
+
       
     </ul>
     
@@ -606,38 +674,47 @@ Animated rescaling : https://twitter.com/jwoLondon/status/1347208824495726592"><
       <li >
         <a href="../../class/01-class/">1: Introduction</a>
       </li>
+
       
       <li >
         <a href="../../class/02-class/">2: Data Fundamentals</a>
       </li>
+
       
       <li >
         <a href="../../class/03-class/">3: Visualization fundamentals</a>
       </li>
+
       
       <li >
         <a href="../../class/04-class/">4: Visualization for exploratory data analysis</a>
       </li>
+
       
       <li >
         <a href="../../class/05-class/">5: Visualization for exploratory geospatial data analysis</a>
       </li>
+
       
       <li >
         <a href="../../class/06-class/">6: Visualization for model building 1</a>
       </li>
+
       
       <li >
         <a href="../../class/07-class/">7: Visualization for model building 2</a>
       </li>
+
       
       <li >
         <a href="../../class/08-class/">8: Visualization for uncertainty analysis</a>
       </li>
+
       
       <li class="active">
         <a href="../../class/09-class/">9: Visualization for data storytelling</a>
       </li>
+
       
     </ul>
     
@@ -675,13 +752,52 @@ Animated rescaling : https://twitter.com/jwoLondon/status/1347208824495726592"><
 <script src="../../rmarkdown-libs/anchor-sections/anchor-sections.js"></script>
 <!-- /BLOGDOWN-HEAD -->
 
+<h2>Contents</h2>
+<div id="TOC">
+<ul>
+<li><a href="#concepts">Concepts</a></li>
+<li><a href="#techniques">Techniques</a></li>
+</ul>
+</div>
 
-<p>Road safety analysis : <a href="https://docs.ropensci.org/stats19/" class="uri">https://docs.ropensci.org/stats19/</a>
-Others? Knife crime data?</p>
-<p>OR</p>
-<p>Sharing your work – reproducible research</p>
+<div id="concepts" class="section level2">
+<h2>Concepts</h2>
+<p>Introducing this :</p>
+<ol style="list-style-type: decimal">
+<li>That in academic visualization there has been a realisation of role of storytelling in visualization. Not a single, optimum solution to any visualization problem that expose the true picture/story – no such formulation exists.</li>
+<li>At same time: statistical literacy, scientific communication and data journalism –&gt; evidence-based society. data is now embedded in most domains, and particularly in the public sphere.</li>
+<li>Storytelling not about making up stories – but constructing evidence-based arguments, with authority and uncertainty. Point at tensions – need to reduce complexity (and uncertainty) can lead to false interpretation.</li>
+</ol>
+<p>From <em>Data Driven Storytelling</em></p>
+<p>*We think this movement towards data-driven stories, which is apparent in both the data visualization research community and the professional journalism community, has the potential to form a crucial part of keeping the public informed, a movement sometimes referred to as the democratization of data – the making of data understandable to the general public. This exciting new development in the use of data visualization in media has revealed an emerging professional community in the already complex group of disciplines involved in data visualization. Data visualization has roots in many research fields including perception, computer graphics, design, and human-computer interaction, though only recently has this expanded to include journalism.</p>
+<p>Data journalism
+here has also been a growing consciousness that some of today’s most relevant stories are buried in data. This data can be quite hard to understand in its raw formats but can become much more generally accessible when visualized. Journalists have not only begun to use standard data visualizations such as charts and maps in their stories, but are also creating new ones that are tailored to the particular data type and to the message of the story they are writing. Since journalists are now able to easily share interactive data visualizations on the Web, the democratization of data visualization is accelerating with new compelling data visualizations emerging in the media daily…</p>
+<p>By carefully structuring the information and integrating explanation to guide the consumer, journalists help lead readers towards a valid interpretation of the underlying data.
+*</p>
+<p>
+
+<div class="alert alert-instruction">
+  <div>
+    Amanda Cox - <a href="https://www.youtube.com/embed/ha9LA3rYD9g" class="uri"><a href="https://www.youtube.com/embed/ha9LA3rYD9g">https://www.youtube.com/embed/ha9LA3rYD9g</a></a>
+Robert Kosara - <a href="https://www.youtube.com/watch?v=PMtWFjjVM5E&amp;ab_channel=BocoupLLC" class="uri"><a href="https://www.youtube.com/watch?v=PMtWFjjVM5E&amp;amp;ab_channel=BocoupLLC">https://www.youtube.com/watch?v=PMtWFjjVM5E&amp;amp;ab_channel=BocoupLLC</a></a>
+  </div>
+</div>
+</p>
+<p>Scrollytelling : <a href="https://medium.com/nightingale/from-storytelling-to-scrollytelling-a-short-introduction-and-beyond-fbda32066964" class="uri">https://medium.com/nightingale/from-storytelling-to-scrollytelling-a-short-introduction-and-beyond-fbda32066964</a></p>
+<p>Storytelling models?</p>
+<p>Storytelling narratives – immigration : <a href="https://openaccess.city.ac.uk/id/eprint/25322/" class="uri">https://openaccess.city.ac.uk/id/eprint/25322/</a></p>
+<p>Not sure about this resource : <a href="https://datajournalism.com/read/handbook/one/delivering-data/using-visualizations-to-tell-stories" class="uri">https://datajournalism.com/read/handbook/one/delivering-data/using-visualizations-to-tell-stories</a></p>
+<p>Talk: John Burn-Murdoch VIS 2020 on Covid-19 comparison work. Themes – theoretical and cognitive optimal ways of displaying data. No canonical solution exists. And the objectives/purposes are different when communicating. Log-scales (focus on comparison).</p>
 <p>Animated rescaling : <a href="https://twitter.com/jwoLondon/status/1347208824495726592" class="uri">https://twitter.com/jwoLondon/status/1347208824495726592</a></p>
+<p>Twitter stories (for data vis) : anything on this? examples?</p>
+<p>Practical : avoid legends, make labels intrinsic to vis. Sacrifice data density? Build sequentially towards complexity. Design consistency.</p>
+</div>
+<div id="techniques" class="section level2">
+<h2>Techniques</h2>
+<p>Covid-19 data – comparing regions?
+Stats19 data – cycling in London?</p>
 <!-- Concerns around the _reproducibility crisis_ are not simply a function of transparency in methodology and research design. Rather, they relate to a culture and incentive structure whereby scientific claims are conferred with authority when reported within the (slightly backwards) logic of Null Hypothesis Significance Testing (NHST) and _p-values_. We will cover a little on this in session 7 and 8, but for an accessible read on the phenomenon of _p-hacking_ (with interactive graphic) see [this article](https://fivethirtyeight.com/features/science-isnt-broken/#part1) from the excellent [FiveThirtyEight](http://fivethirtyeight.com) website. Again, the upshot of all this introspection is a rethinking of the way in which Statistics is taught in schools and universities, with greater emphasis on understanding through computational approaches rather than traditional equations, formulas and probability tables. Where does `R` fit within this? Simply put: `R` is far better placed than traditional software tools and point-and-click paradigms for supporting computational approaches to statistics -- with a set of methods and libraries for performing simulations and permutation-based tests. -->
+</div>
 
                     </div>
 
@@ -702,6 +818,8 @@ Others? Knife crime data?</p>
 
 
                     
+
+
 
                 </div>
 
@@ -754,8 +872,13 @@ Others? Knife crime data?</p>
     
     
       <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.imagesloaded/4.1.4/imagesloaded.pkgd.min.js" integrity="sha256-lqvxZrPLtfffUl2G/e7szqSvPBILGbwmsGE1MKlOi0Q=" crossorigin="anonymous"></script>
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.isotope/3.0.6/isotope.pkgd.min.js" integrity="sha256-CBrpuqrMhXwcLLUd5tvQ4euBHCdh7wGlDfNz8vbu/iI=" crossorigin="anonymous"></script>
+
+      
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.imagesloaded/4.1.4/imagesloaded.pkgd.min.js" integrity="sha256-lqvxZrPLtfffUl2G/e7szqSvPBILGbwmsGE1MKlOi0Q=" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.isotope/3.0.6/isotope.pkgd.min.js" integrity="sha256-CBrpuqrMhXwcLLUd5tvQ4euBHCdh7wGlDfNz8vbu/iI=" crossorigin="anonymous"></script>
+      
+
       <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js" integrity="sha256-yt2kYMy0w8AbtF89WXb2P1rfjcP/HTHLT7097U8Y5b8=" crossorigin="anonymous"></script>
       <script src="https://cdnjs.cloudflare.com/ajax/libs/instant.page/5.1.0/instantpage.min.js" integrity="sha512-1+qUtKoh9XZW7j+6LhRMAyOrgSQKenQ4mluTR+cvxXjP1Z54RxZuzstR/H9kgPXQsVB8IW7DMDFUJpzLjvhGSQ==" crossorigin="anonymous"></script>
 
@@ -763,9 +886,9 @@ Others? Knife crime data?</p>
 
       
         
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.2/highlight.min.js" integrity="sha512-7t8APmYpzEsZP7CYoA7RfMPV9Bb+PJHa9x2WiUnDXZx3XHveuyWUtvNOexhkierl5flZ3tr92dP1mMS+SGlD+A==" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.2.0/highlight.min.js" integrity="sha512-TDKKr+IvoqZnPzc3l35hdjpHD0m+b2EC2SrLEgKDRWpxf2rFCxemkgvJ5kfU48ip+Y+m2XVKyOCD85ybtlZDmw==" crossorigin="anonymous"></script>
         
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.2/languages/r.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.2.0/languages/r.min.js"></script>
         
       
 
@@ -776,19 +899,7 @@ Others? Knife crime data?</p>
 
     
     
-    <script>const code_highlighting = true;</script>
-    
-
-    
-    
-    <script>const isSiteThemeDark = false;</script>
-    
-
-    
-
-    
-    
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/anchor-js/4.1.1/anchor.min.js" integrity="sha256-pB/deHc9CGfFpJRjC43imB29Rse8tak+5eXqntO94ck=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/anchor-js/4.2.2/anchor.min.js" integrity="sha512-I7w3ZdSFzw5j3jU3ZkNikBNeIrl3i+hEuEdwNmqUJvwNcaBUNcijnP2gd9DtGlgVYDplfjGoD8vTNsID+lCjqg==" crossorigin="anonymous"></script>
     <script>
       anchors.add();
     </script>
@@ -801,6 +912,11 @@ Others? Knife crime data?</p>
 
     
     
+    
+
+    
+    
+    
 
     
     
@@ -810,6 +926,7 @@ Others? Knife crime data?</p>
 
     
     
+
     
     
     
@@ -820,7 +937,8 @@ Others? Knife crime data?</p>
     
     
     
-    <script src="../../js/academic.min.7c0855509a679f5c89322b27a9552a2f.js"></script>
+    
+    <script src="../../en-uk/js/wowchemy.min.c1f1542ffaeb51a1fda38e15211866ed.js"></script>
 
     
 
