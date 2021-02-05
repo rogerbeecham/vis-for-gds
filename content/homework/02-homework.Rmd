@@ -74,7 +74,7 @@ Below are two different tables with results from UK General Elections. We will b
 | Democratic Union Party  | 0.9               | 10           | 0.8               | 8            |
 
 
-### Task 3: Fix data
+## Task 3: Fix data
 
 In the [<i class="fab fa-r-project"></i> 02-template.Rmd](/homework/02-homework_files/02-template.Rmd) file for this session I have provided links to two derived tables (`ny_spread_columns` and `ny_spread_rows`) from the New York bikeshare trip data that are not in a tidy format.
 
@@ -106,6 +106,6 @@ A candidate tidy organisation of the data is below. Each row is an origin-destin
 ## # … with 386,752 more rows
 ```
 
-### Task 4: Compute from data
+## Task 4: Compute from data
 
 Using `dplyr` functions, calculate the average distance, duration and speed of trips occuring for each observation.  Print out to the Console the top 10 most heavily cycled OD pairs (and their associated summary statistics) separately for weekdays and weekends. You may wish to join on your `ny_stations` table in order to fetch the station names corresponding to the origin and destination stations.

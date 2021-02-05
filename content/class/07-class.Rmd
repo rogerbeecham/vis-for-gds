@@ -20,14 +20,10 @@ editor_options:
   chunk_output_type: console
 ---
 
-Road safety analysis : https://docs.ropensci.org/stats19/
+Multi-level modelling : https://bookdown.org/roback/bookdown-BeyondMLR/
 
-{{% alert instruction %}}
-Uncertainty
-{{% /alert %}}
+Also : http://ljwolf.org/teaching/gds/02-workbook.html
 
-<div class="embed-responsive embed-responsive-16by9">
-<iframe class="embed-responsive-item" src="https://www.youtube.com/embed/vqzO-9LSoG4" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-</div>
+Introduce Ocam's Razor on variable selection?
 
-Uncertainty vis book : https://mjskay.github.io/uncertainty-vis-book/
+Partial pooling : https://solomonkurz.netlify.app/post/stein-s-paradox-and-what-partial-pooling-can-do-for-you/

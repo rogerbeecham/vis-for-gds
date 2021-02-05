@@ -20,14 +20,53 @@ editor_options:
   chunk_output_type: console
 ---
 
-Road safety analysis : https://docs.ropensci.org/stats19/
-Others? Knife crime data?
+## Concepts
 
-OR
 
-Sharing your work -- reproducible research
+Introducing this :
+
+1. That in academic visualization there has been a realisation of role of storytelling in visualization. Not a single, optimum solution to any visualization problem that expose the true picture/story -- no such formulation exists.
+2. At same time: statistical literacy, scientific communication and data journalism --> evidence-based society. data is now embedded in most domains, and particularly in the public sphere.
+3. Storytelling not about making up stories -- but constructing evidence-based arguments, with authority and uncertainty. Point at tensions -- need to reduce complexity (and uncertainty) can lead to false interpretation.
+
+
+From _Data Driven Storytelling_
+
+*We think this movement towards data-driven stories, which is apparent in both the data visualization research community and the professional journalism community, has the potential to form a crucial part of keeping the public informed, a movement sometimes referred to as the democratization of data – the making of data understandable to the general public. This exciting new development in the use of data visualization in media has revealed an emerging professional community in the already complex group of disciplines involved in data visualization. Data visualization has roots in many research fields including perception, computer graphics, design, and human-computer interaction, though only recently has this expanded to include journalism.
+
+Data journalism
+here has also been a growing consciousness that some of today’s most relevant stories are buried in data. This data can be quite hard to understand in its raw formats but can become much more generally accessible when visualized. Journalists have not only begun to use standard data visualizations such as charts and maps in their stories, but are also creating new ones that are tailored to the particular data type and to the message of the story they are writing. Since journalists are now able to easily share interactive data visualizations on the Web, the democratization of data visualization is accelerating with new compelling data visualizations emerging in the media daily...
+
+By carefully structuring the information and integrating explanation to guide the consumer, journalists help lead readers towards a valid interpretation of the underlying data.
+*
+
+
+{{% alert instruction %}}
+Amanda Cox - https://www.youtube.com/embed/ha9LA3rYD9g
+Robert Kosara - https://www.youtube.com/watch?v=PMtWFjjVM5E&ab_channel=BocoupLLC
+{{% /alert %}}
+
+
+Scrollytelling : https://medium.com/nightingale/from-storytelling-to-scrollytelling-a-short-introduction-and-beyond-fbda32066964
+
+Storytelling models?
+
+Storytelling narratives -- immigration : https://openaccess.city.ac.uk/id/eprint/25322/
+
+Not sure about this resource : https://datajournalism.com/read/handbook/one/delivering-data/using-visualizations-to-tell-stories
+
+Talk: John Burn-Murdoch VIS 2020 on Covid-19 comparison work. Themes -- theoretical and cognitive optimal ways of displaying data. No canonical solution exists. And the objectives/purposes are different when communicating. Log-scales (focus on comparison).
 
 Animated rescaling : https://twitter.com/jwoLondon/status/1347208824495726592
+
+Twitter stories (for data vis) : anything on this? examples?
+
+Practical : avoid legends, make labels intrinsic to vis. Sacrifice data density? Build sequentially towards complexity. Design consistency.
+
+## Techniques
+
+Covid-19 data -- comparing regions?
+Stats19 data -- cycling in London?
 
 
 <!-- Concerns around the _reproducibility crisis_ are not simply a function of transparency in methodology and research design. Rather, they relate to a culture and incentive structure whereby scientific claims are conferred with authority when reported within the (slightly backwards) logic of Null Hypothesis Significance Testing (NHST) and _p-values_. We will cover a little on this in session 7 and 8, but for an accessible read on the phenomenon of _p-hacking_ (with interactive graphic) see [this article](https://fivethirtyeight.com/features/science-isnt-broken/#part1) from the excellent [FiveThirtyEight](http://fivethirtyeight.com) website. Again, the upshot of all this introspection is a rethinking of the way in which Statistics is taught in schools and universities, with greater emphasis on understanding through computational approaches rather than traditional equations, formulas and probability tables. Where does `R` fit within this? Simply put: `R` is far better placed than traditional software tools and point-and-click paradigms for supporting computational approaches to statistics -- with a set of methods and libraries for performing simulations and permutation-based tests. -->

@@ -23,4 +23,14 @@ editor_options:
 Brexit analysis : https://github.com/ropensci/nomisr
 Trump analysis : https://walker-data.com/tidycensus/
 
-Story -- previously very data-driven
+Quote from Spiegelhalter? About explanation of variation in context of what remains unexplained
+
+* Models as functions
+* Vocabulary: outcome variable (whose variation you are trying to understand), explanatory (other variables that you want to use to explain variation), predicted value (output o the model function -- expected outcome conditioing on explanatory variables), residuals (a measure of how far each case is from the predicted value)
+
+Why models and not graphics
+* Can reveal patterns that not evident in graphics -- in regression framework we can *condition* on explanatory variables and talk about the effect of single variables net of others.
+* Deal with uncertainty and false discovery -- we infer/overinterpet from scatterplots
+
+
+Use tidymodels : https://cfss.uchicago.edu/notes/start-with-models/

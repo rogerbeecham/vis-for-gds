@@ -20,47 +20,14 @@ editor_options:
   chunk_output_type: console
 ---
 
+Road safety analysis : https://docs.ropensci.org/stats19/
 
 {{% alert instruction %}}
-Amanda Cox
+Matt Kay -- OpenVis talk
 {{% /alert %}}
 
 <div class="embed-responsive embed-responsive-16by9">
-<iframe class="embed-responsive-item" src=https://www.youtube.com/embed/ha9LA3rYD9g" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<iframe class="embed-responsive-item" src="https://www.youtube.com/embed/vqzO-9LSoG4" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </div>
 
-
-Robert Kosara : https://www.youtube.com/watch?v=PMtWFjjVM5E&ab_channel=BocoupLLC
-
-https://medium.com/nightingale/from-storytelling-to-scrollytelling-a-short-introduction-and-beyond-fbda32066964
-
-https://datajournalism.com/read/handbook/one/delivering-data/using-visualizations-to-tell-stories
-
-
-
-Road safety analysis : https://docs.ropensci.org/stats19/
-Others? Knife crime data?
-
-OR
-
-Sharing your work -- reproducible research
-
-Introducing this :
-
-1. That in academic visualization there has been a movement towards studying storytelling in visualization
-2. Why? This feels uneasy as Science, Data, Evidence -- not making up stories
-3. Avoid philosophical discussions about objectivity, but data is now embedded in most domains, and particularly in the public sphere.
-4. Lies Damn, Lies and Statistics -- data Journalism, statistical literacy.
-
-https://clauswilke.com/dataviz/telling-a-story.html
-
-From _Data Driven Storytelling_
-
-We think this movement towards data-driven stories, which is apparent in both the data visualization research community and the professional journalism community, has the potential to form a crucial part of keeping the public informed, a movement sometimes referred to as the democratization of data – the making of data understandable to the general public. This exciting new development in the use of data visualization in media has revealed an emerging professional community in the already complex group of disciplines involved in data visualization. Data visualization has roots in many research fields including perception, computer graphics, design, and human-computer interaction, though only recently has this expanded to include journalism.
-
-Data journalism
-here has also been a growing consciousness that some of today’s most relevant stories are buried in data. This data can be quite hard to understand in its raw formats but can become much more generally accessible when visualized. Journalists have not only begun to use standard data visualizations such as charts and maps in their stories, but are also creating new ones that are tailored to the particular data type and to the message of the story they are writing. Since journalists are now able to easily share interactive data visualizations on the Web, the democratization of data visualization is accelerating with new compelling data visualizations emerging in the media daily...
-
-By carefully structuring the information and integrating explanation to guide the consumer, journalists help lead readers towards a valid interpretation of the underlying data.
-
-Countering the idea that there is some optimal/mathematical formulation for presenting a dataset -- that exposes the true picture/story?
+Uncertainty vis book (not written but structure useful) : https://mjskay.github.io/uncertainty-vis-book/

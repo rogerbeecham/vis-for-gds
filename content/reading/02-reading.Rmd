@@ -9,7 +9,7 @@ csl: ../../static/bib/chicago-syllabus-no-bib.csl
 output:
   blogdown::html_page:
     template: ../../pandoc/toc-title_html.template
-    toc: true
+    toc: false
 menu:
   reading:
     parent: Reading
@@ -20,12 +20,16 @@ editor_options:
   chunk_output_type: console
 ---
 
-- [@arribas_geography_2018]
+### Tidy Data
 
-- [@brunsdon_opening_2020]
+- [@wickham_tidy_2010]
 
-- [@singleton_geographic_2019]
+### R for Data Science
 
 - [@wickham_r_2017]\
--- Chapters 1,2,6,8.\
+-- Chapters 2-12.\
 [Free online](https://r4ds.had.co.nz/).
+
+### bikedata
+
+- [@padgham_bikedata_2017]
