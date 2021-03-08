@@ -1192,5 +1192,3 @@ ggsave(filename="./static/class/03-class_files/referendum-map.png", plot=plot,wi
 
 
 
-+
-  geom_sf()

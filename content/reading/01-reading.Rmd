@@ -34,5 +34,5 @@ editor_options:
 ### Introducing R for Data Science
 
 - [@wickham_r_2017]\
--- Chapters 1,2,6,8.\
+-- Chapters 1.\
 [Free online](https://r4ds.had.co.nz/).

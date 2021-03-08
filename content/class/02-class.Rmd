@@ -1,6 +1,6 @@
 ---
 title: "Data fundamentals: Describe, wrangle, tidy"
-linktitle: "2: Data Fundamentals"
+linktitle: "2: Data fundamentals"
 date: "2021-05-18"
 class_date: "2021-05-18"
 citeproc: true

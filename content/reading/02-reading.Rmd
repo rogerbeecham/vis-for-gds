@@ -22,7 +22,7 @@ editor_options:
 
 ### Tidy Data
 
-- [@wickham_tidy_2010]
+- [@wickham_tidy_2014]
 
 ### R for Data Science
 

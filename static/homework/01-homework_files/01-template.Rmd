@@ -43,7 +43,7 @@ print(plot)
 
 If you're feeling particularly motivated, and want to extend the Anscombe example, you may wish to play around [`datasauRus`](https://itsalocke.com/datasaurus/) package.
 
-When you work with R Markdown documents it is cumbersome to constantly be knitting and typesetting the document. Most often you will want to run each code chunk separately  so that the results can be explored in your Environment. To do this, simply click on the green arrow to the top right each code block. whenever you wish to run a bit of code chunk. 
+When you work with R Markdown documents it is cumbersome to constantly be knitting and typesetting the document. Most often you will want to run each code chunk separately  so that the results can be explored in your Environment. To do this, simply click on the green arrow to the top right each code block. whenever you wish to run a bit of code chunk.
 
 ### Writing plot to your project folder
 

@@ -41,8 +41,7 @@ By the end of this session you should gain the following **_knowledge_**:
 By the end of this session you should gain the following **_practical skills_**:
 
 {{% alert objective %}}
-- [x] Write `ggplot2` specifications that map data to **colour** and **position**.
-- [x] ??
+- [x] Write `ggplot2` specifications that represent data using marks (`geoms`) and encoding channels (`aesthetics` -- **colour** and **position**).
 {{% /alert %}}
 
 
@@ -491,13 +490,7 @@ data_gb %>%
   <summarised data frame>  %>% # The summarised data frame of vote share by party, piped to ggplot2.
   ggplot(aes(x=reorder(party, -vote_share), y=vote_share)) + # Categorical-ordinal x-axis (party, reordered), Ratio y-axis (vote_share).
   geom_col(fill="#003c8f") + # Set colour by website theme.
-  labs(
-    title="Vote share by party in GB",
-    subtitle="-- 2019 UK General Election",
-    caption="Data published by House of Commons Library, accessed via `parlitools`",
-    x="party", y="vote share"
-  )+
-  theme_v_gds() # A theme I've created for.
+  theme_v_gds() # A theme I've created for the module.
 ```
 
 A quick breakdown of the specification:
@@ -526,14 +519,7 @@ In Figure \@ref(fig:bars-region) the graphic is faceted by region. This requires
   ggplot(aes(x=reorder(party, vote_share), y=vote_share)) +
   geom_col(aes(fill=party)) +
   coord_flip() +
-  facet_wrap(~region) +
-  labs(
-    title="Vote share by party in GB",
-    subtitle="-- 2019 UK General Election",
-    caption="Data published by House of Commons Library, accessed via `parlitools`",
-    x="party", y="vote share"
-  )+
-  theme_v_gds()
+  facet_wrap(~region)
 ```
 
 Trying this for yourself, you will observe that the `ggplot2` internals are clever here. Since `party` is a categorical variable, a categorical (hue-based) colour scheme is automatically applied. Try passing a quantitative variable (`fill=vote_share`) and see what happens.
@@ -578,14 +564,7 @@ temp_party_shares_region %>%
   geom_col(aes(fill=party)) +
   scale_fill_manual(values=party_colours) +
   coord_flip() +
-  facet_wrap(~region) +
-  labs(
-    title="Vote share by party in GB",
-    subtitle="-- 2019 UK General Election",
-    caption="Data published by House of Commons Library, accessed via `parlitools`",
-    x="party", y="vote share"
-  )+
-  theme_v_gds()
+  facet_wrap(~region)
 ```
 
 
@@ -685,7 +664,7 @@ data_gb %>%
   # Optionally add a layer for regional boundaries.
   # geom_sf(data=. %>% group_by(region) %>% summarise(), colour="#eeeeee", fill="transparent", size=0.08)+
   coord_sf(crs=27700, datum=NA) +
-  scale_fill_manual(values=party_colours) +
+  scale_fill_manual(values=party_colours) 
 ```
 
 A breakdown of the `ggplot2` spec:
@@ -753,8 +732,7 @@ gb <- data_gb %>%
   coord_sf(crs=27700, datum=NA)+
   scale_size_ordinal(range=c(.3,.9))+
   scale_colour_manual(values=party_colours)+
-  scale_fill_manual(values=party_colours)+
-  theme_v_gds()
+  scale_fill_manual(values=party_colours)
 ```
 
 A breakdown:

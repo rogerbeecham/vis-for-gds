@@ -1,6 +1,6 @@
 ---
-title: "Data Fundamentals"
-linktitle: "2: Data Fundamentals"
+title: "Data fundamentals"
+linktitle: "2: Data fundamentals"
 date: "2021-06-01"
 class_date: "2021-06-01"
 citeproc: true

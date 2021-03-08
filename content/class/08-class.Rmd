@@ -31,3 +31,5 @@ Matt Kay -- OpenVis talk
 </div>
 
 Uncertainty vis book (not written but structure useful) : https://mjskay.github.io/uncertainty-vis-book/
+
+https://medium.com/multiple-views-visualization-research-explained/uncertainty-visualization-explained-67e7a73f031b

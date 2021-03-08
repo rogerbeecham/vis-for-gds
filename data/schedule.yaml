@@ -20,9 +20,9 @@ lessons:
 
   - title: "Visualization for exploratory data analysis"
     date: "Week 4"
-    # homework: "04-homework"
-    # class: "04-class"
-    # reading: "04-reading"
+    homework: "04-homework"
+    class: "04-class"
+    reading: "04-reading"
 
   - title: "Visualization for exploratory geospatial data analysis"
     date: "Week 5"
