@@ -41,7 +41,7 @@
 &lt;h3&gt;Introducing R for Data Science&lt;/h3&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;span class=&#34;citation&#34;&gt;Hadley Wickham and Garrett Grolemund, &lt;em&gt;R for Data Science: Import, Tidy, Transform, Visualize, and Model Data&lt;/em&gt; (Sebastopol, California: O’Reilly Media, &lt;a href=&#34;#ref-wickham_r_2017&#34; role=&#34;doc-biblioref&#34;&gt;2017&lt;/a&gt;), &lt;a href=&#34;http://r4ds.had.co.nz/&#34; role=&#34;doc-biblioref&#34;&gt;http://r4ds.had.co.nz/&lt;/a&gt;.&lt;/span&gt;&lt;br /&gt;
-– Chapters 1,2,6,8.&lt;br /&gt;
+– Chapters 1.&lt;br /&gt;
 &lt;a href=&#34;https://r4ds.had.co.nz/&#34;&gt;Free online&lt;/a&gt;.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/div&gt;
@@ -63,7 +63,7 @@
 &lt;div id=&#34;tidy-data&#34; class=&#34;section level3&#34;&gt;
 &lt;h3&gt;Tidy Data&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;span class=&#34;citation&#34;&gt;&lt;span class=&#34;citeproc-not-found&#34; data-reference-id=&#34;wickham_tidy_2010&#34;&gt;&lt;strong&gt;???&lt;/strong&gt;&lt;/span&gt;&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;&lt;span class=&#34;citation&#34;&gt;H. Wickham, “Tidy Data,” &lt;em&gt;Journal of Statistical Software&lt;/em&gt; 59, no. 10 (&lt;a href=&#34;#ref-wickham_tidy_2014&#34; role=&#34;doc-biblioref&#34;&gt;2014&lt;/a&gt;): 1–23.&lt;/span&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/div&gt;
 &lt;div id=&#34;r-for-data-science&#34; class=&#34;section level3&#34;&gt;
@@ -112,6 +112,48 @@
 &lt;li&gt;&lt;p&gt;&lt;span class=&#34;citation&#34;&gt;Hadley Wickham and Garrett Grolemund, &lt;em&gt;R for Data Science: Import, Tidy, Transform, Visualize, and Model Data&lt;/em&gt; (Sebastopol, California: O’Reilly Media, &lt;a href=&#34;#ref-wickham_r_2017&#34; role=&#34;doc-biblioref&#34;&gt;2017&lt;/a&gt;), &lt;a href=&#34;http://r4ds.had.co.nz/&#34; role=&#34;doc-biblioref&#34;&gt;http://r4ds.had.co.nz/&lt;/a&gt;.&lt;/span&gt;&lt;br /&gt;
 – Chapters 3.&lt;br /&gt;
 &lt;a href=&#34;https://r4ds.had.co.nz/&#34;&gt;Free online&lt;/a&gt;.&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Visualization for exploratory data analysis</title>
+      <link>/reading/04-reading/</link>
+      <pubDate>Tue, 01 Jun 2021 00:00:00 +0000</pubDate>
+      <guid>/reading/04-reading/</guid>
+      <description>
+&lt;!-- BLOGDOWN-HEAD --&gt;
+&lt;link href=&#34;../rmarkdown-libs/anchor-sections/anchor-sections.css&#34; rel=&#34;stylesheet&#34; /&gt;
+&lt;script src=&#34;../rmarkdown-libs/anchor-sections/anchor-sections.js&#34;&gt;&lt;/script&gt;
+&lt;!-- /BLOGDOWN-HEAD --&gt;
+
+
+&lt;div id=&#34;eda&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;EDA&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;span class=&#34;citation&#34;&gt;Hadley Wickham and Garrett Grolemund, &lt;em&gt;R for Data Science: Import, Tidy, Transform, Visualize, and Model Data&lt;/em&gt; (Sebastopol, California: O’Reilly Media, &lt;a href=&#34;#ref-wickham_r_2017&#34; role=&#34;doc-biblioref&#34;&gt;2017&lt;/a&gt;), &lt;a href=&#34;http://r4ds.had.co.nz/&#34; role=&#34;doc-biblioref&#34;&gt;http://r4ds.had.co.nz/&lt;/a&gt;.&lt;/span&gt;&lt;br /&gt;
+– Chapter 7.&lt;br /&gt;
+&lt;a href=&#34;https://r4ds.had.co.nz/&#34;&gt;Free online&lt;/a&gt;.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div id=&#34;modelling-expectation&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Modelling expectation&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;span class=&#34;citation&#34;&gt;M. Correll and J. Heer, “Surprise! Bayesian Weighting for de-Biasing Thematic Maps,” &lt;em&gt;IEEE Transactions on Visualization &amp;amp; Computer Graphics&lt;/em&gt; (&lt;a href=&#34;#ref-correl_surprise_2017&#34; role=&#34;doc-biblioref&#34;&gt;2017&lt;/a&gt;).&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;&lt;span class=&#34;citation&#34;&gt;M. Visalingam, “The Signed Chi-Score Measure for the Classification and Mapping of Plychotomous Data,” &lt;em&gt;The Cartographic Journal&lt;/em&gt; 18, no. 1 (&lt;a href=&#34;#ref-visalingam_signed_1981&#34; role=&#34;doc-biblioref&#34;&gt;1981&lt;/a&gt;): 32–43.&lt;/span&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div id=&#34;categorical-data-analysis&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Categorical data analysis&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;span class=&#34;citation&#34;&gt;M.. Friendly, “Mosaic Displays for Loglinear Models,” in &lt;em&gt;ASA, Proceedings of the Statistical Graphics Section&lt;/em&gt;, &lt;a href=&#34;#ref-friendly_mosaic_1992&#34; role=&#34;doc-biblioref&#34;&gt;1992&lt;/a&gt;, 61–68.&lt;/span&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div id=&#34;a-stellar-application-of-the-above&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;A stellar application of the above&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;span class=&#34;citation&#34;&gt;Badawood Wood J. and A. Slingsby, “BallotMaps: Detecting Name Bias in Alphabetically Ordered Ballot Papers,” &lt;em&gt;IEEE Transactions on Visualization and Computer Graphics&lt;/em&gt; 17, no. 12 (&lt;a href=&#34;#ref-wood_ballotmaps_2011&#34; role=&#34;doc-biblioref&#34;&gt;2011&lt;/a&gt;): 2384–91.&lt;/span&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/div&gt;
 </description>

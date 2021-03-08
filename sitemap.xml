@@ -43,17 +43,12 @@
   </url>
   
   <url>
-    <loc>/homework/02-homework/</loc>
-    <lastmod>2021-06-01T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
     <loc>/reading/02-reading/</loc>
     <lastmod>2021-06-01T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/homework/03-homework/</loc>
+    <loc>/homework/02-homework/</loc>
     <lastmod>2021-06-01T00:00:00+00:00</lastmod>
   </url>
   
@@ -63,8 +58,23 @@
   </url>
   
   <url>
+    <loc>/homework/03-homework/</loc>
+    <lastmod>2021-06-01T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/homework/04-homework/</loc>
+    <lastmod>2021-06-01T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>/class/04-class/</loc>
     <lastmod>2020-11-29T10:15:25+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/reading/04-reading/</loc>
+    <lastmod>2021-06-01T00:00:00+00:00</lastmod>
   </url>
   
   <url>

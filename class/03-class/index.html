@@ -677,7 +677,7 @@
 
       
       <li >
-        <a href="../../class/02-class/">2: Data Fundamentals</a>
+        <a href="../../class/02-class/">2: Data fundamentals</a>
       </li>
 
       
@@ -802,8 +802,7 @@
 <div class="alert alert-objective">
   <div>
     <ul>
-<li><input checked="" disabled="" type="checkbox"> Write <code>ggplot2</code> specifications that map data to <strong>colour</strong> and <strong>position</strong>.</li>
-<li><input checked="" disabled="" type="checkbox"> ??</li>
+<li><input checked="" disabled="" type="checkbox"> Write <code>ggplot2</code> specifications that represent data using marks (<code>geoms</code>) and encoding channels (<code>aesthetics</code> – <strong>colour</strong> and <strong>position</strong>).</li>
 </ul>
 
   </div>
@@ -1332,7 +1331,7 @@ Figure 10: Differences in power law exponents for the perception of variation in
 
 <div class="alert alert-note">
   <div>
-    This early experimental work that tries to understand how encoded quantities are perceived is clearly important. But we use data graphics to do much more than estimate single quantities. If data graphics are to serve as tools for analysis, we also need some confidence that the <strong>inferences</strong> made when studying data using graphics are accurate and reliable. In the Information Visualization domain, experimental work has recently been published exploring the perception of statistical quantities – dispersion <span class="citation">(Correll and Gleicher <a href="#ref-correll_error_2014" role="doc-biblioref">2014</a>)</span>, correlation <span class="citation">(Rensink and Baldridge <a href="#ref-rensink_perception_2010" role="doc-biblioref">2010</a>; Chang <a href="#ref-harrison_ranking_2014" role="doc-biblioref">2014</a>; Kay and Heer <a href="#ref-kay_beyond_2016" role="doc-biblioref">2016</a>)</span> and spatial autocorrelation <span class="citation">(Klippel, Hardisty, and Li <a href="#ref-klippel_interpreting_2011" role="doc-biblioref">2011</a>; Beecham et al. <a href="#ref-beecham_maplineups_2017" role="doc-biblioref">2017</a>)</span> – in commonly used chart types. More on this later in the module.
+    This early experimental work that tries to understand how encoded quantities are perceived is clearly important. But we use data graphics to do much more than estimate single quantities. If data graphics are to serve as tools for analysis, we also need some confidence that the <strong>inferences</strong> made when studying data using graphics are accurate and reliable. In the Information Visualization domain, experimental work has recently been published exploring the perception of statistical quantities – dispersion <span class="citation">(Correll and Gleicher <a href="#ref-correll_error_2014" role="doc-biblioref">2014</a>)</span>, correlation <span class="citation">(Rensink and Baldridge <a href="#ref-rensink_perception_2010" role="doc-biblioref">2010</a>; Harrison et al. <a href="#ref-harrison_ranking_2014" role="doc-biblioref">2014</a>; Kay and Heer <a href="#ref-kay_beyond_2016" role="doc-biblioref">2016</a>)</span> and spatial autocorrelation <span class="citation">(Klippel, Hardisty, and Li <a href="#ref-klippel_interpreting_2011" role="doc-biblioref">2011</a>; Beecham et al. <a href="#ref-beecham_maplineups_2017" role="doc-biblioref">2017</a>)</span> – in commonly used chart types. More on this later in the module.
   </div>
 </div>
 </p>
@@ -1510,13 +1509,7 @@ Figure 13: Plots of vote shares by party.
   &lt;summarised data frame&gt;  %&gt;% # The summarised data frame of vote share by party, piped to ggplot2.
   ggplot(aes(x=reorder(party, -vote_share), y=vote_share)) + # Categorical-ordinal x-axis (party, reordered), Ratio y-axis (vote_share).
   geom_col(fill=&quot;#003c8f&quot;) + # Set colour by website theme.
-  labs(
-    title=&quot;Vote share by party in GB&quot;,
-    subtitle=&quot;-- 2019 UK General Election&quot;,
-    caption=&quot;Data published by House of Commons Library, accessed via `parlitools`&quot;,
-    x=&quot;party&quot;, y=&quot;vote share&quot;
-  )+
-  theme_v_gds() # A theme I&#39;ve created for.</code></pre>
+  theme_v_gds() # A theme I&#39;ve created for the module.</code></pre>
 <p>A quick breakdown of the specification:</p>
 <ol style="list-style-type: decimal">
 <li><strong>Data</strong>: This is the summarised data frame in which each row is a political party and the column describes the vote share recorded for that party.</li>
@@ -1545,14 +1538,7 @@ Figure 14: Plots of vote shares by party and region.
   ggplot(aes(x=reorder(party, vote_share), y=vote_share)) +
   geom_col(aes(fill=party)) +
   coord_flip() +
-  facet_wrap(~region) +
-  labs(
-    title=&quot;Vote share by party in GB&quot;,
-    subtitle=&quot;-- 2019 UK General Election&quot;,
-    caption=&quot;Data published by House of Commons Library, accessed via `parlitools`&quot;,
-    x=&quot;party&quot;, y=&quot;vote share&quot;
-  )+
-  theme_v_gds()</code></pre>
+  facet_wrap(~region)</code></pre>
 <p>Trying this for yourself, you will observe that the <code>ggplot2</code> internals are clever here. Since <code>party</code> is a categorical variable, a categorical (hue-based) colour scheme is automatically applied. Try passing a quantitative variable (<code>fill=vote_share</code>) and see what happens.</p>
 <p>Clever as this is, when encoding political parties with colour <strong>symbolisation</strong> is important. More control over the encoding is necessary in order to specify the colours with which parties are most commonly represented. We can override <code>ggplot2</code>’s default colour by adding a <code>scale_fill_manual()</code> layer into which a vector of hex codes describing the colour of each political party is passed (<code>party_colours</code>). We also need to tell <code>ggplot2</code> which element of <code>party_colours</code> to apply to which value of <code>party</code>. In the code below, a derived table is generated summarising <code>vote_share</code> by political party and region. In the final line the <code>party</code> variable is recoded as a <a href="https://r4ds.had.co.nz/factors.html"><code>factor</code></a>. You might recall from last session that factors are categorical variables of fixed and potentially orderable values, called <code>levels</code>. The call to <code>mutate()</code> recodes <code>party</code> as a factor variable and orders the levels according to overall vote share.</p>
 <pre class="r"><code># Generate derived data.
@@ -1584,14 +1570,7 @@ temp_party_shares_region %&gt;%
   geom_col(aes(fill=party)) +
   scale_fill_manual(values=party_colours) +
   coord_flip() +
-  facet_wrap(~region) +
-  labs(
-    title=&quot;Vote share by party in GB&quot;,
-    subtitle=&quot;-- 2019 UK General Election&quot;,
-    caption=&quot;Data published by House of Commons Library, accessed via `parlitools`&quot;,
-    x=&quot;party&quot;, y=&quot;vote share&quot;
-  )+
-  theme_v_gds()</code></pre>
+  facet_wrap(~region)</code></pre>
 <p>
 
 <div class="alert alert-note">
@@ -1683,7 +1662,7 @@ data_gb %&gt;%
   # Optionally add a layer for regional boundaries.
   # geom_sf(data=. %&gt;% group_by(region) %&gt;% summarise(), colour=&quot;#eeeeee&quot;, fill=&quot;transparent&quot;, size=0.08)+
   coord_sf(crs=27700, datum=NA) +
-  scale_fill_manual(values=party_colours) +</code></pre>
+  scale_fill_manual(values=party_colours) </code></pre>
 <p>A breakdown of the <code>ggplot2</code> spec:</p>
 <ol style="list-style-type: decimal">
 <li><strong>Data</strong>: The <code>dplyr</code> code updates <code>data_gb</code> by recoding <code>winner_19</code> as a factor and defining a named vector of colours to supply to <code>scale_fill_manual()</code>.</li>
@@ -1740,8 +1719,7 @@ gb &lt;- data_gb %&gt;%
   coord_sf(crs=27700, datum=NA)+
   scale_size_ordinal(range=c(.3,.9))+
   scale_colour_manual(values=party_colours)+
-  scale_fill_manual(values=party_colours)+
-  theme_v_gds()</code></pre>
+  scale_fill_manual(values=party_colours)</code></pre>
 <p>A breakdown:</p>
 <ol style="list-style-type: decimal">
 <li><strong>Data</strong>: <code>data_gb</code> is updated with a boolean identifying whether or not the Constituency flipped Con-Lab/Lab-Con between successive elections (<code>is_flipped</code>), and a variable simplifying the party elected to either Conservative, Labour or Other.</li>
@@ -1769,9 +1747,6 @@ gb &lt;- data_gb %&gt;%
 <div id="ref-butler_why_1990">
 <p>Butler, D., and S. Van Beek. 1990. “Why not swing? Measuring electoral change.” <em>Political Science &amp; politics</em> 23 (2): 178–84.</p>
 </div>
-<div id="ref-harrison_ranking_2014">
-<p>Chang, Lane Harrison AND Fumeng Yang AND Steven Franconeri AND Remco. 2014. “Ranking Visualizations of Correlation Using Weber’s Law.” <em>IEEE Conference on Information Visualization (InfoVis)</em> 20 (12): 1943–52.</p>
-</div>
 <div id="ref-cleveland_elements_1993">
 <p>Cleveland, William S. 1993. <em>The Elements of Graphing Data</em>. Hobart Press.</p>
 </div>
@@ -1786,6 +1761,9 @@ gb &lt;- data_gb %&gt;%
 </div>
 <div id="ref-hanretty_areal_2017">
 <p>Hanretty, Chris. 2017. “Areal Interpolation and the Uk’s Referendum on Eu Membership.” <em>Journal of Elections, Public Opinion and Parties</em> 37 (4): 466–83.</p>
+</div>
+<div id="ref-harrison_ranking_2014">
+<p>Harrison, L., F. Yang, S. Franconeri, and R. Chang. 2014. “Ranking Visualizations of Correlation Using Weber’s Law.” <em>IEEE Conference on Information Visualization (InfoVis)</em> 20 (12): 1943–52.</p>
 </div>
 <div id="ref-heer_crowdsourcing_2010">
 <p>Heer, Jeffrey, and Michael Bostock. 2010. “Crowdsourcing Graphical Perception: Using Mechanical Turk to Assess Visualization Design.” In <em>ACM Human Factors in Computing Systems</em>, 203–12. doi:<a href="https://doi.org/10.1145/1753326.1753357">10.1145/1753326.1753357</a>.</p>

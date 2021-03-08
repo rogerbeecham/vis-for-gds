@@ -79,7 +79,7 @@
     </item>
     
     <item>
-      <title>Data Fundamentals</title>
+      <title>Data fundamentals</title>
       <link>/homework/02-homework/</link>
       <pubDate>Tue, 01 Jun 2021 00:00:00 +0000</pubDate>
       <guid>/homework/02-homework/</guid>
@@ -300,7 +300,7 @@
     </item>
     
     <item>
-      <title>Visualization Fundamentals</title>
+      <title>Visualization fundamentals</title>
       <link>/homework/03-homework/</link>
       <pubDate>Tue, 01 Jun 2021 00:00:00 +0000</pubDate>
       <guid>/homework/03-homework/</guid>
@@ -343,7 +343,7 @@
 &lt;/div&gt;
 &lt;div id=&#34;introduction&#34; class=&#34;section level2&#34;&gt;
 &lt;h2&gt;Introduction&lt;/h2&gt;
-&lt;p&gt;This homework requires you to apply the concepts and skills developed in the class session on &lt;a href=&#34;../02-class/&#34;&gt;data fundamentals&lt;/a&gt;. Do complete each of the tasks and be sure to save your work as this homework will be submitted as part of your portfolio for Assignment 1.&lt;/p&gt;
+&lt;p&gt;This homework requires you to apply the concepts and skills developed in the class session on &lt;a href=&#34;../class/03-class/&#34;&gt;visualization fundamentals&lt;/a&gt;. Do complete each of the tasks and be sure to save your work as this homework will be submitted as part of your portfolio for Assignment 1.&lt;/p&gt;
 &lt;/div&gt;
 &lt;div id=&#34;task-1-describe-and-evaluate&#34; class=&#34;section level2&#34;&gt;
 &lt;h2&gt;Task 1: Describe and evaluate&lt;/h2&gt;
@@ -353,7 +353,7 @@
 Figure 1: Map of Butler Con-Lab Swing in 2019 General Election.
 &lt;/p&gt;
 &lt;/div&gt;
-&lt;p&gt;Complete the description table below identifying each &lt;strong&gt;data item&lt;/strong&gt; that is encoded along with its &lt;strong&gt;measurement level&lt;/strong&gt;, &lt;strong&gt;visual mark&lt;/strong&gt; and &lt;strong&gt;visual&lt;/strong&gt; channel** and the effectiveness rank, according to &lt;span class=&#34;citation&#34;&gt;Tamara Munzner &lt;em&gt;Visualization Analysis and Design&lt;/em&gt;, AK Peters Visualization Series (Boca Raton, FL: CRC Press, &lt;a href=&#34;#ref-munzner_visualization_2014&#34; role=&#34;doc-biblioref&#34;&gt;2014&lt;/a&gt;).&lt;/span&gt;, of this encoding.&lt;/p&gt;
+&lt;p&gt;Complete the description table below identifying each &lt;strong&gt;data item&lt;/strong&gt; that is encoded along with its &lt;strong&gt;measurement level&lt;/strong&gt;, &lt;strong&gt;visual mark&lt;/strong&gt; and &lt;strong&gt;visual&lt;/strong&gt; channel** and the effectiveness rank, according to &lt;span class=&#34;citation&#34;&gt;Munzner (&lt;a href=&#34;#ref-munzner_visualization_2014&#34; role=&#34;doc-biblioref&#34;&gt;2014&lt;/a&gt;)&lt;/span&gt;, of this encoding.&lt;/p&gt;
 &lt;table&gt;
 &lt;thead&gt;
 &lt;tr class=&#34;header&#34;&gt;
@@ -451,6 +451,128 @@ Figure 3: Plots of 2019 versus 2017 vote shares.
 &lt;p class=&#34;caption&#34;&gt;
 Figure 4: Map of 2016 EU Referendum vote, estimated by Parliamentary Constituency in GB.
 &lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;refs&#34; class=&#34;references&#34;&gt;
+&lt;div id=&#34;ref-munzner_visualization_2014&#34;&gt;
+&lt;p&gt;Munzner, Tamara. 2014. &lt;em&gt;Visualization Analysis and Design&lt;/em&gt;. AK Peters Visualization Series. Boca Raton, FL: CRC Press.&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Exploratory data analysis</title>
+      <link>/homework/04-homework/</link>
+      <pubDate>Tue, 01 Jun 2021 00:00:00 +0000</pubDate>
+      <guid>/homework/04-homework/</guid>
+      <description>
+&lt;!-- BLOGDOWN-HEAD --&gt;
+&lt;link href=&#34;../rmarkdown-libs/anchor-sections/anchor-sections.css&#34; rel=&#34;stylesheet&#34; /&gt;
+&lt;script src=&#34;../rmarkdown-libs/anchor-sections/anchor-sections.js&#34;&gt;&lt;/script&gt;
+&lt;!-- /BLOGDOWN-HEAD --&gt;
+
+&lt;h2&gt;Contents&lt;/h2&gt;
+&lt;div id=&#34;TOC&#34;&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#session-outcomes&#34;&gt;Session Outcomes&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#introduction&#34;&gt;Introduction&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#visualization-design-challenge&#34;&gt;Visualization design challenge&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#references&#34;&gt;References&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+
+&lt;div id=&#34;session-outcomes&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Session Outcomes&lt;/h2&gt;
+&lt;p&gt;By the end of this homework session you should be able to:&lt;/p&gt;
+&lt;p&gt;
+
+&lt;div class=&#34;alert alert-objective&#34;&gt;
+  &lt;div&gt;
+    &lt;ul&gt;
+&lt;li&gt;&lt;input checked=&#34;&#34; disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; &lt;/li&gt;
+&lt;li&gt;&lt;input checked=&#34;&#34; disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; &lt;/li&gt;
+&lt;li&gt;&lt;input checked=&#34;&#34; disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; &lt;/li&gt;
+&lt;/ul&gt;
+
+  &lt;/div&gt;
+&lt;/div&gt;
+&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;introduction&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Introduction&lt;/h2&gt;
+&lt;p&gt;This homework requires you to apply the concepts and skills developed in the class session on &lt;a href=&#34;../class/04-class/&#34;&gt;exploratory data anlsysis&lt;/a&gt;. Do complete the task and be sure to save your work as this homework will be submitted as part of your portfolio for Assignment 1.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;visualization-design-challenge&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Visualization design challenge&lt;/h2&gt;
+&lt;div class=&#34;figure&#34; style=&#34;text-align: left&#34;&gt;&lt;span id=&#34;fig:boxplots-class&#34;&gt;&lt;/span&gt;
+&lt;img src=&#34;../class/04-class_files/boxplot-by-class.png&#34; alt=&#34;Boxplots of casualty age by vehicle type and class.&#34; width=&#34;100%&#34; /&gt;
+&lt;p class=&#34;caption&#34;&gt;
+Figure 1: Boxplots of casualty age by vehicle type and class.
+&lt;/p&gt;
+&lt;/div&gt;
+&lt;p&gt;This week’s homework is a single visualization design task. Please do not spend too long on this. The aim of is to get you thinking a little about the concepts introduced in the session rather than to overly burden you with additional work.&lt;/p&gt;
+&lt;p&gt;In the session we discussed visual approaches to summarising within-variable variation in a dataset and later the use of layout and colour for supporting &lt;em&gt;comparison&lt;/em&gt; across categories. In Figure &lt;a href=&#34;#fig:boxplots-class&#34;&gt;1&lt;/a&gt; above, boxplots are used to summarise the age distribution of those involved in pedestrian road crashes, comparing the ages of the injured pedestrians, drivers and how this varies by the vehicle types involved.&lt;/p&gt;
+&lt;p&gt;Your task is to generate a &lt;em&gt;single&lt;/em&gt; data graphic (I would class Figure &lt;a href=&#34;#fig:boxplots-class&#34;&gt;1&lt;/a&gt; as a single graphic) to summarise how casualty age varies by some other interesting combination of categorical variable. For example, you may wish to explore how casualty age varies by injury severity.&lt;/p&gt;
+&lt;p&gt;Once you have generated the graphic, save it as a &lt;code&gt;.png&lt;/code&gt; file and insert a link to it in the associated code block in the &lt;a href=&#34;../homework/04-homework_files/04-template.Rmd&#34;&gt;&lt;i class=&#34;fab fa-r-project&#34;&gt;&lt;/i&gt; 04-template.Rmd&lt;/a&gt;. Next, complete the table that asks you to describe your graphic according to its visual encoding. You may also wish to note how &lt;em&gt;comparison&lt;/em&gt; is being enable – via juxtaposition, superposition and/or direct encoding &lt;span class=&#34;citation&#34;&gt;(Gleicher and Roberts &lt;a href=&#34;#ref-gleicher_visual_2011&#34; role=&#34;doc-biblioref&#34;&gt;2011&lt;/a&gt;)&lt;/span&gt;.&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;#######################
+# Enter your code in the chunk provided.
+######################&lt;/code&gt;&lt;/pre&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr class=&#34;header&#34;&gt;
+&lt;th&gt;Data item&lt;/th&gt;
+&lt;th&gt;Measurement level&lt;/th&gt;
+&lt;th&gt;Visual mark&lt;/th&gt;
+&lt;th&gt;Visual channel&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr class=&#34;odd&#34;&gt;
+&lt;td&gt;&lt;code&gt;location&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;&lt;enter here&gt;&lt;/td&gt;
+&lt;td&gt;&lt;enter here&gt;&lt;/td&gt;
+&lt;td&gt;&lt;enter here&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr class=&#34;even&#34;&gt;
+&lt;td&gt;&lt;code&gt;...&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;...&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;...&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;...&lt;/code&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr class=&#34;odd&#34;&gt;
+&lt;td&gt;&lt;code&gt;...&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;...&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;...&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;...&lt;/code&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr class=&#34;even&#34;&gt;
+&lt;td&gt;&lt;code&gt;...&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;...&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;...&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;...&lt;/code&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr class=&#34;odd&#34;&gt;
+&lt;td&gt;&lt;code&gt;...&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;...&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;...&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;...&lt;/code&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr class=&#34;even&#34;&gt;
+&lt;td&gt;&lt;code&gt;...&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;...&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;...&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;...&lt;/code&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;/div&gt;
+&lt;div id=&#34;references&#34; class=&#34;section level2 unnumbered&#34;&gt;
+&lt;h2&gt;References&lt;/h2&gt;
+&lt;div id=&#34;refs&#34; class=&#34;references&#34;&gt;
+&lt;div id=&#34;ref-gleicher_visual_2011&#34;&gt;
+&lt;p&gt;Gleicher, Albers, M., and J. Roberts. 2011. “Visual Comparison for Information Visualization. Information Visualization.” &lt;em&gt;Information Visualization&lt;/em&gt; 10 (4): 289–309.&lt;/p&gt;
+&lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 </description>

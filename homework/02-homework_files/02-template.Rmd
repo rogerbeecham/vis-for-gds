@@ -24,7 +24,7 @@ library(lubridate) # Work with dates
 library(here) # For navigating project directory
 library(piggyback) # For download of large files from a git repository.
 # install.packages("geosphere") # Uncomment to install.
-# devtools::install_github("ropensci/bikedata") # API to TfL's trip data. Uncomment to run.
+# remotes::install_github("ropensci/bikedata") # API to TfL's trip data. Uncomment to run.
 library(bikedata)
 
 # install.packages(DBI) # Uncomment to install.
