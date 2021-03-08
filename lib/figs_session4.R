@@ -2589,7 +2589,9 @@ plot_dist <- demog_distances %>%
   theme_v_gds() +
   labs(x="IMD quintile of casualty", y="IMD quintile of driver", subtitle="Demographic distance") +
   theme(axis.text.x=element_blank(), axis.text.y = element_blank(), 
-        axis.title.x = element_blank(), axis.title.y = element_blank()) +
+        axis.title.x = element_blank(), axis.title.y = element_blank())
+
++
   coord_equal()
 
 plot <- plot_dist + plot_annotation(title="IMD quintile of homeplace of pedestrian and driver, grouped by IMD class of crash location",
