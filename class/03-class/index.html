@@ -692,7 +692,7 @@
 
       
       <li >
-        <a href="../../class/05-class/">5: Visualization for exploratory geospatial data analysis</a>
+        <a href="../../class/05-class/">5: Visualization for exploring spatial networks</a>
       </li>
 
       
@@ -1662,7 +1662,7 @@ data_gb %&gt;%
   # Optionally add a layer for regional boundaries.
   # geom_sf(data=. %&gt;% group_by(region) %&gt;% summarise(), colour=&quot;#eeeeee&quot;, fill=&quot;transparent&quot;, size=0.08)+
   coord_sf(crs=27700, datum=NA) +
-  scale_fill_manual(values=party_colours) </code></pre>
+  scale_fill_manual(values=party_colours)</code></pre>
 <p>A breakdown of the <code>ggplot2</code> spec:</p>
 <ol style="list-style-type: decimal">
 <li><strong>Data</strong>: The <code>dplyr</code> code updates <code>data_gb</code> by recoding <code>winner_19</code> as a factor and defining a named vector of colours to supply to <code>scale_fill_manual()</code>.</li>

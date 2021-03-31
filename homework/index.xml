@@ -321,6 +321,7 @@
 &lt;li&gt;&lt;a href=&#34;#scatterplots-with-multiple-encodings&#34;&gt;Scatterplots with multiple encodings&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;#task-3-create-a-map&#34;&gt;Task 3: Create a map&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#references&#34;&gt;References&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/div&gt;
 
@@ -452,6 +453,9 @@ Figure 3: Plots of 2019 versus 2017 vote shares.
 Figure 4: Map of 2016 EU Referendum vote, estimated by Parliamentary Constituency in GB.
 &lt;/p&gt;
 &lt;/div&gt;
+&lt;/div&gt;
+&lt;div id=&#34;references&#34; class=&#34;section level2 unnumbered&#34;&gt;
+&lt;h2&gt;References&lt;/h2&gt;
 &lt;div id=&#34;refs&#34; class=&#34;references&#34;&gt;
 &lt;div id=&#34;ref-munzner_visualization_2014&#34;&gt;
 &lt;p&gt;Munzner, Tamara. 2014. &lt;em&gt;Visualization Analysis and Design&lt;/em&gt;. AK Peters Visualization Series. Boca Raton, FL: CRC Press.&lt;/p&gt;
@@ -572,6 +576,111 @@ Figure 1: Boxplots of casualty age by vehicle type and class.
 &lt;div id=&#34;refs&#34; class=&#34;references&#34;&gt;
 &lt;div id=&#34;ref-gleicher_visual_2011&#34;&gt;
 &lt;p&gt;Gleicher, Albers, M., and J. Roberts. 2011. “Visual Comparison for Information Visualization. Information Visualization.” &lt;em&gt;Information Visualization&lt;/em&gt; 10 (4): 289–309.&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Exploring spatial networks</title>
+      <link>/homework/05-homework/</link>
+      <pubDate>Tue, 01 Jun 2021 00:00:00 +0000</pubDate>
+      <guid>/homework/05-homework/</guid>
+      <description>
+&lt;!-- BLOGDOWN-HEAD --&gt;
+&lt;link href=&#34;../rmarkdown-libs/anchor-sections/anchor-sections.css&#34; rel=&#34;stylesheet&#34; /&gt;
+&lt;script src=&#34;../rmarkdown-libs/anchor-sections/anchor-sections.js&#34;&gt;&lt;/script&gt;
+&lt;!-- /BLOGDOWN-HEAD --&gt;
+
+&lt;h2&gt;Contents&lt;/h2&gt;
+&lt;div id=&#34;TOC&#34;&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#session-outcomes&#34;&gt;Session Outcomes&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#introduction&#34;&gt;Introduction&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#visualization-interpretation-challenge&#34;&gt;Visualization interpretation challenge&lt;/a&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#task-1-read&#34;&gt;Task 1: Read&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#task-2-interpret&#34;&gt;Task 2: Interpret&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#references&#34;&gt;References&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+
+&lt;div id=&#34;session-outcomes&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Session Outcomes&lt;/h2&gt;
+&lt;p&gt;By the end of this homework session you should be able to:&lt;/p&gt;
+&lt;p&gt;
+
+&lt;div class=&#34;alert alert-objective&#34;&gt;
+  &lt;div&gt;
+    &lt;ul&gt;
+&lt;li&gt;&lt;input checked=&#34;&#34; disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; &lt;/li&gt;
+&lt;li&gt;&lt;input checked=&#34;&#34; disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; &lt;/li&gt;
+&lt;li&gt;&lt;input checked=&#34;&#34; disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; &lt;/li&gt;
+&lt;/ul&gt;
+
+  &lt;/div&gt;
+&lt;/div&gt;
+&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;introduction&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Introduction&lt;/h2&gt;
+&lt;p&gt;This homework requires you to apply the concepts and skills developed in the class session on &lt;a href=&#34;../class/05-class/&#34;&gt;exploring spatial networks&lt;/a&gt;. Do complete the task and be sure to save your work as it will be submitted as part of your portfolio for Assignment 1.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;visualization-interpretation-challenge&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Visualization interpretation challenge&lt;/h2&gt;
+&lt;p&gt;You may be pleased to know that this week’s homework does not require you to write a single line of code. Instead, it is designed to get you reading and interpreting data graphics. &lt;a href=&#34;https://xeno.graphics/od-map/&#34;&gt;OD Maps&lt;/a&gt; are a good candidate here as they have been catalogued by &lt;a href=&#34;https://www.maartenlambrechts.com&#34;&gt;Marteen Lambrechts&lt;/a&gt; as a Xenographic – &lt;em&gt;Weird but (sometime) useful&lt;/em&gt;. I’d add that within the list of other &lt;a href=&#34;https://xeno.graphics&#34;&gt;Xenographics&lt;/a&gt;, OD Maps are &lt;em&gt;Not that weird and often useful&lt;/em&gt;. Nevertheless, they do take some interpretation.&lt;/p&gt;
+&lt;div class=&#34;figure&#34; style=&#34;text-align: left&#34;&gt;&lt;span id=&#34;fig:mode-analysis-od-map&#34;&gt;&lt;/span&gt;
+&lt;img src=&#34;../class/05-class_files/od-maps-mode-homework.png&#34; alt=&#34;OD map of commutes between London boroughs&#34; width=&#34;90%&#34; /&gt;
+&lt;p class=&#34;caption&#34;&gt;
+Figure 1: OD map of commutes between London boroughs
+&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;task-1-read&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Task 1: Read&lt;/h3&gt;
+&lt;p&gt;For a clear explanation of OD maps and interesting application, read &lt;span class=&#34;citation&#34;&gt;Slingsby, Kelly, and Dykes (&lt;a href=&#34;#ref-slingsby_od_2014&#34; role=&#34;doc-biblioref&#34;&gt;2014&lt;/a&gt;)&lt;/span&gt;’s very short paper: &lt;a href=&#34;https://openaccess.city.ac.uk/id/eprint/8483/&#34;&gt;&lt;em&gt;OD maps for showing changes in Irish female migration between 1851 and 1911&lt;/em&gt;&lt;/a&gt;.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;task-2-interpret&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Task 2: Interpret&lt;/h3&gt;
+&lt;p&gt;Considering the OD maps in Figure &lt;a href=&#34;#fig:mode-analysis-od-map&#34;&gt;1&lt;/a&gt;, try to answer the following tasks. Write your answers in the &lt;a href=&#34;../homework/04-homework_files/05-template.Rmd&#34;&gt;&lt;i class=&#34;fab fa-r-project&#34;&gt;&lt;/i&gt; 05-template.Rmd&lt;/a&gt; file.&lt;/p&gt;
+&lt;div id=&#34;look-up-tasks&#34; class=&#34;section level4&#34;&gt;
+&lt;h4&gt;Look-up tasks&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;For jobs filled in the City of London (CTY), from which borough does largest number of workers commute using public transport?
+&lt;ul&gt;
+&lt;li&gt;&lt;em&gt;Enter your answer in the template&lt;/em&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;Which borough in London has the largest &lt;em&gt;absolute&lt;/em&gt; number living and working in that borough (and travelling to work by public transport)?&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;Enter your answer in the template&lt;/em&gt;&lt;/li&gt;
+&lt;li&gt;For workers living in Barnet (BRN), what are the top 3 boroughs to which they commute?&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;Enter your answer in the template&lt;/em&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div id=&#34;insights&#34; class=&#34;section level4&#34;&gt;
+&lt;h4&gt;Insights&lt;/h4&gt;
+&lt;p&gt;Identify three isights that can be made around the geography of commuting patterns in London from reading any/each of the graphics in Figure &lt;a href=&#34;#fig:mode-analysis-od-map&#34;&gt;1&lt;/a&gt;. Briefly identify which graphic(s) led to the insight and how. Please do not spend too long over this activity – the idea is to encourage you to make inferences from graphics, as you will do in your coursework.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Insight 1
+&lt;ul&gt;
+&lt;li&gt;&lt;em&gt;Enter your answer in the template&lt;/em&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;Insight 2
+&lt;ul&gt;
+&lt;li&gt;&lt;em&gt;Enter your answer in the template&lt;/em&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;Insight 3
+&lt;ul&gt;
+&lt;li&gt;&lt;em&gt;Enter your answer in the template&lt;/em&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div id=&#34;references&#34; class=&#34;section level2 unnumbered&#34;&gt;
+&lt;h2&gt;References&lt;/h2&gt;
+&lt;div id=&#34;refs&#34; class=&#34;references&#34;&gt;
+&lt;div id=&#34;ref-slingsby_od_2014&#34;&gt;
+&lt;p&gt;Slingsby, A., M. Kelly, and J. Dykes. 2014. “OD maps for showing changes inIrish female migration between 1851 and 1911.” &lt;em&gt;Environment and Planning A: Economy and Space&lt;/em&gt; 46 (12): 2795–7.&lt;/p&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;

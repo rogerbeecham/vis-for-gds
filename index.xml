@@ -63,6 +63,7 @@
 
 &lt;div id=&#34;concepts&#34; class=&#34;section level2&#34;&gt;
 &lt;h2&gt;Concepts&lt;/h2&gt;
+&lt;p&gt;Reading : &lt;a href=&#34;https://www.tandfonline.com/doi/full/10.1080/00087041.2019.1633103?src=recsys&#34; class=&#34;uri&#34;&gt;https://www.tandfonline.com/doi/full/10.1080/00087041.2019.1633103?src=recsys&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;Introducing this :&lt;/p&gt;
 &lt;ol style=&#34;list-style-type: decimal&#34;&gt;
 &lt;li&gt;That in academic visualization there has been a realisation of role of storytelling in visualization. Not a single, optimum solution to any visualization problem that expose the true picture/story – no such formulation exists.&lt;/li&gt;
@@ -143,12 +144,16 @@ Trump analysis : &lt;a href=&#34;https://walker-data.com/tidycensus/&#34; class=
 &lt;p&gt;Why models and not graphics
 * Can reveal patterns that not evident in graphics – in regression framework we can &lt;em&gt;condition&lt;/em&gt; on explanatory variables and talk about the effect of single variables net of others.
 * Deal with uncertainty and false discovery – we infer/overinterpet from scatterplots&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://wilkelab.org/SDS375/&#34; class=&#34;uri&#34;&gt;https://wilkelab.org/SDS375/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://mjskay.github.io/ggdist/articles/freq-uncertainty-vis.html&#34; class=&#34;uri&#34;&gt;https://mjskay.github.io/ggdist/articles/freq-uncertainty-vis.html&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
 &lt;p&gt;Use tidymodels : &lt;a href=&#34;https://cfss.uchicago.edu/notes/start-with-models/&#34; class=&#34;uri&#34;&gt;https://cfss.uchicago.edu/notes/start-with-models/&lt;/a&gt;&lt;/p&gt;
 </description>
     </item>
     
     <item>
-      <title>Visualization for exploratory geospatial data analysis: Containment and connection</title>
+      <title>Visualization for exploring spatial networks: Containment and connection</title>
       <link>/class/05-class/</link>
       <pubDate>Tue, 08 Jun 2021 00:00:00 +0000</pubDate>
       <guid>/class/05-class/</guid>
@@ -156,25 +161,917 @@ Trump analysis : &lt;a href=&#34;https://walker-data.com/tidycensus/&#34; class=
 &lt;!-- BLOGDOWN-HEAD --&gt;
 &lt;link href=&#34;./rmarkdown-libs/anchor-sections/anchor-sections.css&#34; rel=&#34;stylesheet&#34; /&gt;
 &lt;script src=&#34;./rmarkdown-libs/anchor-sections/anchor-sections.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;./rmarkdown-libs/kePrint/kePrint.js&#34;&gt;&lt;/script&gt;
+&lt;link href=&#34;./rmarkdown-libs/lightable/lightable.css&#34; rel=&#34;stylesheet&#34; /&gt;
 &lt;!-- /BLOGDOWN-HEAD --&gt;
 
+&lt;h2&gt;Contents&lt;/h2&gt;
+&lt;div id=&#34;TOC&#34;&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#introduction&#34;&gt;Introduction&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#concepts&#34;&gt;Concepts&lt;/a&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#network-data-nodes-and-edges&#34;&gt;Network data: nodes and edges&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#node-link-representations&#34;&gt;Node-link representations&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#matrix-representations&#34;&gt;Matrix representations&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#od-maps&#34;&gt;OD maps&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#techniques&#34;&gt;Techniques&lt;/a&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#import&#34;&gt;Import&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#analyse-over-nodes&#34;&gt;Analyse over nodes&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#analyse-over-edges&#34;&gt;Analyse over edges&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#references&#34;&gt;References&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
 
-&lt;p&gt;Title : Visualization for exploring spatial networks: Containment and connection&lt;/p&gt;
-&lt;p&gt;Intro :
-&lt;a href=&#34;https://ggplot2-book.org/networks.html&#34; class=&#34;uri&#34;&gt;https://ggplot2-book.org/networks.html&lt;/a&gt;
-Networks – different data structure and have their own visualization and statistical analysis paradigms (graphs).
-Networks – lend themselves to visual analysis approaches
-Networks/graphs – consist of nodes and edges (or links), which can have directions. In geospatial analysis origin-destination data where each OD pair is a &lt;em&gt;directed edge&lt;/em&gt;
-Network data – is challenging to represent in a flat data frame. As we will analyse OD flow data we will work only with edges which can be represented in a df.&lt;/p&gt;
-&lt;p&gt;OD Census Travel to work data …&lt;/p&gt;
-&lt;p&gt;&lt;a href=&#34;https://cran.r-project.org/web/packages/stplanr/vignettes/stplanr-od.html&#34; class=&#34;uri&#34;&gt;https://cran.r-project.org/web/packages/stplanr/vignettes/stplanr-od.html&lt;/a&gt;
-&lt;a href=&#34;https://ggplot2-book.org/networks.html&#34; class=&#34;uri&#34;&gt;https://ggplot2-book.org/networks.html&lt;/a&gt;
-&lt;a href=&#34;https://itsleeds.github.io/pct/reference/get_od.html&#34; class=&#34;uri&#34;&gt;https://itsleeds.github.io/pct/reference/get_od.html&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;Theory/content element – OD data and how to analyse it (blog post and OD vis paper)&lt;/p&gt;
-&lt;p&gt;Containment – geographically arranged small multiples
-Connection – lines
-Connection – OD maps
-Connection – bikes&lt;/p&gt;
+&lt;p&gt;By the end of this session you should gain the following &lt;strong&gt;&lt;em&gt;knowledge&lt;/em&gt;&lt;/strong&gt;:&lt;/p&gt;
+&lt;p&gt;
+
+&lt;div class=&#34;alert alert-objective&#34;&gt;
+  &lt;div&gt;
+    &lt;ul&gt;
+&lt;li&gt;&lt;input checked=&#34;&#34; disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; &lt;/li&gt;
+&lt;/ul&gt;
+
+  &lt;/div&gt;
+&lt;/div&gt;
+&lt;/p&gt;
+&lt;p&gt;By the end of this session you should gain the following &lt;strong&gt;&lt;em&gt;practical skills&lt;/em&gt;&lt;/strong&gt;:&lt;/p&gt;
+&lt;p&gt;
+
+&lt;div class=&#34;alert alert-objective&#34;&gt;
+  &lt;div&gt;
+    &lt;ul&gt;
+&lt;li&gt;&lt;input checked=&#34;&#34; disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; &lt;/li&gt;
+&lt;/ul&gt;
+
+  &lt;/div&gt;
+&lt;/div&gt;
+&lt;/p&gt;
+&lt;div id=&#34;introduction&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Introduction&lt;/h2&gt;
+&lt;p&gt;Networks are a special class of data used to represent things (entities) and how they relate to one another. Network data consist of two types of element: &lt;strong&gt;nodes&lt;/strong&gt;, the entities themselves, and &lt;strong&gt;edges&lt;/strong&gt;, the connections between nodes. Both nodes and edges can have additional information attached to them – counts, categories and directions. Network data are cumbersome to work with in R as they are not represented well by flat data frames. This is being improved by packages like &lt;a href=&#34;https://github.com/thomasp85/tidygraph&#34;&gt;tidygraph&lt;/a&gt;, but a common workflow is to split the data across two tables – one representing nodes and one representing edges &lt;span class=&#34;citation&#34;&gt;(Wickham, Navarro, and Pedersen &lt;a href=&#34;#ref-wickham_ggplot2_2020&#34; role=&#34;doc-biblioref&#34;&gt;2020&lt;/a&gt;)&lt;/span&gt;.&lt;/p&gt;
+&lt;p&gt;A category of network data used heavily in geospatial analysis is origin-destination (OD) data describing, for example, flows of bikes &lt;span class=&#34;citation&#34;&gt;(Beecham and Wood &lt;a href=&#34;#ref-beecham_exploring_2014&#34; role=&#34;doc-biblioref&#34;&gt;2014&lt;/a&gt;)&lt;/span&gt; and commuters &lt;span class=&#34;citation&#34;&gt;(Beecham and Slingsby &lt;a href=&#34;#ref-beecham_characterising_2019&#34; role=&#34;doc-biblioref&#34;&gt;2019&lt;/a&gt;)&lt;/span&gt; around a city, or &lt;a href=&#34;https://public.tableau.com/profile/robradburn#!/vizhome/LiquidCapital/VirtualWater&#34;&gt;water&lt;/a&gt; around a country. These data consist of &lt;strong&gt;nodes&lt;/strong&gt;, origin and destination locations, and &lt;strong&gt;edges&lt;/strong&gt;, flows linking those origins and destinations. Whilst statistics common to &lt;a href=&#34;https://en.wikipedia.org/wiki/Network_science&#34;&gt;Network Science&lt;/a&gt; can and have been deployed in the analysis of geospatial OD data, visualization techniques provide much assistance in exposing the types of complex structural patterns and relations that result from locating OD flow data within geographic context.&lt;/p&gt;
+&lt;p&gt;In this session we will work with an accessible and widely used origin-destination network dataset: 2011 Census travel-to-work data. This records counts of individuals commuting between locations (&lt;a href=&#34;https://www.ons.gov.uk/methodology/geography/ukgeographies/censusgeography#census-geography&#34;&gt;census geographies&lt;/a&gt;) of the UK by travel mode, occupation, sex and age.&lt;/p&gt;
+&lt;p&gt;
+
+&lt;div class=&#34;alert alert-instruction&#34;&gt;
+  &lt;div&gt;
+    &lt;/p&gt;
+&lt;p&gt;Read this &lt;a href=&#34;https://medium.com/@roger.beecham.231/upgrading-spatial-analysis-of-origin-destination-data-using-modern-vis-frameworks-part-1-of-2-ee1c6481a595&#34;&gt;short blog post&lt;/a&gt; describing some of the challenges of visually analysing OD data, and which introduces some of the techniques used in this session.&lt;/p&gt;
+&lt;p&gt;Next read this &lt;a href=&#34;https://threadreaderapp.com/thread/1138746147269468161.html?refreshed=yes#&#34;&gt;twitter thread&lt;/a&gt; demonstrating how these techniques can be depoyed in a data analysis.
+&lt;a href=&#34;https://threadreaderapp.com/thread/1138746147269468161.html?refreshed=yes#&#34;&gt;&lt;img src=&#34;./class/05-class_files/thread.png&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+&lt;/p&gt;
+&lt;p&gt;&lt;!-- Network data present numerous analysis challenges. They are structured in a way that is sometimes cumbersome to work with (at least in R); and
+* Geographical analysis of network data remains upport insights into the types of structure, patterns and relations necessary for spatial analysis is : e.g. judgements around the magnitude and distribution of large numbers of in-flows and out-flows, embedded within their geographic context. In such analysis scenarios visual analysis approaches become necessary.
+* In this session we&#39;ll demonstrate some of the challenges associated with spatially-referenced network data and how visualization approaches can be used to support their analysis.
+* We will do so through an analysis of origin-destination data describing travel-to-work in London in the 2011 Census
+
+
+
+&lt;!-- [Network Science](https://en.wikipedia.org/wiki/Network_science) is an academic discipline devoted to the study of networks, and which draws on Mathematics (graph theory), Physics and Computer Science to contribute a special set of data structures for representing network data and statistical procedures for summarising and making inferences over networks. --&gt;&lt;/p&gt;
+&lt;!-- https://ggplot2-book.org/networks.html --&gt;
+&lt;!-- https://cran.r-project.org/web/packages/stplanr/vignettes/stplanr-od.html --&gt;
+&lt;/div&gt;
+&lt;div id=&#34;concepts&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Concepts&lt;/h2&gt;
+&lt;div id=&#34;network-data-nodes-and-edges&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Network data: nodes and edges&lt;/h3&gt;
+&lt;p&gt;This class introduces techniques for visually representing networks and evaluates their usefulness through an analysis of 2011 Census OD travel-to-work data. We will focus on travel-to-work data in London – the &lt;strong&gt;nodes&lt;/strong&gt; in this dataset are London’s 33 boroughs and the &lt;strong&gt;edges&lt;/strong&gt; are directed OD pairs between these boroughs.&lt;/p&gt;
+&lt;table&gt;
+&lt;caption&gt;
+&lt;span id=&#34;tab:nodes-data&#34;&gt;Table 1: &lt;/span&gt;Nodes table: London Boroughs.
+&lt;/caption&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th style=&#34;text-align:left;&#34;&gt;
+borough
+&lt;/th&gt;
+&lt;th style=&#34;text-align:left;&#34;&gt;
+out
+&lt;/th&gt;
+&lt;th style=&#34;text-align:left;&#34;&gt;
+in
+&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+Barking and Dagenham
+&lt;/td&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+54237
+&lt;/td&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+33605
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+Barnet
+&lt;/td&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+117657
+&lt;/td&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+72024
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+Bexley
+&lt;/td&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+77263
+&lt;/td&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+39232
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+…
+&lt;/td&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+…
+&lt;/td&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+…
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;table&gt;
+&lt;caption&gt;
+&lt;span id=&#34;tab:edges-data&#34;&gt;Table 2: &lt;/span&gt;Edges table: OD pairs between London Boroughs.
+&lt;/caption&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th style=&#34;text-align:left;&#34;&gt;
+origin
+&lt;/th&gt;
+&lt;th style=&#34;text-align:left;&#34;&gt;
+destination
+&lt;/th&gt;
+&lt;th style=&#34;text-align:left;&#34;&gt;
+freq
+&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+Barking and Dagenham
+&lt;/td&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+Barking and Dagenham
+&lt;/td&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+14650
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+Barking and Dagenham
+&lt;/td&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+Barnet
+&lt;/td&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+280
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+Barking and Dagenham
+&lt;/td&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+Bexley
+&lt;/td&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+155
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+…
+&lt;/td&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+…
+&lt;/td&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+…
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;In Figure &lt;a href=&#34;#fig:flows-bor&#34;&gt;1&lt;/a&gt;, frequencies of flows into- and out-of London boroughs (the nodes) are represented. Note that job-rich boroughs in central London – Westminster, City of London, Camden, Tower Hamlets – contain many more &lt;em&gt;workers&lt;/em&gt; commuting-in for work than &lt;em&gt;residents&lt;/em&gt; commuting out for work.&lt;/p&gt;
+&lt;div class=&#34;figure&#34; style=&#34;text-align: left&#34;&gt;&lt;span id=&#34;fig:flows-bor&#34;&gt;&lt;/span&gt;
+&lt;img src=&#34;./class/05-class_files/flows-bor.png&#34; alt=&#34;Barchart of commutes in- and out- of London boroughs.&#34; width=&#34;80%&#34; /&gt;
+&lt;p class=&#34;caption&#34;&gt;
+Figure 1: Barchart of commutes in- and out- of London boroughs.
+&lt;/p&gt;
+&lt;/div&gt;
+&lt;p&gt;A map below (Figure &lt;a href=&#34;#fig:bor-geos&#34;&gt;2&lt;/a&gt;) to help read the abbreviated labels for London boroughs and the semi-spatial orderings used in this session.&lt;/p&gt;
+&lt;div class=&#34;figure&#34; style=&#34;text-align: left&#34;&gt;&lt;span id=&#34;fig:bor-geos&#34;&gt;&lt;/span&gt;
+&lt;img src=&#34;./class/05-class_files/geogs.png&#34; alt=&#34;Relaxed geospatial layout of London boroughs.&#34; width=&#34;100%&#34; /&gt;
+&lt;p class=&#34;caption&#34;&gt;
+Figure 2: Relaxed geospatial layout of London boroughs.
+&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div id=&#34;node-link-representations&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Node-link representations&lt;/h3&gt;
+&lt;!-- Standard data graphics -- bar charts, scatterplots etc. -- are often not sufficient for expressing the types of complex relations implied by network data. --&gt;
+&lt;p&gt;The most common examples of network visualization that we could use to represent the data in Tables &lt;a href=&#34;#tab:nodes-data&#34;&gt;1&lt;/a&gt; and &lt;a href=&#34;#tab:edges-data&#34;&gt;2&lt;/a&gt; are node-link representations. These depict graphs in two dimensions as a force-directed layout. Nodes are positioned such that those sharing greater connection – edges with greater weights (frequencies) – are closer than those that are less well-connected – that do not share edges with such large weights. Edges are drawn as lines &lt;em&gt;connecting&lt;/em&gt; nodes.&lt;/p&gt;
+&lt;p&gt;Figure &lt;a href=&#34;#fig:flows-bor&#34;&gt;1&lt;/a&gt; uses a force-directed layout to represent the travel-to-work data as such a network graph. This shows large numbers of flows between job rich boroughs (particular Westminster) and boroughs containing large resident populations: Wandsworth, Lambeth, Southwark (close to central London), Barnet, Brent, Haringey (further from central London). Note that although no geographic positioning is used, the layout suggests geographic dependency in the relations between nodes, and so the manner by which populations commute between boroughs for work. For example, Hillingdon (HDN), Hounslow (HNS) and Ealing (ELG) in the bottom left; Redbridge (RDB) and Walthamstow (WTH) in the bottom middle/right.&lt;/p&gt;
+&lt;div class=&#34;figure&#34; style=&#34;text-align: left&#34;&gt;&lt;span id=&#34;fig:node-link-bor&#34;&gt;&lt;/span&gt;
+&lt;img src=&#34;./class/05-class_files/node-link-bor.png&#34; alt=&#34;Node-link layout of commutes between London boroughs.&#34; width=&#34;90%&#34; /&gt;
+&lt;p class=&#34;caption&#34;&gt;
+Figure 3: Node-link layout of commutes between London boroughs.
+&lt;/p&gt;
+&lt;/div&gt;
+&lt;p&gt;
+
+&lt;div class=&#34;alert alert-note&#34;&gt;
+  &lt;div&gt;
+    You will have no doubt seen many node-link representations before. It is very easy to produce complex and beautiful-looking graphics using off-the-shelf node-link layouts and they are often evoked as “Data Visualization” branding. As always, it is necessary to think about the tasks that these visualizations support and their usefulness in advancing a data analysis. You might consider this as you browse the collection of network visualizations at &lt;a href=&#34;http://www.visualcomplexity.com/vc/&#34;&gt;visualcomplexity.com&lt;/a&gt;.
+  &lt;/div&gt;
+&lt;/div&gt;
+&lt;/p&gt;
+&lt;p&gt;If the aim is to compare relative frequencies of flows and &lt;em&gt;locate&lt;/em&gt; them in geographic context – to understand both the distribution and geography of travel-to-work in London, then we can make better use of &lt;em&gt;position&lt;/em&gt;. In Figure &lt;a href=&#34;#fig:lines-geog&#34;&gt;4&lt;/a&gt;, nodes (boroughs) are placed in their exact geographic position (geometric centroid of boroughs), and line width and transparency is used to encode flow frequency. In the plot on the bottom row, flow &lt;em&gt;direction&lt;/em&gt; is encoded by making flow lines asymmetric &lt;span class=&#34;citation&#34;&gt;(following Wood, Slingsby, and Dykes &lt;a href=&#34;#ref-wood_visualizing_2011&#34; role=&#34;doc-biblioref&#34;&gt;2011&lt;/a&gt;)&lt;/span&gt;: the straight ends are origins, the curved ends destinations.&lt;/p&gt;
+&lt;div class=&#34;figure&#34; style=&#34;text-align: left&#34;&gt;&lt;span id=&#34;fig:lines-geog&#34;&gt;&lt;/span&gt;
+&lt;img src=&#34;./class/05-class_files/lines-geog.png&#34; alt=&#34;Straight line showing commutes between London boroughs in spatial position; asymmetric lines encode direction.&#34; width=&#34;90%&#34; /&gt;
+&lt;p class=&#34;caption&#34;&gt;
+Figure 4: Straight line showing commutes between London boroughs in spatial position; asymmetric lines encode direction.
+&lt;/p&gt;
+&lt;/div&gt;
+&lt;p&gt;The geophraphic positioning of nodes adds context and the encoding of direction provides further detail around, for example, the pattern of commuting into central London boroughs versus more peripheral boroughs (asymmetric flows into Westminster, more symmetric pattern between outer London boroughs like Brent and Enfield). However, there are problems that affect the usefulness of the graphic:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Flows that start and end at the same location are not shown;&lt;/li&gt;
+&lt;li&gt;Longer flows are more visually dominant than are shorter flows;&lt;/li&gt;
+&lt;li&gt;The graphic is cluttered with a ‘hairball’ effect due to multiple overlapping lines;&lt;/li&gt;
+&lt;li&gt;Aggregating to the somewhat arbitrary geometric centre of boroughs and drawing lines between these locations implies an undue level of spatial precision.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div id=&#34;matrix-representations&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Matrix representations&lt;/h3&gt;
+&lt;p&gt;An alternative way to represent these edge frequencies is origin-destination matrices, as in Figure &lt;a href=&#34;#fig:matrices&#34;&gt;5&lt;/a&gt;. The columns are destinations, London boroughs to which residents commute for work; the rows are origins, London boroughs from which residents commute for work. Edge frequencies are encoded using colour value – the darker the colour, the larger the number of commutes between those boroughs. Boroughs are ordered left-to-right and top-to-bottom according to the total number of jobs accessed in each borough.&lt;/p&gt;
+&lt;p&gt;Whilst using colour rather than line width to show flow magnitude is a less effective encoding channel &lt;span class=&#34;citation&#34;&gt;(following Munzner &lt;a href=&#34;#ref-munzner_visualization_2014&#34; role=&#34;doc-biblioref&#34;&gt;2014&lt;/a&gt;)&lt;/span&gt;, there are obvious advantages. The salience bias of longer flows is removed. Ordering cells of the matrix by destination size (number of jobs accessed in each borough) helps to emphasise patterns in the job-rich boroughs, but also encourages &lt;em&gt;within&lt;/em&gt; and &lt;em&gt;between&lt;/em&gt; comparison. For example, the lack of colour outside of the diagonals in the less job-rich boroughs, which also tend to be in outer London, suggests that labour markets there might be more self-contained: that is, people are less likely to commute-in from outside of those boroughs for work. The layout also supports ‘look-up’ type tasks – for example in the top-right plot, where the same OD commutes are removed, we can efficiently identify the boroughs importing the second (WNS) and third (LAM) largest number of workers to Westminster. By applying a local scaling on destination (bottom plot), whereby a separate colour scale is created for each destination borough, we can explore the theme of &lt;em&gt;self-containment&lt;/em&gt; more directly. The vertical blue bars for Hammersmith and Kingston suggest that there are comparatively large numbers commuting into- these boroughs for work, especially given their size in terms of available jobs.&lt;/p&gt;
+&lt;div class=&#34;figure&#34; style=&#34;text-align: left&#34;&gt;&lt;span id=&#34;fig:matrices&#34;&gt;&lt;/span&gt;
+&lt;img src=&#34;./class/05-class_files/matrices.png&#34; alt=&#34;OD matrices showing commutes between London boroughs.&#34; width=&#34;100%&#34; /&gt;
+&lt;p class=&#34;caption&#34;&gt;
+Figure 5: OD matrices showing commutes between London boroughs.
+&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div id=&#34;od-maps&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;OD maps&lt;/h3&gt;
+&lt;p&gt;The OD matrices expose new structure that could not be so easily inferred from the (more flashy) network visualizations. Although their layout is space-efficient, clearly for phenomena such as commuting &lt;strong&gt;geographic context&lt;/strong&gt; is highly relevant. It is possible to make better use of layout and position to support the spatial dimension of analysis. &lt;a href=&#34;https://xeno.graphics/od-map/&#34;&gt;OD Maps&lt;/a&gt; were proposed by &lt;span class=&#34;citation&#34;&gt;Wood, Dykes, and Slingsby (&lt;a href=&#34;#ref-wood_visualisation_2010&#34; role=&#34;doc-biblioref&#34;&gt;2010&lt;/a&gt;)&lt;/span&gt; as a means of supporting such an analysis. They take a little to get your head around, but the idea is very elegant.&lt;/p&gt;
+&lt;p&gt;You will recall that we previously used the &lt;a href=&#34;https://github.com/aftertheflood/londonsquared&#34;&gt;LondondSquared&lt;/a&gt; grid layout, also in Figure &lt;a href=&#34;#fig:bor-geos&#34;&gt;2&lt;/a&gt;, for arranging London boroughs of regular size and shape. The cells of each column or row of the matrix could also be &lt;strong&gt;re-ordered&lt;/strong&gt; according to this geographic layout, as in Figure &lt;a href=&#34;#fig:reordered-matrix&#34;&gt;6&lt;/a&gt;. So, for example, we may be interested in focussing on &lt;strong&gt;destination&lt;/strong&gt;, or workplace, boroughs. In the first highlighted example, commutes into Westminster are considered (the left-most column). Cells in the highlighted column are coloured according to the number of workers resident in each borough that travel into Westminster for work. These cells are then &lt;strong&gt;re-ordered&lt;/strong&gt; spatially, as in the inset map for Westminster in the figure. The geographic ordering allows us to see that residents access jobs in Westminster in large numbers from many boroughs in London, but especially so from Wandsworth, Lambeth and Southwark immediately to the south of Westminster (see real geography in Figure &lt;a href=&#34;#fig:bor-geos&#34;&gt;2&lt;/a&gt;). In the second example, commutes out of Hackney are considered (the middle row). Cells in the highlighted row are coloured according to the number of jobs accessed in each borough by residents travelling out of Hackney for work. Cells are again reordered in the inset map. This demonstrates that patterns of commuting are reasonably localised. The modal destination/workplace borough remains Westminster, but relatively large numbers of jobs are accessed in Camden, Islington, Tower Hamlets and the City of London.&lt;/p&gt;
+&lt;div class=&#34;figure&#34; style=&#34;text-align: left&#34;&gt;&lt;span id=&#34;fig:reordered-matrix&#34;&gt;&lt;/span&gt;
+&lt;img src=&#34;./class/05-class_files/reordered-matrix.png&#34; alt=&#34;Highlighted columns (destinations/workplaces) and rows (origins/homeplaces) of the OD matrix with a spatial arrangement.&#34; width=&#34;100%&#34; /&gt;
+&lt;p class=&#34;caption&#34;&gt;
+Figure 6: Highlighted columns (destinations/workplaces) and rows (origins/homeplaces) of the OD matrix with a spatial arrangement.
+&lt;/p&gt;
+&lt;/div&gt;
+&lt;p&gt;OD maps extend this idea by displaying &lt;strong&gt;all cells&lt;/strong&gt; of the OD matrix with a geographic arrangement. This is achieved via a “map-within-map” layout. In the destination-focussed example in Figure &lt;a href=&#34;#fig:od-map-layout&#34;&gt;7&lt;/a&gt;, each larger (reference) cell identifies destinations and the smaller cells are coloured according to origins – the number of residents in each borough commuting into the reference cell for work.&lt;/p&gt;
+&lt;div class=&#34;figure&#34; style=&#34;text-align: left&#34;&gt;&lt;span id=&#34;fig:od-map-layout&#34;&gt;&lt;/span&gt;
+&lt;img src=&#34;./class/05-class_files/d-od-map.png&#34; alt=&#34;Destination-focussed OD map of commutes between London boroughs&#34; width=&#34;100%&#34; /&gt;
+&lt;p class=&#34;caption&#34;&gt;
+Figure 7: Destination-focussed OD map of commutes between London boroughs
+&lt;/p&gt;
+&lt;/div&gt;
+&lt;p&gt;The first map uses a &lt;strong&gt;global&lt;/strong&gt; colour scaling and the second a &lt;strong&gt;local&lt;/strong&gt; colour scaling. Ordering cells geographically helps better appreciate this distinction. As demonstrated in Figure &lt;a href=&#34;#fig:flows-bor&#34;&gt;1&lt;/a&gt;, Westminster contains a large portion of jobs filled by London residents. It makes sense then that, outside of the reference cells (residents living and working in the same borough), the darkest colours corresponding with the largest flow counts are in the map where Westminster is the reference cell. Due to this dominant pattern, however, it is difficult to read too much into the patterns of commuting outside of Westminster. This is where a local scaling is useful. Flow counts are summarised over each reference borough (destination in this case) and each is normalised according to the &lt;em&gt;maximum&lt;/em&gt; flow count for that reference borough. Most often this maximum flow count (darkest blue) is the reference cell – residents living and working in the same borough. The City of London, which contains many jobs but few residents, is the obvious exception.&lt;/p&gt;
+&lt;p&gt;The local scaling allows us to characterise the geography of commuting into boroughs in reasonable detail. The two job-rich boroughs – Westminster and City of London – clearly draw workers in large proportions across London boroughs and to a lesser extent this is the case for other central/inner boroughs such as Islington (ISL), Camden (CMD), Kingston (KNS). For many outer London boroughs, commuting patterns are very localised – large numbers of available jobs are filled by workers living in those boroughs or immediately neighbouring boroughs. Notice that for inner London boroughs south of the river – Lambeth (LAM), Wandsworth (WNS), Southwark (SWR) – they tend to draw workers in greater number from neighbouring boroughs that are also south of the river. There is more to unpack here. In the &lt;a href=&#34;#techniques-1&#34;&gt;Technical&lt;/a&gt; element to the class and &lt;a href=&#34;./homework/05-homework/&#34;&gt;Homework&lt;/a&gt; you will consider how this geography of travel-to-work varies by travel mode.&lt;/p&gt;
+&lt;p&gt;
+
+&lt;div class=&#34;alert alert-note&#34;&gt;
+  &lt;div&gt;
+    &lt;p&gt;The analysis above might give the impression that OD maps should be used in preference of spatially arranged node-link diagrams. As always, this depends on dataset and analysis context. In Figure &lt;a href=&#34;#fig:flow-bikes&#34;&gt;8&lt;/a&gt; is a map displaying bikeshare flow data for the London Cycle Hire Scheme (LCHS), collected via the &lt;a href=&#34;https://docs.ropensci.org/bikedata/&#34;&gt;bikedata&lt;/a&gt; package. The LCHS consists of c.700 docking stations in London – so c. 700^2 grid cells if the grid-within-grid layout of an OD map were to be used. This would be quite challengin, although is possible &lt;span class=&#34;citation&#34;&gt;(see Wood, Slingsby, and Dykes &lt;a href=&#34;#ref-wood_visualizing_2011&#34; role=&#34;doc-biblioref&#34;&gt;2011&lt;/a&gt;)&lt;/span&gt;. Additionally, if a synoptic overview of spatial patterns is necessary, the more intuitive node-line representation is more successful than the OD map. In the graphic below, I’ve filtered on trips that take place in the morning peak. The dominant pattern is of flows from London’s main commuter rail terminals – King’s Cross and Waterloo – to central London and City of London respectively. The asymmetric bezier curves efficiently communicate this and the reverse pattern when trips in the evening peak are filtered.&lt;/p&gt;&lt;/p&gt;
+&lt;div class=&#34;figure&#34; style=&#34;text-align: left&#34;&gt;&lt;span id=&#34;fig:flow-bikes&#34;&gt;&lt;/span&gt;
+&lt;img src=&#34;./class/05-class_files/flow-vis-gds.png&#34; alt=&#34;Flow map of London Cycle Hire Scheme trips in the weakday morning peak. Data by TfL, accessed via [bikedata](https://docs.ropensci.org/bikedata/); parks and river outline via [OSM](https://www.openstreetmap.org/).&#34; width=&#34;100%&#34; /&gt;
+&lt;p class=&#34;caption&#34;&gt;
+Figure 8: Flow map of London Cycle Hire Scheme trips in the weakday morning peak. Data by TfL, accessed via &lt;a href=&#34;https://docs.ropensci.org/bikedata/&#34;&gt;bikedata&lt;/a&gt;; parks and river outline via &lt;a href=&#34;https://www.openstreetmap.org/&#34;&gt;OSM&lt;/a&gt;.
+&lt;/p&gt;
+&lt;/div&gt;
+&lt;p&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div id=&#34;techniques&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Techniques&lt;/h2&gt;
+&lt;p&gt;The technical element to this session continues in our analysis of 2011 Census travel-to-work data. After importing the dataset, you will organise the flow data into nodes and edges. You will then create graphics that summarise over the nodes (London boroughs in this case) and reveal spatial structure in the edges (OD flows between boroughs). You will focus on how the geography of travel-to-work varies by travel mode.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Download the &lt;a href=&#34;./homework/05-homework_files/05-template.Rmd&#34;&gt;&lt;i class=&#34;fab fa-r-project&#34;&gt;&lt;/i&gt; 05-template.Rmd&lt;/a&gt; file for this session and save it to the &lt;code&gt;reports&lt;/code&gt; folder of your &lt;code&gt;vis-for-gds&lt;/code&gt; project.&lt;/li&gt;
+&lt;li&gt;Open your &lt;code&gt;vis-for-gds&lt;/code&gt; project in RStudio and load the template file by clicking &lt;code&gt;File&lt;/code&gt; &amp;gt; &lt;code&gt;Open File ...&lt;/code&gt; &amp;gt; &lt;code&gt;reports/05-template.Rmd&lt;/code&gt;.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div id=&#34;import&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Import&lt;/h3&gt;
+&lt;p&gt;The template file lists the required packages: &lt;code&gt;tidyverse&lt;/code&gt;, &lt;code&gt;sf&lt;/code&gt; and also the &lt;a href=&#34;https://itsleeds.github.io/pct/&#34;&gt;&lt;code&gt;pct&lt;/code&gt;&lt;/a&gt; package for downloading the 2011 Census travel-to-work data.&lt;/p&gt;
+&lt;p&gt;Using &lt;code&gt;pct&lt;/code&gt;’s &lt;a href=&#34;https://itsleeds.github.io/pct/reference/get_od.html&#34;&gt;get_od&lt;/a&gt; function, a &lt;code&gt;.csv&lt;/code&gt; file of travel-to-work data between Middle-Layer &lt;a href=&#34;https://www.ons.gov.uk/methodology/geography/ukgeographies/censusgeography#super-output-area-soa&#34;&gt;Super Output Areas&lt;/a&gt; (MSOA) can be dowloaded. The default dataset is &lt;a href=&#34;https://www.statistics.digitalresources.jisc.ac.uk/dataset/wu03uk-2011-sms-merged-lala-location-usual-residence-and-place-work-method-travel-work-6&#34;&gt;WU03UK&lt;/a&gt;, &lt;em&gt;location of usual residence and place of work by method of travel to work&lt;/em&gt;. When downloading, you will limit to London using the &lt;code&gt;region&lt;/code&gt; argument in &lt;code&gt;get_od&lt;/code&gt;. This will take a few seconds to execute.&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;# Import OD by travel mode from 2011 Census.
+od_pairs &amp;lt;- get_od(
+  region = &amp;quot;london&amp;quot;,
+  type = &amp;quot;within&amp;quot;,
+  omit_intrazonal = FALSE,
+  base_url = paste0(&amp;quot;https://s3-eu-west-1.amazonaws.com/&amp;quot;,
+                    &amp;quot;statistics.digitalresources.jisc.ac.uk&amp;quot;, &amp;quot;/dkan/files/FLOW/&amp;quot;),
+  filename = &amp;quot;wu03ew_v2&amp;quot;
+)
+
+# Import .geojson file with geometry data for LondonSquared and real layout of London boroughs.
+london_grid_real &amp;lt;- st_read(&amp;quot;https://www.roger-beecham.com/datasets/london_grid_real.geojson&amp;quot;)&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;The downloaded data have the following structure:&lt;/p&gt;
+&lt;table&gt;
+&lt;caption&gt;
+&lt;span id=&#34;tab:od-raw&#34;&gt;Table 3: &lt;/span&gt;Raw OD pairs retrieved from &lt;code&gt;get_od()&lt;/code&gt;.
+&lt;/caption&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th style=&#34;text-align:left;&#34;&gt;
+geo_code1
+&lt;/th&gt;
+&lt;th style=&#34;text-align:left;&#34;&gt;
+geo_code2
+&lt;/th&gt;
+&lt;th style=&#34;text-align:left;&#34;&gt;
+all
+&lt;/th&gt;
+&lt;th style=&#34;text-align:left;&#34;&gt;
+train
+&lt;/th&gt;
+&lt;th style=&#34;text-align:left;&#34;&gt;
+bus
+&lt;/th&gt;
+&lt;th style=&#34;text-align:left;&#34;&gt;
+…cont
+&lt;/th&gt;
+&lt;th style=&#34;text-align:left;&#34;&gt;
+la_1
+&lt;/th&gt;
+&lt;th style=&#34;text-align:left;&#34;&gt;
+la_2
+&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+EO2000001
+&lt;/td&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+EO2000014
+&lt;/td&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+3
+&lt;/td&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+1
+&lt;/td&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+0
+&lt;/td&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+…
+&lt;/td&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+City of London
+&lt;/td&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+City of London
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+EO2000001
+&lt;/td&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+EO2000016
+&lt;/td&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+1
+&lt;/td&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+0
+&lt;/td&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+1
+&lt;/td&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+…
+&lt;/td&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+City of London
+&lt;/td&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+Barking and Dagenham
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+…
+&lt;/td&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+…
+&lt;/td&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+…
+&lt;/td&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+…
+&lt;/td&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+…
+&lt;/td&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+…
+&lt;/td&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+…
+&lt;/td&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+…
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left;font-style: italic;&#34;&gt;
+origin msoa
+&lt;/td&gt;
+&lt;td style=&#34;text-align:left;font-style: italic;&#34;&gt;
+dest msoa
+&lt;/td&gt;
+&lt;td style=&#34;text-align:left;font-style: italic;&#34;&gt;
+count
+&lt;/td&gt;
+&lt;td style=&#34;text-align:left;font-style: italic;&#34;&gt;
+count
+&lt;/td&gt;
+&lt;td style=&#34;text-align:left;font-style: italic;&#34;&gt;
+count
+&lt;/td&gt;
+&lt;td style=&#34;text-align:left;font-style: italic;&#34;&gt;
+…
+&lt;/td&gt;
+&lt;td style=&#34;text-align:left;font-style: italic;&#34;&gt;
+origin bor
+&lt;/td&gt;
+&lt;td style=&#34;text-align:left;font-style: italic;&#34;&gt;
+dest bor
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;In the template file is code for aggregating these MSOA data to borough level to derive tables representing nodes and edges.&lt;/p&gt;
+&lt;p&gt;First, we ensure that only commutes made by London residents between London boroughs are recorded and so we generate a look-up of London boroughs. When installing and loading the &lt;code&gt;pct&lt;/code&gt; package, a table matching Local Authorities with Regions (&lt;code&gt;pct_regions_lookup&lt;/code&gt;) was made available. We filter this on &lt;code&gt;region_name&lt;/code&gt; to extract a list of all local authorities (&lt;code&gt;lad16nm&lt;/code&gt;), London boroughs in this case), and store them as a vector using &lt;code&gt;pull()&lt;/code&gt;. This vector of London borough names (&lt;code&gt;london_las&lt;/code&gt;) is used to &lt;code&gt;filter()&lt;/code&gt; the raw &lt;code&gt;od_pairs&lt;/code&gt; data frame.&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;# Look-up of London boroughs.
+london_las &amp;lt;- pct_regions_lookup %&amp;gt;% filter(region_name==&amp;quot;london&amp;quot;) %&amp;gt;%
+  pull(lad16nm)&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;To generate an &lt;strong&gt;edges&lt;/strong&gt; table, &lt;code&gt;od_pairs&lt;/code&gt; is grouped by the origin and destination borough (&lt;code&gt;la_1&lt;/code&gt;, &lt;code&gt;la_2&lt;/code&gt;) and flow counts are summed for each unique borough-borough OD pair. Note that we use &lt;code&gt;dplyr&lt;/code&gt;’s &lt;a href=&#34;https://dplyr.tidyverse.org/reference/across.html&#34;&gt;&lt;code&gt;across()&lt;/code&gt;&lt;/a&gt; function to summarise over the multiple travel mode columns. Our analysis focuses on trips made by &lt;code&gt;public_transport&lt;/code&gt;, &lt;code&gt;car&lt;/code&gt;, and &lt;code&gt;active&lt;/code&gt; transport (foot+bike) and so we generate new combined mode counts merging travel modes and also dropping those we do not wish to use, using &lt;a href=&#34;https://dplyr.tidyverse.org/reference/mutate.html&#34;&gt;&lt;code&gt;transmute&lt;/code&gt;()&lt;/a&gt;. The edges table, an OD dataset summarising commute counts between boroughs, contains 1089 rows (33^2 borough-borough commutes).&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;  edges &amp;lt;- od_pairs %&amp;gt;%
+    # Filter only *within* London.
+    filter(la_1 %in% london_las, la_2 %in% london_las) %&amp;gt;%
+    group_by(la_1, la_2) %&amp;gt;%
+    summarise(
+      across(c(all:other), sum)
+    ) %&amp;gt;%
+    ungroup %&amp;gt;%
+    transmute(
+      o_bor=la_1, d_bor=la_2, all=all, public_transport=train+bus+light_rail,
+      car=car_driver+car_passenger, active=bicycle+foot
+    )&lt;/code&gt;&lt;/pre&gt;
+&lt;table&gt;
+&lt;caption&gt;
+&lt;span id=&#34;tab:edges-table&#34;&gt;Table 4: &lt;/span&gt;Edges table.
+&lt;/caption&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th style=&#34;text-align:left;&#34;&gt;
+o_bor
+&lt;/th&gt;
+&lt;th style=&#34;text-align:left;&#34;&gt;
+d_bor
+&lt;/th&gt;
+&lt;th style=&#34;text-align:left;&#34;&gt;
+all
+&lt;/th&gt;
+&lt;th style=&#34;text-align:left;&#34;&gt;
+public_transport
+&lt;/th&gt;
+&lt;th style=&#34;text-align:left;&#34;&gt;
+car
+&lt;/th&gt;
+&lt;th style=&#34;text-align:left;&#34;&gt;
+active
+&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+Barking and Dagenham
+&lt;/td&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+Barnet
+&lt;/td&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+280
+&lt;/td&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+143
+&lt;/td&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+131
+&lt;/td&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+2
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+Barking and Dagenham
+&lt;/td&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+Bexley
+&lt;/td&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+155
+&lt;/td&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+41
+&lt;/td&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+109
+&lt;/td&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+2
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+…
+&lt;/td&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+…
+&lt;/td&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+…
+&lt;/td&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+…
+&lt;/td&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+…
+&lt;/td&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+…
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left;font-style: italic;&#34;&gt;
+origin bor
+&lt;/td&gt;
+&lt;td style=&#34;text-align:left;font-style: italic;&#34;&gt;
+dest bor
+&lt;/td&gt;
+&lt;td style=&#34;text-align:left;font-style: italic;&#34;&gt;
+count
+&lt;/td&gt;
+&lt;td style=&#34;text-align:left;font-style: italic;&#34;&gt;
+count
+&lt;/td&gt;
+&lt;td style=&#34;text-align:left;font-style: italic;&#34;&gt;
+count
+&lt;/td&gt;
+&lt;td style=&#34;text-align:left;font-style: italic;&#34;&gt;
+count
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;&lt;strong&gt;Nodes&lt;/strong&gt; in the dataset are the 33 London boroughs. We can express the 2.9m commutes between these nodes in different ways – according to whether nodes are destinations or origins. In the code below, two tables are generated with OD data grouped by destination (&lt;code&gt;nodes_d&lt;/code&gt;) and origin (&lt;code&gt;nodes_o&lt;/code&gt;) and commutes into- and out of- boroughs counted respectively. These two data sets are then joined with &lt;code&gt;bind_rows()&lt;/code&gt; and distinguished via the variable name &lt;code&gt;type&lt;/code&gt;.&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;# Summarise over destinations: commutes into- boroughs.
+nodes_d &amp;lt;- od_pairs %&amp;gt;%
+  # Filter only *within* London.
+  filter(la_1 %in% london_las, la_2 %in% london_las) %&amp;gt;%
+  group_by(la_2) %&amp;gt;%
+  summarise(
+    across(c(all:other), sum)
+  ) %&amp;gt;%
+  ungroup %&amp;gt;%
+  rename(bor = la_2) %&amp;gt;%
+  transmute(
+    bor=bor, type=&amp;quot;destination&amp;quot;, all=all, public_transport=train+bus+light_rail,
+    car=car_driver+car_passenger, active=bicycle+foot
+  )
+
+nodes_o &amp;lt;- od_pairs %&amp;gt;%
+  # Filter only *within* London.
+  filter(la_1 %in% london_las, la_2 %in% london_las) %&amp;gt;%
+  group_by(la_1) %&amp;gt;%
+  summarise(
+    across(c(all:other), sum)
+  ) %&amp;gt;%
+  ungroup %&amp;gt;%
+  rename(bor = la_1) %&amp;gt;%
+  transmute(
+    bor=bor, type=&amp;quot;origin&amp;quot;, all=all, public_transport=train+bus+light_rail,
+    car=car_driver+car_passenger, active=bicycle+foot
+  )
+
+nodes  &amp;lt;- nodes_o %&amp;gt;% bind_rows(nodes_d)&lt;/code&gt;&lt;/pre&gt;
+&lt;table&gt;
+&lt;caption&gt;
+&lt;span id=&#34;tab:nodes-table&#34;&gt;Table 5: &lt;/span&gt;Nodes table.
+&lt;/caption&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th style=&#34;text-align:left;&#34;&gt;
+bor
+&lt;/th&gt;
+&lt;th style=&#34;text-align:left;&#34;&gt;
+type
+&lt;/th&gt;
+&lt;th style=&#34;text-align:left;&#34;&gt;
+all
+&lt;/th&gt;
+&lt;th style=&#34;text-align:left;&#34;&gt;
+public_transport
+&lt;/th&gt;
+&lt;th style=&#34;text-align:left;&#34;&gt;
+car
+&lt;/th&gt;
+&lt;th style=&#34;text-align:left;&#34;&gt;
+active
+&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+Barking and Dagenham
+&lt;/td&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+dest
+&lt;/td&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+33605
+&lt;/td&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+9483
+&lt;/td&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+19050
+&lt;/td&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+4644
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+Barnet
+&lt;/td&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+dest
+&lt;/td&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+72024
+&lt;/td&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+24838
+&lt;/td&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+36484
+&lt;/td&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+9890
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+…
+&lt;/td&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+…
+&lt;/td&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+…
+&lt;/td&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+…
+&lt;/td&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+…
+&lt;/td&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+…
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left;font-style: italic;&#34;&gt;
+bor
+&lt;/td&gt;
+&lt;td style=&#34;text-align:left;font-style: italic;&#34;&gt;
+origin|dest
+&lt;/td&gt;
+&lt;td style=&#34;text-align:left;font-style: italic;&#34;&gt;
+count
+&lt;/td&gt;
+&lt;td style=&#34;text-align:left;font-style: italic;&#34;&gt;
+count
+&lt;/td&gt;
+&lt;td style=&#34;text-align:left;font-style: italic;&#34;&gt;
+count
+&lt;/td&gt;
+&lt;td style=&#34;text-align:left;font-style: italic;&#34;&gt;
+count
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;/div&gt;
+&lt;div id=&#34;analyse-over-nodes&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Analyse over nodes&lt;/h3&gt;
+&lt;p&gt;In Figure &lt;a href=&#34;#fig:mode-analysis&#34;&gt;9&lt;/a&gt; are a set of plots summarising over the &lt;code&gt;nodes&lt;/code&gt; dataset and using colour to support comparison by travel mode. The first plot is a bar chart ordered left-to-right on commute frequency (by destination borough). Nodes are expressed as destinations on the left panel and origins on the right. This demonstrates a pattern similar to that in Figure &lt;a href=&#34;#fig:flows-bor&#34;&gt;1&lt;/a&gt; where there are many commutes into- job rich boroughs in central London. Note that the amount of red, representing commutes by car, increases left-to-right as we move away from job-rich central London boroughs. This is best expressed by the proportional/filled bar chart in the second plot. Hillingdon (HDN), a borough which contains a relatively large number of jobs, looks distinctive from its other job-rich neighbours in this plot (Lambeth LAM, Hammersmith &amp;amp; Fulham HMS) as it contains a reasonably large block of red (commuting by car). This is, however, consistent with other boroughs that are similarly “outer” London (Havering HVG, Bexley BEX, Enfield ENF). The third plot incorporates this geographic by ordering the bars again using the &lt;a href=&#34;https://github.com/aftertheflood/londonsquared&#34;&gt;LondonSquared&lt;/a&gt; layout. Destination and origin summary bars are juxtaposed next to each other and heights are scaled locally by borough. This enables visual comparison of whether there is a net in- or out- flow of workers. Job-rich central London boroughs contain longer “destination” bars importing large numbers of workers from other London boroughs, outer-London boroughs generally have longer “origin” bars exporting large numbers of residents to work in other London boroughs.&lt;/p&gt;
+&lt;div class=&#34;figure&#34; style=&#34;text-align: left&#34;&gt;&lt;span id=&#34;fig:mode-analysis&#34;&gt;&lt;/span&gt;
+&lt;img src=&#34;./class/05-class_files/mode-plots.png&#34; alt=&#34;Destination-focussed OD map of commutes between London boroughs&#34; width=&#34;100%&#34; /&gt;
+&lt;p class=&#34;caption&#34;&gt;
+Figure 9: Destination-focussed OD map of commutes between London boroughs
+&lt;/p&gt;
+&lt;/div&gt;
+&lt;p&gt;The code – bar charts:&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;# Vector of borough names for ordering.
+bor_orders &amp;lt;- nodes %&amp;gt;%
+  filter(type==&amp;quot;destination&amp;quot;) %&amp;gt;%
+  arrange(-all) %&amp;gt;% pull(bor)
+
+# Plot bars
+nodes %&amp;gt;%
+  pivot_longer(cols=c(active, public_transport, car), names_to=&amp;quot;mode&amp;quot;, values_to=&amp;quot;count&amp;quot;) %&amp;gt;%
+  mutate(bor=factor(bor, levels=bor_orders)) %&amp;gt;%
+  ggplot() +
+  geom_col(aes(x=bor, y=count, fill=mode)) + # add argument position=&amp;quot;fill&amp;quot; for proportional bars.
+  scale_fill_manual(values=c(&amp;quot;#2171b5&amp;quot;,&amp;quot;#cb181d&amp;quot;, &amp;quot;#238b45&amp;quot;))+
+  guides(fill=FALSE)+
+  labs(x=&amp;quot;&amp;quot;, y=&amp;quot;count&amp;quot;) +
+  facet_wrap(~type, ncol=2)&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;The plot specification – bar charts:&lt;/p&gt;
+&lt;ol style=&#34;list-style-type: decimal&#34;&gt;
+&lt;li&gt;&lt;strong&gt;Data&lt;/strong&gt;: Create a vector of borough names (&lt;code&gt;bor_orders&lt;/code&gt;) used to order bars according to total commute counts (by destination), casting to a factor variable, as in line 3 of the plot specification. As bars are coloured according to travel mode, the data frame must be made narrower and longer, such that each row (observation) represents a count for a single travel mode by borough over origin or destination. This is achieved with &lt;a href=&#34;https://tidyr.tidyverse.org/reference/pivot_longer.html&#34;&gt;&lt;code&gt;pivot_longer()&lt;/code&gt;&lt;/a&gt;.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Encoding&lt;/strong&gt;: Bar length varies according to commute counts, so map the ordered factor variable (&lt;code&gt;bor&lt;/code&gt;) to the x-axis and commute counts (&lt;code&gt;count&lt;/code&gt;) to the y-axis. Bars are filled according to &lt;code&gt;mode&lt;/code&gt;.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Marks&lt;/strong&gt;: &lt;code&gt;geom_col()&lt;/code&gt; for bars.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Scale&lt;/strong&gt;: &lt;code&gt;scale_fill_manual()&lt;/code&gt; for differentiating &lt;code&gt;mode&lt;/code&gt; by colour hue. Colours are defined in &lt;a href=&#34;https://en.wikipedia.org/wiki/Web_colors#Hex_triplet&#34;&gt;hex space&lt;/a&gt;.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Facets&lt;/strong&gt;: &lt;code&gt;facet_wrap()&lt;/code&gt; on &lt;code&gt;type&lt;/code&gt; for generating juxtaposed plots with node counts summarised by “origin” and “destination”.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Setting&lt;/strong&gt;: For the proportional bases add &lt;code&gt;position=&#34;fill&#34;&lt;/code&gt; argument to &lt;code&gt;geom_col()&lt;/code&gt;.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;The code – spatially-arranged bars:&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;# Plot bars
+nodes %&amp;gt;%
+  left_join(london_grid_real %&amp;gt;% st_drop_geometry() %&amp;gt;% filter(type==&amp;quot;grid&amp;quot;) %&amp;gt;%
+              select(authority, BOR,x,y),by=c(&amp;quot;bor&amp;quot;=&amp;quot;authority&amp;quot;)) %&amp;gt;%
+  pivot_longer(cols=c(active, public_transport, car), names_to=&amp;quot;mode&amp;quot;, values_to=&amp;quot;count&amp;quot;) %&amp;gt;%
+  group_by(bor) %&amp;gt;%
+  mutate(bor_total=sum(count)) %&amp;gt;%
+  ggplot() +
+  geom_col(aes(x=type, y=count/bor_total, fill=mode))+
+  geom_text(data=. %&amp;gt;% filter(mode==&amp;quot;active&amp;quot;, type==&amp;quot;destination&amp;quot;), aes(x=1.5, y=1, label=BOR), vjust=&amp;quot;top&amp;quot;, hjust=&amp;quot;centre&amp;quot;)+
+  geom_text(data=. %&amp;gt;% filter(mode==&amp;quot;active&amp;quot;, type==&amp;quot;destination&amp;quot;), aes(x=1.4, y=.85, label=&amp;quot;dest&amp;quot;), vjust=&amp;quot;top&amp;quot;, hjust=&amp;quot;right&amp;quot;, size=3)+
+  geom_text(data=. %&amp;gt;% filter(mode==&amp;quot;active&amp;quot;, type==&amp;quot;origin&amp;quot;), aes(x=1.6, y=.85, label=&amp;quot;origin&amp;quot;), vjust=&amp;quot;top&amp;quot;, hjust=&amp;quot;left&amp;quot;, size=3)+
+  scale_fill_manual(values=c(&amp;quot;#2171b5&amp;quot;,&amp;quot;#cb181d&amp;quot;, &amp;quot;#238b45&amp;quot;))+
+  facet_grid(y~x)+
+  guides(fill=FALSE, alpha=FALSE)+
+  theme(
+    panel.spacing.y=unit(.2, &amp;quot;lines&amp;quot;), panel.spacing.x=unit(.2, &amp;quot;lines&amp;quot;),
+    panel.background = element_rect(fill=&amp;quot;#ffffff&amp;quot;, colour=&amp;quot;#ffffff&amp;quot;),
+    axis.title.x = element_blank(),axis.title.y = element_blank(),
+    axis.text.x=element_blank(), axis.text.y = element_blank(),
+    strip.text.x=element_blank(), strip.text.y = element_blank(),
+    panel.grid=element_blank()
+  )&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;The plot specification – spatially-arranged bars:&lt;/p&gt;
+&lt;ol style=&#34;list-style-type: decimal&#34;&gt;
+&lt;li&gt;&lt;strong&gt;Data&lt;/strong&gt;: A few things to note here. First we must &lt;code&gt;left_join()&lt;/code&gt; on the dataset that gives us the grid locations of each borough (&lt;code&gt;london_grid_real&lt;/code&gt;) so that the bars can be spatially arranged (via &lt;code&gt;facet_grid()&lt;/code&gt;). We strip out the &lt;code&gt;geometry&lt;/code&gt; from this dataset (it is not required), and select only those variables that we need: the &lt;code&gt;x,y&lt;/code&gt; position in the grid, borough names for matching with our nodes dataset (“&lt;code&gt;bor&lt;/code&gt;”=“&lt;code&gt;authority&lt;/code&gt;”) and abbreviation for labelling (&lt;code&gt;BOR&lt;/code&gt;). We need to reshape the dataset in the same way as for the non-spatially-arranged bars – and so the call to &lt;code&gt;pivot_wider()&lt;/code&gt;. Also, we want to scale the height of bars for each borough such that the relative number of in- and out- commutes within-borough (commute &lt;code&gt;type&lt;/code&gt;) can be compared. To do this, we calculate a &lt;code&gt;bor_total&lt;/code&gt; variable, which is the total number of residents commuting out-, and jobs filled by workers commuting in-, for each borough. Note that there is double counting here where workers live and work in the same borough.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Encoding&lt;/strong&gt;: Bar length (y-axis) varies according to commute counts normalised by the &lt;code&gt;bor_total&lt;/code&gt; variable. Separate bars are drawn depending on &lt;code&gt;type&lt;/code&gt;, summarised over “origin” or “destination”, so &lt;code&gt;type&lt;/code&gt; is mapped to the x-axis. Again bars are filled according to &lt;code&gt;mode&lt;/code&gt;.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Marks&lt;/strong&gt;: &lt;code&gt;geom_col()&lt;/code&gt; for bars.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Scale&lt;/strong&gt;: &lt;code&gt;scale_fill_manual()&lt;/code&gt; for differentiating &lt;code&gt;mode&lt;/code&gt; by colour hue. Colours are defined in &lt;a href=&#34;https://en.wikipedia.org/wiki/Web_colors#Hex_triplet&#34;&gt;hex space&lt;/a&gt;.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Facets&lt;/strong&gt;: &lt;code&gt;facet_grid()&lt;/code&gt; for laying out plots with a relaxed geographic (2D) arrangement. This is the [&lt;a href=&#34;https://github.com/aftertheflood/londonsquared&#34;&gt;LondondSquared&lt;/a&gt; layout from the &lt;code&gt;london_grid_real&lt;/code&gt; table.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Setting&lt;/strong&gt;: Various within &lt;code&gt;theme()&lt;/code&gt; to remove, for example, unnecessary axis and panel labels, which are effectively grid references for 2D arrangement. The plot is annotated with text labels (&lt;code&gt;geom_text()&lt;/code&gt;): borough names using the abbreviated &lt;code&gt;BOR&lt;/code&gt; variable and also the &lt;code&gt;type&lt;/code&gt; of bar (origin or destination). Labels are positioned within each facet panel by manually passing an &lt;code&gt;x,y&lt;/code&gt; location, and supplying a value for the &lt;code&gt;type&lt;/code&gt; label and using the &lt;code&gt;BOR&lt;/code&gt; variable for the borough label. We use &lt;code&gt;filter()&lt;/code&gt; here as otherwise a text label would appear for each row of the dataset. Try removing the call to &lt;code&gt;data=&lt;/code&gt; in the &lt;code&gt;geom_text&lt;/code&gt; lines to explore this.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/div&gt;
+&lt;div id=&#34;analyse-over-edges&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Analyse over edges&lt;/h3&gt;
+&lt;p&gt;Figure &lt;a href=&#34;#fig:mode-analysis-od-map&#34;&gt;10&lt;/a&gt; displays OD maps of commuting between boroughs using public transport. In a similar way to Figure &lt;a href=&#34;#fig:mode-analysis&#34;&gt;9&lt;/a&gt; maps are created separately with a destination and origin focus. The reference cells for the maps on the left are &lt;em&gt;destinations&lt;/em&gt; and the small cells are coloured according to number of commutes into- those destinations for work; the references cells for the maps on the right are origins and small cells are coloured according to number of commutes by residents out-of those boroughs for work. I won’t do any interpretation; that is reserved for this session’s &lt;a href=&#34;./homework/05-homework/&#34;&gt;Homework&lt;/a&gt;. A consolation is that there is no additional coding required for the homework.&lt;/p&gt;
+&lt;div class=&#34;figure&#34; style=&#34;text-align: left&#34;&gt;&lt;span id=&#34;fig:mode-analysis-od-map&#34;&gt;&lt;/span&gt;
+&lt;img src=&#34;./class/05-class_files/od-maps-mode.png&#34; alt=&#34;OD map of commutes between London boroughs&#34; width=&#34;100%&#34; /&gt;
+&lt;p class=&#34;caption&#34;&gt;
+Figure 10: OD map of commutes between London boroughs
+&lt;/p&gt;
+&lt;/div&gt;
+&lt;p&gt;The code:&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;# Temporary plot object of data joined to geom_sf geometries.
+# DO map so geometries join on origin (edit this to switch between D-OD and O-DO matrix).
+plot_data_temp &amp;lt;- london_grid_real %&amp;gt;% filter(type==&amp;quot;grid&amp;quot;) %&amp;gt;%
+right_join(edges, by=c(&amp;quot;authority&amp;quot;=&amp;quot;o_bor&amp;quot;)) %&amp;gt;%
+  mutate(o_bor=authority) %&amp;gt;% rename(o_fx=x, o_fy=y) %&amp;gt;%
+  left_join(grid_real_sf %&amp;gt;%
+    filter(type==&amp;quot;grid&amp;quot;) %&amp;gt;% st_drop_geometry() %&amp;gt;% select(authority,x,y), by=c(&amp;quot;d_bor&amp;quot;=&amp;quot;authority&amp;quot;)
+    ) %&amp;gt;%
+  rename(d_fx=x, d_fy=y) %&amp;gt;%
+  # Identify borough in focus (edit this to switch between D-OD and O-DO matrix).
+  mutate(bor_label=if_else(o_bor==d_bor,d_bor,&amp;quot;&amp;quot;),
+                                            bor_focus=if_else(o_bor==d_bor,1,0))
+
+# Bounding box for positioning text labels.
+bbox_grid &amp;lt;- st_bbox(london_grid_real %&amp;gt;% filter(type==&amp;quot;grid&amp;quot;))
+
+# Draw plot -- simple.
+plot_data_temp %&amp;gt;%
+  ggplot()+
+  geom_sf(aes(fill=public_transport), colour=&amp;quot;#616161&amp;quot;, size=0.15)+
+  coord_sf(crs=st_crs(plot_data_temp), datum=NA)+
+  guides(fill=FALSE)+
+  facet_grid(d_fy~d_fx, shrink=FALSE)+
+  scale_fill_distiller(palette=&amp;quot;Greens&amp;quot;, direction=1)
+
+# Draw plot -- with text annotations.
+plot_data_temp %&amp;gt;%
+  ggplot()+
+  geom_sf(aes(fill=public_transport), colour=&amp;quot;#616161&amp;quot;, size=0.15)+
+  geom_sf(data=. %&amp;gt;% filter(bor_focus==1), fill=&amp;quot;transparent&amp;quot;,  colour=&amp;quot;#373737&amp;quot;, size=0.3)+
+  geom_text(data=. %&amp;gt;% filter(bor_focus==1),  aes(x=east, y=north, label=str_sub(BOR,1,1)),
+            colour=&amp;quot;#252525&amp;quot;, alpha=1.0, size=2, show.legend=FALSE, hjust=&amp;quot;centre&amp;quot;, vjust=&amp;quot;middle&amp;quot;)+
+  geom_text(data=. %&amp;gt;% filter(bor_focus==1), aes(x=bbox_grid$xmax, y=bbox_grid$ymin, label=BOR),
+            colour=&amp;quot;#252525&amp;quot;, alpha=0.6, size=2, show.legend=FALSE, hjust=&amp;quot;right&amp;quot;, vjust=&amp;quot;bottom&amp;quot;)+
+  coord_sf(crs=st_crs(plot_data_temp), datum=NA)+
+  guides(fill=FALSE)+
+  facet_grid(d_fy~d_fx, shrink=FALSE)+
+  scale_fill_distiller(palette=&amp;quot;Greens&amp;quot;, direction=1)+
+  theme(
+    panel.spacing=unit(0.1, &amp;quot;lines&amp;quot;),
+    axis.title.x=element_blank(),axis.title.y=element_blank(),
+    strip.text.x = element_blank(), strip.text.y = element_blank(),
+    panel.background = element_rect(fill=&amp;quot;#ffffff&amp;quot;, colour=&amp;quot;#ffffff&amp;quot;)
+  )&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;The plot specification:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;1. Data&lt;/strong&gt;:
+&lt;ul&gt;
+&lt;li&gt;We create a temporary staging data frame for this plot (&lt;code&gt;plot_data_temp&lt;/code&gt;). This is our edges dataset, joined twice on &lt;code&gt;london_grid_real&lt;/code&gt;.&lt;/li&gt;
+&lt;li&gt;The first join. The code above is for generating a D-OD map, where the large cells are destinations and the small cells are origins. In the plot spec you will see, as in the spatially arranged bars, that for D-OD maps we facet on destination using the LondonSquared layout. This means that we want to bring in &lt;code&gt;geometry&lt;/code&gt; data for the origin borough in each OD pair and make this explicit in the join – &lt;code&gt;by=c(&#34;authority&#34;=&#34;o_bor&#34;)&lt;/code&gt;. We also &lt;code&gt;rename()&lt;/code&gt; the joined variables accordingly – &lt;code&gt;o_fx, o_fy&lt;/code&gt; refers to the LondonSquared grid cell references of the origins. If we wanted to use the LondonSquared layout only for faceting, and represent origin boroughs using their real geography &lt;span class=&#34;citation&#34;&gt;(as in Beecham and Slingsby &lt;a href=&#34;#ref-beecham_characterising_2019&#34; role=&#34;doc-biblioref&#34;&gt;2019&lt;/a&gt;, @slingsby_od_2014)&lt;/span&gt; we could join on the real and not grid geometries – with &lt;code&gt;filter(type==&#34;real&#34;)&lt;/code&gt;.&lt;/li&gt;
+&lt;li&gt;The second join is on destination (origin in the case of an O-OD map). We drop the geometry data from the joining London boundaries object, but keep the LondonSquared layout grid references and rename accordingly – e.g. &lt;code&gt;rename(d_fx=x, d_fy=y)&lt;/code&gt;.&lt;/li&gt;
+&lt;li&gt;Finally in the &lt;code&gt;mutate()&lt;/code&gt; we generate a new variable identifying the borough in focus (&lt;code&gt;bor_focus&lt;/code&gt;), destination in this case, and a text label variable for annotating plots on this (&lt;code&gt;bor_label&lt;/code&gt;).&lt;/li&gt;
+&lt;li&gt;An additional derived object contains coordinate pairs describing the geographic extent of our geometries data – see &lt;a href=&#34;https://r-spatial.github.io/sf/reference/st_bbox.html&#34;&gt;st_bbox()&lt;/a&gt;.&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;2. Encoding&lt;/strong&gt;: Cells are coloured according to commute count by public transport (&lt;code&gt;fill=public_transport&lt;/code&gt;).&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;3. Marks&lt;/strong&gt;: &lt;code&gt;geom_sf()&lt;/code&gt; – these are effectively spatially arranged choropleth maps. In the example we use a regular grid geometries, but we could easily use real geographies by filtering &lt;code&gt;london_grid_real&lt;/code&gt; on &lt;code&gt;type==&#34;real&#34;&lt;/code&gt; in the data staging code.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;4. Scale&lt;/strong&gt;: &lt;code&gt;scale_fill_distiller()&lt;/code&gt; for a continuous colour scheme using the ColorBrewer &lt;code&gt;Greens&lt;/code&gt; palette.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;5. Facets&lt;/strong&gt;: &lt;code&gt;facet_grid()&lt;/code&gt; for laying out plots with a relaxed geographic (2D) arrangement. Again we facet on destination as this is a D-OD map.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;6. Setting&lt;/strong&gt;: Various within &lt;code&gt;theme()&lt;/code&gt; to remove, for example, unnecessary axis and panel labels. The plot is annotated with text labels (&lt;code&gt;geom_text()&lt;/code&gt;) – borough names using the abbreviated &lt;code&gt;BOR&lt;/code&gt; variable. The three letter abbreviations are positioned in &lt;code&gt;x,y&lt;/code&gt; to the bottom-right of the plot using the values in the bounding box object (&lt;code&gt;bbox_grid&lt;/code&gt;). The single letter abbreviation is positioned at the centroid of the grid geometries &lt;code&gt;east, north&lt;/code&gt;. Single letters are derived from the &lt;code&gt;BOR&lt;/code&gt; variable using &lt;a href=&#34;https://stringr.tidyverse.org/reference/str_sub.html&#34;&gt;str_sub()&lt;/a&gt;.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;
+
+&lt;div class=&#34;alert alert-note&#34;&gt;
+  &lt;div&gt;
+    &lt;/p&gt;
+&lt;p&gt;Some of the code around the annotated text labels is a little hacky and not particularly elegant. However, with this removed, as in the block above, the plot specification is really quite simple and more importantly links to how OD maps are constructed – &lt;code&gt;fill&lt;/code&gt; cells according to a count variable and juxtapose or &lt;code&gt;facet&lt;/code&gt; according to the reference, or &lt;code&gt;focus&lt;/code&gt;, for comparison.&lt;/p&gt;
+&lt;p&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div id=&#34;references&#34; class=&#34;section level2 unnumbered&#34;&gt;
+&lt;h2&gt;References&lt;/h2&gt;
+&lt;div id=&#34;refs&#34; class=&#34;references&#34;&gt;
+&lt;div id=&#34;ref-beecham_exploring_2014&#34;&gt;
+&lt;p&gt;Beecham, Roger, and Jo Wood. 2014. “Exploring Gendered Cycling Behaviours Within a Large-Scale Behavioural Data-Set.” &lt;em&gt;Transportation Planning and Technology&lt;/em&gt; 37 (1). Taylor &amp;amp; Francis: 83–97.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;ref-beecham_characterising_2019&#34;&gt;
+&lt;p&gt;Beecham, R., and A. Slingsby. 2019. “Characterising labour market self-containment in London with geographically arranged small multiples.” &lt;em&gt;Environment and Planning A: Economy and Space&lt;/em&gt; 51 (6): 1217–24.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;ref-munzner_visualization_2014&#34;&gt;
+&lt;p&gt;Munzner, Tamara. 2014. &lt;em&gt;Visualization Analysis and Design&lt;/em&gt;. AK Peters Visualization Series. Boca Raton, FL: CRC Press.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;ref-slingsby_od_2014&#34;&gt;
+&lt;p&gt;Slingsby, A., M. Kelly, and J. Dykes. 2014. “OD maps for showing changes inIrish female migration between 1851 and 1911.” &lt;em&gt;Environment and Planning A: Economy and Space&lt;/em&gt; 46 (12): 2795–7.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;ref-wickham_ggplot2_2020&#34;&gt;
+&lt;p&gt;Wickham, Hadley, Danielle Navarro, and Thomas Lin Pedersen. 2020. &lt;em&gt;Ggplot2: Elegant Graphics for Data Analysis&lt;/em&gt;. Springer.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;ref-wood_visualisation_2010&#34;&gt;
+&lt;p&gt;Wood, J., J. Dykes, and A. Slingsby. 2010. “Visualisation of Origins, Destinations and Flows with Od Maps.” &lt;em&gt;The Cartographic Journal&lt;/em&gt; 47 (2): 117–29.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;ref-wood_visualizing_2011&#34;&gt;
+&lt;p&gt;Wood, Jo, Aidan Slingsby, and Jason Dykes. 2011. “Visualizing the Dynamics of London’s Bicycle-Hire Scheme.” &lt;em&gt;Cartographica: The International Journal for Geographic Information and Geovisualization&lt;/em&gt;, no. 4: 239–51.&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
 </description>
     </item>
     
@@ -1055,6 +1952,7 @@ Figure 5: Creating an RStudio Project
 &lt;li&gt;&lt;a href=&#34;#scatterplots-with-multiple-encodings&#34;&gt;Scatterplots with multiple encodings&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;#task-3-create-a-map&#34;&gt;Task 3: Create a map&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#references&#34;&gt;References&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/div&gt;
 
@@ -1186,6 +2084,9 @@ Figure 3: Plots of 2019 versus 2017 vote shares.
 Figure 4: Map of 2016 EU Referendum vote, estimated by Parliamentary Constituency in GB.
 &lt;/p&gt;
 &lt;/div&gt;
+&lt;/div&gt;
+&lt;div id=&#34;references&#34; class=&#34;section level2 unnumbered&#34;&gt;
+&lt;h2&gt;References&lt;/h2&gt;
 &lt;div id=&#34;refs&#34; class=&#34;references&#34;&gt;
 &lt;div id=&#34;ref-munzner_visualization_2014&#34;&gt;
 &lt;p&gt;Munzner, Tamara. 2014. &lt;em&gt;Visualization Analysis and Design&lt;/em&gt;. AK Peters Visualization Series. Boca Raton, FL: CRC Press.&lt;/p&gt;
@@ -2405,7 +3306,7 @@ Figure 17: IMD driver-pedestrian-location geodemographic distance.
 Figure 18: IMD driver-pedestrian-location with modelled expectations based on geodemographic distance.
 &lt;/p&gt;
 &lt;/div&gt;
-&lt;p&gt;Salient in Figure &lt;a href=&#34;#fig:imd-driver-cas-crash-distance&#34;&gt;17&lt;/a&gt; is the vertical block of green in the left column of the plot for injuries occurring in the least deprived quintile. Remembering that pedestrian IMD class is mapped to the x-axis, this indicates higher than expected injury counts where pedestrians are involved in crashes that take place in the same IMD class in which they live, even where the driver lives in a different IMD class. Pedestrian injuries occurring in the most deprived quintile appear to be experienced disproportionately by those living in that quintile. In the second-most deprived quintile are green blocks in the left corresponding with pedestrians living in that quintile, but especially the the most deprived quintile (darkest green), being hit by drivers living in the &lt;em&gt;most&lt;/em&gt; deprived quintile. In the mid deprived quintile, drivers and pedestrians living in the most deprived quintile are again overrepresented. Glancing in each of the the matrices, cells towards the right, and top are generally closer to purple: pedestrians living in the less deprived quintile groups are less likely to be injured in crashes, and drivers living in those less deprived quintiles are less likely to contribute to those pedestrian injuries, even after controlling geodemographic distance. And the corollary is those those pedestrians and drivers living in the more deprived quintiles are more likely to be injured pedestrians, and drivers contributing to those injuries. There is much to unpick here, and I’m not sure about the validity of spreading estimated counts from a model based on the derived “geodemographic distance” variable. The upshot from this exploratory analysis is, like many health issues, pedestrian road injuries have a heavy socio-economic element and so is worthy of formal investigation. Hopefully from this you get a sense of the common workflow for EDA:&lt;/p&gt;
+&lt;p&gt;Salient in Figure &lt;a href=&#34;#fig:imd-driver-cas-crash-distance&#34;&gt;17&lt;/a&gt; is the vertical block of green in the left column of the plot for injuries occurring in the most deprived quintile. Remembering that pedestrian IMD class is mapped to the x-axis, this indicates higher than expected injury counts where pedestrians are involved in crashes that take place in the same IMD class in which they live, even where the driver lives in a different IMD class. Pedestrian injuries occurring in the most deprived quintile appear to be experienced disproportionately by those living in that quintile. In the second-most deprived quintile are green blocks in the left corresponding with pedestrians living in that quintile, but especially the the most deprived quintile (darkest green), being hit by drivers living in the &lt;em&gt;most&lt;/em&gt; deprived quintile. In the mid deprived quintile, drivers and pedestrians living in the most deprived quintile are again overrepresented. Glancing in each of the the matrices, cells towards the right, and top are generally closer to purple: pedestrians living in the less deprived quintile groups are less likely to be injured in crashes, and drivers living in those less deprived quintiles are less likely to contribute to those pedestrian injuries, even after controlling geodemographic distance. And the corollary is those those pedestrians and drivers living in the more deprived quintiles are more likely to be injured pedestrians, and drivers contributing to those injuries. There is much to unpick here, and I’m not sure about the validity of spreading estimated counts from a model based on the derived “geodemographic distance” variable. The upshot from this exploratory analysis is, like many health issues, pedestrian road injuries have a heavy socio-economic element and so is worthy of formal investigation. Hopefully from this you get a sense of the common workflow for EDA:&lt;/p&gt;
 &lt;ol style=&#34;list-style-type: decimal&#34;&gt;
 &lt;li&gt;Expose pattern&lt;/li&gt;
 &lt;li&gt;Model an expectation derived from pattern&lt;/li&gt;
@@ -2548,6 +3449,111 @@ This graphic exposes interesting *vertical* and *horizontal* blocks. The locatio
 &lt;ul&gt;
 &lt;li&gt;&lt;span class=&#34;citation&#34;&gt;Badawood Wood J. and A. Slingsby, “BallotMaps: Detecting Name Bias in Alphabetically Ordered Ballot Papers,” &lt;em&gt;IEEE Transactions on Visualization and Computer Graphics&lt;/em&gt; 17, no. 12 (&lt;a href=&#34;#ref-wood_ballotmaps_2011&#34; role=&#34;doc-biblioref&#34;&gt;2011&lt;/a&gt;): 2384–91.&lt;/span&gt;&lt;/li&gt;
 &lt;/ul&gt;
+&lt;/div&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Exploring spatial networks</title>
+      <link>/homework/05-homework/</link>
+      <pubDate>Tue, 01 Jun 2021 00:00:00 +0000</pubDate>
+      <guid>/homework/05-homework/</guid>
+      <description>
+&lt;!-- BLOGDOWN-HEAD --&gt;
+&lt;link href=&#34;./rmarkdown-libs/anchor-sections/anchor-sections.css&#34; rel=&#34;stylesheet&#34; /&gt;
+&lt;script src=&#34;./rmarkdown-libs/anchor-sections/anchor-sections.js&#34;&gt;&lt;/script&gt;
+&lt;!-- /BLOGDOWN-HEAD --&gt;
+
+&lt;h2&gt;Contents&lt;/h2&gt;
+&lt;div id=&#34;TOC&#34;&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#session-outcomes&#34;&gt;Session Outcomes&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#introduction&#34;&gt;Introduction&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#visualization-interpretation-challenge&#34;&gt;Visualization interpretation challenge&lt;/a&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#task-1-read&#34;&gt;Task 1: Read&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#task-2-interpret&#34;&gt;Task 2: Interpret&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#references&#34;&gt;References&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+
+&lt;div id=&#34;session-outcomes&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Session Outcomes&lt;/h2&gt;
+&lt;p&gt;By the end of this homework session you should be able to:&lt;/p&gt;
+&lt;p&gt;
+
+&lt;div class=&#34;alert alert-objective&#34;&gt;
+  &lt;div&gt;
+    &lt;ul&gt;
+&lt;li&gt;&lt;input checked=&#34;&#34; disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; &lt;/li&gt;
+&lt;li&gt;&lt;input checked=&#34;&#34; disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; &lt;/li&gt;
+&lt;li&gt;&lt;input checked=&#34;&#34; disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; &lt;/li&gt;
+&lt;/ul&gt;
+
+  &lt;/div&gt;
+&lt;/div&gt;
+&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;introduction&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Introduction&lt;/h2&gt;
+&lt;p&gt;This homework requires you to apply the concepts and skills developed in the class session on &lt;a href=&#34;./class/05-class/&#34;&gt;exploring spatial networks&lt;/a&gt;. Do complete the task and be sure to save your work as it will be submitted as part of your portfolio for Assignment 1.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;visualization-interpretation-challenge&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Visualization interpretation challenge&lt;/h2&gt;
+&lt;p&gt;You may be pleased to know that this week’s homework does not require you to write a single line of code. Instead, it is designed to get you reading and interpreting data graphics. &lt;a href=&#34;https://xeno.graphics/od-map/&#34;&gt;OD Maps&lt;/a&gt; are a good candidate here as they have been catalogued by &lt;a href=&#34;https://www.maartenlambrechts.com&#34;&gt;Marteen Lambrechts&lt;/a&gt; as a Xenographic – &lt;em&gt;Weird but (sometime) useful&lt;/em&gt;. I’d add that within the list of other &lt;a href=&#34;https://xeno.graphics&#34;&gt;Xenographics&lt;/a&gt;, OD Maps are &lt;em&gt;Not that weird and often useful&lt;/em&gt;. Nevertheless, they do take some interpretation.&lt;/p&gt;
+&lt;div class=&#34;figure&#34; style=&#34;text-align: left&#34;&gt;&lt;span id=&#34;fig:mode-analysis-od-map&#34;&gt;&lt;/span&gt;
+&lt;img src=&#34;./class/05-class_files/od-maps-mode-homework.png&#34; alt=&#34;OD map of commutes between London boroughs&#34; width=&#34;90%&#34; /&gt;
+&lt;p class=&#34;caption&#34;&gt;
+Figure 1: OD map of commutes between London boroughs
+&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;task-1-read&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Task 1: Read&lt;/h3&gt;
+&lt;p&gt;For a clear explanation of OD maps and interesting application, read &lt;span class=&#34;citation&#34;&gt;Slingsby, Kelly, and Dykes (&lt;a href=&#34;#ref-slingsby_od_2014&#34; role=&#34;doc-biblioref&#34;&gt;2014&lt;/a&gt;)&lt;/span&gt;’s very short paper: &lt;a href=&#34;https://openaccess.city.ac.uk/id/eprint/8483/&#34;&gt;&lt;em&gt;OD maps for showing changes in Irish female migration between 1851 and 1911&lt;/em&gt;&lt;/a&gt;.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;task-2-interpret&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Task 2: Interpret&lt;/h3&gt;
+&lt;p&gt;Considering the OD maps in Figure &lt;a href=&#34;#fig:mode-analysis-od-map&#34;&gt;1&lt;/a&gt;, try to answer the following tasks. Write your answers in the &lt;a href=&#34;./homework/04-homework_files/05-template.Rmd&#34;&gt;&lt;i class=&#34;fab fa-r-project&#34;&gt;&lt;/i&gt; 05-template.Rmd&lt;/a&gt; file.&lt;/p&gt;
+&lt;div id=&#34;look-up-tasks&#34; class=&#34;section level4&#34;&gt;
+&lt;h4&gt;Look-up tasks&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;For jobs filled in the City of London (CTY), from which borough does largest number of workers commute using public transport?
+&lt;ul&gt;
+&lt;li&gt;&lt;em&gt;Enter your answer in the template&lt;/em&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;Which borough in London has the largest &lt;em&gt;absolute&lt;/em&gt; number living and working in that borough (and travelling to work by public transport)?&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;Enter your answer in the template&lt;/em&gt;&lt;/li&gt;
+&lt;li&gt;For workers living in Barnet (BRN), what are the top 3 boroughs to which they commute?&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;Enter your answer in the template&lt;/em&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div id=&#34;insights&#34; class=&#34;section level4&#34;&gt;
+&lt;h4&gt;Insights&lt;/h4&gt;
+&lt;p&gt;Identify three isights that can be made around the geography of commuting patterns in London from reading any/each of the graphics in Figure &lt;a href=&#34;#fig:mode-analysis-od-map&#34;&gt;1&lt;/a&gt;. Briefly identify which graphic(s) led to the insight and how. Please do not spend too long over this activity – the idea is to encourage you to make inferences from graphics, as you will do in your coursework.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Insight 1
+&lt;ul&gt;
+&lt;li&gt;&lt;em&gt;Enter your answer in the template&lt;/em&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;Insight 2
+&lt;ul&gt;
+&lt;li&gt;&lt;em&gt;Enter your answer in the template&lt;/em&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;Insight 3
+&lt;ul&gt;
+&lt;li&gt;&lt;em&gt;Enter your answer in the template&lt;/em&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div id=&#34;references&#34; class=&#34;section level2 unnumbered&#34;&gt;
+&lt;h2&gt;References&lt;/h2&gt;
+&lt;div id=&#34;refs&#34; class=&#34;references&#34;&gt;
+&lt;div id=&#34;ref-slingsby_od_2014&#34;&gt;
+&lt;p&gt;Slingsby, A., M. Kelly, and J. Dykes. 2014. “OD maps for showing changes inIrish female migration between 1851 and 1911.” &lt;em&gt;Environment and Planning A: Economy and Space&lt;/em&gt; 46 (12): 2795–7.&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
 &lt;/div&gt;
 </description>
     </item>
@@ -3473,7 +4479,7 @@ data_gb %&amp;gt;%
   # Optionally add a layer for regional boundaries.
   # geom_sf(data=. %&amp;gt;% group_by(region) %&amp;gt;% summarise(), colour=&amp;quot;#eeeeee&amp;quot;, fill=&amp;quot;transparent&amp;quot;, size=0.08)+
   coord_sf(crs=27700, datum=NA) +
-  scale_fill_manual(values=party_colours) &lt;/code&gt;&lt;/pre&gt;
+  scale_fill_manual(values=party_colours)&lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;A breakdown of the &lt;code&gt;ggplot2&lt;/code&gt; spec:&lt;/p&gt;
 &lt;ol style=&#34;list-style-type: decimal&#34;&gt;
 &lt;li&gt;&lt;strong&gt;Data&lt;/strong&gt;: The &lt;code&gt;dplyr&lt;/code&gt; code updates &lt;code&gt;data_gb&lt;/code&gt; by recoding &lt;code&gt;winner_19&lt;/code&gt; as a factor and defining a named vector of colours to supply to &lt;code&gt;scale_fill_manual()&lt;/code&gt;.&lt;/li&gt;
@@ -5213,7 +6219,7 @@ untidy_wide %&amp;gt;%
         &lt;/tr&gt;
         &lt;tr&gt;
             &lt;td align=&#34;right&#34; style=&#34;width:20%;text-align:right&#34;&gt;Week 5&lt;/td&gt;
-            &lt;td style=&#34;width:50%;text-align:left&#34;&gt;Visualization for exploratory geospatial data analysis&lt;/td&gt;
+            &lt;td style=&#34;width:50%;text-align:left&#34;&gt;Visualization for exploring spatial networks&lt;/td&gt;
             &lt;td align=&#34;center&#34; style=&#34;width:10%;text-align:center&#34;&gt;
                 &lt;font color=&#34;f1f1f1&#34;&gt;
                     &lt;i class=&#34;fas fa-book-reader fa-lg&#34;&gt;&lt;/i&gt;&lt;/font&gt;
@@ -5357,8 +6363,8 @@ untidy_wide %&amp;gt;%
 &lt;h2&gt;Assessment&lt;/h2&gt;
 &lt;p&gt;A detailed and formal description of the Assessment for this module can be found on the &lt;a href=&#34;&#34;&gt;Minerva&lt;/a&gt; pages. The summative assessment consists of:&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;30% (Decrease to 20%) - Portfolio of work from completing session &lt;a href=&#34;./homework/&#34;&gt;homework&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;70% (Increase to 80%) - Fully reproducible project report&lt;/li&gt;
+&lt;li&gt;30% - Portfolio of work from completing session &lt;a href=&#34;./homework/&#34;&gt;homeworks&lt;/a&gt; 2-6 (1500 word equivalent)&lt;/li&gt;
+&lt;li&gt;70% - Visual data analysis report (2500 word equivalent)&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/div&gt;
 &lt;div id=&#34;software&#34; class=&#34;section level2&#34;&gt;
@@ -5419,7 +6425,7 @@ untidy_wide %&amp;gt;%
         &lt;/tr&gt;
         &lt;tr&gt;
             &lt;td align=&#34;right&#34; style=&#34;width:20%;text-align:right&#34;&gt;Week 5&lt;/td&gt;
-            &lt;td style=&#34;width:50%;text-align:left&#34;&gt;Visualization for exploratory geospatial data analysis&lt;/td&gt;
+            &lt;td style=&#34;width:50%;text-align:left&#34;&gt;Visualization for exploring spatial networks&lt;/td&gt;
             &lt;td align=&#34;center&#34; style=&#34;width:10%;text-align:center&#34;&gt;
                 &lt;font color=&#34;f1f1f1&#34;&gt;
                     &lt;i class=&#34;fas fa-book-reader fa-lg&#34;&gt;&lt;/i&gt;&lt;/font&gt;
@@ -5527,7 +6533,7 @@ untidy_wide %&amp;gt;%
 &lt;p&gt;As many of you will be learning to program in R for the first time, you should expect to be baffled at times and to routinely encounter scary-looking &lt;code&gt;ERROR&lt;/code&gt; messages. Counterintuitively, this is actually to be welcomed. You need to be making mistakes and hitting obstacles on a regular basis if you are to progress.&lt;/p&gt;
 &lt;p&gt;&lt;em&gt;How&lt;/em&gt; you respond to these obstacles is important. In a face-to-face lab, the temptation when hitting a problem is to raise your hand, gesture towards your screen and have a demonstrator ‘de-bug’ for you. Whilst this may initially seem like an efficient solution, you risk learning very little if this is your only course of action.&lt;/p&gt;
 &lt;p&gt;When you encounter problems working through the material in this course, try to force yourself to spend 15-20 minutes troubleshooting the problem individually. &lt;a href=&#34;https://www.google.com/&#34;&gt;Google&lt;/a&gt; your problem or try &lt;a href=&#34;https://stackoverflow.com/&#34;&gt;StackOverflow&lt;/a&gt;. If you are not able to resolve the problem on your own, then post your question to the course &lt;a href=&#34;&#34;&gt;Slack&lt;/a&gt;, which I will monitor regularly. When doing this, make an effort to be specific and unambiguous about your problem. You might wish to consult StackOverflow’s guidance on &lt;a href=&#34;https://stackoverflow.com/help/how-to-ask&#34;&gt;how to ask a good question&lt;/a&gt;.&lt;/p&gt;
-&lt;!-- 
+&lt;!--
 ## Resources
 
 ### Primers
