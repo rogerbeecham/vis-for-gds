@@ -429,7 +429,6 @@ library(fst) # Fast/efficient working with tbls.
 library(sf) # Spatial operations
 library(lubridate) # Work with dates
 library(here) # For navigating project directory
-library(piggyback) # For download of large files from a git repository.
 # install.packages(&quot;geosphere&quot;) # Uncomment to install.
 # remotes::install_github(&quot;ropensci/bikedata&quot;) # API to TfL&#39;s trip data. Uncomment to run.
 library(bikedata)
@@ -440,7 +439,7 @@ library(bikedata)
 <div id="import" class="section level3">
 <h3>Import</h3>
 <p>You might notice that available via the <code>bikedata</code> package are trip and occupancy data for a number of bikeshare schemes. To see which are available, type <code>bike_cities()</code> into the Console. We will collect data for New York’s <a href="https://www.citibikenyc.com/">citibike</a> scheme using the <code>dl_bikedata()</code> function. Querying the documentation (with <code>?dl_bikedata()</code>) you will notice that there are several parameters to set here: the city/ scheme (<code>city = &quot;citibike&quot;</code>), time period (<code>dates = 2020</code> - we’ll look at data from 2020). By default data are downloaded to a temporary directory <code>temp_dir()</code> and held in memory. <code>bikedata</code> also has a function for converting downloaded data to an SQLite3 database. SQLite databases can be called from <code>R</code> and have various advantages for efficient storage and querying.</p>
-<p>The code block below stores the data held in-memory to an SQLite database with <code>store_bikedata()</code>. The <a href="https://www.fstpackage.org/"><code>fst</code></a> package is then used for serializing and reading in the these data. <code>fst</code> implements in the background various operations such as multi-threading to reduce load on disk space – and therefore makes it possible to work with large datasets in-memory in <code>R</code>. Data are then written out to disk with a <code>.fst</code> and then read back into R. This code block takes some time to run and there is also a problem with how <code>bikedata</code> handles the New York record data. The code below is therefore for illustrative purposes – should you wish later in the module (for your coursework perhaps?) to work with other bikeshare data. Instead jump to the next code block where we download a version of the New York data from from an external repository that I have crated.</p>
+<p>The code block below stores the data held in-memory to an SQLite database with <code>store_bikedata()</code>. The <a href="https://www.fstpackage.org/"><code>fst</code></a> package is then used for serializing and reading in the these data. <code>fst</code> implements in the background various operations such as multi-threading to reduce load on disk space – and therefore makes it possible to work with large datasets in-memory in <code>R</code>. Data are then written out to disk with a <code>.fst</code> and then read back into R. This code block takes some time to run and there is also a problem with how <code>bikedata</code> handles the New York record data. The code below is therefore for illustrative purposes – should you wish to work with other bikeshare data. Instead jump to the next code block where we download a version of the New York data from from an external repository that I have created.</p>
 <pre class="r"><code># Create subdirectory in data folder for storing bike data.
 if(!dir.exists(here(&quot;data&quot;, &quot;bikedata&quot;))) dir.create(here(&quot;data&quot;, &quot;bikedata&quot;))
 # Download data for June 2020.
@@ -464,7 +463,7 @@ write_csv(stations, here(&quot;data&quot;, &quot;ny_stations.csv&quot;))
 # Clean workspace
 bike_rm_db(bikedb)
 rm(db,stations, trips, bikedb)</code></pre>
-<p>So run the code block below to download the extracted data to your project’s data folder. Note that you should only run the import code below once. When returning to this work in a new R session, you need only then read in the <code>ny_trips.fst</code> and <code>ny_stations.csv</code> file that is held locally on your machines.</p>
+<p>So run the code block below to download the extracted data to your project’s data folder. Note that you should only run the import code below once. When returning to this work in a new R session, you need only then read in the <code>ny_trips.fst</code> and <code>ny_stations.csv</code> file that is held locally on your machines. Unfortunately due to storage limitations I had to make <code>ny_trips.fst</code> just a 500k random sample of the c.2million records that appear in the session.</p>
 <pre class="r"><code># Create subdirectory in data folder for storing bike data.
 if(!dir.exists(here(&quot;data&quot;, &quot;bikedata&quot;))) dir.create(here(&quot;data&quot;, &quot;bikedata&quot;))
 

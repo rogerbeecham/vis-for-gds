@@ -456,9 +456,9 @@ write_fst(casualties_all, here(&quot;data&quot;, &quot;casualties_all.fst&quot;)
 write_fst(vehicles_all, here(&quot;data&quot;, &quot;vehicles_all.fst&quot;))
 
 # And read in as`.fst`.
-vehicles_all &lt;- read_fst(&quot;/Users/roger/Downloads/vehicles_all.fst&quot;)
-casualties_all &lt;- read_fst(&quot;/Users/roger/Downloads/casualties_all.fst&quot;)
-crashes_all &lt;- read_fst(&quot;/Users/roger/Downloads/crashes_all.fst&quot;)</code></pre>
+vehicles_all &lt;- read_fst(here(&quot;data&quot;, &quot;vehicles_all.fst&quot;))
+casualties_all &lt;- read_fst(here(&quot;data&quot;, &quot;casualties_all.fst&quot;))
+crashes_all &lt;- read_fst(here(&quot;data&quot;, &quot;crashes_all.fst&quot;))</code></pre>
 <p>Run the code block below to generate the derived dataset of pedestrian casualties used in the class session and homework.</p>
 <pre class="r"><code># Data frame of all pedestrian casualties.
 ped_veh &lt;- crashes_all %&gt;%
@@ -537,7 +537,12 @@ ped_veh &lt;- ped_veh %&gt;%
 <h2>Homework</h2>
 <div id="visualization-design-challenge" class="section level3">
 <h3>Visualization design challenge</h3>
+<p>Uncomment the code block below (remove the “#” and insert the path to you figure as an argument to the <code>include_graphics()</code> function.</p>
 <!-- ![](<insert-path-to-figure-here>) -->
+</div>
+</div>
+<div id="r-vis-design-challenge-echofalse-fig.capinsert-figure-caption-here-fig.alignleft-out.width100-include_graphicspath-to-figure-error-false" class="section level1">
+<h1><code>{r vis-design-challenge, echo=FALSE, fig.cap=&quot;&lt;insert figure caption here&gt;&quot;, fig.align=&quot;left&quot;,  out.width=&quot;100%&quot;} # include_graphics(&quot;&lt;path-to-figure&gt;&quot;, error = FALSE) #</code></h1>
 <pre class="r"><code>#######################
 # Enter your code in the chunk provided.
 ######################</code></pre>
@@ -589,7 +594,6 @@ ped_veh &lt;- ped_veh %&gt;%
 </tr>
 </tbody>
 </table>
-</div>
 </div>
 
 

@@ -51,9 +51,9 @@ write_fst(casualties_all, here("data", "casualties_all.fst"))
 write_fst(vehicles_all, here("data", "vehicles_all.fst"))
 
 # And read in as`.fst`.
-vehicles_all <- read_fst("/Users/roger/Downloads/vehicles_all.fst")
-casualties_all <- read_fst("/Users/roger/Downloads/casualties_all.fst")
-crashes_all <- read_fst("/Users/roger/Downloads/crashes_all.fst")
+vehicles_all <- read_fst(here("data", "vehicles_all.fst"))
+casualties_all <- read_fst(here("data", "casualties_all.fst"))
+crashes_all <- read_fst(here("data", "crashes_all.fst"))
 ```
 
 Run the code block below to generate the derived dataset of pedestrian casualties used in the class session and homework.
