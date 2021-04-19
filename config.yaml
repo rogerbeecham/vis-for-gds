@@ -73,3 +73,5 @@ ignoreFiles:
   - \.utf8\\.md$
   - _files$
   - _cache$
+  - \.graffle$
+  - \.pdf$

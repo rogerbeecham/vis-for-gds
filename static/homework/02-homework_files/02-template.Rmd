@@ -22,7 +22,6 @@ library(fst) # Fast/efficient working with tbls.
 library(sf) # Spatial operations
 library(lubridate) # Work with dates
 library(here) # For navigating project directory
-library(piggyback) # For download of large files from a git repository.
 # install.packages("geosphere") # Uncomment to install.
 # remotes::install_github("ropensci/bikedata") # API to TfL's trip data. Uncomment to run.
 library(bikedata)
@@ -36,7 +35,7 @@ library(bikedata)
 You might notice that available via the `bikedata` package are trip and occupancy data for a number of bikeshare schemes. To see which are available, type `bike_cities()` into the Console. We will collect data for New York's [citibike](https://www.citibikenyc.com/) scheme using the `dl_bikedata()` function. Querying the documentation (with `?dl_bikedata()`) you will notice that there are several parameters to set here: the city/ scheme (`city = "citibike"`), time period (`dates = 2020` - we'll look at data from 2020). By default data are downloaded to a temporary directory `temp_dir()` and held in memory.  `bikedata` also has a function for converting downloaded data to an SQLite3 database. SQLite databases can be called from `R` and have various advantages for efficient storage and querying.
 
 The code block below stores the data held in-memory to an SQLite database with `store_bikedata()`.
-The [`fst`](https://www.fstpackage.org/) package is then used for serializing and reading in the these data. `fst` implements in the background various operations such as multi-threading to reduce load on disk space -- and therefore makes it possible to work with large datasets in-memory in `R`. Data are then written out to disk with a `.fst` and then read back into R. This code block takes some time to run and there is also a problem with how `bikedata` handles the New York record data. The code below is therefore for illustrative purposes -- should you wish later in the module (for your coursework perhaps?) to work with other bikeshare data. Instead jump to the next code block where we download a version of the New York data from from an external repository that I have crated.
+The [`fst`](https://www.fstpackage.org/) package is then used for serializing and reading in the these data. `fst` implements in the background various operations such as multi-threading to reduce load on disk space -- and therefore makes it possible to work with large datasets in-memory in `R`. Data are then written out to disk with a `.fst` and then read back into R. This code block takes some time to run and there is also a problem with how `bikedata` handles the New York record data. The code below is therefore for illustrative purposes -- should you wish to work with other bikeshare data. Instead jump to the next code block where we download a version of the New York data from from an external repository that I have created.
 
 
 ```{r import-raw, echo=TRUE, eval=FALSE, message=FALSE}
@@ -65,7 +64,7 @@ bike_rm_db(bikedb)
 rm(db,stations, trips, bikedb)
 ```
 
-So run the code block below to download the extracted data to your project's data folder. Note that you should only run the import code below once. When returning to this work in a new R session, you need only then read in the `ny_trips.fst` and `ny_stations.csv` file that is held locally on your machines.
+So run the code block below to download the extracted data to your project's data folder. Note that you should only run the import code below once. When returning to this work in a new R session, you need only then read in the `ny_trips.fst` and `ny_stations.csv` file that is held locally on your machines. Unfortunately due to storage limitations I had to make `ny_trips.fst` just a 500k random sample of the c.2million records that appear in the session.
 
 ```{r import-collected, echo=TRUE, eval=FALSE, message=FALSE}
 # Create subdirectory in data folder for storing bike data.

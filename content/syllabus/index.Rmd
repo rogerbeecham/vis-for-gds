@@ -27,7 +27,7 @@ The course emphasises real-world applications. You will work with both new, larg
 
 ## Module objectives
 
-By the end of the course you will
+By the end of the course you will:
 
 1.	Describe, process and combine geographic datasets from a range of sources
 2.	Design statistical graphics that expose structure in geographic data and that are underpinned by established principles in information visualization and cartography
@@ -36,10 +36,10 @@ By the end of the course you will
 
 ## Assessment
 
-A detailed and formal description of the Assessment for this module can be found on the [Minerva]() pages. The summative assessment consists of:
+A detailed and formal description of the Assessment for this module can be found on the [Minerva](https://minerva.leeds.ac.uk/webapps/blackboard/content/listContentEditable.jsp?content_id=_7985647_1&course_id=_521510_1&mode=reset) pages. The summative assessment consists of:
 
-* 30% (Decrease to 20%) - Portfolio of work from completing session [homework](/homework/)
-* 70% (Increase to 80%) - Fully reproducible project report
+* 30% - Portfolio of work from completing session [homeworks](/homework/) 2-5 (1500 word equivalent)
+* 70% - Visual data analysis report (2500 word equivalent)
 
 ## Software
 
@@ -55,7 +55,7 @@ The home for this module is [this website](../../). From here, you will find the
 
 As you work through the course materials you will notice special icons are used to distinguish **learning outcomes** <i class="fas fa-chevron-circle-down"></i> and **instructions**  <i class="fas fa-tasks"></i> that need to be completed, along with important informational asides <i class="fas fa-info-circle"></i>. Do pay special attention to these, and in particular revisit the **learning outcomes** <i class="fas fa-chevron-circle-down"></i> as you progress through the sessions.
 
- Use [Minerva]() to access the [Module  Handbook]() and to upload assignments in the usual way.
+ Use [Minerva](https://minerva.leeds.ac.uk/) to access the [Module  Handbook](https://minerva.leeds.ac.uk/webapps/blackboard/execute/announcement?method=search&context=course&course_id=_521510_1&handle=cp_announcements&mode=cpview) and to upload assignments in the usual way.
 
 ## Self-guided learning
 
@@ -77,12 +77,12 @@ In return, I expect you to:
 
 ## Slack
 
-A key mechanism through which you can **participate** is by contributing to the discussion forum. Engaging fully with this will help to foster a sort of collegiate atmosphere on the module that will maximise your learning. I have set up a course [Slack](), which should provide a useful mechanism for sharing information, resources and importantly posting and discussing `code`.
+A key mechanism through which you can **participate** is by contributing to the discussion forum. Engaging fully with this will help to foster a sort of collegiate atmosphere on the module that will maximise your learning. I have set up a course [Slack](https://vis-for-gds.slack.com), which should provide a useful mechanism for sharing information, resources and importantly posting and discussing `code`.
 
 If you've not used Slack before, then follow these pages on [getting started with Slack](https://slack.com/intl/en-gb/help/articles/218080037-Getting-started-for-new-members). You should post all substantive questions associated with the module to Slack. These will get answered. If you wish to discuss more personal matters around your completing the course, then send those directly to me via e-mail.
 
 {{% alert instruction %}}
-Create an account on the [vis-for-gds Slack](). Be sue to register with you `.leeds.ac.uk` e-mail. If you run into any problems, try [getting started with Slack](https://slack.com/intl/en-gb/help/articles/218080037-Getting-started-for-new-members).
+Create an account on the [vis-for-gds Slack](https://vis-for-gds.slack.com). Be sue to register with you `.leeds.ac.uk` e-mail. If you run into any problems, try [getting started with Slack](https://slack.com/intl/en-gb/help/articles/218080037-Getting-started-for-new-members).
 {{% /alert  %}}
 
 ## Asking questions
@@ -91,9 +91,9 @@ As many of you will be learning to program in R for the first time, you should e
 
 *How* you respond to these obstacles is important. In a face-to-face lab, the temptation when hitting a problem is to raise your hand, gesture towards your screen and have a demonstrator 'de-bug' for you. Whilst this may initially seem like an efficient solution, you risk learning very little if this is your only course of action.
 
-When you encounter problems working through the material in this course, try to force yourself to spend 15-20 minutes troubleshooting the problem individually. [Google](https://www.google.com/) your problem or try [StackOverflow](https://stackoverflow.com/). If you are not able to resolve the problem on your own, then post your question to the course [Slack](), which I will monitor regularly. When doing this, make an effort to be specific and unambiguous about your problem. You might wish to consult StackOverflow's guidance on [how to ask a good question](https://stackoverflow.com/help/how-to-ask).
+When you encounter problems working through the material in this course, try to force yourself to spend 15-20 minutes troubleshooting the problem individually. [Google](https://www.google.com/) your problem or try [StackOverflow](https://stackoverflow.com/). If you are not able to resolve the problem on your own, then post your question to the course [Slack](https://vis-for-gds.slack.com), which I will monitor regularly. When doing this, make an effort to be specific and unambiguous about your problem. You might wish to consult StackOverflow's guidance on [how to ask a good question](https://stackoverflow.com/help/how-to-ask).
 
-<!-- 
+<!--
 ## Resources
 
 ### Primers

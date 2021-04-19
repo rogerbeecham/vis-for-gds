@@ -1,8 +1,8 @@
 ---
 title: "Introduction"
 linktitle: "1: Introduction"
-date: "2021-06-01"
-class_date: "2021-06-01"
+date: "2021-05-24"
+class_date: "2021-05-24"
 citeproc: true
 bibliography: ../../static/bib/references.bib
 csl: ../../static/bib/chicago-syllabus-no-bib.csl

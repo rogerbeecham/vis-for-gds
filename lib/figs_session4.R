@@ -2599,7 +2599,7 @@ plot <- plot_dist + plot_annotation(title="IMD quintile of homeplace of pedestri
                                                          caption="Stats19 data accessed via `stats19` package",
                                                          theme = theme_v_gds())
 
-ggsave(filename="./static/class/04-class_files/imd-driver-cas-crash-dist.png", plot=plot,width=9, height=3.2, dpi=300)
+ggsave(filename="./static/class/04-class_files/imd-geodemog-dist.png", plot=plot,width=9, height=3.2, dpi=300)
 
 
 

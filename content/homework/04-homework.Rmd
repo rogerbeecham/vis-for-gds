@@ -1,8 +1,8 @@
 ---
 title: "Exploratory data analysis"
 linktitle: "4: Exploratory data analysis"
-date: "2021-06-01"
-class_date: "2021-06-01"
+date: "2021-06-14"
+class_date: "2021-06-14"
 citeproc: true
 bibliography: ../../static/bib/references.bib
 csl: ../../static/bib/chicago-author-date.csl
@@ -29,9 +29,9 @@ library(knitr)
 By the end of this homework session you should be able to:
 
 {{% alert objective %}}
-- [x]
-- [x]
-- [x]
+- [x] Write ggplot2 specifications of your own that use colour and layout to support summary and comparison.
+- [x] Formally describe data graphics according to their visual encoding.
+- [x] Identify visual (and computational) techniques for supporting comparison.
 {{% /alert %}}
 
 ## Introduction
@@ -50,8 +50,10 @@ In the session we discussed visual approaches to summarising within-variable var
 
 Your task is to generate a *single* data graphic (I would class Figure \@ref(fig:boxplots-class) as a single graphic) to summarise how casualty age varies by some other interesting combination of categorical variable. For example, you may wish to explore how casualty age varies by injury severity.
 
-Once you have generated the graphic, save it as a `.png` file and insert a link to it in the associated code block in the [<i class="fab fa-r-project"></i> 04-template.Rmd](/homework/04-homework_files/04-template.Rmd). Next, complete the table that asks you to describe your graphic according to its visual encoding. You may also wish to note how *comparison* is being enable -- via juxtaposition, superposition and/or direct encoding [@gleicher_visual_2011].
+Once you have generated the graphic, save it as a `.png` file and insert a link to it in the associated code block in the [<i class="fab fa-r-project"></i> 04-template.Rmd](/homework/04-homework_files/04-template.Rmd). Next, complete the table that asks you to describe your graphic according to its visual encoding. After the table, and using *no more than three sentences**, note how your graphic and any computed values support *comparison* -- e.g. via juxtaposition, superposition and/or direct encoding [@gleicher_visual_2011].
 
+
+* [Save your plot](https://r4ds.had.co.nz/graphics-for-communication.html#saving-your-plots) as a `.png` file and insert the file as a Figure into your `.Rmd` document ([guidance here](https://rmd4sci.njtierney.com/figures-tables-captions-.html)).
 
 
 ```{r design-challenge-code, echo=TRUE, eval=FALSE}
@@ -69,5 +71,13 @@ Once you have generated the graphic, save it as a `.png` file and insert a link 
 | `...`          |`...`              |  `...`           | `...`           |
 | `...`          |`...`              |  `...`           | `...`           |
 | `...`          |`...`              |  `...`           | `...`           |
+
+
+```{r comparison, echo=TRUE, eval=FALSE}
+#######################
+# Text here explaining how your graphic, and any computed values, support comparison. No more than three sentences.
+######################
+```
+
 
 ## References

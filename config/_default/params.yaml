@@ -103,11 +103,11 @@ instructor:
 
 course:
   number: "GEOG5009M"
-  semester: "Spring 2021"
-  days: "Wednesdays"
-  time: "10:00 - 12:00"
+  semester: "Spring/Summer 2021"
+  days: "ODL"
+  time: "ODL"
   location: "ODL"
-  dates: "25th May - 13th Jul"
+  dates: "24th May - 30th Jul"
   github: "rogerbeecham/vis-for-gds"
   copyrightYear: "2021"
 

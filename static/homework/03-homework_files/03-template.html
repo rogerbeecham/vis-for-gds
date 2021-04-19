@@ -436,21 +436,21 @@ library(parlitools)</code></pre>
 <p>Installing <code>parlitools</code> brings down the 2019 UK General Election dataset, along with other consitituency-level datasets. Loading it with <code>library(parlitools)</code> makes these data available to your R session. The dataset containing 2019 UK General Election data is called <code>bes_2019</code>. This contains results data released by <a href="https://commonslibrary.parliament.uk/research-briefings/cbp-8749/">House of Commons Library</a>.</p>
 <p>We also need to import geographic boundary data for Parliamentary Constituencies. This can be collected from <a href="https://geoportal.statistics.gov.uk/">ONS Open Geography Portal</a>. I have generated a simplified version of these geometries using <a href="https://github.com/mbloch/mapshaper">mapshaper</a> and posted to a repository. Run the code below to import into your R session.</p>
 <pre class="r"><code>url &lt;- &quot;https://www.roger-beecham.com/datasets/cons_outline.geojson&quot;
-cons_outline &lt;- st_read(url, crs=27700) </code></pre>
+cons_outline &lt;- st_read(url, crs=27700)</code></pre>
 <pre><code>## Reading layer `datasets&#39; from data source `https://www.roger-beecham.com/datasets/cons_outline.geojson&#39; using driver `GeoJSON&#39;
 ## Simple feature collection with 650 features and 9 fields
-## geometry type:  MULTIPOLYGON
-## dimension:      XY
-## bbox:           xmin: 406.301 ymin: 11553.24 xmax: 655653.8 ymax: 1217907
-## CRS:            EPSG:27700</code></pre>
+## Geometry type: MULTIPOLYGON
+## Dimension:     XY
+## Bounding box:  xmin: 406.301 ymin: 11553.24 xmax: 655653.8 ymax: 1217907
+## CRS:           EPSG:27700</code></pre>
 <p>To generate a version of the 2019 data limited to GB, and with the Swing variable (<code>swing_con_lab</code>) run the code below.</p>
 <pre class="r"><code>data_gb &lt;- bes_2019 %&gt;%
-  filter(region != &quot;Northern Ireland&quot;) %&gt;% 
+  filter(region != &quot;Northern Ireland&quot;) %&gt;%
   mutate(
     swing_con_lab=0.5*((con_19-con_17)-(lab_19-lab_17)),
     # Recode to 0 Chorley incoming speaker,Buckingham outgoing speaker --  uncontested seat.
     swing_con_lab=if_else(constituency_name %in% c(&quot;Chorley&quot;, &quot;Buckingham&quot;),0,swing_con_lab)
-  ) </code></pre>
+  )</code></pre>
 </div>
 </div>
 <div id="homework" class="section level2">

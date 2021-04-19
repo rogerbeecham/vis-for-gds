@@ -1,8 +1,8 @@
 ---
 title: "Data fundamentals: Describe, wrangle, tidy"
 linktitle: "2: Data fundamentals"
-date: "2021-05-18"
-class_date: "2021-05-18"
+date: "2021-05-31"
+class_date: "2021-05-31"
 citeproc: true
 bibliography: ../../static/bib/references.bib
 csl: ../../static/bib/chicago-author-date.csl

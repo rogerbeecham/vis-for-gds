@@ -1,8 +1,8 @@
 ---
 title: "Visualization fundamentals: Codify, map, evaluate"
 linktitle: "3: Visualization fundamentals"
-date: "2021-05-25"
-class_date: "2021-05-25"
+date: "2021-06-07"
+class_date: "2021-06-07"
 citeproc: true
 bibliography: ../../static/bib/references.bib
 csl: ../../static/bib/chicago-author-date.csl
@@ -155,8 +155,7 @@ You might have noticed that in my descriptions of `ggplot2` specifications I int
 include_graphics("/class/03-class_files/munzner.png", error = FALSE)
 ```
 
-Figure
-\@ref(fig:munzner) is taken from Chapter 5 of @munzner_visualization_2014 and lists the main visual channels with which data might be encoded. The grouping and order of the Figure is meaningful. Channels are grouped according to the tasks to which they are best suited and then ordered according to their effectiveness at supporting those tasks. To the left are **magnitude:order** channels -- those that are best suited to tasks aimed at quantifying data items. Tothe Right are **identify:category** channels -- those that are most suited to supporting tasks that involve isolating, grouping and associating data items.
+Figure \@ref(fig:munzner) is taken from Chapter 5 of @munzner_visualization_2014 and lists the main visual channels with which data might be encoded. The grouping and order of the Figure is meaningful. Channels are grouped according to the tasks to which they are best suited and then ordered according to their effectiveness at supporting those tasks. To the left are **magnitude:order** channels -- those that are best suited to tasks aimed at quantifying data items. Tothe Right are **identify:category** channels -- those that are most suited to supporting tasks that involve isolating, grouping and associating data items.
 
 We can use this organisation of visual channels to make decisions about appropriate encodings given a variable's measurement level. If we wished to convey the magnitude of something, for example a quantitative (`ratio`) variable like the size of the Conservative vote share in a constituency, we might select a channel that has good quantitative effectiveness -- *position on a common scale* or *length*.  If we wished to also effectively identify and associate constituencies according to the political party that was elected, a categorical `nominal` variable, we might select a channel that has good associative properties such as *colour hue*.
 
@@ -664,7 +663,7 @@ data_gb %>%
   # Optionally add a layer for regional boundaries.
   # geom_sf(data=. %>% group_by(region) %>% summarise(), colour="#eeeeee", fill="transparent", size=0.08)+
   coord_sf(crs=27700, datum=NA) +
-  scale_fill_manual(values=party_colours) 
+  scale_fill_manual(values=party_colours)
 ```
 
 A breakdown of the `ggplot2` spec:

@@ -52,6 +52,9 @@ theme_v_gds <- function(base_size = 11, base_family = "Roboto Condensed") {
   return
 }
 
+# Set ggplot2 theme
+theme_set(theme_v_gds())
+
 ###############################################################################
 # S E S S I O N  1
 ###############################################################################
