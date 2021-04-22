@@ -5,12 +5,31 @@
     <link>/homework/</link>
       <atom:link href="/homework/index.xml" rel="self" type="application/rss+xml" />
     <description>Homework for sessions</description>
-    <generator>Wowchemy (https://wowchemy.com)</generator><lastBuildDate>Mon, 12 Jul 2021 00:00:00 +0000</lastBuildDate>
+    <generator>Wowchemy (https://wowchemy.com)</generator><lastBuildDate>Mon, 19 Jul 2021 00:00:00 +0000</lastBuildDate>
     <image>
       <url>/media/vis-for-gds.png</url>
       <title>Homework for sessions</title>
       <link>/homework/</link>
     </image>
+    
+    <item>
+      <title>Communication and storytelling</title>
+      <link>/homework/09-homework/</link>
+      <pubDate>Mon, 19 Jul 2021 00:00:00 +0000</pubDate>
+      <guid>/homework/09-homework/</guid>
+      <description>
+&lt;!-- BLOGDOWN-HEAD --&gt;
+&lt;link href=&#34;../rmarkdown-libs/anchor-sections/anchor-sections.css&#34; rel=&#34;stylesheet&#34; /&gt;
+&lt;script src=&#34;../rmarkdown-libs/anchor-sections/anchor-sections.js&#34;&gt;&lt;/script&gt;
+&lt;!-- /BLOGDOWN-HEAD --&gt;
+
+
+&lt;div id=&#34;session-outcomes&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Session Outcomes&lt;/h2&gt;
+&lt;p&gt;There is no formal homework session this time. There is, however, an extensive set of reading that you may wish to consult.&lt;/p&gt;
+&lt;/div&gt;
+</description>
+    </item>
     
     <item>
       <title>Uncertainty analysis</title>
@@ -329,7 +348,7 @@ Figure 1: Boxplots of casualty age by vehicle type and class.
 &lt;p&gt;This week’s homework is a single visualization design task. Please do not spend too long on this. The aim of is to get you thinking a little about the concepts introduced in the session rather than to overly burden you with additional work.&lt;/p&gt;
 &lt;p&gt;In the session we discussed visual approaches to summarising within-variable variation in a dataset and later the use of layout and colour for supporting &lt;em&gt;comparison&lt;/em&gt; across categories. In Figure &lt;a href=&#34;#fig:boxplots-class&#34;&gt;1&lt;/a&gt; above, boxplots are used to summarise the age distribution of those involved in pedestrian road crashes, comparing the ages of the injured pedestrians, drivers and how this varies by the vehicle types involved.&lt;/p&gt;
 &lt;p&gt;Your task is to generate a &lt;em&gt;single&lt;/em&gt; data graphic (I would class Figure &lt;a href=&#34;#fig:boxplots-class&#34;&gt;1&lt;/a&gt; as a single graphic) to summarise how casualty age varies by some other interesting combination of categorical variable. For example, you may wish to explore how casualty age varies by injury severity.&lt;/p&gt;
-&lt;p&gt;Once you have generated the graphic, save it as a &lt;code&gt;.png&lt;/code&gt; file and insert a link to it in the associated code block in the &lt;a href=&#34;../homework/04-homework_files/04-template.Rmd&#34;&gt;&lt;i class=&#34;fab fa-r-project&#34;&gt;&lt;/i&gt; 04-template.Rmd&lt;/a&gt;. Next, complete the table that asks you to describe your graphic according to its visual encoding. After the table, and using *no more than three sentences**, note how your graphic and any computed values support &lt;em&gt;comparison&lt;/em&gt; – e.g. via juxtaposition, superposition and/or direct encoding &lt;span class=&#34;citation&#34;&gt;(Gleicher and Roberts &lt;a href=&#34;#ref-gleicher_visual_2011&#34; role=&#34;doc-biblioref&#34;&gt;2011&lt;/a&gt;)&lt;/span&gt;.&lt;/p&gt;
+&lt;p&gt;Once you have generated the graphic, save it as a &lt;code&gt;.png&lt;/code&gt; file and insert a link to it in the associated code block in the &lt;a href=&#34;../homework/04-homework_files/04-template.Rmd&#34;&gt;&lt;i class=&#34;fab fa-r-project&#34;&gt;&lt;/i&gt; 04-template.Rmd&lt;/a&gt;. Next, complete the table that asks you to describe your graphic according to its visual encoding. After the table, and using &lt;strong&gt;no more than three sentences&lt;/strong&gt;, note how your graphic and any computed values support &lt;em&gt;comparison&lt;/em&gt; – e.g. via juxtaposition, superposition and/or direct encoding &lt;span class=&#34;citation&#34;&gt;(Gleicher and Roberts &lt;a href=&#34;#ref-gleicher_visual_2011&#34; role=&#34;doc-biblioref&#34;&gt;2011&lt;/a&gt;)&lt;/span&gt;.&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&#34;https://r4ds.had.co.nz/graphics-for-communication.html#saving-your-plots&#34;&gt;Save your plot&lt;/a&gt; as a &lt;code&gt;.png&lt;/code&gt; file and insert the file as a Figure into your &lt;code&gt;.Rmd&lt;/code&gt; document (&lt;a href=&#34;https://rmd4sci.njtierney.com/figures-tables-captions-.html&#34;&gt;guidance here&lt;/a&gt;).&lt;/li&gt;
 &lt;/ul&gt;
@@ -597,6 +616,7 @@ Figure 4: Map of 2016 EU Referendum vote, estimated by Parliamentary Constituenc
 &lt;/ul&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;#task-3-fix-data&#34;&gt;Task 3: Fix data&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;#task-4-compute-from-data&#34;&gt;Task 4: Compute from data&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#references&#34;&gt;References&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/div&gt;
 
@@ -619,7 +639,7 @@ Figure 4: Map of 2016 EU Referendum vote, estimated by Parliamentary Constituenc
 &lt;/div&gt;
 &lt;div id=&#34;introduction&#34; class=&#34;section level2&#34;&gt;
 &lt;h2&gt;Introduction&lt;/h2&gt;
-&lt;p&gt;This homework requires you to apply the concepts and skills developed in the class session on &lt;a href=&#34;../02-class/&#34;&gt;data fundamentals&lt;/a&gt;. Do complete each of the tasks and be sure to save your work as this homework will be submitted as part of your portfolio for Assignment 1.&lt;/p&gt;
+&lt;p&gt;This homework requires you to apply the concepts and skills developed in the class session on &lt;a href=&#34;../class/02-class/&#34;&gt;data fundamentals&lt;/a&gt;. Do complete each of the tasks and be sure to save your work as this homework will be submitted as part of your portfolio for Assignment 1.&lt;/p&gt;
 &lt;/div&gt;
 &lt;div id=&#34;task-1-describe-data&#34; class=&#34;section level2&#34;&gt;
 &lt;h2&gt;Task 1: Describe data&lt;/h2&gt;
@@ -668,7 +688,7 @@ Figure 4: Map of 2016 EU Referendum vote, estimated by Parliamentary Constituenc
 &lt;/div&gt;
 &lt;div id=&#34;task-2-diagnose-data&#34; class=&#34;section level2&#34;&gt;
 &lt;h2&gt;Task 2: Diagnose data&lt;/h2&gt;
-&lt;p&gt;Below are two different tables with results from UK General Elections. We will be working with these data in the next session. Identify whether or not each is in &lt;strong&gt;tidy&lt;/strong&gt; format [&lt;span class=&#34;citation&#34;&gt;H. Wickham “Tidy Data,” &lt;em&gt;Journal of Statistical Software&lt;/em&gt; 59, no. 10 (&lt;a href=&#34;#ref-wickham_tidy_2014&#34; role=&#34;doc-biblioref&#34;&gt;2014&lt;/a&gt;): 1–23.&lt;/span&gt; If they are not, provide a layout for a tidy version. No need to use code here, just edit the markdown table. If you’re struggling to work out how to organise markdown tables, you may wish to use this &lt;a href=&#34;https://www.tablesgenerator.com/markdown_tables&#34;&gt;tables generator&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Below are two different tables with results from UK General Elections. We will be working with these data in the next session. Identify whether or not each is in &lt;strong&gt;tidy&lt;/strong&gt; format &lt;span class=&#34;citation&#34;&gt;(Wickham &lt;a href=&#34;#ref-wickham_tidy_2014&#34; role=&#34;doc-biblioref&#34;&gt;2014&lt;/a&gt;)&lt;/span&gt;. If they are not, provide a layout for a tidy version. No need to use code here, just edit the markdown table. If you’re struggling to work out how to organise markdown tables, you may wish to use this &lt;a href=&#34;https://www.tablesgenerator.com/markdown_tables&#34;&gt;tables generator&lt;/a&gt;.&lt;/p&gt;
 &lt;div id=&#34;uk-general-election-results-2019&#34; class=&#34;section level3&#34;&gt;
 &lt;h3&gt;UK General Election Results 2019&lt;/h3&gt;
 &lt;table&gt;
@@ -763,7 +783,7 @@ Figure 4: Map of 2016 EU Referendum vote, estimated by Parliamentary Constituenc
 &lt;div id=&#34;task-3-fix-data&#34; class=&#34;section level2&#34;&gt;
 &lt;h2&gt;Task 3: Fix data&lt;/h2&gt;
 &lt;p&gt;In the &lt;a href=&#34;../homework/02-homework_files/02-template.Rmd&#34;&gt;&lt;i class=&#34;fab fa-r-project&#34;&gt;&lt;/i&gt; 02-template.Rmd&lt;/a&gt; file for this session I have provided links to two derived tables (&lt;code&gt;ny_spread_columns&lt;/code&gt; and &lt;code&gt;ny_spread_rows&lt;/code&gt;) from the New York bikeshare trip data that are not in a tidy format.&lt;/p&gt;
-&lt;p&gt;Using functions from &lt;code&gt;dplyr&lt;/code&gt; and &lt;code&gt;tidyr&lt;/code&gt; reorganise these data so that they are conform to the rules of &lt;strong&gt;tidy&lt;/strong&gt; data &lt;span class=&#34;citation&#34;&gt;Wickham, “Tidy Data.”&lt;/span&gt;.&lt;/p&gt;
+&lt;p&gt;Using functions from &lt;code&gt;dplyr&lt;/code&gt; and &lt;code&gt;tidyr&lt;/code&gt; reorganise these data so that they are conform to the rules of &lt;strong&gt;tidy&lt;/strong&gt; data &lt;span class=&#34;citation&#34;&gt;(Wickham &lt;a href=&#34;#ref-wickham_tidy_2014&#34; role=&#34;doc-biblioref&#34;&gt;2014&lt;/a&gt;)&lt;/span&gt;.&lt;/p&gt;
 &lt;p&gt;A candidate tidy organisation of the data is below. Each row is an origin-destination pair for a weekday or weekend, and each variable describes:&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;code&gt;o_station&lt;/code&gt;: station id of the origin station&lt;/li&gt;
@@ -791,6 +811,14 @@ Figure 4: Map of 2016 EU Referendum vote, estimated by Parliamentary Constituenc
 &lt;div id=&#34;task-4-compute-from-data&#34; class=&#34;section level2&#34;&gt;
 &lt;h2&gt;Task 4: Compute from data&lt;/h2&gt;
 &lt;p&gt;Using &lt;code&gt;dplyr&lt;/code&gt; functions, calculate the average distance, duration and speed of trips occuring for each observation. Print out to the Console the top 10 most heavily cycled OD pairs (and their associated summary statistics) separately for weekdays and weekends. You may wish to join on your &lt;code&gt;ny_stations&lt;/code&gt; table in order to fetch the station names corresponding to the origin and destination stations.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;references&#34; class=&#34;section level2 unnumbered&#34;&gt;
+&lt;h2&gt;References&lt;/h2&gt;
+&lt;div id=&#34;refs&#34; class=&#34;references&#34;&gt;
+&lt;div id=&#34;ref-wickham_tidy_2014&#34;&gt;
+&lt;p&gt;Wickham, H. 2014. “Tidy Data.” &lt;em&gt;Journal of Statistical Software&lt;/em&gt; 59 (10): 1–23.&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
 &lt;/div&gt;
 </description>
     </item>
@@ -836,7 +864,7 @@ Figure 4: Map of 2016 EU Referendum vote, estimated by Parliamentary Constituenc
 &lt;/div&gt;
 &lt;div id=&#34;introduction&#34; class=&#34;section level2&#34;&gt;
 &lt;h2&gt;Introduction&lt;/h2&gt;
-&lt;p&gt;For each session I will post some additional exercises that relate to the practical learning you will be doing in-class. You will be populating R Markdown files as you complete the exercises. The exercises will vary in detail and challenge but you should try your best effort to complete them as they will form a portfolio of work that will contribute 25% of the module mark. Doing these exercises will also help you build the skills necessary to complete the project coursework that forms the main contribution to your module mark (75%).&lt;/p&gt;
+&lt;p&gt;For most sessions I will post some additional exercises that relate to the practical learning you will be doing in-class. You will be populating R Markdown files as you complete the exercises. The exercises will vary in detail and challenge but you should try your best effort to complete them as they will form a portfolio of work that will contribute 30% of the module mark. Doing these exercises will also help you build the skills necessary to complete the project coursework that forms the main contribution to your module mark (70%).&lt;/p&gt;
 &lt;p&gt;There has been a lot to take in this session. There are no formal exercises to complete as part of this session’s homework. Instead we want you to really try to solidify your understanding of the core technology for the module.&lt;/p&gt;
 &lt;/div&gt;
 &lt;div id=&#34;task-1-read-and-complete-basicbasics&#34; class=&#34;section level2&#34;&gt;

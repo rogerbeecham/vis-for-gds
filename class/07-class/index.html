@@ -711,6 +711,11 @@
       </li>
 
       
+      <li >
+        <a href="../../class/09-class/">9: Visualization for communication and storytelling</a>
+      </li>
+
+      
     </ul>
     
 
@@ -1077,7 +1082,7 @@ summary(model)
 </div>
 <div id="conclusions" class="section level2">
 <h2>Conclusions</h2>
-<p>Geographic grouping of residuals is a common feature of area-level analysis, but should not be ignored as it suggests that there is some systematic context that is not captured well by the model. There are two different classes of approach to addressing geographic context: those that treat geographic dependence in the values of variables as a nuisance term that is to be quantified/captured and controlled away; and those that explicitly try to model for geographic grouping in processes. Through our analysis of 2016 EU Referendum dataset this session introduced techniques for dealing with both, treating geography as a <em>categorical</em> variable: introducing a Fixed Effect term to assess regional dependence and Interaction term to assess regional non-stationarity. It also reused some of the <code>dplyr</code> and <a href="https://purrr.tidyverse.org/">functional programming – <code>purrr</code></a> code templates from the previous session that are instrumental for working over models, and as we will see in the next session, for modern computational data analysis.</p>
+<p>Geographic grouping of residuals is a common feature of area-level analysis, but should not be ignored as it suggests that there is some systematic context that is not captured well by the model. There are two different classes of approach to addressing geographic context: those that treat geographic dependence in the values of variables as a nuisance term that is to be quantified/captured and controlled away; and those that explicitly try to model for geographic grouping in processes. Through our analysis of 2016 EU Referendum dataset this session introduced techniques for dealing with both, treating geography as a <em>categorical</em> variable: introducing a Fixed Effect term to assess regional dependence and Interaction term to assess regional non-stationarity. It also reused some of the <code>dplyr</code> and <a href="https://purrr.tidyverse.org/">functional programming</a> code templates from the previous session that are instrumental for working over models, and as we will see in the next session, for modern computational data analysis.</p>
 <!-- The last two sessions have used a regression framework to explore constituency-level variation in 2016 EU Referendum. The pattern of residuals in Figure \@ref(fig:plot-lineup) it is likely that there is some important context at play in determining the Leave vote in certain regions, most obviously Scotland, that we are not accounting for in our model.  -->
 <!-- This session dependence in values and non-stationarity in process is common in area-level regression analysis. This session introduced approaches to quantifying and exploring this, treating geography as a *categorical* variable.
 

@@ -423,12 +423,12 @@ summary {
 <p>The technical element to this session involves analysing <a href="https://data.gov.uk/dataset/cb7ae6f0-4be6-4935-9277-47e5ce24a11f/road-safety-data"><code>stats19</code></a> road crash data.</p>
 <div id="setup" class="section level3">
 <h3>Setup</h3>
-<p>The code block below points to the packages you need to do the work discussed in the session. Uncomment the <code>intall_packages()</code> lines if you have not already downloaded <code>stats19</code> and <code>trafficalmr</code>.</p>
+<p>The code block below points to the packages you need to do the work discussed in the session. Uncomment the <code>intall_packages()</code> lines if you have not already downloaded <code>stats19</code> and <code>trafficalmr</code>. Note that if you are having problems I ultimately make the main dataset used <code>ped_veh</code> available in a separate repo (see below “get-ped-veh” chunk).</p>
 <pre class="r"><code>library(tidyverse) # Bundle of packages for doing modern data analysis.
 library(sf) # Spatial operations
 library(here) # For navigating project directory
 library(fst) # For reading/writing large files.
-library(lubriadate) # For working with dates.
+library(lubridate) # For working with dates.
 
 # remotes::install_github(&quot;ropensci/stats19&quot;)
 library(stats19)
@@ -485,7 +485,14 @@ temp_ped_vehicles &lt;- vehicles_all %&gt;%
 ped_veh &lt;- ped_veh %&gt;% left_join(temp_ped_vehicles)
 # Remove temporary/staging data frame.
 rm(temp_ped_vehicles)</code></pre>
-<p>Run the code block below to recode IMD to quintiles.</p>
+<p>You may well have had problems due to the fact that we are working with a large dataset, so I have made <code>ped_veh</code> available on a personal repository. Run the block below ti download.</p>
+<pre class="r"><code># Dataset of pedestrian-vehicle crashes.
+url &lt;- &quot;https://www.roger-beecham.com/datasets/ped_veh.fst&quot;
+download.file(url, here(&quot;data&quot;, &quot;ped_veh.fst&quot;))
+ped_veh &lt;- fst::read_fst(here(&quot;data&quot;, &quot;ped_veh.fst&quot;))
+``
+
+Run the code block below  to recode IMD to quintiles.</code></pre>
 <pre class="r"><code># Recode imd into quintiles.
 ped_veh &lt;- ped_veh %&gt;%
   mutate(

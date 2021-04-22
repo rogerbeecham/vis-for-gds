@@ -14,7 +14,7 @@ The technical element to this session involves analysing data from the 2019 UK G
 
 ### Setup
 
-The code block below points to the packages you need to do the work discussed in the session. If you have been following the instructions from  the last session. The only new package to install is [`parlitools`](https://cran.r-project.org/web/packages/parlitools/index.html).
+The code block below points to the packages you need to do the work discussed in the session. If you have been following the instructions from  the last session, the only new package to install is [`parlitools`](https://cran.r-project.org/web/packages/parlitools/index.html).
 ```{r setup, echo=TRUE, eval=TRUE, message=FALSE}
 library(tidyverse) # Bundle of packages for doing modern data analysis.
 library(sf) # Spatial operations

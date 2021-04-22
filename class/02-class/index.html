@@ -711,6 +711,11 @@
       </li>
 
       
+      <li >
+        <a href="../../class/09-class/">9: Visualization for communication and storytelling</a>
+      </li>
+
+      
     </ul>
     
 
@@ -792,7 +797,7 @@
 <div class="alert alert-objective">
   <div>
     <ul>
-<li><input checked="" disabled="" type="checkbox"> <strong>Load</strong> flat file datasets RStudio via querying an API.</li>
+<li><input checked="" disabled="" type="checkbox"> <strong>Load</strong> flat file datasets in RStudio via querying an API.</li>
 <li><input checked="" disabled="" type="checkbox"> <strong>Calculate</strong> descriptive summaries over datasets.</li>
 <li><input checked="" disabled="" type="checkbox"> <strong>Apply</strong> high-level functions in <code>dplyr</code> and <code>tidyr</code> for working with data.</li>
 <li><input checked="" disabled="" type="checkbox"> <strong>Create</strong> statistical graphics that expose high-level structure in data for cleaning purposes.</li>
@@ -804,7 +809,7 @@
 </div>
 <div id="introduction" class="section level2">
 <h2>Introduction</h2>
-<p>This session covers some of the basics around how to describe and organise data. Whilst this might sound prosaic, there are several reasons why being able to consistently describe a dataset is important. First: it is the initial step in any analysis and helps delimit the research themes and technical procedures that can be deployed. This is especially relevant to modern Data Science-type workflows (like those supported by <code>tidyverse</code>), where it is common apply the same analysis templates for working over data. Describing your dataset with a consistent vocabulary enables you to identify which analysis templates to reuse. Second relates to the point in Session 1 that Geographic Data Science projects usually involve repurposing datasets for social science research for the first time. It is often not obvious whether the data contain sufficient detail and structure to characterise the target behaviours to be researched and the target populations they are assumed to represent. This leads to additional levels of uncertainty and places greater importance on the initial step of data processing, description and exploration.</p>
+<p>This session covers some of the basics around how to describe and organise data. Whilst this might sound prosaic, there are several reasons why being able to consistently describe a dataset is important. First: it is the initial step in any analysis and helps delimit the research themes and technical procedures that can be deployed. This is especially relevant to modern Data Science-type workflows (like those supported by <code>tidyverse</code>), where it is common apply the same analysis templates for working over data. Describing your dataset with a consistent vocabulary enables you to identify which analysis templates to reuse. Second relates to the point in <a href="../../class/01-class/">session 1</a> that Geographic Data Science projects usually involve repurposing datasets for social science research for the first time. It is often not obvious whether the data contain sufficient detail and structure to characterise the target behaviours to be researched and the target populations they are assumed to represent. This leads to additional levels of uncertainty and places greater importance on the initial step of data processing, description and exploration.</p>
 <p><!-- Data will be "messy", with missing observations, potentially inconsistent structure and levels of precision.
 Paying attention to   --></p>
 <p>Through the session we will learn both language and concepts for describing and thinking about data, but also how to deploy some of the most important data processing and organisation techniques in <code>R</code> to wrangle over a real dataset. We will be working throughout with data from New York’s <a href="https://www.citibikenyc.com/">Citibike</a> scheme, accessed through the <code>bikedata</code> package, an API to Citibike’s <a href="https://www.citibikenyc.com/system-data">publicly available origin-destination trip data</a>.</p>
@@ -821,7 +826,7 @@ Paying attention to   --></p>
 <h2>Concepts</h2>
 <div id="data-structure" class="section level3">
 <h3>Data structure</h3>
-<p>In the module we will work with <a href="http://adv-r.had.co.nz/Data-structures.html#data-frames">data frames</a> in R. These are spreadsheet like representations where rows are <strong>observations</strong> (case/record) and columns are <strong>variables</strong>. Each variable (column) in a data frame is a <a href="http://adv-r.had.co.nz/Data-structures.html#vectors">vector</a> that must be of equal length. Where observations have missing values for certain variables, therefore where they may violate this equal-length requirement, the missing values must be substituted with something, usually with <code>NA</code> or similar. This constraint occasionally causes difficulties, for example when working with variables that contain values of different length for an observation. In these cases we create a special class of column, a <a href="https://jennybc.github.io/purrr-tutorial/ls13_list-columns.html"><code>list-column</code></a>, something we’ll return to later in the module.</p>
+<p>In the module we will work with <a href="http://adv-r.had.co.nz/Data-structures.html#data-frames">data frames</a> in R. These are spreadsheet like representations where rows are <strong>observations</strong> (case/record) and columns are <strong>variables</strong>. Each variable (column) in a data frame is a <a href="http://adv-r.had.co.nz/Data-structures.html#vectors">vector</a> that must be of equal length. Where observations have missing values for certain variables, that is, where they may violate this equal-length requirement, the missing values must be substituted with something, usually with <code>NA</code> or similar. This constraint occasionally causes difficulties, for example when working with variables that contain values of different length for an observation. In these cases we create a special class of column, a <a href="https://jennybc.github.io/purrr-tutorial/ls13_list-columns.html"><code>list-column</code></a>, something we’ll return to later in the module.</p>
 <p>Organising data according this simple structure – rows as observations, columns as variables – makes working with data more straightforward. A specific set of tools, made available via the <code>tidyverse</code>, can be deployed for doing most data <strong>tidy</strong>ing tasks <span class="citation">(Wickham <a href="#ref-wickham_tidy_2014" role="doc-biblioref">2014</a>)</span>.</p>
 </div>
 <div id="types-of-variable" class="section level3">
@@ -946,7 +951,7 @@ Distances; prices
 </tbody>
 </table>
 <p>A classification you may have encountered for describing variables is that developed by <span class="citation">Stevens (<a href="#ref-stevens_on_1946" role="doc-biblioref">1946</a>)</span>, which considers the <em>level of measurement</em> of a variable. <span class="citation">Stevens (<a href="#ref-stevens_on_1946" role="doc-biblioref">1946</a>)</span> classed variables into two groups: variables that describe <em>categories</em> of things and variables that describe <em>measurements</em> of things. Categories include attributes like gender, titles, <code>Subscribers</code> or <code>Casual</code> users of a bikeshare scheme and ranked orders (1st, 2nd, 3rd largest etc.). Measurements include quantities like distance, age, travel time, number of journeys made on a bikeshare scheme.</p>
-<p>Categories can be further subdivided into those that are unordered (<strong>nominal</strong>) from those that are ordered (<strong>ordinal</strong>). Measurements can also be subdivided. <strong>Interval</strong> measurements are quantities that can be ordered and where the difference between two values is meaningful. <strong>Ratio</strong> measurements have both these properties, but also have a meaningful <code>0</code> – where <code>0</code> means the absence of something – and where the ratio of two values can be computed. The most common cited example of an interval measurement is temperature (in degrees C). Temperatures can be ordered and compared additively, but <code>0</code> degrees C does not mean the absence of temperature and 20 degrees C is not twice as “hot” as 10 degrees C. <strong>Add Cyclic ratio (measures bound to range – circle, clock time)</strong></p>
+<p>Categories can be further subdivided into those that are unordered (<strong>nominal</strong>) from those that are ordered (<strong>ordinal</strong>). Measurements can also be subdivided. <strong>Interval</strong> measurements are quantities that can be ordered and where the difference between two values is meaningful. <strong>Ratio</strong> measurements have both these properties, but also have a meaningful <code>0</code> – where <code>0</code> means the absence of something – and where the ratio of two values can be computed. The most common cited example of an interval measurement is temperature (in degrees C). Temperatures can be ordered and compared additively, but <code>0</code> degrees C does not mean the absence of temperature and 20 degrees C is not twice as “hot” as 10 degrees C.</p>
 <p>Why is this important? The measurement level of a variable determines the types of data analysis procedures that can be performed and therefore allows us to efficiently make decisions when working with a dataset for the first time (Table <a href="#tab:variable-types">1</a>).</p>
 </div>
 <div id="types-of-observation" class="section level3">
@@ -1171,11 +1176,11 @@ b
 </div>
 <div id="gapminder-population-dataset" class="section level4">
 <h4>Gapminder population dataset</h4>
-<p>In <a href="https://r4ds.had.co.nz/tidy-data.html#tidy-data-1">chapter 12</a> of <span class="citation">Wickham and Grolemund (<a href="#ref-wickham_r_2017" role="doc-biblioref">2017</a>)</span>, the benefits of this layout, particularly for working with R, are demonstrated with the canonical <a href="https://www.gapminder.org/data/"><code>gapminder</code></a> dataset. I recommend reading this short chapter in full. We will be applying similar approaches in the technique part of this class (which follows shortly) and also the <a href="">homework</a>. To consolidate our conceptual understanding of <strong>tidy</strong> data let’s quickly look at the <code>gapminder</code> data, as it is a dataset we’re probably more likely to encounter.</p>
+<p>In <a href="https://r4ds.had.co.nz/tidy-data.html#tidy-data-1">chapter 12</a> of <span class="citation">Wickham and Grolemund (<a href="#ref-wickham_r_2017" role="doc-biblioref">2017</a>)</span>, the benefits of this layout, particularly for working with R, are demonstrated with the <a href="https://www.gapminder.org/data/"><code>gapminder</code></a> dataset. I recommend reading this short chapter in full. We will be applying similar approaches in the technique part of this class (which follows shortly) and also the <a href="">homework</a>. To consolidate our conceptual understanding of <strong>tidy</strong> data let’s quickly look at the <code>gapminder</code> data, as it is a dataset we’re probably more likely to encounter.</p>
 <p>First, a <strong>tidy</strong> version of the data:</p>
 <table>
 <caption>
-<span id="tab:gapminder-tidy">Table 5: </span>Tidy excerpt of <a href="https://www.gapminder.org/data/"><code>gapminder</code></a> dataset.
+<span id="tab:gapminder-tidy">Table 5: </span>Tidy excerpt from <code>gapminder</code> dataset.
 </caption>
 <thead>
 <tr>
@@ -2131,15 +2136,15 @@ Figure 3: Histograms generated with <code>ggplot2</code>. Plot data computed usi
 </div>
 <div id="write-functions-of-your-own" class="section level4">
 <h4>Write functions of your own</h4>
-<p>Through most of the module we will be making use of functions written by others – mainly those developed for packages that form the <code>tidyverse</code> and therefore that follow a consistent syntax. However, there may be times where you need abstract over some of your code to make functions of your own. <a href="https://r4ds.had.co.nz/functions.html">Chapter 19</a> of <span class="citation">Wickham and Grolemund (<a href="#ref-wickham_r_2017" role="doc-biblioref">2017</a>)</span> presents some helpful guidelines around the circumstances under which the data scientist typically tends to write functions. Most often this is when you find yourself copy and pasting the same chunks of code with minimal adaptation.</p>
+<p>Through most of the module we will be making use of functions written by others – mainly those developed for packages that form the <code>tidyverse</code> and therefore that follow a consistent syntax. However, there may be times where you need to abstract over some of your code to make functions of your own. <a href="https://r4ds.had.co.nz/functions.html">Chapter 19</a> of <span class="citation">Wickham and Grolemund (<a href="#ref-wickham_r_2017" role="doc-biblioref">2017</a>)</span> presents some helpful guidelines around the circumstances under which the data scientist typically tends to write functions. Most often this is when you find yourself copy and pasting the same chunks of code with minimal adaptation.</p>
 <p>Functions have three key characteristics:</p>
 <ol style="list-style-type: decimal">
 <li>They are (usually) <strong>named</strong> – the name should be expressive and communicate what the function does (we talk about <code>dplyr</code> <strong>verbs</strong>).</li>
 <li>They have brackets <code>&lt;function()&gt;</code> usually containing <strong>arguments</strong> – inputs which determine what the function does and returns.</li>
-<li>Immediately followed by <code>&lt;function()&gt; are</code>` used to contain the <strong>body</strong> – in this is code that performs a distinct task, described by the function’s <strong>name</strong>.</li>
+<li>Immediately followed by <code>&lt;function()&gt;</code> are <code>{}</code> used to contain the <strong>body</strong> – in this is code that performs a distinct task, described by the function’s <strong>name</strong>.</li>
 </ol>
 <p>Effective functions are <strong>short</strong>, perform <strong>single</strong> discrete operations and are <strong>intuitive</strong>.</p>
-<p>You will recall that in the <code>ny_trips</code> table there a variable called <code>birth_year</code>. From this we can derive cyclists’ approximate age. Below I have written a function <code>get_age()</code> for doing this. The function expects two <strong>arguments</strong>: <code>yob</code> – a year of birth as type <code>chr</code>; <code>yref</code> – a reference year. In the <strong>body</strong>, <code>lubridate</code>’s <code>as.period</code> function is used to calculate the time in years that elapsed, the value that the function <strong>returns</strong>. Once defined, and loaded into the session by being executed, it can be used (as below).</p>
+<p>You will recall that in the <code>ny_trips</code> table there is a variable called <code>birth_year</code>. From this we can derive cyclists’ approximate age. Below I have written a function <code>get_age()</code> for doing this. The function expects two <strong>arguments</strong>: <code>yob</code> – a year of birth as type <code>chr</code>; <code>yref</code> – a reference year. In the <strong>body</strong>, <code>lubridate</code>’s <code>as.period</code> function is used to calculate the time in years that elapsed, the value that the function <strong>returns</strong>. Once defined, and loaded into the session by being executed, it can be used (as below).</p>
 <pre class="r"><code># Function for calculating time elapsed between two dates in years (age).
 get_age &lt;- function(yob, yref) {
     period &lt;- lubridate::as.period(lubridate::interval(yob, yref),unit = &quot;year&quot;)
@@ -2161,13 +2166,13 @@ Figure 4: Line charts generated with <code>ggplot2</code>. Plot data computed us
 </div>
 <div id="tidy" class="section level3">
 <h3>Tidy</h3>
-<p>The <code>ny_trips</code> and <code>ny_stations</code> data already comply with the rules for <strong>tidy</strong> data <span class="citation">(Wickham <a href="#ref-wickham_tidy_2014" role="doc-biblioref">2014</a>)</span>. Each row in <code>ny_trips</code> is a distinct trip and each row in <code>ny_stations</code> a distinct station. However throughout the module we will undoubtedly encounter datasets that need to be reshaped. There are two key functions to learn here, made available via the <a href="https://tidyr.tidyverse.org/articles/pivot.html"><code>tidyr</code></a> package: <a href="https://tidyr.tidyverse.org/reference/pivot_longer.html"><code>pivot_longer()</code></a> and <a href="https://tidyr.tidyverse.org/reference/pivot_wider.html"><code>pivot_wider()</code></a>. <code>pivot_longer</code> is used to tidy data in which observations are spread across columns, as in Table <a href="#tab:gapminder-untidy1">6</a> (the <code>gapminder</code> dataset). <code>pivot_wider</code> is used to tidy data in which observations are spread across rows, as in Table <a href="#tab:gapminder-untidy2">7</a> (the <code>gapminder</code> dataset). You will find yourself using these functions, particularly <code>pivot_longer</code> not only for fixing messy data, but for flexibly reshaping data for use in <code>ggplot2</code> specifications (more on this in sessions 3 and 4) or joining tables.</p>
+<p>The <code>ny_trips</code> and <code>ny_stations</code> data already comply with the rules for <strong>tidy</strong> data <span class="citation">(Wickham <a href="#ref-wickham_tidy_2014" role="doc-biblioref">2014</a>)</span>. Each row in <code>ny_trips</code> is a distinct trip and each row in <code>ny_stations</code> a distinct station. However throughout the module we will undoubtedly encounter datasets that need to be reshaped. There are two key functions to learn here, made available via the <a href="https://tidyr.tidyverse.org/articles/pivot.html"><code>tidyr</code></a> package: <a href="https://tidyr.tidyverse.org/reference/pivot_longer.html"><code>pivot_longer()</code></a> and <a href="https://tidyr.tidyverse.org/reference/pivot_wider.html"><code>pivot_wider()</code></a>. <code>pivot_longer()</code> is used to tidy data in which observations are spread across columns, as in Table <a href="#tab:gapminder-untidy1">6</a> (the <code>gapminder</code> dataset). <code>pivot_wider()</code> is used to tidy data in which observations are spread across rows, as in Table <a href="#tab:gapminder-untidy2">7</a> (the <code>gapminder</code> dataset). You will find yourself using these functions, particularly <code>pivot_longer()</code>, not only for fixing messy data, but for flexibly reshaping data for use in <code>ggplot2</code> specifications (more on this in sessions 3 and 4) or joining tables.</p>
 <p>A quick breakdown of <code>pivot_longer</code>:</p>
 <pre><code>pivot_longer(
   data,
   cols, # Columns to pivot longer (across rows).
-  names_to=&quot;name&quot;, # Name of the column where for pivoted variables.
-  values_to=&quot;name&quot;
+  names_to=&quot;name&quot;, # Name of the column to create from values held in spread *column names*.
+  values_to=&quot;name&quot; # Name of column to create form values stored in spread *cells*
   )</code></pre>
 <p>A quick breakdown of <code>pivot_wider</code>:</p>
 <pre><code>pivot_wider(
@@ -2175,7 +2180,7 @@ Figure 4: Line charts generated with <code>ggplot2</code>. Plot data computed us
   names_from, # Column in the long format which contains what will be column names in the wide format.
   values_from # Column in the long format which contains what will be values in the new wide format.
   )</code></pre>
-<p>In the homework you will be tidying some messy derived tables based on the bikeshare data using both of these functions, but we can demonstrate both of these functions in <strong>tidying</strong> the messy <code>gapminder</code> data in Table <a href="#tab:gapminder-untidy2">7</a>. Remember that these data were messy as the observations by gender were spread across the columns:</p>
+<p>In the homework you will be tidying some messy derived tables based on the bikeshare data using both of these functions, but we can demonstrate their purpose in <strong>tidying</strong> the messy <code>gapminder</code> data in Table <a href="#tab:gapminder-untidy2">7</a>. Remember that these data were messy as the observations by gender were spread across the columns:</p>
 <pre><code>untidy_wide
 ##   country     year  f_cases m_cases f_population m_population
 ##   &lt;chr&gt;       &lt;chr&gt; &lt;chr&gt;   &lt;chr&gt;   &lt;chr&gt;        &lt;chr&gt;
@@ -2185,7 +2190,7 @@ Figure 4: Line charts generated with <code>ggplot2</code>. Plot data computed us
 ## 4 Brazil      2000  39440   41048   87251329     87253569
 ## 5 China       1999  104007  108252  636451250    636464022
 ## 6 China       2000  104746  109759  640212600    640215983</code></pre>
-<p>First we need to gather the problematic columns with <code>pivot_wider</code>.</p>
+<p>First we need to gather the problematic columns with <code>pivot_wider()</code>.</p>
 <pre><code>untidy_wide %&gt;%
   pivot_longer(cols=c(f_cases: m_population), names_to=c(&quot;gender_count_type&quot;), values_to=c(&quot;counts&quot;))
 
@@ -2244,7 +2249,7 @@ untidy_wide %&gt;%
 </div>
 <div id="conclusions" class="section level2">
 <h2>Conclusions</h2>
-<p>Developing the vocabulary and technical skills to systematically describe and organise data is crucial to modern data analysis. This session has covered the fundamentals here: that data consist of <strong>observations</strong> and <strong>variables</strong> of different types <span class="citation">(Stevens <a href="#ref-stevens_on_1946" role="doc-biblioref">1946</a>)</span> and that in order to work effectively with datasets, especially in a functional way in <code>R</code>, these data must be organised according to the rules of <strong>tidy</strong> data <span class="citation">(Wickham <a href="#ref-wickham_tidy_2014" role="doc-biblioref">2014</a>)</span>. Most of the session content was dedicated to the techniques that enable these concepts to be operationalised. We covered how to download, transform and reshape a reasonably large set of data from New York’s <a href="">Citibike</a> scheme. In doing so, we generated insights that might inform further data collection and analysis activity. In the next session we will apply and extend this conceptual and technical knowledge as we introduce the fundamental of visual data analysis and <code>ggplot2</code>’s grammar of graphics.</p>
+<p>Developing the vocabulary and technical skills to systematically describe and organise data is crucial to modern data analysis. This session has covered the fundamentals here: that data consist of <strong>observations</strong> and <strong>variables</strong> of different types <span class="citation">(Stevens <a href="#ref-stevens_on_1946" role="doc-biblioref">1946</a>)</span> and that in order to work effectively with datasets, especially in a functional way in <code>R</code>, these data must be organised according to the rules of <strong>tidy</strong> data <span class="citation">(Wickham <a href="#ref-wickham_tidy_2014" role="doc-biblioref">2014</a>)</span>. Most of the session content was dedicated to the techniques that enable these concepts to be operationalised. We covered how to download, transform and reshape a reasonably large set of data from New York’s <a href="">Citibike</a> scheme. In doing so, we generated insights that might inform further data collection and analysis activity. In the next session we will apply and extend this conceptual and technical knowledge as we introduce the fundamentals of visual data analysis and <code>ggplot2</code>’s grammar of graphics.</p>
 </div>
 <div id="references" class="section level2 unnumbered">
 <h2>References</h2>

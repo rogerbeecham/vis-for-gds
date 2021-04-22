@@ -3,8 +3,23 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>/reading/08-reading/</loc>
-    <lastmod>2021-07-12T00:00:00+00:00</lastmod>
+    <loc>/homework/09-homework/</loc>
+    <lastmod>2021-07-19T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/class/09-class/</loc>
+    <lastmod>2021-07-19T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/reading/09-reading/</loc>
+    <lastmod>2021-07-19T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/homework/</loc>
+    <lastmod>2021-07-19T00:00:00+00:00</lastmod>
   </url>
   
   <url>
@@ -18,7 +33,7 @@
   </url>
   
   <url>
-    <loc>/homework/</loc>
+    <loc>/reading/08-reading/</loc>
     <lastmod>2021-07-12T00:00:00+00:00</lastmod>
   </url>
   
@@ -35,11 +50,6 @@
   <url>
     <loc>/reading/07-reading/</loc>
     <lastmod>2021-07-05T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/class/09-class/</loc>
-    <lastmod>2021-06-29T00:00:00+00:00</lastmod>
   </url>
   
   <url>
@@ -144,12 +154,12 @@
   
   <url>
     <loc>/authors/rjbeecham/</loc>
-    <lastmod>2020-11-30T10:54:03+00:00</lastmod>
+    <lastmod>2021-04-19T09:07:49+01:00</lastmod>
   </url>
   
   <url>
     <loc>/authors/</loc>
-    <lastmod>2020-11-30T10:54:03+00:00</lastmod>
+    <lastmod>2021-04-19T09:07:49+01:00</lastmod>
   </url>
   
   <url>

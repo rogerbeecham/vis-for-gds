@@ -13,6 +13,47 @@
     </image>
     
     <item>
+      <title>Visualization for communication and storytelling</title>
+      <link>/reading/09-reading/</link>
+      <pubDate>Mon, 19 Jul 2021 00:00:00 +0000</pubDate>
+      <guid>/reading/09-reading/</guid>
+      <description>
+&lt;!-- BLOGDOWN-HEAD --&gt;
+&lt;link href=&#34;../rmarkdown-libs/anchor-sections/anchor-sections.css&#34; rel=&#34;stylesheet&#34; /&gt;
+&lt;script src=&#34;../rmarkdown-libs/anchor-sections/anchor-sections.js&#34;&gt;&lt;/script&gt;
+&lt;!-- /BLOGDOWN-HEAD --&gt;
+
+
+&lt;div id=&#34;communicating-with-ggplot2&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Communicating with &lt;code&gt;ggplot2&lt;/code&gt;&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;BBC, &lt;a href=&#34;https://bbc.github.io/rcookbook/&#34;&gt;&lt;em&gt;BBC Visual and Data Journalism cookbook for R graphics&lt;/em&gt;&lt;/a&gt; (2019).&lt;/li&gt;
+&lt;li&gt;&lt;span class=&#34;citation&#34;&gt;K. Healy, &lt;em&gt;Data Visualization: A Practical Introduction&lt;/em&gt; (Princeton: Princeton University Press, &lt;a href=&#34;#ref-healy_data_2018&#34; role=&#34;doc-biblioref&#34;&gt;2018&lt;/a&gt;).&lt;/span&gt;&lt;br /&gt;
+– Chapter 8&lt;br /&gt;
+&lt;a href=&#34;https://socviz.co/&#34;&gt;Free online&lt;/a&gt;.&lt;/li&gt;
+&lt;li&gt;&lt;span class=&#34;citation&#34;&gt;H. Wickham and G. Grolemund, &lt;em&gt;R for Data Science: Import, Tidy, Transform, Visualize, and Model Data&lt;/em&gt; (Sebastopol, California: O’Reilly Media, &lt;a href=&#34;#ref-wickham_r_2017&#34; role=&#34;doc-biblioref&#34;&gt;2017&lt;/a&gt;).&lt;/span&gt;&lt;br /&gt;
+– Chapter 28&lt;br /&gt;
+&lt;a href=&#34;https://r4ds.had.co.nz/&#34;&gt;Free online&lt;/a&gt;.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div id=&#34;visual-storytelling&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Visual storytelling&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;span class=&#34;citation&#34;&gt;R. Roth, “Cartographic Design as Visual Storytelling: Synthesis and Review of Map-Based Narratives, Genres, and Tropes,” &lt;em&gt;The Cartographic Journal&lt;/em&gt; 0, no. 0 (&lt;a href=&#34;#ref-roth_cartographic_2020&#34; role=&#34;doc-biblioref&#34;&gt;2020&lt;/a&gt;): 1–32.&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;&lt;span class=&#34;citation&#34;&gt;N. Henry-Riche et al., eds., in &lt;em&gt;Data-Driven Storytelling&lt;/em&gt; (Boca Raton, &lt;a href=&#34;#ref-henry_data_2018&#34; role=&#34;doc-biblioref&#34;&gt;2018&lt;/a&gt;).&lt;/span&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div id=&#34;covid-19-visual-analysis-and-communication&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Covid-19 visual analysis and communication&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;span class=&#34;citation&#34;&gt;R. Beecham et al., “On the use of ‘glyphmaps’ for analysing Covid-19 reported cases,” &lt;em&gt;ISPRS International Journal of Geo-Information&lt;/em&gt; 10, no. 4 (&lt;a href=&#34;#ref-beecham_on_2021&#34; role=&#34;doc-biblioref&#34;&gt;2021&lt;/a&gt;).&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;&lt;span class=&#34;citation&#34;&gt;Y. Zhang et al., “Mapping the Landscape of COVID-19 Crisis Visualizations,” &lt;em&gt;CoRR&lt;/em&gt; abs/2101.04743 (&lt;a href=&#34;#ref-zhang_mapping_2021&#34; role=&#34;doc-biblioref&#34;&gt;2021&lt;/a&gt;).&lt;/span&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+</description>
+    </item>
+    
+    <item>
       <title>Visualization for uncertainty analysis</title>
       <link>/reading/08-reading/</link>
       <pubDate>Mon, 12 Jul 2021 00:00:00 +0000</pubDate>
@@ -46,6 +87,12 @@
 &lt;li&gt;&lt;span class=&#34;citation&#34;&gt;M. Correll and M. Gleicher, “Error Bars Considered Harmful: Exploring Alternate Encodings for Mean and Error,” &lt;em&gt;IEEE Transactions on Visualization and Computer Graphics&lt;/em&gt; 20, no. 12 (&lt;a href=&#34;#ref-correl_error_2014&#34; role=&#34;doc-biblioref&#34;&gt;2014&lt;/a&gt;): 2142–2151.&lt;/span&gt;&lt;/li&gt;
 &lt;li&gt;&lt;span class=&#34;citation&#34;&gt;Michael Fernandes et al., “Uncertainty Displays Using Quantile Dotplots or CDFs Improve Transit Decision-Making,” in &lt;em&gt;Conference on Human Factors in Computing Systems - Chi ’18&lt;/em&gt;, &lt;a href=&#34;#ref-fernandes_uncertainty_2018&#34; role=&#34;doc-biblioref&#34;&gt;2018&lt;/a&gt;, doi:&lt;a href=&#34;https://doi.org/10.1145/3173574.3173718&#34; role=&#34;doc-biblioref&#34;&gt;10.1145/3173574.3173718&lt;/a&gt;.&lt;/span&gt;&lt;/li&gt;
 &lt;li&gt;&lt;span class=&#34;citation&#34;&gt;Alex Kale et al., “Hypothetical Outcome Plots Help Untrained Observers Judge Trends in Ambiguous Data,” &lt;em&gt;IEEE Transactions on Visualization and Computer Graphics&lt;/em&gt; (&lt;a href=&#34;#ref-kale_hypothetical_2018&#34; role=&#34;doc-biblioref&#34;&gt;2018&lt;/a&gt;).&lt;/span&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div id=&#34;uncertainty-in-election-forecasts&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Uncertainty in election forecasts&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;span class=&#34;citation&#34;&gt;Andrew Gelman et al., “Information, Incentives, and Goals in Election Forecasts,” &lt;em&gt;Judgment and Decision Making&lt;/em&gt; 15, no. 5 (&lt;a href=&#34;#ref-gelman_information_2020&#34; role=&#34;doc-biblioref&#34;&gt;2020&lt;/a&gt;): 863–880.&lt;/span&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/div&gt;
 </description>
@@ -119,6 +166,9 @@
 &lt;div id=&#34;model-building-in-r&#34; class=&#34;section level3&#34;&gt;
 &lt;h3&gt;Model-building in R&lt;/h3&gt;
 &lt;ul&gt;
+&lt;li&gt;&lt;span class=&#34;citation&#34;&gt;K. Healy, &lt;em&gt;Data Visualization: A Practical Introduction&lt;/em&gt; (Princeton: Princeton University Press, &lt;a href=&#34;#ref-healy_data_2018&#34; role=&#34;doc-biblioref&#34;&gt;2018&lt;/a&gt;).&lt;/span&gt;&lt;br /&gt;
+– Chapter 7&lt;br /&gt;
+&lt;a href=&#34;https://socviz.co/&#34;&gt;Free online&lt;/a&gt;.&lt;/li&gt;
 &lt;li&gt;&lt;span class=&#34;citation&#34;&gt;H. Wickham and G. Grolemund, &lt;em&gt;R for Data Science: Import, Tidy, Transform, Visualize, and Model Data&lt;/em&gt; (Sebastopol, California: O’Reilly Media, &lt;a href=&#34;#ref-wickham_r_2017&#34; role=&#34;doc-biblioref&#34;&gt;2017&lt;/a&gt;).&lt;/span&gt;&lt;br /&gt;
 – Chapters 22, 23, 24, 25&lt;br /&gt;
 &lt;a href=&#34;https://r4ds.had.co.nz/&#34;&gt;Free online&lt;/a&gt;.&lt;/li&gt;

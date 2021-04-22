@@ -711,6 +711,11 @@
       </li>
 
       
+      <li >
+        <a href="../../class/09-class/">9: Visualization for communication and storytelling</a>
+      </li>
+
+      
     </ul>
     
 
@@ -1610,7 +1615,7 @@ plot_data_temp %&gt;%
 <li><strong>1. Data</strong>:
 <ul>
 <li>We create a temporary staging data frame for this plot (<code>plot_data_temp</code>). This is our edges dataset, joined twice on <code>london_grid_real</code>.</li>
-<li>The first join. The code above is for generating a D-OD map, where the large cells are destinations and the small cells are origins. In the plot spec you will see, as in the spatially arranged bars, that for D-OD maps we facet on destination using the LondonSquared layout. This means that we want to bring in <code>geometry</code> data for the origin borough in each OD pair and make this explicit in the join – <code>by=c("authority"="o_bor")</code>. We also <code>rename()</code> the joined variables accordingly – <code>o_fx, o_fy</code> refers to the LondonSquared grid cell references of the origins. If we wanted to use the LondonSquared layout only for faceting, and represent origin boroughs using their real geography <span class="citation">(as in Beecham and Slingsby <a href="#ref-beecham_characterising_2019" role="doc-biblioref">2019</a>, @slingsby_od_2014)</span> we could join on the real and not grid geometries – with <code>filter(type=="real")</code>.</li>
+<li>The first join. The code above is for generating a D-OD map, where the large cells are destinations and the small cells are origins. In the plot spec you will see, as in the spatially arranged bars, that for D-OD maps we facet on destination using the LondonSquared layout. This means that we want to bring in <code>geometry</code> data for the origin borough in each OD pair and make this explicit in the join – <code>by=c("authority"="o_bor")</code>. We also <code>rename()</code> the joined variables accordingly – <code>o_fx, o_fy</code> refers to the LondonSquared grid cell references of the origins. If we wanted to use the LondonSquared layout only for faceting, and represent origin boroughs using their real geography <span class="citation">(as in Beecham and Slingsby <a href="#ref-beecham_characterising_2019" role="doc-biblioref">2019</a>; Slingsby, Kelly, and Dykes <a href="#ref-slingsby_od_2014" role="doc-biblioref">2014</a>)</span> we could join on the real and not grid geometries – with <code>filter(type=="real")</code>.</li>
 <li>The second join is on destination (origin in the case of an O-OD map). We drop the geometry data from the joining London boundaries object, but keep the LondonSquared layout grid references and rename accordingly – e.g. <code>rename(d_fx=x, d_fy=y)</code>.</li>
 <li>Finally in the <code>mutate()</code> we generate a new variable identifying the borough in focus (<code>bor_focus</code>), destination in this case, and a text label variable for annotating plots on this (<code>bor_label</code>).</li>
 <li>An additional derived object contains coordinate pairs describing the geographic extent of our geometries data – see <a href="https://r-spatial.github.io/sf/reference/st_bbox.html">st_bbox()</a>.</li>
@@ -1635,7 +1640,7 @@ plot_data_temp %&gt;%
 </div>
 <div id="conclusions" class="section level2">
 <h2>Conclusions</h2>
-<p>Network data – data which describe <em>relations</em> between entities – are challenge to represent, work with and analyse. It is for this reason that visual approaches are often used in their analysis. Due to their complexity, many visualizations fall into a common pitfall of simply representing that complexity without exposing useful structure or insight into the phenomena being analysed. Through an analysis of 2011 Census travel-to-work data in London, we demonstrated some approaches to analysing and inferring structure in a category of network data common to Geographers: spatial origin-destination data. Spatially-arranged node-link diagrams are highly intuitive, support synoptic overview and detection of hierarchies in network (a theme not discussed in this session), but were of limited success in representing detailed patterns in travel-to-work within and between London boroughs. Instead we used matrix-based views, including spatially arranged matrices or <a href="https://xeno.graphics/od-map/">OD Maps</a>. As ever, the appropriateness of either approach – node-link based or matrix-based representations – depends on data, analysis purpose and audience.</p>
+<p>Network data – data which describe <em>relations</em> between entities – are challenging to represent, work with and analyse. It is for this reason that visual approaches are often used in their analysis. Due to their complexity, many network visualizations fall into a common pitfall of simply representing that complexity without exposing useful structure or insight into the phenomena being analysed. Through an analysis of 2011 Census travel-to-work data in London, we demonstrated some approaches to analysing and inferring structure in a category of network data common to Geographers: spatial origin-destination data. Spatially-arranged node-link diagrams are highly intuitive, support synoptic overview and detection of hierarchies in network (a theme not discussed in this session), but were of limited success in representing detailed patterns in travel-to-work within and between London boroughs. Instead we used matrix-based views, including spatially arranged matrices or <a href="https://xeno.graphics/od-map/">OD Maps</a>. As ever, the appropriateness of either approach, node-link based or matrix-based representations, depends on data, analysis purpose and audience.</p>
 </div>
 <div id="references" class="section level2 unnumbered">
 <h2>References</h2>
