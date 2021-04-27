@@ -14,11 +14,11 @@ The technical element to this session involves importing, describing and process
 
 ### Setup
 
-The code block below points to the packages you need to do the work discussed in the session. If you have been following the instructions from  the last session, you will have already installed the key packages -- `tidyverse` , `fst`, `lubridate`, `sf` -- and so simply need to make it available in session with `library(<package-name>)`. If you wish to use the [bikedata](https://github.com/ropensci/bikedata) package for accessing bikeshare data you will also need to **install** it. This requires the development version of the package which can be installed with `install_github()` using the `devtools` package. As `devtools` is only used in  on setup, its functions are accessed explicitly with `::`, e.g.  `devtools::` rather than `library<package-name>`.
+The code block below points to the packages you need to do the work discussed in the session. If you have been following the instructions from  the last session, you will have already installed the key packages -- `tidyverse` , `fst`, `lubridate`, `sf`, `here` -- and so simply need to make them available in session with `library(<package-name>)`. If you wish to use the [bikedata](https://github.com/ropensci/bikedata) package for accessing bikeshare data you will also need to **install** it. This requires the development version of the package which can be installed with `install_github()` using the `devtools` package. As `devtools` is only used in  on setup, its functions are accessed explicitly with `::`, e.g.  `devtools::` rather than `library<package-name>`.
 
 IMPORTANT NOTE : I wanted to include the code for downloading and processing data via the `bikedata` API for information. However, as the package makes available large and reasonably messy data, it is not exactly "entry-level". Depending on how R and existing packages are configured on your machine, you may find several `error` messages relating to package dependencies -- other packages that need to be installed. For this reason I recommend that the code on importing the raw bike data (`import-raw`) be treated as optional (for the interested reader) and instead download the pre-processed data I have made available on a separate repo (`import-collected`).
 
-Required packages necessary for all aspects of the session (**ALL*):
+Required packages necessary for all aspects of the session (**ALL**). If you have not yet downloaded these packages you will need to make separate calls to `install.packages("<package-name>")` as described in the previous session.
 
 ```{r setup-required, echo=TRUE, eval=TRUE, message=FALSE}
 library(tidyverse) # Bundle of packages for doing modern data analysis.
@@ -90,7 +90,7 @@ ny_stations <- read_csv(tmp_file)
 
 # Read in .fst file of trips data from url.
 tmp_file <- tempfile()
-cs_url <- "https://www.roger-beecham.com/datasets/ny_trips.fst"
+url <- "https://www.roger-beecham.com/datasets/ny_trips.fst"
 curl::curl_download(url, tmp_file, mode="wb")
 ny_trips <- read_fst(tmp_file)
 
@@ -183,7 +183,7 @@ ny_temporal %>%
 `dplyr` code with `ggplot2` for exploring temporal travel behaviours by gender visually:
 
 ```{r dplyr-temporal-plot, echo=TRUE, eval=FALSE, message=FALSE}
-  ny_temporal %>%
+ny_temporal %>%
   filter(gender!="unknown") %>%
   ggplot(aes(x=hour, y=count, group=gender)) +
   geom_line(aes(colour=gender), size=1.1) +
