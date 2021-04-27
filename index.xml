@@ -1611,7 +1611,7 @@ expl_cors_order
 
 &lt;div class=&#34;alert alert-note&#34;&gt;
   &lt;div&gt;
-    This session assumes some basic familiarity with linear regression modelling. There are entire courses on the topic, so it’s not possible to cover the fundamentals in the next two sessions alone. For a clear and detailed overview, with excellent Social Science examples, I would recommend &lt;span class=&#34;citation&#34;&gt;Bartholomew et al. (&lt;a href=&#34;#ref-bartholomew_analysis_2008&#34; role=&#34;doc-biblioref&#34;&gt;2008&lt;/a&gt;)&lt;/span&gt;.
+    This session assumes some basic familiarity with linear regression modelling. There are entire courses on the topic, so it’s not possible to cover the fundamentals in the next two sessions alone. For a clear and detailed overview, with excellent social science examples, I would recommend &lt;span class=&#34;citation&#34;&gt;Bartholomew et al. (&lt;a href=&#34;#ref-bartholomew_analysis_2008&#34; role=&#34;doc-biblioref&#34;&gt;2008&lt;/a&gt;)&lt;/span&gt;.
   &lt;/div&gt;
 &lt;/div&gt;
 &lt;/p&gt;
@@ -2177,7 +2177,7 @@ Use tidymodels : https://cfss.uchicago.edu/notes/start-with-models/  --&gt;
 &lt;/div&gt;
 &lt;div id=&#34;visualization-interpretation-challenge&#34; class=&#34;section level2&#34;&gt;
 &lt;h2&gt;Visualization interpretation challenge&lt;/h2&gt;
-&lt;p&gt;You may be pleased to know that this week’s homework does not require you to write a single line of code. Instead, it is designed to get you reading and interpreting data graphics. &lt;a href=&#34;https://xeno.graphics/od-map/&#34;&gt;OD Maps&lt;/a&gt; are a good candidate here as they have been catalogued by &lt;a href=&#34;https://www.maartenlambrechts.com&#34;&gt;Marteen Lambrechts&lt;/a&gt; as a Xenographic – &lt;em&gt;Weird but (sometime) useful&lt;/em&gt;. I’d add that within the list of other &lt;a href=&#34;https://xeno.graphics&#34;&gt;Xenographics&lt;/a&gt;, OD Maps are &lt;em&gt;Not that weird and often useful&lt;/em&gt;. Nevertheless, they do take some interpretation.&lt;/p&gt;
+&lt;p&gt;You may be pleased to know that this week’s homework does not require you to write a single line of code. Instead, it is designed to get you reading and interpreting data graphics. &lt;a href=&#34;https://xeno.graphics/od-map/&#34;&gt;OD Maps&lt;/a&gt; are a good candidate here as they have been catalogued by &lt;a href=&#34;https://www.maartenlambrechts.com&#34;&gt;Marteen Lambrechts&lt;/a&gt; as a Xenographic – &lt;em&gt;Weird but (sometimes) useful&lt;/em&gt;. I’d add that within the list of other &lt;a href=&#34;https://xeno.graphics&#34;&gt;Xenographics&lt;/a&gt;, OD Maps are &lt;em&gt;Not that weird and often useful&lt;/em&gt;. Nevertheless, they do take some interpretation.&lt;/p&gt;
 &lt;div class=&#34;figure&#34; style=&#34;text-align: left&#34;&gt;&lt;span id=&#34;fig:mode-analysis-od-map&#34;&gt;&lt;/span&gt;
 &lt;img src=&#34;./class/05-class_files/od-maps-mode-homework.png&#34; alt=&#34;OD map of commutes between London boroughs&#34; width=&#34;90%&#34; /&gt;
 &lt;p class=&#34;caption&#34;&gt;

@@ -14,23 +14,33 @@ The technical element to this session involves importing, describing and process
 
 ### Setup
 
-The code block below points to the packages you need to do the work discussed in the session. If you have been following the instructions from  the last session, you will have already installed the key packages -- `tidyverse` , `fst`, `lubridate`, `sf` -- and so simply need to make it available in session with `library(<package-name>)`. You will also need to **install** the [bikedata](https://github.com/ropensci/bikedata) package for accessing bikeshare data. We will install the development version with `install_github()` using the `devtools` package. We only use `devtools` in this case on setup and so access its functions explicitly with `::`, e.g.  `devtools::` rather than `library<package-name>`.
+The code block below points to the packages you need to do the work discussed in the session. If you have been following the instructions from  the last session, you will have already installed the key packages -- `tidyverse` , `fst`, `lubridate`, `sf` -- and so simply need to make it available in session with `library(<package-name>)`. If you wish to use the [bikedata](https://github.com/ropensci/bikedata) package for accessing bikeshare data you will also need to **install** it. This requires the development version of the package which can be installed with `install_github()` using the `devtools` package. As `devtools` is only used in  on setup, its functions are accessed explicitly with `::`, e.g.  `devtools::` rather than `library<package-name>`.
 
-```{r setup, echo=TRUE, eval=TRUE, message=FALSE}
+IMPORTANT NOTE : I wanted to include the code for downloading and processing data via the `bikedata` API for information. However, as the package makes available large and reasonably messy data, it is not exactly "entry-level". Depending on how R and existing packages are configured on your machine, you may find several `error` messages relating to package dependencies -- other packages that need to be installed. For this reason I recommend that the code on importing the raw bike data (`import-raw`) be treated as optional (for the interested reader) and instead download the pre-processed data I have made available on a separate repo (`import-collected`).
+
+Required packages necessary for all aspects of the session (**ALL*):
+
+```{r setup-required, echo=TRUE, eval=TRUE, message=FALSE}
 library(tidyverse) # Bundle of packages for doing modern data analysis.
 library(fst) # Fast/efficient working with tbls.
 library(sf) # Spatial operations
 library(lubridate) # Work with dates
 library(here) # For navigating project directory
 # install.packages("geosphere") # Uncomment to install.
+```
+
+Packages necessary for working with `bikedata` (optional for **advanced R programmer only**):
+
+```{r setup-optional, echo=TRUE, eval=TRUE, message=FALSE}
 # remotes::install_github("ropensci/bikedata") # API to TfL's trip data. Uncomment to run.
 library(bikedata)
-
 # install.packages(DBI) # Uncomment to install.
 # install.packages("SQLite") # Uncomment to install.
 ```
 
 ### Import
+
+#### Import raw data (**interested/advanced only**)
 
 You might notice that available via the `bikedata` package are trip and occupancy data for a number of bikeshare schemes. To see which are available, type `bike_cities()` into the Console. We will collect data for New York's [citibike](https://www.citibikenyc.com/) scheme using the `dl_bikedata()` function. Querying the documentation (with `?dl_bikedata()`) you will notice that there are several parameters to set here: the city/ scheme (`city = "citibike"`), time period (`dates = 2020` - we'll look at data from 2020). By default data are downloaded to a temporary directory `temp_dir()` and held in memory.  `bikedata` also has a function for converting downloaded data to an SQLite3 database. SQLite databases can be called from `R` and have various advantages for efficient storage and querying.
 
@@ -64,7 +74,9 @@ bike_rm_db(bikedb)
 rm(db,stations, trips, bikedb)
 ```
 
-So run the code block below to download the extracted data to your project's data folder. Note that you should only run the import code below once. When returning to this work in a new R session, you need only then read in the `ny_trips.fst` and `ny_stations.csv` file that is held locally on your machines. Unfortunately due to storage limitations I had to make `ny_trips.fst` just a 500k random sample of the c.2million records that appear in the session.
+#### Import pre-processed data (**All**)
+
+Run the code block below to download the pre-processed and extracted data to your project's data folder. Note that you should only run the import code below once. When returning to this work in a new R session, you need only then read in the `ny_trips.fst` and `ny_stations.csv` file that is held locally on your machines. Unfortunately due to storage limitations I had to make `ny_trips.fst` just a 500k random sample of the c.2million records that appear in the session.
 
 ```{r import-collected, echo=TRUE, eval=FALSE, message=FALSE}
 # Create subdirectory in data folder for storing bike data.
