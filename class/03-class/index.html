@@ -1426,7 +1426,12 @@ bes_2019 %&gt;%
 ## 12 uup         0.00291</code></pre>
 <p>Below are some summary statistics computed over the newly created <code>swing_con_lab</code> variable. As the Conservative and Labour votes are negligible in Northern Ireland, it makes sense to focus on Great Britain for our analysis of Con-Lab Swing and so the first step in the code is to create a new data frame filtering out Northern Ireland. We will work with this for the rest of the session.</p>
 <pre class="r"><code>data_gb &lt;- bes_2019 %&gt;%
-  filter(region!=&quot;Northern Ireland&quot;)
+  filter(region != &quot;Northern Ireland&quot;) %&gt;%
+  mutate(
+    swing_con_lab=0.5*((con_19-con_17)-(lab_19-lab_17)),
+    # Recode to 0 Chorley incoming speaker,Buckingham outgoing speaker --  uncontested seat.
+    swing_con_lab=if_else(constituency_name %in% c(&quot;Chorley&quot;, &quot;Buckingham&quot;),0,swing_con_lab)
+  )
 
 data_gb %&gt;%
   summarise(
@@ -1501,7 +1506,7 @@ Figure 13: Plots of vote shares by party.
 </p>
 </div>
 <p>Previously we calculated overall vote share by Political Party. We could continue the exploration of votes by region by re-using this code to generate plots displaying quantities but also comparing region, using marks and encoding channels that are suitable for magnitudes.</p>
-<p>To generate a bar chart similar to the left of Figure <a href="#fig:bars">13</a> the <code>ggplot2</code> specification would be:</p>
+<p>To generate a bar chart similar to the left of Figure <a href="#fig:bars">13</a> the <code>ggplot2</code> specification would be<a href="#fn1" class="footnote-ref" id="fnref1"><sup>1</sup></a>:</p>
 <pre class="r"><code>data_gb %&gt;%
   &lt;some dplyr code&gt; %&gt;% # The code block summarising vote by party.
   ...  %&gt;% #
@@ -1797,6 +1802,12 @@ gb &lt;- data_gb %&gt;%
 <p>Wilkinson, L. 1999. <em>The Grammar of Graphics</em>. New York: Springer.</p>
 </div>
 </div>
+</div>
+<div class="footnotes">
+<hr />
+<ol>
+<li id="fn1"><p>I’m suggesting that you reuse the code to calculate party vote share in the <a href="../../class/03-class/#summarise-1">summarise</a> code block before piping (<code>%&gt;%</code>) to the <code>ggplot2</code> specification.<a href="#fnref1" class="footnote-back">↩︎</a></p></li>
+</ol>
 </div>
 
                     </div>

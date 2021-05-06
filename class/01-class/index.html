@@ -866,7 +866,7 @@ Figure 2: Plots of Anscombe’s quartet
 
 <div class="alert alert-instruction">
   <div>
-    Watch <a href="https://www.gicentre.net/jwo/index">Jo Wood’s</a> talk demonstrating how visual techniques can be used to analyse urban travel behaviours. In the video Jo argues that bikeshare schemes can help democratise cycling, but also for their potential contributions to research – he briefly contrasts new, passively collected data sets with more “traditional” actively collected data for analysing how people move around cities. A compelling case is then made for the use of visualization to support this activity. This work and further discussion is published in <span class="citation">Beecham and Wood (<a href="#ref-beecham_exploring_2014" role="doc-biblioref">2014</a>)</span>.
+    Watch <a href="https://www.gicentre.net/jwo/index">Jo Wood’s</a> talk demonstrating how visual techniques can be used to analyse urban travel behaviours. In the video Jo argues that bikeshare schemes can help democratise cycling, but also for their potential contributions to research – he briefly contrasts new, passively collected data sets with more “traditional” actively collected data for analysing how people move around cities. A compelling case is then made for the use of visualization to support this activity. Related work and further discussion is published in <span class="citation">Beecham and Wood (<a href="#ref-beecham_exploring_2014" role="doc-biblioref">2014</a>)</span>.
   </div>
 </div>
 </p>
@@ -979,7 +979,7 @@ x_root &lt;- sqrt(x_2)</code></pre>
 <h3>Install some packages</h3>
 <p>There are two steps to getting packages down and available in your working environment:</p>
 <ol style="list-style-type: decimal">
-<li><code>install.packages(&lt;package-name&gt;)</code> downloads the named package from a repository.</li>
+<li><code>install.packages("&lt;package-name&gt;")</code> downloads the named package from a repository.</li>
 <li><code>library(&lt;package-name&gt;)</code> makes the package available in your current session.</li>
 </ol>
 <ul>
@@ -1016,7 +1016,7 @@ x_root &lt;- sqrt(x_2)</code></pre>
 <ul>
 <li>Run the block below, which passes a <a href="https://r4ds.had.co.nz/vectors.html">vector</a> of package names to the <code>install.packages()</code> function:</li>
 </ul>
-<pre class="r"><code>install.packages(c(&quot;devtools&quot;,&quot;usethis&quot;, &quot;rmarkdown&quot;, &quot;knitr&quot;,&quot;fst&quot;,&quot;tidyverse&quot;,
+<pre class="r"><code>install.packages(c(&quot;devtools&quot;,&quot;here&quot;, &quot;rmarkdown&quot;, &quot;knitr&quot;,&quot;fst&quot;,&quot;tidyverse&quot;,
 &quot;lubridate&quot;, &quot;tidymodels&quot;))</code></pre>
 <p>
 
@@ -1029,7 +1029,7 @@ x_root &lt;- sqrt(x_2)</code></pre>
 </div>
 <div id="experiment-with-r-markdown" class="section level3">
 <h3>Experiment with R Markdown</h3>
-<p>R Markdown documents are suffixed with the extension <code>.Rmd</code> and based partly on <a href="https://en.wikipedia.org/wiki/Markdown">Markdown</a>, a lightweight markup language originally used as a means of minimising tedious mark-up tags (<code>&lt;header&gt;&lt;/header&gt;</code>) when preparing HTML documents. The idea is that you trade some flexibility in the formatting of your HTML for ease-of-writing. Working with R Markdown is very similar to Markdown. Sections are denoted hierarchically with hashes (<code>#</code>, <code>##</code>, <code>###</code>) and emphasis using <code>*</code> symbols (<code>*emphasis* **added**</code> reads <em>emphasis</em> <strong>added</strong> ). Different from standard Markdown, however, R Markdown documents can also contain code chunks to be run when the document is typeset – they are a mechanism for producing elegant reproducible notebooks.</p>
+<p>R Markdown documents are suffixed with the extension <code>.Rmd</code> and based partly on <a href="https://en.wikipedia.org/wiki/Markdown">Markdown</a>, a lightweight markup language originally used as a means of minimising tedious mark-up tags (<code>&lt;header&gt;&lt;/header&gt;</code>) when preparing HTML documents. The idea is that you trade some flexibility in the formatting of your HTML for ease-of-writing. Working with R Markdown is very similar to Markdown. Sections are denoted hierarchically with hashes (<code>#</code>, <code>##</code>, <code>###</code>) and emphasis using <code>*</code> symbols (<code>*emphasis* **added**</code> reads <em>emphasis</em> <strong>added</strong> ). Different from standard Markdown, however, R Markdown documents can also contain code chunks to be run when the document is rendered or typeset – they are a mechanism for producing elegant reproducible notebooks.</p>
 <p>Each session of the module has an accompanying R Markdown file. In later sessions you will use these to author computational notebooks that blend code, analysis prose and outputs.</p>
 <ul>
 <li>Download the <a href="../../homework/01-homework_files/01-template.Rmd"><i class="fab fa-r-project"></i> 01-template.Rmd</a> file for this session and open it in RStudio by clicking <code>File</code> &gt; <code>Open File ...</code> &gt; <code>&lt;your-downloads&gt;/01-template.Rmd</code>.</li>
@@ -1118,15 +1118,15 @@ get_radians &lt;- function(degrees) {
 </div>
 <div id="create-an-rstudio-project" class="section level3">
 <h3>Create an RStudio Project</h3>
+<p>Throughout this module we will use project-oriented workflows. This is where all files pertaining to a data analysis – data, code and outputs – are organised from a single root folder and where <em>file path discipline</em> is used such that all paths are relative to the project’s root folder (see <a href="https://rstats.wtf/project-oriented-workflow.html">Bryan &amp; Hester 2020</a>). You can imagine that this sort of self-contained project set-up is necessary for achieving reproducibility of your research. It allows anyone to take a project and run it on their own machines without having to make any adjustments.</p>
+<p>You might have noticed that when you open RStudio it automatically <em>points to</em> a working directory, likely the home folder for your local machine, denoted with <code>~/</code> in the Console. RStudio will by default save any outputs to this folder and will also expect any data you use to be saved there. Clearly if you want to incorporate neat, self-contained project workflows then you will want to organise your work from a dedicated project folder rather than the default home folder for your machine. This can be achieved with the <code>setwd(&lt;path-to-your-project&gt;)</code> function. The problem with doing this is that you insert a path which cannot be understood outside of your local machine at the time it was created. This is a real pain. It makes simple things like moving projects around on your machine an arduous task and most importantly it hinders reproducibility if others are to reuse your work.</p>
+<p>RStudio Projects are a really excellent feature of the RStudio IDE that resolve these problems. Whenever you load up an RStudio Project, R starts up and the working directory is automatically set to the project’s root folder. If you were to move the project elsewhere on your machine, or to another machine, a new root is automatically generated – so RStudio projects ensure that relative paths work.</p>
 <div class="figure"><span id="fig:rstudio-project"></span>
 <img src="../../class/01-class_files/rstudio_project.png" alt="Creating an RStudio Project" width="100%" />
 <p class="caption">
 Figure 5: Creating an RStudio Project
 </p>
 </div>
-<p>Throughout this module we will use project-oriented workflows. This is where all files pertaining to a data analysis – data, code and outputs – are organised from a single root folder and where <em>file path discipline</em> is used such that all paths are relative to the project’s root folder (see <a href="https://rstats.wtf/project-oriented-workflow.html">Bryan &amp; Hester 2020</a>). You can imagine that this sort of self-contained project set-up is necessary for achieving reproducibility of your research. It allows anyone to take a project and run it on their own machines without having to make any adjustments.</p>
-<p>You might have noticed that when you open RStudio it automatically <em>points to</em> a working directory, likely the home folder for your local machine, denoted with <code>~/</code> in the Console. RStudio will by default save any outputs to this folder and will also expect any data you use to be saved there. Clearly if you want to incorporate neat, self-contained project workflows then you will want to organise your work from a dedicated project folder rather than the default home folder for your machine. This can be achieved with the <code>setwd(&lt;path-to-your-project&gt;)</code> function. The problem with doing this is that you insert a path which cannot be understood outside of your local machine at the time it was created. This is a real pain. It makes simple things like moving projects around on your machine an arduous task and most importantly it hinders reproducibility if others are to reuse your work.</p>
-<p>RStudio Projects are a really excellent feature of the RStudio IDE that resolve these problems. Whenever you load up an RStudio Project, R starts up and the working directory is automatically set to the project’s root folder. If you were to move the project elsewhere on your machine, or to another machine, a new root is automatically generated – so RStudio projects ensure that relative paths work.</p>
 <p>Let’s create a new Project for this module:</p>
 <ul>
 <li>Select <code>File</code> &gt; <code>New Project</code> &gt; <code>New Directory</code>.</li>

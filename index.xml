@@ -5280,7 +5280,12 @@ bes_2019 %&amp;gt;%
 ## 12 uup         0.00291&lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;Below are some summary statistics computed over the newly created &lt;code&gt;swing_con_lab&lt;/code&gt; variable. As the Conservative and Labour votes are negligible in Northern Ireland, it makes sense to focus on Great Britain for our analysis of Con-Lab Swing and so the first step in the code is to create a new data frame filtering out Northern Ireland. We will work with this for the rest of the session.&lt;/p&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;data_gb &amp;lt;- bes_2019 %&amp;gt;%
-  filter(region!=&amp;quot;Northern Ireland&amp;quot;)
+  filter(region != &amp;quot;Northern Ireland&amp;quot;) %&amp;gt;%
+  mutate(
+    swing_con_lab=0.5*((con_19-con_17)-(lab_19-lab_17)),
+    # Recode to 0 Chorley incoming speaker,Buckingham outgoing speaker --  uncontested seat.
+    swing_con_lab=if_else(constituency_name %in% c(&amp;quot;Chorley&amp;quot;, &amp;quot;Buckingham&amp;quot;),0,swing_con_lab)
+  )
 
 data_gb %&amp;gt;%
   summarise(
@@ -5355,7 +5360,7 @@ Figure 13: Plots of vote shares by party.
 &lt;/p&gt;
 &lt;/div&gt;
 &lt;p&gt;Previously we calculated overall vote share by Political Party. We could continue the exploration of votes by region by re-using this code to generate plots displaying quantities but also comparing region, using marks and encoding channels that are suitable for magnitudes.&lt;/p&gt;
-&lt;p&gt;To generate a bar chart similar to the left of Figure &lt;a href=&#34;#fig:bars&#34;&gt;13&lt;/a&gt; the &lt;code&gt;ggplot2&lt;/code&gt; specification would be:&lt;/p&gt;
+&lt;p&gt;To generate a bar chart similar to the left of Figure &lt;a href=&#34;#fig:bars&#34;&gt;13&lt;/a&gt; the &lt;code&gt;ggplot2&lt;/code&gt; specification would be&lt;a href=&#34;#fn1&#34; class=&#34;footnote-ref&#34; id=&#34;fnref1&#34;&gt;&lt;sup&gt;1&lt;/sup&gt;&lt;/a&gt;:&lt;/p&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;data_gb %&amp;gt;%
   &amp;lt;some dplyr code&amp;gt; %&amp;gt;% # The code block summarising vote by party.
   ...  %&amp;gt;% #
@@ -5651,6 +5656,12 @@ gb &amp;lt;- data_gb %&amp;gt;%
 &lt;p&gt;Wilkinson, L. 1999. &lt;em&gt;The Grammar of Graphics&lt;/em&gt;. New York: Springer.&lt;/p&gt;
 &lt;/div&gt;
 &lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&#34;footnotes&#34;&gt;
+&lt;hr /&gt;
+&lt;ol&gt;
+&lt;li id=&#34;fn1&#34;&gt;&lt;p&gt;I’m suggesting that you reuse the code to calculate party vote share in the &lt;a href=&#34;./class/03-class/#summarise-1&#34;&gt;summarise&lt;/a&gt; code block before piping (&lt;code&gt;%&amp;gt;%&lt;/code&gt;) to the &lt;code&gt;ggplot2&lt;/code&gt; specification.&lt;a href=&#34;#fnref1&#34; class=&#34;footnote-back&#34;&gt;↩︎&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;/ol&gt;
 &lt;/div&gt;
 </description>
     </item>
@@ -7314,7 +7325,7 @@ Figure 4: Line charts generated with &lt;code&gt;ggplot2&lt;/code&gt;. Plot data
 ## 4 Brazil      2000  39440   41048   87251329     87253569
 ## 5 China       1999  104007  108252  636451250    636464022
 ## 6 China       2000  104746  109759  640212600    640215983&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;First we need to gather the problematic columns with &lt;code&gt;pivot_wider()&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;First we need to gather the problematic columns with &lt;code&gt;pivot_longer()&lt;/code&gt;.&lt;/p&gt;
 &lt;pre&gt;&lt;code&gt;untidy_wide %&amp;gt;%
   pivot_longer(cols=c(f_cases: m_population), names_to=c(&amp;quot;gender_count_type&amp;quot;), values_to=c(&amp;quot;counts&amp;quot;))
 
@@ -7752,7 +7763,7 @@ Figure 2: Plots of Anscombe’s quartet
 
 &lt;div class=&#34;alert alert-instruction&#34;&gt;
   &lt;div&gt;
-    Watch &lt;a href=&#34;https://www.gicentre.net/jwo/index&#34;&gt;Jo Wood’s&lt;/a&gt; talk demonstrating how visual techniques can be used to analyse urban travel behaviours. In the video Jo argues that bikeshare schemes can help democratise cycling, but also for their potential contributions to research – he briefly contrasts new, passively collected data sets with more “traditional” actively collected data for analysing how people move around cities. A compelling case is then made for the use of visualization to support this activity. This work and further discussion is published in &lt;span class=&#34;citation&#34;&gt;Beecham and Wood (&lt;a href=&#34;#ref-beecham_exploring_2014&#34; role=&#34;doc-biblioref&#34;&gt;2014&lt;/a&gt;)&lt;/span&gt;.
+    Watch &lt;a href=&#34;https://www.gicentre.net/jwo/index&#34;&gt;Jo Wood’s&lt;/a&gt; talk demonstrating how visual techniques can be used to analyse urban travel behaviours. In the video Jo argues that bikeshare schemes can help democratise cycling, but also for their potential contributions to research – he briefly contrasts new, passively collected data sets with more “traditional” actively collected data for analysing how people move around cities. A compelling case is then made for the use of visualization to support this activity. Related work and further discussion is published in &lt;span class=&#34;citation&#34;&gt;Beecham and Wood (&lt;a href=&#34;#ref-beecham_exploring_2014&#34; role=&#34;doc-biblioref&#34;&gt;2014&lt;/a&gt;)&lt;/span&gt;.
   &lt;/div&gt;
 &lt;/div&gt;
 &lt;/p&gt;
@@ -7865,7 +7876,7 @@ x_root &amp;lt;- sqrt(x_2)&lt;/code&gt;&lt;/pre&gt;
 &lt;h3&gt;Install some packages&lt;/h3&gt;
 &lt;p&gt;There are two steps to getting packages down and available in your working environment:&lt;/p&gt;
 &lt;ol style=&#34;list-style-type: decimal&#34;&gt;
-&lt;li&gt;&lt;code&gt;install.packages(&amp;lt;package-name&amp;gt;)&lt;/code&gt; downloads the named package from a repository.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;install.packages(&#34;&amp;lt;package-name&amp;gt;&#34;)&lt;/code&gt; downloads the named package from a repository.&lt;/li&gt;
 &lt;li&gt;&lt;code&gt;library(&amp;lt;package-name&amp;gt;)&lt;/code&gt; makes the package available in your current session.&lt;/li&gt;
 &lt;/ol&gt;
 &lt;ul&gt;
@@ -7902,7 +7913,7 @@ x_root &amp;lt;- sqrt(x_2)&lt;/code&gt;&lt;/pre&gt;
 &lt;ul&gt;
 &lt;li&gt;Run the block below, which passes a &lt;a href=&#34;https://r4ds.had.co.nz/vectors.html&#34;&gt;vector&lt;/a&gt; of package names to the &lt;code&gt;install.packages()&lt;/code&gt; function:&lt;/li&gt;
 &lt;/ul&gt;
-&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;install.packages(c(&amp;quot;devtools&amp;quot;,&amp;quot;usethis&amp;quot;, &amp;quot;rmarkdown&amp;quot;, &amp;quot;knitr&amp;quot;,&amp;quot;fst&amp;quot;,&amp;quot;tidyverse&amp;quot;,
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;install.packages(c(&amp;quot;devtools&amp;quot;,&amp;quot;here&amp;quot;, &amp;quot;rmarkdown&amp;quot;, &amp;quot;knitr&amp;quot;,&amp;quot;fst&amp;quot;,&amp;quot;tidyverse&amp;quot;,
 &amp;quot;lubridate&amp;quot;, &amp;quot;tidymodels&amp;quot;))&lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;
 
@@ -7915,7 +7926,7 @@ x_root &amp;lt;- sqrt(x_2)&lt;/code&gt;&lt;/pre&gt;
 &lt;/div&gt;
 &lt;div id=&#34;experiment-with-r-markdown&#34; class=&#34;section level3&#34;&gt;
 &lt;h3&gt;Experiment with R Markdown&lt;/h3&gt;
-&lt;p&gt;R Markdown documents are suffixed with the extension &lt;code&gt;.Rmd&lt;/code&gt; and based partly on &lt;a href=&#34;https://en.wikipedia.org/wiki/Markdown&#34;&gt;Markdown&lt;/a&gt;, a lightweight markup language originally used as a means of minimising tedious mark-up tags (&lt;code&gt;&amp;lt;header&amp;gt;&amp;lt;/header&amp;gt;&lt;/code&gt;) when preparing HTML documents. The idea is that you trade some flexibility in the formatting of your HTML for ease-of-writing. Working with R Markdown is very similar to Markdown. Sections are denoted hierarchically with hashes (&lt;code&gt;#&lt;/code&gt;, &lt;code&gt;##&lt;/code&gt;, &lt;code&gt;###&lt;/code&gt;) and emphasis using &lt;code&gt;*&lt;/code&gt; symbols (&lt;code&gt;*emphasis* **added**&lt;/code&gt; reads &lt;em&gt;emphasis&lt;/em&gt; &lt;strong&gt;added&lt;/strong&gt; ). Different from standard Markdown, however, R Markdown documents can also contain code chunks to be run when the document is typeset – they are a mechanism for producing elegant reproducible notebooks.&lt;/p&gt;
+&lt;p&gt;R Markdown documents are suffixed with the extension &lt;code&gt;.Rmd&lt;/code&gt; and based partly on &lt;a href=&#34;https://en.wikipedia.org/wiki/Markdown&#34;&gt;Markdown&lt;/a&gt;, a lightweight markup language originally used as a means of minimising tedious mark-up tags (&lt;code&gt;&amp;lt;header&amp;gt;&amp;lt;/header&amp;gt;&lt;/code&gt;) when preparing HTML documents. The idea is that you trade some flexibility in the formatting of your HTML for ease-of-writing. Working with R Markdown is very similar to Markdown. Sections are denoted hierarchically with hashes (&lt;code&gt;#&lt;/code&gt;, &lt;code&gt;##&lt;/code&gt;, &lt;code&gt;###&lt;/code&gt;) and emphasis using &lt;code&gt;*&lt;/code&gt; symbols (&lt;code&gt;*emphasis* **added**&lt;/code&gt; reads &lt;em&gt;emphasis&lt;/em&gt; &lt;strong&gt;added&lt;/strong&gt; ). Different from standard Markdown, however, R Markdown documents can also contain code chunks to be run when the document is rendered or typeset – they are a mechanism for producing elegant reproducible notebooks.&lt;/p&gt;
 &lt;p&gt;Each session of the module has an accompanying R Markdown file. In later sessions you will use these to author computational notebooks that blend code, analysis prose and outputs.&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;Download the &lt;a href=&#34;./homework/01-homework_files/01-template.Rmd&#34;&gt;&lt;i class=&#34;fab fa-r-project&#34;&gt;&lt;/i&gt; 01-template.Rmd&lt;/a&gt; file for this session and open it in RStudio by clicking &lt;code&gt;File&lt;/code&gt; &amp;gt; &lt;code&gt;Open File ...&lt;/code&gt; &amp;gt; &lt;code&gt;&amp;lt;your-downloads&amp;gt;/01-template.Rmd&lt;/code&gt;.&lt;/li&gt;
@@ -8004,15 +8015,15 @@ get_radians &amp;lt;- function(degrees) {
 &lt;/div&gt;
 &lt;div id=&#34;create-an-rstudio-project&#34; class=&#34;section level3&#34;&gt;
 &lt;h3&gt;Create an RStudio Project&lt;/h3&gt;
+&lt;p&gt;Throughout this module we will use project-oriented workflows. This is where all files pertaining to a data analysis – data, code and outputs – are organised from a single root folder and where &lt;em&gt;file path discipline&lt;/em&gt; is used such that all paths are relative to the project’s root folder (see &lt;a href=&#34;https://rstats.wtf/project-oriented-workflow.html&#34;&gt;Bryan &amp;amp; Hester 2020&lt;/a&gt;). You can imagine that this sort of self-contained project set-up is necessary for achieving reproducibility of your research. It allows anyone to take a project and run it on their own machines without having to make any adjustments.&lt;/p&gt;
+&lt;p&gt;You might have noticed that when you open RStudio it automatically &lt;em&gt;points to&lt;/em&gt; a working directory, likely the home folder for your local machine, denoted with &lt;code&gt;~/&lt;/code&gt; in the Console. RStudio will by default save any outputs to this folder and will also expect any data you use to be saved there. Clearly if you want to incorporate neat, self-contained project workflows then you will want to organise your work from a dedicated project folder rather than the default home folder for your machine. This can be achieved with the &lt;code&gt;setwd(&amp;lt;path-to-your-project&amp;gt;)&lt;/code&gt; function. The problem with doing this is that you insert a path which cannot be understood outside of your local machine at the time it was created. This is a real pain. It makes simple things like moving projects around on your machine an arduous task and most importantly it hinders reproducibility if others are to reuse your work.&lt;/p&gt;
+&lt;p&gt;RStudio Projects are a really excellent feature of the RStudio IDE that resolve these problems. Whenever you load up an RStudio Project, R starts up and the working directory is automatically set to the project’s root folder. If you were to move the project elsewhere on your machine, or to another machine, a new root is automatically generated – so RStudio projects ensure that relative paths work.&lt;/p&gt;
 &lt;div class=&#34;figure&#34;&gt;&lt;span id=&#34;fig:rstudio-project&#34;&gt;&lt;/span&gt;
 &lt;img src=&#34;./class/01-class_files/rstudio_project.png&#34; alt=&#34;Creating an RStudio Project&#34; width=&#34;100%&#34; /&gt;
 &lt;p class=&#34;caption&#34;&gt;
 Figure 5: Creating an RStudio Project
 &lt;/p&gt;
 &lt;/div&gt;
-&lt;p&gt;Throughout this module we will use project-oriented workflows. This is where all files pertaining to a data analysis – data, code and outputs – are organised from a single root folder and where &lt;em&gt;file path discipline&lt;/em&gt; is used such that all paths are relative to the project’s root folder (see &lt;a href=&#34;https://rstats.wtf/project-oriented-workflow.html&#34;&gt;Bryan &amp;amp; Hester 2020&lt;/a&gt;). You can imagine that this sort of self-contained project set-up is necessary for achieving reproducibility of your research. It allows anyone to take a project and run it on their own machines without having to make any adjustments.&lt;/p&gt;
-&lt;p&gt;You might have noticed that when you open RStudio it automatically &lt;em&gt;points to&lt;/em&gt; a working directory, likely the home folder for your local machine, denoted with &lt;code&gt;~/&lt;/code&gt; in the Console. RStudio will by default save any outputs to this folder and will also expect any data you use to be saved there. Clearly if you want to incorporate neat, self-contained project workflows then you will want to organise your work from a dedicated project folder rather than the default home folder for your machine. This can be achieved with the &lt;code&gt;setwd(&amp;lt;path-to-your-project&amp;gt;)&lt;/code&gt; function. The problem with doing this is that you insert a path which cannot be understood outside of your local machine at the time it was created. This is a real pain. It makes simple things like moving projects around on your machine an arduous task and most importantly it hinders reproducibility if others are to reuse your work.&lt;/p&gt;
-&lt;p&gt;RStudio Projects are a really excellent feature of the RStudio IDE that resolve these problems. Whenever you load up an RStudio Project, R starts up and the working directory is automatically set to the project’s root folder. If you were to move the project elsewhere on your machine, or to another machine, a new root is automatically generated – so RStudio projects ensure that relative paths work.&lt;/p&gt;
 &lt;p&gt;Let’s create a new Project for this module:&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;Select &lt;code&gt;File&lt;/code&gt; &amp;gt; &lt;code&gt;New Project&lt;/code&gt; &amp;gt; &lt;code&gt;New Directory&lt;/code&gt;.&lt;/li&gt;
@@ -8146,10 +8157,9 @@ Figure 5: Creating an RStudio Project
 &lt;div id=&#34;task-2-watch-thomas-mocks-introduction-to-tidy-statistics&#34; class=&#34;section level2&#34;&gt;
 &lt;h2&gt;Task 2: &lt;strong&gt;Watch&lt;/strong&gt; Thomas Mock’s Introduction to Tidy Statistics&lt;/h2&gt;
 &lt;p&gt;Thomas Mock’s &lt;a href=&#34;https://rstudio.com/resources/webinars/a-gentle-introduction-to-tidy-statistics-in-r/&#34;&gt;Gentle Introduction to Tidy Statistics&lt;/a&gt; is pitched those coming to R after previously working with point-and-click interfaces (SPSS, STATA, ArcGIS). I strongly recommend that you watch this now as you start to embark on the “pain” of doing data analysis programmatically.&lt;/p&gt;
-&lt;div class=&#34;embed-responsive embed-responsive-16by9&#34;&gt;
-&lt;iframe class=&#34;embed-responsive-item&#34; src=&#34;https://rstudio.com/resources/webinars/a-gentle-introduction-to-tidy-statistics-in-r/&#34; frameborder=&#34;0&#34; allow=&#34;accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture&#34; allowfullscreen&gt;
-&lt;/iframe&gt;
-&lt;/div&gt;
+&lt;!-- &lt;div class=&#34;embed-responsive embed-responsive-16by9&#34;&gt;
+&lt;iframe class=&#34;embed-responsive-item&#34; src=&#34;https://rstudio.com/resources/webinars/a-gentle-introduction-to-tidy-statistics-in-r/&#34; frameborder=&#34;0&#34; allow=&#34;accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture&#34; allowfullscreen&gt;&lt;/iframe&gt;
+&lt;/div&gt; --&gt;
 &lt;/div&gt;
 </description>
     </item>

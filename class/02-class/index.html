@@ -2190,7 +2190,7 @@ Figure 4: Line charts generated with <code>ggplot2</code>. Plot data computed us
 ## 4 Brazil      2000  39440   41048   87251329     87253569
 ## 5 China       1999  104007  108252  636451250    636464022
 ## 6 China       2000  104746  109759  640212600    640215983</code></pre>
-<p>First we need to gather the problematic columns with <code>pivot_wider()</code>.</p>
+<p>First we need to gather the problematic columns with <code>pivot_longer()</code>.</p>
 <pre><code>untidy_wide %&gt;%
   pivot_longer(cols=c(f_cases: m_population), names_to=c(&quot;gender_count_type&quot;), values_to=c(&quot;counts&quot;))
 

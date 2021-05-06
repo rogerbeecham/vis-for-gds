@@ -322,4 +322,32 @@ The two untidy datasets can be found at:
 * [`ny_spread_rows`](https://www.roger-beecham.com/datasets/ny_spread_rows.csv)
 * [`ny_spread_columns`](https://www.roger-beecham.com/datasets/ny_spread_columns.csv)
 
+
+Display your code for fixing the `ny_spread_rows` dataset below and copy and paste the output that was returned to the console.
+
+```{r fix-ny-spread-rows, echo=TRUE, eval=FALSE, message=FALSE}
+# Place code for tidying here.
+
+# Copy and paste the RConsole output here.
+
+```
+
+Display your code for fixing the `ny_spread_columns` dataset below and copy and paste the output that was returned to the console.
+
+```{r fix-ny-spread-columns, echo=TRUE, eval=FALSE, message=FALSE}
+# Place code for tidying here.
+
+# Copy and paste the RConsole output here.
+
+```
+
 ### Task 4: Compute from data
+
+Display your code for in the block below
+
+```{r fix-ny-spread-columns, echo=TRUE, eval=FALSE, message=FALSE}
+# Place code for computing here.
+
+# Copy and paste the RConsole output here.
+
+```
