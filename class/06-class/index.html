@@ -38,7 +38,7 @@
     
   
   <meta name="description" content="Contents  Session outcomes Introduction Concepts Quantifying and exploring variation Quantifying and exploring co-variation Modelling for co-variation Extracting and representing model parameters Exploring bias  Techniques Import Transform Model Tidy models Plot tidy models Plot residuals  Conclusions References   Session outcomes By the end of this session you should gain the following knowledge:
-   Be reminded of the basics of linear regression modelling. Appreciate problems of model bias.">
+  Be reminded of the basics of linear regression modelling. Appreciate problems of model bias.">
 
   
   <link rel="alternate" hreflang="en-us" href="../../class/06-class/">
@@ -290,7 +290,7 @@
   <meta property="og:url" content="/class/06-class/">
   <meta property="og:title" content="Visualization for model building 1: Expose, estimate, evaluate | Visualization for Geographic Data Science">
   <meta property="og:description" content="Contents  Session outcomes Introduction Concepts Quantifying and exploring variation Quantifying and exploring co-variation Modelling for co-variation Extracting and representing model parameters Exploring bias  Techniques Import Transform Model Tidy models Plot tidy models Plot residuals  Conclusions References   Session outcomes By the end of this session you should gain the following knowledge:
-   Be reminded of the basics of linear regression modelling. Appreciate problems of model bias."><meta property="og:image" content="/media/vis-for-gds.png">
+  Be reminded of the basics of linear regression modelling. Appreciate problems of model bias."><meta property="og:image" content="/media/vis-for-gds.png">
   <meta property="twitter:image" content="/media/vis-for-gds.png"><meta property="og:locale" content="en-us">
   
     
@@ -782,9 +782,7 @@
 <div id="session-outcomes" class="section level2">
 <h2>Session outcomes</h2>
 <p>By the end of this session you should gain the following <strong><em>knowledge</em></strong>:</p>
-<p>
-
-<div class="alert alert-objective">
+<p><div class="alert alert-objective">
   <div>
     <ul>
 <li><input checked="" disabled="" type="checkbox"> Be <strong>reminded</strong> of the basics of linear regression modelling.</li>
@@ -795,9 +793,7 @@
 </div>
 </p>
 <p>By the end of this session you should gain the following <strong><em>practical skills</em></strong>:</p>
-<p>
-
-<div class="alert alert-objective">
+<p><div class="alert alert-objective">
   <div>
     <ul>
 <li><input checked="" disabled="" type="checkbox"> <strong>Specify</strong> linear regression models in R.</li>
@@ -813,9 +809,7 @@
 <h2>Introduction</h2>
 <p>So far the analysis presented in this module has been very data-driven. We have demonstrated how, having <a href="../../class/02-class/">described data</a> in a consistent way, heuristics around <a href="../../class/03-class/">visual approaches and techniques</a> can be applied to usefully expose structure in datasets. The session on <a href="../../class/04-class/">exploratory data analysis</a> involved some model building, but these were largely value-free models derived from contingency tables, based on few prior assumptions.</p>
 <p>In the next two sessions we will work on a dataset with a more explicit, and theoretically-informed, motivation. We will explore <em>variation</em> in voting behaviour in the UK’s 2016 referendum on leaving the EU. You might remember that whilst there was a slight majority for Leave (51.9%), the vote varied between different parts of the country. And there were many theories and explanations offered around the time for why particular places voted the way they did – related to the demographic composition of those areas. We will explore whether the sorts of compositional demographic factors discussed – <a href="https://www.theguardian.com/politics/2016/jun/25/left-behind-eu-referendum-vote-ukip-revolt-brexit">left behind places</a> – vary systematically with area-level Leave voting. We will use a regression framework to model the relative effect of each of these compositional factors in structuring variation in the vote and visualization techniques to support estimation of model parameters and evaluation of model bias. Different from the previous sessions, the <a href="../../class/06-class/#concepts-1/">Concepts</a> element is structured more as a narrated data analysis and the <a href="../../class/06-class/#techniques-1/">Techniques</a> element more of a how-to for working with regression models in R.</p>
-<p>
-
-<div class="alert alert-note">
+<p><div class="alert alert-note">
   <div>
     This session assumes some basic familiarity with linear regression modelling. There are entire courses on the topic, so it’s not possible to cover the fundamentals in the next two sessions alone. For a clear and detailed overview, with excellent social science examples, I would recommend <span class="citation">Bartholomew et al. (<a href="#ref-bartholomew_analysis_2008" role="doc-biblioref">2008</a>)</span>.
   </div>
@@ -837,7 +831,7 @@
 <li><span class="math inline">\(\beta_{1}=0\)</span>, a negated slope, <span class="math inline">\(+\)</span></li>
 <li><span class="math inline">\(\varepsilon_{i}\)</span>, a statistical error term capturing the difference between <span class="math inline">\(y_{i}\)</span> (the observed value) and the <em>unobservable</em> <em>true</em> ‘population’ value of the Leave vote in each constituency</li>
 </ul>
-<p>How does this relate to the idea of quantifying variance? The length and colour of each bar in Figure <a href="#fig:map-uniform">1</a> is scaled according to model <strong>residuals</strong>: estimates of the statistical errors (<span class="math inline">\(\hat{\varepsilon}_{i}\)</span>), the difference between <span class="math inline">\(y_{i}\)</span> (the observed value) and the <em>observable</em> expected value of the Leave vote in our dataset (<span class="math inline">\(\hat{y}_{i}\)</span>). The sum of these bar lengths (residuals) is therefore the total variance <span class="math inline">\((\frac{\sum({y_{i...n}-\bar{y}}^2}{n-1})\)</span> – variance that we later try to reduce, or explain, by updating our regression model to generate new expected values using information on the demographic composition of constituencies.</p>
+<p>How does this relate to the idea of quantifying variance? The length and colour of each bar in Figure <a href="#fig:map-uniform">1</a> is scaled according to model <strong>residuals</strong>: estimates of the statistical errors (<span class="math inline">\(\hat{\varepsilon}_{i}\)</span>), the difference between <span class="math inline">\(y_{i}\)</span> (the observed value) and the <em>unobservable</em> expected value of the Leave vote in our dataset (<span class="math inline">\(\hat{y}_{i}\)</span>). The sum of these bar lengths (residuals) is therefore the total variance <span class="math inline">\((\frac{\sum({y_{i...n}-\bar{y}}^2}{n-1})\)</span> – variance that we later try to reduce, or explain, by updating our regression model to generate new expected values using information on the demographic composition of constituencies.</p>
 <p>Figure <a href="#fig:map-uniform">1</a> is similar to the maps that were <a href="https://www.theguardian.com/politics/2016/jun/24/eu-voting-map-lays-bare-depth-of-division-across-britain">published widely in press reports</a> in the aftermath of the vote. The uniform model consistently underestimates Leave in Scotland and most of London. Outside of this, constituencies voting in smaller proportions than would be expected for Leave are distributed more in pockets around the country: the dark red dot with surrounding red area in the east of the country is Cambridge and Cambridgeshire, constituencies in Bristol (south west), Manchester and Liverpool (north west), Brighton (south), are also reasonably strong red.</p>
 <div class="figure" style="text-align: left"><span id="fig:map-uniform"></span>
 <img src="../../class/06-class_files/map-uniform.png" alt="Residuals from uniform model comparing constituency Leave vote to GB average." width="90%" />
@@ -845,7 +839,7 @@
 Figure 1: Residuals from uniform model comparing constituency Leave vote to GB average.
 </p>
 </div>
-<p>When <strong>evaluating</strong> the effectiveness of modelled values, there are various checks that can be performed. An obvious one here is wether there is bias in the residuals – whether they have any underlying structure that suggests that they are grouped in a way that the model ignores. Given the motivation behind our analysis, it is no surprise that there is a geographic pattern to the residuals in Figure <a href="#fig:map-uniform">1</a>, but also a histogram of the residuals (Figure <a href="#fig:hist-uniform">2</a>) shows a slight left skew. There are more constituencies with positive values than negative – the Leave vote is underestimated by the uniform model for 57% of constituencies – and certain constituencies with extreme negative values – the strongest vote for Leave was Boston and Skegness (76%) but the strongest for Remain was Hackney North and Stoke Newington (80%).</p>
+<p>When <strong>evaluating</strong> the effectiveness of modelled values, there are various checks that can be performed. An obvious one here is wether there is bias in the residuals – whether they have any underlying structure that suggests that they are grouped in a way not captured by the model. Given the motivation behind our analysis, it is no surprise that there is a geographic pattern to the residuals in Figure <a href="#fig:map-uniform">1</a>, but also a histogram of the residuals (Figure <a href="#fig:hist-uniform">2</a>) shows a slight left skew. There are more constituencies with positive values than negative – the Leave vote is underestimated by the uniform model for 57% of constituencies – and certain constituencies with extreme negative values – the strongest vote for Leave was Boston and Skegness (76%) but the strongest for Remain was Hackney North and Stoke Newington (80%).</p>
 <div class="figure" style="text-align: left"><span id="fig:hist-uniform"></span>
 <img src="../../class/06-class_files/hist-uniform.png" alt="Histogram of residuals from uniform model comparing constituency Leave vote to GB average." width="90%" />
 <p class="caption">
@@ -949,9 +943,7 @@ Figure 3: Histograms of candidate explanatory variables measuring demographic co
 Figure 4: Scatterplots of constituency Leave vote against candidate explanatory variables.
 </p>
 </div>
-<p>
-
-<div class="alert alert-note">
+<p><div class="alert alert-note">
   <div>
     <p>You will remember from introductory stats courses that that the correlation coefficient can be used to summarise the strength of linear association between two variables. It is a quantity that ranges from perfect negative correlation, -1 – as one value increases another decreases in the same proportion – to perfect positive correlation, +1 – as one value increases another increases in the same proportion. A value of 0 indicates no association – the values increase and decrease independently of each other. It can be considered a measure of effect size to the extent that it describes how much of something (correlation in this case) exists.</p></p>
 <div class="figure" style="text-align: left"><span id="fig:correlations"></span>
@@ -1007,9 +999,7 @@ Figure 6: Scatterplots of constituency Leave vote against candidate explanatory 
 Figure 7: Output from multiple regression model of Leave vote by demographic composition of constituency.
 </p>
 </div>
-<p>
-
-<div class="alert alert-note">
+<p><div class="alert alert-note">
   <div>
     <p><strong>Assumptions</strong></p></p>
 <p>Again, you might remember that issues of multicollinearity, amongst other things, mean that variable selection in multiple regression requires a little thought. Ideally you want model specifications that are easy to interpret (without variable redundancy) and that explain variation in the outcome reasonably well but reliably. As explanatory variables are added, model fit can increase slightly or substantially, but will never decrease. A common scenario is that a model specified with many explanatory variables fits the data well, but contains coefficients that are inflated in magnitude and that likely vary between different model realisations. These problems are typically addressed in Social Science applications by judicious variable selection and computing coefficient <a href="https://en.wikipedia.org/wiki/Variance_inflation_factor">Variance Inflation Factors</a> (VIF). The variables here were selected using this <em>de facto</em> approach, but see <span class="citation">Beecham, Williams, and Comber (<a href="#ref-beecham_regionally_2020" role="doc-biblioref">2020</a>)</span> for an application of a common machine learning approach to automatic variable selection applied to (almost) the same dataset, and that could be used to explore the sorts of counter-intuitive directions in the coefficients for <em>EU-born</em> and <em>white</em> above.</p>
@@ -1035,9 +1025,7 @@ Figure 7: Output from multiple regression model of Leave vote by demographic com
 Figure 8: Map LineUp of residuals in which the ‘real’ dataset is presented alongside 8 decoy plots generated by randomly permuting the observed residuals around constituencies.
 </p>
 </div>
-<p>
-
-<div class="alert alert-note">
+<p><div class="alert alert-note">
   <div>
     <p>In this session, I have focussed mostly on one assumption of linear regression: that of <em>independence of errors (residuals)</em>. Consult <span class="citation">Bartholomew et al. (<a href="#ref-bartholomew_analysis_2008" role="doc-biblioref">2008</a>)</span> for a thorough discussion of these matters, but others not mentioned (and of varying importance) include: <em>linearity</em> in the relationship between outcome and explanatory variables; <em>equal variance</em> and <em>normality</em> in the residuals.</p></p>
 <!-- *Normality* in residuals.

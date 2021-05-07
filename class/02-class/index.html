@@ -38,7 +38,7 @@
     
   
   <meta name="description" content="Contents  Session outcomes Introduction Concepts Data structure Types of variable Types of observation Tidy data  Techniques Import Describe Transform Tidy  Conclusions References   Session outcomes By the end of this session you should gain the following knowledge:
-   The vocabulary and concepts used to describe data. Appreciate the characteristics and importance of tidy data (Wickham 2014) for data processing and analysis.    By the end of this session you should gain the following practical skills:">
+  The vocabulary and concepts used to describe data. Appreciate the characteristics and importance of tidy data (Wickham 2014) for data processing and analysis.    By the end of this session you should gain the following practical skills:">
 
   
   <link rel="alternate" hreflang="en-us" href="../../class/02-class/">
@@ -290,7 +290,7 @@
   <meta property="og:url" content="/class/02-class/">
   <meta property="og:title" content="Data fundamentals: Describe, wrangle, tidy | Visualization for Geographic Data Science">
   <meta property="og:description" content="Contents  Session outcomes Introduction Concepts Data structure Types of variable Types of observation Tidy data  Techniques Import Describe Transform Tidy  Conclusions References   Session outcomes By the end of this session you should gain the following knowledge:
-   The vocabulary and concepts used to describe data. Appreciate the characteristics and importance of tidy data (Wickham 2014) for data processing and analysis.    By the end of this session you should gain the following practical skills:"><meta property="og:image" content="/media/vis-for-gds.png">
+  The vocabulary and concepts used to describe data. Appreciate the characteristics and importance of tidy data (Wickham 2014) for data processing and analysis.    By the end of this session you should gain the following practical skills:"><meta property="og:image" content="/media/vis-for-gds.png">
   <meta property="twitter:image" content="/media/vis-for-gds.png"><meta property="og:locale" content="en-us">
   
     
@@ -779,9 +779,7 @@
 <div id="session-outcomes" class="section level2">
 <h2>Session outcomes</h2>
 <p>By the end of this session you should gain the following <strong><em>knowledge</em></strong>:</p>
-<p>
-
-<div class="alert alert-objective">
+<p><div class="alert alert-objective">
   <div>
     <ul>
 <li><input checked="" disabled="" type="checkbox"> The vocabulary and concepts used to <strong>describe</strong> data.</li>
@@ -792,9 +790,7 @@
 </div>
 </p>
 <p>By the end of this session you should gain the following <strong><em>practical skills</em></strong>:</p>
-<p>
-
-<div class="alert alert-objective">
+<p><div class="alert alert-objective">
   <div>
     <ul>
 <li><input checked="" disabled="" type="checkbox"> <strong>Load</strong> flat file datasets in RStudio via querying an API.</li>
@@ -813,9 +809,7 @@
 <p><!-- Data will be "messy", with missing observations, potentially inconsistent structure and levels of precision.
 Paying attention to   --></p>
 <p>Through the session we will learn both language and concepts for describing and thinking about data, but also how to deploy some of the most important data processing and organisation techniques in <code>R</code> to wrangle over a real dataset. We will be working throughout with data from New York’s <a href="https://www.citibikenyc.com/">Citibike</a> scheme, accessed through the <code>bikedata</code> package, an API to Citibike’s <a href="https://www.citibikenyc.com/system-data">publicly available origin-destination trip data</a>.</p>
-<p>
-
-<div class="alert alert-note">
+<p><div class="alert alert-note">
   <div>
     The idea of applying a consistent vocabulary to describing your data applies especially to working with modern visualization toolkits (<a href="https://ggplot2.tidyverse.org/">ggplot2</a>, <a href="https://www.tableau.com/en-gb">Tableau</a>, <a href="https://vega.github.io/vega-lite/">vega-lite</a>), and will be covered in some detail during the next session as we introduce Visualization Fundamentals and the <a href="https://www.springer.com/gp/book/9780387245447">Grammar of Graphics</a>.
   </div>
@@ -1614,9 +1608,7 @@ write_csv(stations, here(&quot;data&quot;, &quot;ny_stations.csv&quot;))
 
 # Clean workspace.
 rm(url, tmp_file)</code></pre>
-<p>
-
-<div class="alert alert-note">
+<p><div class="alert alert-note">
   <div>
     <code>fst</code> implements in the background various operations such as multi-threading to reduce load on disk space. It therefore makes it possible to work with large datasets in-memory in <code>R</code> rather than connecting to a database and serving up summaries/subsets to be loaded into R. We will be working with just 2 million records, but with <code>fst</code> it is possible to work in-memory with much larger datasets – in <span class="citation">Lovelace et al. (<a href="#ref-lovelace_is_2020" role="doc-biblioref">2020</a>)</span> we ended up working with 80 million + trip records.
   </div>
@@ -1973,9 +1965,7 @@ Many more
 ## 1 male   1044621 0.640
 ## 2 female  586361 0.360</code></pre>
 <p>As I’ve commented each line you hopefully get a sense of what is happening in the code above. I mentioned that <code>dplyr</code> functions read like <strong>verbs</strong>. This is a very deliberate design decision. With the code laid out as above – each <code>dplyr</code> verb occupying a single line, separated by a pipe (<code>%&gt;%</code>) – you can generally understand the code with a cursory glance. There are obvious benefits to this. Once you become familiar with <code>dplyr</code> it becomes very easy to read, write and share code.</p>
-<p>
-
-<div class="alert alert-note">
+<p><div class="alert alert-note">
   <div>
     Remembering that <strong>pipes</strong> (<code>%&gt;%</code>) take the output of a set of code and make it the input of the next set, what do you think would happen if you were to comment out the call to <code>arrange()</code> in the code block above? Try it for yourself. You will notice that I use separate lines for each call to the <strong>pipe</strong> operator. This is good practice for supporting readibility of your code.
   </div>
@@ -1994,9 +1984,7 @@ ny_temporal &lt;- ny_trips %&gt;%  # Take the ny_trips data frame.
   group_by(gender, day, hour) %&gt;% # Group by day, hour, gender.
   summarise(count=n()) %&gt;% # Count the grouped rows.
   ungroup()</code></pre>
-<p>
-
-<div class="alert alert-note">
+<p><div class="alert alert-note">
   <div>
     Whether or not to store derived data tables like <code>ny_temporal</code> in a session is not an easy decision. You want to try to avoid cluttering your Environment pane with many data objects. Often when generating charts it is necessary to create these sorts of derived tables as input data (to <code>ggplot2</code>) – and so when doing visual data analysis you may end up with an unhelpfully large number of these derived tables. The general rule I apply: if the derived table is to be used &gt;3 times in a data analysis or is computationally intensive, assign it to an object.
   </div>
@@ -2009,9 +1997,7 @@ ny_temporal &lt;- ny_trips %&gt;%  # Take the ny_trips data frame.
 Figure 2: Line charts generated with <code>ggplot2</code>. Plot data computed using <code>dplyr</code> and <code>lubridate</code>.
 </p>
 </div>
-<p>
-
-<div class="alert alert-note">
+<p><div class="alert alert-note">
   <div>
     Our analysis is based on data from June 2020, a time when New York residents were emerging from lockdown. It would be instructive to compare with data from a non-Covid year. If there is a very clear contrast in usage between this data and a control (non-Covid) year, this suggests bikeshare data may be used for monitoring <em>behavioural change</em>. The fact that bikeshare is collected continuously makes this possible. Check out <a href="https://github.com/jwoLondon/mobv">Jo Wood’s current work</a> analysing Covid-related change in movement behaviours across a range of cities.
   </div>

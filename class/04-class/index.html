@@ -38,7 +38,7 @@
     
   
   <meta name="description" content="Contents  Introduction Concepts Exploratory data analysis and statistical graphics Plots for continuous variables Plots for categorical variables Supporting comparison with layout and colour  Techniques Import Explore  Conclusions References   By the end of this session you should gain the following knowledge:
-   An appreciation of the exploratory data analysis (EDA) worklow. The main chart types (or idioms Munzner 2014) for summarising variation within- and between- variables.">
+  An appreciation of the exploratory data analysis (EDA) worklow. The main chart types (or idioms Munzner 2014) for summarising variation within- and between- variables.">
 
   
   <link rel="alternate" hreflang="en-us" href="../../class/04-class/">
@@ -290,7 +290,7 @@
   <meta property="og:url" content="/class/04-class/">
   <meta property="og:title" content="Visualization for exploratory data analysis: using colour and layout for comparison | Visualization for Geographic Data Science">
   <meta property="og:description" content="Contents  Introduction Concepts Exploratory data analysis and statistical graphics Plots for continuous variables Plots for categorical variables Supporting comparison with layout and colour  Techniques Import Explore  Conclusions References   By the end of this session you should gain the following knowledge:
-   An appreciation of the exploratory data analysis (EDA) worklow. The main chart types (or idioms Munzner 2014) for summarising variation within- and between- variables."><meta property="og:image" content="/media/vis-for-gds.png">
+  An appreciation of the exploratory data analysis (EDA) worklow. The main chart types (or idioms Munzner 2014) for summarising variation within- and between- variables."><meta property="og:image" content="/media/vis-for-gds.png">
   <meta property="twitter:image" content="/media/vis-for-gds.png"><meta property="og:locale" content="en-us">
   
     
@@ -774,9 +774,7 @@
 </div>
 
 <p>By the end of this session you should gain the following <strong><em>knowledge</em></strong>:</p>
-<p>
-
-<div class="alert alert-objective">
+<p><div class="alert alert-objective">
   <div>
     <ul>
 <li><input checked="" disabled="" type="checkbox"> An appreciation of the exploratory data analysis (EDA) worklow.</li>
@@ -788,9 +786,7 @@
 </div>
 </p>
 <p>By the end of this session you should gain the following <strong><em>practical skills</em></strong>:</p>
-<p>
-
-<div class="alert alert-objective">
+<p><div class="alert alert-objective">
   <div>
     <ul>
 <li><input checked="" disabled="" type="checkbox"> Write <code>ggplot2</code> specifications that use colour and layout to support comparison.</li>
@@ -932,9 +928,7 @@ Figure 1: Univariate plots of dispersion.
 <p><strong>Histograms</strong> were used in the <a href="../../class/03-class/">previous session</a> when analysing the 2019 UK General Election dataset. Histograms partition continuous variables into equal-range bins and observations in each bin are counted. These counts are encoded on an aligned scale using bar height. Increasing the size of the bins increases the resolution of the graphical summary. If reasonable decisions are made around choice of bin, histograms give distributions a “shape” that is expressive. It is easy to identify the <em>location</em> of a distribution and, in using length on aligned scale to encode frequency, estimate relative densities between different parts of the distribution. Different from the strip-plot, the histogram allows us to intuit that despite the heavy spread, the distribution of <code>casualty_age</code> is right-skewed, and we’d expect this given the location of the mean (36 years) relative to the median (33 years).</p>
 <p>A problem with histograms is the potential for discontinuities and artificial edge-effects around the bins. <strong>Density plots</strong> overcome this and can be thought of as smoothed histograms. They use <a href="https://en.wikipedia.org/wiki/Kernel_density_estimation">kernel density estimation</a> (KDE) to show the <a href="https://en.wikipedia.org/wiki/Probability_density_function">probability density function</a> of a variable – the relative amount of probability attached to each value of <code>casualty_age</code>. As with histograms, there are decisions to be made around how data are partitioned into bins (or KDE bandwidths). From glancing at the density plots an overall “shape” to the distribution can be immediately derived. It is also possible to infer statistical properties: the mode of the distribution (the highest density), the mean (by visual averaging) and median (finding the midpoint of the area under the curve). Density plots are better suited to datasets that contain a reasonably large number of observations and due to the smoothing function it is possible to generate a density plot that suggests nonsensical values (e.g. negative ages in this case if I hadn’t censored the plot range).</p>
 <p>Finally, <strong>boxplots</strong>, or <strong>box and whisker</strong> plots <span class="citation">(McGill and Larsen <a href="#ref-mcgill_variations_1978" role="doc-biblioref">1978</a>)</span>, encode the statistical properties that we infer from strip-plots, histograms and density plots directly. The box is the interquartile range (<span class="math inline">\(IQR\)</span>) of the <code>casualty_age</code> variable, the vertical line splitting the box is the median, and the whiskers are placed at observations <span class="math inline">\(\leq 1.5*IQR\)</span>. Whilst we lose information around the shape of a distribution, box-plots are space-efficient and useful for comparing many distributions at once.</p>
-<p>
-
-<div class="alert alert-note">
+<p><div class="alert alert-note">
   <div>
     <p>This discussion was a little prosaic – we haven’t made too many observations to advance our knowledge of the dataset. I was surprised at the low average age of road casualties and so quickly explored the distribution of <code>casualty_age</code> conditioning on another variable and differentiating between variable values using colour. Figure <a href="#fig:boxplots-class">2</a> displays boxplots of the location and spread in <code>casualty_age</code> by vehicle type (left) and also by <code>casualty_class</code> for all crashes involving pedestrians. A noteworthy pattern is that riders of bicycles and motorcycles tend to be younger than the pedestrians they are contacting with, whereas for buses, taxis, HGVs and cars the reverse is true. Pedestrians involved in crashes with cars are especially skewed towards the younger ages.</p></p>
 <div class="figure" style="text-align: left"><span id="fig:boxplots-class"></span>
@@ -958,9 +952,7 @@ Figure 2: Boxplots of casualty age by vehicle type and class.
 Figure 3: Scatterplots of pedestrian age by driver age and grouped by vehicle type.
 </p>
 </div>
-<p>
-
-<div class="alert alert-note">
+<p><div class="alert alert-note">
   <div>
     It is common in an EDA to quickly compare associations between many quantitive variables in a dataset using <a href="https://en.wikipedia.org/wiki/Scatter_plot#Scatter_plot_matrices">scatterplot matrices</a> or alternatively <a href="https://en.wikipedia.org/wiki/Parallel_coordinates">parallel coordinate plots</a>. We will use both in sessions 6 and 7 when building models that attempt to formally structure and explain <strong>between-variable</strong> covariation.
   </div>
@@ -986,9 +978,7 @@ Figure 4: Bars displaying crash frequencies by vehicle type.
 Figure 5: <a href="https://en.wikipedia.org/wiki/Dot_plot_(statistics)">Cleveland dot plots</a> and heatmaps summarising crash frequencies by London borough and period of day.
 </p>
 </div>
-<p>
-
-<div class="alert alert-note">
+<p><div class="alert alert-note">
   <div>
     Remembering <span class="citation">Munzner (<a href="#ref-munzner_visualization_2014" role="doc-biblioref">2014</a>)</span>’s ordering of visual channels, Cleveland dot plots, which use position on an aligned scale, are far better at encoding quantities than heatmaps, which use colour value. Stevens’s power estimates for the perception of changes in lightness were <span class="math inline">(n~0.5)</span>. Despite this, I think the heatmap in Figure <a href="#fig:dots-heatmap">5</a> is a successful data graphic. It displays 924 values in a reasonably compact space with cells arranged to emphasise comparison. This illustrates the point raised in the previous session around the trade-offs that must be negotiated when designing graphics for analysis. In this case we trade encoding effectiveness for data density.
   </div>
@@ -1156,9 +1146,7 @@ Figure 6: Bars (and Mosaic plot) displaying association between vehicle type and
 </div>
 <p>Cars are by far the dominant travel mode, causing the largest number of slight and serious injuries to pedestrians. Whether or not cars result in more severe injury rates than other travel modes is not clear from the left-most chart. Length effectively encodes <em>absolute</em> crash counts but <em>relative</em> comparison of injury severity between vehicle types is challenging. The graphic can be reconfigured to emphasise relative comparison – fixing the absolute length of bars and splitting the bars according to proportional injury severity (middle). Now we see that relative injury severity of pedestrians – KSI as a proportion of all crashes – varies slightly between modes (c.22% Taxis - c.26% Buses) except for HGVs where around 40% of crashes result in a serious injury or fatality to the pedestrian. However, we lose a sense of the absolute numbers involved.</p>
 <p>This can be problematic in an EDA when absolute and relative frequencies over many category combinations are made. For combinations in a contingency table that are rare, for example bicycle-pedestrian casualties, it may only take a small number observations in a particular direction to change the KSI rate. Since proportional summaries are agnostic to sample size, they can induce false discoveries, overemphasising patterns that may be unlikely to replicate. It is sometimes desirable, then, to update <em>standardised</em> bar charts so that they are weighted by frequency – to make more visually salient those categories that occur more often and visually downweight those that occur less often. This is possible using <strong>mosaic plots</strong> <span class="citation">(Friendly <a href="#ref-friendly_mosaic_1992" role="doc-biblioref">1992</a>)</span>. Bar widths and heights are allowed to vary; bar area is proportional to <em>absolute</em> number of observations and bars are further subdivided for <em>relative</em> comparison across category values. Mosaic plots are useful tools for exploratory analysis. That they are space-efficient and regularly sized (squarified) means that that they can be laid out for comparison.</p>
-<p>
-
-<div class="alert alert-note">
+<p><div class="alert alert-note">
   <div>
     The Mosaic plot in Figure <a href="#fig:bars-vehicle-injury">6</a> was generated using the <a href="https://haleyjeppson.github.io/ggmosaic/"><code>ggmosaic</code></a> package, an extension to <code>ggplot2</code>. We won’t cover the details of how to implement Mosaic plots in this session. Should you wish to apply them as part of the <em>data challenge</em> element of the homework for this session, <a href="https://haleyjeppson.github.io/ggmosaic/"><code>ggmosaic</code></a>’s documentation pages are an excellent resource.
   </div>
@@ -1484,9 +1472,7 @@ Figure 7: Heatmaps of crashes by day and time period for London Boroughs.
 </div>
 <p>Looking first by day of week, we see that inner London boroughs generally have fewer than expected crash counts during the weekends and that the reverse is true for outer London boroughs – the first column (Sunday) and last column (Saturday) are purple for the top half of the graphic and green for the bottom half. Unsurprisingly this pattern is most extreme for City of London, London’s financial centre. Looking a little more closely at the outer London boroughs we can also identify where this tendency is stronger: Enfield and Haringey, Newham, Redbridge and Waltham Forest. With some knowledge of London’s social and economic geography we could speculate around these patterns and investigate further as part of our EDA. Notice also that whilst we can interpret the direction of relative differences using colour hue (green:positive | purple:negative) for boroughs containing comparatively few crashes (bottom of graphic), these patterns are de-emphasised by the chi-score residuals which are mapped to colour value (lightness).</p>
 <p>For the period of day heatmap, the pattern is of higher than expected crash frequencies at night for particular inner London boroughs – Westminster, Lambeth, Tower Hamlets and especially Hackney – and lower than expected for particular outer London boroughs – Kingston upon Thames, Bromley, Richmond upon Thames. For the morning peak, City of London, Wandsworth, Southwark and Lambeth contain greater than expected crash frequencies. Again, with knowledge of London’s geography, one could speculate about why this might be the case and investigate further.</p>
-<p>
-
-<div class="alert alert-note">
+<p><div class="alert alert-note">
   <div>
     <p>After reading this section, you might have felt that the process of generating modelled expectations extends beyond an initial EDA. I’d argue that the sort of statistical computations described above are necessary as when visually analysing raw values as the dominant “signal” is one that is often already obvious and subject to heavy confounding variables. We will return to this in the technical element of the session.</p></p>
 <p>Additional aside: The discussion of Risk Ratios (RRs) was reasonably abbreviated. RRs are very interpretable measures of effect size, especially when considered alongside <em>absolute risk</em> (observed KSI rates in this case). As they are a ratio of ratios, and therefore agnostic to sample size, RRs can nevertheless be unreliable. Two ratios might be compared that have very different sample sizes and no compensation is made for the one that contains more data. Although this was our justification for selecting signed chi-scores, this can be addressed by estimating confidence intervals or using robust Bayesian estimates for RRs (representing RRs as distributions) <span class="citation">(Greenland <a href="#ref-greenland_bayesian_2006" role="doc-biblioref">2006</a>)</span>.
@@ -1795,9 +1781,7 @@ plot_data %&gt;%
 </div>
 <div id="detailed-analysis-of-crash-location-and-driver-casualty-geodemographics" class="section level4">
 <h4>Detailed analysis of crash location and driver-casualty geodemographics</h4>
-<p>
-
-<div class="alert alert-note">
+<p><div class="alert alert-note">
   <div>
     I had intended to finish the session here. However, I got a little carried away with the pedestrian-driver demographics theme and, using <em>layout</em> and <em>direct encoding</em>, generated data-driven hypotheses/expectations to be explored in more detail. I do not provide code for the analysis below – it extends beyond what I anticipated for this session on EDA.
 It is <strong><em>optional</em></strong> for the interested reader.

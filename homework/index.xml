@@ -94,9 +94,7 @@
 &lt;div id=&#34;session-outcomes&#34; class=&#34;section level2&#34;&gt;
 &lt;h2&gt;Session Outcomes&lt;/h2&gt;
 &lt;p&gt;By the end of this homework session you should be able to:&lt;/p&gt;
-&lt;p&gt;
-
-&lt;div class=&#34;alert alert-objective&#34;&gt;
+&lt;p&gt;&lt;div class=&#34;alert alert-objective&#34;&gt;
   &lt;div&gt;
     &lt;ul&gt;
 &lt;li&gt;&lt;input checked=&#34;&#34; disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; Calculate grouped statistics and use those statistics for ordering plot outputs.&lt;/li&gt;
@@ -214,9 +212,7 @@ expl_cors_order
 &lt;div id=&#34;session-outcomes&#34; class=&#34;section level2&#34;&gt;
 &lt;h2&gt;Session Outcomes&lt;/h2&gt;
 &lt;p&gt;By the end of this homework session you should be able to:&lt;/p&gt;
-&lt;p&gt;
-
-&lt;div class=&#34;alert alert-objective&#34;&gt;
+&lt;p&gt;&lt;div class=&#34;alert alert-objective&#34;&gt;
   &lt;div&gt;
     &lt;ul&gt;
 &lt;li&gt;&lt;input checked=&#34;&#34; disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; Interpret non-standard data graphics by ‘looking-up’ specific values/trends.&lt;/li&gt;
@@ -319,9 +315,7 @@ Figure 1: OD map of commutes between London boroughs
 &lt;div id=&#34;session-outcomes&#34; class=&#34;section level2&#34;&gt;
 &lt;h2&gt;Session Outcomes&lt;/h2&gt;
 &lt;p&gt;By the end of this homework session you should be able to:&lt;/p&gt;
-&lt;p&gt;
-
-&lt;div class=&#34;alert alert-objective&#34;&gt;
+&lt;p&gt;&lt;div class=&#34;alert alert-objective&#34;&gt;
   &lt;div&gt;
     &lt;ul&gt;
 &lt;li&gt;&lt;input checked=&#34;&#34; disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; Write ggplot2 specifications of your own that use colour and layout to support summary and comparison.&lt;/li&gt;
@@ -447,9 +441,7 @@ Figure 1: Boxplots of casualty age by vehicle type and class.
 &lt;div id=&#34;session-outcomes&#34; class=&#34;section level2&#34;&gt;
 &lt;h2&gt;Session Outcomes&lt;/h2&gt;
 &lt;p&gt;By the end of this homework session you should be able to:&lt;/p&gt;
-&lt;p&gt;
-
-&lt;div class=&#34;alert alert-objective&#34;&gt;
+&lt;p&gt;&lt;div class=&#34;alert alert-objective&#34;&gt;
   &lt;div&gt;
     &lt;ul&gt;
 &lt;li&gt;&lt;input checked=&#34;&#34; disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; Formally describe data graphics according to their visual encoding.&lt;/li&gt;
@@ -623,9 +615,7 @@ Figure 4: Map of 2016 EU Referendum vote, estimated by Parliamentary Constituenc
 &lt;div id=&#34;session-outcomes&#34; class=&#34;section level2&#34;&gt;
 &lt;h2&gt;Session Outcomes&lt;/h2&gt;
 &lt;p&gt;By the end of this homework session you should be able to:&lt;/p&gt;
-&lt;p&gt;
-
-&lt;div class=&#34;alert alert-objective&#34;&gt;
+&lt;p&gt;&lt;div class=&#34;alert alert-objective&#34;&gt;
   &lt;div&gt;
     &lt;ul&gt;
 &lt;li&gt;&lt;input checked=&#34;&#34; disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; Describe data according to its structure and contents.&lt;/li&gt;
@@ -847,9 +837,7 @@ Figure 4: Map of 2016 EU Referendum vote, estimated by Parliamentary Constituenc
 &lt;div id=&#34;session-outcomes&#34; class=&#34;section level2&#34;&gt;
 &lt;h2&gt;Session Outcomes&lt;/h2&gt;
 &lt;p&gt;By the end of this homework session you should:&lt;/p&gt;
-&lt;p&gt;
-
-&lt;div class=&#34;alert alert-objective&#34;&gt;
+&lt;p&gt;&lt;div class=&#34;alert alert-objective&#34;&gt;
   &lt;div&gt;
     &lt;ul&gt;
 &lt;li&gt;&lt;input checked=&#34;&#34; disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; Be familiar with RStudio, R Markdown and R Projects.&lt;/li&gt;
