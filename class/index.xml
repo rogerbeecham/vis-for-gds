@@ -6450,7 +6450,7 @@ untidy_wide %&amp;gt;%
 &lt;p&gt;&lt;div class=&#34;alert alert-objective&#34;&gt;
   &lt;div&gt;
     &lt;ul&gt;
-&lt;li&gt;&lt;input checked=&#34;&#34; disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; Appreciate the motivation for this module – why visualization, why &lt;code&gt;R&lt;/code&gt; and why &lt;code&gt;ggplot2&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;input checked=&#34;&#34; disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; &lt;strong&gt;Appreciate&lt;/strong&gt; the motivation for this module – why visualization, why &lt;code&gt;R&lt;/code&gt; and why &lt;code&gt;ggplot2&lt;/code&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;!-- - [x] An **awareness** of the challenges modern data analysis --&gt;
 
@@ -6464,7 +6464,10 @@ untidy_wide %&amp;gt;%
 &lt;li&gt;&lt;input checked=&#34;&#34; disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; Navigate the materials on this course website, having familiarised yourself with its structure&lt;/li&gt;
 &lt;li&gt;&lt;input checked=&#34;&#34; disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; Open &lt;code&gt;R&lt;/code&gt; using the RStudio Integrated Developer Environment (IDE)&lt;/li&gt;
 &lt;li&gt;&lt;input checked=&#34;&#34; disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; Install and enable &lt;code&gt;R&lt;/code&gt; packages and query package documentation&lt;/li&gt;
-&lt;li&gt;&lt;input checked=&#34;&#34; disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; Perform basic calculations via the &lt;code&gt;R  Console - &lt;input checked=&#34;&#34; disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; Render&lt;/code&gt;R Markdown&lt;code&gt;files - &lt;input checked=&#34;&#34; disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; Create&lt;/code&gt;R&lt;code&gt;Projects - &lt;input checked=&#34;&#34; disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; Read-in datasets from external resources as objects (specifically&lt;/code&gt;tibbles`)&lt;/li&gt;
+&lt;li&gt;&lt;input checked=&#34;&#34; disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; Perform basic calculations via the &lt;code&gt;R  Console&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;input checked=&#34;&#34; disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; Render &lt;code&gt;R Markdown&lt;/code&gt; files&lt;/li&gt;
+&lt;li&gt;&lt;input checked=&#34;&#34; disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; Create &lt;code&gt;R&lt;/code&gt; Projects&lt;/li&gt;
+&lt;li&gt;&lt;input checked=&#34;&#34; disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; Read-in datasets from external resources as objects (specifically &lt;code&gt;tibbles&lt;/code&gt;)&lt;/li&gt;
 &lt;/ul&gt;
 
   &lt;/div&gt;
