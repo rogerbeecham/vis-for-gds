@@ -773,16 +773,22 @@ Figure 4: Map of 2016 EU Referendum vote, estimated by Parliamentary Constituenc
 &lt;div id=&#34;task-3-fix-data&#34; class=&#34;section level2&#34;&gt;
 &lt;h2&gt;Task 3: Fix data&lt;/h2&gt;
 &lt;p&gt;In the &lt;a href=&#34;../homework/02-homework_files/02-template.Rmd&#34;&gt;&lt;i class=&#34;fab fa-r-project&#34;&gt;&lt;/i&gt; 02-template.Rmd&lt;/a&gt; file for this session I have provided links to two derived tables (&lt;code&gt;ny_spread_columns&lt;/code&gt; and &lt;code&gt;ny_spread_rows&lt;/code&gt;) from the New York bikeshare trip data that are not in a tidy format.&lt;/p&gt;
-&lt;p&gt;Using functions from &lt;code&gt;dplyr&lt;/code&gt; and &lt;code&gt;tidyr&lt;/code&gt; reorganise these data so that they are conform to the rules of &lt;strong&gt;tidy&lt;/strong&gt; data &lt;span class=&#34;citation&#34;&gt;(Wickham &lt;a href=&#34;#ref-wickham_tidy_2014&#34; role=&#34;doc-biblioref&#34;&gt;2014&lt;/a&gt;)&lt;/span&gt;.&lt;/p&gt;
+&lt;p&gt;Using functions from &lt;code&gt;dplyr&lt;/code&gt; and &lt;code&gt;tidyr&lt;/code&gt; reorganise these data so that they conform to the rules of &lt;strong&gt;tidy&lt;/strong&gt; data &lt;span class=&#34;citation&#34;&gt;(Wickham &lt;a href=&#34;#ref-wickham_tidy_2014&#34; role=&#34;doc-biblioref&#34;&gt;2014&lt;/a&gt;)&lt;/span&gt;.&lt;/p&gt;
 &lt;p&gt;A candidate tidy organisation of the data is below. Each row is an origin-destination pair for a weekday or weekend, and each variable describes:&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;code&gt;o_station&lt;/code&gt;: station id of the origin station&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;d_station&lt;/code&gt;: station ide of the destination station&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;d_station&lt;/code&gt;: station id of the destination station&lt;/li&gt;
 &lt;li&gt;&lt;code&gt;wkday&lt;/code&gt;: identifies whether the OD pair describes weekday or weekend ny_trips&lt;/li&gt;
 &lt;li&gt;&lt;code&gt;count&lt;/code&gt;: count of trips recorded for that observation (OD pair and weekday/weekend)&lt;/li&gt;
 &lt;li&gt;&lt;code&gt;dist&lt;/code&gt;: total distance (cumulative) in kms of all trips recorded for that observation (OD pair and weekday/weekend)&lt;/li&gt;
 &lt;li&gt;&lt;code&gt;duration&lt;/code&gt;: total duration in minutes (cumulative) of all trips recorded for that observation (OD pair and weekday/weekend)&lt;/li&gt;
 &lt;/ul&gt;
+&lt;p&gt;&lt;div class=&#34;alert alert-note&#34;&gt;
+  &lt;div&gt;
+    You may wish to start with reorganising &lt;code&gt;ny_spread_rows&lt;/code&gt; as I deliberately made &lt;code&gt;ny_spread_columns&lt;/code&gt; quite challenging. The intention here was to replicate the sorts of arduous data formatting operations that need to be performed when working with real datasets. As always there are different approaches to this, but it can be achieved with use of &lt;code&gt;pivot_longer&lt;/code&gt;, &lt;code&gt;pivot_wider&lt;/code&gt;, plus a call to &lt;code&gt;separate()&lt;/code&gt;. This may be one to post to the course Slack.
+  &lt;/div&gt;
+&lt;/div&gt;
+&lt;/p&gt;
 &lt;pre&gt;&lt;code&gt;## # A tibble: 386,762 x 6
 ##    o_station d_station wkday   count  dist duration
 ##        &amp;lt;int&amp;gt;     &amp;lt;int&amp;gt; &amp;lt;chr&amp;gt;   &amp;lt;int&amp;gt; &amp;lt;dbl&amp;gt;    &amp;lt;dbl&amp;gt;
@@ -800,7 +806,7 @@ Figure 4: Map of 2016 EU Referendum vote, estimated by Parliamentary Constituenc
 &lt;/div&gt;
 &lt;div id=&#34;task-4-compute-from-data&#34; class=&#34;section level2&#34;&gt;
 &lt;h2&gt;Task 4: Compute from data&lt;/h2&gt;
-&lt;p&gt;Using &lt;code&gt;dplyr&lt;/code&gt; functions, calculate the average distance, duration and speed of trips occuring for each observation. Print out to the Console the top 10 most heavily cycled OD pairs (and their associated summary statistics) separately for weekdays and weekends. You may wish to join on your &lt;code&gt;ny_stations&lt;/code&gt; table in order to fetch the station names corresponding to the origin and destination stations.&lt;/p&gt;
+&lt;p&gt;Using &lt;code&gt;dplyr&lt;/code&gt; functions, calculate the average distance, duration and speed of trips occurring for each observation. Print out to the Console the top 10 most heavily cycled OD pairs (and their associated summary statistics) separately for weekdays and weekends. You may wish to join on your &lt;code&gt;ny_stations&lt;/code&gt; table in order to fetch the station names corresponding to the origin and destination stations.&lt;/p&gt;
 &lt;/div&gt;
 &lt;div id=&#34;references&#34; class=&#34;section level2 unnumbered&#34;&gt;
 &lt;h2&gt;References&lt;/h2&gt;

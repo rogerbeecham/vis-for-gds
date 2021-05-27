@@ -628,6 +628,10 @@
 
 
 
+  
+    
+  
+
 
 
 
@@ -669,6 +673,11 @@
       
       <li >
         <a href="../../homework/01-homework/">1: Introduction</a>
+      </li>
+
+      
+      <li class="active">
+        <a href="../../homework/02-homework/">2: Data fundamentals</a>
       </li>
 
       
@@ -885,16 +894,22 @@
 <div id="task-3-fix-data" class="section level2">
 <h2>Task 3: Fix data</h2>
 <p>In the <a href="../../homework/02-homework_files/02-template.Rmd"><i class="fab fa-r-project"></i> 02-template.Rmd</a> file for this session I have provided links to two derived tables (<code>ny_spread_columns</code> and <code>ny_spread_rows</code>) from the New York bikeshare trip data that are not in a tidy format.</p>
-<p>Using functions from <code>dplyr</code> and <code>tidyr</code> reorganise these data so that they are conform to the rules of <strong>tidy</strong> data <span class="citation">(Wickham <a href="#ref-wickham_tidy_2014" role="doc-biblioref">2014</a>)</span>.</p>
+<p>Using functions from <code>dplyr</code> and <code>tidyr</code> reorganise these data so that they conform to the rules of <strong>tidy</strong> data <span class="citation">(Wickham <a href="#ref-wickham_tidy_2014" role="doc-biblioref">2014</a>)</span>.</p>
 <p>A candidate tidy organisation of the data is below. Each row is an origin-destination pair for a weekday or weekend, and each variable describes:</p>
 <ul>
 <li><code>o_station</code>: station id of the origin station</li>
-<li><code>d_station</code>: station ide of the destination station</li>
+<li><code>d_station</code>: station id of the destination station</li>
 <li><code>wkday</code>: identifies whether the OD pair describes weekday or weekend ny_trips</li>
 <li><code>count</code>: count of trips recorded for that observation (OD pair and weekday/weekend)</li>
 <li><code>dist</code>: total distance (cumulative) in kms of all trips recorded for that observation (OD pair and weekday/weekend)</li>
 <li><code>duration</code>: total duration in minutes (cumulative) of all trips recorded for that observation (OD pair and weekday/weekend)</li>
 </ul>
+<p><div class="alert alert-note">
+  <div>
+    You may wish to start with reorganising <code>ny_spread_rows</code> as I deliberately made <code>ny_spread_columns</code> quite challenging. The intention here was to replicate the sorts of arduous data formatting operations that need to be performed when working with real datasets. As always there are different approaches to this, but it can be achieved with use of <code>pivot_longer</code>, <code>pivot_wider</code>, plus a call to <code>separate()</code>. This may be one to post to the course Slack.
+  </div>
+</div>
+</p>
 <pre><code>## # A tibble: 386,762 x 6
 ##    o_station d_station wkday   count  dist duration
 ##        &lt;int&gt;     &lt;int&gt; &lt;chr&gt;   &lt;int&gt; &lt;dbl&gt;    &lt;dbl&gt;
@@ -912,7 +927,7 @@
 </div>
 <div id="task-4-compute-from-data" class="section level2">
 <h2>Task 4: Compute from data</h2>
-<p>Using <code>dplyr</code> functions, calculate the average distance, duration and speed of trips occuring for each observation. Print out to the Console the top 10 most heavily cycled OD pairs (and their associated summary statistics) separately for weekdays and weekends. You may wish to join on your <code>ny_stations</code> table in order to fetch the station names corresponding to the origin and destination stations.</p>
+<p>Using <code>dplyr</code> functions, calculate the average distance, duration and speed of trips occurring for each observation. Print out to the Console the top 10 most heavily cycled OD pairs (and their associated summary statistics) separately for weekdays and weekends. You may wish to join on your <code>ny_stations</code> table in order to fetch the station names corresponding to the origin and destination stations.</p>
 </div>
 <div id="references" class="section level2 unnumbered">
 <h2>References</h2>

@@ -5808,7 +5808,7 @@ Figure 4: Map of 2016 EU Referendum vote, estimated by Parliamentary Constituenc
 &lt;p&gt;&lt;div class=&#34;alert alert-objective&#34;&gt;
   &lt;div&gt;
     &lt;ul&gt;
-&lt;li&gt;&lt;input checked=&#34;&#34; disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; The vocabulary and concepts used to &lt;strong&gt;describe&lt;/strong&gt; data.&lt;/li&gt;
+&lt;li&gt;&lt;input checked=&#34;&#34; disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; &lt;strong&gt;Learn&lt;/strong&gt; the vocabulary and concepts used to &lt;strong&gt;describe&lt;/strong&gt; data.&lt;/li&gt;
 &lt;li&gt;&lt;input checked=&#34;&#34; disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; &lt;strong&gt;Appreciate&lt;/strong&gt; the characteristics and importance of &lt;strong&gt;tidy data&lt;/strong&gt; &lt;span class=&#34;citation&#34;&gt;(Wickham &lt;a href=&#34;#ref-wickham_tidy_2014&#34; role=&#34;doc-biblioref&#34;&gt;2014&lt;/a&gt;)&lt;/span&gt; for data processing and analysis.&lt;/li&gt;
 &lt;/ul&gt;
 
@@ -5831,7 +5831,7 @@ Figure 4: Map of 2016 EU Referendum vote, estimated by Parliamentary Constituenc
 &lt;/div&gt;
 &lt;div id=&#34;introduction&#34; class=&#34;section level2&#34;&gt;
 &lt;h2&gt;Introduction&lt;/h2&gt;
-&lt;p&gt;This session covers some of the basics around how to describe and organise data. Whilst this might sound prosaic, there are several reasons why being able to consistently describe a dataset is important. First: it is the initial step in any analysis and helps delimit the research themes and technical procedures that can be deployed. This is especially relevant to modern Data Science-type workflows (like those supported by &lt;code&gt;tidyverse&lt;/code&gt;), where it is common apply the same analysis templates for working over data. Describing your dataset with a consistent vocabulary enables you to identify which analysis templates to reuse. Second relates to the point in &lt;a href=&#34;./class/01-class/&#34;&gt;session 1&lt;/a&gt; that Geographic Data Science projects usually involve repurposing datasets for social science research for the first time. It is often not obvious whether the data contain sufficient detail and structure to characterise the target behaviours to be researched and the target populations they are assumed to represent. This leads to additional levels of uncertainty and places greater importance on the initial step of data processing, description and exploration.&lt;/p&gt;
+&lt;p&gt;This session covers some of the basics around how to describe and organise data. Whilst this might sound prosaic, there are several reasons why being able to consistently describe a dataset is important. First: it is the initial step in any analysis and helps delimit the research themes and technical procedures that can be deployed. This is especially relevant to modern Data Science-type workflows (like those supported by &lt;code&gt;tidyverse&lt;/code&gt;), where it is common to apply the same analysis templates for working over data. Describing your dataset with a consistent vocabulary enables you to identify which analysis templates to reuse. Second relates to the point in &lt;a href=&#34;./class/01-class/#what-vis-for-gds-1&#34;&gt;session 1&lt;/a&gt; that Geographic Data Science projects usually involve repurposing datasets for social science research for the first time. It is often not obvious whether the data contain sufficient detail and structure to characterise the target behaviours to be researched and the target populations they are assumed to represent. This leads to additional levels of uncertainty and places greater importance on the initial step of data processing, description and exploration.&lt;/p&gt;
 &lt;p&gt;&lt;!-- Data will be &#34;messy&#34;, with missing observations, potentially inconsistent structure and levels of precision.
 Paying attention to   --&gt;&lt;/p&gt;
 &lt;p&gt;Through the session we will learn both language and concepts for describing and thinking about data, but also how to deploy some of the most important data processing and organisation techniques in &lt;code&gt;R&lt;/code&gt; to wrangle over a real dataset. We will be working throughout with data from New York’s &lt;a href=&#34;https://www.citibikenyc.com/&#34;&gt;Citibike&lt;/a&gt; scheme, accessed through the &lt;code&gt;bikedata&lt;/code&gt; package, an API to Citibike’s &lt;a href=&#34;https://www.citibikenyc.com/system-data&#34;&gt;publicly available origin-destination trip data&lt;/a&gt;.&lt;/p&gt;
@@ -5846,7 +5846,7 @@ Paying attention to   --&gt;&lt;/p&gt;
 &lt;h2&gt;Concepts&lt;/h2&gt;
 &lt;div id=&#34;data-structure&#34; class=&#34;section level3&#34;&gt;
 &lt;h3&gt;Data structure&lt;/h3&gt;
-&lt;p&gt;In the module we will work with &lt;a href=&#34;http://adv-r.had.co.nz/Data-structures.html#data-frames&#34;&gt;data frames&lt;/a&gt; in R. These are spreadsheet like representations where rows are &lt;strong&gt;observations&lt;/strong&gt; (case/record) and columns are &lt;strong&gt;variables&lt;/strong&gt;. Each variable (column) in a data frame is a &lt;a href=&#34;http://adv-r.had.co.nz/Data-structures.html#vectors&#34;&gt;vector&lt;/a&gt; that must be of equal length. Where observations have missing values for certain variables, that is, where they may violate this equal-length requirement, the missing values must be substituted with something, usually with &lt;code&gt;NA&lt;/code&gt; or similar. This constraint occasionally causes difficulties, for example when working with variables that contain values of different length for an observation. In these cases we create a special class of column, a &lt;a href=&#34;https://jennybc.github.io/purrr-tutorial/ls13_list-columns.html&#34;&gt;&lt;code&gt;list-column&lt;/code&gt;&lt;/a&gt;, something we’ll return to later in the module.&lt;/p&gt;
+&lt;p&gt;In the module we will work with &lt;a href=&#34;http://adv-r.had.co.nz/Data-structures.html#data-frames&#34;&gt;data frames&lt;/a&gt; in R. These are spreadsheet like representations where rows are &lt;strong&gt;observations&lt;/strong&gt; (case/record) and columns are &lt;strong&gt;variables&lt;/strong&gt;. Each variable (column) in a data frame is a &lt;a href=&#34;http://adv-r.had.co.nz/Data-structures.html#vectors&#34;&gt;vector&lt;/a&gt; that must be of equal length. Where observations have missing values for certain variables – that is, where they may violate this equal-length requirement – the missing values must be substituted with something, usually with &lt;code&gt;NA&lt;/code&gt; or similar. This constraint occasionally causes difficulties, for example when working with variables that contain values of different length for an observation. In these cases we create a special class of column, a &lt;a href=&#34;https://jennybc.github.io/purrr-tutorial/ls13_list-columns.html&#34;&gt;&lt;code&gt;list-column&lt;/code&gt;&lt;/a&gt;, something we’ll return to later in the module.&lt;/p&gt;
 &lt;p&gt;Organising data according this simple structure – rows as observations, columns as variables – makes working with data more straightforward. A specific set of tools, made available via the &lt;code&gt;tidyverse&lt;/code&gt;, can be deployed for doing most data &lt;strong&gt;tidy&lt;/strong&gt;ing tasks &lt;span class=&#34;citation&#34;&gt;(Wickham &lt;a href=&#34;#ref-wickham_tidy_2014&#34; role=&#34;doc-biblioref&#34;&gt;2014&lt;/a&gt;)&lt;/span&gt;.&lt;/p&gt;
 &lt;/div&gt;
 &lt;div id=&#34;types-of-variable&#34; class=&#34;section level3&#34;&gt;
@@ -5977,12 +5977,12 @@ Distances; prices
 &lt;div id=&#34;types-of-observation&#34; class=&#34;section level3&#34;&gt;
 &lt;h3&gt;Types of observation&lt;/h3&gt;
 &lt;p&gt;Observations either together form an entire &lt;strong&gt;population&lt;/strong&gt; or a subset, or &lt;strong&gt;sample&lt;/strong&gt; that we expect represents a &lt;strong&gt;target population&lt;/strong&gt;.&lt;/p&gt;
-&lt;p&gt;You no doubt will be familiar with these concepts, but we have to think a little more about this in Geographic Data Science applications as we may often be working with datasets that are so-called population-level. The &lt;a href=&#34;(https://www.citibikenyc.com/system-data)&#34;&gt;Citibike dataset&lt;/a&gt; is a complete, population-level dataset in that every journey made through the scheme is recorded. Whether or not this is truly a population-level dataset, however, depends on the analysis purpose. When analysing the bikeshare dataset are we interested only in describing use within the Citibike scheme or are we taking the patterns observed through our analysis to make claims and inferences about cycling more generally?&lt;/p&gt;
+&lt;p&gt;You no doubt will be familiar with these concepts, but we have to think a little more about this in Geographic Data Science applications as we may often be working with datasets that are so-called population-level. The &lt;a href=&#34;(https://www.citibikenyc.com/system-data)&#34;&gt;Citibike dataset&lt;/a&gt; is a complete, population-level dataset in that every journey made through the scheme is recorded. Whether or not this is truly a population-level dataset, however, depends on the analysis purpose. When analysing the bikeshare dataset are we interested &lt;strong&gt;only&lt;/strong&gt; in describing use within the Citibike scheme? Or are we taking the patterns observed through our analysis to make claims and inferences about cycling more generally?&lt;/p&gt;
 &lt;p&gt;If the latter, then there are problems as the level of detail we have on our sample is pretty trivial compared to traditional datasets, where we deliberately design data collection activities with a specified target population in mind. It may therefore be difficult to gauge how representative Citibike users and Citibike cycling is of New York’s general cycling population. The flipside is that passively collected data do not suffer from the same problems such as non-response bias and social-desirability bias as traditionally collected datasets.&lt;/p&gt;
 &lt;/div&gt;
 &lt;div id=&#34;tidy-data&#34; class=&#34;section level3&#34;&gt;
 &lt;h3&gt;Tidy data&lt;/h3&gt;
-&lt;p&gt;I mentioned that we would be working with data frames organised such that columns always and only refer to variables and rows always and only refer to observations. This arrangement, called &lt;strong&gt;tidy&lt;/strong&gt; &lt;span class=&#34;citation&#34;&gt;(Wickham &lt;a href=&#34;#ref-wickham_tidy_2014&#34; role=&#34;doc-biblioref&#34;&gt;2014&lt;/a&gt;)&lt;/span&gt;, has two key advantages. First, if data are arranged in a consistent way, then it is easier to apply and re-use tools for wrangling them due to data having the same underlying structure. Second, placing variables into columns, with each column containing a vector of values, means that we can take advantage of R’s vectorised functions for transforming data – we will demonstrate this in the technical element of this session.&lt;/p&gt;
+&lt;p&gt;I mentioned that we would be working with data frames organised such that columns always and only refer to variables and rows always and only refer to observations. This arrangement, called &lt;strong&gt;tidy&lt;/strong&gt; &lt;span class=&#34;citation&#34;&gt;(Wickham &lt;a href=&#34;#ref-wickham_tidy_2014&#34; role=&#34;doc-biblioref&#34;&gt;2014&lt;/a&gt;)&lt;/span&gt;, has two key advantages. First, if data are arranged in a consistent way, then it is easier to apply and re-use tools for wrangling them due to data having the same underlying structure. Second, placing variables into columns, with each column containing a vector of values, means that we can take advantage of &lt;code&gt;R&lt;/code&gt;’s vectorised functions for transforming data – we will demonstrate this in the technical element of this session.&lt;/p&gt;
 &lt;p&gt;The three rules for tidy data:&lt;/p&gt;
 &lt;ol style=&#34;list-style-type: decimal&#34;&gt;
 &lt;li&gt;Each variable forms a column.&lt;/li&gt;
@@ -6435,7 +6435,7 @@ population
 &lt;/tr&gt;
 &lt;/tbody&gt;
 &lt;/table&gt;
-&lt;p&gt;This actually doesn’t appear in &lt;span class=&#34;citation&#34;&gt;Wickham and Grolemund (&lt;a href=&#34;#ref-wickham_r_2017&#34; role=&#34;doc-biblioref&#34;&gt;2017&lt;/a&gt;)&lt;/span&gt;, but imagine that the &lt;code&gt;gapminder&lt;/code&gt; dataset instead reported values of &lt;code&gt;cases&lt;/code&gt; separately by gender. A type of representation I’ve often seen in social sciences, probably as it is helpful for data entry, is where observations are spread across the columns. This too creates problems for performing aggregate functions, but also for specifying visualization designs (in &lt;a href=&#34;https://ggplot2.tidyverse.org/&#34;&gt;&lt;code&gt;ggplot2&lt;/code&gt;&lt;/a&gt;) as we will discover in the next session.&lt;/p&gt;
+&lt;p&gt;This actually doesn’t appear in &lt;span class=&#34;citation&#34;&gt;Wickham and Grolemund (&lt;a href=&#34;#ref-wickham_r_2017&#34; role=&#34;doc-biblioref&#34;&gt;2017&lt;/a&gt;)&lt;/span&gt;, but imagine that the &lt;code&gt;gapminder&lt;/code&gt; dataset instead reported values of &lt;code&gt;cases&lt;/code&gt; separately by gender. A type of representation I’ve often seen in social science domains, probably as it is helpful for data entry, is where observations are spread across the columns. This too creates problems for performing aggregate functions, but also for specifying visualization designs (in &lt;a href=&#34;https://ggplot2.tidyverse.org/&#34;&gt;&lt;code&gt;ggplot2&lt;/code&gt;&lt;/a&gt;) as we will discover in the next session.&lt;/p&gt;
 &lt;table&gt;
 &lt;caption&gt;
 &lt;span id=&#34;tab:gapminder-untidy2&#34;&gt;Table 7: &lt;/span&gt;Untidy possible excerpt of &lt;a href=&#34;https://www.gapminder.org/data/&#34;&gt;&lt;code&gt;gapminder&lt;/code&gt;&lt;/a&gt; dataset: observations spread across columns
@@ -6655,7 +6655,7 @@ Figure 1: &lt;code&gt;ny_trips&lt;/code&gt; and &lt;code&gt;ny_stations&lt;/code
 &lt;/div&gt;
 &lt;div id=&#34;describe&#34; class=&#34;section level3&#34;&gt;
 &lt;h3&gt;Describe&lt;/h3&gt;
-&lt;p&gt;There are several functions for generating a quick overview of a data frame’s contents. &lt;code&gt;glimpse&amp;lt;dataset-name&amp;gt;&lt;/code&gt; is particularly useful. It provides a summary of the data frame dimensions – we have c. 1.9 million trip observations in &lt;code&gt;ny_trips&lt;/code&gt; and 11 variables. The function also prints out the object type for each of these variables, with the variables either of type &lt;code&gt;int&lt;/code&gt; or &lt;code&gt;chr&lt;/code&gt; in this case.&lt;/p&gt;
+&lt;p&gt;There are several functions for generating a quick overview of a data frame’s contents. &lt;code&gt;glimpse&amp;lt;dataset-name&amp;gt;&lt;/code&gt; is particularly useful. It provides a summary of the data frame dimensions – we have c. 1.9 million trip observations in &lt;code&gt;ny_trips&lt;/code&gt; and 11 variables&lt;a href=&#34;#fn1&#34; class=&#34;footnote-ref&#34; id=&#34;fnref1&#34;&gt;&lt;sup&gt;1&lt;/sup&gt;&lt;/a&gt;. The function also prints out the object type for each of these variables, with the variables either of type &lt;code&gt;int&lt;/code&gt; or &lt;code&gt;chr&lt;/code&gt; in this case.&lt;/p&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;glimpse(ny_trips)
 ## Rows: 1,882,273
 ## Columns: 11
@@ -6744,7 +6744,7 @@ Factors – represent categorical variables of fixed and potentially orderable v
 &lt;/tr&gt;
 &lt;/tbody&gt;
 &lt;/table&gt;
-&lt;p&gt;The object type of a variable in a data frane relates to that variable’s &lt;em&gt;measurement level&lt;/em&gt;. It is often useful to convert to types with greater specificity. For example, we may which to convert the &lt;code&gt;start_time&lt;/code&gt; and &lt;code&gt;stop_time&lt;/code&gt; variables to a date-time format so that various time-related functions could be used. For efficient storage, we may wish to convert the &lt;em&gt;station identifier&lt;/em&gt; variables as &lt;code&gt;int&lt;/code&gt; types by removing the redundant “ny” text which prefaces &lt;code&gt;end_station_id&lt;/code&gt;, &lt;code&gt;end_station_id&lt;/code&gt;, &lt;code&gt;stn_id&lt;/code&gt;. The geographic coordinates are currently stored as type &lt;code&gt;chr&lt;/code&gt;. These could be regarded as quantitative variables, floating points with decimals. So converting to type &lt;code&gt;dbl&lt;/code&gt; or as a &lt;a href=&#34;https://r-spatial.github.io/sf/articles/sf1.html#simple-feature-geometry-types&#34;&gt;&lt;code&gt;POINT&lt;/code&gt;&lt;/a&gt; geometry type (more on this later in the module) may be sensible.&lt;/p&gt;
+&lt;p&gt;The object type of a variable in a data frame relates to that variable’s &lt;em&gt;measurement level&lt;/em&gt;. It is often useful to convert to types with greater specificity. For example, we may which to convert the &lt;code&gt;start_time&lt;/code&gt; and &lt;code&gt;stop_time&lt;/code&gt; variables to a date-time format so that various time-related functions could be used. For efficient storage, we may wish to convert the &lt;em&gt;station identifier&lt;/em&gt; variables as &lt;code&gt;int&lt;/code&gt; types by removing the redundant “ny” text which prefaces &lt;code&gt;end_station_id&lt;/code&gt;, &lt;code&gt;end_station_id&lt;/code&gt;, &lt;code&gt;stn_id&lt;/code&gt;. The geographic coordinates are currently stored as type &lt;code&gt;chr&lt;/code&gt;. These could be regarded as quantitative variables, floating points with decimals. So converting to type &lt;code&gt;dbl&lt;/code&gt; or as a &lt;a href=&#34;https://r-spatial.github.io/sf/articles/sf1.html#simple-feature-geometry-types&#34;&gt;&lt;code&gt;POINT&lt;/code&gt;&lt;/a&gt; geometry type (more on this later in the module) may be sensible.&lt;/p&gt;
 &lt;p&gt;In the &lt;a href=&#34;./homework/02-homework_files/02-template.Rmd&#34;&gt;&lt;i class=&#34;fab fa-r-project&#34;&gt;&lt;/i&gt; 02-template.Rmd&lt;/a&gt; file there are code chunks for doing these conversions. There are some slightly more involved data transform procedures in this code. Don’t fixate too much on these, but the upshot can be seen when running &lt;code&gt;glimpse()&lt;/code&gt; on the converted data frames:&lt;/p&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;glimpse(ny_trips)
 ## Rows: 1,882,273
@@ -7012,7 +7012,7 @@ ny_temporal &amp;lt;- ny_trips %&amp;gt;%  # Take the ny_trips data frame.
   ungroup()&lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;&lt;div class=&#34;alert alert-note&#34;&gt;
   &lt;div&gt;
-    Whether or not to store derived data tables like &lt;code&gt;ny_temporal&lt;/code&gt; in a session is not an easy decision. You want to try to avoid cluttering your Environment pane with many data objects. Often when generating charts it is necessary to create these sorts of derived tables as input data (to &lt;code&gt;ggplot2&lt;/code&gt;) – and so when doing visual data analysis you may end up with an unhelpfully large number of these derived tables. The general rule I apply: if the derived table is to be used &amp;gt;3 times in a data analysis or is computationally intensive, assign it to an object.
+    Whether or not to store derived data tables, like the newly assigned &lt;code&gt;ny_temporal&lt;/code&gt;, in a session is not an easy decision. You want to try to avoid cluttering your Environment pane with many data objects. Often when generating charts it is necessary to create these sorts of derived tables as input data (to &lt;code&gt;ggplot2&lt;/code&gt;) – and so when doing visual data analysis you may end up with an unhelpfully large number of these derived tables. The general rule I apply: if the derived table is to be used &amp;gt;3 times in a data analysis or is computationally intensive, assign it (&lt;code&gt;&amp;lt;-&lt;/code&gt;) to an object.
   &lt;/div&gt;
 &lt;/div&gt;
 &lt;/p&gt;
@@ -7167,7 +7167,8 @@ ny_trips &amp;lt;- ny_trips %&amp;gt;% # Take the ny_trips data frame.
   mutate(
     age=get_age(as.POSIXct(birth_year, format=&amp;quot;%Y&amp;quot;), as.POSIXct(&amp;quot;2020&amp;quot;, format=&amp;quot;%Y&amp;quot;)) # Calculate age from birth_date.
     )&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;We can use the two new derived variables – distance travelled and age – in our analysis. In Figure 4, we explore how &lt;strong&gt;approximate&lt;/strong&gt; travel speeds vary by age, gender and trip distance. The code used to generate the summary data and plot is in the template file. Again the average “speed” calculation should be treated very cautiously as it is based on straight line distances and it is very difficult to select out “utility” from “leisure” trips. I have tried to do the latter by selecting trips that occur only on weekdays and that are made by &lt;code&gt;Subscriber&lt;/code&gt; cyclists. Additionally, due to the heavy subsetting data become a little volatile for certain age groups and so I’ve aggregated the age variable into 5-year bands. Collecting more data is probably a good idea. Still there are some interesting patterns. Men tend to cycle at faster speeds than do women, although this gap narrows with the older age groups. The effect of age on speed cycled is more apparent for the longer trips. This trend is reasonably strong, although the volatility in the older age groups for trips &amp;gt;4.5km suggests we probably need more data and a more involved analysis to establish this. For example, it may be that the comparatively rare occurrence of trips in the 65-70 age group is made by only a small subset of cyclists. A larger dataset would result in a regression to the mean effect and negate any noise caused by outlier individuals.&lt;/p&gt;
+&lt;p&gt;We can use the two new derived variables – distance travelled and age – in our analysis. In Figure &lt;a href=&#34;#fig:plot-speeds&#34;&gt;4&lt;/a&gt;, we explore how &lt;strong&gt;approximate&lt;/strong&gt; travel speeds vary by age, gender and trip distance. The code used to generate the summary data and plot is in the template file. Again the average “speed” calculation should be treated very cautiously as it is based on straight line distances and it is very difficult to select out “utility” from “leisure” trips. I have tried to do the latter by selecting trips that occur only on weekdays and that are made by &lt;code&gt;Subscriber&lt;/code&gt; cyclists. Additionally, due to the heavy subsetting data become a little volatile for certain age groups and so I’ve aggregated the age variable into 5-year bands. Collecting more data is probably a good idea.&lt;/p&gt;
+&lt;p&gt;There are nevertheless some interesting patterns. Men tend to cycle at faster speeds than do women, although this gap narrows with the older age groups. The effect of age on speed cycled is more apparent for the longer trips. This trend is reasonably strong, although the volatility in the older age groups for trips &amp;gt;4.5km suggests we probably need more data and a more involved analysis to establish this. For example, it may be that the comparatively rare occurrence of trips in the 65-70 age group is made by only a small subset of cyclists. A larger dataset would result in a regression to the mean effect and negate any noise caused by outlier individuals. Certainly Figure &lt;a href=&#34;#tab:variable-types&#34;&gt;1&lt;/a&gt; is an interesting data graphic – and the type of exploratory analysis demonstrated here, using &lt;code&gt;dplyr&lt;/code&gt; functions, is most definitely consistent with that identified in the previous session when introducing &lt;em&gt;Geographic Data Science&lt;/em&gt;.&lt;/p&gt;
 &lt;div class=&#34;figure&#34;&gt;&lt;span id=&#34;fig:plot-speeds&#34;&gt;&lt;/span&gt;
 &lt;img src=&#34;./class/02-class_files/speeds.png&#34; alt=&#34;Line charts generated with `ggplot2`. Plot data computed using `dplyr` and `lubridate`&#34; width=&#34;100%&#34; /&gt;
 &lt;p class=&#34;caption&#34;&gt;
@@ -7279,6 +7280,12 @@ untidy_wide %&amp;gt;%
 &lt;p&gt;Wickham, H., and G. Grolemund. 2017. &lt;em&gt;R for Data Science: Import, Tidy, Transform, Visualize, and Model Data&lt;/em&gt;. Sebastopol, California: O’Reilly Media.&lt;/p&gt;
 &lt;/div&gt;
 &lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&#34;footnotes&#34;&gt;
+&lt;hr /&gt;
+&lt;ol&gt;
+&lt;li id=&#34;fn1&#34;&gt;&lt;p&gt;Note that the version of the trips data downloaded from my external repo contains a sample of just 500k records – this is not ideal, but was due to data storage limits on my external repo.&lt;a href=&#34;#fnref1&#34; class=&#34;footnote-back&#34;&gt;↩︎&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;/ol&gt;
 &lt;/div&gt;
 </description>
     </item>
@@ -7471,16 +7478,22 @@ untidy_wide %&amp;gt;%
 &lt;div id=&#34;task-3-fix-data&#34; class=&#34;section level2&#34;&gt;
 &lt;h2&gt;Task 3: Fix data&lt;/h2&gt;
 &lt;p&gt;In the &lt;a href=&#34;./homework/02-homework_files/02-template.Rmd&#34;&gt;&lt;i class=&#34;fab fa-r-project&#34;&gt;&lt;/i&gt; 02-template.Rmd&lt;/a&gt; file for this session I have provided links to two derived tables (&lt;code&gt;ny_spread_columns&lt;/code&gt; and &lt;code&gt;ny_spread_rows&lt;/code&gt;) from the New York bikeshare trip data that are not in a tidy format.&lt;/p&gt;
-&lt;p&gt;Using functions from &lt;code&gt;dplyr&lt;/code&gt; and &lt;code&gt;tidyr&lt;/code&gt; reorganise these data so that they are conform to the rules of &lt;strong&gt;tidy&lt;/strong&gt; data &lt;span class=&#34;citation&#34;&gt;(Wickham &lt;a href=&#34;#ref-wickham_tidy_2014&#34; role=&#34;doc-biblioref&#34;&gt;2014&lt;/a&gt;)&lt;/span&gt;.&lt;/p&gt;
+&lt;p&gt;Using functions from &lt;code&gt;dplyr&lt;/code&gt; and &lt;code&gt;tidyr&lt;/code&gt; reorganise these data so that they conform to the rules of &lt;strong&gt;tidy&lt;/strong&gt; data &lt;span class=&#34;citation&#34;&gt;(Wickham &lt;a href=&#34;#ref-wickham_tidy_2014&#34; role=&#34;doc-biblioref&#34;&gt;2014&lt;/a&gt;)&lt;/span&gt;.&lt;/p&gt;
 &lt;p&gt;A candidate tidy organisation of the data is below. Each row is an origin-destination pair for a weekday or weekend, and each variable describes:&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;code&gt;o_station&lt;/code&gt;: station id of the origin station&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;d_station&lt;/code&gt;: station ide of the destination station&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;d_station&lt;/code&gt;: station id of the destination station&lt;/li&gt;
 &lt;li&gt;&lt;code&gt;wkday&lt;/code&gt;: identifies whether the OD pair describes weekday or weekend ny_trips&lt;/li&gt;
 &lt;li&gt;&lt;code&gt;count&lt;/code&gt;: count of trips recorded for that observation (OD pair and weekday/weekend)&lt;/li&gt;
 &lt;li&gt;&lt;code&gt;dist&lt;/code&gt;: total distance (cumulative) in kms of all trips recorded for that observation (OD pair and weekday/weekend)&lt;/li&gt;
 &lt;li&gt;&lt;code&gt;duration&lt;/code&gt;: total duration in minutes (cumulative) of all trips recorded for that observation (OD pair and weekday/weekend)&lt;/li&gt;
 &lt;/ul&gt;
+&lt;p&gt;&lt;div class=&#34;alert alert-note&#34;&gt;
+  &lt;div&gt;
+    You may wish to start with reorganising &lt;code&gt;ny_spread_rows&lt;/code&gt; as I deliberately made &lt;code&gt;ny_spread_columns&lt;/code&gt; quite challenging. The intention here was to replicate the sorts of arduous data formatting operations that need to be performed when working with real datasets. As always there are different approaches to this, but it can be achieved with use of &lt;code&gt;pivot_longer&lt;/code&gt;, &lt;code&gt;pivot_wider&lt;/code&gt;, plus a call to &lt;code&gt;separate()&lt;/code&gt;. This may be one to post to the course Slack.
+  &lt;/div&gt;
+&lt;/div&gt;
+&lt;/p&gt;
 &lt;pre&gt;&lt;code&gt;## # A tibble: 386,762 x 6
 ##    o_station d_station wkday   count  dist duration
 ##        &amp;lt;int&amp;gt;     &amp;lt;int&amp;gt; &amp;lt;chr&amp;gt;   &amp;lt;int&amp;gt; &amp;lt;dbl&amp;gt;    &amp;lt;dbl&amp;gt;
@@ -7498,7 +7511,7 @@ untidy_wide %&amp;gt;%
 &lt;/div&gt;
 &lt;div id=&#34;task-4-compute-from-data&#34; class=&#34;section level2&#34;&gt;
 &lt;h2&gt;Task 4: Compute from data&lt;/h2&gt;
-&lt;p&gt;Using &lt;code&gt;dplyr&lt;/code&gt; functions, calculate the average distance, duration and speed of trips occuring for each observation. Print out to the Console the top 10 most heavily cycled OD pairs (and their associated summary statistics) separately for weekdays and weekends. You may wish to join on your &lt;code&gt;ny_stations&lt;/code&gt; table in order to fetch the station names corresponding to the origin and destination stations.&lt;/p&gt;
+&lt;p&gt;Using &lt;code&gt;dplyr&lt;/code&gt; functions, calculate the average distance, duration and speed of trips occurring for each observation. Print out to the Console the top 10 most heavily cycled OD pairs (and their associated summary statistics) separately for weekdays and weekends. You may wish to join on your &lt;code&gt;ny_stations&lt;/code&gt; table in order to fetch the station names corresponding to the origin and destination stations.&lt;/p&gt;
 &lt;/div&gt;
 &lt;div id=&#34;references&#34; class=&#34;section level2 unnumbered&#34;&gt;
 &lt;h2&gt;References&lt;/h2&gt;
@@ -8096,18 +8109,14 @@ Figure 5: Creating an RStudio Project
         &lt;tr&gt;
             &lt;td align=&#34;right&#34; style=&#34;width:20%;text-align:right&#34;&gt;Week 2&lt;/td&gt;
             &lt;td style=&#34;width:50%;text-align:left&#34;&gt;Data fundamentals&lt;/td&gt;
-            &lt;td align=&#34;center&#34; style=&#34;width:10%;text-align:center&#34;&gt;
-                &lt;font color=&#34;f1f1f1&#34;&gt;
-                    &lt;i class=&#34;fas fa-book-reader fa-lg&#34;&gt;&lt;/i&gt;&lt;/font&gt;
-            &lt;/td&gt;
-            &lt;td align=&#34;center&#34; style=&#34;width:10%;text-align:center&#34;&gt;
-                &lt;font color=&#34;f1f1f1&#34;&gt;
-                    &lt;i class=&#34;fas fa-chalkboard-teacher fa-lg&#34;&gt;&lt;/i&gt;&lt;/font&gt;
-            &lt;/td&gt;
-            &lt;td align=&#34;center&#34; style=&#34;width:10%;text-align:center&#34;&gt;
-                &lt;font color=&#34;f1f1f1&#34;&gt;
-                    &lt;i class=&#34;fas fa-laptop-code&#34;&gt;&lt;/i&gt;&lt;/font&gt;
-            &lt;/td&gt;
+            &lt;td align=&#34;center&#34; style=&#34;width:10%;text-align:center&#34;&gt;&lt;a
+                    href=&#34;./reading/02-reading/&#34;&gt;
+                    &lt;i class=&#34;fas fa-book-reader fa-lg&#34;&gt;&lt;/i&gt;&lt;/a&gt;&lt;/td&gt;
+            &lt;td align=&#34;center&#34; style=&#34;width:10%;text-align:center&#34;&gt;&lt;a href=&#34;./class/02-class/&#34;&gt;
+                    &lt;i class=&#34;fas fa-chalkboard-teacher fa-lg&#34;&gt;&lt;/i&gt;&lt;/a&gt;&lt;/td&gt;
+            &lt;td align=&#34;center&#34; style=&#34;width:10%;text-align:center&#34;&gt;&lt;a
+                    href=&#34;./homework/02-homework/&#34;&gt;
+                    &lt;i class=&#34;fas fa-laptop-code&#34;&gt;&lt;/i&gt;&lt;/a&gt;&lt;/td&gt;
         &lt;/tr&gt;
         &lt;tr&gt;
             &lt;td align=&#34;right&#34; style=&#34;width:20%;text-align:right&#34;&gt;Week 3&lt;/td&gt;
@@ -8330,18 +8339,14 @@ Figure 5: Creating an RStudio Project
         &lt;tr&gt;
             &lt;td align=&#34;right&#34; style=&#34;width:20%;text-align:right&#34;&gt;Week 2&lt;/td&gt;
             &lt;td style=&#34;width:50%;text-align:left&#34;&gt;Data fundamentals&lt;/td&gt;
-            &lt;td align=&#34;center&#34; style=&#34;width:10%;text-align:center&#34;&gt;
-                &lt;font color=&#34;f1f1f1&#34;&gt;
-                    &lt;i class=&#34;fas fa-book-reader fa-lg&#34;&gt;&lt;/i&gt;&lt;/font&gt;
-            &lt;/td&gt;
-            &lt;td align=&#34;center&#34; style=&#34;width:10%;text-align:center&#34;&gt;
-                &lt;font color=&#34;f1f1f1&#34;&gt;
-                    &lt;i class=&#34;fas fa-chalkboard-teacher fa-lg&#34;&gt;&lt;/i&gt;&lt;/font&gt;
-            &lt;/td&gt;
-            &lt;td align=&#34;center&#34; style=&#34;width:10%;text-align:center&#34;&gt;
-                &lt;font color=&#34;f1f1f1&#34;&gt;
-                    &lt;i class=&#34;fas fa-laptop-code&#34;&gt;&lt;/i&gt;&lt;/font&gt;
-            &lt;/td&gt;
+            &lt;td align=&#34;center&#34; style=&#34;width:10%;text-align:center&#34;&gt;&lt;a
+                    href=&#34;./reading/02-reading/&#34;&gt;
+                    &lt;i class=&#34;fas fa-book-reader fa-lg&#34;&gt;&lt;/i&gt;&lt;/a&gt;&lt;/td&gt;
+            &lt;td align=&#34;center&#34; style=&#34;width:10%;text-align:center&#34;&gt;&lt;a href=&#34;./class/02-class/&#34;&gt;
+                    &lt;i class=&#34;fas fa-chalkboard-teacher fa-lg&#34;&gt;&lt;/i&gt;&lt;/a&gt;&lt;/td&gt;
+            &lt;td align=&#34;center&#34; style=&#34;width:10%;text-align:center&#34;&gt;&lt;a
+                    href=&#34;./homework/02-homework/&#34;&gt;
+                    &lt;i class=&#34;fas fa-laptop-code&#34;&gt;&lt;/i&gt;&lt;/a&gt;&lt;/td&gt;
         &lt;/tr&gt;
         &lt;tr&gt;
             &lt;td align=&#34;right&#34; style=&#34;width:20%;text-align:right&#34;&gt;Week 3&lt;/td&gt;

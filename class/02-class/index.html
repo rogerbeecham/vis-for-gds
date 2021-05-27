@@ -38,7 +38,7 @@
     
   
   <meta name="description" content="Contents  Session outcomes Introduction Concepts Data structure Types of variable Types of observation Tidy data  Techniques Import Describe Transform Tidy  Conclusions References   Session outcomes By the end of this session you should gain the following knowledge:
-  The vocabulary and concepts used to describe data. Appreciate the characteristics and importance of tidy data (Wickham 2014) for data processing and analysis.    By the end of this session you should gain the following practical skills:">
+  Learn the vocabulary and concepts used to describe data. Appreciate the characteristics and importance of tidy data (Wickham 2014) for data processing and analysis.    By the end of this session you should gain the following practical skills:">
 
   
   <link rel="alternate" hreflang="en-us" href="../../class/02-class/">
@@ -290,7 +290,7 @@
   <meta property="og:url" content="/class/02-class/">
   <meta property="og:title" content="Data fundamentals: Describe, wrangle, tidy | Visualization for Geographic Data Science">
   <meta property="og:description" content="Contents  Session outcomes Introduction Concepts Data structure Types of variable Types of observation Tidy data  Techniques Import Describe Transform Tidy  Conclusions References   Session outcomes By the end of this session you should gain the following knowledge:
-  The vocabulary and concepts used to describe data. Appreciate the characteristics and importance of tidy data (Wickham 2014) for data processing and analysis.    By the end of this session you should gain the following practical skills:"><meta property="og:image" content="/media/vis-for-gds.png">
+  Learn the vocabulary and concepts used to describe data. Appreciate the characteristics and importance of tidy data (Wickham 2014) for data processing and analysis.    By the end of this session you should gain the following practical skills:"><meta property="og:image" content="/media/vis-for-gds.png">
   <meta property="twitter:image" content="/media/vis-for-gds.png"><meta property="og:locale" content="en-us">
   
     
@@ -628,6 +628,10 @@
 
 
 
+  
+    
+  
+
 
 
 
@@ -669,6 +673,11 @@
       
       <li >
         <a href="../../class/01-class/">1: Introduction</a>
+      </li>
+
+      
+      <li class="active">
+        <a href="../../class/02-class/">2: Data fundamentals</a>
       </li>
 
       
@@ -738,7 +747,7 @@
 <p><div class="alert alert-objective">
   <div>
     <ul>
-<li><input checked="" disabled="" type="checkbox"> The vocabulary and concepts used to <strong>describe</strong> data.</li>
+<li><input checked="" disabled="" type="checkbox"> <strong>Learn</strong> the vocabulary and concepts used to <strong>describe</strong> data.</li>
 <li><input checked="" disabled="" type="checkbox"> <strong>Appreciate</strong> the characteristics and importance of <strong>tidy data</strong> <span class="citation">(Wickham <a href="#ref-wickham_tidy_2014" role="doc-biblioref">2014</a>)</span> for data processing and analysis.</li>
 </ul>
 
@@ -761,7 +770,7 @@
 </div>
 <div id="introduction" class="section level2">
 <h2>Introduction</h2>
-<p>This session covers some of the basics around how to describe and organise data. Whilst this might sound prosaic, there are several reasons why being able to consistently describe a dataset is important. First: it is the initial step in any analysis and helps delimit the research themes and technical procedures that can be deployed. This is especially relevant to modern Data Science-type workflows (like those supported by <code>tidyverse</code>), where it is common apply the same analysis templates for working over data. Describing your dataset with a consistent vocabulary enables you to identify which analysis templates to reuse. Second relates to the point in <a href="../../class/01-class/">session 1</a> that Geographic Data Science projects usually involve repurposing datasets for social science research for the first time. It is often not obvious whether the data contain sufficient detail and structure to characterise the target behaviours to be researched and the target populations they are assumed to represent. This leads to additional levels of uncertainty and places greater importance on the initial step of data processing, description and exploration.</p>
+<p>This session covers some of the basics around how to describe and organise data. Whilst this might sound prosaic, there are several reasons why being able to consistently describe a dataset is important. First: it is the initial step in any analysis and helps delimit the research themes and technical procedures that can be deployed. This is especially relevant to modern Data Science-type workflows (like those supported by <code>tidyverse</code>), where it is common to apply the same analysis templates for working over data. Describing your dataset with a consistent vocabulary enables you to identify which analysis templates to reuse. Second relates to the point in <a href="../../class/01-class/#what-vis-for-gds-1">session 1</a> that Geographic Data Science projects usually involve repurposing datasets for social science research for the first time. It is often not obvious whether the data contain sufficient detail and structure to characterise the target behaviours to be researched and the target populations they are assumed to represent. This leads to additional levels of uncertainty and places greater importance on the initial step of data processing, description and exploration.</p>
 <p><!-- Data will be "messy", with missing observations, potentially inconsistent structure and levels of precision.
 Paying attention to   --></p>
 <p>Through the session we will learn both language and concepts for describing and thinking about data, but also how to deploy some of the most important data processing and organisation techniques in <code>R</code> to wrangle over a real dataset. We will be working throughout with data from New York’s <a href="https://www.citibikenyc.com/">Citibike</a> scheme, accessed through the <code>bikedata</code> package, an API to Citibike’s <a href="https://www.citibikenyc.com/system-data">publicly available origin-destination trip data</a>.</p>
@@ -776,7 +785,7 @@ Paying attention to   --></p>
 <h2>Concepts</h2>
 <div id="data-structure" class="section level3">
 <h3>Data structure</h3>
-<p>In the module we will work with <a href="http://adv-r.had.co.nz/Data-structures.html#data-frames">data frames</a> in R. These are spreadsheet like representations where rows are <strong>observations</strong> (case/record) and columns are <strong>variables</strong>. Each variable (column) in a data frame is a <a href="http://adv-r.had.co.nz/Data-structures.html#vectors">vector</a> that must be of equal length. Where observations have missing values for certain variables, that is, where they may violate this equal-length requirement, the missing values must be substituted with something, usually with <code>NA</code> or similar. This constraint occasionally causes difficulties, for example when working with variables that contain values of different length for an observation. In these cases we create a special class of column, a <a href="https://jennybc.github.io/purrr-tutorial/ls13_list-columns.html"><code>list-column</code></a>, something we’ll return to later in the module.</p>
+<p>In the module we will work with <a href="http://adv-r.had.co.nz/Data-structures.html#data-frames">data frames</a> in R. These are spreadsheet like representations where rows are <strong>observations</strong> (case/record) and columns are <strong>variables</strong>. Each variable (column) in a data frame is a <a href="http://adv-r.had.co.nz/Data-structures.html#vectors">vector</a> that must be of equal length. Where observations have missing values for certain variables – that is, where they may violate this equal-length requirement – the missing values must be substituted with something, usually with <code>NA</code> or similar. This constraint occasionally causes difficulties, for example when working with variables that contain values of different length for an observation. In these cases we create a special class of column, a <a href="https://jennybc.github.io/purrr-tutorial/ls13_list-columns.html"><code>list-column</code></a>, something we’ll return to later in the module.</p>
 <p>Organising data according this simple structure – rows as observations, columns as variables – makes working with data more straightforward. A specific set of tools, made available via the <code>tidyverse</code>, can be deployed for doing most data <strong>tidy</strong>ing tasks <span class="citation">(Wickham <a href="#ref-wickham_tidy_2014" role="doc-biblioref">2014</a>)</span>.</p>
 </div>
 <div id="types-of-variable" class="section level3">
@@ -907,12 +916,12 @@ Distances; prices
 <div id="types-of-observation" class="section level3">
 <h3>Types of observation</h3>
 <p>Observations either together form an entire <strong>population</strong> or a subset, or <strong>sample</strong> that we expect represents a <strong>target population</strong>.</p>
-<p>You no doubt will be familiar with these concepts, but we have to think a little more about this in Geographic Data Science applications as we may often be working with datasets that are so-called population-level. The <a href="(https://www.citibikenyc.com/system-data)">Citibike dataset</a> is a complete, population-level dataset in that every journey made through the scheme is recorded. Whether or not this is truly a population-level dataset, however, depends on the analysis purpose. When analysing the bikeshare dataset are we interested only in describing use within the Citibike scheme or are we taking the patterns observed through our analysis to make claims and inferences about cycling more generally?</p>
+<p>You no doubt will be familiar with these concepts, but we have to think a little more about this in Geographic Data Science applications as we may often be working with datasets that are so-called population-level. The <a href="(https://www.citibikenyc.com/system-data)">Citibike dataset</a> is a complete, population-level dataset in that every journey made through the scheme is recorded. Whether or not this is truly a population-level dataset, however, depends on the analysis purpose. When analysing the bikeshare dataset are we interested <strong>only</strong> in describing use within the Citibike scheme? Or are we taking the patterns observed through our analysis to make claims and inferences about cycling more generally?</p>
 <p>If the latter, then there are problems as the level of detail we have on our sample is pretty trivial compared to traditional datasets, where we deliberately design data collection activities with a specified target population in mind. It may therefore be difficult to gauge how representative Citibike users and Citibike cycling is of New York’s general cycling population. The flipside is that passively collected data do not suffer from the same problems such as non-response bias and social-desirability bias as traditionally collected datasets.</p>
 </div>
 <div id="tidy-data" class="section level3">
 <h3>Tidy data</h3>
-<p>I mentioned that we would be working with data frames organised such that columns always and only refer to variables and rows always and only refer to observations. This arrangement, called <strong>tidy</strong> <span class="citation">(Wickham <a href="#ref-wickham_tidy_2014" role="doc-biblioref">2014</a>)</span>, has two key advantages. First, if data are arranged in a consistent way, then it is easier to apply and re-use tools for wrangling them due to data having the same underlying structure. Second, placing variables into columns, with each column containing a vector of values, means that we can take advantage of R’s vectorised functions for transforming data – we will demonstrate this in the technical element of this session.</p>
+<p>I mentioned that we would be working with data frames organised such that columns always and only refer to variables and rows always and only refer to observations. This arrangement, called <strong>tidy</strong> <span class="citation">(Wickham <a href="#ref-wickham_tidy_2014" role="doc-biblioref">2014</a>)</span>, has two key advantages. First, if data are arranged in a consistent way, then it is easier to apply and re-use tools for wrangling them due to data having the same underlying structure. Second, placing variables into columns, with each column containing a vector of values, means that we can take advantage of <code>R</code>’s vectorised functions for transforming data – we will demonstrate this in the technical element of this session.</p>
 <p>The three rules for tidy data:</p>
 <ol style="list-style-type: decimal">
 <li>Each variable forms a column.</li>
@@ -1365,7 +1374,7 @@ population
 </tr>
 </tbody>
 </table>
-<p>This actually doesn’t appear in <span class="citation">Wickham and Grolemund (<a href="#ref-wickham_r_2017" role="doc-biblioref">2017</a>)</span>, but imagine that the <code>gapminder</code> dataset instead reported values of <code>cases</code> separately by gender. A type of representation I’ve often seen in social sciences, probably as it is helpful for data entry, is where observations are spread across the columns. This too creates problems for performing aggregate functions, but also for specifying visualization designs (in <a href="https://ggplot2.tidyverse.org/"><code>ggplot2</code></a>) as we will discover in the next session.</p>
+<p>This actually doesn’t appear in <span class="citation">Wickham and Grolemund (<a href="#ref-wickham_r_2017" role="doc-biblioref">2017</a>)</span>, but imagine that the <code>gapminder</code> dataset instead reported values of <code>cases</code> separately by gender. A type of representation I’ve often seen in social science domains, probably as it is helpful for data entry, is where observations are spread across the columns. This too creates problems for performing aggregate functions, but also for specifying visualization designs (in <a href="https://ggplot2.tidyverse.org/"><code>ggplot2</code></a>) as we will discover in the next session.</p>
 <table>
 <caption>
 <span id="tab:gapminder-untidy2">Table 7: </span>Untidy possible excerpt of <a href="https://www.gapminder.org/data/"><code>gapminder</code></a> dataset: observations spread across columns
@@ -1585,7 +1594,7 @@ Figure 1: <code>ny_trips</code> and <code>ny_stations</code> as they appear when
 </div>
 <div id="describe" class="section level3">
 <h3>Describe</h3>
-<p>There are several functions for generating a quick overview of a data frame’s contents. <code>glimpse&lt;dataset-name&gt;</code> is particularly useful. It provides a summary of the data frame dimensions – we have c. 1.9 million trip observations in <code>ny_trips</code> and 11 variables. The function also prints out the object type for each of these variables, with the variables either of type <code>int</code> or <code>chr</code> in this case.</p>
+<p>There are several functions for generating a quick overview of a data frame’s contents. <code>glimpse&lt;dataset-name&gt;</code> is particularly useful. It provides a summary of the data frame dimensions – we have c. 1.9 million trip observations in <code>ny_trips</code> and 11 variables<a href="#fn1" class="footnote-ref" id="fnref1"><sup>1</sup></a>. The function also prints out the object type for each of these variables, with the variables either of type <code>int</code> or <code>chr</code> in this case.</p>
 <pre class="r"><code>glimpse(ny_trips)
 ## Rows: 1,882,273
 ## Columns: 11
@@ -1674,7 +1683,7 @@ Factors – represent categorical variables of fixed and potentially orderable v
 </tr>
 </tbody>
 </table>
-<p>The object type of a variable in a data frane relates to that variable’s <em>measurement level</em>. It is often useful to convert to types with greater specificity. For example, we may which to convert the <code>start_time</code> and <code>stop_time</code> variables to a date-time format so that various time-related functions could be used. For efficient storage, we may wish to convert the <em>station identifier</em> variables as <code>int</code> types by removing the redundant “ny” text which prefaces <code>end_station_id</code>, <code>end_station_id</code>, <code>stn_id</code>. The geographic coordinates are currently stored as type <code>chr</code>. These could be regarded as quantitative variables, floating points with decimals. So converting to type <code>dbl</code> or as a <a href="https://r-spatial.github.io/sf/articles/sf1.html#simple-feature-geometry-types"><code>POINT</code></a> geometry type (more on this later in the module) may be sensible.</p>
+<p>The object type of a variable in a data frame relates to that variable’s <em>measurement level</em>. It is often useful to convert to types with greater specificity. For example, we may which to convert the <code>start_time</code> and <code>stop_time</code> variables to a date-time format so that various time-related functions could be used. For efficient storage, we may wish to convert the <em>station identifier</em> variables as <code>int</code> types by removing the redundant “ny” text which prefaces <code>end_station_id</code>, <code>end_station_id</code>, <code>stn_id</code>. The geographic coordinates are currently stored as type <code>chr</code>. These could be regarded as quantitative variables, floating points with decimals. So converting to type <code>dbl</code> or as a <a href="https://r-spatial.github.io/sf/articles/sf1.html#simple-feature-geometry-types"><code>POINT</code></a> geometry type (more on this later in the module) may be sensible.</p>
 <p>In the <a href="../../homework/02-homework_files/02-template.Rmd"><i class="fab fa-r-project"></i> 02-template.Rmd</a> file there are code chunks for doing these conversions. There are some slightly more involved data transform procedures in this code. Don’t fixate too much on these, but the upshot can be seen when running <code>glimpse()</code> on the converted data frames:</p>
 <pre class="r"><code>glimpse(ny_trips)
 ## Rows: 1,882,273
@@ -1942,7 +1951,7 @@ ny_temporal &lt;- ny_trips %&gt;%  # Take the ny_trips data frame.
   ungroup()</code></pre>
 <p><div class="alert alert-note">
   <div>
-    Whether or not to store derived data tables like <code>ny_temporal</code> in a session is not an easy decision. You want to try to avoid cluttering your Environment pane with many data objects. Often when generating charts it is necessary to create these sorts of derived tables as input data (to <code>ggplot2</code>) – and so when doing visual data analysis you may end up with an unhelpfully large number of these derived tables. The general rule I apply: if the derived table is to be used &gt;3 times in a data analysis or is computationally intensive, assign it to an object.
+    Whether or not to store derived data tables, like the newly assigned <code>ny_temporal</code>, in a session is not an easy decision. You want to try to avoid cluttering your Environment pane with many data objects. Often when generating charts it is necessary to create these sorts of derived tables as input data (to <code>ggplot2</code>) – and so when doing visual data analysis you may end up with an unhelpfully large number of these derived tables. The general rule I apply: if the derived table is to be used &gt;3 times in a data analysis or is computationally intensive, assign it (<code>&lt;-</code>) to an object.
   </div>
 </div>
 </p>
@@ -2097,7 +2106,8 @@ ny_trips &lt;- ny_trips %&gt;% # Take the ny_trips data frame.
   mutate(
     age=get_age(as.POSIXct(birth_year, format=&quot;%Y&quot;), as.POSIXct(&quot;2020&quot;, format=&quot;%Y&quot;)) # Calculate age from birth_date.
     )</code></pre>
-<p>We can use the two new derived variables – distance travelled and age – in our analysis. In Figure 4, we explore how <strong>approximate</strong> travel speeds vary by age, gender and trip distance. The code used to generate the summary data and plot is in the template file. Again the average “speed” calculation should be treated very cautiously as it is based on straight line distances and it is very difficult to select out “utility” from “leisure” trips. I have tried to do the latter by selecting trips that occur only on weekdays and that are made by <code>Subscriber</code> cyclists. Additionally, due to the heavy subsetting data become a little volatile for certain age groups and so I’ve aggregated the age variable into 5-year bands. Collecting more data is probably a good idea. Still there are some interesting patterns. Men tend to cycle at faster speeds than do women, although this gap narrows with the older age groups. The effect of age on speed cycled is more apparent for the longer trips. This trend is reasonably strong, although the volatility in the older age groups for trips &gt;4.5km suggests we probably need more data and a more involved analysis to establish this. For example, it may be that the comparatively rare occurrence of trips in the 65-70 age group is made by only a small subset of cyclists. A larger dataset would result in a regression to the mean effect and negate any noise caused by outlier individuals.</p>
+<p>We can use the two new derived variables – distance travelled and age – in our analysis. In Figure <a href="#fig:plot-speeds">4</a>, we explore how <strong>approximate</strong> travel speeds vary by age, gender and trip distance. The code used to generate the summary data and plot is in the template file. Again the average “speed” calculation should be treated very cautiously as it is based on straight line distances and it is very difficult to select out “utility” from “leisure” trips. I have tried to do the latter by selecting trips that occur only on weekdays and that are made by <code>Subscriber</code> cyclists. Additionally, due to the heavy subsetting data become a little volatile for certain age groups and so I’ve aggregated the age variable into 5-year bands. Collecting more data is probably a good idea.</p>
+<p>There are nevertheless some interesting patterns. Men tend to cycle at faster speeds than do women, although this gap narrows with the older age groups. The effect of age on speed cycled is more apparent for the longer trips. This trend is reasonably strong, although the volatility in the older age groups for trips &gt;4.5km suggests we probably need more data and a more involved analysis to establish this. For example, it may be that the comparatively rare occurrence of trips in the 65-70 age group is made by only a small subset of cyclists. A larger dataset would result in a regression to the mean effect and negate any noise caused by outlier individuals. Certainly Figure <a href="#tab:variable-types">1</a> is an interesting data graphic – and the type of exploratory analysis demonstrated here, using <code>dplyr</code> functions, is most definitely consistent with that identified in the previous session when introducing <em>Geographic Data Science</em>.</p>
 <div class="figure"><span id="fig:plot-speeds"></span>
 <img src="../../class/02-class_files/speeds.png" alt="Line charts generated with `ggplot2`. Plot data computed using `dplyr` and `lubridate`" width="100%" />
 <p class="caption">
@@ -2209,6 +2219,12 @@ untidy_wide %&gt;%
 <p>Wickham, H., and G. Grolemund. 2017. <em>R for Data Science: Import, Tidy, Transform, Visualize, and Model Data</em>. Sebastopol, California: O’Reilly Media.</p>
 </div>
 </div>
+</div>
+<div class="footnotes">
+<hr />
+<ol>
+<li id="fn1"><p>Note that the version of the trips data downloaded from my external repo contains a sample of just 500k records – this is not ideal, but was due to data storage limits on my external repo.<a href="#fnref1" class="footnote-back">↩︎</a></p></li>
+</ol>
 </div>
 
                     </div>
