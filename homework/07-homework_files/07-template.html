@@ -443,7 +443,7 @@ cons_outline &lt;- st_read(url, crs=27700)
 outcome &lt;- leave_votes_west %&gt;%
   select(ons_const_id, constituency_name, leave=figure_to_use) %&gt;%
   inner_join(explanatory %&gt;% select(ons_const_id, region)) %&gt;%
-  mutate(resid_unform=leave-gb_leave)
+  mutate(gb_leave=.519, resid_unform=leave-gb_leave)
 
 # Collect explanatory variables (from census_11 table in parlitools)
 explanatory &lt;- census_11 %&gt;%

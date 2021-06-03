@@ -438,7 +438,7 @@ library(trafficalmr)</code></pre>
 </div>
 <div id="import" class="section level3">
 <h3>Import</h3>
-<p>Run the code block below to download and process the <strong>crashes</strong>, *vehicles<strong> and </strong>casualties** data. These are large datasets so this may take a little time to execute.</p>
+<p>Run the code block below to download and process the <strong>crashes</strong>, *vehicles<strong> and </strong>casualties<strong> data. These are large datasets so this may take a little time to execute. </strong>Note: if you are havung problems, skip to the third code block in this section, where the processed data can be loaded from an external repo.**</p>
 <pre class="r"><code># A vector containing years that we will collect data for.
 years &lt;- 2010:2019
 crashes_all &lt;- get_stats19(year = years, type = &quot;ac&quot;)
@@ -485,14 +485,12 @@ temp_ped_vehicles &lt;- vehicles_all %&gt;%
 ped_veh &lt;- ped_veh %&gt;% left_join(temp_ped_vehicles)
 # Remove temporary/staging data frame.
 rm(temp_ped_vehicles)</code></pre>
-<p>You may well have had problems due to the fact that we are working with a large dataset, so I have made <code>ped_veh</code> available on a personal repository. Run the block below ti download.</p>
+<p><strong>All</strong>: You may have had problems due to the fact that we are working with a large dataset, so I have made <code>ped_veh</code> available on a personal repository. Run the block below to download.</p>
 <pre class="r"><code># Dataset of pedestrian-vehicle crashes.
 url &lt;- &quot;https://www.roger-beecham.com/datasets/ped_veh.fst&quot;
 download.file(url, here(&quot;data&quot;, &quot;ped_veh.fst&quot;))
-ped_veh &lt;- fst::read_fst(here(&quot;data&quot;, &quot;ped_veh.fst&quot;))
-``
-
-Run the code block below  to recode IMD to quintiles.</code></pre>
+ped_veh &lt;- fst::read_fst(here(&quot;data&quot;, &quot;ped_veh.fst&quot;))</code></pre>
+<p>Run the code block below to recode IMD to quintiles.</p>
 <pre class="r"><code># Recode imd into quintiles.
 ped_veh &lt;- ped_veh %&gt;%
   mutate(
