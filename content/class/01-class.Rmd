@@ -25,29 +25,29 @@ editor_options:
 
 By the end of this session you should gain the following **_knowledge_**:
 
-{{% alert objective %}}
-- [x] Appreciate the motivation for this module -- why visualization, why R and why ggplot2
+{{% callout objective %}}
+- [x] **Appreciate** the motivation for this module -- why visualization, why `R` and why `ggplot2`
 <!-- - [x] An **awareness** of the challenges modern data analysis -->
-{{% /alert %}}
+{{% /callout %}}
 
 By the end of this session you should gain the following **_practical skills_**:
 
-{{% alert objective %}}
+{{% callout objective %}}
 - [x] Navigate the materials on this course website, having familiarised yourself with its structure
-- [x] Open R using the RStudio Integrated Developer Environment (IDE)
-- [x] Install and enable R packages and query package documentation
-- [x] Perform basic calculations via the R Console
-- [x] Render R Markdown files
-- [x] Create R Projects
+- [x] Open `R` using the RStudio Integrated Developer Environment (IDE)
+- [x] Install and enable `R` packages and query package documentation
+- [x] Perform basic calculations via the `R  Console`
+- [x] Render `R Markdown` files
+- [x] Create `R` Projects
 - [x] Read-in datasets from external resources as objects (specifically `tibbles`)
-{{% /alert %}}
+{{% /callout %}}
 
 
 ## Welcome to _Visualization for Geographic Data Science_
 
 Welcome to _Visualization for Geographic Data Science_ (_vis-for-gds_). In this first session we'll cover the background to the module -- the why, what and how of _**vis**-for-gds_. If you've not already you should check out the course outline on the [Syllabus](/syllabus/) page for an overall preview of the module.
 
-The main home for this module is [this website](../../). However, via [Minerva]() you can access the [Module  Handbook](). You will use submission boxes in [Minerva]() to upload coursework in the usual way.
+The main home for this module is [this website](../../). However, via [Minerva](https://minerva.leeds.ac.uk/webapps/blackboard/execute/announcement?method=search&context=course&course_id=_521510_1&handle=cp_announcements&mode=cpview) you can access the [Module  Handbook](https://minerva.leeds.ac.uk/bbcswebdav/pid-8457865-dt-content-rid-18601408_2/courses/202021_37303_GEOG5009M/GEOG5009_handbook.pdf). You will use submission boxes in [Minerva](https://minerva.leeds.ac.uk/webapps/blackboard/content/listContentEditable.jsp?content_id=_7985652_1&course_id=_521510_1&mode=reset) to upload coursework in the usual way.
 
 
 
@@ -59,7 +59,7 @@ The main home for this module is [this website](../../). However, via [Minerva](
 
 It is now taken-for-granted that over the last decade or so new data, new technology and new ways of doing science have transformed how we approach the world’s problems. Evidence for this can be seen in the response to the Covid-19 pandemic. Enter [Covid19 github](https://www.google.com/search?q=covid-19+github&rlz=1C5CHFA_enGB632GB632&oq=covid-19+github&aqs=chrome..69i57j69i60l3.5575j0j1&sourceid=chrome&ie=UTF-8) into a search and you’ll be confronted with hundreds of repositories demonstrating how an ever-expanding array of data related to the pandemic can be collected, processed and analysed. _Data Science_ is a term used widely to capture this shift and _Geographic Data Science_ (GDS), probably first discussed coherently by @arribas_geography_2018 and @singleton_geographic_2019, when observing that many of data science's applications are -- or at least should be -- of inherent interest to geographers.
 
-Since gaining traction in the corporate world, the definition of Data Science has been somewhat stretched, but it has its origins in the work of John Tukey's _The Future of Data Analysis_ (1962). Drawing on this, and a survey of more recent work, @donoho_fifty_2017 neatly identify six key facets that a data science discipline might encompass ^[For an excellent precis and interpretation of this for geographers, see @arribas_geography_2018.] :
+Since gaining traction in the corporate world, the definition of Data Science has been somewhat stretched, but it has its origins in the work of John Tukey's _The Future of Data Analysis_ (1962). Drawing on this, and a survey of more recent work, @donoho_fifty_2017 neatly identifies six key facets that a data science discipline might encompass ^[For an excellent precis and interpretation of this for geographers, see @arribas_geography_2018.] :
 
 1.  data gathering, preparation, and exploration;
 2.  data representation and transformation;
@@ -78,19 +78,19 @@ Since gaining traction in the corporate world, the definition of Data Science ha
 <!-- > Visualization is fundamental to meeting the unprecedented challenges and exploiting the wonderful opportunities of the ever-expanding deluge of data confronting virtually every field." \
 > -- Prof. Jim Hollan of UC San Diego -->
 
-<!-- {{% alert note %}}
+<!-- {{% callout note %}}
 Visual approaches to data analysis are particularly suited to Geographic Data Science applications because where datasets are being repurposed for social and natural sciences research for the first time,  contain complex structure and geo-spatial relations that cannot be easily captured by statistical summaries alone and so where the types of questions that can be asked and the techniques deployed to answer them cannot be easily specified in advance.
 
-{{% /alert %}} -->
+{{% /callout %}} -->
 
 Glancing at this list, _visualization_ could be interpreted as a single facet of Data Science process ^[Although not the case when actually reading  @donoho_fifty_2017.] -- something that happens after data gathering, preparation, exploration, but before modelling. In this module you'll learn that visualization is intrinsic to, and should inform, each of these activities, especially so when working with data sets that are spatial -- for Geographic Data Science.
 
-Let's develop this idea by asking **why data visualizations are used in the first place**. In her book _Visualization Analysis and Design_, Tamara @munzer_visualization_2014 considers how humans and computers interface in the decision-making process. She makes the point that data visualization is ultimately about connecting people with data in order to make decisions -- or to install humans in a 'decision-making-loop'. There are occasionally decision-making loops that are entirely computational and where an automated solution exists and is trusted. However, most require some form of human intervention.
+Let's develop this idea by asking **why data visualizations are used in the first place**. In her book _Visualization Analysis and Design_, Tamara @munzner_visualization_2014 considers how humans and computers interface in the decision-making process. She makes the point that data visualization is ultimately about connecting people with data in order to make decisions -- or to install humans in a 'decision-making-loop'. There are occasionally decision-making loops that are entirely computational and where an automated solution exists and is trusted. However, most require some form of human intervention.
 
-The canonical example demonstrating how relying on computation alone can be problematic, and so for the use of visualization, is [Anscombe's quartet](https://en.wikipedia.org/wiki/Anscombe%27s_quartet). Here, @anscombe_graphs_1973 presents four datasets, each containing eleven observations and two variables for each observation. The data are synthetic, but let's say that they are the weight and height of independent samples taken from a population of Postgraduate Students studying Data Science.
+The canonical example demonstrating how relying on computation alone can be problematic, and so for the use of visualization, is [Anscombe's quartet](https://en.wikipedia.org/wiki/Anscombe%27s_quartet). Here, @anscombe_graphs_1973 presents four datasets, each containing eleven observations and two variables for each observation. The data are synthetic, but let's say that they are the weight and height of independent samples taken from a population of postgraduate students studying Data Science.
 
 
-Presented with a new dataset it makes sense to compute some summaries and doing so, we observe that the data appear identical -- they contain the same means, variances and strong positive correlation coefficient. This seems appropriate since the data are measuring weight and height. Although there may be some variation, we'd expect taller students to be heavier. Given these statical summaries we can be confident that we are drawing samples from the same population of (Data Science) students.
+Presented with a new dataset it makes sense to compute some summaries and doing so, we observe that the data appear identical -- they contain the same means, variances and strong positive correlation coefficient. This seems appropriate since the data are measuring weight and height. Although there may be some variation, we'd expect taller students to be heavier. Given these statistical summaries we can be assured that we are drawing samples from the same population of (Data Science) students.
 
 
 ```{r anscombe-data, echo=FALSE, fig.cap="Data from Anscombe's quartet", out.width="90%"}
@@ -108,12 +108,12 @@ knitr::include_graphics("/class/01-class_files/anscombe.png", error = FALSE)
 
 This is not to undermine the importance of numerical analysis. Numeric summaries that simplify patterns are extremely useful and Statistics has at its disposal an array of tools for helping to guard against making false claims from datasets -- a theme that we will return to in session 6, 7 and 8 when we think critically about the use of visual approaches for data anlysis. There remain, though, certain classes of relation and context that cannot be easily captured through statistics alone.
 
-_Geographic_ context is undoubtedly challenging to capture  numerically; many of the early examples of data visualization have been of spatial phenomena and generated by Geographers [see @friendly_brief_2007]. We can also probably make a special case for the use of visual approaches in Geographic Data Science (GDS) applications due to its exploratory nature. Often in GDS datasets are being repurposed for social and natural sciences research for the first time; contain complex structure and geo-spatial relations that cannot be easily captured by statistical summaries alone; and so the types of questions that can be asked and the techniques deployed to answer them cannot be easily specified in advance. In this module we will demonstrate this as we _explore_ (Session 4 and 5), _model under uncertainty_ (Session 6 and 7) and _communicate_ (Session 7 and 8) with various social science datasets.
+_Geographic_ context is undoubtedly challenging to capture  numerically; many of the early examples of data visualization have been of spatial phenomena and generated by Geographers [see @friendly_brief_2007]. We can also probably make a special case for the use of visual approaches in Geographic Data Science (GDS) applications due to its exploratory nature. Often in GDS datasets are being repurposed for social and natural sciences research for the first time; contain complex structure and geo-spatial relations that cannot be easily captured by statistical summaries alone; and so the types of questions that can be asked and the techniques deployed to answer them cannot be easily specified in advance. In this module we will demonstrate this as we _explore_ (Session 4 and 5), _model under uncertainty_ (Session 6 and 7) and _communicate_ (Session 8 and 9) with various social science datasets.
 
 
-{{% alert instruction %}}
-Watch [Jo Wood's](https://www.gicentre.net/jwo/index) talk demonstrating how visual techniques can be used to analyse urban travel behaviours. In the video Jo argues that bikeshare schemes can help democratise cycling, but also for their potential contributions to research -- he briefly contrasts new, passively collected data sets with more "traditional" actively collected data for analysing how people move around cities. A compelling case is then made for the use of visualization to support this activity. This work and further discussion is published in @beecham_exploring_2014.
-{{% /alert %}}
+{{% callout instruction %}}
+Watch [Jo Wood's](https://www.gicentre.net/jwo/index) talk demonstrating how visual techniques can be used to analyse urban travel behaviours. In the video Jo argues that bikeshare schemes can help democratise cycling, but also for their potential contributions to research -- he briefly contrasts new, passively collected data sets with more "traditional" actively collected data for analysing how people move around cities. A compelling case is then made for the use of visualization to support this activity. Related work and further discussion is published in @beecham_exploring_2014.
+{{% /callout %}}
 
 
 <div class="embed-responsive embed-responsive-16by9">
@@ -143,13 +143,12 @@ To do this in a genuine way -- to generate real knowledge from datasets -- we wi
 
 1.  data gathering, preparation, and exploration (Sessions 2, 3, 5);
 2.  data representation and transformation (Sessions 2, 3);
-3.  computing with data (Session 2);
-4.  data visualization and presentation (All Sessions);
-5.  data modelling (Sessions 6, 7, 8);
-6.  and a more introspective “science about data science” (All Sessions, Plus Optional Extra)
+3.  computing with data (Session 2, All sessions);
+4.  data visualization and presentation (All sessions);
+5.  data modelling (Sessions 4, 6, 7, 8);
+6.  and a more introspective “science about data science” (All sessions)
 
-There is already a rich and impressive set of open [Resources](../useful) practically introducing how to do modern [Data Science](https://r4ds.had.co.nz/index.html), [Visualization](https://socviz.co/) and [Geographic Analysis](https://geocompr.robinlovelace.net/). We will certainly draw on these at different stages in the module. What makes this module different from these existing resources is that we will be **doing** applied data science throughout -- we will be identifying and diagnosing problems when gathering data, discovering patterns (some maybe even spurious) as we do exploratory analysis, and attempt to make claims under uncertainty as we generate models based on observed patterns. We will work with both new, passively-collected datasets, as well as more traditional, actively collected datasets located within various social science domains: Political Science, Health Science and Urban and Transport Planning.
-
+There is already a rich and impressive set of open [Resources](../useful) practically introducing how to do modern [Data Science](https://r4ds.had.co.nz/index.html), [Visualization](https://socviz.co/) and [Geographic Analysis](https://geocompr.robinlovelace.net/). We will certainly draw on these at different stages in the module. What makes this module different from these existing resources is that we will be **doing** applied data science throughout -- we will be identifying and diagnosing problems when gathering data, discovering patterns (some maybe even spurious) as we do exploratory analysis, and attempt to make claims under uncertainty as we generate models based on observed patterns. We will work with both new, passively-collected datasets, as well as more traditional, actively collected datasets located within various social science domains.
 
 ## How _vis-for-gds_?
 
@@ -159,11 +158,11 @@ Through the module we will apply modern approaches to data analysis. All data co
 
 There are many benefits that come from being fully open-source, with a critical mass of users. Firstly, there is an array of online forums, tutorials and code examples from which to learn. Second, with such a large community, there are numerous expert `R` users who themselves contribute by developing **libraries** or **packages** that extend its use. As a result `R` is employed for a very wide set of use cases -- this website was even built in `R` using amongst other things the [`blogdown`](https://bookdown.org/yihui/blogdown/) package.
 
-{{% alert note %}}
+{{% callout note %}}
 The key reason for our use of `R` is the ecosystem of users and **packages** that have emerged in recent years. An R package is a bundle of code, data and documentation, usually hosted on the [CRAN](https://cran.r-project.org/) (Comprehensive R Archive Network).
-{{% /alert %}}
+{{% /callout %}}
 
-Of particular importance is the [`tidyverse`](http://www.tidyverse.org) package. This is a set of packages for doing Data Science authored by a software development team at [RStudio](https://rstudio.com/) led by [Hadley Wickham](http://hadley.nz). `tidyverse` packages share a principled underlying philosophy, syntax and documentation. Contained within the `tidyverse` is its data visualization package, [`ggplot2`](https://ggplot2.tidyverse.org/). This package pre-dates the `tidyverse` -- it started as [Hadley Wickham's PhD thesis](http://had.co.nz/thesis/practical-tools-hadley-wickham.pdf) and is one of the most widely-used toolkits for generating data graphics. As with other heavily used visualization toolkits ([`Tableau`](https://www.tableau.com/en-gb), [`vega-lite`](https://vega.github.io/vega-lite/)) it is inspired by Leland Wilkinson's [The Grammar of Graphics](https://www.springer.com/gp/book/9780387245447), the `gg` in `ggplot` stands for Grammar of Graphics. Understanding the design principles behind the _Grammar of Graphics_  (and `tidyverse`) is necessary for modern data analysis and so we will cover this in Sessions 2 and 3, as well as re-visiting later in the module.
+Of particular importance is the [`tidyverse`](http://www.tidyverse.org) package. This is a set of packages for doing Data Science authored by a software development team at [RStudio](https://rstudio.com/) led by [Hadley Wickham](http://hadley.nz). `tidyverse` packages share a principled underlying philosophy, syntax and documentation. Contained within the `tidyverse` is its data visualization package, [`ggplot2`](https://ggplot2.tidyverse.org/). This package pre-dates the `tidyverse` -- it started as [Hadley Wickham's PhD thesis](http://had.co.nz/thesis/practical-tools-hadley-wickham.pdf) and is one of the most widely-used toolkits for generating data graphics. As with other heavily used visualization toolkits ([`Tableau`](https://www.tableau.com/en-gb), [`vega-lite`](https://vega.github.io/vega-lite/)) it is inspired by Leland Wilkinson's [The Grammar of Graphics](https://www.springer.com/gp/book/9780387245447), the `gg` in `ggplot` stands for Grammar of Graphics. Understanding the design principles behind the _Grammar of Graphics_  (and `tidyverse`) is necessary for modern data analysis and so we will cover this in detail in Session  3.
 
 
 ### Rmarkdown for reproducible research
@@ -172,7 +171,7 @@ Of particular importance is the [`tidyverse`](http://www.tidyverse.org) package.
 >
 > Roger Peng, Jeff Leek and Brian Caffo
 
-In recent years there has been much introspection around how science works -- around how statistical claims are made from reasoning over evidence. This came on the back of, amongst other things, a high profile paper published in [Science](http://science.sciencemag.org/content/349/6251/aac4716), which found that of 100 recent peer-reviewed psychology experiments, the findings of only 39 could be replicated. The upshot is that researchers must now make every possible effort to make their work transparent, such that "_all_ aspects of the answer generated by any given analysis [can] be tested" [@brunsdon_opening_2020].
+In recent years there has been much introspection into how science works -- around how statistical claims are made from reasoning over evidence. This came on the back of, amongst other things, a high profile paper published in [Science](http://science.sciencemag.org/content/349/6251/aac4716), which found that of 100 recent peer-reviewed psychology experiments, the findings of only 39 could be replicated. The upshot is that researchers must now make every possible effort to make their work transparent, such that "_all_ aspects of the answer generated by any given analysis [can] be tested" [@brunsdon_opening_2020].
 
 A reproducible research project should be accompanied with:
 
@@ -217,9 +216,9 @@ You should see a set of windows roughly similar to those in the Figure (although
 
 You will write and execute almost all code from the code editor pane. To start though let's use `R` as a calculator by typing some commands into the Console.  You’ll create an object (`x`) and assign it a value using the assignment operator (`<-`), then perform some simple statistical calculations using functions that are held within the `base` package.
 
-{{% alert note %}}
+{{% callout note %}}
 The `base` package is core and native to `R`. Unlike all other packages, it does not need to be installed and called explicitly. One means of checking the package to which a function you are using belongs is to call the help command (`?`) on that function: e.g. `?mean()`.
-{{% /alert %}}
+{{% /callout %}}
 
 * Type the commands contained in the code block below into your R Console. Notice that since you are assigning values to each of these objects they are stored in memory and appear under the Global Environment pane.
 
@@ -237,7 +236,7 @@ x_root <- sqrt(x_2)
 
 There are two steps to getting packages down and available in your working environment:
 
-1. `install.packages(<package-name>)` downloads the named package from a repository.
+1. `install.packages("<package-name>")` downloads the named package from a repository.
 2. `library(<package-name>)` makes the package available in your current session.
 
 * Install the `tidyverse`, the core collection of packages for doing Data Science in `R`, by running the code below:
@@ -245,7 +244,7 @@ There are two steps to getting packages down and available in your working envir
 ```{r install-tidyverse, echo=TRUE, eval=FALSE}
 install.packages("tidyverse")
 ```
-If you have little or no experience in `R`, it is easy to get confused around downloading and then using packages in a session. For example, let's say we want to make use of the simple features package ([`sf`](https://r-spatial.github.io/sf/index.html)), which we will drawn on heavily in the module for performing spatial operations.
+If you have little or no experience in `R`, it is easy to get confused around downloading and then using packages in a session. For example, let's say we want to make use of the simple features package ([`sf`](https://r-spatial.github.io/sf/index.html)), which we will draw on heavily in the module for performing spatial operations.
 
 * Run the code below:
 
@@ -292,18 +291,18 @@ Now let's install some of the remaining core packages on which the module depend
 * Run the block below, which passes a [vector](https://r4ds.had.co.nz/vectors.html) of package names to the `install.packages()` function:
 
 ```{r install-all, echo=TRUE, eval=FALSE}
-install.packages(c("devtools","usethis", "rmarkdown", "knitr","fst",
-"lubridate", "tidymodels", "rmapshaper"))
+install.packages(c("devtools","here", "rmarkdown", "knitr","fst","tidyverse",
+"lubridate", "tidymodels"))
 ```
 
-{{% alert note %}}
+{{% callout note %}}
 If you wanted to make use of a package only very occasionally in a single session, you could access it without explicitly loading it via `library(<package-name>)`, using this syntax: ```<package-name>::<function_name>```, e.g. ```?sf::st_contains()```.
-{{% /alert %}}
+{{% /callout %}}
 
 ### Experiment with R Markdown
-R Markdown documents are suffixed with the extension `.Rmd` and based partly on [Markdown](https://en.wikipedia.org/wiki/Markdown), a lightweight markup language originally used as a means of minimising tedious mark-up tags (`<header></header>`) when preparing HTML documents. The idea is that you trade some flexibility in the formatting of your HTML for ease-of-writing. Working with R Markdown is very similar to Markdown. Sections are denoted hierarchically with  hashes (`#`, `##`, `###`) and emphasis using `*` symbols (`*emphasis* **added**` reads *emphasis* **added** ). Different from standard Markdown, however, R Markdown documents can also contain code chunks that can be run when the document is typeset -- they are a mechanism for producing elegant reproducible notebooks.
+R Markdown documents are suffixed with the extension `.Rmd` and based partly on [Markdown](https://en.wikipedia.org/wiki/Markdown), a lightweight markup language originally used as a means of minimising tedious mark-up tags (`<header></header>`) when preparing HTML documents. The idea is that you trade some flexibility in the formatting of your HTML for ease-of-writing. Working with R Markdown is very similar to Markdown. Sections are denoted hierarchically with  hashes (`#`, `##`, `###`) and emphasis using `*` symbols (`*emphasis* **added**` reads *emphasis* **added** ). Different from standard Markdown, however, R Markdown documents can also contain code chunks to be run when the document is rendered or typeset -- they are a mechanism for producing elegant reproducible notebooks.
 
-Each session of the module has an accompanying R Markdown file. in later sessions you will use these to author computational notebooks that blend code, analysis prose and outputs.
+Each session of the module has an accompanying R Markdown file. In later sessions you will use these to author computational notebooks that blend code, analysis prose and outputs.
 
 * Download the [<i class="fab fa-r-project"></i> 01-template.Rmd](/homework/01-homework_files/01-template.Rmd) file for this session and open it in RStudio by clicking `File` > `Open File ...` > `<your-downloads>/01-template.Rmd`.
 
@@ -350,7 +349,7 @@ A quick overview of the parameters.
 * `cache=<TRUE|FALSE>` - Determines where the results from the code chunk are cached.
 
 
-As part of the [homework](/homework/) from this session you will do some more research on R Markdown. It is worth in advance  downloading RStudio's cheatsheets, which provide comprehensive details on how to configure R Markdown documents:
+As part of the [homework](/homework/01-homework/) from this session you will do some more research on R Markdown. It is worth in advance  downloading RStudio's cheatsheets, which provide comprehensive details on how to configure R Markdown documents:
 
 * Open RStudio and select `Help` > `Cheatsheets` > `R Markdown Cheat Sheet` | `R Markdown Reference Guide`
 
@@ -406,15 +405,16 @@ To an extent R Scripts are more straightforward than R Markdown files in that yo
 
 ### Create an RStudio Project
 
-```{r rstudio-project, echo=FALSE, fig.cap="Creating an RStudio Project", out.width="100%"}
-knitr::include_graphics("/class/01-class_files/rstudio_project.png", error = FALSE)
-```
 
-Throughout this module we will use project-oriented workflows. This is where all files pertaining to a data analysis -- data, code and outputs -- are organised from a single root folder and where *file path discipline* is used such that all paths are relative to the project’s root folder (see [Bryan & Hester 2020](https://rstats.wtf/project-oriented-workflow.html)). You can imagine that this sort of self-contained project set-up is necessary for achieving reproducibility of your research. They allow anyone to take a project and run it on their own machines without having to make any adjustments.
+Throughout this module we will use project-oriented workflows. This is where all files pertaining to a data analysis -- data, code and outputs -- are organised from a single root folder and where *file path discipline* is used such that all paths are relative to the project’s root folder (see [Bryan & Hester 2020](https://rstats.wtf/project-oriented-workflow.html)). You can imagine that this sort of self-contained project set-up is necessary for achieving reproducibility of your research. It allows anyone to take a project and run it on their own machines without having to make any adjustments.
 
 You might have noticed that when you open RStudio it automatically _points to_ a working directory, likely the home folder for your local machine, denoted with `~/` in the Console. RStudio will by default save any outputs to this folder and will also expect any data you use to be saved there. Clearly if you want to incorporate neat, self-contained project workflows then you will want to organise your work from a dedicated project folder rather than the default home folder for your machine. This can be achieved with the `setwd(<path-to-your-project>)` function. The problem with doing this is that you insert a path which cannot be understood outside of your local machine at the time it was created. This is a real pain. It makes simple things like moving projects around on your machine an arduous task and most importantly it hinders reproducibility if others are to reuse your work.
 
 RStudio Projects are a really excellent feature of the RStudio IDE that resolve these problems. Whenever you load up an RStudio Project, R starts up and the working directory is automatically set to the project's root folder. If you were to move the project elsewhere on your machine, or to another machine, a new root is automatically generated -- so RStudio projects ensure that relative paths work.
+
+```{r rstudio-project, echo=FALSE, fig.cap="Creating an RStudio Project", out.width="100%"}
+knitr::include_graphics("/class/01-class_files/rstudio_project.png", error = FALSE)
+```
 
 Let's create a new Project for this module:
 
@@ -446,9 +446,9 @@ Visual data analysis approaches are necessary for exploring complex patterns in 
 *  contain complex structure and geo-spatial relations that cannot be easily captured by statistical summaries alone;
 *  and, consequently, where the types of questions that can be asked and the techniques deployed to answer them cannot be easily specified in advance.
 
-In this module we will demonstrate this as we explore (Session 4 and 5), model under uncertainty (Session 6 and 7) and communicate (Session 7 and 8) with various social science datasets. We will work with both new, large-scale behavioural datasets, as well as more traditional, administrative datasets located within various social science domains: Political Science, Crime Science, Urban and Transport Planning.
+In this module we will demonstrate this as we explore (Session 4 and 5), model under uncertainty (Session 6 and 7) and communicate (Session 8 and 9) with various social science datasets. We will work with both new, large-scale behavioural datasets, as well as more traditional, administrative datasets located within various social science domains: Political Science, Crime Science, Urban and Transport Planning.
 
-We will do so using the statistical programming environment `R`, which along with [`Python`](https://www.python.org/), is *the* programming environment for modern data analysis. We will make use of various tools, software libraries that form part of the `R` ecosystem --  the [`tidyverse`](https://www.tidyverse.org/) for doing modern data science and [R Markdown](https://rmarkdown.rstudio.com/) for authoring reproducible research projects.
+We will do so using the statistical programming environment `R`, which along with [`Python`](https://www.python.org/), is *the* programming environment for modern data analysis. We will make use of various tools and software libraries that form part of the `R` ecosystem --  the [`tidyverse`](https://www.tidyverse.org/) for doing modern data science and [R Markdown](https://rmarkdown.rstudio.com/) for authoring reproducible research projects.
 
 
 <!-- https://www.sciencedirect.com/science/article/pii/S1353829220311758?via%3Dihub -->

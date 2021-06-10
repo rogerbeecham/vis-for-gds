@@ -24,16 +24,16 @@ editor_options:
 
 By the end of this homework session you should:
 
-{{% alert objective %}}
+{{% callout objective %}}
 - [x] Be familiar with RStudio, R Markdown and R Projects.
 - [x] Know how to install and enable R packages and query package documentation.
 - [x] Understand the purpose R Markdown files and their anatomy.
 - [x] Know how to create R Projects and understand their benefits
-{{% /alert %}}
+{{% /callout %}}
 
 ## Introduction
 
-For each session I will post some additional exercises that relate to the practical learning you will be doing in-class. You will be populating R Markdown files as you complete the exercises. The exercises will vary in detail and challenge but you should try your best effort to complete them as they will form a portfolio of work that will contribute 25% of the module mark. Doing these exercises will also help you build the skills necessary to complete the project coursework that forms the main contribution to your module mark (75%).
+For most sessions I will post some additional exercises that relate to the practical learning you will be doing in-class. You will be populating R Markdown files as you complete the exercises. The exercises will vary in detail and challenge but you should try your best effort to complete them as they will form a portfolio of work that will contribute 30% of the module mark. Doing these exercises will also help you build the skills necessary to complete the project coursework that forms the main contribution to your module mark (70%).
 
 There has been a lot to take in this session. There are no formal exercises to complete as part of this session's homework. Instead we want you to really try to solidify your understanding of the core technology for the module.
 
@@ -54,6 +54,6 @@ This repeats some of the work that you have done in class this session. If you'r
 Thomas Mock's [Gentle Introduction to Tidy Statistics](https://rstudio.com/resources/webinars/a-gentle-introduction-to-tidy-statistics-in-r/) is pitched those coming to R after previously working with point-and-click interfaces (SPSS, STATA, ArcGIS). I strongly recommend that you watch this now as you start to embark on the "pain" of doing data analysis programmatically.
 
 
-<div class="embed-responsive embed-responsive-16by9">
+<!-- <div class="embed-responsive embed-responsive-16by9">
 <iframe class="embed-responsive-item" src="https://rstudio.com/resources/webinars/a-gentle-introduction-to-tidy-statistics-in-r/" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-</div>
+</div> -->

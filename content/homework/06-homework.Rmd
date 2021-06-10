@@ -10,10 +10,10 @@ output:
   blogdown::html_page:
     template: ../../pandoc/toc-title_html.template
     toc: true
-menu:
-  homework:
-    parent: Homework
-    weight: 1
+# menu:
+#   homework:
+    # parent: Homework
+    # weight: 1
 type: docs
 weight: 1
 editor_options:
@@ -28,11 +28,11 @@ library(knitr)
 
 By the end of this homework session you should be able to:
 
-{{% alert objective %}}
+{{% callout objective %}}
 - [x] Calculate grouped statistics and use those statistics for ordering plot outputs.
 - [x] Extract parameters from linear regression models and explore their structure graphically.
 - [x] Make use of functional programming techniques for working over datasets.
-{{% /alert %}}
+{{% /callout %}}
 
 ## Introduction
 

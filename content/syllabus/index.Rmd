@@ -81,9 +81,9 @@ A key mechanism through which you can **participate** is by contributing to the 
 
 If you've not used Slack before, then follow these pages on [getting started with Slack](https://slack.com/intl/en-gb/help/articles/218080037-Getting-started-for-new-members). You should post all substantive questions associated with the module to Slack. These will get answered. If you wish to discuss more personal matters around your completing the course, then send those directly to me via e-mail.
 
-{{% alert instruction %}}
+{{% callout instruction %}}
 Create an account on the [vis-for-gds Slack](https://vis-for-gds.slack.com). Be sue to register with you `.leeds.ac.uk` e-mail. If you run into any problems, try [getting started with Slack](https://slack.com/intl/en-gb/help/articles/218080037-Getting-started-for-new-members).
-{{% /alert  %}}
+{{% /callout  %}}
 
 ## Asking questions
 

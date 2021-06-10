@@ -440,13 +440,13 @@ url &lt;- &quot;https://www.roger-beecham.com/datasets/cons_outline.geojson&quot
 cons_outline &lt;- st_read(url, crs=27700)
 
 # Collect outcome variable (from leave_votes_west table in parlitools)
-outcome &lt;- leave_votes_west %&gt;% 
-  select(ons_const_id, constituency_name, leave=figure_to_use) %&gt;% 
-  inner_join(explanatory %&gt;% select(ons_const_id, region)) %&gt;% 
-  mutate(resid_unform=leave-gb_leave)
+outcome &lt;- leave_votes_west %&gt;%
+  select(ons_const_id, constituency_name, leave=figure_to_use) %&gt;%
+  inner_join(explanatory %&gt;% select(ons_const_id, region)) %&gt;%
+  mutate(gb_leave=.519, resid_unform=leave-gb_leave)
 
 # Collect explanatory variables (from census_11 table in parlitools)
-explanatory &lt;- census_11 %&gt;% 
+explanatory &lt;- census_11 %&gt;%
   transmute(
     ons_const_id=ons_const_id, constituency_name=constituency_name, region=region,
     population=population, population_density=population_density,
@@ -466,7 +466,7 @@ explanatory_z_scores &lt;- explanatory %&gt;%
   )
 
 # Generate data frame containing data for models.
-data_for_models &lt;- explanatory_z_scores %&gt;% 
+data_for_models &lt;- explanatory_z_scores %&gt;%
   inner_join(outcome %&gt;% select(ons_const_id, leave, region))</code></pre>
 </div>
 </div>
@@ -474,9 +474,9 @@ data_for_models &lt;- explanatory_z_scores %&gt;%
 <h2>Homework</h2>
 <div id="task-1-calculate-and-plot" class="section level3">
 <h3>Task 1: Calculate and plot</h3>
-<pre class="r"><code># Place your code for calculating correlation coefficients by explanatory 
-# variable here. Note that you will then want to extract a vector of ordered  
-# variable names as an object. </code></pre>
+<pre class="r"><code># Place your code for calculating correlation coefficients by explanatory
+# variable here. Note that you will then want to extract a vector of ordered
+# variable names as an object.</code></pre>
 <pre class="r"><code># Place your code for generating scatterplots here.</code></pre>
 </div>
 <div id="task-2-explore-model-and-evaluate" class="section level3">

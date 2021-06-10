@@ -13,14 +13,14 @@ The technical element to this session involves analysing [`stats19`](https://dat
 
 ### Setup
 
-The code block below points to the packages you need to do the work discussed in the session. Uncomment the `intall_packages()` lines if you have not already downloaded `stats19` and `trafficalmr`.
+The code block below points to the packages you need to do the work discussed in the session. Uncomment the `intall_packages()` lines if you have not already downloaded `stats19` and `trafficalmr`. Note that if you are having problems I ultimately make the main dataset used `ped_veh` available in a separate repo (see below "get-ped-veh" chunk).
 
 ```{r setup, echo=TRUE, eval=FALSE, message=FALSE}
 library(tidyverse) # Bundle of packages for doing modern data analysis.
 library(sf) # Spatial operations
 library(here) # For navigating project directory
 library(fst) # For reading/writing large files.
-library(lubriadate) # For working with dates.
+library(lubridate) # For working with dates.
 
 # remotes::install_github("ropensci/stats19")
 library(stats19)
@@ -31,7 +31,7 @@ library(trafficalmr)
 
 ### Import
 
-Run the code block below to download and process the **crashes**, *vehicles** and **casualties** data. These are large datasets so this may take a little time to execute.
+Run the code block below to download and process the **crashes**, *vehicles** and **casualties** data. These are large datasets so this may take a little time to execute. **Note: if you are havung problems, skip to the third code block in this section, where the processed data can be loaded from an external repo.**
 
 ```{r download-data, echo=TRUE, eval=FALSE, message=FALSE}
 # A vector containing years that we will collect data for.
@@ -86,6 +86,15 @@ ped_veh <- ped_veh %>% left_join(temp_ped_vehicles)
 rm(temp_ped_vehicles)
 ```
 
+**All**: You may have had problems due to the fact that we are working with a large dataset, so I have made `ped_veh` available on a personal repository. Run the block below to download.
+
+```{r get-ped-veh, echo=TRUE, eval=FALSE, message=FALSE}
+# Dataset of pedestrian-vehicle crashes.
+url <- "https://www.roger-beecham.com/datasets/ped_veh.fst"
+download.file(url, here("data", "ped_veh.fst"))
+ped_veh <- fst::read_fst(here("data", "ped_veh.fst"))
+```
+
 Run the code block below  to recode IMD to quintiles.
 
 
@@ -135,7 +144,6 @@ imd <- imd %>% mutate(
 ped_veh <- ped_veh %>%
   # Crashes in Wales are excluded as English IMD
   inner_join(imd %>% select(LSOA11CD, crash_quintile), by=c("lsoa_of_accident_location"="LSOA11CD"))
-
 ```
 
 ## Homework

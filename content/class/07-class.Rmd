@@ -10,10 +10,10 @@ output:
   blogdown::html_page:
     template: ../../pandoc/toc-title_html.template
     toc: true
-menu:
-  class:
-    parent: Class
-    weight: 1
+# menu:
+#   class:
+    # parent: Class
+    # weight: 1
 type: docs
 weight: 1
 editor_options:
@@ -29,32 +29,32 @@ library(here)
 
 By the end of this session you should gain the following **_knowledge_**:
 
-{{% alert objective %}}
+{{% callout objective %}}
 - [x] **Understand** two categories of geographic effect in regression modelling: geographical *dependence* in values and *non-stationarity* in processes.
 - [x] **Learn** how linear regression models can be updated to account for and explore these two effects.
-{{% /alert %}}
+{{% /callout %}}
 
 By the end of this session you should gain the following **_practical skills_**:
 
-{{% alert objective %}}
+{{% callout objective %}}
 - [x] **Update** linear regression models in R with Fixed Effect (FE) and Interaction terms.
 - [x] **Extract** model outputs and diagnostics in a [`tidy`](https://vita.had.co.nz/papers/tidy-data.pdf) manner.
 - [x] **Apply** [functional-style programming](https://purrr.tidyverse.org/articles/other-langs.html) for working over multiple model outputs.
-{{% /alert %}}
+{{% /callout %}}
 
 ## Introduction
 
 The previous session finished by identifying geographic patterning in the residuals of our multivariate regression model that attempts to explain variation in constituency-level Leave voting. Geographic patterning in residuals is common -- and expected -- in area-level analysis, but is problematic as it indicates *bias* -- that Leave voting is better represented in certain areas than in others because the model ignores some systematic grouping context. This session is again presented as a narrated data analysis -- the [Concepts](/class/06-class/#concepts-1/) element is structured around the data analysis and the [Techniques](/class/06-class/#techniques-1/) on working with regression models in R. We will extend our regression model to adjust for geographic context, using visualization to represent and evaluate model outputs.
 
 
-{{% alert instruction %}}
+{{% callout instruction %}}
 Watch [Heather Krause's](https://www.youtube.com/watch?v=uw1Tag08dK4) excellent OpenVisConf 2018 talk on, amongst other things,  why it is important to account for this sort of grouping context.
 
 <div class="embed-responsive embed-responsive-16by9">
 <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/uw1Tag08dK4" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </div>
 
-{{% /alert %}}
+{{% /callout %}}
 
 
 ## Concepts
@@ -70,7 +70,7 @@ In the last session we identified two ways in which geographic grouping in resid
 
 ### Representing geographic context
 
-There are different ways of constituting geographic context. We have talked about patterning in residuals as being *spatial*, with values varying smoothly and continuously depending on location. This might be the case, and spatial autocorrelation is present in almost all datasets ([e.g. Tobler's first law](https://en.wikipedia.org/wiki/Tobler%27s_first_law_of_geography)). But given the phenomena we are studying -- variation in political voting behaviour and demographic composition of constituencies deliberately linked to [*places*](https://ppr.lse.ac.uk/articles/10.31389/lseppr.4/) left-behind by structural-economic change -- it also plausible that distinct contexts are linked to regions. The residuals in the [previous session's Map LineUp](http://127.0.0.1:4321/class/06-class/#exploring-bias-1) -- also above -- do seem to be grouped by regional boundaries, particularly Scotland looks categorically different (for obvious reasons). This suggests that geographic context might be usefully represented as a *category* rather than continuous variable (location in *x,y*). For most of the session we will represent geographic context as a *regional* grouping and cover approaches both to modelling *spatial dependence* in **values** and *spatial non-stationarity* in **processes**.
+There are different ways of constituting geographic context. We have talked about patterning in residuals as being *spatial*, with values varying smoothly and continuously depending on location. This might be the case, and spatial autocorrelation is present in almost all datasets ([e.g. Tobler's first law](https://en.wikipedia.org/wiki/Tobler%27s_first_law_of_geography)). But given the phenomena we are studying -- variation in political voting behaviour and demographic composition of constituencies deliberately linked to [*places*](https://ppr.lse.ac.uk/articles/10.31389/lseppr.4/) left-behind by structural-economic change -- it also plausible that distinct contexts are linked to regions. The residuals in the [previous session's Map LineUp](http://127.0.0.1:4321/class/06-class/#exploring-bias-1) -- also below -- do seem to be grouped by regional boundaries, particularly Scotland looks categorically different (for obvious reasons). This suggests that geographic context might be usefully represented as a *category* rather than continuous variable (location in *x,y*). For most of the session we will represent geographic context as a *regional* grouping and cover approaches both to modelling *spatial dependence* in **values** and *spatial non-stationarity* in **processes**.
 
 
 ```{r plot-lineup, echo=FALSE, fig.cap="Map LineUp of residuals in which the ‘real’ dataset is presented alongside 8 decoy plots generated by randomly permuting the observed residuals around constituencies.", fig.align="left", out.width="100%"}
@@ -99,9 +99,9 @@ So we now estimate the Leave vote in each constituency ($y_{i}$) as a function o
 
 Plotting the virtual regression lines -- regression lines offset by the FE constant -- is interesting as it tells us a little about the nature of association in our explanatory variables. For the *degree-educated* and *professional* variables especially, regional *dependence* in Leave voting needs to be adjusted for -- once taken into account, there is a very strong association between *degree-education* and *Leave* -- most obvious in the lines for Scotland (red).  Although we are not yet modelling for this explicitly, eyeballing the chart, there is not obvious evidence for regional heterogeneity in the *associations* with Leave for *degree-educated* and so it might be regarded as a 'global' variable -- a clear positive association with Leave irrespective of region. There may be regional specificity in the associations with Leave for the other explanatory variables. -->
 
-To illustrate this, Figure \@ref(fig:scatters-fe) is an updated set of scatterplots now annotated with 'virtual' regression lines for single variable linear regression models fit separately for each explanatory variable with a region FE. Plotting the virtual regression lines -- regression lines offset by the FE constant -- is interesting as it tells us a little about the nature of association in our explanatory variables. Given the way we have specified our model, the FE constants serving effectively as intercepts, $R^2$ is no longer meaningful and so other measures of fit such as [AIC](https://en.wikipedia.org/wiki/Akaike_information_criterion) should be used to evaluate relative fit.
+To illustrate this, Figure \@ref(fig:scatters-fe) is an updated set of scatterplots now annotated with 'virtual' regression lines for single variable linear regression models fit separately for each explanatory variable with a region FE. Plotting the virtual regression lines -- regression lines offset by the FE constant -- is interesting as it tells us a little about the nature of association in our explanatory variables. Given the way we have specified our model, the FE constants serve effectively as intercepts, $R^2$ is no longer meaningful and so other measures of fit such as [AIC](https://en.wikipedia.org/wiki/Akaike_information_criterion) should be used to evaluate relative fit.
 
-For the *degree-educated* and *professional* variables especially, regional *dependence* in Leave voting needs to be adjusted for -- once taken into account, there is a very strong association between *degree-education* and *Leave* -- most obvious in the lines for Scotland (red).  Although we are not yet modelling for this explicitly, eyeballing the chart, there is not obvious evidence for regional heterogeneity in the *associations* with Leave for *degree-educated* and so it might be regarded as a 'global' variable -- a clear positive association with Leave irrespective of region. There may be regional specificity in the associations with Leave for the other explanatory variables.
+For the *degree-educated* and *professional* variables especially, regional *dependence* in Leave voting needs to be adjusted for -- once taken into account, there is a very strong association between *degree-education* and *Leave*, most obvious in the lines for Scotland (red).  Although we are not yet modelling for this explicitly, eyeballing the chart, there is not obvious evidence for regional non-stationarity in the *associations* with Leave for *degree-educated* and so it might be regarded as a 'global' variable -- a clear positive association with Leave irrespective of region. There may be regional specificity in the associations with Leave for the other explanatory variables.
 
 
 ```{r scatters-fe, echo=FALSE, fig.cap="Scatterplots of constituency Leave vote against candidate explanatory variables, annotated with FE 'virtual' regression lines, coefficients and model fit (AIC -- the lower the value, better the model). Scotland is highlighted red.", fig.align="left", out.width="100%"}
@@ -151,7 +151,7 @@ Figure \@ref(fig:scatters-interaction) is an updated set of scatterplots again a
 include_graphics("/class/07-class_files/scatters-interaction.png", error = FALSE)
 ```
 
-In Figure \@ref(fig:plot-outputs-interaction) are region-specific coefficients derived from a multivariate model with an interaction term introduced on region. In each region, *degree-educated* has a negative coefficient and with reasonably tight uncertainty estimates, or at least CIs that do not cross 0. The other variables are  subject to more uncertainty. The *no-car* variable is also negatively associated with Leave, a variable we thought may separate metropolitan versus peripheral contexts, but the strength of negative association, after controlling for variation in other demographic factors, does vary by region. The *heavy industry* variable, previously identified as being strongly associated with Leave (e.g. [previous session](/06-class/#quantifying-and-exploring-co-variation)), has a clear positive association only for London and to a much lesser extent for North West and Wales (small coefficients). The EU born variable is again is the least consistent as it flips between positive and negative association when analysed at the regional-level: after controlling for variation in other demographic characteristics it is positively associated with Leave for North West, Scotland, South West, but negatively associated with Leave for the North East (though with coefficients that are subject to much variation).
+In Figure \@ref(fig:plot-outputs-interaction) are region-specific coefficients derived from a multivariate model with an interaction term introduced on region. In each region, *degree-educated* has a negative coefficient and with reasonably tight uncertainty estimates, or at least CIs that do not cross 0. The other variables are  subject to more uncertainty. The *no-car* variable is also negatively associated with Leave, a variable we thought may separate metropolitan versus peripheral contexts, but the strength of negative association, after controlling for variation in other demographic factors, does vary by region. The *heavy industry* variable, previously identified as being strongly associated with Leave (e.g. [previous session](/06-class/#quantifying-and-exploring-co-variation)), has a clear positive association only for London and to a much lesser extent for North West and Wales (small coefficients). The EU born variable is again the least consistent as it flips between positive and negative association when analysed at the regional-level: after controlling for variation in other demographic characteristics it is positively associated with Leave for North West, Scotland, South West, but negatively associated with Leave for the North East (though with coefficients that are subject to much variation).
 
 
 ```{r plot-outputs-interaction, echo=FALSE, fig.cap="Output from multiple regression model of Leave vote by demographic composition of constituency with FE and interaction on region.", fig.align="left", out.width="100%"}
@@ -162,7 +162,7 @@ include_graphics("/class/07-class_files/plot-outputs-interaction-fe.png", error 
 
  Given the reasonably large standard errors, it is difficult to make strong claims about regional nonstationarity in *process* form the models presented above. This might be due to overfitting, caused by the fact that we introduce additional terms to the regression model (region as an interaction) without adding data -- our coefficients may begin to fit noise rather than true effects.
 
- Given the fact that our data are hierarchically structured, constituencies sit within regions, hierarchical [multi-level modelling](https://en.wikipedia.org/wiki/Multilevel_model) may be more appropriate to modelling this sort of regional grouping. Multi-level modelling uses [partial pooling](https://solomonkurz.netlify.app/post/stein-s-paradox-and-what-partial-pooling-can-do-for-you/) to make estimated coefficients more conservative where there are comparatively few observations in particular groupings. There are numerous resources on multi-level modelling in R (see [Roback & Legler 2021](https://bookdown.org/roback/bookdown-BeyondMLR/) for an in-progress example). The reason for the FE approach here is a prosaic one: I wanted to use model-building functions in R that worked well with [`tidymodels`](https://www.tidymodels.org/), although annoyingly I've recently noticed that  a `package` for combining  multi-level modelling with  `tidymodels` is [under development here](https://github.com/tidymodels/multilevelmod).
+ Given the fact that our data are hierarchically structured (constituencies sit within regions) hierarchical [multi-level modelling](https://en.wikipedia.org/wiki/Multilevel_model) may be more appropriate to modelling this sort of regional grouping. Multi-level modelling uses [partial pooling](https://solomonkurz.netlify.app/post/stein-s-paradox-and-what-partial-pooling-can-do-for-you/) to make estimated coefficients more conservative where there are comparatively few observations in particular groupings. There are numerous resources on multi-level modelling in R (see [Roback & Legler 2021](https://bookdown.org/roback/bookdown-BeyondMLR/) for an in-progress example). The reason for the FE approach here is a prosaic one: I wanted to use model-building functions in R that worked well with [`tidymodels`](https://www.tidymodels.org/), although annoyingly I've recently noticed that  a `package` for combining  multi-level modelling with  `tidymodels` is [under development here](https://github.com/tidymodels/multilevelmod).
 
  Alternatively, it may be useful to generate different model formulations for different regions -- e.g. particular combinations of explanatory variable. [Penalised regression](https://en.wikipedia.org/wiki/Regularization_(mathematics)) provides a principled means of automatic variable selection and has been applied to generate regional and state area-level model specifications for the Brexit [@beecham_locally_2018] and Trump [@beecham_regionally_2020] votes, again with  more reliably coefficient estimates.
 
@@ -170,7 +170,7 @@ include_graphics("/class/07-class_files/plot-outputs-interaction-fe.png", error 
 
 <!-- Previously, we identified two ways in which geographic context might be represented: geography as categorical variable (region) and geography as continuous variable (location in *x,y*).  -->
 
-Geographically-weighted (GW) statistics provides a mechanism for exploring the extent to which values and associations vary *continuously* over space [@brunsdon_geographically_2002].  This involves generating local statistics, and in the case of [Geographically Weighted Regression](https://journals.sagepub.com/doi/10.1068/a301905) (GWR) local regression coefficients, for each spatial unit. If applied to our dataset, separate regression coefficients for each constituency are estimated that take into account observed values for Leave and the demographic variables in nearby constituencies. GW-statistics enables spatial non-stationarity in process to be flexibly explored and characterised. As GWR involves generating many hundreds of parameter estimate visual analysis are often used in its interpretation [e.g. @dykes_geographically_2007]. I don't want to burden you with yet another modelling paradigm, but [this repo](https://www.roger-beecham.com/data-science-practicals/) contains some (rather dated) materials I previously prepared on GWR with the Brexit dataset.
+Geographically-weighted (GW) statistics provides a mechanism for exploring the extent to which values and associations vary *continuously* over space [@brunsdon_geographically_2002].  This involves generating local statistics, and in the case of [Geographically Weighted Regression](https://journals.sagepub.com/doi/10.1068/a301905) (GWR) local regression coefficients, for each spatial unit. If applied to our dataset, separate regression coefficients for each constituency are estimated that take into account observed values for Leave and the demographic variables in nearby constituencies. GW-statistics enables spatial non-stationarity in process to be flexibly explored and characterised. As GWR involves generating many hundreds of parameter estimates, visual analysis are often used in its interpretation [e.g. @dykes_geographically_2007]. I don't want to burden you with yet another modelling paradigm, but [this repo](https://www.roger-beecham.com/data-science-practicals/) contains some (rather dated) materials I previously prepared on GWR with the Brexit dataset.
 
 ## Techniques
 
@@ -331,9 +331,9 @@ model %>%
   ) %>%
   filter(term!="cons") %>%
   ggplot() +
-  geom_col(aes(x=reorder(term, -estimate), y=estimate), fill=site_colours$primary, alpha=.3)+
+  geom_col(aes(x=reorder(term, -estimate), y=estimate), alpha=.3)+
   geom_pointrange(aes(x=reorder(term, -estimate),
-                      y=estimate,ymin=estimate-1.96*std.error, ymax=estimate+1.96*std.error), colour=site_colours$primary) +
+                      y=estimate,ymin=estimate-1.96*std.error, ymax=estimate+1.96*std.error)) +
   geom_hline(yintercept = 0, size=.2)+
   facet_wrap(~region) +
   coord_flip()
@@ -341,7 +341,7 @@ model %>%
 
 The plot specification:
 
-1. **Data**: A data frame of model coefficients extracted from the multivariate model object using `tidy`. To make clean plot labels, we need to remove unnecessary text in the `term` variable (e.g. "cons:regionEast Midlands"). [`separate()`](https://tidyr.tidyverse.org/reference/separate.html) allows us to split this column on `:` and then [`str_remove()`] is quite obvious. We do not wish to plot the FE constants and so `filter()` them out.
+1. **Data**: A data frame of model coefficients extracted from the multivariate model object using `tidy`. To make clean plot labels, we need to remove unnecessary text in the `term` variable (e.g. "cons:regionEast Midlands"). [`separate()`](https://tidyr.tidyverse.org/reference/separate.html) allows us to split this column on `:` and then `str_remove()` is quite obvious. We do not wish to plot the FE constants and so `filter()` them out.
 2. **Encoding**: y-position varies according to the size of the coefficient estimate and the 95% confidence intervals, defined using `ymin` and `ymax`.
 3. **Marks**: `geom_pointrange()`, which understands `ymin` and `ymax`, for the dots with Confidence Intervals. I have also included light bars in the background (`geom_col()`) as I think this aids interpretation of the direction and size of the coefficients.
 4. **Setting**: `coord_flip()` to make variable names easier to read.
@@ -349,7 +349,7 @@ The plot specification:
 
 ## Conclusions
 
-Geographic grouping of residuals is a common feature of area-level analysis, but should not be ignored as it suggests that there is some systematic context that is not captured well by the model. There are two different classes of approach to addressing geographic context: those that treat geographic dependence in the values of variables as a nuisance term that is to be quantified/captured and controlled away; and those that explicitly try to model for geographic grouping in  processes. Through our analysis of 2016 EU Referendum dataset this session introduced techniques for dealing with both, treating geography as a *categorical* variable: introducing a Fixed Effect term to assess regional dependence and Interaction term to assess regional non-stationarity. It also reused some of the `dplyr` and [functional programming -- `purrr`](https://purrr.tidyverse.org/) code templates from the previous session that are instrumental for working over models, and as we will see in the next session, for modern computational data analysis.
+Geographic grouping of residuals is a common feature of area-level analysis, but should not be ignored as it suggests that there is some systematic context that is not captured well by the model. There are two different classes of approach to addressing geographic context: those that treat geographic dependence in the values of variables as a nuisance term that is to be quantified/captured and controlled away; and those that explicitly try to model for geographic grouping in  processes. Through our analysis of 2016 EU Referendum dataset this session introduced techniques for dealing with both, treating geography as a *categorical* variable: introducing a Fixed Effect term to assess regional dependence and Interaction term to assess regional non-stationarity. It also reused some of the `dplyr` and [functional programming](https://purrr.tidyverse.org/) code templates from the previous session that are instrumental for working over models, and as we will see in the next session, for modern computational data analysis.
 
 
 <!-- The last two sessions have used a regression framework to explore constituency-level variation in 2016 EU Referendum. The pattern of residuals in Figure \@ref(fig:plot-lineup) it is likely that there is some important context at play in determining the Leave vote in certain regions, most obviously Scotland, that we are not accounting for in our model.  -->

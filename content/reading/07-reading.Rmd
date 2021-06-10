@@ -10,10 +10,10 @@ output:
   blogdown::html_page:
     template: ../../pandoc/toc-title_html.template
     toc: false
-menu:
-  reading:
-    parent: Reading
-    weight: 1
+# menu:
+#   reading:
+    # parent: Reading
+    # weight: 1
 type: docs
 weight: 1
 editor_options:

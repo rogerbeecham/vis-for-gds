@@ -10,10 +10,10 @@ output:
   blogdown::html_page:
     template: ../../pandoc/toc-title_html.template
     toc: true
-menu:
-  homework:
-    parent: Homework
-    weight: 1
+# menu:
+#   homework:
+    # parent: Homework
+    # weight: 1
 type: docs
 weight: 1
 editor_options:
@@ -28,10 +28,10 @@ library(knitr)
 
 By the end of this homework session you should be able to:
 
-{{% alert objective %}}
+{{% callout objective %}}
 - [x] Interpret non-standard data graphics by 'looking-up' specific values/trends.
 - [x] Infer patterns from non-standard data graphics.
-{{% /alert %}}
+{{% /callout %}}
 
 ## Introduction
 
@@ -39,7 +39,7 @@ This homework requires you to apply the concepts and skills developed in the cla
 
 ## Visualization interpretation challenge
 
-You may be pleased to know that this week's homework does not require you to write a single line of code. Instead, it is designed to get you reading and interpreting data graphics. [OD Maps](https://xeno.graphics/od-map/) are a good candidate here as they have been catalogued by [Marteen Lambrechts](https://www.maartenlambrechts.com) as a Xenographic -- *Weird but (sometime) useful*. I'd add that within the list of other [Xenographics](https://xeno.graphics), OD Maps are *Not that weird and often useful*. Nevertheless, they do take some interpretation.
+You may be pleased to know that this week's homework does not require you to write a single line of code. Instead, it is designed to get you reading and interpreting data graphics. [OD Maps](https://xeno.graphics/od-map/) are a good candidate here as they have been catalogued by [Marteen Lambrechts](https://www.maartenlambrechts.com) as a Xenographic -- *Weird but (sometimes) useful*. I'd add that within the list of other [Xenographics](https://xeno.graphics), OD Maps are *Not that weird and often useful*. Nevertheless, they do take some interpretation.
 
 
 ```{r mode-analysis-od-map, echo=FALSE, fig.cap="OD map of commutes between London boroughs", fig.align="left", out.width="90%"}

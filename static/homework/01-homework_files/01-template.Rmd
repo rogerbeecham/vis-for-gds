@@ -7,7 +7,7 @@ output: html_document
 
 ## Introduction
 
-Welcome to Visualization for Geographic Data Science (vis-for-gds). For each session you will be working in these `.Rmd` templates, which provide scaffolding for completing the activities that appear in class and for the homework. Do make your best attempt to work through these, as you will be required to submit them as a **Portfolio** of activity worth 25% of the total module marks.
+Welcome to Visualization for Geographic Data Science (vis-for-gds). For each session you will be working in these `.Rmd` templates, which provide scaffolding for completing the activities that appear in class and for the homework. Do make your best attempt to work through these, as you will be required to submit them as a **Portfolio** of activity worth 30% of the total module marks.
 
 ## Setup
 
@@ -22,7 +22,7 @@ library(tidyverse)
 
 ### Plotting Anscombe's Quartet
 
-There was reasonably little in the way of data analysis in this first session. However, early on we discussed and plotted [Anscombe's Quartet](https://en.wikipedia.org/wiki/Anscombe%27s_quartet). You actually automatically loaded this dataset when you pointed to the `tidyverse` package. Should you wish to inspect in, type `View(anscombe)` in the R Console.
+There was reasonably little in the way of data analysis in this first session. However, early on we discussed and plotted [Anscombe's Quartet](https://en.wikipedia.org/wiki/Anscombe%27s_quartet). You actually automatically loaded this dataset when you pointed to the `tidyverse` package. Should you wish to inspect it, type `View(anscombe)` in the R Console.
 
 Below is some code for generating scatterplots of the Anscombe datasets. No need to worry about the code for the time being, but it consists of a bit of data reshaping using [`tidyr`](https://tidyr.tidyverse.org/) (we'll cover in the next session 2), combined with a [`ggplot2`](https://ggplot2.tidyverse.org/) specification for generating the scatterplots (lots on this in session 3).
 
@@ -41,9 +41,9 @@ plot <- anscombe %>%
 print(plot)
 ```
 
-If you're feeling particularly motivated, and want to extend the Anscombe example, you may wish to play around [`datasauRus`](https://itsalocke.com/datasaurus/) package.
+If you're feeling particularly motivated, and want to extend the Anscombe example, you may wish to play around with [`datasauRus`](https://itsalocke.com/datasaurus/) package.
 
-When you work with R Markdown documents it is cumbersome to constantly be knitting and typesetting the document. Most often you will want to run each code chunk separately  so that the results can be explored in your Environment. To do this, simply click on the green arrow to the top right each code block. whenever you wish to run a bit of code chunk.
+When you work with R Markdown documents it is cumbersome to constantly be knitting and typesetting the document. Most often you will want to run each code chunk separately  so that the results can be explored in your Environment. To do this, simply click on the green arrow to the top right each code block, whenever you wish to run a bit of code chunk.
 
 ### Writing plot to your project folder
 
