@@ -6068,16 +6068,16 @@ Many more
     median_duration=median(trip_duration/60),
     sd_duration=sd(trip_duration/60),
     min_duration=min(trip_duration/60),
-    max_duration=min(trip_duration/60)
+    max_duration=max(trip_duration/60)
     ) %&amp;gt;%
   arrange(desc(count)) # Arrange on the count variable.
 
 ## # A tibble: 2 x 6
 ##  user_type    count avg_duration median_duration sd_duration min_duration max_duration
 ##  &amp;lt;chr&amp;gt;        &amp;lt;int&amp;gt;        &amp;lt;dbl&amp;gt;           &amp;lt;dbl&amp;gt;       &amp;lt;dbl&amp;gt;        &amp;lt;dbl&amp;gt;        &amp;lt;dbl&amp;gt;
-## 1 Subscriber 1306688         20.2            14.4        110.         1.02         1.02
-## 2 Customer    575585         43.6            23.2        393.         1.02         1.02&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;Clearly there are some outlier trips that may need to be examined. Bikeshare schemes are built to incentivise short journeys of &amp;lt;30 minutes. However, the max trip duration made by a &lt;code&gt;Subscriber&lt;/code&gt; was almost 2 hours and a &lt;code&gt;Customer&lt;/code&gt; 6.5 hours. These may be legitimate trips rather than errors in the data – the durations are not in the order of months or years. It also makes sense that more casual users may have longer trip durations, as they are more likely to be tourists or occasional cyclists using the scheme for non-utility trips. However, they do skew the mean travel time.&lt;/p&gt;
+## 1 Subscriber 1306688         20.2            14.4        110.         1.02         33090
+## 2 Customer    575585         43.6            23.2        393.         1.02         46982&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Clearly there are some outlier trips that may need to be examined. Bikeshare schemes are built to incentivise short journeys of &amp;lt;30 minutes, but the maximum trip duration recorded above is clearly erroneous – 32 days. Ignoring these sorts of outliers by calculating the trip durations at the 95th percentiles is instructive. The max trip duration at the 95th percentile for &lt;code&gt;Subscribers&lt;/code&gt; was almost 27 minutes and for &lt;code&gt;Customers&lt;/code&gt; was 1 hours 26 mins. It makes sense that more casual users may have longer trip durations, as they are more likely to be tourists or occasional cyclists using the scheme for non-utility trips. However, they do skew the mean travel time.&lt;/p&gt;
 &lt;p&gt;Returning to the breakdown of usage by gender, an interesting question is whether or not the male-female split in bikehare is similar to that of the cycling population of New York City as a whole. This might tell us something about whether the bikeshare scheme could be &lt;em&gt;representative&lt;/em&gt; of wider cycling. This could be achieved with the code below. A couple of new additions: we use &lt;code&gt;filter()&lt;/code&gt;, to remove observations where the gender of the cyclist is &lt;code&gt;unknown&lt;/code&gt;. We also use &lt;code&gt;mutate()&lt;/code&gt; for the first time, which allows us to modify or create new variables.&lt;/p&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;ny_trips %&amp;gt;% # Take the ny_trips data frame.
   filter(gender != &amp;quot;unknown&amp;quot;) %&amp;gt;% # Filter out rows with the value &amp;quot;unknown&amp;quot; on gender.
