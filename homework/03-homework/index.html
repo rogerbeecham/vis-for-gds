@@ -37,7 +37,7 @@
   
     
   
-  <meta name="description" content="Contents  Session Outcomes Introduction Task 1: Describe and evaluate Task 2: Reproduce Histograms faceted by region Scatterplots with multiple encodings  Task 3: Create a map References   Session Outcomes By the end of this homework session you should be able to:
+  <meta name="description" content="Contents  Session Outcomes Introduction Task 1: Describe and evaluate Task 2: Reproduce  Histograms faceted by region Scatterplots with multiple encodings  Task 3: Create a map References   Session Outcomes By the end of this homework session you should be able to:
   Formally describe data graphics according to their visual encoding. Reproduce graphics by writing ggplot2 specifications. Combine dplyr and conditional statements to prep data for plotting.">
 
   
@@ -266,8 +266,8 @@
   <link rel="manifest" href="../../index.webmanifest">
   
 
-  <link rel="icon" type="image/png" href="../../images/icon_huc37306104a4011cad6e5f9118ea6dd2c_187381_32x32_fill_lanczos_center_2.png">
-  <link rel="apple-touch-icon" type="image/png" href="../../images/icon_huc37306104a4011cad6e5f9118ea6dd2c_187381_180x180_fill_lanczos_center_2.png">
+  <link rel="icon" type="image/png" href="../../images/icon_huc37306104a4011cad6e5f9118ea6dd2c_187381_32x32_fill_lanczos_center_3.png">
+  <link rel="apple-touch-icon" type="image/png" href="../../images/icon_huc37306104a4011cad6e5f9118ea6dd2c_187381_180x180_fill_lanczos_center_3.png">
 
   <link rel="canonical" href="../../homework/03-homework/">
 
@@ -289,14 +289,14 @@
   <meta property="og:site_name" content="Visualization for Geographic Data Science">
   <meta property="og:url" content="/homework/03-homework/">
   <meta property="og:title" content="Visualization fundamentals | Visualization for Geographic Data Science">
-  <meta property="og:description" content="Contents  Session Outcomes Introduction Task 1: Describe and evaluate Task 2: Reproduce Histograms faceted by region Scatterplots with multiple encodings  Task 3: Create a map References   Session Outcomes By the end of this homework session you should be able to:
+  <meta property="og:description" content="Contents  Session Outcomes Introduction Task 1: Describe and evaluate Task 2: Reproduce  Histograms faceted by region Scatterplots with multiple encodings  Task 3: Create a map References   Session Outcomes By the end of this homework session you should be able to:
   Formally describe data graphics according to their visual encoding. Reproduce graphics by writing ggplot2 specifications. Combine dplyr and conditional statements to prep data for plotting."><meta property="og:image" content="/media/vis-for-gds.png">
   <meta property="twitter:image" content="/media/vis-for-gds.png"><meta property="og:locale" content="en-us">
   
     
-      <meta property="article:published_time" content="2021-06-07T00:00:00&#43;00:00">
+      <meta property="article:published_time" content="2022-05-23T00:00:00&#43;00:00">
     
-    <meta property="article:modified_time" content="2021-06-07T00:00:00&#43;00:00">
+    <meta property="article:modified_time" content="2022-05-23T00:00:00&#43;00:00">
   
 
   
@@ -741,15 +741,14 @@
 
                     
                     <div class="due-date p-2 mb-3 bg-secondary text-white">
-                        Materials from class on Monday, June 7, 2021
+                        Materials from class on Monday, May 23, 2022
                     </div>
                     
 
                     <div class="article-style">
                         
 <!-- BLOGDOWN-HEAD -->
-<link href="../../rmarkdown-libs/anchor-sections/anchor-sections.css" rel="stylesheet" />
-<script src="../../rmarkdown-libs/anchor-sections/anchor-sections.js"></script>
+<script src="../../rmarkdown-libs/header-attrs/header-attrs.js"></script>
 <!-- /BLOGDOWN-HEAD -->
 
 <h2>Contents</h2>
@@ -758,7 +757,8 @@
 <li><a href="#session-outcomes">Session Outcomes</a></li>
 <li><a href="#introduction">Introduction</a></li>
 <li><a href="#task-1-describe-and-evaluate">Task 1: Describe and evaluate</a></li>
-<li><a href="#task-2-reproduce">Task 2: Reproduce</a><ul>
+<li><a href="#task-2-reproduce">Task 2: Reproduce</a>
+<ul>
 <li><a href="#histograms-faceted-by-region">Histograms faceted by region</a></li>
 <li><a href="#scatterplots-with-multiple-encodings">Scatterplots with multiple encodings</a></li>
 </ul></li>
@@ -788,14 +788,21 @@
 </div>
 <div id="task-1-describe-and-evaluate" class="section level2">
 <h2>Task 1: Describe and evaluate</h2>
-<div class="figure"><span id="fig:spoke-map"></span>
+<div class="figure"><span style="display:block;" id="fig:spoke-map"></span>
 <img src="../../class/03-class_files/spoke-map.png" alt="Map of Butler Con-Lab Swing in 2019 General Election." width="100%" />
 <p class="caption">
 Figure 1: Map of Butler Con-Lab Swing in 2019 General Election.
 </p>
 </div>
 <p>Complete the description table below identifying each <strong>data item</strong> that is encoded along with its <strong>measurement level</strong>, <strong>visual mark</strong> and <strong>visual channel</strong> and the effectiveness rank, according to <span class="citation">Munzner (<a href="#ref-munzner_visualization_2014" role="doc-biblioref">2014</a>)</span>, of this encoding.</p>
-<table>
+<table style="width:100%;">
+<colgroup>
+<col width="19%" />
+<col width="22%" />
+<col width="21%" />
+<col width="20%" />
+<col width="16%" />
+</colgroup>
 <thead>
 <tr class="header">
 <th>Data item</th>
@@ -862,7 +869,7 @@ Figure 1: Map of Butler Con-Lab Swing in 2019 General Election.
 <ul>
 <li><a href="https://r4ds.had.co.nz/graphics-for-communication.html#saving-your-plots">Save your plot</a> as a <code>.png</code> file and insert the file as a Figure into your <code>.Rmd</code> document (<a href="https://rmd4sci.njtierney.com/figures-tables-captions-.html">guidance here</a>).</li>
 </ul>
-<div class="figure"><span id="fig:hist-region"></span>
+<div class="figure"><span style="display:block;" id="fig:hist-region"></span>
 <img src="../../class/03-class_files/hist-region.png" alt="Histograms of Swing variable, grouped by region." width="100%" />
 <p class="caption">
 Figure 2: Histograms of Swing variable, grouped by region.
@@ -878,7 +885,7 @@ Figure 2: Histograms of Swing variable, grouped by region.
 <ul>
 <li><a href="https://r4ds.had.co.nz/graphics-for-communication.html#saving-your-plots">Save your plot</a> as a <code>.png</code> file and insert the file as a Figure into your <code>.Rmd</code> document (<a href="https://rmd4sci.njtierney.com/figures-tables-captions-.html">guidance here</a>).</li>
 </ul>
-<div class="figure"><span id="fig:scatters-lab"></span>
+<div class="figure"><span style="display:block;" id="fig:scatters-lab"></span>
 <img src="../../class/03-class_files/scatters-lab.png" alt="Plots of 2019 versus 2017 vote shares." width="100%" />
 <p class="caption">
 Figure 3: Plots of 2019 versus 2017 vote shares.
@@ -896,7 +903,7 @@ Figure 3: Plots of 2019 versus 2017 vote shares.
 <ul>
 <li><a href="https://r4ds.had.co.nz/graphics-for-communication.html#saving-your-plots">Save your plot</a> as a <code>.png</code> file and insert the file as a Figure into your <code>.Rmd</code> document (<a href="https://rmd4sci.njtierney.com/figures-tables-captions-.html">guidance here</a>).</li>
 </ul>
-<div class="figure"><span id="fig:referendum-map"></span>
+<div class="figure"><span style="display:block;" id="fig:referendum-map"></span>
 <img src="../../class/03-class_files/referendum-map.png" alt="Map of 2016 EU Referendum vote, estimated by Parliamentary Constituency in GB." width="100%" />
 <p class="caption">
 Figure 4: Map of 2016 EU Referendum vote, estimated by Parliamentary Constituency in GB.
@@ -905,9 +912,9 @@ Figure 4: Map of 2016 EU Referendum vote, estimated by Parliamentary Constituenc
 </div>
 <div id="references" class="section level2 unnumbered">
 <h2>References</h2>
-<div id="refs" class="references">
-<div id="ref-munzner_visualization_2014">
-<p>Munzner, T. 2014. <em>Visualization Analysis and Design</em>. AK Peters Visualization Series. Boca Raton, FL: CRC Press.</p>
+<div id="refs" class="references csl-bib-body hanging-indent">
+<div id="ref-munzner_visualization_2014" class="csl-entry">
+Munzner, T. 2014. <em>Visualization Analysis and Design</em>. AK Peters Visualization Series. Boca Raton, FL: CRC Press.
 </div>
 </div>
 </div>
@@ -922,7 +929,7 @@ Figure 4: Map of 2016 EU Referendum vote, estimated by Parliamentary Constituenc
                 </div>
 
                 <div class="body-footer">
-                    <p> Mon, 07 Jun 2021</p>
+                    <p> Mon, 23 May 2022</p>
 
                     
 
@@ -944,7 +951,7 @@ Figure 4: Map of 2016 EU Referendum vote, estimated by Parliamentary Constituenc
     <div class="row course-info">
         <div class="col-md-7">
             <p>
-                <strong>GEOG5009M: Visualization for Geographic Data Science (Spring/Summer 2021)</strong><br>
+                <strong>GEOG5009M: Visualization for Geographic Data Science (Spring/Summer 2022)</strong><br>
 
                 <a href="https://www.leeds.ac.uk/" target="_blank" rel="noopener">University of Leeds</a> &emsp;&emsp;
                 <a href="https://environment.leeds.ac.uk/geography" target="_blank" rel="noopener">School of Geography</a>
@@ -967,7 +974,7 @@ Figure 4: Map of 2016 EU Referendum vote, estimated by Parliamentary Constituenc
         <div class="col-md-5 credits">
             <p>All content licensed under a <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank" rel="noopener">Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International License</a>.</p>
             
-            <p>Content <i class="fab fa-creative-commons"></i> 2021 <a href="http://www.roger-beecham.com/" target="_blank" rel="noopener">Roger Beecham</a></p>                    
+            <p>Content <i class="fab fa-creative-commons"></i> 2022 <a href="http://www.roger-beecham.com/" target="_blank" rel="noopener">Roger Beecham</a></p>                    
             
             <p><a href="https://github.com/rogerbeecham/vis-for-gds" target="_blank" rel="noopener"><i class="fab fa-github"></i> View the source at GitHub.</a></p>
         </div>
@@ -1051,7 +1058,7 @@ Figure 4: Map of 2016 EU Referendum vote, estimated by Parliamentary Constituenc
     
     
     
-    <script src="../../en-uk/js/wowchemy.min.dd01fef442e09a86aae6adb7b6cc358b.js"></script>
+    <script src="../../en-uk/js/wowchemy.min.abf0df1802927998e37dcf3cf6aa05de.js"></script>
 
     
 

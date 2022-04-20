@@ -37,7 +37,7 @@
   
     
   
-  <meta name="description" content="Contents  Session outcomes Welcome to Visualization for Geographic Data Science Why vis-for-gds? Geographic Data Science Geographic Data Science and Visualization  What vis-for-gds? How vis-for-gds? R for modern data analysis Rmarkdown for reproducible research  Getting started with R and RStudio Install R and RStudio Open the RStudio IDE Compute in the console Install some packages Experiment with R Markdown R Scripts Create an RStudio Project  Conclusions References   Session outcomes By the end of this session you should gain the following knowledge:">
+  <meta name="description" content="Contents  Session outcomes Welcome to Visualization for Geographic Data Science Why vis-for-gds?  Geographic Data Science Geographic Data Science and Visualization  What vis-for-gds? How vis-for-gds?  R for modern data analysis Rmarkdown for reproducible research  Getting started with R and RStudio  Install R and RStudio Open the RStudio IDE Compute in the console Install some packages Experiment with R Markdown R Scripts Create an RStudio Project  Conclusions References   Session outcomes By the end of this session you should gain the following knowledge:">
 
   
   <link rel="alternate" hreflang="en-us" href="../../class/01-class/">
@@ -265,8 +265,8 @@
   <link rel="manifest" href="../../index.webmanifest">
   
 
-  <link rel="icon" type="image/png" href="../../images/icon_huc37306104a4011cad6e5f9118ea6dd2c_187381_32x32_fill_lanczos_center_2.png">
-  <link rel="apple-touch-icon" type="image/png" href="../../images/icon_huc37306104a4011cad6e5f9118ea6dd2c_187381_180x180_fill_lanczos_center_2.png">
+  <link rel="icon" type="image/png" href="../../images/icon_huc37306104a4011cad6e5f9118ea6dd2c_187381_32x32_fill_lanczos_center_3.png">
+  <link rel="apple-touch-icon" type="image/png" href="../../images/icon_huc37306104a4011cad6e5f9118ea6dd2c_187381_180x180_fill_lanczos_center_3.png">
 
   <link rel="canonical" href="../../class/01-class/">
 
@@ -288,11 +288,11 @@
   <meta property="og:site_name" content="Visualization for Geographic Data Science">
   <meta property="og:url" content="/class/01-class/">
   <meta property="og:title" content="Introduction: Vis for Geographic Data Science | Visualization for Geographic Data Science">
-  <meta property="og:description" content="Contents  Session outcomes Welcome to Visualization for Geographic Data Science Why vis-for-gds? Geographic Data Science Geographic Data Science and Visualization  What vis-for-gds? How vis-for-gds? R for modern data analysis Rmarkdown for reproducible research  Getting started with R and RStudio Install R and RStudio Open the RStudio IDE Compute in the console Install some packages Experiment with R Markdown R Scripts Create an RStudio Project  Conclusions References   Session outcomes By the end of this session you should gain the following knowledge:"><meta property="og:image" content="/media/vis-for-gds.png">
+  <meta property="og:description" content="Contents  Session outcomes Welcome to Visualization for Geographic Data Science Why vis-for-gds?  Geographic Data Science Geographic Data Science and Visualization  What vis-for-gds? How vis-for-gds?  R for modern data analysis Rmarkdown for reproducible research  Getting started with R and RStudio  Install R and RStudio Open the RStudio IDE Compute in the console Install some packages Experiment with R Markdown R Scripts Create an RStudio Project  Conclusions References   Session outcomes By the end of this session you should gain the following knowledge:"><meta property="og:image" content="/media/vis-for-gds.png">
   <meta property="twitter:image" content="/media/vis-for-gds.png"><meta property="og:locale" content="en-us">
   
     
-      <meta property="article:published_time" content="2021-05-24T00:00:00&#43;00:00">
+      <meta property="article:published_time" content="2022-05-09T00:00:00&#43;00:00">
     
     <meta property="article:modified_time" content="2020-11-29T10:15:25&#43;00:00">
   
@@ -739,15 +739,14 @@
 
                     
                     <div class="due-date p-2 mb-3 bg-secondary text-white">
-                        Materials from class on Monday, May 24, 2021
+                        Materials from class on Monday, May 9, 2022
                     </div>
                     
 
                     <div class="article-style">
                         
 <!-- BLOGDOWN-HEAD -->
-<link href="../../rmarkdown-libs/anchor-sections/anchor-sections.css" rel="stylesheet" />
-<script src="../../rmarkdown-libs/anchor-sections/anchor-sections.js"></script>
+<script src="../../rmarkdown-libs/header-attrs/header-attrs.js"></script>
 <!-- /BLOGDOWN-HEAD -->
 
 <h2>Contents</h2>
@@ -755,16 +754,19 @@
 <ul>
 <li><a href="#session-outcomes">Session outcomes</a></li>
 <li><a href="#welcome-to-visualization-for-geographic-data-science">Welcome to <em>Visualization for Geographic Data Science</em></a></li>
-<li><a href="#why-vis-for-gds">Why <em>vis-for-gds</em>?</a><ul>
+<li><a href="#why-vis-for-gds">Why <em>vis-for-gds</em>?</a>
+<ul>
 <li><a href="#geographic-data-science">Geographic Data Science</a></li>
 <li><a href="#geographic-data-science-and-visualization">Geographic Data Science and <em>Visualization</em></a></li>
 </ul></li>
 <li><a href="#what-vis-for-gds">What <em>vis-for-gds</em>?</a></li>
-<li><a href="#how-vis-for-gds">How <em>vis-for-gds</em>?</a><ul>
+<li><a href="#how-vis-for-gds">How <em>vis-for-gds</em>?</a>
+<ul>
 <li><a href="#r-for-modern-data-analysis">R for modern data analysis</a></li>
 <li><a href="#rmarkdown-for-reproducible-research">Rmarkdown for reproducible research</a></li>
 </ul></li>
-<li><a href="#getting-started-with-r-and-rstudio">Getting started with R and RStudio</a><ul>
+<li><a href="#getting-started-with-r-and-rstudio">Getting started with R and RStudio</a>
+<ul>
 <li><a href="#install-r-and-rstudio">Install R and RStudio</a></li>
 <li><a href="#open-the-rstudio-ide">Open the RStudio IDE</a></li>
 <li><a href="#compute-in-the-console">Compute in the console</a></li>
@@ -819,7 +821,7 @@
 <div id="geographic-data-science" class="section level3">
 <h3>Geographic Data Science</h3>
 <p>It is now taken-for-granted that over the last decade or so new data, new technology and new ways of doing science have transformed how we approach the world’s problems. Evidence for this can be seen in the response to the Covid-19 pandemic. Enter <a href="https://www.google.com/search?q=covid-19+github&amp;rlz=1C5CHFA_enGB632GB632&amp;oq=covid-19+github&amp;aqs=chrome..69i57j69i60l3.5575j0j1&amp;sourceid=chrome&amp;ie=UTF-8">Covid19 github</a> into a search and you’ll be confronted with hundreds of repositories demonstrating how an ever-expanding array of data related to the pandemic can be collected, processed and analysed. <em>Data Science</em> is a term used widely to capture this shift and <em>Geographic Data Science</em> (GDS), probably first discussed coherently by <span class="citation">Arribas-Bel and Reades (<a href="#ref-arribas_geography_2018" role="doc-biblioref">2018</a>)</span> and <span class="citation">Singleton and Arribas-Bel (<a href="#ref-singleton_geographic_2019" role="doc-biblioref">2019</a>)</span>, when observing that many of data science’s applications are – or at least should be – of inherent interest to geographers.</p>
-<p>Since gaining traction in the corporate world, the definition of Data Science has been somewhat stretched, but it has its origins in the work of John Tukey’s <em>The Future of Data Analysis</em> (1962). Drawing on this, and a survey of more recent work, <span class="citation">Donoho (<a href="#ref-donoho_fifty_2017" role="doc-biblioref">2017</a>)</span> neatly identifies six key facets that a data science discipline might encompass<a href="#fn1" class="footnote-ref" id="fnref1"><sup>1</sup></a> :</p>
+<p>Since gaining traction in the corporate world, the definition of Data Science has been somewhat stretched, but it has its origins in the work of John Tukey’s <em>The Future of Data Analysis</em> (1962). Drawing on this, and a survey of more recent work, <span class="citation">Donoho (<a href="#ref-donoho_fifty_2017" role="doc-biblioref">2017</a>)</span> neatly identifies six key facets that a data science discipline might encompass <a href="#fn1" class="footnote-ref" id="fnref1"><sup>1</sup></a> :</p>
 <ol style="list-style-type: decimal">
 <li>data gathering, preparation, and exploration;</li>
 <li>data representation and transformation;</li>
@@ -839,11 +841,11 @@
   </div>
 </div>
  -->
-<p>Glancing at this list, <em>visualization</em> could be interpreted as a single facet of Data Science process<a href="#fn2" class="footnote-ref" id="fnref2"><sup>2</sup></a> – something that happens after data gathering, preparation, exploration, but before modelling. In this module you’ll learn that visualization is intrinsic to, and should inform, each of these activities, especially so when working with data sets that are spatial – for Geographic Data Science.</p>
+<p>Glancing at this list, <em>visualization</em> could be interpreted as a single facet of Data Science process <a href="#fn2" class="footnote-ref" id="fnref2"><sup>2</sup></a> – something that happens after data gathering, preparation, exploration, but before modelling. In this module you’ll learn that visualization is intrinsic to, and should inform, each of these activities, especially so when working with data sets that are spatial – for Geographic Data Science.</p>
 <p>Let’s develop this idea by asking <strong>why data visualizations are used in the first place</strong>. In her book <em>Visualization Analysis and Design</em>, Tamara <span class="citation">Munzner (<a href="#ref-munzner_visualization_2014" role="doc-biblioref">2014</a>)</span> considers how humans and computers interface in the decision-making process. She makes the point that data visualization is ultimately about connecting people with data in order to make decisions – or to install humans in a ‘decision-making-loop’. There are occasionally decision-making loops that are entirely computational and where an automated solution exists and is trusted. However, most require some form of human intervention.</p>
 <p>The canonical example demonstrating how relying on computation alone can be problematic, and so for the use of visualization, is <a href="https://en.wikipedia.org/wiki/Anscombe%27s_quartet">Anscombe’s quartet</a>. Here, <span class="citation">Anscombe (<a href="#ref-anscombe_graphs_1973" role="doc-biblioref">1973</a>)</span> presents four datasets, each containing eleven observations and two variables for each observation. The data are synthetic, but let’s say that they are the weight and height of independent samples taken from a population of postgraduate students studying Data Science.</p>
 <p>Presented with a new dataset it makes sense to compute some summaries and doing so, we observe that the data appear identical – they contain the same means, variances and strong positive correlation coefficient. This seems appropriate since the data are measuring weight and height. Although there may be some variation, we’d expect taller students to be heavier. Given these statistical summaries we can be assured that we are drawing samples from the same population of (Data Science) students.</p>
-<div class="figure"><span id="fig:anscombe-data"></span>
+<div class="figure"><span style="display:block;" id="fig:anscombe-data"></span>
 <img src="../../class/01-class_files/anscombe_data.png" alt="Data from Anscombe's quartet" width="90%" />
 <p class="caption">
 Figure 1: Data from Anscombe’s quartet
@@ -851,14 +853,14 @@ Figure 1: Data from Anscombe’s quartet
 </div>
 <p>Laying out the data in a meaningful way, horizontally according to <em>weight</em> (<em>x</em>) and vertically according to the <em>height</em> (<em>y</em>) to form a scatterplot, we quickly see that whilst these data contain the same statistical properties they are very different. Only <code>dataset #1</code> now looks plausible if it were truly a measure of weights and heights drawn from a population of students.</p>
 <p>Anscombe’s is a deliberately contrived example<a href="#fn3" class="footnote-ref" id="fnref3"><sup>3</sup></a>, but there are real cases of important structure being missed, leading to poorly specified models and potentially faulty claims.</p>
-<div class="figure"><span id="fig:anscombe-plot"></span>
+<div class="figure"><span style="display:block;" id="fig:anscombe-plot"></span>
 <img src="../../class/01-class_files/anscombe.png" alt="Plots of Anscombe's quartet"  />
 <p class="caption">
 Figure 2: Plots of Anscombe’s quartet
 </p>
 </div>
 <p>This is not to undermine the importance of numerical analysis. Numeric summaries that simplify patterns are extremely useful and Statistics has at its disposal an array of tools for helping to guard against making false claims from datasets – a theme that we will return to in session 6, 7 and 8 when we think critically about the use of visual approaches for data anlysis. There remain, though, certain classes of relation and context that cannot be easily captured through statistics alone.</p>
-<p><em>Geographic</em> context is undoubtedly challenging to capture numerically; many of the early examples of data visualization have been of spatial phenomena and generated by Geographers <span class="citation">(see Friendly <a href="#ref-friendly_brief_2007" role="doc-biblioref">2007</a>)</span>. We can also probably make a special case for the use of visual approaches in Geographic Data Science (GDS) applications due to its exploratory nature. Often in GDS datasets are being repurposed for social and natural sciences research for the first time; contain complex structure and geo-spatial relations that cannot be easily captured by statistical summaries alone; and so the types of questions that can be asked and the techniques deployed to answer them cannot be easily specified in advance. In this module we will demonstrate this as we <em>explore</em> (Session 4 and 5), <em>model under uncertainty</em> (Session 6 and 7) and <em>communicate</em> (Session 8 and 9) with various social science datasets.</p>
+<p><em>Geographic</em> context is undoubtedly challenging to capture numerically; many of the early examples of data visualization have been of spatial phenomena and generated by Geographers <span class="citation">(see <a href="#ref-friendly_brief_2007" role="doc-biblioref">Friendly 2007</a>)</span>. We can also probably make a special case for the use of visual approaches in Geographic Data Science (GDS) applications due to its exploratory nature. Often in GDS datasets are being repurposed for social and natural sciences research for the first time; contain complex structure and geo-spatial relations that cannot be easily captured by statistical summaries alone; and so the types of questions that can be asked and the techniques deployed to answer them cannot be easily specified in advance. In this module we will demonstrate this as we <em>explore</em> (Session 4 and 5), <em>model under uncertainty</em> (Session 6 and 7) and <em>communicate</em> (Session 8 and 9) with various social science datasets.</p>
 <p><div class="alert alert-instruction">
   <div>
     Watch <a href="https://www.gicentre.net/jwo/index">Jo Wood’s</a> talk demonstrating how visual techniques can be used to analyse urban travel behaviours. In the video Jo argues that bikeshare schemes can help democratise cycling, but also for their potential contributions to research – he briefly contrasts new, passively collected data sets with more “traditional” actively collected data for analysing how people move around cities. A compelling case is then made for the use of visualization to support this activity. Related work and further discussion is published in <span class="citation">Beecham and Wood (<a href="#ref-beecham_exploring_2014" role="doc-biblioref">2014</a>)</span>.
@@ -910,7 +912,7 @@ Figure 2: Plots of Anscombe’s quartet
 <p>Reproducible research is the idea that data analyses, and more generally, scientific claims, are published with their data and software code so that others may verify the findings and build upon them.</p>
 <p>Roger Peng, Jeff Leek and Brian Caffo</p>
 </blockquote>
-<p>In recent years there has been much introspection into how science works – around how statistical claims are made from reasoning over evidence. This came on the back of, amongst other things, a high profile paper published in <a href="http://science.sciencemag.org/content/349/6251/aac4716">Science</a>, which found that of 100 recent peer-reviewed psychology experiments, the findings of only 39 could be replicated. The upshot is that researchers must now make every possible effort to make their work transparent, such that “<em>all</em> aspects of the answer generated by any given analysis [can] be tested” <span class="citation">(Brunsdon and Comber <a href="#ref-brunsdon_opening_2020" role="doc-biblioref">2020</a>)</span>.</p>
+<p>In recent years there has been much introspection into how science works – around how statistical claims are made from reasoning over evidence. This came on the back of, amongst other things, a high profile paper published in <a href="http://science.sciencemag.org/content/349/6251/aac4716">Science</a>, which found that of 100 recent peer-reviewed psychology experiments, the findings of only 39 could be replicated. The upshot is that researchers must now make every possible effort to make their work transparent, such that “<em>all</em> aspects of the answer generated by any given analysis [can] be tested” <span class="citation">(<a href="#ref-brunsdon_opening_2020" role="doc-biblioref">Brunsdon and Comber 2020</a>)</span>.</p>
 <p>A reproducible research project should be accompanied with:</p>
 <ul>
 <li><em>code</em> and <em>data</em> that allows tables and figures presented in research outputs to be regenerated</li>
@@ -935,7 +937,7 @@ Figure 2: Plots of Anscombe’s quartet
 </div>
 <div id="open-the-rstudio-ide" class="section level3">
 <h3>Open the RStudio IDE</h3>
-<div class="figure"><span id="fig:rstudio-annotate"></span>
+<div class="figure"><span style="display:block;" id="fig:rstudio-annotate"></span>
 <img src="../../class/01-class_files/rstudio_annotate.png" alt="The RStudio IDE" width="100%" />
 <p class="caption">
 Figure 3: The RStudio IDE
@@ -1029,7 +1031,7 @@ x_root &lt;- sqrt(x_2)</code></pre>
 <li>TEXT - incorporated throughout to document and comment on your analysis.</li>
 <li>CODE chunks - containing discrete that are to be run when the .Rmd file is typeset or <em>knit</em>.</li>
 </ul>
-<div class="figure"><span id="fig:rmarkdown-annotate"></span>
+<div class="figure"><span style="display:block;" id="fig:rmarkdown-annotate"></span>
 <img src="../../class/01-class_files/rmarkdown_annotate.png" alt="The anatomy of R Markdown" width="100%" />
 <p class="caption">
 Figure 4: The anatomy of R Markdown
@@ -1110,7 +1112,7 @@ get_radians &lt;- function(degrees) {
 <p>Throughout this module we will use project-oriented workflows. This is where all files pertaining to a data analysis – data, code and outputs – are organised from a single root folder and where <em>file path discipline</em> is used such that all paths are relative to the project’s root folder (see <a href="https://rstats.wtf/project-oriented-workflow.html">Bryan &amp; Hester 2020</a>). You can imagine that this sort of self-contained project set-up is necessary for achieving reproducibility of your research. It allows anyone to take a project and run it on their own machines without having to make any adjustments.</p>
 <p>You might have noticed that when you open RStudio it automatically <em>points to</em> a working directory, likely the home folder for your local machine, denoted with <code>~/</code> in the Console. RStudio will by default save any outputs to this folder and will also expect any data you use to be saved there. Clearly if you want to incorporate neat, self-contained project workflows then you will want to organise your work from a dedicated project folder rather than the default home folder for your machine. This can be achieved with the <code>setwd(&lt;path-to-your-project&gt;)</code> function. The problem with doing this is that you insert a path which cannot be understood outside of your local machine at the time it was created. This is a real pain. It makes simple things like moving projects around on your machine an arduous task and most importantly it hinders reproducibility if others are to reuse your work.</p>
 <p>RStudio Projects are a really excellent feature of the RStudio IDE that resolve these problems. Whenever you load up an RStudio Project, R starts up and the working directory is automatically set to the project’s root folder. If you were to move the project elsewhere on your machine, or to another machine, a new root is automatically generated – so RStudio projects ensure that relative paths work.</p>
-<div class="figure"><span id="fig:rstudio-project"></span>
+<div class="figure"><span style="display:block;" id="fig:rstudio-project"></span>
 <img src="../../class/01-class_files/rstudio_project.png" alt="Creating an RStudio Project" width="100%" />
 <p class="caption">
 Figure 5: Creating an RStudio Project
@@ -1150,37 +1152,37 @@ Figure 5: Creating an RStudio Project
 </div>
 <div id="references" class="section level2 unnumbered">
 <h2>References</h2>
-<div id="refs" class="references">
-<div id="ref-anscombe_graphs_1973">
-<p>Anscombe, F. 1973. “Graphs in Statistical Analysis.” <em>American Statistician</em> 27 (1): 17–21. doi:<a href="https://doi.org/10.1080/00031305.1973.10478966">10.1080/00031305.1973.10478966</a>.</p>
+<div id="refs" class="references csl-bib-body hanging-indent">
+<div id="ref-anscombe_graphs_1973" class="csl-entry">
+Anscombe, F. 1973. <span>“Graphs in Statistical Analysis.”</span> <em>American Statistician</em> 27 (1): 17–21. doi:<a href="https://doi.org/10.1080/00031305.1973.10478966">10.1080/00031305.1973.10478966</a>.
 </div>
-<div id="ref-arribas_geography_2018">
-<p>Arribas-Bel, D., and J. Reades. 2018. “Geography and Computers: Past, Present, and Future.” <em>Geography Compass</em> 12 (10): e12403. doi:<a href="https://doi.org/10.1111/gec3.12403">10.1111/gec3.12403</a>.</p>
+<div id="ref-arribas_geography_2018" class="csl-entry">
+Arribas-Bel, D., and J. Reades. 2018. <span>“Geography and Computers: Past, Present, and Future.”</span> <em>Geography Compass</em> 12 (10): e12403. doi:<a href="https://doi.org/10.1111/gec3.12403">10.1111/gec3.12403</a>.
 </div>
-<div id="ref-beecham_exploring_2014">
-<p>Beecham, R., and J. Wood. 2014. “Exploring Gendered Cycling Behaviours Within a Large-Scale Behavioural Data-Set.” <em>Transportation Planning and Technology</em> 37 (1). Taylor &amp; Francis: 83–97.</p>
+<div id="ref-beecham_exploring_2014" class="csl-entry">
+Beecham, R., and J. Wood. 2014. <span>“Exploring Gendered Cycling Behaviours Within a Large-Scale Behavioural Data-Set.”</span> <em>Transportation Planning and Technology</em> 37 (1). Taylor &amp; Francis: 83–97.
 </div>
-<div id="ref-brunsdon_opening_2020">
-<p>Brunsdon, C., and A. Comber. 2020. “Opening Practice: Supporting Reproducibility and Critical Spatial Data Science.” <em>Journal of Geographical Systems</em>.</p>
+<div id="ref-brunsdon_opening_2020" class="csl-entry">
+Brunsdon, C., and A. Comber. 2020. <span>“Opening Practice: Supporting Reproducibility and Critical Spatial Data Science.”</span> <em>Journal of Geographical Systems</em>.
 </div>
-<div id="ref-donoho_fifty_2017">
-<p>Donoho, D. 2017. “50 Years of Data Science.” <em>Journal of Computational and Graphical Statistics</em> 26 (6): 745–66. doi:<a href="https://doi.org/10.1080/10618600.2017.1384734">10.1080/10618600.2017.1384734</a>.</p>
+<div id="ref-donoho_fifty_2017" class="csl-entry">
+Donoho, D. 2017. <span>“50 Years of Data Science.”</span> <em>Journal of Computational and Graphical Statistics</em> 26 (6): 745–66. doi:<a href="https://doi.org/10.1080/10618600.2017.1384734">10.1080/10618600.2017.1384734</a>.
 </div>
-<div id="ref-friendly_brief_2007">
-<p>Friendly, M. 2007. “A Brief History of Data Visualization.” In <em>Handbook of Computational Statistics: Data Visualization</em>, edited by C. Chen, W. Härdle, and A Unwin, III:1–34. Heidelberg: Springer-Verlag. <a href="http://datavis.ca/papers/hbook.pdf">http://datavis.ca/papers/hbook.pdf</a>.</p>
+<div id="ref-friendly_brief_2007" class="csl-entry">
+Friendly, M. 2007. <span>“A Brief History of Data Visualization.”</span> In <em>Handbook of Computational Statistics: Data Visualization</em>, edited by C. Chen, W. Härdle, and A Unwin, III:1–34. Heidelberg: Springer-Verlag. <a href="http://datavis.ca/papers/hbook.pdf">http://datavis.ca/papers/hbook.pdf</a>.
 </div>
-<div id="ref-matejka_same_2017">
-<p>Matejka, J., and G. Fitzmaurice. 2017. “Same Stats, Different Graphs: Generating Datasets with Varied Appearance and Identical Statistics Through Simulated Annealing.” In, 1290–4. CHI ’17. New York, NY, USA: Association for Computing Machinery. doi:<a href="https://doi.org/10.1145/3025453.3025912">10.1145/3025453.3025912</a>.</p>
+<div id="ref-matejka_same_2017" class="csl-entry">
+Matejka, J., and G. Fitzmaurice. 2017. <span>“Same Stats, Different Graphs: Generating Datasets with Varied Appearance and Identical Statistics Through Simulated Annealing.”</span> In, 1290–94. CHI ’17. New York, NY, USA: Association for Computing Machinery. doi:<a href="https://doi.org/10.1145/3025453.3025912">10.1145/3025453.3025912</a>.
 </div>
-<div id="ref-munzner_visualization_2014">
-<p>Munzner, T. 2014. <em>Visualization Analysis and Design</em>. AK Peters Visualization Series. Boca Raton, FL: CRC Press.</p>
+<div id="ref-munzner_visualization_2014" class="csl-entry">
+Munzner, T. 2014. <em>Visualization Analysis and Design</em>. AK Peters Visualization Series. Boca Raton, FL: CRC Press.
 </div>
-<div id="ref-singleton_geographic_2019">
-<p>Singleton, A., and D. Arribas-Bel. 2019. “Geographic Data Science.” <em>Geographical Analysis</em>. doi:<a href="https://doi.org/10.1111/gean.12194">10.1111/gean.12194</a>.</p>
+<div id="ref-singleton_geographic_2019" class="csl-entry">
+Singleton, A., and D. Arribas-Bel. 2019. <span>“Geographic Data Science.”</span> <em>Geographical Analysis</em>. doi:<a href="https://doi.org/10.1111/gean.12194">10.1111/gean.12194</a>.
 </div>
 </div>
 </div>
-<div class="footnotes">
+<div class="footnotes footnotes-end-of-document">
 <hr />
 <ol>
 <li id="fn1"><p>For an excellent precis and interpretation of this for geographers, see <span class="citation">Arribas-Bel and Reades (<a href="#ref-arribas_geography_2018" role="doc-biblioref">2018</a>)</span>.<a href="#fnref1" class="footnote-back">↩︎</a></p></li>
@@ -1221,7 +1223,7 @@ Figure 5: Creating an RStudio Project
     <div class="row course-info">
         <div class="col-md-7">
             <p>
-                <strong>GEOG5009M: Visualization for Geographic Data Science (Spring/Summer 2021)</strong><br>
+                <strong>GEOG5009M: Visualization for Geographic Data Science (Spring/Summer 2022)</strong><br>
 
                 <a href="https://www.leeds.ac.uk/" target="_blank" rel="noopener">University of Leeds</a> &emsp;&emsp;
                 <a href="https://environment.leeds.ac.uk/geography" target="_blank" rel="noopener">School of Geography</a>
@@ -1244,7 +1246,7 @@ Figure 5: Creating an RStudio Project
         <div class="col-md-5 credits">
             <p>All content licensed under a <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank" rel="noopener">Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International License</a>.</p>
             
-            <p>Content <i class="fab fa-creative-commons"></i> 2021 <a href="http://www.roger-beecham.com/" target="_blank" rel="noopener">Roger Beecham</a></p>                    
+            <p>Content <i class="fab fa-creative-commons"></i> 2022 <a href="http://www.roger-beecham.com/" target="_blank" rel="noopener">Roger Beecham</a></p>                    
             
             <p><a href="https://github.com/rogerbeecham/vis-for-gds" target="_blank" rel="noopener"><i class="fab fa-github"></i> View the source at GitHub.</a></p>
         </div>
@@ -1328,7 +1330,7 @@ Figure 5: Creating an RStudio Project
     
     
     
-    <script src="../../en-uk/js/wowchemy.min.dd01fef442e09a86aae6adb7b6cc358b.js"></script>
+    <script src="../../en-uk/js/wowchemy.min.abf0df1802927998e37dcf3cf6aa05de.js"></script>
 
     
 
