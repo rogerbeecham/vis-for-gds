@@ -1,8 +1,8 @@
 ---
 title: "Visualization for model building 2"
 linktitle: "7: Visualization for model building 2"
-date: "2021-07-05"
-class_date: "2021-07-05"
+date: "2022-06-20"
+class_date: "2022-06-20"
 citeproc: true
 bibliography: ../../static/bib/references.bib
 csl: ../../static/bib/chicago-syllabus-no-bib.csl
@@ -10,10 +10,10 @@ output:
   blogdown::html_page:
     template: ../../pandoc/toc-title_html.template
     toc: false
-# menu:
-#   reading:
-    # parent: Reading
-    # weight: 1
+menu:
+  reading:
+    parent: Reading
+    weight: 1
 type: docs
 weight: 1
 editor_options:

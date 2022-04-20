@@ -1,8 +1,8 @@
 ---
 title: "Visualization fundamentals: Codify, map, evaluate"
 linktitle: "3: Visualization fundamentals"
-date: "2021-06-07"
-class_date: "2021-06-07"
+date: "2022-05-23"
+class_date: "2022-05-23"
 citeproc: true
 bibliography: ../../static/bib/references.bib
 csl: ../../static/bib/chicago-author-date.csl

@@ -49,6 +49,10 @@ edges_d <- od_pairs %>%
   select(x=la_2, y=la_1, type, all, focus=la_2) 
   
 
+od_pairs_borough <- od_pairs %>% 
+  
+
+
 nodes_d <- od_pairs_borough %>% 
   group_by(la_2) %>% 
   summarise(
@@ -67,14 +71,53 @@ nodes_o <- od_pairs_borough %>%
   rename(la = la_1) %>% 
   mutate(type="out")
 
+
+nodes_d <- od_pairs %>% 
+  # Filter only *within* London.
+  filter(la_1 %in% london_las, la_2 %in% london_las) %>% 
+  group_by(la_2) %>% 
+  summarise(
+    across(c(all:other), sum)
+  ) %>% 
+  ungroup %>% 
+  rename(bor = la_2) %>% 
+  transmute(
+    bor=bor, type="destination", all=all, public_transport=train+bus+light_rail, 
+    car=car_driver+car_passenger, active=bicycle+foot
+  ) 
+
+nodes_o <- od_pairs %>% 
+  # Filter only *within* London.
+  filter(la_1 %in% london_las, la_2 %in% london_las) %>% 
+  group_by(la_1) %>% 
+  summarise(
+    across(c(all:other), sum)
+  ) %>% 
+  ungroup %>% 
+  rename(bor = la_1) %>% 
+  transmute(
+    bor=bor, type="origin", all=all, public_transport=train+bus+light_rail, 
+    car=car_driver+car_passenger, active=bicycle+foot
+  ) 
+
+#nodes  <- nodes_o %>% bind_rows(nodes_d) 
+
+
+
+# nodes  <- nodes_o %>% rbind(nodes_d) %>% 
+#   left_join(london_squared, by=c("la"="authority")) %>% 
+#   select(la, all, type, BOR) %>% 
+#   pivot_wider(names_from="type", values_from="all")
+
+
 nodes  <- nodes_o %>% rbind(nodes_d) %>% 
-  left_join(london_squared, by=c("la"="authority")) %>% 
-  select(la, all, type, BOR) %>% 
+  left_join(london_grid_real %>% filter(type=="grid") %>% select(-type), by=c("bor"="authority")) %>% 
+  select(bor, all, type, BOR) %>% 
   pivot_wider(names_from="type", values_from="all")
 
 edges <- edges_o %>% rbind(edges_d) %>% 
-  left_join(london_squared, by=c("focus"="authority")) %>% 
-  select(x,y,type,all, focus, BOR) 
+  left_join(london_grid_real %>% filter(type=="grid") %>% select(-type) %>% rename(grid_x=x, grid_y=y), by=c("focus"="authority")) %>% 
+  select(x,y,grid_x, grid_y, type,all, focus, BOR) 
 
 bor_orders <- nodes %>% arrange(-`in`) %>% pull(BOR)
 
@@ -115,9 +158,42 @@ graph <-
   tbl_graph(
     nodes=nodes, 
     edges=edges 
-    )
+    ) %>% 
+  mutate(commutes = centrality_degree(mode = sum(all)))
   
 # Not specifying the layout - defaults to "auto"
+plot_nodes <- ggraph(graph, weights = log(all)) + 
+  geom_node_point(aes(size = destination), colour="#08306b", fill="#08306b", alpha=.8) +
+  geom_edge_link(aes(edge_width = all), alpha=.1, colour="#08306b") +
+   #geom_edge_link(aes(edge_width = all, edge_alpha=all), colour="#08306b") +
+  #geom_node_point(size=4, colour="#08306b", fill="#08306b", alpha=.8) + 
+  # geom_node_label(aes(label=BOR), size=3, 
+  #                 label.padding = unit(0.1, "lines"),
+  #                 label.size = 0, alpha=.8)+
+  #scale_edge_width(range = c(0.1,5))+
+  scale_size(range=c(0.1,20))+
+  #guides(edge_alpha=FALSE, size=FALSE, edge_width=FALSE) +
+  labs(size="node degree")+
+  guides(size=FALSE, edge_width=FALSE) +
+  theme_v_gds() +
+  theme(
+    axis.title.x = element_blank(),
+    axis.title.y = element_blank(),
+    axis.text = element_blank(),
+    panel.grid = element_blank()
+  ) 
+
+ggsave(filename="./node_edge.png", plot=plot_nodes,width=9, height=7, dpi=300)
+
+ggsave(filename="./node-size.png", plot=plot_nodes,width=9, height=7, dpi=300)
+
++
+  labs(title="Node-link diagram with edges showing frequencies between London Boroughs for work",
+       subtitle="-- 2011 Cenus",
+       caption="2011 Census data accessed via `pct` package")
+
+
+
 plot <- ggraph(graph, weights = log(all)) + 
   #geom_edge_fan(aes(edge_width = all, edge_alpha=all, edge_colour=type)) +
   geom_edge_link(aes(edge_width = all, edge_alpha=all), colour="#08306b") +
@@ -191,8 +267,8 @@ edges <- edges %>%
   rename("d_x"="east", "d_y"="north")
   
 # Build data frame of asymmetric trajectories (OD pair with controls) : all bike journeys
-od_trajectories_bezier <- bind_rows(edges %>% filter(o_bor!=d_bor) %>% pull(od_pair) 
-                                    %>% unique %>% purrr::map_df(
+od_trajectories_bezier <- bind_rows(edges %>% filter(o_bor!=d_bor) %>% pull(od_pair) %>% 
+                                      unique %>% purrr::map_df(
                                       ~get_trajectory(edges %>% mutate(count=count) %>% filter(od_pair==.x))
                                     )
 )
@@ -208,19 +284,49 @@ od_trajectories_line <- bind_rows(edges %>% filter(o_bor!=d_bor) %>% pull(od_pai
 od_trajectories <- od_trajectories_line %>% mutate(f_od=((count/max(count))^0.9))
 plot_line <- ggplot()+
   geom_sf(data=grid_real_sf %>% filter(type=="real"),  fill="#cfcfcf", colour="#9e9e9e", size=0.1)+
+  geom_sf(data=grid_real_sf %>% filter(type=="real"),  fill="transparent", colour="#9e9e9e", size=0)+
   coord_sf(crs=st_crs(grid_real_sf %>% filter(type=="real")), datum=NA)+
-  geom_path(aes(x=x, y=y, group=od_pair, alpha=f_od, size=f_od), data=od_trajectories, colour="#08306b")+
+  geom_point(data= nodes %>% inner_join(grid_real_sf %>% filter(type=="real") %>% select(east, north, authority) %>% st_drop_geometry(),  by=c("bor"="authority")),
+             aes(x=east, y=north, size=destination), colour="#08306b", fill="#08306b", alpha=.8, pch=21)  + 
+  geom_path(aes(x=x, y=y, group=od_pair, alpha=f_od, size=f_od*10000), data=od_trajectories, colour="#08306b")+
   # geom_label(data=grid_real_sf %>% filter(type=="real"),
   #            aes(x=east, y=north, label=BOR), size=3, label.padding = unit(0.1, "lines"),label.size = 0, alpha=.8)+
   annotate("text", x=558297.5+.5*38642.8, y=197713.7, label="")+
-  geom_text(data=grid_real_sf %>% filter(type=="real"),
-            aes(x=east, y=north, label=BOR), size=3, colour="#FFFFFF", family="Roboto Condensed Regular")+ #colour="#FFFFFF"
+  # geom_text(data=grid_real_sf %>% filter(type=="real"),
+  #           aes(x=east, y=north, label=BOR), size=3, colour="#FFFFFF", family="Roboto Condensed Regular")+ #colour="#FFFFFF"
   scale_alpha_continuous(range=c(0.01,1))+
-  scale_size_continuous(range=c(0.01,2))+
+  #scale_size_continuous(range=c(0.01,2))+
+  scale_size_continuous(range=c(0.01,20))+
   guides(alpha=FALSE, size=FALSE)+
   theme(axis.title=element_blank(), axis.title.x = element_blank(), axis.title.y = element_blank())
 
+ggsave(filename="./node-edge-spatial-map.png", plot=plot_line,width=10, height=7, dpi=300)
+
 od_trajectories <- od_trajectories_bezier %>% mutate(f_od=((count/max(count))^0.9))
+
+
+plot_bezier <- ggplot()+
+  geom_sf(data=grid_real_sf %>% filter(type=="real"),  fill="#cfcfcf", colour="#9e9e9e", size=0.1)+
+  geom_sf(data=grid_real_sf %>% filter(type=="real"),  fill="transparent", colour="#9e9e9e", size=0)+
+  coord_sf(crs=st_crs(grid_real_sf %>% filter(type=="real")), datum=NA)+
+  geom_point(data= nodes %>% inner_join(grid_real_sf %>% filter(type=="real") %>% select(east, north, authority) %>% st_drop_geometry(),  by=c("bor"="authority")),
+             aes(x=east, y=north, size=destination), colour="#08306b", fill="#08306b", alpha=.8, pch=21)  + 
+  #geom_path(aes(x=x, y=y, group=od_pair, alpha=f_od, size=f_od*10000), data=od_trajectories, colour="#08306b")+
+  geom_bezier0(aes(x=x, y=y, group=od_pair, alpha=f_od*2, size=f_od*10000), data=od_trajectories, colour="#08306b")+
+  # geom_label(data=grid_real_sf %>% filter(type=="real"),
+  #            aes(x=east, y=north, label=BOR), size=3, label.padding = unit(0.1, "lines"),label.size = 0, alpha=.8)+
+  annotate("text", x=558297.5+.5*38642.8, y=197713.7, label="")+
+  # geom_text(data=grid_real_sf %>% filter(type=="real"),
+  #           aes(x=east, y=north, label=BOR), size=3, colour="#FFFFFF", family="Roboto Condensed Regular")+ #colour="#FFFFFF"
+  scale_alpha_continuous(range=c(0.01,1))+
+  #scale_size_continuous(range=c(0.01,2))+
+  scale_size_continuous(range=c(0.01,20))+
+  guides(alpha=FALSE, size=FALSE)+
+  theme(axis.title=element_blank(), axis.title.x = element_blank(), axis.title.y = element_blank())
+
+ggsave(filename="./node-edge-spatial-map-bezier.png", plot=plot_bezier,width=10, height=7, dpi=300)
+
+
 plot_bezier <- ggplot()+
   geom_sf(data=grid_real_sf %>% filter(type=="real"),  fill="#cfcfcf", colour="#9e9e9e", size=0.1)+
   coord_sf(crs=st_crs(grid_real_sf %>% filter(type=="real")), datum=NA)+

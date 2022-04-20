@@ -1,8 +1,8 @@
 ---
 title: "Model building 1"
 linktitle: "6: Model building 1"
-date: "2021-06-28"
-class_date: "2021-06-28"
+date: "2022-06-13"
+class_date: "2022-06-13"
 citeproc: true
 bibliography: ../../static/bib/references.bib
 csl: ../../static/bib/chicago-author-date.csl
@@ -10,10 +10,10 @@ output:
   blogdown::html_page:
     template: ../../pandoc/toc-title_html.template
     toc: true
-# menu:
-#   homework:
-    # parent: Homework
-    # weight: 1
+menu:
+  homework:
+    parent: Homework
+    weight: 1
 type: docs
 weight: 1
 editor_options:

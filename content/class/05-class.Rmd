@@ -1,8 +1,8 @@
 ---
 title: "Visualization for exploring spatial networks: Containment and connection"
 linktitle: "5: Visualization for exploring spatial networks"
-date: "2021-06-21"
-class_date: "2021-06-21"
+date: "2022-06-06"
+class_date: "2022-06-06"
 citeproc: true
 bibliography: ../../static/bib/references.bib
 csl: ../../static/bib/chicago-author-date.csl
@@ -10,10 +10,10 @@ output:
   blogdown::html_page:
     template: ../../pandoc/toc-title_html.template
     toc: true
-# menu:
-#   class:
-    # parent: Class
-    # weight: 1
+menu:
+  class:
+    parent: Class
+    weight: 1
 type: docs
 weight: 1
 editor_options:

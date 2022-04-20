@@ -1,8 +1,8 @@
 ---
 title: "Visualization for exploratory data analysis"
 linktitle: "4: Visualization for exploratory data analysis"
-date: "2021-06-14"
-class_date: "2021-06-14"
+date: "2022-05-30"
+class_date: "2022-05-30"
 citeproc: true
 bibliography: ../../static/bib/references.bib
 csl: ../../static/bib/chicago-syllabus-no-bib.csl

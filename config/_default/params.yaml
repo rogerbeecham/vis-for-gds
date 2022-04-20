@@ -103,13 +103,13 @@ instructor:
 
 course:
   number: "GEOG5009M"
-  semester: "Spring/Summer 2021"
+  semester: "Spring/Summer 2022"
   days: "ODL"
   time: "ODL"
   location: "ODL"
-  dates: "24th May - 30th Jul"
+  dates: "9th May - 15th Jul"
   github: "rogerbeecham/vis-for-gds"
-  copyrightYear: "2021"
+  copyrightYear: "2022"
 
 university:
   name: University of Leeds

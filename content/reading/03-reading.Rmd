@@ -1,8 +1,8 @@
 ---
-title: "Visualization Fundamentals"
-linktitle: "3: Visualization Fundamentals"
-date: "2021-06-07"
-class_date: "2021-06-07"
+title: "Visualization fundamentals"
+linktitle: "3: Visualization fundamentals"
+date: "2022-05-23"
+class_date: "2022-05-23"
 citeproc: true
 bibliography: ../../static/bib/references.bib
 csl: ../../static/bib/chicago-syllabus-no-bib.csl

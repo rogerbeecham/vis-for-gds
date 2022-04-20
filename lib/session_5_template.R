@@ -115,7 +115,7 @@ plot <- bars + bars_filled + (dest_plot/origin_plot)+ plot_layout(widths=c(.3,.2
   )
 
 dest_origin_plot <- nodes %>% 
-  left_join(grid_real_sf %>% st_drop_geometry() %>% filter(type=="grid") %>% 
+  left_join(london_grid_real_sf %>% st_drop_geometry() %>% filter(type=="grid") %>% 
               select(authority, BOR,x,y),by=c("bor"="authority")) %>% 
   pivot_longer(cols=c(active, public_transport, car), names_to="mode", values_to="count") %>% 
   mutate(type_abbr=str_sub(type,1,1)) %>% 

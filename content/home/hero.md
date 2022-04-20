@@ -20,7 +20,7 @@ design:
     text_color_light: false
 
 cta_note:
-  label: Summer 2021<br>School of Geography<br>University of Leeds
+  label: Spring/Summer 2022<br>School of Geography<br>University of Leeds
 ---
 
 **GEOG5009M**

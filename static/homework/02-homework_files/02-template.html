@@ -423,21 +423,25 @@ summary {
 <p>The technical element to this session involves importing, describing and processing data from a large bikeshare scheme – New York’s <a href="https://www.citibikenyc.com/">Citibike</a> scheme.</p>
 <div id="setup" class="section level3">
 <h3>Setup</h3>
-<p>The code block below points to the packages you need to do the work discussed in the session. If you have been following the instructions from the last session, you will have already installed the key packages – <code>tidyverse</code> , <code>fst</code>, <code>lubridate</code>, <code>sf</code> – and so simply need to make it available in session with <code>library(&lt;package-name&gt;)</code>. You will also need to <strong>install</strong> the <a href="https://github.com/ropensci/bikedata">bikedata</a> package for accessing bikeshare data. We will install the development version with <code>install_github()</code> using the <code>devtools</code> package. We only use <code>devtools</code> in this case on setup and so access its functions explicitly with <code>::</code>, e.g. <code>devtools::</code> rather than <code>library&lt;package-name&gt;</code>.</p>
+<p>The code block below points to the packages you need to do the work discussed in the session. If you have been following the instructions from the last session, you will have already installed the key packages – <code>tidyverse</code> , <code>fst</code>, <code>lubridate</code>, <code>sf</code>, <code>here</code> – and so simply need to make them available in session with <code>library(&lt;package-name&gt;)</code>. If you wish to use the <a href="https://github.com/ropensci/bikedata">bikedata</a> package for accessing bikeshare data you will also need to <strong>install</strong> it. This requires the development version of the package which can be installed with <code>install_github()</code> using the <code>devtools</code> package. As <code>devtools</code> is only used in on setup, its functions are accessed explicitly with <code>::</code>, e.g. <code>devtools::</code> rather than <code>library&lt;package-name&gt;</code>.</p>
+<p>IMPORTANT NOTE : I wanted to include the code for downloading and processing data via the <code>bikedata</code> API for information. However, as the package makes available large and reasonably messy data, it is not exactly “entry-level”. Depending on how R and existing packages are configured on your machine, you may find several <code>error</code> messages relating to package dependencies – other packages that need to be installed. For this reason I recommend that the code on importing the raw bike data (<code>import-raw</code>) be treated as optional (for the interested reader) and instead download the pre-processed data I have made available on a separate repo (<code>import-collected</code>).</p>
+<p>Required packages necessary for all aspects of the session (<strong>ALL</strong>). If you have not yet downloaded these packages you will need to make separate calls to <code>install.packages(&quot;&lt;package-name&gt;&quot;)</code> as described in the previous session.</p>
 <pre class="r"><code>library(tidyverse) # Bundle of packages for doing modern data analysis.
 library(fst) # Fast/efficient working with tbls.
 library(sf) # Spatial operations
 library(lubridate) # Work with dates
 library(here) # For navigating project directory
-# install.packages(&quot;geosphere&quot;) # Uncomment to install.
-# remotes::install_github(&quot;ropensci/bikedata&quot;) # API to TfL&#39;s trip data. Uncomment to run.
+# install.packages(&quot;geosphere&quot;) # Uncomment to install.</code></pre>
+<p>Packages necessary for working with <code>bikedata</code> (optional for <strong>advanced R programmer only</strong>):</p>
+<pre class="r"><code># remotes::install_github(&quot;ropensci/bikedata&quot;) # API to TfL&#39;s trip data. Uncomment to run.
 library(bikedata)
-
 # install.packages(DBI) # Uncomment to install.
 # install.packages(&quot;SQLite&quot;) # Uncomment to install.</code></pre>
 </div>
 <div id="import" class="section level3">
 <h3>Import</h3>
+<div id="import-raw-data-interestedadvanced-only" class="section level4">
+<h4>Import raw data (<strong>interested/advanced only</strong>)</h4>
 <p>You might notice that available via the <code>bikedata</code> package are trip and occupancy data for a number of bikeshare schemes. To see which are available, type <code>bike_cities()</code> into the Console. We will collect data for New York’s <a href="https://www.citibikenyc.com/">citibike</a> scheme using the <code>dl_bikedata()</code> function. Querying the documentation (with <code>?dl_bikedata()</code>) you will notice that there are several parameters to set here: the city/ scheme (<code>city = &quot;citibike&quot;</code>), time period (<code>dates = 2020</code> - we’ll look at data from 2020). By default data are downloaded to a temporary directory <code>temp_dir()</code> and held in memory. <code>bikedata</code> also has a function for converting downloaded data to an SQLite3 database. SQLite databases can be called from <code>R</code> and have various advantages for efficient storage and querying.</p>
 <p>The code block below stores the data held in-memory to an SQLite database with <code>store_bikedata()</code>. The <a href="https://www.fstpackage.org/"><code>fst</code></a> package is then used for serializing and reading in the these data. <code>fst</code> implements in the background various operations such as multi-threading to reduce load on disk space – and therefore makes it possible to work with large datasets in-memory in <code>R</code>. Data are then written out to disk with a <code>.fst</code> and then read back into R. This code block takes some time to run and there is also a problem with how <code>bikedata</code> handles the New York record data. The code below is therefore for illustrative purposes – should you wish to work with other bikeshare data. Instead jump to the next code block where we download a version of the New York data from from an external repository that I have created.</p>
 <pre class="r"><code># Create subdirectory in data folder for storing bike data.
@@ -463,7 +467,10 @@ write_csv(stations, here(&quot;data&quot;, &quot;ny_stations.csv&quot;))
 # Clean workspace
 bike_rm_db(bikedb)
 rm(db,stations, trips, bikedb)</code></pre>
-<p>So run the code block below to download the extracted data to your project’s data folder. Note that you should only run the import code below once. When returning to this work in a new R session, you need only then read in the <code>ny_trips.fst</code> and <code>ny_stations.csv</code> file that is held locally on your machines. Unfortunately due to storage limitations I had to make <code>ny_trips.fst</code> just a 500k random sample of the c.2million records that appear in the session.</p>
+</div>
+<div id="import-pre-processed-data-all" class="section level4">
+<h4>Import pre-processed data (<strong>All</strong>)</h4>
+<p>Run the code block below to download the pre-processed and extracted data to your project’s data folder. Note that you should only run the import code below once. When returning to this work in a new R session, you need only then read in the <code>ny_trips.fst</code> and <code>ny_stations.csv</code> file that is held locally on your machines. Unfortunately due to storage limitations I had to make <code>ny_trips.fst</code> just a 500k random sample of the c.2million records that appear in the session.</p>
 <pre class="r"><code># Create subdirectory in data folder for storing bike data.
 if(!dir.exists(here(&quot;data&quot;, &quot;bikedata&quot;))) dir.create(here(&quot;data&quot;, &quot;bikedata&quot;))
 
@@ -475,7 +482,7 @@ ny_stations &lt;- read_csv(tmp_file)
 
 # Read in .fst file of trips data from url.
 tmp_file &lt;- tempfile()
-cs_url &lt;- &quot;https://www.roger-beecham.com/datasets/ny_trips.fst&quot;
+url &lt;- &quot;https://www.roger-beecham.com/datasets/ny_trips.fst&quot;
 curl::curl_download(url, tmp_file, mode=&quot;wb&quot;)
 ny_trips &lt;- read_fst(tmp_file)
 
@@ -489,6 +496,7 @@ rm(url, tmp_file)</code></pre>
 <pre class="r"><code># Read in these local copies of the trips and stations data.
 ny_trips &lt;- read_fst(here(&quot;data&quot;, &quot;ny_trips.fst&quot;))
 ny_stations &lt;- read_csv(here(&quot;data&quot;, &quot;ny_stations.csv&quot;))</code></pre>
+</div>
 </div>
 <div id="describe" class="section level3">
 <h3>Describe</h3>
@@ -527,7 +535,7 @@ ny_stations &lt;- ny_stations %&gt;%
     median_duration=median(trip_duration/60),
     sd_duration=sd(trip_duration/60),
     min_duration=min(trip_duration/60),
-    max_duration=min(trip_duration/60)
+    max_duration=max(trip_duration/60)
     ) %&gt;%
   arrange(desc(count))</code></pre>
 <p>Example code for generating a temporal summary by gender:</p>
@@ -548,7 +556,7 @@ ny_temporal %&gt;%
   select(gender, day, prop) %&gt;%
   pivot_wider(names_from=gender, values_from=prop)</code></pre>
 <p><code>dplyr</code> code with <code>ggplot2</code> for exploring temporal travel behaviours by gender visually:</p>
-<pre class="r"><code>  ny_temporal %&gt;%
+<pre class="r"><code>ny_temporal %&gt;%
   filter(gender!=&quot;unknown&quot;) %&gt;%
   ggplot(aes(x=hour, y=count, group=gender)) +
   geom_line(aes(colour=gender), size=1.1) +
@@ -770,9 +778,21 @@ rm(temp)</code></pre>
 <li><a href="https://www.roger-beecham.com/datasets/ny_spread_rows.csv"><code>ny_spread_rows</code></a></li>
 <li><a href="https://www.roger-beecham.com/datasets/ny_spread_columns.csv"><code>ny_spread_columns</code></a></li>
 </ul>
+<p>Display your code for fixing the <code>ny_spread_rows</code> dataset below and copy and paste the output that was returned to the console.</p>
+<pre class="r"><code># Place code for tidying here.
+
+# Copy and paste the RConsole output here.</code></pre>
+<p>Display your code for fixing the <code>ny_spread_columns</code> dataset below and copy and paste the output that was returned to the console.</p>
+<pre class="r"><code># Place code for tidying here.
+
+# Copy and paste the RConsole output here.</code></pre>
 </div>
 <div id="task-4-compute-from-data" class="section level3">
 <h3>Task 4: Compute from data</h3>
+<p>Display your code in the block below</p>
+<pre class="r"><code># Place code for computing here.
+
+# Copy and paste the RConsole output here.</code></pre>
 </div>
 </div>
 

@@ -1,10 +1,14 @@
-baseurl: "http://www.roger-beecham.com/vis-for-gds/"
+baseurl: "https://www.roger-beecham.com/vis-for-gds/"
 defaultContentLanguage: "en-uk"
 title: "Visualization for Geographic Data Science"
 theme: hugo-academic/wowchemy
 canonifyURLs: true
 relativeURLs: true
-
+security:
+  funcs:
+    getenv:
+      - ^HUGO_
+      - ^WC_
 # ------------------
 # Building options
 # ------------------
@@ -30,7 +34,7 @@ imaging:
   resampleFilter: lanczos
   quality: 90
   anchor: smart
-
+  
 
 copyright: ''
 enableGitInfo: true
